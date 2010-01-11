@@ -30,6 +30,8 @@
     <item type="id" name="menuAnswerAndEnd" />
     <item type="id" name="menuAnswer" />
     <item type="id" name="menuIgnore" />
+    <!-- add by cytown -->
+    <item type="id" name="menuAddBlackList" />
 
     <!-- IDs used with events from some in-call touch UI elements;
          we treat these as "button clicks" even though the UI elements

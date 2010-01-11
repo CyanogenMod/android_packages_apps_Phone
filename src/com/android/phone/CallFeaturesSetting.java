@@ -61,6 +61,14 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import android.preference.PreferenceManager;
+import android.preference.PreferenceCategory;
+import android.preference.Preference.OnPreferenceClickListener;
+import java.util.HashSet;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class CallFeaturesSetting extends PreferenceActivity
         implements DialogInterface.OnClickListener,
@@ -361,6 +369,41 @@ public class CallFeaturesSetting extends PreferenceActivity
 
     TTYHandler ttyHandler;
 
+// add by cytown for vibrate
+private static CallFeaturesSetting mInstance = null;
+private static final String BUTTON_VIBRATE_OUTGOING = "button_vibrate_outgoing";
+private CheckBoxPreference mButtonVibOutgoing;
+static boolean mVibOutgoing;
+private static final String BUTTON_VIBRATE_45       = "button_vibrate_45";
+private CheckBoxPreference mButtonVib45;
+static boolean mVib45;
+private static final String BUTTON_VIBRATE_HANGUP   = "button_vibrate_hangup";
+private CheckBoxPreference mButtonVibHangup;
+static boolean mVibHangup;
+private static final String BUTTON_SCREEN_AWAKE     = "button_screen_awake";
+private CheckBoxPreference mButtonScreenAwake;
+static boolean mScreenAwake;
+private static final String BUTTON_RETURN_HOME     = "button_return_home";
+private CheckBoxPreference mButtonReturnHome;
+static boolean mReturnHome;
+private static final String BUTTON_LED_NOTIFY       = "button_led_notify";
+private CheckBoxPreference mButtonLedNotify;
+static boolean mLedNotify;
+private static final String BUTTON_SHOW_ORGAN       = "button_show_organ";
+private CheckBoxPreference mButtonShowOrgan;
+static boolean mShowOrgan;
+private static final String BUTTON_VIBRATE_CALL_WAITING = "button_vibrate_call_waiting";
+private CheckBoxPreference mButtonVibCallWaiting;
+static boolean mVibCallWaiting;
+
+private static final String BUTTON_ADD_BLACK = "button_add_black";
+private static final String CATEGORY_BLACK   = "cat_black_list";
+private static final String BLFILE           = "blacklist.dat";
+private EditPhoneNumberPreference mButtonAddBlack;
+private PreferenceCategory mCatBlackList;
+private static HashSet<String> setBlackList = new HashSet<String>();
+private static final int ADD_BLACK_LIST_ID = 3;
+
     /*
      * Click Listeners, handle click based on objects attached to UI.
      */
@@ -462,6 +505,13 @@ public class CallFeaturesSetting extends PreferenceActivity
 
             if (epn == mSubMenuVoicemailSettings) {
                 handleVMBtnClickRequest();
+// add by cytown
+} else if (epn == mButtonAddBlack) {
+    String number = PhoneNumberUtils.stripSeparators((epn.getPhoneNumber()));
+    if (number != null && !number.equals("")) {
+        if (addBlackList(number)) initPrefBlackList();
+        epn.setPhoneNumber("");
+    }
             }
         }
     }
@@ -478,6 +528,9 @@ public class CallFeaturesSetting extends PreferenceActivity
             if (DBG) log("updating default for voicemail dialog");
             updateVoiceNumberField();
             return null;
+// add by cytown
+} else if (preference == mButtonAddBlack) {
+    return null;
         }
 
         String vmDisplay = mPhone.getVoiceMailNumber();
@@ -643,6 +696,10 @@ public class CallFeaturesSetting extends PreferenceActivity
             case VOICEMAIL_PREF_ID:
                 mSubMenuVoicemailSettings.onPickActivityResult(cursor.getString(0));
                 break;
+// add by cytown
+case ADD_BLACK_LIST_ID:
+    mButtonAddBlack.onPickActivityResult(cursor.getString(0));
+    break;
             default:
                 // TODO: may need exception here.
         }
@@ -1276,6 +1333,31 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
         updateVoiceNumberField();
         mVMProviderSettingsForced = false;
+
+// add by cytown for vibrate
+init(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()));
+mButtonVibOutgoing = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_OUTGOING);
+mButtonVibOutgoing.setChecked(mVibOutgoing);
+mButtonVib45       = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_45);
+mButtonVib45.setChecked(mVib45);
+mButtonVibHangup   = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_HANGUP);
+mButtonVibHangup.setChecked(mVibHangup);
+mButtonScreenAwake = (CheckBoxPreference) prefSet.findPreference(BUTTON_SCREEN_AWAKE);
+mButtonScreenAwake.setChecked(mScreenAwake);
+mButtonReturnHome = (CheckBoxPreference) prefSet.findPreference(BUTTON_RETURN_HOME);
+mButtonReturnHome.setChecked(mReturnHome);
+mButtonLedNotify   = (CheckBoxPreference) prefSet.findPreference(BUTTON_LED_NOTIFY);
+mButtonLedNotify.setChecked(mLedNotify);
+mButtonShowOrgan   = (CheckBoxPreference) prefSet.findPreference(BUTTON_SHOW_ORGAN);
+mButtonShowOrgan.setChecked(mShowOrgan);
+mButtonVibCallWaiting = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_CALL_WAITING);
+mButtonVibCallWaiting.setChecked(mVibCallWaiting);
+mButtonAddBlack = (EditPhoneNumberPreference) prefSet.findPreference(BUTTON_ADD_BLACK);
+mButtonAddBlack.setParentActivity(this, ADD_BLACK_LIST_ID, this);
+mButtonAddBlack.setDialogOnClosedListener(this);
+mCatBlackList = (PreferenceCategory) prefSet.findPreference(CATEGORY_BLACK);
+initPrefBlackList();
+//====
     }
 
     @Override
@@ -1633,4 +1715,115 @@ public class CallFeaturesSetting extends PreferenceActivity
         final String key = mVoicemailProviders.getValue();
         return (key != null) ? key : DEFAULT_VM_PROVIDER_KEY;
     }
+
+// add by cytown
+public static CallFeaturesSetting getInstance(SharedPreferences pref) {
+    if (mInstance == null) {
+        mInstance = new CallFeaturesSetting();
+        mInstance.init(pref);
+    }
+    return mInstance;
+}
+
+private void init(SharedPreferences pref) {
+    mVibOutgoing = pref.getBoolean(BUTTON_VIBRATE_OUTGOING, true);
+    mVib45       = pref.getBoolean(BUTTON_VIBRATE_45, false);
+    mVibHangup   = pref.getBoolean(BUTTON_VIBRATE_HANGUP, true);
+    mScreenAwake = pref.getBoolean(BUTTON_SCREEN_AWAKE, false);
+    mReturnHome = pref.getBoolean(BUTTON_RETURN_HOME, true);
+    mLedNotify   = pref.getBoolean(BUTTON_LED_NOTIFY, true);
+    mShowOrgan   = pref.getBoolean(BUTTON_SHOW_ORGAN, false);
+    mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
+    ObjectInputStream ois = null;
+    try {
+        ois = new ObjectInputStream(PhoneApp.getInstance().openFileInput(BLFILE));
+        Object o = ois.readObject();
+        if (o != null) setBlackList = (HashSet<String>)o;
+    } catch (Exception e) {
+        // ignore
+    } finally {
+        if (ois != null) try{ ois.close();} catch (Exception e) {}
+    }
+    if (setBlackList == null) setBlackList = new HashSet<String>();
+    //System.out.println("BL: " + setBlackList);
+}
+
+public boolean addBlackList(String s) {
+    if (s == null || s.equals("") || isBlackList(s)) return false;
+    setBlackList.add(s);
+    saveBLFile();
+    return true;
+}
+
+public void deleteBlackList(String s) {
+    setBlackList.remove(s);
+    saveBLFile();
+}
+
+public boolean isBlackList(String s) {
+    //System.out.println(setBlackList + ":" + s);
+    return setBlackList.contains(s);
+}
+
+private void saveBLFile() {
+    ObjectOutputStream oos = null;
+    try {
+        oos = new ObjectOutputStream(PhoneApp.getInstance().openFileOutput(BLFILE, Context.MODE_PRIVATE));
+        oos.writeObject(setBlackList);
+    } catch (Exception e) {
+        // ignore
+    } finally {
+        if (oos != null) try{ oos.close();} catch (Exception e) {}
+    }
+}
+
+private OnPreferenceClickListener blackPreferenceListener = new OnPreferenceClickListener() {
+    public boolean onPreferenceClick(Preference p) {
+        final String phone = p.getTitle().toString();
+        final String title = CallFeaturesSetting.this.getString(R.string.remove_black, phone);
+        AlertDialog dialog = new AlertDialog.Builder(CallFeaturesSetting.this).setTitle(title).
+                setPositiveButton(R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        deleteBlackList(phone);
+                        initPrefBlackList();
+                        //mCatBlackList.notifyHierarchyChanged();
+                    }
+                }).setNegativeButton(R.string.cancel, null).create();
+        dialog.show();
+        return true;
+    }
+};
+
+private void initPrefBlackList() {
+    mCatBlackList.removeAll();
+    if (setBlackList == null || setBlackList.size() == 0) return;
+    ArrayList<String> al = new ArrayList<String>(setBlackList);
+    Collections.sort(al);
+    for (String s : al) {
+        Preference pref = new Preference(this);
+        pref.setTitle(s);
+        pref.setOnPreferenceClickListener(blackPreferenceListener);
+        mCatBlackList.addPreference(pref);
+    }
+//====
+}
+
+@Override
+protected void onDestroy() {
+    //System.out.println("save please!");
+    SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+    Editor outState = pref.edit();
+    outState.putBoolean(BUTTON_VIBRATE_OUTGOING, mButtonVibOutgoing.isChecked());
+    outState.putBoolean(BUTTON_VIBRATE_45, mButtonVib45.isChecked());
+    outState.putBoolean(BUTTON_VIBRATE_HANGUP, mButtonVibHangup.isChecked());
+    outState.putBoolean(BUTTON_SCREEN_AWAKE, mButtonScreenAwake.isChecked());
+    outState.putBoolean(BUTTON_RETURN_HOME, mButtonReturnHome.isChecked());
+    outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
+    outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());
+    outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
+    outState.commit();
+    init(pref);
+    super.onDestroy();
+}
+
 }

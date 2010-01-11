@@ -46,6 +46,8 @@ import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import android.preference.PreferenceManager;
+
 
 /**
  * Phone app module that listens for phone state changes and various other
@@ -151,8 +153,13 @@ public class CallNotifier extends Handler
     private int mCurrentRingbackToneState = RINGBACK_TONE_OFF;
     private InCallRingbackTonePlayer mInCallRingbackTonePlayer;
 
+// add by cytown
+private CallFeaturesSetting mSettings;
+private static final String BLACKLIST = "blacklist";
+
     public CallNotifier(PhoneApp app, Phone phone, Ringer ringer,
                         BluetoothHandsfree btMgr) {
+mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(app));
         mApplication = app;
 
         mPhone = phone;
@@ -355,6 +362,18 @@ public class CallNotifier extends Handler
             return;
         }
 
+String number = c!=null?c.getAddress():"0000";
+if (android.text.TextUtils.isEmpty(number)) number = "0000";
+if (DBG) log("incoming number is: " + number);
+if (c != null && mSettings.isBlackList(number)) {
+    try {
+        c.setUserData(BLACKLIST);
+        c.hangup();
+        if (DBG) Log.i(LOG_TAG, "Reject the incoming call in BL:" + number);
+    } catch (Exception e) {}  // ignore
+    return;
+}
+
         // Incoming calls are totally ignored if OTA call is active
         if (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA) {
             boolean activateState = (mApplication.cdmaOtaScreenState.otaScreenState
@@ -419,6 +438,9 @@ public class CallNotifier extends Handler
                 PhoneUtils.setAudioControlState(PhoneUtils.AUDIO_RINGING);
                 startIncomingCallQuery(c);
             } else {
+if (mSettings.mVibCallWaiting) {
+    mApplication.vibrate(200,300,500);
+}
                 if (VDBG) log("- starting call waiting tone...");
                 new InCallTonePlayer(InCallTonePlayer.TONE_CALL_WAITING).start();
                 // The InCallTonePlayer will automatically stop playing (and
@@ -608,6 +630,23 @@ public class CallNotifier extends Handler
         if (state == Phone.State.OFFHOOK) {
             PhoneUtils.setAudioControlState(PhoneUtils.AUDIO_OFFHOOK);
             if (VDBG) log("onPhoneStateChanged: OFF HOOK");
+
+Call call = PhoneUtils.getCurrentCall(mPhone);
+Connection c = PhoneUtils.getConnection(mPhone, call);
+if (VDBG) PhoneUtils.dumpCallState(mPhone);
+Call.State cstate = call.getState();
+if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
+    long callDurationMsec = c.getDurationMillis();
+    if (VDBG) Log.i(LOG_TAG, "duration is " + callDurationMsec);
+    if (mSettings.mVibOutgoing && callDurationMsec < 200) {
+        mApplication.vibrate(100,0,0);
+    }
+    if (mSettings.mVib45) {
+        callDurationMsec = callDurationMsec % 60000;
+        mApplication.startVib45(callDurationMsec);
+    }
+}
+
             // If Audio Mode is not In Call, then set the Audio Mode.  This
             // changes is needed because for one of the carrier specific test case,
             // call is originated from the lower layer without using the UI, and
@@ -819,6 +858,20 @@ public class CallNotifier extends Handler
                 + ", incoming = " + c.isIncoming()
                 + ", date = " + c.getCreateTime());
         }
+
+if (c != null) {
+    Object o = c.getUserData();
+    if (BLACKLIST.equals(o)) {
+        if (VDBG) Log.i(LOG_TAG, "in blacklist so skip calllog");
+        return;
+    }
+    if (c.getDurationMillis() > 0 && mSettings.mVibHangup) {
+        mApplication.vibrate(50, 100, 50);
+    }
+    if (!c.isIncoming()) {
+        mApplication.stopVib45();
+    }
+}
 
         // Stop the ringer if it was ringing (for an incoming call that
         // either disconnected by itself, or was rejected by the user.)

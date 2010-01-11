@@ -331,6 +331,24 @@ public class PhoneUtils {
         return hungup;
     }
 
+static Call getCurrentCall(Phone phone) {
+    Call ringing = phone.getRingingCall();
+    Call fg = phone.getForegroundCall();
+    Call bg = phone.getBackgroundCall();
+    return (!ringing.isIdle()) ? ringing : ((!fg.isIdle()) ? fg : ((!bg.isIdle()) ? bg : fg));
+}
+
+static Connection getConnection(Phone phone, Call call) {
+    if (call == null) return null;
+    Connection conn = null;
+    if (phone.getPhoneName().equals("CDMA")) {
+        conn = call.getLatestConnection();
+    } else {
+        conn = call.getEarliestConnection();
+    }
+    return conn;
+}
+
     static boolean hangupRingingCall(Phone phone) {
         if (DBG) log("hangup ringing call");
         Call ringing = phone.getRingingCall();

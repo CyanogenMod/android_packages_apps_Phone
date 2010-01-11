@@ -125,6 +125,8 @@ public class Ringer {
         if (DBG) log("ring()...");
 
         synchronized (this) {
+/*
+*/
             try {
                 if (PhoneApp.getInstance().showBluetoothIndication()) {
                     mHardwareService.setAttentionLight(true, 0x000000ff);
@@ -195,11 +197,13 @@ public class Ringer {
         synchronized (this) {
             if (DBG) log("stopRing()...");
 
+/*
             try {
                 mHardwareService.setAttentionLight(false, 0x00000000);
             } catch (RemoteException ex) {
                 // the other end of this binder call is in the system process.
             }
+*/
 
             if (mRingHandler != null) {
                 mRingHandler.removeCallbacksAndMessages(null);

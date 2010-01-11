@@ -1863,7 +1863,7 @@ public class InCallScreen extends Activity
 
         // Keep track of whether this call was user-initiated or not.
         // (This affects where we take the user next; see delayedCleanupAfterDisconnect().)
-        mShowCallLogAfterDisconnect = !c.isIncoming();
+        mShowCallLogAfterDisconnect = !c.isIncoming() && CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(this)).mReturnHome;
 
         // We bail out immediately (and *don't* display the "call ended"
         // state at all) in a couple of cases, including those where we
@@ -2931,6 +2931,16 @@ public class InCallScreen extends Activity
                 if (VDBG) log("onClick: EndCall...");
                 internalHangup();
                 break;
+
+case R.id.menuAddBlackList:
+    if (VDBG) log("onClick: AddBlackList...");
+    //======
+    Connection c = PhoneUtils.getConnection(mPhone, PhoneUtils.getCurrentCall(mPhone));
+    String number = c.getAddress();
+    if (DBG) log("Add to Black List: " + number);
+    PhoneApp.getInstance().getSettings().addBlackList(number);
+    internalHangup();
+    break;
 
             default:
                 if  ((mInCallScreenMode == InCallScreenMode.OTA_NORMAL

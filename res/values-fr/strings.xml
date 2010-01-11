@@ -567,4 +567,27 @@
     <string name="rotate_to_answer_and_hold" msgid="7257444600554427946">"Tourner pour répondre et"\n"mettre l\'appel en cours en attente"</string>
     <string name="rotate_to_answer_and_end_active" msgid="4024248025970399906">"Tourner pour répondre et"\n"terminer l\'appel en cours"</string>
     <string name="rotate_to_answer_and_end_onhold" msgid="3046912205240632885">"Tourner pour répondre et"\n"terminer l\'appel en attente"</string>
+
+  <string name="advanced_setting">Paramètres avancés v.24</string>
+  <string name="vibrate_outgoing">Vibrer sur réponse</string>
+  <string name="vibrate_outgoing_sum">Vibrer quand appel est répondu</string>
+  <string name="vibrate_45">Vibrer toutes les 45 secondes</string>
+  <string name="vibrate_45_sum">Vibrer chaque 45 secondes pendant un appel sortant</string>
+  <string name="vibrate_hangup">Vibrer sur fin d\'appel</string>
+  <string name="vibrate_hangup_sum">Vibrer lorsqu\'un appel se termine</string>
+  <string name="screen_awake">Garder l\'écran actif</string>
+  <string name="screen_awake_sum">L\'écran restera actif plus longtemps lors d\'un appel</string>
+  <string name="led_notify_call">Nofitier par DEL d\'un appel manqué</string>
+  <string name="led_notify_call_sum">Le DEL clignotera quand un appel est manqué</string>
+  <string name="led_show_organ">Montrer organisation</string>
+  <string name="led_show_organ_sum">L\'organisation sera montrée sur l\'écran d\'appel</string>
+  <string name="vibrate_call_waiting">Vibrer sur appel en attente</string>
+  <string name="vibrate_call_waiting_sum">Vibrer lorsqu\'un appel est en attente</string>
+  <string name="return_home">Forcer retour au journal d\'appels</string>
+  <string name="return_home_sum">Force le retour à l\'écran du journal d\'appels après une conversation</string>
+  <string name="menu_addBlackList">Ajouter à la liste noire</string>
+  <string name="black_list">Liste noire</string>
+  <string name="black_list_sum">Les appels entrants provenant de cette liste seront rejetés</string>
+  <string name="add_black">Ajouter un numéro</string>
+  <string name="remove_black">Enlever %s de la liste noire ?</string>
 </resources>
