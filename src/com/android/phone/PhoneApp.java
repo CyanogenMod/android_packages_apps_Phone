@@ -1425,9 +1425,13 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if (action.equals(Intent.ACTION_AIRPLANE_MODE_CHANGED)) {
-                boolean enabled = System.getInt(getContentResolver(),
-                        System.AIRPLANE_MODE_ON, 0) == 0;
-                phone.setRadioPower(enabled);
+                // When airplane mode is selected/deselected from settings
+                // AirplaneModeEnabler sets the value of extra "state" to
+                // true if airplane mode is enabled and false if it is
+                // disabled and broadcasts the intent. setRadioPower uses
+                // true if airplane mode is disabled and false if enabled.
+                boolean enabled = intent.getBooleanExtra("state",false);
+                phone.setRadioPower(!enabled);
             } else if (action.equals(BluetoothHeadset.ACTION_STATE_CHANGED)) {
                 mBluetoothHeadsetState = intent.getIntExtra(BluetoothHeadset.EXTRA_STATE,
                                                             BluetoothHeadset.STATE_ERROR);
