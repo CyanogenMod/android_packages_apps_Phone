@@ -568,7 +568,7 @@
     <string name="rotate_to_answer_and_end_active" msgid="4024248025970399906">"Tourner pour répondre et"\n"terminer l\'appel en cours"</string>
     <string name="rotate_to_answer_and_end_onhold" msgid="3046912205240632885">"Tourner pour répondre et"\n"terminer l\'appel en attente"</string>
 
-  <string name="advanced_setting">Paramètres avancés v.24</string>
+  <string name="advanced_setting">Paramètres avancés v.24.1</string>
   <string name="vibrate_outgoing">Vibrer sur réponse</string>
   <string name="vibrate_outgoing_sum">Vibrer quand appel est répondu</string>
   <string name="vibrate_45">Vibrer toutes les 45 secondes</string>

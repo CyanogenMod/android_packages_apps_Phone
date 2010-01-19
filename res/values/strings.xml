@@ -1126,7 +1126,7 @@
     <string name="rotate_to_answer_and_end_onhold">Rotate to answer and\nend call on hold</string>
 <!-- added by cytown@gmail.com -->
 <string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)</string>
-<string name="advanced_setting">Advanced Settings V.24</string>
+<string name="advanced_setting">Advanced Settings V.24.1</string>
 <string name="vibrate_outgoing">Vibrate on answer</string>
 <string name="vibrate_outgoing_sum">Vibrate when a call is answered</string>
 <string name="vibrate_45">Vibrate every 45 seconds</string>

@@ -85,7 +85,7 @@ public class PhoneApp extends Application {
      *   (PhoneApp.DBG_LEVEL >= 2)
      * depending on the desired verbosity.
      */
-    /* package */ static final int DBG_LEVEL = 2;
+    /* package */ static final int DBG_LEVEL = 1;
 
     private static final boolean DBG =
             (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
