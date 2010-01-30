@@ -566,7 +566,7 @@
     <string name="calling_via_template" msgid="7374498518104190489">"通过 ^1"\n<b>"^2"</b>" 呼叫"</string>
 
 <string name="notification_ongoing_calling_format">"当前拨出 (<xliff:g id="DURATION">%s</xliff:g>)"</string>
-<string name="advanced_setting">高级设置 V.24.1</string>
+<string name="advanced_setting">高级设置 V.25</string>
 <string name="vibrate_outgoing">接听震动</string>
 <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
 <string name="vibrate_45">45秒震动</string>

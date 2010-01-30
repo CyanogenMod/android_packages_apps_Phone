@@ -564,6 +564,16 @@
     <string name="other_settings" msgid="3672912580359716394">"Autres paramètres d\'appel"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Composer"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Appel via ^1"\n<b>"^2"</b></string>
+    <string name="slide_to_answer" msgid="255903188611244476">"Déplacer vers la droite pour répondre"</string>
+    <string name="slide_to_silence" msgid="2224982696981131553">"Déplacer vers la gauche pour passer en mode silencieux"</string>
+    <string name="slide_to_decline" msgid="7342094219435077069">"Déplacer vers la gauche pour refuser"</string>
+    <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Déplacer vers la droite pour répondre et"\n"mettre l\'appel en cours en attente"</string>
+    <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Déplacer vers la droite pour répondre et"\n"terminer l\'appel en cours"</string>
+    <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Déplacer vers la droite pour répondre et"\n"terminer l\'appel en attente"</string>
+    <string name="slide_to_answer_hint" msgid="4901042355463593903">"Répondre"</string>
+    <string name="slide_to_decline_hint" msgid="4484576372463030324">"Refuser"</string>
+  
+  <string name="advanced_setting">Paramètres avancés v.25</string>
   <string name="vibrate_outgoing">Vibrer sur réponse</string>
   <string name="vibrate_outgoing_sum">Vibrer quand appel est répondu</string>
   <string name="vibrate_45">Vibrer toutes les 45 secondes</string>
@@ -585,12 +595,4 @@
   <string name="black_list_sum">Les appels entrants provenant de cette liste seront rejetés</string>
   <string name="add_black">Ajouter un numéro</string>
   <string name="remove_black">Enlever %s de la liste noire ?</string>
-    <string name="slide_to_answer" msgid="255903188611244476">"Déplacer vers la droite pour répondre"</string>
-    <string name="slide_to_silence" msgid="2224982696981131553">"Déplacer vers la gauche pour passer en mode silencieux"</string>
-    <string name="slide_to_decline" msgid="7342094219435077069">"Déplacer vers la gauche pour refuser"</string>
-    <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Déplacer vers la droite pour répondre et"\n"mettre l\'appel en cours en attente"</string>
-    <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Déplacer vers la droite pour répondre et"\n"terminer l\'appel en cours"</string>
-    <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Déplacer vers la droite pour répondre et"\n"terminer l\'appel en attente"</string>
-    <string name="slide_to_answer_hint" msgid="4901042355463593903">"Répondre"</string>
-    <string name="slide_to_decline_hint" msgid="4484576372463030324">"Refuser"</string>
 </resources>
