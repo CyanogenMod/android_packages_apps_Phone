@@ -302,10 +302,12 @@ public class BluetoothHeadsetService extends Service {
                                                    BluetoothDevice.ERROR);
                 switch(bondState) {
                 case BluetoothDevice.BOND_BONDED:
-                    mHeadsetPriority.set(device, BluetoothHeadset.PRIORITY_ON);
+                    if (mHeadsetPriority.get(device) == BluetoothHeadset.PRIORITY_UNDEFINED) {
+                        mHeadsetPriority.set(device, BluetoothHeadset.PRIORITY_ON);
+                    }
                     break;
                 case BluetoothDevice.BOND_NONE:
-                    mHeadsetPriority.set(device, BluetoothHeadset.PRIORITY_OFF);
+                    mHeadsetPriority.set(device, BluetoothHeadset.PRIORITY_UNDEFINED);
                     break;
                 }
             } else if (action.equals(AudioManager.VOLUME_CHANGED_ACTION)) {
@@ -530,11 +532,29 @@ public class BluetoothHeadsetService extends Service {
             return false;
         }
         mRemoteDevice = mAutoConnectQueue.removeFirst();
+        // Don't auto connect with docks if we are docked with the dock.
+        if (isPhoneDocked(mRemoteDevice)) return doNextAutoConnect();
+
         if (DBG) log("pulled " + mRemoteDevice + " off auto-connect queue");
         setState(BluetoothHeadset.STATE_CONNECTING);
         getSdpRecordsAndConnect();
 
         return true;
+    }
+
+    private boolean isPhoneDocked(BluetoothDevice autoConnectDevice) {
+        // This works only because these broadcast intents are "sticky"
+        Intent i = registerReceiver(null, new IntentFilter(Intent.ACTION_DOCK_EVENT));
+        if (i != null) {
+            int state = i.getIntExtra(Intent.EXTRA_DOCK_STATE, Intent.EXTRA_DOCK_STATE_UNDOCKED);
+            if (state != Intent.EXTRA_DOCK_STATE_UNDOCKED) {
+                BluetoothDevice device = i.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
+                if (device != null && autoConnectDevice.equals(device)) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -697,7 +717,7 @@ public class BluetoothHeadsetService extends Service {
         private synchronized int load(BluetoothDevice device) {
             int priority = Settings.Secure.getInt(getContentResolver(),
                     Settings.Secure.getBluetoothHeadsetPriorityKey(device.getAddress()),
-                    BluetoothHeadset.PRIORITY_OFF);
+                    BluetoothHeadset.PRIORITY_UNDEFINED);
             mPriority.put(device, new Integer(priority));
             if (DBG) log("Loaded priority " + device + " = " + priority);
             return priority;
