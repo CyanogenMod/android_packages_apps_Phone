@@ -1114,8 +1114,27 @@
     <!-- Onscreen hints used for various states of the SlidingTab
          widget used for incoming calls. -->
     <eat-comment />
+    <!-- Incoming call hint: drag the tab right to answer -->
+    <string name="slide_to_answer">Drag right to answer</string>
+    <!-- Incoming call hint: drag the tab left to silence ringer -->
+    <string name="slide_to_silence">Drag left to silence ringer</string>
+    <!-- Incoming call hint: drag the tab left to decline the incoming call -->
+    <string name="slide_to_decline">Drag left to decline</string>
+    <!-- Incoming call hint: drag the tab right to answer and hold the active call -->
+    <string name="slide_to_answer_and_hold">Drag right to answer and\nhold active call</string>
+    <!-- Incoming call hint: drag the tab right to answer and end the active call -->
+    <string name="slide_to_answer_and_end_active">Drag right to answer and\nend active call</string>
+    <!-- Incoming call hint: drag the tab right to answer and end the call on hold -->
+    <string name="slide_to_answer_and_end_onhold">Drag right to answer and\nend call on hold</string>
+
+    <!-- Incoming call hint shown on tab (must be kept very short): answer incoming call -->
+    <string name="slide_to_answer_hint">Answer</string>
+    <!-- Incoming call hint shown on tab (must be kept very short): decline incoming call -->
+    <string name="slide_to_decline_hint">Decline</string>
+
+<!-- added by cytown@gmail.com -->
 <string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)</string>
-<string name="advanced_setting">Advanced Settings V.25</string>
+<string name="advanced_setting">Advanced Settings V.26.1</string>
 <string name="vibrate_outgoing">Vibrate on answer</string>
 <string name="vibrate_outgoing_sum">Vibrate when a call is answered</string>
 <string name="vibrate_45">Vibrate every 45 seconds</string>
@@ -1137,22 +1156,6 @@
 <string name="black_list_sum">Incoming call in black list will be rejected.</string>
 <string name="add_black">Add phone number</string>
 <string name="remove_black">Remove %s from List</string>
-    <!-- Incoming call hint: drag the tab right to answer -->
-    <string name="slide_to_answer">Drag right to answer</string>
-    <!-- Incoming call hint: drag the tab left to silence ringer -->
-    <string name="slide_to_silence">Drag left to silence ringer</string>
-    <!-- Incoming call hint: drag the tab left to decline the incoming call -->
-    <string name="slide_to_decline">Drag left to decline</string>
-    <!-- Incoming call hint: drag the tab right to answer and hold the active call -->
-    <string name="slide_to_answer_and_hold">Drag right to answer and\nhold active call</string>
-    <!-- Incoming call hint: drag the tab right to answer and end the active call -->
-    <string name="slide_to_answer_and_end_active">Drag right to answer and\nend active call</string>
-    <!-- Incoming call hint: drag the tab right to answer and end the call on hold -->
-    <string name="slide_to_answer_and_end_onhold">Drag right to answer and\nend call on hold</string>
-
-    <!-- Incoming call hint shown on tab (must be kept very short): answer incoming call -->
-    <string name="slide_to_answer_hint">Answer</string>
-    <!-- Incoming call hint shown on tab (must be kept very short): decline incoming call -->
-    <string name="slide_to_decline_hint">Decline</string>
-
+<string name="set_force_touch">Force Touch Keyboard</string>
+<string name="set_force_touch_sum">Force show Touch UI without detect proximity sensor.</string>
 </resources>

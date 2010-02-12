@@ -101,7 +101,7 @@ public class DeleteFdnContactScreen extends Activity {
 
     private void deleteContact() {
         StringBuilder buf = new StringBuilder();
-        if (TextUtils.isEmpty(mNumber)) {
+        if (TextUtils.isEmpty(mName)) {
             buf.append("number='");
         } else {
             buf.append("tag='");

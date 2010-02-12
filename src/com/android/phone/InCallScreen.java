@@ -547,6 +547,8 @@ public class InCallScreen extends Activity
             }
         };
 
+private CallFeaturesSetting mSettings;
+private boolean mForceTouch;
 
     @Override
     protected void onCreate(Bundle icicle) {
@@ -591,6 +593,47 @@ public class InCallScreen extends Activity
 
         initInCallScreen();
 
+        initDialPad();
+
+        registerForPhoneStates();
+
+        // No need to change wake state here; that happens in onResume() when we
+        // are actually displayed.
+
+        // Handle the Intent we were launched with, but only if this is the
+        // the very first time we're being launched (ie. NOT if we're being
+        // re-initialized after previously being shut down.)
+        // Once we're up and running, any future Intents we need
+        // to handle will come in via the onNewIntent() method.
+        if (icicle == null) {
+            if (DBG) log("onCreate(): this is our very first launch, checking intent...");
+
+            // Stash the result code from internalResolveIntent() in the
+            // mInCallInitialStatus field.  If it's an error code, we'll
+            // handle it in onResume().
+            mInCallInitialStatus = internalResolveIntent(getIntent());
+            if (DBG) log("onCreate(): mInCallInitialStatus = " + mInCallInitialStatus);
+            if (mInCallInitialStatus != InCallInitStatus.SUCCESS) {
+                Log.w(LOG_TAG, "onCreate: status " + mInCallInitialStatus
+                      + " from internalResolveIntent()");
+                // See onResume() for the actual error handling.
+            }
+        } else {
+            mInCallInitialStatus = InCallInitStatus.SUCCESS;
+        }
+
+mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(this));
+mForceTouch = mSettings.mForceTouch;
+        // The "touch lock overlay" feature is used only on devices that
+        // *don't* use a proximity sensor to turn the screen off while in-call.
+        // add by cytown: also turn off if force show the touch keyboard.
+        mUseTouchLockOverlay = !app.proximitySensorModeEnabled() && !mForceTouch;
+
+        Profiler.callScreenCreated();
+        if (DBG) log("onCreate(): exit");
+    }
+
+    private void initDialPad() {
         // Create the dtmf dialer.  The dialer view we use depends on the
         // current platform:
         //
@@ -626,40 +669,6 @@ public class InCallScreen extends Activity
         }
         // Finally, create the DTMFTwelveKeyDialer instance.
         mDialer = new DTMFTwelveKeyDialer(this, mDialerView, dialerDrawer);
-
-        registerForPhoneStates();
-
-        // No need to change wake state here; that happens in onResume() when we
-        // are actually displayed.
-
-        // Handle the Intent we were launched with, but only if this is the
-        // the very first time we're being launched (ie. NOT if we're being
-        // re-initialized after previously being shut down.)
-        // Once we're up and running, any future Intents we need
-        // to handle will come in via the onNewIntent() method.
-        if (icicle == null) {
-            if (DBG) log("onCreate(): this is our very first launch, checking intent...");
-
-            // Stash the result code from internalResolveIntent() in the
-            // mInCallInitialStatus field.  If it's an error code, we'll
-            // handle it in onResume().
-            mInCallInitialStatus = internalResolveIntent(getIntent());
-            if (DBG) log("onCreate(): mInCallInitialStatus = " + mInCallInitialStatus);
-            if (mInCallInitialStatus != InCallInitStatus.SUCCESS) {
-                Log.w(LOG_TAG, "onCreate: status " + mInCallInitialStatus
-                      + " from internalResolveIntent()");
-                // See onResume() for the actual error handling.
-            }
-        } else {
-            mInCallInitialStatus = InCallInitStatus.SUCCESS;
-        }
-
-        // The "touch lock overlay" feature is used only on devices that
-        // *don't* use a proximity sensor to turn the screen off while in-call.
-        mUseTouchLockOverlay = !app.proximitySensorModeEnabled();
-
-        Profiler.callScreenCreated();
-        if (DBG) log("onCreate(): exit");
     }
 
     /**
@@ -687,6 +696,14 @@ public class InCallScreen extends Activity
         mIsForegroundActivity = true;
 
         final PhoneApp app = PhoneApp.getInstance();
+
+        // add by cytown: if mForceTouch changed, re-init dialpad.
+        if (mForceTouch != mSettings.mForceTouch) {
+            if (DBG) log("Force Touch setting changed, re-init dialpad");
+            mForceTouch = mSettings.mForceTouch;
+            mUseTouchLockOverlay = !app.proximitySensorModeEnabled() && !mForceTouch;
+            initDialPad();
+        }
 
         app.disableStatusBar();
 

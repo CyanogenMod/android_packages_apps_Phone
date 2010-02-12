@@ -198,7 +198,12 @@ class InCallMenuView extends ViewGroup {
         //System.out.println("itemview is :" + mItemBackground);
         //System.out.println("item is :" + mItemBackground + ":" + mItemBackground.getConstantState());
         // Should not like this, maybe it's because of v.2.0, there is no such attribute in v.2.01  by cytown
-        if (mItemBackground != null) itemView.setBackgroundDrawable(mItemBackground.getConstantState().newDrawable());
+        if (mItemBackground == null) {
+            TypedArray a =
+                    mContext.obtainStyledAttributes(com.android.internal.R.styleable.IconMenuView);
+            mItemBackground = a.getDrawable(com.android.internal.R.styleable.MenuView_itemBackground);
+        }
+        itemView.setBackgroundDrawable(mItemBackground.getConstantState().newDrawable());
 
         addView(itemView, lp);
     }
