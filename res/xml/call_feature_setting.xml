@@ -64,7 +64,7 @@
   </PreferenceCategory>
 
 <!--  Created and modified by cytown@gmail.com for modified Phone app usage -->
-<PreferenceCategory android:title="@string/advanced_setting">
+<PreferenceCategory android:key="pref_advanced_settings" android:title="@string/advanced_setting">
     <CheckBoxPreference
         android:key="button_vibrate_outgoing"
         android:title="@string/vibrate_outgoing"

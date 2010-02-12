@@ -573,7 +573,7 @@
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Répondre"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Refuser"</string>
   
-  <string name="advanced_setting">Paramètres avancés v.26</string>
+  <string name="advanced_setting">Paramètres avancés v.26.1</string>
   <string name="vibrate_outgoing">Vibrer sur réponse</string>
   <string name="vibrate_outgoing_sum">Vibrer quand appel est répondu</string>
   <string name="vibrate_45">Vibrer toutes les 45 secondes</string>

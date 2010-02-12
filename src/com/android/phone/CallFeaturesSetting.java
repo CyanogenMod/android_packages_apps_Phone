@@ -1366,7 +1366,15 @@ mButtonShowOrgan.setChecked(mShowOrgan);
 mButtonVibCallWaiting = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_CALL_WAITING);
 mButtonVibCallWaiting.setChecked(mVibCallWaiting);
 mButtonForceTouch  = (CheckBoxPreference) prefSet.findPreference(BUTTON_FORCE_TOUCH);
-mButtonForceTouch.setChecked(mForceTouch);
+if (getResources().getBoolean(R.bool.allow_incoming_call_touch_ui)) {
+    // don't know why removePreference always return false and not working.... if someone knows just mail me.
+    //prefSet.removePreference(prefSet.findPreference(BUTTON_FORCE_TOUCH));
+    //mButtonForceTouch = null;
+    mButtonForceTouch.setChecked(true);
+    mButtonForceTouch.setEnabled(false);
+} else {
+    mButtonForceTouch.setChecked(mForceTouch);
+}
 mButtonAddBlack = (EditPhoneNumberPreference) prefSet.findPreference(BUTTON_ADD_BLACK);
 mButtonAddBlack.setParentActivity(this, ADD_BLACK_LIST_ID, this);
 mButtonAddBlack.setDialogOnClosedListener(this);
@@ -1837,7 +1845,7 @@ protected void onDestroy() {
     outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
     outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
-    outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch.isChecked());
+    outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch == null || mButtonForceTouch.isChecked());
     outState.commit();
     init(pref);
     super.onDestroy();
