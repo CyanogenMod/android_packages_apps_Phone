@@ -105,6 +105,11 @@
         android:title="@string/led_show_organ"
         android:persistent="false"
         android:summary="@string/led_show_organ_sum"/>
+    <CheckBoxPreference
+        android:key="button_force_touch"
+        android:title="@string/set_force_touch"
+        android:persistent="false"
+        android:summary="@string/set_force_touch_sum"/>
     <PreferenceScreen
         android:key="button_black_list"
         android:title="@string/black_list"

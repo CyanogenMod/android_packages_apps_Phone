@@ -657,7 +657,10 @@ public class InCallScreen extends Activity
 
         // The "touch lock overlay" feature is used only on devices that
         // *don't* use a proximity sensor to turn the screen off while in-call.
-        mUseTouchLockOverlay = !app.proximitySensorModeEnabled();
+        // add by cytown: also turn off if force show the touch keyboard.
+CallFeaturesSetting settings;
+settings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(this));
+        mUseTouchLockOverlay = !app.proximitySensorModeEnabled() && !settings.mForceTouch;
 
         Profiler.callScreenCreated();
         if (DBG) log("onCreate(): exit");

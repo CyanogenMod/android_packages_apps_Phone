@@ -392,6 +392,9 @@ static boolean mLedNotify;
 private static final String BUTTON_SHOW_ORGAN       = "button_show_organ";
 private CheckBoxPreference mButtonShowOrgan;
 static boolean mShowOrgan;
+private static final String BUTTON_FORCE_TOUCH      = "button_force_touch";
+private CheckBoxPreference mButtonForceTouch;
+static boolean mForceTouch;
 private static final String BUTTON_VIBRATE_CALL_WAITING = "button_vibrate_call_waiting";
 private CheckBoxPreference mButtonVibCallWaiting;
 static boolean mVibCallWaiting;
@@ -1362,6 +1365,8 @@ mButtonShowOrgan   = (CheckBoxPreference) prefSet.findPreference(BUTTON_SHOW_ORG
 mButtonShowOrgan.setChecked(mShowOrgan);
 mButtonVibCallWaiting = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_CALL_WAITING);
 mButtonVibCallWaiting.setChecked(mVibCallWaiting);
+mButtonForceTouch  = (CheckBoxPreference) prefSet.findPreference(BUTTON_FORCE_TOUCH);
+mButtonForceTouch.setChecked(mForceTouch);
 mButtonAddBlack = (EditPhoneNumberPreference) prefSet.findPreference(BUTTON_ADD_BLACK);
 mButtonAddBlack.setParentActivity(this, ADD_BLACK_LIST_ID, this);
 mButtonAddBlack.setDialogOnClosedListener(this);
@@ -1744,6 +1749,7 @@ private void init(SharedPreferences pref) {
     mLedNotify   = pref.getBoolean(BUTTON_LED_NOTIFY, true);
     mShowOrgan   = pref.getBoolean(BUTTON_SHOW_ORGAN, false);
     mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
+    mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, false);
     ObjectInputStream ois = null;
     try {
         ois = new ObjectInputStream(PhoneApp.getInstance().openFileInput(BLFILE));
@@ -1831,6 +1837,7 @@ protected void onDestroy() {
     outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
     outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
+    outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch.isChecked());
     outState.commit();
     init(pref);
     super.onDestroy();

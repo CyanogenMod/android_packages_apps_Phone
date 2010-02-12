@@ -596,5 +596,7 @@
 <string name="black_list_sum">列入黑名单的来电会被自动挂断.</string>
 <string name="add_black">添加来电</string>
 <string name="remove_black">从名单中去除 %s</string>
+<string name="set_force_touch">强制显示触摸键盘</string>
+<string name="set_force_touch_sum">强制在通话中使用触摸键盘无论是否有近距传感器.</string>
 
 </resources>
