@@ -1907,12 +1907,6 @@ mForceTouch = mSettings.mForceTouch;
 
         if (bailOutImmediately) {
             if (VDBG) log("- onDisconnect: bailOutImmediately...");
-            // Exit the in-call UI!
-            // (This is basically the same "delayed cleanup" we do below,
-            // just with zero delay.  Since the Phone is currently idle,
-            // this call is guaranteed to immediately finish this activity.)
-            delayedCleanupAfterDisconnect();
-
             // Retry the call, by resending the intent to the emergency
             // call handler activity.
             if ((cause == Connection.DisconnectCause.OUT_OF_SERVICE)
@@ -1920,6 +1914,11 @@ mForceTouch = mSettings.mForceTouch;
                 startActivity(((Intent)getIntent().clone())
                         .setClassName(this, EmergencyCallHandler.class.getName()));
             }
+            // Exit the in-call UI!
+            // (This is basically the same "delayed cleanup" we do below,
+            // just with zero delay.  Since the Phone is currently idle,
+            // this call is guaranteed to immediately finish this activity.)
+            delayedCleanupAfterDisconnect();
         } else {
             if (VDBG) log("- onDisconnect: delayed bailout...");
             // Stay on the in-call screen for now.  (Either the phone is
