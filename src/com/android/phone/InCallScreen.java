@@ -1917,7 +1917,7 @@ mForceTouch = mSettings.mForceTouch;
             // call handler activity.
             if ((cause == Connection.DisconnectCause.OUT_OF_SERVICE)
                     && (emergencyCallRetryCount > 0)) {
-                startActivity(getIntent()
+                startActivity(((Intent)getIntent().clone())
                         .setClassName(this, EmergencyCallHandler.class.getName()));
             }
         } else {
@@ -2573,7 +2573,9 @@ mForceTouch = mSettings.mForceTouch;
             // expecting a callback when the emergency call handler dictates
             // it) and just return the success state.
             if (isEmergencyNumber && (okToCallStatus == InCallInitStatus.POWER_OFF)) {
-                startActivity(intent.setClassName(this, EmergencyCallHandler.class.getName()));
+                if(DBG) log("EmergencyCall Intent: " + intent);
+                startActivity(((Intent)intent.clone())
+                        .setClassName(this, EmergencyCallHandler.class.getName()));
                 if (DBG) log("placeCall: starting EmergencyCallHandler, finishing InCallScreen...");
                 endInCallScreenSession();
                 return InCallInitStatus.SUCCESS;
