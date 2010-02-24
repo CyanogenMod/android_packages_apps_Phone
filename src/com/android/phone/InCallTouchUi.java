@@ -149,7 +149,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
                 com.android.internal.R.drawable.jog_tab_right_decline
                 );
 
-        // For now, we only need to show two states: answer and decline. 
+        // For now, we only need to show two states: answer and decline.
         mIncomingCallWidget.setLeftHintText(R.string.slide_to_answer_hint);
         mIncomingCallWidget.setRightHintText(R.string.slide_to_decline_hint);
 
@@ -598,6 +598,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
             anim.reset();
             mIncomingCallWidget.clearAnimation();
         }
+        mIncomingCallWidget.reset(false);
         mIncomingCallWidget.setVisibility(View.VISIBLE);
     }
 

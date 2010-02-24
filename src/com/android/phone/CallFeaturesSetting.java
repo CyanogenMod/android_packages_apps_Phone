@@ -57,7 +57,10 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.ListAdapter;
 
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -154,9 +157,9 @@ public class CallFeaturesSetting extends PreferenceActivity
     static final int DTMF_TONE_TYPE_NORMAL = 0;
     static final int DTMF_TONE_TYPE_LONG   = 1;
 
-    private static final String HAC_KEY = "HACSetting";
-    private static final String HAC_VAL_ON = "ON";
-    private static final String HAC_VAL_OFF = "OFF";
+    public static final String HAC_KEY = "HACSetting";
+    public static final String HAC_VAL_ON = "ON";
+    public static final String HAC_VAL_OFF = "OFF";
 
     /** Handle to voicemail pref */
     private static final int VOICEMAIL_PREF_ID = 1;
@@ -298,9 +301,17 @@ public class CallFeaturesSetting extends PreferenceActivity
     CallForwardInfo[] mForwardingReadResults = null;
 
     /**
-     * Result of forwarding number change
+     * Result of forwarding number change.
+     * Keys are reasons (eg. unconditional forwarding).
      */
-    AsyncResult[] mForwardingChangeResults = null;
+    private Map<Integer, AsyncResult> mForwardingChangeResults = null;
+
+    /**
+     * Expected CF read result types.
+     * This set keeps track of the CF types for which we've issued change
+     * commands so we can tell when we've received all of the responses.
+     */
+    private Collection<Integer> mExpectedChangeResultReasons = null;
 
     /**
      * Result of vm number change
@@ -364,10 +375,16 @@ public class CallFeaturesSetting extends PreferenceActivity
     // New call forwarding settings and vm number we will be setting
     // Need to save these since before we get to saving we need to asynchronously
     // query the existing forwarding settings.
-    CallForwardInfo[] mNewFwdSettings;
+    private CallForwardInfo[] mNewFwdSettings;
     String mNewVMNumber;
 
-    TTYHandler ttyHandler;
+    /**
+     * We have to pull current settings from the network for all kinds of
+     * voicemail providers so we can tell whether we have to update them,
+     * so use this bit to keep track of whether we're reading settings for the
+     * default provider and should therefore save them out when done.
+     */
+    private boolean mReadingSettingsForDefaultProvider = false;
 
 // add by cytown for vibrate
 private static CallFeaturesSetting mInstance = null;
@@ -582,22 +599,31 @@ private static final int ADD_BLACK_LIST_ID = 3;
                 }
                 if (mFwdChangesRequireRollback) {
                     if (DBG) log("have to revert fwd");
-                    final CallForwardInfo[] prevFwdSettings = prevSettings.forwardingSettings;
+                    final CallForwardInfo[] prevFwdSettings =
+                        prevSettings.forwardingSettings;
                     if (prevFwdSettings != null) {
-                        mForwardingChangeResults = new AsyncResult[mNewFwdSettings.length];
+                        Map<Integer, AsyncResult> results =
+                            mForwardingChangeResults;
+                        resetForwardingChangeState();
                         for (int i = 0; i < prevFwdSettings.length; i++) {
                             CallForwardInfo fi = prevFwdSettings[i];
                             if (DBG) log("Reverting fwd #: " + i + ": " + fi.toString());
-                            mPhone.setCallForwardingOption(
-                                    (fi.status == 1 ?
-                                            CommandsInterface.CF_ACTION_REGISTRATION :
-                                            CommandsInterface.CF_ACTION_DISABLE),
-                                    fi.reason,
-                                    fi.number,
-                                    fi.timeSeconds,
-                                    mRevertOptionComplete.obtainMessage(
-                                            EVENT_FORWARDING_CHANGED, i, 0));
-                         }
+                            // Only revert the settings for which the update
+                            // succeeded
+                            AsyncResult result = results.get(fi.reason);
+                            if (result != null && result.exception == null) {
+                                mExpectedChangeResultReasons.add(fi.reason);
+                                mPhone.setCallForwardingOption(
+                                        (fi.status == 1 ?
+                                                CommandsInterface.CF_ACTION_REGISTRATION :
+                                                CommandsInterface.CF_ACTION_DISABLE),
+                                        fi.reason,
+                                        fi.number,
+                                        fi.timeSeconds,
+                                        mRevertOptionComplete.obtainMessage(
+                                                EVENT_FORWARDING_CHANGED, i, 0));
+                            }
+                        }
                     }
                 }
             } else {
@@ -682,7 +708,7 @@ private static final int ADD_BLACK_LIST_ID = 3;
             if (DBG) log("onActivityResult: vm provider cfg result " +
                     (fwdNum != null ? "has" : " does not have") + " forwarding number");
             saveVoiceMailAndForwardingNumber(getCurrentVoicemailProviderKey(),
-                    new VoiceMailProviderSettings(vmNum, (String)fwdNum, fwdNumTime));
+                    new VoiceMailProviderSettings(vmNum, fwdNum, fwdNumTime));
             return;
         }
 
@@ -754,10 +780,9 @@ case ADD_BLACK_LIST_ID:
         mVMChangeCompletedSuccesfully = false;
         mFwdChangesRequireRollback = false;
         mVMOrFwdSetError = 0;
-        // If we are switching to a non default provider - save previous forwarding
-        // settings
-        if (!key.equals(mPreviousVMProviderKey) &&
-                mPreviousVMProviderKey.equals(DEFAULT_VM_PROVIDER_KEY)) {
+        if (!key.equals(mPreviousVMProviderKey)) {
+            mReadingSettingsForDefaultProvider =
+                mPreviousVMProviderKey.equals(DEFAULT_VM_PROVIDER_KEY);
             if (DBG) log("Reading current forwarding settings");
             mForwardingReadResults = new CallForwardInfo[FORWARDING_SETTINGS_REASONS.length];
             for (int i = 0; i < FORWARDING_SETTINGS_REASONS.length; i++) {
@@ -846,12 +871,47 @@ case ADD_BLACK_LIST_ID:
         if (done) {
             if (DBG) Log.d(LOG_TAG, "Done receiving fwd info");
             dismissDialog(VOICEMAIL_FWD_READING_DIALOG);
-            maybeSaveSettingsForVoicemailProvider(DEFAULT_VM_PROVIDER_KEY,
-                    new VoiceMailProviderSettings(this.mOldVmNumber, mForwardingReadResults));
+            if (mReadingSettingsForDefaultProvider) {
+                maybeSaveSettingsForVoicemailProvider(DEFAULT_VM_PROVIDER_KEY,
+                        new VoiceMailProviderSettings(this.mOldVmNumber,
+                                mForwardingReadResults));
+                mReadingSettingsForDefaultProvider = false;
+            }
             saveVoiceMailAndForwardingNumberStage2();
         } else {
             if (DBG) Log.d(LOG_TAG, "Not done receiving fwd info");
         }
+    }
+
+    private CallForwardInfo infoForReason(CallForwardInfo[] infos, int reason) {
+        CallForwardInfo result = null;
+        if (null != infos) {
+            for (CallForwardInfo info : infos) {
+                if (info.reason == reason) {
+                    result = info;
+                    break;
+                }
+            }
+        }
+        return result;
+    }
+
+    private boolean isUpdateRequired(CallForwardInfo oldInfo,
+            CallForwardInfo newInfo) {
+        boolean result = true;
+        if (0 == newInfo.status) {
+            // If we're disabling a type of forwarding, and it's already
+            // disabled for the account, don't make any change
+            if (oldInfo != null && oldInfo.status == 0) {
+                result = false;
+            }
+        }
+        return result;
+    }
+
+    private void resetForwardingChangeState() {
+        mForwardingChangeResults = new HashMap<Integer, AsyncResult>();
+        mExpectedChangeResultReasons = new HashSet<Integer>();
     }
 
     // Called after we are done saving the previous forwarding settings if
@@ -860,19 +920,27 @@ case ADD_BLACK_LIST_ID:
         mForwardingChangeResults = null;
         mVoicemailChangeResult = null;
         if (mNewFwdSettings != FWD_SETTINGS_DONT_TOUCH) {
-            mForwardingChangeResults = new AsyncResult[mNewFwdSettings.length];
+            resetForwardingChangeState();
             for (int i = 0; i < mNewFwdSettings.length; i++) {
                 CallForwardInfo fi = mNewFwdSettings[i];
-                if (DBG) log("Setting fwd #: " + i + ": " + fi.toString());
-                mPhone.setCallForwardingOption(
-                        (fi.status == 1 ?
-                                CommandsInterface.CF_ACTION_REGISTRATION :
-                                CommandsInterface.CF_ACTION_DISABLE),
-                        fi.reason,
-                        fi.number,
-                        fi.timeSeconds,
-                        mSetOptionComplete.obtainMessage(EVENT_FORWARDING_CHANGED, i, 0));
 
+                final boolean doUpdate = isUpdateRequired(infoForReason(
+                            mForwardingReadResults, fi.reason), fi);
+
+                if (doUpdate) {
+                    if (DBG) log("Setting fwd #: " + i + ": " + fi.toString());
+                    mExpectedChangeResultReasons.add(i);
+
+                    mPhone.setCallForwardingOption(
+                            fi.status == 1 ?
+                                    CommandsInterface.CF_ACTION_REGISTRATION :
+                                    CommandsInterface.CF_ACTION_DISABLE,
+                            fi.reason,
+                            fi.number,
+                            fi.timeSeconds,
+                            mSetOptionComplete.obtainMessage(
+                                    EVENT_FORWARDING_CHANGED, fi.reason, 0));
+                }
              }
              showDialog(VOICEMAIL_FWD_SAVING_DIALOG);
         } else {
@@ -906,7 +974,7 @@ case ADD_BLACK_LIST_ID:
                     done = true;
                     break;
                 case EVENT_FORWARDING_CHANGED:
-                    mForwardingChangeResults[msg.arg1] = result;
+                    mForwardingChangeResults.put(msg.arg1, result);
                     if (result.exception != null) {
                         if (DBG) log("Error in setting fwd# " + msg.arg1 + ": " +
                                 result.exception.getMessage());
@@ -921,8 +989,11 @@ case ADD_BLACK_LIST_ID:
                         } else {
                             if (DBG) log("Overall fwd changes completed, failure");
                             mFwdChangesRequireRollback = false;
-                            for (int i = 0; i < mForwardingChangeResults.length; i++) {
-                                if (mForwardingChangeResults[i].exception == null) {
+                            Iterator<Map.Entry<Integer,AsyncResult>> it =
+                                mForwardingChangeResults.entrySet().iterator();
+                            while (it.hasNext()) {
+                                Map.Entry<Integer,AsyncResult> entry = it.next();
+                                if (entry.getValue().exception == null) {
                                     // If at least one succeeded we have to revert
                                     if (DBG) log("Rollback will be required");
                                     mFwdChangesRequireRollback =true;
@@ -959,7 +1030,7 @@ case ADD_BLACK_LIST_ID:
                     if (DBG) log("VM revert complete msg");
                     break;
                 case EVENT_FORWARDING_CHANGED:
-                    mForwardingChangeResults[msg.arg1] = result;
+                    mForwardingChangeResults.put(msg.arg1, result);
                     if (result.exception != null) {
                         if (DBG) log("Error in reverting fwd# " + msg.arg1 + ": " +
                                 result.exception.getMessage());
@@ -986,34 +1057,45 @@ case ADD_BLACK_LIST_ID:
      * @return true if forwarding change has completed
      */
     private boolean checkForwardingCompleted() {
+        boolean result;
         if (mForwardingChangeResults == null) {
-            return true;
-        }
-        for (int i = 0; i < mForwardingChangeResults.length; i++) {
-            if (mForwardingChangeResults[i] == null) {
-                return false;
+            result = true;
+        } else {
+            // return true iff there is a change result for every reason for
+            // which we expected a result
+            result = true;
+            for (Integer reason : mExpectedChangeResultReasons) {
+                if (mForwardingChangeResults.get(reason) == null) {
+                    result = false;
+                    break;
+                }
             }
         }
-        return true;
+        return result;
     }
     /**
      * @return error string or null if successful
      */
     private String checkFwdChangeSuccess() {
-        for (int i = 0; i < mForwardingChangeResults.length; i++) {
-            if (mForwardingChangeResults[i].exception != null) {
-                final String msg = mForwardingChangeResults[i].exception.getMessage();
-                if (msg == null) {
-                    return "";
+        String result = null;
+        Iterator<Map.Entry<Integer,AsyncResult>> it =
+            mForwardingChangeResults.entrySet().iterator();
+        while (it.hasNext()) {
+            Map.Entry<Integer,AsyncResult> entry = it.next();
+            Throwable exception = entry.getValue().exception;
+            if (exception != null) {
+                result = exception.getMessage();
+                if (result == null) {
+                    result = "";
                 }
-                return msg;
+                break;
             }
         }
-        return null;
+        return result;
     }
 
     /**
-     * @return error string or null if succesfull
+     * @return error string or null if successful
      */
     private String checkVMChangeSuccess() {
         if (mVoicemailChangeResult.exception != null) {
@@ -1303,7 +1385,6 @@ case ADD_BLACK_LIST_ID:
 
         if (getResources().getBoolean(R.bool.tty_enabled)) {
             mButtonTTY.setOnPreferenceChangeListener(this);
-            ttyHandler = new TTYHandler();
         } else {
             prefSet.removePreference(mButtonTTY);
             mButtonTTY = null;
@@ -1405,7 +1486,11 @@ initPrefBlackList();
         }
 
         if (mButtonTTY != null) {
-            mPhone.queryTTYMode(ttyHandler.obtainMessage(TTYHandler.EVENT_TTY_MODE_GET));
+            int settingsTtyMode = Settings.Secure.getInt(getContentResolver(),
+                    Settings.Secure.PREFERRED_TTY_MODE,
+                    Phone.TTY_MODE_OFF);
+            mButtonTTY.setValue(Integer.toString(settingsTtyMode));
+            updatePreferredTtyModeSummary(settingsTtyMode);
         }
     }
 
@@ -1424,79 +1509,34 @@ initPrefBlackList();
             case Phone.TTY_MODE_FULL:
             case Phone.TTY_MODE_HCO:
             case Phone.TTY_MODE_VCO:
-                mPhone.setTTYMode(buttonTtyMode,
-                        ttyHandler.obtainMessage(TTYHandler.EVENT_TTY_MODE_SET));
+                android.provider.Settings.Secure.putInt(getContentResolver(),
+                        android.provider.Settings.Secure.PREFERRED_TTY_MODE, buttonTtyMode);
                 break;
             default:
-                mPhone.setTTYMode(Phone.TTY_MODE_OFF,
-                        ttyHandler.obtainMessage(TTYHandler.EVENT_TTY_MODE_SET));
+                buttonTtyMode = Phone.TTY_MODE_OFF;
             }
+
+            mButtonTTY.setValue(Integer.toString(buttonTtyMode));
+            updatePreferredTtyModeSummary(buttonTtyMode);
+            Intent ttyModeChanged = new Intent(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION);
+            ttyModeChanged.putExtra(TtyIntent.TTY_PREFFERED_MODE, buttonTtyMode);
+            sendBroadcast(ttyModeChanged);
         }
     }
 
-    class TTYHandler extends Handler {
-        /** Event for TTY mode change */
-        private static final int EVENT_TTY_MODE_GET = 700;
-        private static final int EVENT_TTY_MODE_SET = 800;
-
-        @Override
-        public void handleMessage(Message msg) {
-            switch (msg.what) {
-                case EVENT_TTY_MODE_GET:
-                    handleQueryTTYModeResponse(msg);
-                    break;
-                case EVENT_TTY_MODE_SET:
-                    handleSetTTYModeResponse(msg);
-                    break;
-            }
-        }
-
-        private void updatePreferredTtyModeSummary(int TtyMode) {
-            String [] txts = getResources().getStringArray(R.array.tty_mode_entries);
-            switch(TtyMode) {
-                case Phone.TTY_MODE_OFF:
-                case Phone.TTY_MODE_HCO:
-                case Phone.TTY_MODE_VCO:
-                case Phone.TTY_MODE_FULL:
-                    mButtonTTY.setSummary(txts[TtyMode]);
-                    break;
-                default:
-                    mButtonTTY.setEnabled(false);
-                    mButtonTTY.setSummary(txts[Phone.TTY_MODE_OFF]);
-            }
-        }
-
-        private void handleQueryTTYModeResponse(Message msg) {
-            AsyncResult ar = (AsyncResult) msg.obj;
-            if (ar.exception != null) {
-                if (DBG) log("handleQueryTTYModeResponse: Error getting TTY state.");
+    private void updatePreferredTtyModeSummary(int TtyMode) {
+        String [] txts = getResources().getStringArray(R.array.tty_mode_entries);
+        switch(TtyMode) {
+            case Phone.TTY_MODE_OFF:
+            case Phone.TTY_MODE_HCO:
+            case Phone.TTY_MODE_VCO:
+            case Phone.TTY_MODE_FULL:
+                mButtonTTY.setSummary(txts[TtyMode]);
+                break;
+            default:
                 mButtonTTY.setEnabled(false);
-            } else {
-                if (DBG) log("handleQueryTTYModeResponse: TTY enable state successfully queried.");
-
-                int ttymode = ((int[]) ar.result)[0];
-                if (DBG) log("handleQueryTTYModeResponse:ttymode=" + ttymode);
-
-                Intent ttyModeChanged = new Intent(TtyIntent.TTY_ENABLED_CHANGE_ACTION);
-                ttyModeChanged.putExtra("ttyEnabled", ttymode != Phone.TTY_MODE_OFF);
-                sendBroadcast(ttyModeChanged);
-                android.provider.Settings.Secure.putInt(getContentResolver(),
-                        android.provider.Settings.Secure.PREFERRED_TTY_MODE, ttymode );
-                mButtonTTY.setValue(Integer.toString(ttymode));
-                updatePreferredTtyModeSummary(ttymode);
-            }
+                mButtonTTY.setSummary(txts[Phone.TTY_MODE_OFF]);
         }
-
-        private void handleSetTTYModeResponse(Message msg) {
-            AsyncResult ar = (AsyncResult) msg.obj;
-
-            if (ar.exception != null) {
-                if (DBG) log("handleSetTTYModeResponse: Error setting TTY mode, ar.exception"
-                        + ar.exception);
-            }
-            mPhone.queryTTYMode(ttyHandler.obtainMessage(TTYHandler.EVENT_TTY_MODE_GET));
-        }
-
     }
 
     private static void log(String msg) {

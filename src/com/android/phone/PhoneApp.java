@@ -59,6 +59,7 @@ import com.android.internal.telephony.PhoneFactory;
 import com.android.internal.telephony.TelephonyIntents;
 import com.android.internal.telephony.cdma.EriInfo;
 import com.android.phone.OtaUtils.CdmaOtaScreenState;
+import com.android.internal.telephony.cdma.TtyIntent;
 
 import android.os.Vibrator;
 import android.app.AlarmManager;
@@ -101,6 +102,9 @@ public class PhoneApp extends Application {
     private static final int EVENT_DATA_ROAMING_DISCONNECTED = 10;
     private static final int EVENT_DATA_ROAMING_OK = 11;
     private static final int EVENT_UNSOL_CDMA_INFO_RECORD = 12;
+    private static final int EVENT_TTY_PREFERRED_MODE_CHANGED = 13;
+    private static final int EVENT_TTY_MODE_GET = 14;
+    private static final int EVENT_TTY_MODE_SET = 15;
 
     // The MMI codes are also used by the InCallScreen.
     public static final int MMI_INITIATE = 51;
@@ -245,6 +249,10 @@ private final class TriVibRunnable implements Runnable {
 public void vibrate(int v1, int p1, int v2) {
     new Handler().post(new TriVibRunnable(v1, p1, v2));
 }
+    // TTY feature enabled on this platform
+    private boolean mTtyEnabled;
+    // Current TTY operating mode selected by user
+    private int mPreferredTtyMode = Phone.TTY_MODE_OFF;
 
     /**
      * Set the restore mute state flag. Used when we are setting the mute state
@@ -349,6 +357,11 @@ public void vibrate(int v1, int p1, int v2) {
                     }
                     // Update the Proximity sensor based on headset state
                     updateProximitySensorMode(phoneState);
+
+                    // Force TTY state update according to new headset state
+                    if (mTtyEnabled) {
+                        sendMessage(obtainMessage(EVENT_TTY_PREFERRED_MODE_CHANGED, 0));
+                    }
                     break;
 
                 case EVENT_SIM_STATE_CHANGED:
@@ -372,6 +385,25 @@ public void vibrate(int v1, int p1, int v2) {
 
                 case EVENT_UNSOL_CDMA_INFO_RECORD:
                     //TODO: handle message here;
+                    break;
+
+                case EVENT_TTY_PREFERRED_MODE_CHANGED:
+                    // TTY mode is only applied if a headset is connected
+                    int ttyMode;
+                    if (isHeadsetPlugged()) {
+                        ttyMode = mPreferredTtyMode;
+                    } else {
+                        ttyMode = Phone.TTY_MODE_OFF;
+                    }
+                    phone.setTTYMode(ttyMode, mHandler.obtainMessage(EVENT_TTY_MODE_SET));
+                    break;
+
+                case EVENT_TTY_MODE_GET:
+                    handleQueryTTYModeResponse(msg);
+                    break;
+
+                case EVENT_TTY_MODE_SET:
+                    handleSetTTYModeResponse(msg);
                     break;
             }
         }
@@ -459,6 +491,9 @@ public void vibrate(int v1, int p1, int v2) {
             // register connection tracking to PhoneUtils
             PhoneUtils.initializeConnectionHandler(phone);
 
+            // Read platform settings for TTY feature
+            mTtyEnabled = getResources().getBoolean(R.bool.tty_enabled);
+
             // Register for misc other intent broadcasts.
             IntentFilter intentFilter =
                     new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
@@ -471,7 +506,10 @@ public void vibrate(int v1, int p1, int v2) {
             intentFilter.addAction(TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_SERVICE_STATE_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_EMERGENCY_CALLBACK_MODE_CHANGED);
-intentFilter.addAction(ACTION_VIBRATE_45);
+            intentFilter.addAction(ACTION_VIBRATE_45);
+            if (mTtyEnabled) {
+                intentFilter.addAction(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION);
+            }
             registerReceiver(mReceiver, intentFilter);
 
             // Use a separate receiver for ACTION_MEDIA_BUTTON broadcasts,
@@ -545,12 +583,22 @@ if (mVibrator == null) {
         // AP owns (i.e. stores) the TTY setting in AP settings database and pushes the setting
         // to BP at power up (BP does not need to make the TTY setting persistent storage).
         // This way, there is a single owner (i.e AP) for the TTY setting in the phone.
-        if (phoneIsCdma) {
-            int settingsTtyMode = android.provider.Settings.Secure.getInt(
+        if (mTtyEnabled) {
+            mPreferredTtyMode = android.provider.Settings.Secure.getInt(
                     phone.getContext().getContentResolver(),
                     android.provider.Settings.Secure.PREFERRED_TTY_MODE,
                     Phone.TTY_MODE_OFF);
-            phone.setTTYMode(settingsTtyMode, null);
+            mHandler.sendMessage(mHandler.obtainMessage(EVENT_TTY_PREFERRED_MODE_CHANGED, 0));
+        }
+        // Read HAC settings and configure audio hardware
+        if (getResources().getBoolean(R.bool.hac_enabled)) {
+            int hac = android.provider.Settings.System.getInt(phone.getContext().getContentResolver(),
+                                                              android.provider.Settings.System.HEARING_AID,
+                                                              0);
+            AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+            audioManager.setParameter(CallFeaturesSetting.HAC_KEY, hac != 0 ?
+                                      CallFeaturesSetting.HAC_VAL_ON :
+                                      CallFeaturesSetting.HAC_VAL_OFF);
         }
    }
 
@@ -1460,6 +1508,12 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
     mVibrator.cancel();
     if (VDBG) Log.d(LOG_TAG, "mReceiver: force vib cancel");
     //vibrate(70, 70, -1);
+            } else if (action.equals(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION)) {
+                mPreferredTtyMode = intent.getIntExtra(TtyIntent.TTY_PREFFERED_MODE,
+                                                       Phone.TTY_MODE_OFF);
+                if (VDBG) Log.d(LOG_TAG, "mReceiver: TTY_PREFERRED_MODE_CHANGE_ACTION");
+                if (VDBG) Log.d(LOG_TAG, "    mode: " + mPreferredTtyMode);
+                mHandler.sendMessage(mHandler.obtainMessage(EVENT_TTY_PREFERRED_MODE_CHANGED, 0));
             }
         }
     }
@@ -1588,5 +1642,52 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
         if (mInCallScreen != null) {
             mInCallScreen.requestUpdateTouchUi();
         }
+    }
+
+    private void handleQueryTTYModeResponse(Message msg) {
+        AsyncResult ar = (AsyncResult) msg.obj;
+        if (ar.exception != null) {
+            if (DBG) Log.d(LOG_TAG, "handleQueryTTYModeResponse: Error getting TTY state.");
+        } else {
+            if (DBG) Log.d(LOG_TAG,
+                           "handleQueryTTYModeResponse: TTY enable state successfully queried.");
+
+            int ttymode = ((int[]) ar.result)[0];
+            if (DBG) Log.d(LOG_TAG, "handleQueryTTYModeResponse:ttymode=" + ttymode);
+
+            Intent ttyModeChanged = new Intent(TtyIntent.TTY_ENABLED_CHANGE_ACTION);
+            ttyModeChanged.putExtra("ttyEnabled", ttymode != Phone.TTY_MODE_OFF);
+            sendBroadcast(ttyModeChanged);
+
+            String audioTtyMode;
+            switch (ttymode) {
+            case Phone.TTY_MODE_FULL:
+                audioTtyMode = "tty_full";
+                break;
+            case Phone.TTY_MODE_VCO:
+                audioTtyMode = "tty_vco";
+                break;
+            case Phone.TTY_MODE_HCO:
+                audioTtyMode = "tty_hco";
+                break;
+            case Phone.TTY_MODE_OFF:
+            default:
+                audioTtyMode = "tty_off";
+                break;
+            }
+            AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+            audioManager.setParameters("tty_mode="+audioTtyMode);
+        }
+    }
+
+    private void handleSetTTYModeResponse(Message msg) {
+        AsyncResult ar = (AsyncResult) msg.obj;
+
+        if (ar.exception != null) {
+            if (DBG) Log.d (LOG_TAG,
+                    "handleSetTTYModeResponse: Error setting TTY mode, ar.exception"
+                    + ar.exception);
+        }
+        phone.queryTTYMode(mHandler.obtainMessage(EVENT_TTY_MODE_GET));
     }
 }
