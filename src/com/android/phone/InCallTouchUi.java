@@ -125,6 +125,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
 
     void setInCallScreenInstance(InCallScreen inCallScreen) {
         mInCallScreen = inCallScreen;
+        if (mEndButton != null) mEndButton.setOnLongClickListener(mInCallScreen);
     }
 
     @Override

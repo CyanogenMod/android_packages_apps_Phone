@@ -226,7 +226,7 @@ mAddBlackList = new InCallMenuItemView(wrappedContext);
 mAddBlackList.setId(R.id.menuAddBlackList);
 mAddBlackList.setOnClickListener(mInCallScreen);
 mAddBlackList.setText(R.string.menu_addBlackList);
-mAddBlackList.setIconResource(R.drawable.ic_menu_end_call);
+mAddBlackList.setIconResource(R.drawable.ic_menu_add_black);
 mInCallMenuView.addItemView(mAddBlackList, 0);
 
         // Row 1:

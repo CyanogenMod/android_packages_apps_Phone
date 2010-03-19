@@ -75,7 +75,7 @@ import java.util.List;
  * Phone app "in call" screen.
  */
 public class InCallScreen extends Activity
-        implements View.OnClickListener, View.OnTouchListener {
+        implements View.OnClickListener, View.OnTouchListener, View.OnLongClickListener {
     private static final String LOG_TAG = "InCallScreen";
 
     private static final boolean DBG =
@@ -2852,6 +2852,39 @@ mForceTouch = mSettings.mForceTouch;
         }
     }
 
+    // View.OnLongClickListener implementation
+    public boolean onLongClick(View view) {
+        int id = view.getId();
+        if (id == R.id.endButton) {
+            Connection c = PhoneUtils.getConnection(mPhone, PhoneUtils.getCurrentCall(mPhone));
+            String number = c.getAddress();
+            // Confirm for addBlack
+            new AlertDialog.Builder(this)
+                .setIcon(R.drawable.ic_menu_add_black)
+                .setTitle(R.string.menu_addBlackList)
+                .setMessage("" + number)
+                .setPositiveButton(R.string.alert_dialog_yes, new DialogInterface.OnClickListener(){
+                    public void onClick(DialogInterface dialog, int whichButton){
+                        addBlackAndHang();
+                    }
+                })
+            .setNegativeButton(R.string.alert_dialog_no, null)
+                .create().show();
+            return true;
+        }
+        return false;
+    }
+
+    // Hangup and Add to BlackList
+    public void addBlackAndHang() {
+        if (VDBG) log("onClick: AddBlackList...");
+        //======
+        Connection c = PhoneUtils.getConnection(mPhone, PhoneUtils.getCurrentCall(mPhone));
+        String number = c.getAddress();
+        if (DBG) log("Add to Black List: " + number);
+        PhoneApp.getInstance().getSettings().addBlackList(number);
+        internalHangup();
+    }
 
     //
     // Callbacks for buttons / menu items.
@@ -2958,13 +2991,7 @@ mForceTouch = mSettings.mForceTouch;
                 break;
 
 case R.id.menuAddBlackList:
-    if (VDBG) log("onClick: AddBlackList...");
-    //======
-    Connection c = PhoneUtils.getConnection(mPhone, PhoneUtils.getCurrentCall(mPhone));
-    String number = c.getAddress();
-    if (DBG) log("Add to Black List: " + number);
-    PhoneApp.getInstance().getSettings().addBlackList(number);
-    internalHangup();
+    addBlackAndHang();
     break;
 
             default:
