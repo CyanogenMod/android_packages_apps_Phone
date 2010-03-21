@@ -24,7 +24,7 @@
     <string name="fdnListLabel" msgid="8630418672279521003">"Elenco FDN"</string>
     <string name="unknown" msgid="6878797917991465859">"Sconosciuto"</string>
     <string name="private_num" msgid="6713286113000232309">"Numero privato"</string>
-    <string name="payphone" msgid="1931775086311769314">"Telefono a monete"</string>
+    <string name="payphone" msgid="1931775086311769314">"Cabina telefonica"</string>
     <string name="onHold" msgid="9035493194749959955">"In attesa"</string>
     <string name="ongoing" msgid="8300874342848721367">"Chiamata corrente"</string>
     <string name="callFailed_userBusy" msgid="8851106999809294904">"Linea occupata"</string>
@@ -572,4 +572,42 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Trascina a destra per rispondere e"\n"terminare la chiamata in attesa"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Risposta"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Rifiuta"</string>
+
+<!-- added by cytown@gmail.com -->
+<string name="notification_ongoing_calling_format">Chiamata (<xliff:g id="duration">%s</xliff:g>)</string>
+<string name="advanced_setting">Impostazioni avanzate</string>
+
+<string name="vibrate_outgoing">Vibra alla risposta</string>
+<string name="vibrate_outgoing_sum">Vibra quando rispondi a una chiamata</string>
+
+<string name="vibrate_45">Vibra ogni 45 sec</string>
+<string name="vibrate_45_sum">Vibra ogni 45 secondi durante le chiamate in uscita</string>
+
+<string name="vibrate_hangup">Vibra al termine</string>
+<string name="vibrate_hangup_sum">Vibra quando termini una chiamata</string>
+
+<string name="vibrate_call_waiting">Vibra quando in attesa</string>
+<string name="vibrate_call_waiting_sum">Vibra quando c\'è una chiamata in attesa</string>
+
+<string name="screen_awake">Tieni lo schermo acceso</string>
+<string name="screen_awake_sum">Lo schermo restera acceso più del normale durante una chiamata</string>
+
+<string name="return_home">Ritorno elenco chiamate</string>
+<string name="return_home_sum">Forza il ritorno all\'elenco delle chiamate dopo che termini una chiamata</string>
+
+<string name="led_notify_call">Led di notifica</string>
+<string name="led_notify_call_sum">Il Led lampeggia in presenza di una chiamata persa</string>
+
+<string name="led_show_organ">Visualizza organizzazioni</string>
+<string name="led_show_organ_sum">Le organizzazioni saranno visualizzate nella schermata delle chiamate</string>
+
+<string name="menu_addBlackList">Aggiungi ai Contatti Bloccati</string>
+<string name="black_list">Contatti Bloccati</string>
+<string name="black_list_sum">Le chiamate in arrivo dai contatti bloccati verranno rifiutate</string>
+<string name="add_black">Aggiungi numero di telefono</string>
+<string name="remove_black">Rimuovi %s dall\'elenco</string>
+<string name="set_force_touch">Forza Tastiera Touch</string>
+<string name="set_force_touch_sum">Forza la visualizzazione del Touch UI senza individuare il sensore di prossimità</string>
 </resources>
+
+
