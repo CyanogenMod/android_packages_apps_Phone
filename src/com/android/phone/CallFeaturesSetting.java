@@ -1874,7 +1874,6 @@ private void initPrefBlackList() {
         pref.setTitle(s);
         pref.setOnPreferenceClickListener(blackPreferenceListener);
         mCatBlackList.addPreference(pref);
-        mCatBlackList.setTitle("BlackList(" + Integer.toString(al.size()) + ")");
     }
 //====
 }
