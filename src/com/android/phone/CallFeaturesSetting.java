@@ -1826,7 +1826,13 @@ public void deleteBlackList(String s) {
 
 public boolean isBlackList(String s) {
     //System.out.println(setBlackList + ":" + s);
-    return setBlackList.contains(s);
+    Iterator i = setBlackList.iterator();
+    while (i.hasNext()) {
+        if (PhoneNumberUtils.compare((String) i.next(), s)) {
+            return true;
+        }
+    }
+    return false;
 }
 
 private void saveBLFile() {
@@ -1868,6 +1874,7 @@ private void initPrefBlackList() {
         pref.setTitle(s);
         pref.setOnPreferenceClickListener(blackPreferenceListener);
         mCatBlackList.addPreference(pref);
+        mCatBlackList.setTitle("BlackList(" + Integer.toString(al.size()) + ")");
     }
 //====
 }
