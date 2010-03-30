@@ -749,15 +749,15 @@ static Connection getConnection(Phone phone, Call call) {
             PhoneApp app = PhoneApp.getInstance();
             if (app.cdmaPhoneCallState.getCurrentCallState()
                     == CdmaPhoneCallState.PhoneCallState.THRWAY_ACTIVE) {
+                // Set the Phone Call State to conference
+                app.cdmaPhoneCallState.setCurrentCallState(
+                        CdmaPhoneCallState.PhoneCallState.CONF_CALL);
+
                 // Send flash cmd
                 // TODO(Moto): Need to change the call from switchHoldingAndActive to
                 // something meaningful as we are not actually trying to swap calls but
                 // instead are merging two calls by sending a Flash command.
                 switchHoldingAndActive(phone);
-
-                // Set the Phone Call State to conference
-                app.cdmaPhoneCallState.setCurrentCallState(
-                        CdmaPhoneCallState.PhoneCallState.CONF_CALL);
             }
         } else {
             throw new IllegalStateException("Unexpected phone type: " + phoneType);
