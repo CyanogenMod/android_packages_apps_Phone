@@ -47,6 +47,10 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import android.preference.PreferenceManager;
+import android.hardware.SensorManager;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorEvent;
+import android.hardware.Sensor;
 
 
 /**
@@ -161,6 +165,7 @@ private static final String BLACKLIST = "blacklist";
     public CallNotifier(PhoneApp app, Phone phone, Ringer ringer,
                         BluetoothHandsfree btMgr) {
 mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(app));
+mSensorManager = (SensorManager) app.getSystemService(Context.SENSOR_SERVICE);
         mApplication = app;
 
         mPhone = phone;
@@ -443,6 +448,7 @@ if (c != null && mSettings.isBlackList(number)) {
             if (state == Call.State.INCOMING) {
                 PhoneUtils.setAudioControlState(PhoneUtils.AUDIO_RINGING);
                 startIncomingCallQuery(c);
+                startSensor();
             } else {
 if (mSettings.mVibCallWaiting) {
     mApplication.vibrate(200,300,500);
@@ -1152,6 +1158,52 @@ if (c != null) {
         NotificationMgr.getDefault().updateCfi(visible);
     }
 
+    private SensorManager mSensorManager;
+    private boolean mSensorRunning = false;
+    private TurnListener mTurnListener = new TurnListener();
+
+    class TurnListener implements SensorEventListener {
+        int count = 0;
+        public void onSensorChanged(SensorEvent event) {
+            if (++count < 5) {  // omit the first 5 times
+                return;
+            }
+            float[] values = event.values;
+            // Log.i("==="," @ " + values[1] + " : " + values[2]);
+            if (count <= 7) {   // test 5 to 7 times
+                if (Math.abs(values[1]) > 15 || Math.abs(values[2]) > 20) {
+                    // Log.i("===","force stop sensor! @ " + values[1] + " : " + values[2]);
+                    stopSensor();
+                }
+            } else {
+                if (Math.abs(values[1]) > 165 && Math.abs(values[2]) < 20) {
+                    if (DBG) log("turn over!");
+                    silenceRinger();
+                }
+            }
+        }
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    };
+
+    void stopSensor() {
+        if (mSensorRunning) {
+            if (DBG) log("stop sensor!");
+            mTurnListener.count = 0;
+            mSensorManager.unregisterListener(mTurnListener);
+            mSensorRunning = false;
+         }
+    }
+
+
+    void startSensor() {
+        if (mSettings.mTurnSilence && !mSensorRunning) {
+            if (DBG) log("startSensor()...");
+            mSensorManager.registerListener(mTurnListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                    SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorRunning = true;
+        }
+    }
+
     /**
      * Indicates whether or not this ringer is ringing.
      */
@@ -1166,6 +1218,8 @@ if (c != null) {
     void silenceRinger() {
         mSilentRingerRequested = true;
         if (DBG) log("stopRing()... (silenceRinger)");
+        // Log.i("===","silence sensor!");
+        stopSensor();
         mRinger.stopRing();
     }
 

@@ -415,13 +415,17 @@ static boolean mForceTouch;
 private static final String BUTTON_VIBRATE_CALL_WAITING = "button_vibrate_call_waiting";
 private CheckBoxPreference mButtonVibCallWaiting;
 static boolean mVibCallWaiting;
+static boolean mTurnSilence;
+private static final String BUTTON_TURN_SILENCE     = "button_turn_silence";
+private CheckBoxPreference mButtonTurnSilence;
 
 private static final String BUTTON_ADD_BLACK = "button_add_black";
 private static final String CATEGORY_BLACK   = "cat_black_list";
 private static final String BLFILE           = "blacklist.dat";
+private static final int BLFILE_VER          = 1;
 private EditPhoneNumberPreference mButtonAddBlack;
 private PreferenceCategory mCatBlackList;
-private static HashSet<String> setBlackList = new HashSet<String>();
+private static HashSet<PhoneNo> setBlackList = new HashSet<PhoneNo>();
 private static final int ADD_BLACK_LIST_ID = 3;
 
     private boolean mForeground;
@@ -1475,6 +1479,8 @@ mButtonLedNotify   = (CheckBoxPreference) prefSet.findPreference(BUTTON_LED_NOTI
 mButtonLedNotify.setChecked(mLedNotify);
 mButtonShowOrgan   = (CheckBoxPreference) prefSet.findPreference(BUTTON_SHOW_ORGAN);
 mButtonShowOrgan.setChecked(mShowOrgan);
+mButtonTurnSilence = (CheckBoxPreference) prefSet.findPreference(BUTTON_TURN_SILENCE);
+mButtonTurnSilence.setChecked(mTurnSilence);
 mButtonVibCallWaiting = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_CALL_WAITING);
 mButtonVibCallWaiting.setChecked(mVibCallWaiting);
 mButtonForceTouch  = (CheckBoxPreference) prefSet.findPreference(BUTTON_FORCE_TOUCH);
@@ -1828,49 +1834,64 @@ private void init(SharedPreferences pref) {
     mReturnHome = pref.getBoolean(BUTTON_RETURN_HOME, true);
     mLedNotify   = pref.getBoolean(BUTTON_LED_NOTIFY, true);
     mShowOrgan   = pref.getBoolean(BUTTON_SHOW_ORGAN, false);
+    mTurnSilence = pref.getBoolean(BUTTON_TURN_SILENCE, false);
     mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
     mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, false);
     ObjectInputStream ois = null;
+    boolean correctVer = false;
     try {
         ois = new ObjectInputStream(PhoneApp.getInstance().openFileInput(BLFILE));
         Object o = ois.readObject();
-        if (o != null) setBlackList = (HashSet<String>)o;
+        if (o != null) {
+            if (o instanceof Integer) {
+                // check the version
+                Integer ii = (Integer) o;
+                if (ii == BLFILE_VER) {
+                    correctVer = true;
+                }
+                o = ois.readObject();
+                setBlackList = (HashSet<PhoneNo>)o;
+            } else {
+                HashSet<String> set = (HashSet<String>)o;
+                setBlackList = new HashSet<PhoneNo>();
+                for (String s : set) {
+                    setBlackList.add(new PhoneNo(s));
+                }
+            }
+        }
     } catch (Exception e) {
         // ignore
     } finally {
         if (ois != null) try{ ois.close();} catch (Exception e) {}
     }
-    if (setBlackList == null) setBlackList = new HashSet<String>();
+    if (setBlackList == null) setBlackList = new HashSet<PhoneNo>();
+    // make save if not correctVer
+    if (!correctVer) saveBLFile();
     //System.out.println("BL: " + setBlackList);
 }
 
 public boolean addBlackList(String s) {
     if (s == null || s.equals("") || isBlackList(s)) return false;
-    setBlackList.add(s);
+    setBlackList.add(new PhoneNo(s));
     saveBLFile();
     return true;
 }
 
 public void deleteBlackList(String s) {
-    setBlackList.remove(s);
+    setBlackList.remove(new PhoneNo(s));
     saveBLFile();
 }
 
 public boolean isBlackList(String s) {
     //System.out.println(setBlackList + ":" + s);
-    Iterator i = setBlackList.iterator();
-    while (i.hasNext()) {
-        if (PhoneNumberUtils.compare((String) i.next(), s)) {
-            return true;
-        }
-    }
-    return false;
+    return setBlackList.contains(new PhoneNo(s));
 }
 
 private void saveBLFile() {
     ObjectOutputStream oos = null;
     try {
         oos = new ObjectOutputStream(PhoneApp.getInstance().openFileOutput(BLFILE, Context.MODE_PRIVATE));
+        oos.writeObject(new Integer(BLFILE_VER));
         oos.writeObject(setBlackList);
     } catch (Exception e) {
         // ignore
@@ -1899,11 +1920,11 @@ private OnPreferenceClickListener blackPreferenceListener = new OnPreferenceClic
 private void initPrefBlackList() {
     mCatBlackList.removeAll();
     if (setBlackList == null || setBlackList.size() == 0) return;
-    ArrayList<String> al = new ArrayList<String>(setBlackList);
+    ArrayList<PhoneNo> al = new ArrayList<PhoneNo>(setBlackList);
     Collections.sort(al);
-    for (String s : al) {
+    for (PhoneNo s : al) {
         Preference pref = new Preference(this);
-        pref.setTitle(s);
+        pref.setTitle(s.phone);
         pref.setOnPreferenceClickListener(blackPreferenceListener);
         mCatBlackList.addPreference(pref);
     }
@@ -1922,11 +1943,53 @@ protected void onDestroy() {
     outState.putBoolean(BUTTON_RETURN_HOME, mButtonReturnHome.isChecked());
     outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
     outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());
+    outState.putBoolean(BUTTON_TURN_SILENCE, mButtonTurnSilence.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
     outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch == null || mButtonForceTouch.isChecked());
     outState.commit();
     init(pref);
     super.onDestroy();
+}
+
+class PhoneNo implements Comparable<PhoneNo>, java.io.Externalizable {
+    String phone;
+
+    public PhoneNo() {
+        phone = null;
+    }
+
+    public PhoneNo(String s) {
+        phone = s;
+    }
+
+    public int compareTo(PhoneNo bp) {
+        if (bp == null || bp.phone == null) return 1;
+        if (phone == null) return -1;
+        //System.out.println("compare : " + phone + " & " + bp.phone + " == " + PhoneNumberUtils.compare(phone, bp.phone));
+        return PhoneNumberUtils.compare(phone, bp.phone) ? 0 : phone.compareTo(bp.phone);
+    }
+
+    @Override
+        public boolean equals(Object o) {
+            if (o instanceof PhoneNo) return compareTo((PhoneNo)o) == 0;
+            return false;
+        }
+
+    @Override
+        public int hashCode() {
+            if (phone == null) return 0;
+            int len = phone.length(); 
+            return len > 5 ? phone.substring(len - 5).hashCode() : phone.hashCode();
+        }
+
+    public void writeExternal(java.io.ObjectOutput out) throws java.io.IOException {
+        out.writeObject(phone);
+    }
+
+    public void readExternal(java.io.ObjectInput in) throws java.io.IOException, ClassNotFoundException {
+        phone = (String) in.readObject();
+    }
+
 }
 
 }
