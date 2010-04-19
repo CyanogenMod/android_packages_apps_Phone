@@ -1122,6 +1122,11 @@ mForceTouch = mSettings.mForceTouch;
 
     /* package */ void updateAfterRadioTechnologyChange() {
         if (DBG) Log.d(LOG_TAG, "updateAfterRadioTechnologyChange()...");
+
+        // Reset the call screen since the calls cannot be transferred
+        // across radio technologies.
+        resetInCallScreenMode();
+
         // Unregister for all events from the old obsolete phone
         unregisterForPhoneStates();
 
