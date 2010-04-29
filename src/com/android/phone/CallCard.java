@@ -22,6 +22,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.pim.ContactsAsyncHelper;
 import android.provider.ContactsContract.Contacts;
+import android.provider.ContactsContract.RawContacts;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
@@ -42,6 +43,7 @@ import com.android.internal.telephony.Connection;
 import com.android.internal.telephony.Phone;
 
 import java.util.List;
+import java.util.ArrayList;
 
 import android.provider.Contacts.Organizations;
 
@@ -1135,29 +1137,62 @@ if (updateName && mSettings.mShowOrgan) {
         }
     }
 
-private void updateOrganization(final long person_id) {
-//    new android.os.Handler().post(new Runnable() {
-//        public void run() {
-            android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(Organizations.CONTENT_URI,
+    private void updateOrganization(final long contactId) {
+        // lookup the raw contact ids based on the normal contact id given
+        List<Long> rawContactIds = lookupRawContactIdsForContactId(contactId);
+        // iterate through the raw contact ids until we find an organization match
+        boolean match = false;
+        for(Long rawContactId : rawContactIds) {
+            android.database.Cursor c = null;
+            try {
+                // try to query the organization name based on the raw contact id
+                c = CallCard.this.getContext().getContentResolver().query(Organizations.CONTENT_URI,
                     new String[] { Organizations.COMPANY },
-                    Organizations.PERSON_ID + " = ?", new String[] { person_id + "" },
+                    Organizations.PERSON_ID + " = ?", new String[] { rawContactId.longValue() + "" },
                     null);
-            if (c != null) {
-                if (c.moveToNext()) {
-                    try {
-                        if (DBG) Log.d(LOG_TAG, "show organ");
+                if (c != null) {
+                    if (c.moveToNext()) {
+                        // we have found an organization.  set the organization name and exit loop
                         mOrganization.setText(c.getString(0));
                         mOrganization.setVisibility(View.VISIBLE);
                         mOrganization.invalidate();
-                    } catch (Exception e) {}
-                } else {
-                    mOrganization.setVisibility(View.GONE);
+                        match = true;
+                        break;
+                    }
                 }
+            } finally {
+                if(c != null) {
+                    c.close();
+                }
+            }
+        }
+        if(!match) {
+            mOrganization.setVisibility(View.GONE);
+        }
+    }
+    
+    private List<Long> lookupRawContactIdsForContactId(final long contactId) {
+        List<Long> rawContactIds = new ArrayList<Long>();
+        android.database.Cursor c = null;
+        try {
+            // look for all raw contact ids for a normal contact id
+            c = CallCard.this.getContext().getContentResolver().query(RawContacts.CONTENT_URI,
+                    new String[]{RawContacts._ID},
+                    RawContacts.CONTACT_ID + " = ?",
+                    new String[]{String.valueOf(contactId)}, null);
+            if (c != null) {
+                while(c.moveToNext()) {
+                    // add all raw contact ids to a list
+                    rawContactIds.add(c.getLong(0));
+                }
+            }
+        } finally {
+            if(c != null) {
                 c.close();
             }
-//        }
-//    });
-}
+        }
+        return rawContactIds;
+    }
 
     private String getPresentationString(int presentation) {
         String name = getContext().getString(R.string.unknown);
