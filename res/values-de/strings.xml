@@ -596,4 +596,6 @@
     <string name="black_list_sum">Anruf von Black List Eintrag wird abgelehnt.</string>
     <string name="add_black">Nummer hinzufügen</string>
     <string name="remove_black">Lösche %s von Liste</string>
+    <string name="set_force_touch">Touch Tastatur</string>
+    <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur.</string>
 </resources>
