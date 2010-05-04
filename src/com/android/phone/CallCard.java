@@ -45,7 +45,7 @@ import com.android.internal.telephony.Phone;
 import java.util.List;
 import java.util.ArrayList;
 
-import android.provider.Contacts.Organizations;
+import android.provider.ContactsContract;
 
 /**
  * "Call card" UI element: the in-call screen contains a tiled layout of call
@@ -1137,18 +1137,13 @@ if (updateName && mSettings.mShowOrgan) {
         }
     }
 
-    private void updateOrganization(final long contactId) {
-        // lookup the raw contact ids based on the normal contact id given
-        List<Long> rawContactIds = lookupRawContactIdsForContactId(contactId);
-        // iterate through the raw contact ids until we find an organization match
-        boolean match = false;
-        for(Long rawContactId : rawContactIds) {
-            android.database.Cursor c = null;
-            try {
-                // try to query the organization name based on the raw contact id
-                c = CallCard.this.getContext().getContentResolver().query(Organizations.CONTENT_URI,
-                    new String[] { Organizations.COMPANY },
-                    Organizations.PERSON_ID + " = ?", new String[] { rawContactId.longValue() + "" },
+    private void updateOrganization(final long person_id) {
+//    new android.os.Handler().post(new Runnable() {
+//        public void run() {
+            android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
+                    new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY },
+                    ContactsContract.Data.CONTACT_ID + " = ? and " + ContactsContract.Data.MIMETYPE + " = '" +
+                    ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "'", new String[] { person_id + "" },
                     null);
                 if (c != null) {
                     if (c.moveToNext()) {
