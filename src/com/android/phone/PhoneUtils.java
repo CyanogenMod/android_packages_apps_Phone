@@ -1431,7 +1431,11 @@ static Connection getConnection(Phone phone, Call call) {
             }
         } else {
             cit = new CallerInfoToken();
-            cit.currentInfo = (CallerInfo) userDataObject;
+            if (userDataObject instanceof String) { // only blacklist will cause this, so just ignore this.
+                cit.currentInfo = new CallerInfo();
+            } else {
+                cit.currentInfo = (CallerInfo) userDataObject;
+            }
             cit.asyncQuery = null;
             cit.isFinal = true;
             // since the query is already done, call the listener.
