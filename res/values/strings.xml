@@ -1101,4 +1101,11 @@
     <string name="left_hand_sum">Use left hand hold the phone, need a reboot to effect.</string>
     <string name="set_force_touch">In-call touch UI</string>
     <string name="set_force_touch_sum">Force in-call touch UI without proximity sensor</string>
+
+    <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
+    <string name="contactPhoto">contact photo</string>
+    <!-- Use this to describe the separate conference call button; currently for screen readers through accessibility. -->
+    <string name="goPrivate">go private</string>
+    <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
+    <string name="selectContact">select contact</string>
 </resources>
