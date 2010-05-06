@@ -1138,31 +1138,23 @@ if (updateName && mSettings.mShowOrgan) {
     }
 
     private void updateOrganization(final long person_id) {
-//    new android.os.Handler().post(new Runnable() {
-//        public void run() {
-            android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
+        android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
                     new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY },
                     ContactsContract.Data.CONTACT_ID + " = ? and " + ContactsContract.Data.MIMETYPE + " = '" +
                     ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "'", new String[] { person_id + "" },
                     null);
-                if (c != null) {
-                    if (c.moveToNext()) {
-                        // we have found an organization.  set the organization name and exit loop
-                        mOrganization.setText(c.getString(0));
-                        mOrganization.setVisibility(View.VISIBLE);
-                        mOrganization.invalidate();
-                        match = true;
-                        break;
-                    }
-                }
-            } finally {
-                if(c != null) {
-                    c.close();
-                }
+        if (c != null) {
+            if (c.moveToNext()) {
+                try {
+                    // we have found an organization.  set the organization name and exit loop
+                    mOrganization.setText(c.getString(0));
+                    mOrganization.setVisibility(View.VISIBLE);
+                    mOrganization.invalidate();
+                } catch (Exception e) {}
+            } else {
+                mOrganization.setVisibility(View.GONE);
             }
-        }
-        if(!match) {
-            mOrganization.setVisibility(View.GONE);
+            c.close();
         }
     }
     
