@@ -418,6 +418,9 @@ static boolean mVibCallWaiting;
 static boolean mTurnSilence;
 private static final String BUTTON_TURN_SILENCE     = "button_turn_silence";
 private CheckBoxPreference mButtonTurnSilence;
+static boolean mLeftHand;
+private static final String BUTTON_LEFT_HAND        = "button_left_hand";
+private CheckBoxPreference mButtonLeftHand;
 
 private static final String BUTTON_ADD_BLACK = "button_add_black";
 private static final String CATEGORY_BLACK   = "cat_black_list";
@@ -1481,10 +1484,12 @@ mButtonShowOrgan   = (CheckBoxPreference) prefSet.findPreference(BUTTON_SHOW_ORG
 mButtonShowOrgan.setChecked(mShowOrgan);
 mButtonTurnSilence = (CheckBoxPreference) prefSet.findPreference(BUTTON_TURN_SILENCE);
 mButtonTurnSilence.setChecked(mTurnSilence);
+mButtonLeftHand    = (CheckBoxPreference) prefSet.findPreference(BUTTON_LEFT_HAND);
+mButtonLeftHand.setChecked(mLeftHand);
 mButtonVibCallWaiting = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_CALL_WAITING);
 mButtonVibCallWaiting.setChecked(mVibCallWaiting);
 mButtonForceTouch  = (CheckBoxPreference) prefSet.findPreference(BUTTON_FORCE_TOUCH);
-if (getResources().getBoolean(R.bool.allow_incoming_call_touch_ui)) {
+if (getResources().getBoolean(R.bool.allow_in_call_touch_ui)) {
     // don't know why removePreference always return false and not working.... if someone knows just mail me.
     //prefSet.removePreference(prefSet.findPreference(BUTTON_FORCE_TOUCH));
     //mButtonForceTouch = null;
@@ -1835,6 +1840,7 @@ private void init(SharedPreferences pref) {
     mLedNotify   = pref.getBoolean(BUTTON_LED_NOTIFY, true);
     mShowOrgan   = pref.getBoolean(BUTTON_SHOW_ORGAN, false);
     mTurnSilence = pref.getBoolean(BUTTON_TURN_SILENCE, false);
+    mLeftHand = pref.getBoolean(BUTTON_LEFT_HAND, false);
     mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
     mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, false);
     ObjectInputStream ois = null;
@@ -1843,14 +1849,15 @@ private void init(SharedPreferences pref) {
         ois = new ObjectInputStream(PhoneApp.getInstance().openFileInput(BLFILE));
         Object o = ois.readObject();
         if (o != null) {
+            if (DBG) log("first object is: " + o);
             if (o instanceof Integer) {
                 // check the version
                 Integer ii = (Integer) o;
                 if (ii == BLFILE_VER) {
                     correctVer = true;
                 }
-                o = ois.readObject();
-                setBlackList = (HashSet<PhoneNo>)o;
+                Object o2 = ois.readObject();
+                setBlackList = (HashSet<PhoneNo>)o2;
             } else {
                 HashSet<String> set = (HashSet<String>)o;
                 setBlackList = new HashSet<PhoneNo>();
@@ -1860,6 +1867,7 @@ private void init(SharedPreferences pref) {
             }
         }
     } catch (Exception e) {
+        log("exception is " + e);
         // ignore
     } finally {
         if (ois != null) try{ ois.close();} catch (Exception e) {}
@@ -1894,9 +1902,10 @@ private void saveBLFile() {
         oos.writeObject(new Integer(BLFILE_VER));
         oos.writeObject(setBlackList);
     } catch (Exception e) {
+        log(e.toString());
         // ignore
     } finally {
-        if (oos != null) try{ oos.close();} catch (Exception e) {}
+        if (oos != null) try{ oos.close();} catch (Exception e) { }
     }
 }
 
@@ -1944,6 +1953,7 @@ protected void onDestroy() {
     outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
     outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());
     outState.putBoolean(BUTTON_TURN_SILENCE, mButtonTurnSilence.isChecked());
+    outState.putBoolean(BUTTON_LEFT_HAND, mButtonLeftHand.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
     outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch == null || mButtonForceTouch.isChecked());
     outState.commit();
@@ -1951,7 +1961,8 @@ protected void onDestroy() {
     super.onDestroy();
 }
 
-class PhoneNo implements Comparable<PhoneNo>, java.io.Externalizable {
+static class PhoneNo implements Comparable<PhoneNo>, java.io.Externalizable, java.io.Serializable {
+    static final long serialVersionUID = 32847013274L;
     String phone;
 
     public PhoneNo() {
@@ -1988,6 +1999,10 @@ class PhoneNo implements Comparable<PhoneNo>, java.io.Externalizable {
 
     public void readExternal(java.io.ObjectInput in) throws java.io.IOException, ClassNotFoundException {
         phone = (String) in.readObject();
+    }
+
+    public String toString() {
+        return "PhoneNo: " + phone;
     }
 
 }

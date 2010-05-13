@@ -104,7 +104,8 @@ private CallFeaturesSetting mSettings;
         // Inflate our contents, and add it (to ourself) as a child.
         LayoutInflater inflater = LayoutInflater.from(context);
         inflater.inflate(
-                R.layout.incall_touch_ui,  // resource
+                //R.layout.incall_touch_ui,  // resource
+                mSettings.mLeftHand ? R.layout.incall_touch_ui_left : R.layout.incall_touch_ui,  // resource
                 this,                      // root
                 true);
 

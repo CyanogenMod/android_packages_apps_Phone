@@ -1134,7 +1134,7 @@
 
 <!-- added by cytown@gmail.com -->
 <string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)</string>
-<string name="advanced_setting">Advanced Settings V.28.1</string>
+<string name="advanced_setting">Advanced Settings V.29</string>
 <string name="vibrate_outgoing">Vibrate on answer</string>
 <string name="vibrate_outgoing_sum">Vibrate when a call is answered</string>
 <string name="vibrate_45">Vibrate every 45 seconds</string>
@@ -1158,6 +1158,8 @@
 <string name="remove_black">Remove %s from List</string>
 <string name="turn_silence">Turn over silence</string>
 <string name="turn_silence_sum">Turn over to silence ring</string>
+<string name="left_hand">Use left hand</string>
+<string name="left_hand_sum">Use left hand hold the phone, need a reboot to effect.</string>
 <string name="set_force_touch">Force Touch Keyboard</string>
 <string name="set_force_touch_sum">Force show Touch UI without detect proximity sensor.</string>
 </resources>

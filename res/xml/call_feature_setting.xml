@@ -115,6 +115,11 @@
         android:title="@string/turn_silence"
         android:persistent="false"
         android:summary="@string/turn_silence_sum"/>
+    <CheckBoxPreference
+        android:key="button_left_hand"
+        android:title="@string/left_hand"
+        android:persistent="false"
+        android:summary="@string/left_hand_sum"/>
     <PreferenceScreen
         android:key="button_black_list"
         android:title="@string/black_list"
