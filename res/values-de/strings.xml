@@ -598,6 +598,8 @@
     <string name="remove_black">Lösche %s von Liste</string>
     <string name="turn_silence">Stummdrehen</string>
     <string name="turn_silence_sum">Umdrehen des Gerätes zum Stummschalten bei eing. Anruf.</string>
+    <string name="left_hand">Linkshänder</string>
+    <string name="left_hand_sum">Gerät als Linkshänder nutzen. (Neustart erforderlich)</string>
     <string name="set_force_touch">Touch Tastatur</string>
     <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur.</string>
 </resources>
