@@ -1048,16 +1048,17 @@ public class PhoneUtils {
                 // specify the dialog's click listener, with SEND and CANCEL logic.
                 final DialogInterface.OnClickListener mUSSDDialogListener =
                     new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int whichButton) {
-                        switch (whichButton) {
-                            case DialogInterface.BUTTON1:
-                                phone.sendUssdResponse(inputText.getText().toString());
-                                break;
-                            case DialogInterface.BUTTON2:
-                                if (mmiCode.isCancelable()) {
-                                    mmiCode.cancel();
-                                }
-                                break;
+                        public void onClick(DialogInterface dialog, int whichButton) {
+                            switch (whichButton) {
+                                case DialogInterface.BUTTON_POSITIVE:
+                                    phone.sendUssdResponse(inputText.getText().toString());
+                                    break;
+                                case DialogInterface.BUTTON_NEGATIVE:
+                                    if (mmiCode.isCancelable()) {
+                                        mmiCode.cancel();
+                                    }
+                                    break;
+                            }
                         }
                     }
                 };
