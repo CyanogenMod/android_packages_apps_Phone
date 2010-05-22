@@ -608,6 +608,8 @@
 <string name="remove_black">Rimuovi %s dall\'elenco</string>
 <string name="turn_silence">Gira per disatt. suoneria</string>
 <string name="turn_silence_sum">Gira il telefono per disattivare la suoneria quando ricevi una chiamata</string>
+<string name="left_hand">Usa mano sinistra</string>
+<string name="left_hand_sum">Usa la mano sinistra per tenere il telefono, richiede riavvio.</string>
 <string name="set_force_touch">Forza Tastiera Touch</string>
 <string name="set_force_touch_sum">Forza la visualizzazione del Touch UI senza individuare il sensore di prossimità</string>
 </resources>
