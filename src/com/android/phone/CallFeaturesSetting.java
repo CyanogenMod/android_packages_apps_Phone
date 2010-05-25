@@ -1842,7 +1842,7 @@ private void init(SharedPreferences pref) {
     mTurnSilence = pref.getBoolean(BUTTON_TURN_SILENCE, false);
     mLeftHand = pref.getBoolean(BUTTON_LEFT_HAND, false);
     mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
-    mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, false);
+    mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, PhoneUtils.isProximitySensorAvailable(PhoneApp.getInstance()));
     ObjectInputStream ois = null;
     boolean correctVer = false;
     try {
