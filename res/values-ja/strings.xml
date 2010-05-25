@@ -572,10 +572,10 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"右にドラッグして応答し"\n"保留中の通話を終了"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"電話に出る"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"拒否"</string>
-    
+
     <!--  added by takuo for CM -->
-    <string name="notification_ongoing_calling_format">発信中 (<xliff:g id="duration">%s</xliff:g>)</string>
-<string name="advanced_setting">追加設定 V.29</string>
+<string name="notification_ongoing_calling_format">発信中 (<xliff:g id="duration">%s</xliff:g>)</string>
+<string name="advanced_setting">追加設定 V.30</string>
 <string name="vibrate_outgoing">応答時に振動</string>
 <string name="vibrate_outgoing_sum">相手が呼び出しに応答した時にバイブレーションする</string>
 <string name="vibrate_45">45秒間隔で振動</string>
@@ -603,5 +603,4 @@
 <string name="left_hand_sum">左手で携帯電話を持って使用する (再起動が必要)</string>
 <string name="set_force_touch">タッチパネル</string>
 <string name="set_force_touch_sum">近接センサの反応によらずタッチUIを表示する</string>
-
 </resources>

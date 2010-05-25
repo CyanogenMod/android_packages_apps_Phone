@@ -574,7 +574,7 @@
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"拒绝"</string>
 
 <string name="notification_ongoing_calling_format">"当前拨出 (<xliff:g id="DURATION">%s</xliff:g>)"</string>
-<string name="advanced_setting">高级设置 V.29</string>
+<string name="advanced_setting">高级设置 V.30</string>
 <string name="vibrate_outgoing">接听震动</string>
 <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
 <string name="vibrate_45">45秒震动</string>
@@ -598,7 +598,7 @@
 <string name="remove_black">从名单中去除 %s</string>
 <string name="turn_silence">翻转静音</string>
 <string name="turn_silence_sum">来电时翻转就静音</string>
-<string name="left_hand">左手使用</string>
+<string name="left_hand">左手模式</string>
 <string name="left_hand_sum">用左手拿手机操作和接听电话, 需要重启.</string>
 <string name="set_force_touch">强制显示触摸键盘</string>
 <string name="set_force_touch_sum">强制在通话中使用触摸键盘无论是否有近距传感器.</string>

@@ -574,7 +574,7 @@
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Ablehnen"</string>
 
     <string name="notification_ongoing_calling_format">Wähle (<xliff:g id="duration">%s</xliff:g>)</string>
-    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="advanced_setting">Erweiterte Einstellungen v.30</string>
     <string name="vibrate_outgoing">Bei Antwort vibrieren</string>
     <string name="vibrate_outgoing_sum">Vibriere wenn Anruf angenommen wurde.</string>
     <string name="vibrate_45">Vibriere alle 45 Sekunden</string>

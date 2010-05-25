@@ -575,7 +575,7 @@
 
 <!-- added by cytown@gmail.com -->
 <string name="notification_ongoing_calling_format">Chiamata (<xliff:g id="duration">%s</xliff:g>)</string>
-<string name="advanced_setting">Impostazioni avanzate</string>
+<string name="advanced_setting">Impostazioni avanzate v.30</string>
 
 <string name="vibrate_outgoing">Vibra alla risposta</string>
 <string name="vibrate_outgoing_sum">Vibra quando rispondi a una chiamata</string>
