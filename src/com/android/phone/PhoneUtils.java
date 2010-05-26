@@ -1968,6 +1968,44 @@ static boolean isProximitySensorAvailable(Context ctx) {
         return true;
     }
 
+    // KrazyKrivda's hangup from headset mod (needs PhoneApp changes as well)
+    // just simple handleHeadsetHook overloaded function
+    static boolean handleHeadsetHook(Phone phone, int x) {
+        if (DBG) log("handleHeadsetHook()...");
+        if (phone.getState() == Phone.State.IDLE) {
+            return false;
+        }
+
+        final boolean hasRingingCall = !phone.getRingingCall().isIdle();
+        final boolean hasActiveCall = !phone.getForegroundCall().isIdle();
+        final boolean hasHoldingCall = !phone.getBackgroundCall().isIdle();
+
+        if (hasRingingCall) {
+            int phoneType = phone.getPhoneType();
+            if (phoneType == Phone.PHONE_TYPE_CDMA) {
+                answerCall(phone);
+            } else if (phoneType == Phone.PHONE_TYPE_GSM) {
+                if (hasActiveCall && hasHoldingCall) {
+                    if (DBG) log("handleHeadsetHook: ringing (both lines in use) ==> answer!");
+                    answerAndEndActive(phone);
+                } else {
+                    if (DBG) log("handleHeadsetHook: ringing ==> answer!");
+                    answerCall(phone);  // Automatically holds the current active call,
+                                        // if there is one
+                }
+            } else {
+                throw new IllegalStateException("Unexpected phone type: " + phoneType);
+            }
+        } else {
+            Connection c = phone.getForegroundCall().getLatestConnection();
+            if (c != null && !PhoneNumberUtils.isEmergencyNumber(c.getAddress())) {
+                hangup(phone);
+            }
+	    }
+        return true;
+    }
+    // End Hangup Headset option mod
+
     /**
      * Look for ANY connections on the phone that qualify as being
      * disconnected.

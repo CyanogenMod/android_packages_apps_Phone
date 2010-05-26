@@ -714,7 +714,9 @@ mForceTouch = mSettings.mForceTouch;
 
         // Disable the status bar "window shade" the entire time we're on
         // the in-call screen.
-        NotificationMgr.getDefault().getStatusBarMgr().enableExpandedView(false);
+        // Change to subject to proximity sensor available or not - by cytown
+        NotificationMgr.getDefault().getStatusBarMgr().enableExpandedView(
+                PhoneUtils.isProximitySensorAvailable(app.getApplicationContext()));
 
         // Listen for broadcast intents that might affect the onscreen UI.
         registerReceiver(mReceiver, new IntentFilter(Intent.ACTION_HEADSET_PLUG));
