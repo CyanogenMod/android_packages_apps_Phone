@@ -114,9 +114,9 @@ public class CallCard extends FrameLayout
     // Cached DisplayMetrics density.
     private float mDensity;
 
-// add by cytown
-private CallFeaturesSetting mSettings;
-private TextView mOrganization;
+    // add by cytown
+    private CallFeaturesSetting mSettings;
+    private TextView mOrganization;
 
     public CallCard(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -134,8 +134,8 @@ private TextView mOrganization;
 
         mApplication = PhoneApp.getInstance();
 
-// add by cytown
-mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
+        // add by cytown
+        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
 
         mCallTime = new CallTime(this);
 
@@ -176,12 +176,12 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
 
         // Text colors
         mTextColorDefaultPrimary =  // corresponds to textAppearanceLarge
-                getResources().getColor(android.R.color.primary_text_dark);
+            getResources().getColor(android.R.color.primary_text_dark);
         mTextColorDefaultSecondary =  // corresponds to textAppearanceSmall
-                getResources().getColor(android.R.color.secondary_text_dark);
+            getResources().getColor(android.R.color.secondary_text_dark);
         mTextColorConnected = getResources().getColor(R.color.incall_textConnected);
         mTextColorConnectedBluetooth =
-                getResources().getColor(R.color.incall_textConnectedBluetooth);
+            getResources().getColor(R.color.incall_textConnectedBluetooth);
         mTextColorEnded = getResources().getColor(R.color.incall_textEnded);
         mTextColorOnHold = getResources().getColor(R.color.incall_textOnHold);
 
@@ -193,7 +193,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
         mPhoneNumber = (TextView) findViewById(R.id.phoneNumber);
         mLabel = (TextView) findViewById(R.id.label);
         mSocialStatus = (TextView) findViewById(R.id.socialStatus);
-mOrganization = (TextView) findViewById(R.id.organization);
+        mOrganization = (TextView) findViewById(R.id.organization);
 
         // "Other call" info area
         mSecondaryCallName = (TextView) findViewById(R.id.secondaryCallName);
@@ -236,7 +236,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
             Call fgCall = phone.getForegroundCall();
             Call bgCall = phone.getBackgroundCall();
             if ((fgCall.getState() == Call.State.DISCONNECTED)
-                || (bgCall.getState() == Call.State.DISCONNECTED)) {
+                    || (bgCall.getState() == Call.State.DISCONNECTED)) {
                 // In this case, we want the main CallCard to display
                 // the "Call ended" state.  The normal "foreground call"
                 // code path handles that.
@@ -345,7 +345,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
      */
     private void displayMainCallStatus(Phone phone, Call call) {
         if (DBG) log("displayMainCallStatus(phone " + phone
-                     + ", call " + call + ")...");
+                + ", call " + call + ")...");
 
         if (call == null) {
             // There's no call to display, presumably because the phone is idle.
@@ -485,7 +485,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
                 if (runQuery) {
                     if (DBG) log("- displayMainCallStatus: starting CallerInfo query...");
                     PhoneUtils.CallerInfoToken info =
-                            PhoneUtils.startGetCallerInfo(getContext(), conn, this, call);
+                        PhoneUtils.startGetCallerInfo(getContext(), conn, this, call);
                     updateDisplayForPerson(info.currentInfo, presentation, !info.isFinal, call);
                 } else {
                     // No need to fire off a new query.  We do still need
@@ -512,7 +512,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
                         updateDisplayForPerson(ci, presentation, true, call);
                     } else {
                         Log.w(LOG_TAG, "displayMainCallStatus: runQuery was false, "
-                              + "but we didn't have a cached CallerInfo object!  o = " + o);
+                                + "but we didn't have a cached CallerInfo object!  o = " + o);
                         // TODO: any easy way to recover here (given that
                         // the CallCard is probably displaying stale info
                         // right now?)  Maybe force the CallCard into the
@@ -558,7 +558,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
             Call call = (Call) cookie;
             Connection conn = call.getEarliestConnection();
             PhoneUtils.CallerInfoToken cit =
-                   PhoneUtils.startGetCallerInfo(getContext(), conn, this, null);
+                PhoneUtils.startGetCallerInfo(getContext(), conn, this, null);
 
             int presentation = Connection.PRESENTATION_ALLOWED;
             if (conn != null) presentation = conn.getNumberPresentation();
@@ -632,7 +632,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
                 int ongoingCallIcon = bluetoothActive ? R.drawable.ic_incall_ongoing_bluetooth
                         : R.drawable.ic_incall_ongoing;
                 int connectedTextColor = bluetoothActive
-                        ? mTextColorConnectedBluetooth : mTextColorConnected;
+                ? mTextColorConnectedBluetooth : mTextColorConnected;
 
                 if (phoneType == Phone.PHONE_TYPE_CDMA) {
                     // Check if the "Dialing" 3Way call needs to be displayed
@@ -832,7 +832,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
                             getContext(), call, this, mSecondaryCallName);
                     mSecondaryCallName.setText(
                             PhoneUtils.getCompactNameFromCallerInfo(infoToken.currentInfo,
-                                                                    getContext()));
+                                    getContext()));
 
                     // Also pull the photo out of the current CallerInfo.
                     // (Note we assume we already have a valid photo at
@@ -880,7 +880,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
                         String name = PhoneUtils.getCompactNameFromCallerInfo(info, getContext());
                         boolean forceGenericPhoto = false;
                         if (info != null && info.numberPresentation !=
-                                Connection.PRESENTATION_ALLOWED) {
+                            Connection.PRESENTATION_ALLOWED) {
                             name = getPresentationString(info.numberPresentation);
                             forceGenericPhoto = true;
                         }
@@ -1003,11 +1003,11 @@ mOrganization = (TextView) findViewById(R.id.organization);
      * updateDisplayForConference() instead.
      */
     private void updateDisplayForPerson(CallerInfo info,
-                                        int presentation,
-                                        boolean isTemporary,
-                                        Call call) {
+            int presentation,
+            boolean isTemporary,
+            Call call) {
         if (DBG) log("updateDisplayForPerson(" + info + ")\npresentation:" +
-                     presentation + " isTemporary:" + isTemporary);
+                presentation + " isTemporary:" + isTemporary);
 
         // inform the state machine that we are displaying a photo.
         mPhotoTracker.setPhotoRequest(info);
@@ -1020,7 +1020,7 @@ mOrganization = (TextView) findViewById(R.id.organization);
         String socialStatusText = null;
         Drawable socialStatusBadge = null;
 
-boolean updateName = false;
+        boolean updateName = false;
 
         if (info != null) {
             // It appears that there is a small change in behaviour with the
@@ -1061,8 +1061,8 @@ boolean updateName = false;
                     name = info.name;
                     displayNumber = info.phoneNumber;
                     label = info.phoneLabel;
-// add by cytown for show organization
-updateName = true;
+                    // add by cytown for show organization
+                    updateName = true;
                 }
             }
             personUri = ContentUris.withAppendedId(Contacts.CONTENT_URI, info.person_id);
@@ -1072,15 +1072,15 @@ updateName = true;
 
         if (call.isGeneric()) {
             mName.setText(R.string.card_title_in_call);
-mOrganization.setVisibility(View.GONE);
+            mOrganization.setVisibility(View.GONE);
         } else {
             mName.setText(name);
-log("show ======= " + updateName + ":" + mSettings.mShowOrgan);
-if (updateName && mSettings.mShowOrgan) {
-    updateOrganization(info.person_id);
-} else {
-    mOrganization.setVisibility(View.GONE);
-}
+            log("show ======= " + updateName + ":" + mSettings.mShowOrgan);
+            if (updateName && mSettings.mShowOrgan) {
+                updateOrganization(info.person_id);
+            } else {
+                mOrganization.setVisibility(View.GONE);
+            }
         }
         mName.setVisibility(View.VISIBLE);
 
@@ -1102,7 +1102,7 @@ if (updateName && mSettings.mShowOrgan) {
             // Load the image with a callback to update the image state.
             // Use the default unknown picture while the query is running.
             ContactsAsyncHelper.updateImageViewWithContactPhotoAsync(
-                info, 0, this, call, getContext(), mPhoto, personUri, R.drawable.picture_unknown);
+                    info, 0, this, call, getContext(), mPhoto, personUri, R.drawable.picture_unknown);
         }
         // And no matter what, on all devices, we never see the "manage
         // conference" button in this state.
@@ -1139,10 +1139,10 @@ if (updateName && mSettings.mShowOrgan) {
 
     private void updateOrganization(final long person_id) {
         android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
-                    new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY },
-                    ContactsContract.Data.CONTACT_ID + " = ? and " + ContactsContract.Data.MIMETYPE + " = '" +
-                    ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "'", new String[] { person_id + "" },
-                    null);
+                new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY },
+                ContactsContract.Data.CONTACT_ID + " = ? and " + ContactsContract.Data.MIMETYPE + " = '" +
+                ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "'", new String[] { person_id + "" },
+                null);
         if (c != null) {
             if (c.moveToNext()) {
                 try {
@@ -1157,7 +1157,7 @@ if (updateName && mSettings.mShowOrgan) {
             c.close();
         }
     }
-    
+
     private List<Long> lookupRawContactIdsForContactId(final long contactId) {
         List<Long> rawContactIds = new ArrayList<Long>();
         android.database.Cursor c = null;
@@ -1216,7 +1216,7 @@ if (updateName && mSettings.mShowOrgan) {
                 // Display the "manage conference" button in place of the photo.
                 mManageConferencePhotoButton.setVisibility(View.VISIBLE);
                 mPhoto.setVisibility(View.INVISIBLE);  // Not GONE, since that would break
-                                                       // other views in our RelativeLayout.
+                // other views in our RelativeLayout.
             } else {
                 // Display the "conference call" image in the photo slot,
                 // with no other information.
@@ -1278,7 +1278,7 @@ if (updateName && mSettings.mShowOrgan) {
                 if (c != null) {
                     Connection.DisconnectCause cause = c.getDisconnectCause();
                     if ((cause == Connection.DisconnectCause.BUSY)
-                        || (cause == Connection.DisconnectCause.CONGESTION)) {
+                            || (cause == Connection.DisconnectCause.CONGESTION)) {
                         photoImageResource = R.drawable.picture_busy;
                     }
                 } else if (DBG) {
@@ -1291,7 +1291,7 @@ if (updateName && mSettings.mShowOrgan) {
             case DIALING:
             case ALERTING:
                 photoImageResource = R.drawable.picture_dialing;
-//                break;
+                //                break;
 
             default:
                 // Leave the photo alone in all other states.
@@ -1350,7 +1350,7 @@ if (updateName && mSettings.mShowOrgan) {
                 if (photoImageResource == 0) {
                     if (!PhoneUtils.isConferenceCall(call)) {
                         if (!showCachedImage(mPhoto, ci) && (mPhotoTracker.getPhotoState() ==
-                                ContactsAsyncHelper.ImageTracker.DISPLAY_DEFAULT)) {
+                            ContactsAsyncHelper.ImageTracker.DISPLAY_DEFAULT)) {
                             ContactsAsyncHelper.updateImageViewWithContactPhotoAsync(ci,
                                     getContext(), mPhoto, mPhotoTracker.getPhotoUri(), -1);
                             mPhotoTracker.setPhotoState(
@@ -1420,7 +1420,7 @@ if (updateName && mSettings.mShowOrgan) {
      */
     private void setSideMargins(ViewGroup vg, int margin) {
         ViewGroup.MarginLayoutParams lp =
-                (ViewGroup.MarginLayoutParams) vg.getLayoutParams();
+            (ViewGroup.MarginLayoutParams) vg.getLayoutParams();
         // Equivalent to setting android:layout_marginLeft/Right in XML
         lp.leftMargin = margin;
         lp.rightMargin = margin;

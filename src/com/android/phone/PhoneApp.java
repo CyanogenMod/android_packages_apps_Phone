@@ -89,7 +89,7 @@ public class PhoneApp extends Application {
     /* package */ static final int DBG_LEVEL = 1;
 
     private static final boolean DBG =
-            (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
+        (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
     private static final boolean VDBG = (PhoneApp.DBG_LEVEL >= 2);
 
     // Message codes; see mHandler below.
@@ -216,39 +216,39 @@ public class PhoneApp extends Application {
     public OtaUtils.CdmaOtaScreenState cdmaOtaScreenState;
     public OtaUtils.CdmaOtaInCallScreenUiState cdmaOtaInCallScreenUiState;
 
-// add by cytown
-private static final String ACTION_VIBRATE_45 = "com.android.phone.PhoneApp.ACTION_VIBRATE_45";
-private CallFeaturesSetting mSettings;
-private static PendingIntent mVibrateIntent;
-private static Vibrator mVibrator = null;
-private static AlarmManager mAM;
+    // add by cytown
+    private static final String ACTION_VIBRATE_45 = "com.android.phone.PhoneApp.ACTION_VIBRATE_45";
+    private CallFeaturesSetting mSettings;
+    private static PendingIntent mVibrateIntent;
+    private static Vibrator mVibrator = null;
+    private static AlarmManager mAM;
 
-public void startVib45(long callDurationMsec) {
-    if (VDBG) Log.i(LOG_TAG, "vibrate start @" + callDurationMsec);
-    stopVib45();
-    long nextalarm = SystemClock.elapsedRealtime() + ((callDurationMsec > 45000) ? 45000 + 60000 - callDurationMsec : 45000 - callDurationMsec);
-    if (VDBG) Log.i(LOG_TAG, "am at: " + nextalarm);
-    mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, nextalarm, mVibrateIntent);
-}
-public void stopVib45() {
-    if (VDBG) Log.i(LOG_TAG, "vibrate stop @" + SystemClock.elapsedRealtime());
-    mAM.cancel(mVibrateIntent);
-}
-private final class TriVibRunnable implements Runnable {
-    private int v1, p1, v2;
-    TriVibRunnable(int a, int b, int c) {
-        v1 = a; p1 = b; v2 = c;
+    public void startVib45(long callDurationMsec) {
+        if (VDBG) Log.i(LOG_TAG, "vibrate start @" + callDurationMsec);
+        stopVib45();
+        long nextalarm = SystemClock.elapsedRealtime() + ((callDurationMsec > 45000) ? 45000 + 60000 - callDurationMsec : 45000 - callDurationMsec);
+        if (VDBG) Log.i(LOG_TAG, "am at: " + nextalarm);
+        mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, nextalarm, mVibrateIntent);
     }
-    public void run() {
-        if (DBG) Log.i(LOG_TAG, "vibrate " + v1 + ":" + p1 + ":" + v2);
-        if (v1 > 0) mVibrator.vibrate(v1);
-        if (p1 > 0) SystemClock.sleep(p1);
-        if (v2 > 0) mVibrator.vibrate(v2);
+    public void stopVib45() {
+        if (VDBG) Log.i(LOG_TAG, "vibrate stop @" + SystemClock.elapsedRealtime());
+        mAM.cancel(mVibrateIntent);
     }
-}
-public void vibrate(int v1, int p1, int v2) {
-    new Handler().post(new TriVibRunnable(v1, p1, v2));
-}
+    private final class TriVibRunnable implements Runnable {
+        private int v1, p1, v2;
+        TriVibRunnable(int a, int b, int c) {
+            v1 = a; p1 = b; v2 = c;
+        }
+        public void run() {
+            if (DBG) Log.i(LOG_TAG, "vibrate " + v1 + ":" + p1 + ":" + v2);
+            if (v1 > 0) mVibrator.vibrate(v1);
+            if (p1 > 0) SystemClock.sleep(p1);
+            if (v2 > 0) mVibrator.vibrate(v2);
+        }
+    }
+    public void vibrate(int v1, int p1, int v2) {
+        new Handler().post(new TriVibRunnable(v1, p1, v2));
+    }
     // TTY feature enabled on this platform
     private boolean mTtyEnabled;
     // Current TTY operating mode selected by user
@@ -276,34 +276,34 @@ public void vibrate(int v1, int p1, int v2) {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case EVENT_SIM_LOCKED:
-//                    mIsSimPinEnabled = true;
-//
-//                    if (Config.LOGV) Log.v(LOG_TAG, "show sim unlock panel");
-//                    SimPinUnlockPanel pinUnlockPanel = new SimPinUnlockPanel(
-//                            PhoneApp.getInstance());
-//                    pinUnlockPanel.show();
+                    //                    mIsSimPinEnabled = true;
+                    //
+                    //                    if (Config.LOGV) Log.v(LOG_TAG, "show sim unlock panel");
+                    //                    SimPinUnlockPanel pinUnlockPanel = new SimPinUnlockPanel(
+                    //                            PhoneApp.getInstance());
+                    //                    pinUnlockPanel.show();
                     break;
 
                 case EVENT_SIM_ABSENT:
-// Don't need this now that the lock screen handles this case
-//                    if (Config.LOGV) Log.v(LOG_TAG, "show sim missing panel");
-//                    SimMissingPanel missingPanel = new SimMissingPanel(
-//                            PhoneApp.getInstance());
-//                    missingPanel.show();
+                    // Don't need this now that the lock screen handles this case
+                    //                    if (Config.LOGV) Log.v(LOG_TAG, "show sim missing panel");
+                    //                    SimMissingPanel missingPanel = new SimMissingPanel(
+                    //                            PhoneApp.getInstance());
+                    //                    missingPanel.show();
                     break;
 
                 case EVENT_SIM_NETWORK_LOCKED:
                     if (getResources().getBoolean(R.bool.ignore_sim_network_locked_events)) {
                         // Some products don't have the concept of a "SIM network lock"
                         Log.i(LOG_TAG, "Ignoring EVENT_SIM_NETWORK_LOCKED event; "
-                              + "not showing 'SIM network unlock' PIN entry screen");
+                                + "not showing 'SIM network unlock' PIN entry screen");
                     } else {
                         // Normal case: show the "SIM network unlock" PIN entry screen.
                         // The user won't be able to do anything else until
                         // they enter a valid SIM network PIN.
                         Log.i(LOG_TAG, "show sim depersonal panel");
                         IccNetworkDepersonalizationPanel ndpPanel =
-                                new IccNetworkDepersonalizationPanel(PhoneApp.getInstance());
+                            new IccNetworkDepersonalizationPanel(PhoneApp.getInstance());
                         ndpPanel.show();
                     }
                     break;
@@ -344,7 +344,7 @@ public void vibrate(int v1, int p1, int v2) {
                     // Do not change speaker state if phone is not off hook
                     if (phoneState == Phone.State.OFFHOOK) {
                         if (!isShowingCallScreen() &&
-                            (mBtHandsfree == null || !mBtHandsfree.isAudioOn())) {
+                                (mBtHandsfree == null || !mBtHandsfree.isAudioOn())) {
                             if (!isHeadsetPlugged()) {
                                 // if the state is "not connected", restore the speaker state.
                                 PhoneUtils.restoreSpeakerMode(getApplicationContext());
@@ -458,9 +458,9 @@ public void vibrate(int v1, int p1, int v2) {
                     | PowerManager.ON_AFTER_RELEASE, LOG_TAG);
             // Wake lock used to control proximity sensor behavior.
             if ((pm.getSupportedWakeLockFlags()
-                 & PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK) != 0x0) {
+                    & PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK) != 0x0) {
                 mProximityWakeLock =
-                        pm.newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK, LOG_TAG);
+                    pm.newWakeLock(PowerManager.PROXIMITY_SCREEN_OFF_WAKE_LOCK, LOG_TAG);
             }
             if (DBG) Log.d(LOG_TAG, "mProximityWakeLock: " + mProximityWakeLock);
 
@@ -496,7 +496,7 @@ public void vibrate(int v1, int p1, int v2) {
 
             // Register for misc other intent broadcasts.
             IntentFilter intentFilter =
-                    new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
+                new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
             intentFilter.addAction(BluetoothHeadset.ACTION_STATE_CHANGED);
             intentFilter.addAction(BluetoothHeadset.ACTION_AUDIO_STATE_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_ANY_DATA_CONNECTION_STATE_CHANGED);
@@ -516,7 +516,7 @@ public void vibrate(int v1, int p1, int v2) {
             // since we need to manually adjust its priority (to make sure
             // we get these intents *before* the media player.)
             IntentFilter mediaButtonIntentFilter =
-                    new IntentFilter(Intent.ACTION_MEDIA_BUTTON);
+                new IntentFilter(Intent.ACTION_MEDIA_BUTTON);
             //
             // Make sure we're higher priority than the media player's
             // MediaButtonIntentReceiver (which currently has the default
@@ -567,13 +567,13 @@ public void vibrate(int v1, int p1, int v2) {
         // start with the default value to set the mute state.
         mShouldRestoreMuteOnInCallResume = false;
 
-// add by cytown
-mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(this));
-if (mVibrator == null) {
-    mVibrator = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
-    mAM = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
-    mVibrateIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_VIBRATE_45), 0);
-}
+        // add by cytown
+        mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(this));
+        if (mVibrator == null) {
+            mVibrator = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
+            mAM = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+            mVibrateIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_VIBRATE_45), 0);
+        }
 
         // Register for Cdma Information Records
         // TODO(Moto): Merge
@@ -593,14 +593,14 @@ if (mVibrator == null) {
         // Read HAC settings and configure audio hardware
         if (getResources().getBoolean(R.bool.hac_enabled)) {
             int hac = android.provider.Settings.System.getInt(phone.getContext().getContentResolver(),
-                                                              android.provider.Settings.System.HEARING_AID,
-                                                              0);
+                    android.provider.Settings.System.HEARING_AID,
+                    0);
             AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             audioManager.setParameter(CallFeaturesSetting.HAC_KEY, hac != 0 ?
-                                      CallFeaturesSetting.HAC_VAL_ON :
-                                      CallFeaturesSetting.HAC_VAL_OFF);
+                    CallFeaturesSetting.HAC_VAL_ON :
+                        CallFeaturesSetting.HAC_VAL_OFF);
         }
-   }
+    }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -622,9 +622,9 @@ if (mVibrator == null) {
         return sMe;
     }
 
-CallFeaturesSetting getSettings() {
-    return mSettings;
-}
+    CallFeaturesSetting getSettings() {
+        return mSettings;
+    }
 
     Ringer getRinger() {
         return ringer;
@@ -695,7 +695,7 @@ CallFeaturesSetting getSettings() {
         if (phone.getState() != Phone.State.IDLE) {
             // Phone is OFFHOOK or RINGING.
             if (DBG) Log.v(LOG_TAG,
-                           "handleInCallOrRinging: show call screen");
+            "handleInCallOrRinging: show call screen");
             displayCallScreen();
             return true;
         }
@@ -747,10 +747,10 @@ CallFeaturesSetting getSettings() {
         if (mInCallScreen != null) {
             if ((phone.getPhoneType() == Phone.PHONE_TYPE_CDMA) &&
                     (mInCallScreen.isOtaCallInActiveState()
-                    || mInCallScreen.isOtaCallInEndState()
-                    || ((cdmaOtaScreenState != null)
-                    && (cdmaOtaScreenState.otaScreenState
-                            != CdmaOtaScreenState.OtaScreenState.OTA_STATUS_UNDEFINED)))) {
+                            || mInCallScreen.isOtaCallInEndState()
+                            || ((cdmaOtaScreenState != null)
+                                    && (cdmaOtaScreenState.otaScreenState
+                                            != CdmaOtaScreenState.OtaScreenState.OTA_STATUS_UNDEFINED)))) {
                 // TODO(Moto): During OTA Call, display should not become dark to
                 // allow user to see OTA UI update. Phone app needs to hold a SCREEN_DIM_WAKE_LOCK
                 // wake lock during the entire OTA call.
@@ -831,7 +831,7 @@ CallFeaturesSetting getSettings() {
         if (DBG) Log.d(LOG_TAG, "disable status bar");
         synchronized (this) {
             if (mStatusBarDisableCount++ == 0) {
-               if (DBG)  Log.d(LOG_TAG, "StatusBarManager.DISABLE_EXPAND");
+                if (DBG)  Log.d(LOG_TAG, "StatusBarManager.DISABLE_EXPAND");
                 mStatusBarManager.disable(StatusBarManager.DISABLE_EXPAND);
             }
         }
@@ -911,8 +911,8 @@ CallFeaturesSetting getSettings() {
                 // timeout (5s). This ensures that the screen goes to sleep
                 // as soon as acceptably possible after we the wake lock
                 // has been released.
-//                pokeLockSetting |= LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
-pokeLockSetting |= mSettings.mScreenAwake ? LocalPowerManager.POKE_LOCK_MEDIUM_TIMEOUT : LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
+                //                pokeLockSetting |= LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
+                pokeLockSetting |= mSettings.mScreenAwake ? LocalPowerManager.POKE_LOCK_MEDIUM_TIMEOUT : LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
                 break;
 
             case MEDIUM:
@@ -1048,8 +1048,8 @@ pokeLockSetting |= mSettings.mScreenAwake ? LocalPowerManager.POKE_LOCK_MEDIUM_T
         // timeout should probably still be short.)
 
         if (DBG) Log.d(LOG_TAG, "updateWakeState: callscreen " + isShowingCallScreen
-                       + ", dialer " + isDialerOpened
-                       + ", speaker " + isSpeakerInUse + "...");
+                + ", dialer " + isDialerOpened
+                + ", speaker " + isSpeakerInUse + "...");
 
         //
         // (1) Set the screen timeout.
@@ -1081,8 +1081,8 @@ pokeLockSetting |= mSettings.mScreenAwake ? LocalPowerManager.POKE_LOCK_MEDIUM_T
                 // special screen timeout value specific to the in-call
                 // screen, purely to save battery life.
 
-//                setScreenTimeout(ScreenTimeoutDuration.MEDIUM);
-setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : ScreenTimeoutDuration.MEDIUM);
+                //                setScreenTimeout(ScreenTimeoutDuration.MEDIUM);
+                setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : ScreenTimeoutDuration.MEDIUM);
             }
         }
 
@@ -1096,12 +1096,12 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
         boolean isRinging = (state == Phone.State.RINGING);
         boolean isDialing = (phone.getForegroundCall().getState() == Call.State.DIALING);
         boolean showingDisconnectedConnection =
-                PhoneUtils.hasDisconnectedConnections(phone) && isShowingCallScreen;
+            PhoneUtils.hasDisconnectedConnections(phone) && isShowingCallScreen;
         boolean keepScreenOn = isRinging || isDialing || showingDisconnectedConnection;
         if (DBG) Log.d(LOG_TAG, "updateWakeState: keepScreenOn = " + keepScreenOn
-                       + " (isRinging " + isRinging
-                       + ", isDialing " + isDialing
-                       + ", showingDisc " + showingDisconnectedConnection + ")");
+                + " (isRinging " + isRinging
+                + ", isDialing " + isDialing
+                + ", showingDisc " + showingDisconnectedConnection + ")");
         // keepScreenOn == true means we'll hold a full wake lock:
         requestWakeState(keepScreenOn ? WakeState.FULL : WakeState.SLEEP);
     }
@@ -1205,9 +1205,9 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
                 // turn proximity sensor off and turn screen on immediately if
                 // we are using a headset or the keyboard is open.
                 boolean screenOnImmediately = (isHeadsetPlugged()
-                            || PhoneUtils.isSpeakerOn(this)
-                            || ((mBtHandsfree != null) && mBtHandsfree.isAudioOn())
-                            || mIsHardKeyboardOpen);
+                        || PhoneUtils.isSpeakerOn(this)
+                        || ((mBtHandsfree != null) && mBtHandsfree.isAudioOn())
+                        || mIsHardKeyboardOpen);
 
                 if (((state == Phone.State.OFFHOOK) || mBeginningCall)&& !screenOnImmediately) {
                     // Phone is in use!  Arrange for the screen to turn off
@@ -1366,8 +1366,8 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
      */
     /* package */ void updateBluetoothIndication(boolean forceUiUpdate) {
         mShowBluetoothIndication = shouldShowBluetoothIndication(mBluetoothHeadsetState,
-                                                                 mBluetoothHeadsetAudioState,
-                                                                 phone);
+                mBluetoothHeadsetAudioState,
+                phone);
         if (forceUiUpdate) {
             // Post Handler messages to the various components that might
             // need to be refreshed based on the new state.
@@ -1389,8 +1389,8 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
      * @see showBluetoothIndication()
      */
     private static boolean shouldShowBluetoothIndication(int bluetoothState,
-                                                         int bluetoothAudioState,
-                                                         Phone phone) {
+            int bluetoothAudioState,
+            Phone phone) {
         // We want the UI to indicate that "bluetooth is in use" in two
         // slightly different cases:
         //
@@ -1441,14 +1441,14 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
                 phone.setRadioPower(!enabled);
             } else if (action.equals(BluetoothHeadset.ACTION_STATE_CHANGED)) {
                 mBluetoothHeadsetState = intent.getIntExtra(BluetoothHeadset.EXTRA_STATE,
-                                                            BluetoothHeadset.STATE_ERROR);
+                        BluetoothHeadset.STATE_ERROR);
                 if (VDBG) Log.d(LOG_TAG, "mReceiver: HEADSET_STATE_CHANGED_ACTION");
                 if (VDBG) Log.d(LOG_TAG, "==> new state: " + mBluetoothHeadsetState);
                 updateBluetoothIndication(true);  // Also update any visible UI if necessary
             } else if (action.equals(BluetoothHeadset.ACTION_AUDIO_STATE_CHANGED)) {
                 mBluetoothHeadsetAudioState =
-                        intent.getIntExtra(BluetoothHeadset.EXTRA_AUDIO_STATE,
-                                           BluetoothHeadset.STATE_ERROR);
+                    intent.getIntExtra(BluetoothHeadset.EXTRA_AUDIO_STATE,
+                            BluetoothHeadset.STATE_ERROR);
                 if (VDBG) Log.d(LOG_TAG, "mReceiver: HEADSET_AUDIO_STATE_CHANGED_ACTION");
                 if (VDBG) Log.d(LOG_TAG, "==> new state: " + mBluetoothHeadsetAudioState);
                 updateBluetoothIndication(true);  // Also update any visible UI if necessary
@@ -1456,7 +1456,7 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
                 if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_ANY_DATA_CONNECTION_STATE_CHANGED");
                 if (VDBG) Log.d(LOG_TAG, "- state: " + intent.getStringExtra(Phone.STATE_KEY));
                 if (VDBG) Log.d(LOG_TAG, "- reason: "
-                                + intent.getStringExtra(Phone.STATE_CHANGE_REASON_KEY));
+                        + intent.getStringExtra(Phone.STATE_CHANGE_REASON_KEY));
 
                 // The "data disconnected due to roaming" notification is
                 // visible if you've lost data connectivity because you're
@@ -1472,8 +1472,8 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
                     }
                 }
                 mHandler.sendEmptyMessage(disconnectedDueToRoaming
-                                          ? EVENT_DATA_ROAMING_DISCONNECTED
-                                          : EVENT_DATA_ROAMING_OK);
+                        ? EVENT_DATA_ROAMING_DISCONNECTED
+                                : EVENT_DATA_ROAMING_OK);
             } else if (action.equals(Intent.ACTION_HEADSET_PLUG)) {
                 if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_HEADSET_PLUG");
                 if (VDBG) Log.d(LOG_TAG, "    state: " + intent.getIntExtra("state", 0));
@@ -1509,19 +1509,19 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
                     Log.e(LOG_TAG, "Error! Emergency Callback Mode not supported for " +
                             phone.getPhoneName() + " phones");
                 }
-// Vibrate 45 sec receiver add by cytown
-} else if (action.equals(ACTION_VIBRATE_45)) {
-    if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_VIBRATE_45");
-    mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, mVibrateIntent);
-    if (DBG) Log.i(LOG_TAG, "vibrate on 45 sec");
-    mVibrator.vibrate(70);
-    SystemClock.sleep(70);
-    mVibrator.cancel();
-    if (VDBG) Log.d(LOG_TAG, "mReceiver: force vib cancel");
-    //vibrate(70, 70, -1);
+                // Vibrate 45 sec receiver add by cytown
+            } else if (action.equals(ACTION_VIBRATE_45)) {
+                if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_VIBRATE_45");
+                mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, mVibrateIntent);
+                if (DBG) Log.i(LOG_TAG, "vibrate on 45 sec");
+                mVibrator.vibrate(70);
+                SystemClock.sleep(70);
+                mVibrator.cancel();
+                if (VDBG) Log.d(LOG_TAG, "mReceiver: force vib cancel");
+                //vibrate(70, 70, -1);
             } else if (action.equals(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION)) {
                 mPreferredTtyMode = intent.getIntExtra(TtyIntent.TTY_PREFFERED_MODE,
-                                                       Phone.TTY_MODE_OFF);
+                        Phone.TTY_MODE_OFF);
                 if (VDBG) Log.d(LOG_TAG, "mReceiver: TTY_PREFERRED_MODE_CHANGE_ACTION");
                 if (VDBG) Log.d(LOG_TAG, "    mode: " + mPreferredTtyMode);
                 mHandler.sendMessage(mHandler.obtainMessage(EVENT_TTY_PREFERRED_MODE_CHANGED, 0));
@@ -1543,10 +1543,10 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
         public void onReceive(Context context, Intent intent) {
             KeyEvent event = (KeyEvent) intent.getParcelableExtra(Intent.EXTRA_KEY_EVENT);
             if (VDBG) Log.d(LOG_TAG,
-                           "MediaButtonBroadcastReceiver.onReceive()...  event = " + event);
+                    "MediaButtonBroadcastReceiver.onReceive()...  event = " + event);
             if ((event != null)
-                && (event.getKeyCode() == KeyEvent.KEYCODE_HEADSETHOOK)
-                && (event.getAction() == KeyEvent.ACTION_DOWN)) {
+                    && (event.getKeyCode() == KeyEvent.KEYCODE_HEADSETHOOK)
+                    && (event.getAction() == KeyEvent.ACTION_DOWN)) {
 
                 if (event.getRepeatCount() == 0) {
                     // Mute ONLY on the initial keypress.
@@ -1562,15 +1562,15 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
                         }
                         abortBroadcast();
                     }
-                // Added headset hangup ability by KrazyKrivda (needs PhoneUtil change too)
-                // press wiredheadset for mute (above) long press to hangup (below)
+                    // Added headset hangup ability by KrazyKrivda (needs PhoneUtil change too)
+                    // press wiredheadset for mute (above) long press to hangup (below)
                 } else if (event.getRepeatCount() == 2){
                     Log.d(LOG_TAG, "repeat count = 2 is triggered!");
                     boolean consumed = false; //PhoneUtils.handleHeadsetHook(phone, 1);
                     if (consumed) {
                         abortBroadcast();  // BUG: Media player on/off is toggled sometimes if used to hang up
                     }
-                // End of KrazyKrivda's addition
+                    // End of KrazyKrivda's addition
                 } else if (phone.getState() != Phone.State.IDLE) {
                     // As for any DOWN events other than the initial press, we consume
                     // (and ignore) those too if the phone is in use.  (Otherwise the
@@ -1670,7 +1670,7 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
             if (DBG) Log.d(LOG_TAG, "handleQueryTTYModeResponse: Error getting TTY state.");
         } else {
             if (DBG) Log.d(LOG_TAG,
-                           "handleQueryTTYModeResponse: TTY enable state successfully queried.");
+            "handleQueryTTYModeResponse: TTY enable state successfully queried.");
 
             int ttymode = ((int[]) ar.result)[0];
             if (DBG) Log.d(LOG_TAG, "handleQueryTTYModeResponse:ttymode=" + ttymode);
@@ -1681,19 +1681,19 @@ setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : Screen
 
             String audioTtyMode;
             switch (ttymode) {
-            case Phone.TTY_MODE_FULL:
-                audioTtyMode = "tty_full";
-                break;
-            case Phone.TTY_MODE_VCO:
-                audioTtyMode = "tty_vco";
-                break;
-            case Phone.TTY_MODE_HCO:
-                audioTtyMode = "tty_hco";
-                break;
-            case Phone.TTY_MODE_OFF:
-            default:
-                audioTtyMode = "tty_off";
-                break;
+                case Phone.TTY_MODE_FULL:
+                    audioTtyMode = "tty_full";
+                    break;
+                case Phone.TTY_MODE_VCO:
+                    audioTtyMode = "tty_vco";
+                    break;
+                case Phone.TTY_MODE_HCO:
+                    audioTtyMode = "tty_hco";
+                    break;
+                case Phone.TTY_MODE_OFF:
+                default:
+                    audioTtyMode = "tty_off";
+                    break;
             }
             AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             audioManager.setParameters("tty_mode="+audioTtyMode);

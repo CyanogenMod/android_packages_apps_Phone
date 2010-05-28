@@ -63,7 +63,7 @@ public class CallNotifier extends Handler
         implements CallerInfoAsyncQuery.OnQueryCompleteListener {
     private static final String LOG_TAG = "CallNotifier";
     private static final boolean DBG =
-            (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
+        (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
     private static final boolean VDBG = (PhoneApp.DBG_LEVEL >= 2);
 
     // Strings used with Checkin.logEvent().
@@ -158,14 +158,14 @@ public class CallNotifier extends Handler
     private int mCurrentRingbackToneState = RINGBACK_TONE_OFF;
     private InCallRingbackTonePlayer mInCallRingbackTonePlayer;
 
-// add by cytown
-private CallFeaturesSetting mSettings;
-private static final String BLACKLIST = "blacklist";
+    // add by cytown
+    private CallFeaturesSetting mSettings;
+    private static final String BLACKLIST = "blacklist";
 
     public CallNotifier(PhoneApp app, Phone phone, Ringer ringer,
-                        BluetoothHandsfree btMgr) {
-mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(app));
-mSensorManager = (SensorManager) app.getSystemService(Context.SENSOR_SERVICE);
+            BluetoothHandsfree btMgr) {
+        mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(app));
+        mSensorManager = (SensorManager) app.getSystemService(Context.SENSOR_SERVICE);
         mApplication = app;
 
         mPhone = phone;
@@ -364,7 +364,7 @@ mSensorManager = (SensorManager) app.getSystemService(Context.SENSOR_SERVICE);
 
         // Incoming calls are totally ignored if the device isn't provisioned yet
         boolean provisioned = Settings.Secure.getInt(mPhone.getContext().getContentResolver(),
-            Settings.Secure.DEVICE_PROVISIONED, 0) != 0;
+                Settings.Secure.DEVICE_PROVISIONED, 0) != 0;
         if (!provisioned) {
             Log.i(LOG_TAG, "CallNotifier: rejecting incoming call: device isn't provisioned");
             // Send the caller straight to voicemail, just like
@@ -373,17 +373,17 @@ mSensorManager = (SensorManager) app.getSystemService(Context.SENSOR_SERVICE);
             return;
         }
 
-String number = c!=null?c.getAddress():"0000";
-if (android.text.TextUtils.isEmpty(number)) number = "0000";
-if (DBG) log("incoming number is: " + number);
-if (c != null && mSettings.isBlackList(number)) {
-    try {
-        c.setUserData(BLACKLIST);
-        c.hangup();
-        if (DBG) Log.i(LOG_TAG, "Reject the incoming call in BL:" + number);
-    } catch (Exception e) {}  // ignore
-    return;
-}
+        String number = c!=null?c.getAddress():"0000";
+        if (android.text.TextUtils.isEmpty(number)) number = "0000";
+        if (DBG) log("incoming number is: " + number);
+        if (c != null && mSettings.isBlackList(number)) {
+            try {
+                c.setUserData(BLACKLIST);
+                c.hangup();
+                if (DBG) Log.i(LOG_TAG, "Reject the incoming call in BL:" + number);
+            } catch (Exception e) {}  // ignore
+            return;
+        }
 
         // Incoming calls are totally ignored if OTA call is active
         if (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA) {
@@ -450,9 +450,9 @@ if (c != null && mSettings.isBlackList(number)) {
                 startIncomingCallQuery(c);
                 startSensor();
             } else {
-if (mSettings.mVibCallWaiting) {
-    mApplication.vibrate(200,300,500);
-}
+                if (mSettings.mVibCallWaiting) {
+                    mApplication.vibrate(200,300,500);
+                }
                 if (VDBG) log("- starting call waiting tone...");
                 new InCallTonePlayer(InCallTonePlayer.TONE_CALL_WAITING).start();
                 // The InCallTonePlayer will automatically stop playing (and
@@ -612,12 +612,12 @@ if (mSettings.mVibCallWaiting) {
         // of the phone.  Notification Alerts (audible or vibrating) should
         // be on if and only if the phone is IDLE.
         NotificationMgr.getDefault().getStatusBarMgr()
-                .enableNotificationAlerts(state == Phone.State.IDLE);
+        .enableNotificationAlerts(state == Phone.State.IDLE);
 
         if (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA) {
             if ((mPhone.getForegroundCall().getState() == Call.State.ACTIVE)
                     && ((mPreviousCdmaCallState == Call.State.DIALING)
-                    ||  (mPreviousCdmaCallState == Call.State.ALERTING))) {
+                            ||  (mPreviousCdmaCallState == Call.State.ALERTING))) {
                 if (mIsCdmaRedialCall) {
                     int toneToPlay = InCallTonePlayer.TONE_REDIAL;
                     new InCallTonePlayer(toneToPlay).start();
@@ -643,21 +643,21 @@ if (mSettings.mVibCallWaiting) {
             PhoneUtils.setAudioControlState(PhoneUtils.AUDIO_OFFHOOK);
             if (VDBG) log("onPhoneStateChanged: OFF HOOK");
 
-Call call = PhoneUtils.getCurrentCall(mPhone);
-Connection c = PhoneUtils.getConnection(mPhone, call);
-if (VDBG) PhoneUtils.dumpCallState(mPhone);
-Call.State cstate = call.getState();
-if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
-    long callDurationMsec = c.getDurationMillis();
-    if (VDBG) Log.i(LOG_TAG, "duration is " + callDurationMsec);
-    if (mSettings.mVibOutgoing && callDurationMsec < 200) {
-        mApplication.vibrate(100,0,0);
-    }
-    if (mSettings.mVib45) {
-        callDurationMsec = callDurationMsec % 60000;
-        mApplication.startVib45(callDurationMsec);
-    }
-}
+            Call call = PhoneUtils.getCurrentCall(mPhone);
+            Connection c = PhoneUtils.getConnection(mPhone, call);
+            if (VDBG) PhoneUtils.dumpCallState(mPhone);
+            Call.State cstate = call.getState();
+            if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
+                long callDurationMsec = c.getDurationMillis();
+                if (VDBG) Log.i(LOG_TAG, "duration is " + callDurationMsec);
+                if (mSettings.mVibOutgoing && callDurationMsec < 200) {
+                    mApplication.vibrate(100,0,0);
+                }
+                if (mSettings.mVib45) {
+                    callDurationMsec = callDurationMsec % 60000;
+                    mApplication.startVib45(callDurationMsec);
+                }
+            }
 
             // If Audio Mode is not In Call, then set the Audio Mode.  This
             // changes is needed because for one of the carrier specific test case,
@@ -666,7 +666,7 @@ if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
             // of setting the Audio Mode
             if (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA) {
                 AudioManager audioManager =
-                        (AudioManager) mPhone.getContext().getSystemService(Context.AUDIO_SERVICE);
+                    (AudioManager) mPhone.getContext().getSystemService(Context.AUDIO_SERVICE);
                 if (audioManager.getMode() != AudioManager.MODE_IN_CALL) {
                     PhoneUtils.setAudioMode(mPhone.getContext(), AudioManager.MODE_IN_CALL);
                 }
@@ -706,7 +706,7 @@ if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
                             mPhone.getContext().getContentResolver(),
                             Settings.System.EMERGENCY_TONE, EMERGENCY_TONE_OFF);
                     if (mIsEmergencyToneOn != EMERGENCY_TONE_OFF &&
-                        mCurrentEmergencyToneState == EMERGENCY_TONE_OFF) {
+                            mCurrentEmergencyToneState == EMERGENCY_TONE_OFF) {
                         if (mEmergencyTonePlayerVibrator != null) {
                             mEmergencyTonePlayerVibrator.start();
                         }
@@ -869,23 +869,23 @@ if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
         Connection c = (Connection) r.result;
         if (DBG && c != null) {
             log("- onDisconnect: cause = " + c.getDisconnectCause()
-                + ", incoming = " + c.isIncoming()
-                + ", date = " + c.getCreateTime());
+                    + ", incoming = " + c.isIncoming()
+                    + ", date = " + c.getCreateTime());
         }
 
-if (c != null) {
-    Object o = c.getUserData();
-    if (BLACKLIST.equals(o)) {
-        if (VDBG) Log.i(LOG_TAG, "in blacklist so skip calllog");
-        return;
-    }
-    if (c.getDurationMillis() > 0 && mSettings.mVibHangup) {
-        mApplication.vibrate(50, 100, 50);
-    }
-    if (!c.isIncoming()) {
-        mApplication.stopVib45();
-    }
-}
+        if (c != null) {
+            Object o = c.getUserData();
+            if (BLACKLIST.equals(o)) {
+                if (VDBG) Log.i(LOG_TAG, "in blacklist so skip calllog");
+                return;
+            }
+            if (c.getDurationMillis() > 0 && mSettings.mVibHangup) {
+                mApplication.vibrate(50, 100, 50);
+            }
+            if (!c.isIncoming()) {
+                mApplication.stopVib45();
+            }
+        }
 
         // Stop the ringer if it was ringing (for an incoming call that
         // either disconnected by itself, or was rejected by the user.)
@@ -959,11 +959,11 @@ if (c != null) {
         // there's still an active call on the other line.)
         // TODO: We may eventually want to disable this via a preference.
         if ((toneToPlay == InCallTonePlayer.TONE_NONE)
-            && (mPhone.getState() == Phone.State.IDLE)
-            && (c != null)) {
+                && (mPhone.getState() == Phone.State.IDLE)
+                && (c != null)) {
             Connection.DisconnectCause cause = c.getDisconnectCause();
             if ((cause == Connection.DisconnectCause.NORMAL)  // remote hangup
-                || (cause == Connection.DisconnectCause.LOCAL)) {  // local hangup
+                    || (cause == Connection.DisconnectCause.LOCAL)) {  // local hangup
                 if (VDBG) log("- need to play CALL_ENDED tone!");
                 toneToPlay = InCallTonePlayer.TONE_CALL_ENDED;
                 mIsCdmaRedialCall = false;
@@ -1000,8 +1000,8 @@ if (c != null) {
             final int callLogType;
             if (c.isIncoming()) {
                 callLogType = (cause == Connection.DisconnectCause.INCOMING_MISSED ?
-                               CallLog.Calls.MISSED_TYPE :
-                               CallLog.Calls.INCOMING_TYPE);
+                        CallLog.Calls.MISSED_TYPE :
+                            CallLog.Calls.INCOMING_TYPE);
             } else {
                 callLogType = CallLog.Calls.OUTGOING_TYPE;
             }
@@ -1036,11 +1036,11 @@ if (c != null) {
                 // (ugly) when we actually mean carrier X.
                 // TODO: Clean this up and come up with a unified strategy.
                 final boolean shouldNotlogEmergencyNumber =
-                        (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA);
+                    (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA);
 
                 // Don't call isOtaSpNumber on GSM phones.
                 final boolean isOtaNumber = (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA)
-                        && mPhone.isOtaSpNumber(number);
+                && mPhone.isOtaSpNumber(number);
                 final boolean isEmergencyNumber = PhoneNumberUtils.isEmergencyNumber(number);
 
                 // Don't put OTA or CDMA Emergency calls into call log
@@ -1048,12 +1048,12 @@ if (c != null) {
                     // Watch out: Calls.addCall() hits the Contacts database,
                     // so we shouldn't call it from the main thread.
                     Thread t = new Thread() {
-                            public void run() {
-                                Calls.addCall(ci, mApplication, logNumber, presentation,
-                                              callLogType, date, (int) duration / 1000);
-                                // if (DBG) log("onDisconnect helper thread: Calls.addCall() done.");
-                            }
-                        };
+                        public void run() {
+                            Calls.addCall(ci, mApplication, logNumber, presentation,
+                                    callLogType, date, (int) duration / 1000);
+                            // if (DBG) log("onDisconnect helper thread: Calls.addCall() done.");
+                        }
+                    };
                     t.start();
                 }
             }
@@ -1191,7 +1191,7 @@ if (c != null) {
             mTurnListener.count = 0;
             mSensorManager.unregisterListener(mTurnListener);
             mSensorRunning = false;
-         }
+        }
     }
 
 
@@ -1303,7 +1303,7 @@ if (c != null) {
             int toneLengthMillis;
 
             AudioManager audioManager = (AudioManager) mPhone.getContext()
-                    .getSystemService(Context.AUDIO_SERVICE);
+            .getSystemService(Context.AUDIO_SERVICE);
             switch (mToneId) {
                 case TONE_CALL_WAITING:
                     toneType = ToneGenerator.TONE_SUP_CALL_WAITING;
@@ -1343,9 +1343,9 @@ if (c != null) {
                     toneVolume = TONE_RELATIVE_VOLUME_HIPRI;
                     toneLengthMillis = 200;
                     break;
-                 case TONE_OTA_CALL_END:
+                case TONE_OTA_CALL_END:
                     if (mApplication.cdmaOtaConfigData.otaPlaySuccessFailureTone ==
-                            OtaUtils.OTA_PLAY_SUCCESS_FAILURE_TONE_ON) {
+                        OtaUtils.OTA_PLAY_SUCCESS_FAILURE_TONE_ON) {
                         toneType = ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD;
                         toneVolume = TONE_RELATIVE_VOLUME_HIPRI;
                         toneLengthMillis = 750;
@@ -1400,7 +1400,7 @@ if (c != null) {
                 // if (DBG) log("- created toneGenerator: " + toneGenerator);
             } catch (RuntimeException e) {
                 Log.w(LOG_TAG,
-                      "InCallTonePlayer: Exception caught while creating ToneGenerator: " + e);
+                        "InCallTonePlayer: Exception caught while creating ToneGenerator: " + e);
                 toneGenerator = null;
             }
 
@@ -1442,7 +1442,7 @@ if (c != null) {
                             needToStopTone = false;
                         }
                     } else if ((toneType == ToneGenerator.TONE_CDMA_ALERT_AUTOREDIAL_LITE) ||
-                               (toneType == ToneGenerator.TONE_CDMA_ALERT_NETWORK_LITE)) {
+                            (toneType == ToneGenerator.TONE_CDMA_ALERT_NETWORK_LITE)) {
                         if ((ringerMode != AudioManager.RINGER_MODE_SILENT) &&
                                 (ringerMode != AudioManager.RINGER_MODE_VIBRATE)) {
                             if (DBG) log("InCallTonePlayer:playing tone for toneType=" + toneType);
@@ -1557,7 +1557,7 @@ if (c != null) {
                             uAlertPitch + ", uSignal=" + uSignal);
                     //Map the Signal to a ToneGenerator ToneID only if Signal info is present
                     int toneID = SignalToneUtil.getAudioToneFromSignalInfo
-                            (uSignalType, uAlertPitch, uSignal);
+                    (uSignalType, uAlertPitch, uSignal);
 
                     //Create the SignalInfo tone player and pass the ToneID
                     new SignalInfoTonePlayer(toneID).start();
@@ -1757,7 +1757,7 @@ if (c != null) {
         private final int EMG_VIBRATE_LENGTH = 1000;  // ms.
         private final int EMG_VIBRATE_PAUSE  = 1000;  // ms.
         private final long[] mVibratePattern =
-                new long[] { EMG_VIBRATE_LENGTH, EMG_VIBRATE_PAUSE };
+            new long[] { EMG_VIBRATE_LENGTH, EMG_VIBRATE_PAUSE };
 
         private ToneGenerator mToneGenerator;
         private AudioManager mAudioManager;
@@ -1870,7 +1870,7 @@ if (c != null) {
             if (VDBG) log("InCallRingbackTonePlayer.start()");
 
             AudioManager audioManager = (AudioManager) mPhone.getContext()
-                    .getSystemService(Context.AUDIO_SERVICE);
+            .getSystemService(Context.AUDIO_SERVICE);
 
             try {
                 int stream;
@@ -1886,7 +1886,7 @@ if (c != null) {
                 // If mToneGenerator creation fails, just continue without it.
                 // It is a local audio signal, and is not as important.
                 Log.w(LOG_TAG,
-                      "InCallRingbackTonePlayer: Exception caught while creating ToneGenerator: " + e);
+                        "InCallRingbackTonePlayer: Exception caught while creating ToneGenerator: " + e);
                 mToneGenerator = null;
             }
 
@@ -1938,7 +1938,7 @@ if (c != null) {
             // "Emergency Number" or "Voice Mail" so we get the number
             // from the connection.
             if (null == callerInfo || TextUtils.isEmpty(callerInfo.phoneNumber) ||
-                callerInfo.isEmergencyNumber() || callerInfo.isVoiceMailNumber()) {
+                    callerInfo.isEmergencyNumber() || callerInfo.isVoiceMailNumber()) {
                 if (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA) {
                     // In cdma getAddress() is not always equals to getOrigDialString().
                     number = conn.getOrigDialString();
@@ -1957,7 +1957,7 @@ if (c != null) {
 
             // Do final CNAP modifications.
             number = PhoneUtils.modifyForSpecialCnapCases(mPhone.getContext(), callerInfo,
-                                                          number, presentation);
+                    number, presentation);
             number = PhoneNumberUtils.stripSeparators(number);
             if (VDBG) log("getLogNumber: " + number);
             return number;
@@ -1998,7 +1998,7 @@ if (c != null) {
         } else {
             presentation = callerInfo.numberPresentation;
             if (DBG) log("- getPresentation(): ignoring connection's presentation: " +
-                         conn.getNumberPresentation());
+                    conn.getNumberPresentation());
         }
         if (DBG) log("- getPresentation: presentation: " + presentation);
         return presentation;

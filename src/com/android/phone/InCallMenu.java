@@ -67,7 +67,7 @@ class InCallMenu {
     InCallMenuItemView mAnswerAndEnd;
     InCallMenuItemView mAnswer;
     InCallMenuItemView mIgnore;
-InCallMenuItemView mAddBlackList;
+    InCallMenuItemView mAddBlackList;
 
     InCallMenu(InCallScreen inCallScreen) {
         if (DBG) log("InCallMenu constructor...");
@@ -221,13 +221,13 @@ InCallMenuItemView mAddBlackList;
         }
         mInCallMenuView.addItemView(mShowDialpad, 0);
 
-// add by cytown
-mAddBlackList = new InCallMenuItemView(wrappedContext);
-mAddBlackList.setId(R.id.menuAddBlackList);
-mAddBlackList.setOnClickListener(mInCallScreen);
-mAddBlackList.setText(R.string.menu_addBlackList);
-mAddBlackList.setIconResource(R.drawable.ic_menu_add_black);
-mInCallMenuView.addItemView(mAddBlackList, 0);
+        // add by cytown
+        mAddBlackList = new InCallMenuItemView(wrappedContext);
+        mAddBlackList.setId(R.id.menuAddBlackList);
+        mAddBlackList.setOnClickListener(mInCallScreen);
+        mAddBlackList.setText(R.string.menu_addBlackList);
+        mAddBlackList.setIconResource(R.drawable.ic_menu_add_black);
+        mInCallMenuView.addItemView(mAddBlackList, 0);
 
         // Row 1:
         mInCallMenuView.addItemView(mSwapCalls, 1);
@@ -283,8 +283,8 @@ mInCallMenuView.addItemView(mAddBlackList, 0);
         final Call.State fgCallState = phone.getForegroundCall().getState();
         final boolean hasHoldingCall = !phone.getBackgroundCall().isIdle();
 
-mAddBlackList.setVisible(true);
-mAddBlackList.setEnabled(true);
+        mAddBlackList.setVisible(true);
+        mAddBlackList.setEnabled(true);
 
         // For OTA call, only show dialpad, endcall, speaker, and mute menu items
         if (hasActiveCall && (phone.getPhoneType() == Phone.PHONE_TYPE_CDMA) &&
@@ -294,7 +294,7 @@ mAddBlackList.setEnabled(true);
             mAnswerAndEnd.setVisible(false);
             mAnswerAndEnd.setEnabled(false);
 
-mAddBlackList.setVisible(false);
+            mAddBlackList.setVisible(false);
 
             mManageConference.setVisible(false);
             mAddCall.setEnabled(false);
@@ -307,15 +307,15 @@ mAddBlackList.setVisible(false);
             mIgnore.setVisible(false);
 
             boolean inConferenceCall =
-                    PhoneUtils.isConferenceCall(phone.getForegroundCall());
+                PhoneUtils.isConferenceCall(phone.getForegroundCall());
             boolean showShowDialpad = !inConferenceCall;
             boolean enableShowDialpad = showShowDialpad && mInCallScreen.okToShowDialpad();
             mShowDialpad.setVisible(showShowDialpad);
             mShowDialpad.setEnabled(enableShowDialpad);
             boolean isDtmfDialerOpened = mInCallScreen.isDialerOpened();
             mShowDialpad.setText(isDtmfDialerOpened
-                                 ? R.string.menu_hideDialpad
-                                 : R.string.menu_showDialpad);
+                    ? R.string.menu_hideDialpad
+                            : R.string.menu_showDialpad);
 
             mEndCall.setVisible(true);
             mEndCall.setEnabled(true);
@@ -381,24 +381,24 @@ mAddBlackList.setVisible(false);
             } else {
                 // If there's an incoming ringing call but there aren't
                 // any "special actions" to take, don't show a menu at all.
-// add by cytown
-mAnswer.setVisible(false);
-mIgnore.setVisible(false);
-mAnswerAndHold.setVisible(false);
-mAnswerAndEnd.setVisible(false);
-mManageConference.setVisible(false);
-mShowDialpad.setVisible(false);
-mEndCall.setVisible(false);
-mAddCall.setVisible(false);
-mSwapCalls.setVisible(false);
-mMergeCalls.setVisible(false);
-mBluetooth.setVisible(false);
-mSpeaker.setVisible(false);
-mMute.setVisible(false);
-mHold.setVisible(false);
-mInCallMenuView.updateVisibility();
-return true;
-//                return false;
+                // add by cytown
+                mAnswer.setVisible(false);
+                mIgnore.setVisible(false);
+                mAnswerAndHold.setVisible(false);
+                mAnswerAndEnd.setVisible(false);
+                mManageConference.setVisible(false);
+                mShowDialpad.setVisible(false);
+                mEndCall.setVisible(false);
+                mAddCall.setVisible(false);
+                mSwapCalls.setVisible(false);
+                mMergeCalls.setVisible(false);
+                mBluetooth.setVisible(false);
+                mSpeaker.setVisible(false);
+                mMute.setVisible(false);
+                mHold.setVisible(false);
+                mInCallMenuView.updateVisibility();
+                return true;
+                //                return false;
             }
         }
 
@@ -430,9 +430,9 @@ return true;
         mShowDialpad.setVisible(showShowDialpad);
         mShowDialpad.setEnabled(enableShowDialpad);
         mShowDialpad.setText(inCallControlState.dialpadVisible
-                             ? R.string.menu_hideDialpad
-                             : R.string.menu_showDialpad);
-mAddBlackList.setVisible(!inCallControlState.manageConferenceVisible);
+                ? R.string.menu_hideDialpad
+                        : R.string.menu_showDialpad);
+        mAddBlackList.setVisible(!inCallControlState.manageConferenceVisible);
 
         // "End call": this button has no state and is always visible.
         // It's also always enabled.  (Actually it *would* need to be

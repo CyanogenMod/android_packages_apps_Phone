@@ -44,7 +44,7 @@ import com.android.internal.widget.SlidingTab;
  * non-touch-sensitive parts of the in-call UI (i.e. the call card).
  */
 public class InCallTouchUi extends FrameLayout
-        implements View.OnClickListener, SlidingTab.OnTriggerListener {
+implements View.OnClickListener, SlidingTab.OnTriggerListener {
     private static final int IN_CALL_WIDGET_TRANSITION_TIME = 250; // in ms
     private static final String LOG_TAG = "InCallTouchUi";
     private static final boolean DBG = (PhoneApp.DBG_LEVEL >= 2);
@@ -92,7 +92,7 @@ public class InCallTouchUi extends FrameLayout
     private boolean mAllowIncomingCallTouchUi;
     private boolean mAllowInCallTouchUi;
 
-private CallFeaturesSetting mSettings;
+    private CallFeaturesSetting mSettings;
 
     public InCallTouchUi(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -106,8 +106,8 @@ private CallFeaturesSetting mSettings;
         inflater.inflate(
                 //R.layout.incall_touch_ui,  // resource
                 mSettings.mLeftHand ? R.layout.incall_touch_ui_left : R.layout.incall_touch_ui,  // resource
-                this,                      // root
-                true);
+                        this,                      // root
+                        true);
 
         mApplication = PhoneApp.getInstance();
 
@@ -117,11 +117,11 @@ private CallFeaturesSetting mSettings;
 
         mAllowIncomingCallTouchUi = getResources().getBoolean(R.bool.allow_incoming_call_touch_ui);
         if (DBG) log("- incoming call touch UI: "
-                     + (mAllowIncomingCallTouchUi ? "ENABLED" : "DISABLED"));
+                + (mAllowIncomingCallTouchUi ? "ENABLED" : "DISABLED"));
         mAllowInCallTouchUi = getResources().getBoolean(R.bool.allow_in_call_touch_ui);
         if (DBG) log("- regular in-call touch UI: "
-                     + (mAllowInCallTouchUi ? "ENABLED" : "DISABLED"));
-mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
+                + (mAllowInCallTouchUi ? "ENABLED" : "DISABLED"));
+        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
     }
 
     void setInCallScreenInstance(InCallScreen inCallScreen) {
@@ -143,13 +143,13 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
                 com.android.internal.R.drawable.jog_tab_target_green,
                 com.android.internal.R.drawable.jog_tab_bar_left_answer,
                 com.android.internal.R.drawable.jog_tab_left_answer
-                );
+        );
         mIncomingCallWidget.setRightTabResources(
                 R.drawable.ic_jog_dial_decline,
                 com.android.internal.R.drawable.jog_tab_target_red,
                 com.android.internal.R.drawable.jog_tab_bar_right_decline,
                 com.android.internal.R.drawable.jog_tab_right_decline
-                );
+        );
 
         // For now, we only need to show two states: answer and decline.
         mIncomingCallWidget.setLeftHintText(R.string.slide_to_answer_hint);
@@ -275,7 +275,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
 
         if (showIncomingCallControls && showInCallControls) {
             throw new IllegalStateException(
-                "'Incoming' and 'in-call' touch controls visible at the same time!");
+            "'Incoming' and 'in-call' touch controls visible at the same time!");
         }
 
         if (showIncomingCallControls) {
@@ -378,7 +378,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
                 // future devices we may need to re-layout Add and Merge so
                 // they can both be visible at the same time...
                 Log.w(LOG_TAG, "updateInCallControls: Add *and* Merge enabled," +
-                        " but can't show both!");
+                " but can't show both!");
             } else if (phoneType == Phone.PHONE_TYPE_CDMA) {
                 // In CDMA "Add" option is always given to the user and the hence
                 // in this case both "Add" and "Merge" options would be available to user
@@ -399,7 +399,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
             // Show the "hide dialpad" state.
             mDialpadButton.setText(R.string.onscreenHideDialpadText);
             mDialpadButton.setCompoundDrawablesWithIntrinsicBounds(
-                null, mHideDialpadIcon, null, null);
+                    null, mHideDialpadIcon, null, null);
         } else {
             // Show the "show dialpad" state.
             mDialpadButton.setText(R.string.onscreenShowDialpadText);
@@ -470,7 +470,7 @@ mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager
                 // devices we may need to re-layout Merge and Swap so they can
                 // both be visible at the same time...
                 Log.w(LOG_TAG, "updateInCallControls: Merge *and* Swap" +
-                        "enabled, but can't show both!");
+                "enabled, but can't show both!");
             }
         }
 
