@@ -1060,8 +1060,7 @@ public class PhoneUtils {
                                     break;
                             }
                         }
-                    }
-                };
+                    };
 
                 // build the dialog
                 final AlertDialog newDialog = new AlertDialog.Builder(context)
