@@ -1562,15 +1562,14 @@ public class PhoneApp extends Application {
                         }
                         abortBroadcast();
                     }
-                    // Added headset hangup ability by KrazyKrivda (needs PhoneUtil change too)
-                    // press wiredheadset for mute (above) long press to hangup (below)
-                } else if (event.getRepeatCount() == 2){
+                } else if (event.getRepeatCount() == 2) {
+                    // Long press to hang up:
                     if (VDBG) Log.d(LOG_TAG, "repeat count = 2 is triggered!");
-                    boolean consumed = PhoneUtils.handleHeadsetHook(phone, 1);
+                    boolean consumed = PhoneUtils.handleHeadsetHookHangup(phone);
                     if (consumed) {
+                        if (VDBG) Log.d(LOG_TAG, "consuming broadcast");
                         abortBroadcast();  // BUG: Media player on/off is toggled sometimes if used to hang up
                     }
-                    // End of KrazyKrivda's addition
                 } else if (phone.getState() != Phone.State.IDLE) {
                     // As for any DOWN events other than the initial press, we consume
                     // (and ignore) those too if the phone is in use.  (Otherwise the

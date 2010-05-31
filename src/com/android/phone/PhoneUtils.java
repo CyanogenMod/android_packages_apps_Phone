@@ -1968,10 +1968,8 @@ public class PhoneUtils {
         return true;
     }
 
-    // KrazyKrivda's hangup from headset mod (needs PhoneApp changes as well)
-    // just simple handleHeadsetHook overloaded function
-    static boolean handleHeadsetHook(Phone phone, int x) {
-        if (DBG) log("handleHeadsetHook()...");
+    static boolean handleHeadsetHookHangup(Phone phone) {
+        if (DBG) log("handleHeadsetHookHangup()...");
         if (phone.getState() == Phone.State.IDLE) {
             return false;
         }
@@ -1986,10 +1984,10 @@ public class PhoneUtils {
                 answerCall(phone);
             } else if (phoneType == Phone.PHONE_TYPE_GSM) {
                 if (hasActiveCall && hasHoldingCall) {
-                    if (DBG) log("handleHeadsetHook: ringing (both lines in use) ==> answer!");
+                    if (DBG) log("handleHeadsetHookHangup: ringing (both lines in use) ==> answer!");
                     answerAndEndActive(phone);
                 } else {
-                    if (DBG) log("handleHeadsetHook: ringing ==> answer!");
+                    if (DBG) log("handleHeadsetHookHangup: ringing ==> answer!");
                     answerCall(phone);  // Automatically holds the current active call,
                     // if there is one
                 }
