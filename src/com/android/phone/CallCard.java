@@ -1083,7 +1083,7 @@ public class CallCard extends FrameLayout
             mOrganization.setVisibility(View.GONE);
         } else {
             mName.setText(name);
-            log("show ======= " + updateName + ":" + mSettings.mShowOrgan);
+            if (DBG) log("show ======= " + updateName + ":" + mSettings.mShowOrgan);
             if (updateName && mSettings.mShowOrgan) {
                 updateOrganization(info.person_id);
             } else {
