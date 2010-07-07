@@ -22,6 +22,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.pim.ContactsAsyncHelper;
 import android.provider.ContactsContract.Contacts;
+import android.provider.ContactsContract.RawContacts;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
@@ -42,7 +43,9 @@ import com.android.internal.telephony.Connection;
 import com.android.internal.telephony.Phone;
 
 import java.util.List;
+import java.util.ArrayList;
 
+import android.provider.ContactsContract;
 
 /**
  * "Call card" UI element: the in-call screen contains a tiled layout of call
@@ -111,6 +114,10 @@ public class CallCard extends FrameLayout
     // Cached DisplayMetrics density.
     private float mDensity;
 
+    // add by cytown
+    private CallFeaturesSetting mSettings;
+    private TextView mOrganization;
+
     public CallCard(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -126,6 +133,9 @@ public class CallCard extends FrameLayout
                 true);
 
         mApplication = PhoneApp.getInstance();
+
+        // add by cytown
+        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
 
         mCallTime = new CallTime(this);
 
@@ -183,6 +193,7 @@ public class CallCard extends FrameLayout
         mPhoneNumber = (TextView) findViewById(R.id.phoneNumber);
         mLabel = (TextView) findViewById(R.id.label);
         mSocialStatus = (TextView) findViewById(R.id.socialStatus);
+        mOrganization = (TextView) findViewById(R.id.organization);
 
         // "Other call" info area
         mSecondaryCallName = (TextView) findViewById(R.id.secondaryCallName);
@@ -1017,6 +1028,8 @@ public class CallCard extends FrameLayout
         String socialStatusText = null;
         Drawable socialStatusBadge = null;
 
+        boolean updateName = false;
+
         if (info != null) {
             // It appears that there is a small change in behaviour with the
             // PhoneUtils' startGetCallerInfo whereby if we query with an
@@ -1056,6 +1069,8 @@ public class CallCard extends FrameLayout
                     name = info.name;
                     displayNumber = info.phoneNumber;
                     label = info.phoneLabel;
+                    // add by cytown for show organization
+                    updateName = true;
                 }
             }
             personUri = ContentUris.withAppendedId(Contacts.CONTENT_URI, info.person_id);
@@ -1065,8 +1080,15 @@ public class CallCard extends FrameLayout
 
         if (call.isGeneric()) {
             mName.setText(R.string.card_title_in_call);
+            mOrganization.setVisibility(View.GONE);
         } else {
             mName.setText(name);
+            log("show ======= " + updateName + ":" + mSettings.mShowOrgan);
+            if (updateName && mSettings.mShowOrgan) {
+                updateOrganization(info.person_id);
+            } else {
+                mOrganization.setVisibility(View.GONE);
+            }
         }
         mName.setVisibility(View.VISIBLE);
 
@@ -1120,6 +1142,36 @@ public class CallCard extends FrameLayout
             mSocialStatus.setCompoundDrawablePadding((int) (mDensity * 6));
         } else {
             mSocialStatus.setVisibility(View.GONE);
+        }
+    }
+
+    private void updateOrganization(final long person_id) {
+        android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
+                new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY, 
+                    ContactsContract.CommonDataKinds.Nickname.NAME },
+                ContactsContract.Data.CONTACT_ID + " = ? and (" + ContactsContract.Data.MIMETYPE + " = '" +
+                ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "' or " + 
+                ContactsContract.Data.MIMETYPE + " = '" + ContactsContract.CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "' )", 
+                new String[] { person_id + "" },
+                null);
+        if (c != null) {
+            if (c.moveToNext()) {
+                try {
+                    // we have found an organization.  set the organization name and exit loop
+                    String organ = c.getString(1);
+                    if (TextUtils.isEmpty(organ)) {
+                        organ = c.getString(0);
+                    }
+                    if (!TextUtils.isEmpty(organ)) {
+                        mOrganization.setText(organ);
+                        mOrganization.setVisibility(View.VISIBLE);
+                        mOrganization.invalidate();
+                    }
+                } catch (Exception e) {}
+            } else {
+                mOrganization.setVisibility(View.GONE);
+            }
+            c.close();
         }
     }
 

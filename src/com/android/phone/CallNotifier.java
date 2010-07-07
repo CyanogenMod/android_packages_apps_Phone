@@ -46,6 +46,12 @@ import android.text.TextUtils;
 import android.util.EventLog;
 import android.util.Log;
 
+import android.preference.PreferenceManager;
+import android.hardware.SensorManager;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorEvent;
+import android.hardware.Sensor;
+
 
 /**
  * Phone app module that listens for phone state changes and various other
@@ -172,8 +178,14 @@ public class CallNotifier extends Handler
     // Cached AudioManager
     private AudioManager mAudioManager;
 
+    // add by cytown
+    private CallFeaturesSetting mSettings;
+    private static final String BLACKLIST = "blacklist";
+
     public CallNotifier(PhoneApp app, Phone phone, Ringer ringer,
                         BluetoothHandsfree btMgr, CallLogAsync callLog) {
+        mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(app));
+        mSensorManager = (SensorManager) app.getSystemService(Context.SENSOR_SERVICE);
         mApplication = app;
         mPhone = phone;
         mCallLog = callLog;
@@ -388,6 +400,18 @@ public class CallNotifier extends Handler
             return;
         }
 
+        String number = c!=null?c.getAddress():"0000";
+        if (android.text.TextUtils.isEmpty(number)) number = "0000";
+        if (DBG) log("incoming number is: " + number);
+        if (c != null && mSettings.isBlackList(number)) {
+            try {
+                c.setUserData(BLACKLIST);
+                c.hangup();
+                if (DBG) Log.i(LOG_TAG, "Reject the incoming call in BL:" + number);
+            } catch (Exception e) {}  // ignore
+            return;
+        }
+
         // Incoming calls are totally ignored if OTA call is active
         if (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA) {
             boolean activateState = (mApplication.cdmaOtaScreenState.otaScreenState
@@ -451,7 +475,11 @@ public class CallNotifier extends Handler
             if (state == Call.State.INCOMING) {
                 PhoneUtils.setAudioControlState(PhoneUtils.AUDIO_RINGING);
                 startIncomingCallQuery(c);
+                startSensor();
             } else {
+                if (mSettings.mVibCallWaiting) {
+                    mApplication.vibrate(200,300,500);
+                }
                 if (VDBG) log("- starting call waiting tone...");
                 if (mCallWaitingTonePlayer == null) {
                     mCallWaitingTonePlayer = new InCallTonePlayer(InCallTonePlayer.TONE_CALL_WAITING);
@@ -638,6 +666,23 @@ public class CallNotifier extends Handler
 
             PhoneUtils.setAudioControlState(PhoneUtils.AUDIO_OFFHOOK);
             if (VDBG) log("onPhoneStateChanged: OFF HOOK");
+
+            Call call = PhoneUtils.getCurrentCall(mPhone);
+            Connection c = PhoneUtils.getConnection(mPhone, call);
+            if (VDBG) PhoneUtils.dumpCallState(mPhone);
+            Call.State cstate = call.getState();
+            if (cstate == Call.State.ACTIVE && !c.isIncoming()) {
+                long callDurationMsec = c.getDurationMillis();
+                if (VDBG) Log.i(LOG_TAG, "duration is " + callDurationMsec);
+                if (mSettings.mVibOutgoing && callDurationMsec < 200) {
+                    mApplication.vibrate(100,0,0);
+                }
+                if (mSettings.mVib45) {
+                    callDurationMsec = callDurationMsec % 60000;
+                    mApplication.startVib45(callDurationMsec);
+                }
+            }
+
             // If Audio Mode is not In Call, then set the Audio Mode.  This
             // changes is needed because for one of the carrier specific test case,
             // call is originated from the lower layer without using the UI, and
@@ -851,6 +896,20 @@ public class CallNotifier extends Handler
             log("- onDisconnect: cause = " + c.getDisconnectCause()
                 + ", incoming = " + c.isIncoming()
                 + ", date = " + c.getCreateTime());
+        }
+
+        if (c != null) {
+            Object o = c.getUserData();
+            if (BLACKLIST.equals(o)) {
+                if (VDBG) Log.i(LOG_TAG, "in blacklist so skip calllog");
+                return;
+            }
+            if (c.getDurationMillis() > 0 && mSettings.mVibHangup) {
+                mApplication.vibrate(50, 100, 50);
+            }
+            if (!c.isIncoming()) {
+                mApplication.stopVib45();
+            }
         }
 
         // Stop the ringer if it was ringing (for an incoming call that
@@ -1128,6 +1187,52 @@ public class CallNotifier extends Handler
         NotificationMgr.getDefault().updateCfi(visible);
     }
 
+    private SensorManager mSensorManager;
+    private boolean mSensorRunning = false;
+    private TurnListener mTurnListener = new TurnListener();
+
+    class TurnListener implements SensorEventListener {
+        int count = 0;
+        public void onSensorChanged(SensorEvent event) {
+            if (++count < 5) {  // omit the first 5 times
+                return;
+            }
+            float[] values = event.values;
+            // Log.i("==="," @ " + values[1] + " : " + values[2]);
+            if (count <= 7) {   // test 5 to 7 times
+                if (Math.abs(values[1]) > 15 || Math.abs(values[2]) > 20) {
+                    // Log.i("===","force stop sensor! @ " + values[1] + " : " + values[2]);
+                    stopSensor();
+                }
+            } else {
+                if (Math.abs(values[1]) > 165 && Math.abs(values[2]) < 20) {
+                    if (DBG) log("turn over!");
+                    silenceRinger();
+                }
+            }
+        }
+        public void onAccuracyChanged(Sensor sensor, int accuracy) {}
+    };
+
+    void stopSensor() {
+        if (mSensorRunning) {
+            if (DBG) log("stop sensor!");
+            mTurnListener.count = 0;
+            mSensorManager.unregisterListener(mTurnListener);
+            mSensorRunning = false;
+        }
+    }
+
+
+    void startSensor() {
+        if (mSettings.mTurnSilence && !mSensorRunning) {
+            if (DBG) log("startSensor()...");
+            mSensorManager.registerListener(mTurnListener, mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION),
+                    SensorManager.SENSOR_DELAY_NORMAL);
+            mSensorRunning = true;
+        }
+    }
+
     /**
      * Indicates whether or not this ringer is ringing.
      */
@@ -1142,6 +1247,8 @@ public class CallNotifier extends Handler
     void silenceRinger() {
         mSilentRingerRequested = true;
         if (DBG) log("stopRing()... (silenceRinger)");
+        // Log.i("===","silence sensor!");
+        stopSensor();
         mRinger.stopRing();
     }
 
@@ -1266,7 +1373,7 @@ public class CallNotifier extends Handler
                     toneVolume = TONE_RELATIVE_VOLUME_HIPRI;
                     toneLengthMillis = 200;
                     break;
-                 case TONE_OTA_CALL_END:
+                case TONE_OTA_CALL_END:
                     if (mApplication.cdmaOtaConfigData.otaPlaySuccessFailureTone ==
                             OtaUtils.OTA_PLAY_SUCCESS_FAILURE_TONE_ON) {
                         toneType = ToneGenerator.TONE_CDMA_ALERT_CALL_GUARD;

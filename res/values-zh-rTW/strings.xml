@@ -597,4 +597,35 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"向右拖曳以接聽來電並結束"\n"目前保留的通話"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"接聽"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"拒絕"</string>
+
+<string name="notification_ongoing_calling_format">"當前撥出 (<xliff:g id="DURATION">%s</xliff:g>)"</string>
+<string name="advanced_setting">高級設置 V.30.1</string>
+<string name="vibrate_outgoing">接聽震動</string>
+<string name="vibrate_outgoing_sum">當對方接聽時震動.</string>
+<string name="vibrate_45">45秒震動</string>
+<string name="vibrate_45_sum">呼出通話時到45秒時震動.</string>
+<string name="vibrate_hangup">掛斷震動</string>
+<string name="vibrate_hangup_sum">通話結束時震動.</string>
+<string name="screen_awake">屏幕保持</string>
+<string name="screen_awake_sum">通話時, 屏幕等待更長時間才關閉.</string>
+<string name="led_notify_call">未接電話LED通知</string>
+<string name="led_notify_call_sum">有未接電話時LED會閃爍.</string>
+<string name="led_show_organ">顯示昵稱或公司名稱</string>
+<string name="led_show_organ_sum">打電話界面顯示昵稱或公司名稱在姓名後面.</string>
+<string name="vibrate_call_waiting">呼叫等待震動</string>
+<string name="vibrate_call_waiting_sum">當呼叫等待時震動通知.</string>
+<string name="return_home">強制返回到通話記錄</string>
+<string name="return_home_sum">當呼出通話結束後會強制返回到通話記錄屏幕.</string>
+<string name="menu_addBlackList">加入黑名單</string>
+<string name="black_list">黑名單</string>
+<string name="black_list_sum">列入黑名單的來電會被自動掛斷.</string>
+<string name="add_black">添加來電</string>
+<string name="remove_black">從名單中去除 %s</string>
+<string name="turn_silence">翻轉靜音</string>
+<string name="turn_silence_sum">來電時翻轉就靜音</string>
+<string name="left_hand">左手模式</string>
+<string name="left_hand_sum">用左手拿手機操作和接聽電話, 需要重啟.</string>
+<string name="set_force_touch">強制顯示觸摸鍵盤</string>
+<string name="set_force_touch_sum">強制在通話中使用觸摸鍵盤無論是否有近距傳感器.</string>
+
 </resources>

@@ -67,6 +67,7 @@ class InCallMenu {
     InCallMenuItemView mAnswerAndEnd;
     InCallMenuItemView mAnswer;
     InCallMenuItemView mIgnore;
+    InCallMenuItemView mAddBlackList;
 
     InCallMenu(InCallScreen inCallScreen) {
         if (DBG) log("InCallMenu constructor...");
@@ -220,6 +221,14 @@ class InCallMenu {
         }
         mInCallMenuView.addItemView(mShowDialpad, 0);
 
+        // add by cytown
+        mAddBlackList = new InCallMenuItemView(wrappedContext);
+        mAddBlackList.setId(R.id.menuAddBlackList);
+        mAddBlackList.setOnClickListener(mInCallScreen);
+        mAddBlackList.setText(R.string.menu_addBlackList);
+        mAddBlackList.setIconResource(R.drawable.ic_menu_add_black);
+        mInCallMenuView.addItemView(mAddBlackList, 0);
+
         // Row 1:
         mInCallMenuView.addItemView(mSwapCalls, 1);
         mInCallMenuView.addItemView(mMergeCalls, 1);
@@ -274,12 +283,17 @@ class InCallMenu {
         final Call.State fgCallState = phone.getForegroundCall().getState();
         final boolean hasHoldingCall = !phone.getBackgroundCall().isIdle();
 
+        mAddBlackList.setVisible(true);
+        mAddBlackList.setEnabled(true);
+
         // For OTA call, only show dialpad, endcall, speaker, and mute menu items
         if (hasActiveCall && (PhoneApp.getInstance().isOtaCallInActiveState())) {
             mAnswerAndHold.setVisible(false);
             mAnswerAndHold.setEnabled(false);
             mAnswerAndEnd.setVisible(false);
             mAnswerAndEnd.setEnabled(false);
+
+            mAddBlackList.setVisible(false);
 
             mManageConference.setVisible(false);
             mAddCall.setEnabled(false);
@@ -366,7 +380,24 @@ class InCallMenu {
             } else {
                 // If there's an incoming ringing call but there aren't
                 // any "special actions" to take, don't show a menu at all.
-                return false;
+                // add by cytown
+                mAnswer.setVisible(false);
+                mIgnore.setVisible(false);
+                mAnswerAndHold.setVisible(false);
+                mAnswerAndEnd.setVisible(false);
+                mManageConference.setVisible(false);
+                mShowDialpad.setVisible(false);
+                mEndCall.setVisible(false);
+                mAddCall.setVisible(false);
+                mSwapCalls.setVisible(false);
+                mMergeCalls.setVisible(false);
+                mBluetooth.setVisible(false);
+                mSpeaker.setVisible(false);
+                mMute.setVisible(false);
+                mHold.setVisible(false);
+                mInCallMenuView.updateVisibility();
+                return true;
+                //                return false;
             }
         }
 
@@ -400,6 +431,7 @@ class InCallMenu {
         mShowDialpad.setText(inCallControlState.dialpadVisible
                              ? R.string.menu_hideDialpad
                              : R.string.menu_showDialpad);
+        mAddBlackList.setVisible(!inCallControlState.manageConferenceVisible);
 
         // "End call": this button has no state and is always visible.
         // It's also always enabled.  (Actually it *would* need to be

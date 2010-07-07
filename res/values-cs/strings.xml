@@ -597,4 +597,29 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Přetažením doprava hovor přijmete"\n"a přidržený ukončíte"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Přijmout"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Odmítnout"</string>
+<!-- added by cytown@gmail.com -->
+<string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)</string>
+<string name="vibrate_outgoing">Vibrace při odpovědi</string>
+<string name="vibrate_outgoing_sum">Vibrace při odpovědi na vaše volání</string>
+<string name="vibrate_45">Vibrace každých 45 sekund</string>
+<string name="vibrate_45_sum">Vibrace každých 45 sekund, při odchozím hovoru</string>
+<string name="vibrate_hangup">Vibrace po zavěšení</string>
+<string name="vibrate_hangup_sum">Vibrace po ukončení hovoru</string>
+<string name="screen_awake">Zapnutá obrazovka</string>
+<string name="screen_awake_sum">Obrazovka zůstane při hovoru déle zapnutá</string>
+<string name="led_notify_call">LED při zmeškaném hovoru</string>
+<string name="led_notify_call_sum">LED bude blikat pokud budete mít zmeškaný hovor</string>
+<string name="led_show_organ">Zobrazit organizace</string>
+<string name="led_show_organ_sum">Organizace budou zobrazeny při příchozím hovoru</string>
+<string name="vibrate_call_waiting">Vibrace při dalším hovoru</string>
+<string name="vibrate_call_waiting_sum">Vibrace při čekajícím hovoru na lince</string>
+<string name="return_home">Vynutit seznam hovorů</string>
+<string name="return_home_sum">Vynutit návrat do seznamu hovorů po ukončení hovoru</string>
+<string name="menu_addBlackList">Přidat k blokovaným</string>
+<string name="black_list">Blokovaný seznam</string>
+<string name="black_list_sum">Příchozí hovory ze seznamu budou odmítnuty</string>
+<string name="add_black">Přidat telefonní číslo</string>
+<string name="remove_black">Odstranit %s z seznamu</string>
+<string name="set_force_touch">Vynutit Touch Keyboard</string>
+<string name="set_force_touch_sum">Vynutit zobrazení Touch UI bez detekce proximity sensoru.</string>
 </resources>

@@ -25,7 +25,7 @@
     <string name="fdnListLabel" msgid="8630418672279521003">"Elenco FDN"</string>
     <string name="unknown" msgid="6878797917991465859">"Sconosciuto"</string>
     <string name="private_num" msgid="6713286113000232309">"Numero privato"</string>
-    <string name="payphone" msgid="1931775086311769314">"Telefono a monete"</string>
+    <string name="payphone" msgid="1931775086311769314">"Cabina telefonica"</string>
     <string name="onHold" msgid="9035493194749959955">"In attesa"</string>
     <string name="ongoing" msgid="8300874342848721367">"Chiamata corrente"</string>
     <string name="callFailed_userBusy" msgid="8851106999809294904">"Linea occupata"</string>
@@ -157,11 +157,11 @@
     <string name="enable" msgid="1059008390636773574">"Attiva"</string>
     <string name="disable" msgid="7274240979164762320">"Disattiva"</string>
     <string name="change_num" msgid="239476305819844391">"Aggiorna"</string>
-  <string-array name="clir_display_values">
-    <item msgid="5560134294467334594">"Rete predefinita"</item>
-    <item msgid="7876195870037833661">"Nascondi numero"</item>
-    <item msgid="1108394741608734023">"Mostra numero"</item>
-  </string-array>
+    <string-array name="clir_display_values">
+        <item msgid="5560134294467334594">"Rete predefinita"</item>
+        <item msgid="7876195870037833661">"Nascondi numero"</item>
+        <item msgid="1108394741608734023">"Mostra numero"</item>
+    </string-array>
     <string name="vm_save_number" msgid="4579969432544566719">"Salva numero segreteria"</string>
     <string name="vm_changed" msgid="380744030726254139">"Numero segreteria modificato."</string>
     <string name="vm_change_failed" msgid="6912718596496220653">"Modifica del numero di segreteria non riuscita."\n"Se il problema persiste, contattare l\'operatore di telefonia."</string>
@@ -176,7 +176,8 @@
     <string name="empty_networks_list" msgid="4249426905018815316">"Nessuna rete trovata."</string>
     <string name="search_networks" msgid="1601136049300882441">"Cerca reti"</string>
     <string name="network_query_error" msgid="6828516148953325006">"Errore durante la ricerca di reti."</string>
-    <string name="register_on_network" msgid="9055203954040805084">"Registrazione su <xliff:g id="NETWORK">%s</xliff:g>..."</string>
+    <string name="register_on_network" msgid="9055203954040805084">"Registrazione su <xliff:g id="NETWORK">%s</xliff:g>..."
+    </string>
     <string name="not_allowed" msgid="3540496123717833833">"La SIM non consente la connessione a questa rete."</string>
     <string name="connect_later" msgid="500090982903469816">"Impossibile connettersi a questa rete adesso. Riprova più tardi."</string>
     <string name="registration_done" msgid="495135664535876612">"Registrato sulla rete."</string>
@@ -262,24 +263,24 @@
     <string name="international_disable" msgid="2850648591041088931">"News internazionali disattivate"</string>
     <string name="list_language_title" msgid="2841683501919760043">"Lingua"</string>
     <string name="list_language_summary" msgid="8109546531071241601">"Seleziona la lingua desiderata per le news"</string>
-  <string-array name="list_language_entries">
-    <item msgid="6137851079727305485">"Inglese"</item>
-    <item msgid="1151988412809572526">"Francese"</item>
-    <item msgid="577840534704312665">"Spagnolo"</item>
-    <item msgid="8385712091143148180">"Giapponese"</item>
-    <item msgid="1858401628368130638">"Coreano"</item>
-    <item msgid="1933212028684529632">"Cinese"</item>
-    <item msgid="1908428006803639064">"Ebraico"</item>
-  </string-array>
-  <string-array name="list_language_values">
-    <item msgid="1804908636436467150">"1"</item>
-    <item msgid="289708030346890334">"2"</item>
-    <item msgid="1121469729692402684">"3"</item>
-    <item msgid="2614093115912897722">"4"</item>
-    <item msgid="2411164639857960614">"5"</item>
-    <item msgid="5884448729274543324">"6"</item>
-    <item msgid="5511864807618312598">"7"</item>
-  </string-array>
+    <string-array name="list_language_entries">
+        <item msgid="6137851079727305485">"Inglese"</item>
+        <item msgid="1151988412809572526">"Francese"</item>
+        <item msgid="577840534704312665">"Spagnolo"</item>
+        <item msgid="8385712091143148180">"Giapponese"</item>
+        <item msgid="1858401628368130638">"Coreano"</item>
+        <item msgid="1933212028684529632">"Cinese"</item>
+        <item msgid="1908428006803639064">"Ebraico"</item>
+    </string-array>
+    <string-array name="list_language_values">
+        <item msgid="1804908636436467150">"1"</item>
+        <item msgid="289708030346890334">"2"</item>
+        <item msgid="1121469729692402684">"3"</item>
+        <item msgid="2614093115912897722">"4"</item>
+        <item msgid="2411164639857960614">"5"</item>
+        <item msgid="5884448729274543324">"6"</item>
+        <item msgid="5511864807618312598">"7"</item>
+    </string-array>
     <string name="list_language_dtitle" msgid="5442908726538951934">"Lingue"</string>
     <string name="enable_disable_local_weather" msgid="986967454867219114">"Meteo locale"</string>
     <string name="local_weather_enable" msgid="6199315114382448922">"Meteo locale attivato"</string>
@@ -320,64 +321,64 @@
     <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"Preferenze di rete GSM/UMTS"</string>
     <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Non ancora implementato."</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"Preferenze di rete GSM/UMTS"</string>
-  <string-array name="gsm_umts_network_preferences_choices">
-    <item msgid="935612021902787683">"GSM/WCDMA (modalità automatica)"</item>
-    <item msgid="8912042051809329533">"Solo WCDMA"</item>
-    <item msgid="8776934131146642662">"Solo GSM"</item>
-    <item msgid="4684679567848300935">"GSM/WCDA (WCDMA preferito)"</item>
-  </string-array>
-  <string-array name="gsm_umts_network_preferences_values">
-    <item msgid="117293148930527265">"0"</item>
-    <item msgid="2264578612775462302">"1"</item>
-    <item msgid="1268081943590316978">"2"</item>
-    <item msgid="4469871047641902607">"3"</item>
-  </string-array>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item msgid="935612021902787683">"GSM/WCDMA (modalità automatica)"</item>
+        <item msgid="8912042051809329533">"Solo WCDMA"</item>
+        <item msgid="8776934131146642662">"Solo GSM"</item>
+        <item msgid="4684679567848300935">"GSM/WCDA (WCDMA preferito)"</item>
+    </string-array>
+    <string-array name="gsm_umts_network_preferences_values">
+        <item msgid="117293148930527265">"0"</item>
+        <item msgid="2264578612775462302">"1"</item>
+        <item msgid="1268081943590316978">"2"</item>
+        <item msgid="4469871047641902607">"3"</item>
+    </string-array>
     <string name="prefer_2g" msgid="8442550937280449639">"Usa solo reti 2G"</string>
     <string name="prefer_2g_summary" msgid="1976491403210690759">"Risparmia batteria"</string>
     <string name="cdma_system_select_title" msgid="5757657769327732833">"Selezione sistema"</string>
     <string name="cdma_system_select_summary" msgid="2528661990595284707">"Cambia la modalità roaming CDMA"</string>
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Selezione sistema"</string>
-  <string-array name="cdma_system_select_choices">
-    <item msgid="176474317493999285">"Solo domestica"</item>
-    <item msgid="1205664026446156265">"Automatiche"</item>
-  </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item msgid="176474317493999285">"Solo domestica"</item>
+        <item msgid="1205664026446156265">"Automatiche"</item>
+    </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"Modalità roaming CDMA"</string>
     <string name="cdma_roaming_mode_summary" msgid="8604713111805562261">"Cambia la modalità roaming CDMA"</string>
     <string name="cdma_roaming_mode_dialogtitle" msgid="1802896889172094947">"Modalità roaming CDMA"</string>
-  <string-array name="cdma_roaming_mode_choices">
-    <item msgid="6024072766548865002">"Solo reti domestiche"</item>
-    <item msgid="8174642753290624634">"Reti affiliate"</item>
-    <item msgid="2241951431403168661">"Qualsiasi rete"</item>
-  </string-array>
-  <string-array name="cdma_roaming_mode_values">
-    <item msgid="2549203161367380954">"0"</item>
-    <item msgid="6007798728227141997">"1"</item>
-    <item msgid="4039511109802141047">"2"</item>
-  </string-array>
+    <string-array name="cdma_roaming_mode_choices">
+        <item msgid="6024072766548865002">"Solo reti domestiche"</item>
+        <item msgid="8174642753290624634">"Reti affiliate"</item>
+        <item msgid="2241951431403168661">"Qualsiasi rete"</item>
+    </string-array>
+    <string-array name="cdma_roaming_mode_values">
+        <item msgid="2549203161367380954">"0"</item>
+        <item msgid="6007798728227141997">"1"</item>
+        <item msgid="4039511109802141047">"2"</item>
+    </string-array>
     <string name="cdma_network_preferences_title" msgid="41193174429510391">"Preferenze di rete CDMA"</string>
     <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Non ancora implementato."</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"Preferenze di rete CDMA"</string>
-  <string-array name="cdma_network_preferences_choices">
-    <item msgid="3711054371631487248">"CDMA/EvDo"</item>
-    <item msgid="6143696847467859795">"Solo CDMA"</item>
-    <item msgid="2683555124647197574">"Solo EvDo"</item>
-  </string-array>
-  <string-array name="cdma_network_preferences_values">
-    <item msgid="5584048199290030331">"0"</item>
-    <item msgid="5741268642513143762">"1"</item>
-    <item msgid="419525200910932450">"2"</item>
-  </string-array>
+    <string-array name="cdma_network_preferences_choices">
+        <item msgid="3711054371631487248">"CDMA/EvDo"</item>
+        <item msgid="6143696847467859795">"Solo CDMA"</item>
+        <item msgid="2683555124647197574">"Solo EvDo"</item>
+    </string-array>
+    <string-array name="cdma_network_preferences_values">
+        <item msgid="5584048199290030331">"0"</item>
+        <item msgid="5741268642513143762">"1"</item>
+        <item msgid="419525200910932450">"2"</item>
+    </string-array>
     <string name="subscription_title" msgid="5813493350326486">"TEST abbonamento CDMA"</string>
     <string name="subscription_summary" msgid="8435941016743418124">"Cambia tra RUIM/SIM e NV"</string>
     <string name="subscription_dialogtitle" msgid="531571450448009255">"abbonamento"</string>
-  <string-array name="subscription_choices">
-    <item msgid="6540107472553796600">"RUIM/SIM"</item>
-    <item msgid="1433427108940308332">"NV"</item>
-  </string-array>
-  <string-array name="subscription_values">
-    <item msgid="4377788417250295786">"0"</item>
-    <item msgid="1193066664940329729">"1"</item>
-  </string-array>
+    <string-array name="subscription_choices">
+        <item msgid="6540107472553796600">"RUIM/SIM"</item>
+        <item msgid="1433427108940308332">"NV"</item>
+    </string-array>
+    <string-array name="subscription_values">
+        <item msgid="4377788417250295786">"0"</item>
+        <item msgid="1193066664940329729">"1"</item>
+    </string-array>
     <string name="fdn" msgid="7878832555095183202">"Numeri selezione fissa (FDN)"</string>
     <string name="manage_fdn_list" msgid="8777755791892122369">"Elenco FDN"</string>
     <string name="fdn_activation" msgid="2156479741307463576">"Attivazione FDN"</string>
@@ -451,7 +452,8 @@
     <string name="fdn_enable_puk2_requested" msgid="2608836967081385948">"Password errata. Modifica il PIN2 e riprova."</string>
     <string name="puk2_requested" msgid="5863580927788820813">"Password errata. La SIM è bloccata. Inserire il codice PUK2."</string>
     <string name="doneButton" msgid="2859593360997984240">"Fine"</string>
-    <string name="caller_manage_header" msgid="3231519674734638786">"Audioconferenza <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
+    <string name="caller_manage_header" msgid="3231519674734638786">"Audioconferenza <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"
+    </string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Torna a chiamata"</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continua senza SIM"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"Nessuna SIM trovata. Inserisci una SIM nel telefono."</string>
@@ -498,7 +500,8 @@
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Chiamata di emergenza"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Attivazione segnale cellulare..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Area non coperta dal servizio. Nuovo tentativo..."</string>
-    <string name="dial_emergency_error" msgid="8362624131726575194">"Chiamata non inviata. <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> non è un numero di emergenza."</string>
+    <string name="dial_emergency_error" msgid="8362624131726575194">"Chiamata non inviata. <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> non è un numero di emergenza."
+    </string>
     <string name="dial_emergency_empty_error" msgid="5048645338094088229">"Chiamata non inviata. Componi un numero di emergenza."</string>
     <string name="dialerKeyboardHintText" msgid="9192914825413747792">"Usa tastiera"</string>
     <string name="dtmfDialpadHintText" msgid="2153335217920679451">"Selezione a toni"</string>
@@ -525,19 +528,19 @@
     <string name="importToFDNfromContacts" msgid="2130620207013368580">"Importa da contatti"</string>
     <string name="hac_mode_title" msgid="8740268574688743289">"Apparecchi acustici"</string>
     <string name="hac_mode_summary" msgid="6833851160514929341">"Attiva la compatibilità con apparecchi acustici"</string>
-  <string-array name="tty_mode_entries">
-    <item msgid="512950011423868021">"TTY disattivato"</item>
-    <item msgid="3971695875449640648">"TTY completa"</item>
-    <item msgid="1937509904407445684">"TTY HCO"</item>
-    <item msgid="5644925873488772224">"TTY VCO"</item>
-  </string-array>
+    <string-array name="tty_mode_entries">
+        <item msgid="512950011423868021">"TTY disattivato"</item>
+        <item msgid="3971695875449640648">"TTY completa"</item>
+        <item msgid="1937509904407445684">"TTY HCO"</item>
+        <item msgid="5644925873488772224">"TTY VCO"</item>
+    </string-array>
     <string name="eri_text_label" msgid="4326942349915331461">"Testo ERI"</string>
     <string name="dtmf_tones_title" msgid="3866923093113274152">"Toni DTMF"</string>
     <string name="dtmf_tones_summary" msgid="3351820372864020331">"Imposta la lunghezza dei toni DTMF"</string>
-  <string-array name="dtmf_tone_entries">
-    <item msgid="899650777817315681">"Normali"</item>
-    <item msgid="2883365539347850535">"Lunghi"</item>
-  </string-array>
+    <string-array name="dtmf_tone_entries">
+        <item msgid="899650777817315681">"Normali"</item>
+        <item msgid="2883365539347850535">"Lunghi"</item>
+    </string-array>
     <string name="network_message" msgid="5673682885938122239">"Messaggio di rete"</string>
     <string name="ota_title_activate" msgid="8616918561356194398">"Attiva il telefono"</string>
     <string name="ota_touch_activate" msgid="6553212803262586244">"È necessario effettuare una chiamata speciale per attivare il servizio telefonico. "\n\n"Dopo avere premuto \"Attiva\", ascolta le istruzioni fornite per attivare il telefono."</string>
@@ -565,30 +568,38 @@
     <string name="phone_entered_ecm_text" msgid="6266424252578731203">"Modalità di richiamata di emergenza attivata"</string>
     <string name="phone_in_ecm_notification_title" msgid="3226896828951687085">"Modalità di richiamata di emergenza"</string>
     <string name="phone_in_ecm_call_notification_text" msgid="4611608947314729773">"Connessione dati disabilitata"</string>
-  <plurals name="phone_in_ecm_notification_time">
-    <item quantity="one" msgid="4866221796252472622">"Nessuna connessione dati per <xliff:g id="COUNT">%s</xliff:g> minuto"</item>
-    <item quantity="other" msgid="3122217344579273583">"Nessuna connessione dati per <xliff:g id="COUNT">%s</xliff:g> minuti"</item>
-  </plurals>
-  <plurals name="alert_dialog_exit_ecm">
-    <item quantity="one" msgid="2181569650640386253">"Il telefono sarà in modalità di richiamata di emergenza per <xliff:g id="COUNT">%s</xliff:g> minuto. In questa modalità non è possibile utilizzare alcuna applicazione che richiede una connessione dati. Uscire ora?"</item>
-    <item quantity="other" msgid="3231879566243957821">"Il telefono sarà in modalità di richiamata di emergenza per <xliff:g id="COUNT">%s</xliff:g> minuti. In questa modalità non è possibile utilizzare alcuna applicazione che richiede una connessione dati. Uscire ora?"</item>
-  </plurals>
-  <plurals name="alert_dialog_not_avaialble_in_ecm">
-    <item quantity="one" msgid="8939225905428421722">"L\'azione selezionata non è disponibile in modalità di richiamata di emergenza. Il telefono sarà in questa modalità per <xliff:g id="COUNT">%s</xliff:g> minuto. Uscire ora?"</item>
-    <item quantity="other" msgid="3489076611710869904">"L\'azione selezionata non è disponibile in modalità di richiamata di emergenza. Il telefono sarà in questa modalità per <xliff:g id="COUNT">%s</xliff:g> minuti. Uscire ora?"</item>
-  </plurals>
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="one" msgid="4866221796252472622">"Nessuna connessione dati per <xliff:g id="COUNT">%s</xliff:g> minuto"
+        </item>
+        <item quantity="other" msgid="3122217344579273583">"Nessuna connessione dati per <xliff:g id="COUNT">%s</xliff:g> minuti"
+        </item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="one" msgid="2181569650640386253">"Il telefono sarà in modalità di richiamata di emergenza per <xliff:g id="COUNT">%s</xliff:g> minuto. In questa modalità non è possibile utilizzare alcuna applicazione che richiede una connessione dati. Uscire ora?"
+        </item>
+        <item quantity="other" msgid="3231879566243957821">"Il telefono sarà in modalità di richiamata di emergenza per <xliff:g id="COUNT">%s</xliff:g> minuti. In questa modalità non è possibile utilizzare alcuna applicazione che richiede una connessione dati. Uscire ora?"
+        </item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="one" msgid="8939225905428421722">"L\'azione selezionata non è disponibile in modalità di richiamata di emergenza. Il telefono sarà in questa modalità per <xliff:g id="COUNT">%s</xliff:g> minuto. Uscire ora?"
+        </item>
+        <item quantity="other" msgid="3489076611710869904">"L\'azione selezionata non è disponibile in modalità di richiamata di emergenza. Il telefono sarà in questa modalità per <xliff:g id="COUNT">%s</xliff:g> minuti. Uscire ora?"
+        </item>
+    </plurals>
     <string name="alert_dialog_in_ecm_call" msgid="2334477874583086142">"L\'azione selezionata non è disponibile in modalità di chiamata di emergenza"</string>
     <string name="progress_dialog_exiting_ecm" msgid="8751952246695857820">"Uscita dalla modalità di richiamata di emergenza in corso"</string>
     <string name="alert_dialog_yes" msgid="6674268047820703974">"Sì"</string>
     <string name="alert_dialog_no" msgid="1476091437797628703">"No"</string>
     <string name="alert_dialog_dismiss" msgid="2491494287075907171">"Ignora"</string>
     <string name="voicemail_settings" msgid="2288633492587133022">"Impostazioni segreteria"</string>
-    <string name="voicemail_number_not_set" msgid="1604580506447265808">"&lt;non impostato&gt;"</string>
+    <string name="voicemail_number_not_set" msgid="1604580506447265808">"&lt;non impostato>"</string>
     <string name="voicemail_provider" msgid="6299679757491942924">"Servizio di segreteria"</string>
-    <string name="voicemail_settings_for" msgid="9018656268027893088">"Impostazioni per <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
+    <string name="voicemail_settings_for" msgid="9018656268027893088">"Impostazioni per <xliff:g id="PROVIDER_NAME">%s</xliff:g>"
+    </string>
     <string name="other_settings" msgid="3672912580359716394">"Altre impostazioni chiamate"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Componi"</string>
-    <string name="calling_via_template" msgid="7374498518104190489">"Chiamata in corso tramite ^1"\n<b>"^2"</b></string>
+    <string name="calling_via_template" msgid="7374498518104190489">"Chiamata in corso tramite ^1"\n<b>"^2"</b>
+    </string>
     <string name="slide_to_answer" msgid="255903188611244476">"Trascina a destra per rispondere"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Trascina a sinistra per disattivare la suoneria"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Trascina a sinistra per rifiutare"</string>
@@ -597,4 +608,41 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Trascina a destra per rispondere e"\n"terminare la chiamata in attesa"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Risposta"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Rifiuta"</string>
+    <!-- added by cytown@gmail.com -->
+    <string name="notification_ongoing_calling_format">Chiamata (<xliff:g id="duration">%s</xliff:g>)
+    </string>
+    <string name="advanced_setting">Impostazioni avanzate v.30.1</string>
+    <string name="vibrate_outgoing">Vibra alla risposta</string>
+    <string name="vibrate_outgoing_sum">Vibra quando rispondi a una chiamata</string>
+    <string name="vibrate_45">Vibra ogni 45 sec</string>
+    <string name="vibrate_45_sum">Vibra ogni 45 secondi durante le chiamate in uscita</string>
+    <string name="vibrate_hangup">Vibra al termine</string>
+    <string name="vibrate_hangup_sum">Vibra quando termini una chiamata</string>
+    <string name="vibrate_call_waiting">Vibra quando in attesa</string>
+    <string name="vibrate_call_waiting_sum">Vibra quando c\'è una chiamata in attesa</string>
+    <string name="screen_awake">Tieni lo schermo acceso</string>
+    <string name="screen_awake_sum">Lo schermo restera acceso più del normale durante una chiamata</string>
+    <string name="return_home">Ritorno elenco chiamate</string>
+    <string name="return_home_sum">Forza il ritorno all\'elenco delle chiamate dopo che termini una chiamata</string>
+    <string name="led_notify_call">Led di notifica</string>
+    <string name="led_notify_call_sum">Il Led lampeggia in presenza di una chiamata persa</string>
+    <string name="led_show_organ">Visualizza organizzazioni</string>
+    <string name="led_show_organ_sum">Le organizzazioni saranno visualizzate nella schermata delle chiamate</string>
+    <string name="menu_addBlackList">Aggiungi ai Contatti Bloccati</string>
+    <string name="black_list">Contatti Bloccati</string>
+    <string name="black_list_sum">Le chiamate in arrivo dai contatti bloccati verranno rifiutate</string>
+    <string name="add_black">Aggiungi numero di telefono</string>
+    <string name="remove_black">Rimuovi %s dall\'elenco</string>
+    <string name="turn_silence">Gira per disatt. suoneria</string>
+    <string name="turn_silence_sum">Gira il telefono per disattivare la suoneria quando ricevi una chiamata</string>
+    <string name="left_hand">Usa mano sinistra</string>
+    <string name="left_hand_sum">Usa la mano sinistra per tenere il telefono, richiede riavvio.</string>
+    <string name="set_force_touch">Forza Tastiera Touch</string>
+    <string name="set_force_touch_sum">Forza la visualizzazione del Touch UI senza individuare il sensore di prossimità</string>
+    <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
+    <string name="contactPhoto">foto contatto</string>
+    <!-- Use this to describe the separate conference call button; currently for screen readers through accessibility. -->
+    <string name="goPrivate">vai in privato</string>
+    <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
+    <string name="selectContact">seleziona contatto</string>
 </resources>

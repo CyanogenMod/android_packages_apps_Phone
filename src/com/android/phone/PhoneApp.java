@@ -61,6 +61,10 @@ import com.android.internal.telephony.cdma.EriInfo;
 import com.android.phone.OtaUtils.CdmaOtaScreenState;
 import com.android.internal.telephony.cdma.TtyIntent;
 
+import android.os.Vibrator;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+
 /**
  * Top-level Application class for the Phone app.
  */
@@ -217,6 +221,40 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     private boolean mTtyEnabled;
     // Current TTY operating mode selected by user
     private int mPreferredTtyMode = Phone.TTY_MODE_OFF;
+
+    // add by cytown
+    private static final String ACTION_VIBRATE_45 = "com.android.phone.PhoneApp.ACTION_VIBRATE_45";
+    private CallFeaturesSetting mSettings;
+    private static PendingIntent mVibrateIntent;
+    private static Vibrator mVibrator = null;
+    private static AlarmManager mAM;
+
+    public void startVib45(long callDurationMsec) {
+        if (VDBG) Log.i(LOG_TAG, "vibrate start @" + callDurationMsec);
+        stopVib45();
+        long nextalarm = SystemClock.elapsedRealtime() + ((callDurationMsec > 45000) ? 45000 + 60000 - callDurationMsec : 45000 - callDurationMsec);
+        if (VDBG) Log.i(LOG_TAG, "am at: " + nextalarm);
+        mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, nextalarm, mVibrateIntent);
+    }
+    public void stopVib45() {
+        if (VDBG) Log.i(LOG_TAG, "vibrate stop @" + SystemClock.elapsedRealtime());
+        mAM.cancel(mVibrateIntent);
+    }
+    private final class TriVibRunnable implements Runnable {
+        private int v1, p1, v2;
+        TriVibRunnable(int a, int b, int c) {
+            v1 = a; p1 = b; v2 = c;
+        }
+        public void run() {
+            if (DBG) Log.i(LOG_TAG, "vibrate " + v1 + ":" + p1 + ":" + v2);
+            if (v1 > 0) mVibrator.vibrate(v1);
+            if (p1 > 0) SystemClock.sleep(p1);
+            if (v2 > 0) mVibrator.vibrate(v2);
+        }
+    }
+    public void vibrate(int v1, int p1, int v2) {
+        new Handler().post(new TriVibRunnable(v1, p1, v2));
+    }
 
     /**
      * Set the restore mute state flag. Used when we are setting the mute state
@@ -481,6 +519,7 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
             intentFilter.addAction(TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_SERVICE_STATE_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_EMERGENCY_CALLBACK_MODE_CHANGED);
+            intentFilter.addAction(ACTION_VIBRATE_45);
             if (mTtyEnabled) {
                 intentFilter.addAction(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION);
             }
@@ -542,6 +581,14 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
         // start with the default value to set the mute state.
         mShouldRestoreMuteOnInCallResume = false;
 
+        // add by cytown
+        mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(this));
+        if (mVibrator == null) {
+            mVibrator = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
+            mAM = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+            mVibrateIntent = PendingIntent.getBroadcast(this, 0, new Intent(ACTION_VIBRATE_45), 0);
+        }
+
         // TODO: Register for Cdma Information Records
         // phone.registerCdmaInformationRecord(mHandler, EVENT_UNSOL_CDMA_INFO_RECORD, null);
 
@@ -566,7 +613,7 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                                       CallFeaturesSetting.HAC_VAL_ON :
                                       CallFeaturesSetting.HAC_VAL_OFF);
         }
-   }
+    }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
@@ -586,6 +633,10 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
      */
     static PhoneApp getInstance() {
         return sMe;
+    }
+
+    CallFeaturesSetting getSettings() {
+        return mSettings;
     }
 
     Ringer getRinger() {
@@ -792,7 +843,7 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
         if (DBG) Log.d(LOG_TAG, "disable status bar");
         synchronized (this) {
             if (mStatusBarDisableCount++ == 0) {
-               if (DBG)  Log.d(LOG_TAG, "StatusBarManager.DISABLE_EXPAND");
+                if (DBG)  Log.d(LOG_TAG, "StatusBarManager.DISABLE_EXPAND");
                 mStatusBarManager.disable(StatusBarManager.DISABLE_EXPAND);
             }
         }
@@ -872,7 +923,8 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                 // timeout (5s). This ensures that the screen goes to sleep
                 // as soon as acceptably possible after we the wake lock
                 // has been released.
-                pokeLockSetting |= LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
+                //                pokeLockSetting |= LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
+                pokeLockSetting |= mSettings.mScreenAwake ? LocalPowerManager.POKE_LOCK_MEDIUM_TIMEOUT : LocalPowerManager.POKE_LOCK_SHORT_TIMEOUT;
                 break;
 
             case MEDIUM:
@@ -1040,7 +1092,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                 // holding the phone up to their face.  Here we use a
                 // special screen timeout value specific to the in-call
                 // screen, purely to save battery life.
-                setScreenTimeout(ScreenTimeoutDuration.MEDIUM);
+
+                //                setScreenTimeout(ScreenTimeoutDuration.MEDIUM);
+                setScreenTimeout(mSettings.mScreenAwake ? ScreenTimeoutDuration.DEFAULT : ScreenTimeoutDuration.MEDIUM);
             }
         }
 
@@ -1470,6 +1524,16 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                     Log.e(LOG_TAG, "Error! Emergency Callback Mode not supported for " +
                             phone.getPhoneName() + " phones");
                 }
+            // Vibrate 45 sec receiver add by cytown
+            } else if (action.equals(ACTION_VIBRATE_45)) {
+                if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_VIBRATE_45");
+                mAM.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, SystemClock.elapsedRealtime() + 60000, mVibrateIntent);
+                if (DBG) Log.i(LOG_TAG, "vibrate on 45 sec");
+                mVibrator.vibrate(70);
+                SystemClock.sleep(70);
+                mVibrator.cancel();
+                if (VDBG) Log.d(LOG_TAG, "mReceiver: force vib cancel");
+                //vibrate(70, 70, -1);
             } else if (action.equals(Intent.ACTION_DOCK_EVENT)) {
                 mDockState = intent.getIntExtra(Intent.EXTRA_DOCK_STATE,
                         Intent.EXTRA_DOCK_STATE_UNDOCKED);
@@ -1519,6 +1583,14 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                         updateInCallScreenTouchUi();
                     }
                     abortBroadcast();
+                }
+            } else if (event.getRepeatCount() == 2) {
+                // Long press to hang up:
+                if (VDBG) Log.d(LOG_TAG, "repeat count = 2 is triggered!");
+                boolean consumed = PhoneUtils.handleHeadsetHookHangup(phone);
+                if (consumed) {
+                    if (VDBG) Log.d(LOG_TAG, "consuming broadcast");
+                    abortBroadcast();  // BUG: Media player on/off is toggled sometimes if used to hang up
                 }
             } else {
                 if (phone.getState() != Phone.State.IDLE) {

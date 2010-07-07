@@ -13,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Launcher labels -->
     <!-- Tab title -->
@@ -30,7 +29,6 @@
     <string name="recentCallsIconLabel">Call log</string>
     <!-- Title of FDN list screen -->
     <string name="fdnListLabel">FDN list</string>
-
     <!-- Call status -->
     <!-- Incoming call screen, name of "unknown" caller -->
     <string name="unknown">Unknown</string>
@@ -93,7 +91,6 @@
     <string name="retry">Retry</string>
     <!-- In-call screen: call lost title of dialog -->
     <string name="call_lost_title">Call Lost</string>
-
     <!-- MMI strings -->
     <!-- Dialog label when an MMI code starts running -->
     <string name="mmiStarted">MMI code started</string>
@@ -103,7 +100,6 @@
     <string name="mmiCancelled">MMI code canceled</string>
     <!-- Label for "cancel" button on the MMI dialog -->
     <string name="cancel">Cancel</string>
-
     <!-- In-call menu item labels -->
     <!-- Regular in-call menu items: -->
     <!-- In-call menu: Label for "speakerphone" menu item -->
@@ -144,7 +140,6 @@
     <string name="menu_answer">Answer</string>
     <!-- Incoming call menu: Label for "Ignore" menu item -->
     <string name="menu_ignore">Ignore</string>
-
     <!-- post dial -->
     <!-- In-call screen: body text of the dialog that appears when we encounter
          the "wait" character in a phone number to be dialed; this dialog asks the
@@ -164,7 +159,6 @@
          for a text widget that lets the user enter the digits that should
          replace the "wild" character. -->
     <string name="wild_prompt_str">Replace the wild character with</string>
-
     <!-- missing voicemail number -->
     <!-- Title of the "Missing voicemail number" dialog -->
     <string name="no_vm_number">Missing voicemail number</string>
@@ -172,11 +166,9 @@
     <string name="no_vm_number_msg">No voicemail number is stored on the SIM card.</string>
     <!-- Button label on the "Missing voicemail number" dialog -->
     <string name="add_vm_number_str">Add number</string>
-
     <!-- Placeholder text displayed while loading a list of phone numbers
          into the dialer UI -->
     <string name="dialer_emptyListWorking">Loading\u2026</string>
-
     <!-- SIM PIN strings -->
     <!-- Instructional text on SIM PIN unlock panel -->
     <string name="enterPin">Type PIN code to unlock SIM card.</string>
@@ -209,15 +201,11 @@
     <string name="unlock_failed">Network unlock request unsuccessful.</string>
     <!-- Success message displayed on SIM Network Depersonalization panel -->
     <string name="unlock_success">Network unlock successful.</string>
-
     <!-- Title for the dialog used to display the user's IMEI number -->
     <string name="imei">IMEI</string>
-
     <!-- Title for the dialog used to display the user's MEID number on CDMA network -->
     <string name="meid">MEID</string>
-
     <!-- settings strings -->
-
     <!-- GSM Call settings screen, setting option name -->
     <string name="labelGSMMore">GSM call settings</string>
     <!-- CDM Call settings screen, setting option name -->
@@ -262,7 +250,6 @@
     <string name="call_forwarding_settings">Call forwarding settings</string>
     <!-- Call settings screen, setting option name -->
     <string name="labelCF">Call forwarding</string>
-
     <!-- Call forwarding settings screen, setting option name -->
     <string name="labelCFU">Always forward</string>
     <!-- Call forwarding dialog box, text field label -->
@@ -275,7 +262,6 @@
     <string name="sum_cfu_enabled_no_number">Number is unavailable</string>
     <!-- Call forwarding settings screen, setting summary text when Always forward is disabled -->
     <string name="sum_cfu_disabled">Disabled</string>
-
     <!-- Call forwarding settings screen, setting option name -->
     <string name="labelCFB">Forward when busy</string>
     <!-- Call forwarding dialog box, text field label -->
@@ -346,13 +332,18 @@
     <!-- Phone settings: Internal keys used for Caller ID preference values.  DO NOT TRANSLATE. -->
     <string-array name="clir_values">
         <!-- Phone settings: Internal key used for Caller ID preference values.  DO NOT TRANSLATE. -->
-        <item><xliff:g>DEFAULT</xliff:g></item>
+        <item>
+            <xliff:g>DEFAULT</xliff:g>
+        </item>
         <!-- Phone settings: Internal key used for Caller ID preference values.  DO NOT TRANSLATE. -->
-        <item><xliff:g>HIDE</xliff:g></item>
+        <item>
+            <xliff:g>HIDE</xliff:g>
+        </item>
         <!-- Phone settings: Internal key used for Caller ID preference values.  DO NOT TRANSLATE. -->
-        <item><xliff:g>SHOW</xliff:g></item>
+        <item>
+            <xliff:g>SHOW</xliff:g>
+        </item>
     </string-array>
-
     <!-- voicemail setting strings -->
     <!-- Call settings screen, Label used in "Save voicemail number" dialog -->
     <string name="vm_save_number">Save voicemail number</string>
@@ -370,7 +361,6 @@
     <string name="sum_voicemail_choose_provider">Choose voicemail service</string>
     <!-- Call settings screen, "Voicemail" screen, default option - My Carrier -->
     <string name="voicemail_default">My carrier</string>
-
     <!-- networks setting strings -->
     <!-- Mobile network settings screen title -->
     <string name="mobile_networks">Mobile network settings</string>
@@ -385,7 +375,8 @@
     <!-- Available networks screen, toast when an error is encountered when searching for networks -->
     <string name="network_query_error">Error while searching for networks.</string>
     <!-- Available networks screen, toast when registering on a specific network -->
-    <string name="register_on_network">Registering on <xliff:g id="network">%s</xliff:g>\u2026</string>
+    <string name="register_on_network">Registering on <xliff:g id="network">%s</xliff:g>\u2026
+    </string>
     <!-- Available networks screen, toast when SIM card isn't allowed on a network -->
     <string name="not_allowed">Your SIM card does not allow a connection to this network.</string>
     <!-- Available networks screen, toast when unable to connect to a network temporarily -->
@@ -533,55 +524,42 @@
         <item>"7"</item>
     </string-array>
     <string name="list_language_dtitle">Languages</string>
-
     <string name="enable_disable_local_weather">Local Weather</string>
     <string name="local_weather_enable">Local Weather enabled</string>
     <string name="local_weather_disable">Local Weather disabled</string>
-
     <string name="enable_disable_atr">Area Traffic Reports</string>
     <string name="atr_enable">Area Traffic Reports enabled</string>
     <string name="atr_disable">Area Traffic Reports disabled</string>
-
     <string name="enable_disable_lafs">Local Airport Flight Schedules</string>
     <string name="lafs_enable">Local Airport Flight Schedules enabled</string>
     <string name="lafs_disable">Local Airport Flight Schedules disabled</string>
-
     <string name="enable_disable_restaurants">Restaurants</string>
     <string name="restaurants_enable">Restaurants enabled</string>
     <string name="restaurants_disable">Restaurants disabled</string>
-
     <string name="enable_disable_lodgings">Lodgings</string>
     <string name="lodgings_enable">Lodgings enabled</string>
     <string name="lodgings_disable">Lodgings disabled</string>
-
     <string name="enable_disable_retail_directory">Retail Directory</string>
     <string name="retail_directory_enable">Retail Directory enabled</string>
     <string name="retail_directory_disable">Retail Directory disabled</string>
-
     <string name="enable_disable_advertisements">Advertisements</string>
     <string name="advertisements_enable">Advertisements enabled</string>
     <string name="advertisements_disable">Advertisements disabled</string>
-
     <string name="enable_disable_stock_quotes">Stock Quotes</string>
     <string name="stock_quotes_enable">Stock Quotes enabled</string>
     <string name="stock_quotes_disable">Stock Quotes disabled</string>
-
     <string name="enable_disable_eo">Employment Opportunities</string>
     <string name="eo_enable">Employment Opportunities enabled</string>
     <string name="eo_disable">Employment Opportunities disabled</string>
-
     <string name="enable_disable_mhh">Medical, Health and Hospital</string>
     <string name="mhh_enable">Medical, Health and Hospital enabled</string>
     <string name="mhh_disable">Medical, Health and Hospital disabled</string>
-
     <string name="enable_disable_technology_news">Technology News</string>
     <string name="technology_news_enable">Technology News enabled</string>
     <string name="technology_news_disable">Technology News disabled</string>
-
     <string name="enable_disable_multi_category">Multi-category</string>
     <string name="multi_category_enable">Multi-category enabled</string>
     <string name="multi_category_disable">Multi-category disabled</string>
-
     <!-- GSM/UMTS Options strings -->
     <string name="gsm_umts_network_preferences_title">GSM/UMTS Network Preferences</string>
     <string name="gsm_umts_network_preferneces_summary">Not implemented yet! </string>
@@ -598,12 +576,10 @@
         <item>"2"</item>
         <item>"3"</item>
     </string-array>
-
     <!-- Mobile network settings screen, setting option name -->
     <string name="prefer_2g">Use only 2G networks</string>
     <!-- Mobile network settings screen, setting summary text -->
     <string name="prefer_2g_summary">Saves battery</string>
-
     <!-- CDMA System select strings -->
     <!-- Mobile network settings screen, setting option name -->
     <string name="cdma_system_select_title">System select</string>
@@ -627,7 +603,6 @@
         <!-- Do not translate. -->
         <item>"2"</item>
     </string-array>
-
     <!-- CDMA Options strings -->
     <string name="cdma_roaming_mode_title">CDMA Roaming Mode</string>
     <string name="cdma_roaming_mode_summary">Change the cdma roaming mode</string>
@@ -666,7 +641,6 @@
         <item>"0"</item>
         <item>"1"</item>
     </string-array>
-
     <!-- FDN settings strings -->
     <!-- Call settings screen, setting option name -->
     <string name="fdn">Fixed Dialing Numbers</string>
@@ -703,14 +677,12 @@
     <string name="tty_mode_option_summary">Set TTY mode</string>
     <string name="auto_retry_mode_title">Auto Retry</string>
     <string name="auto_retry_mode_summary">Enable Auto Retry mode</string>
-
     <!-- FDN list screen: menu item label -->
     <string name="menu_add">Add contact</string>
     <!-- FDN list screen: menu item label -->
     <string name="menu_edit">Edit contact</string>
     <!-- FDN list screen: menu item label -->
     <string name="menu_delete">Delete contact</string>
-
     <!-- FDN related strings -->
     <!-- Label for PIN2 entry screen -->
     <string name="get_pin2">Enter PIN2</string>
@@ -750,7 +722,6 @@
     <string name="simContacts_empty">No contacts on your SIM card.</string>
     <!-- Call settings: title of the dialog that lets you select contacts from the SIM. -->
     <string name="simContacts_title">Select contacts to import</string>
-
     <!-- SIM PIN strings -->
     <!-- Title of "Enable/disable SIM PIN" screen -->
     <string name="enable_pin">Enable/disable SIM PIN</string>
@@ -786,7 +757,6 @@
     <string name="pin_changed">SIM PIN changed successfully</string>
     <!-- SIM PIN screen: error message displayed in a dialog -->
     <string name="puk_requested">Password incorrect, SIM is locked! PUK2 requested.</string>
-
     <!-- SIM PIN2 strings -->
     <!-- SIM PIN2 screen: label for PIN entry widget -->
     <string name="enter_pin2_text">PIN2</string>
@@ -814,37 +784,31 @@
     <string name="fdn_enable_puk2_requested">Password incorrect, please change PIN2 and retry!</string>
     <!-- SIM PIN2 screen: error message displayed in a dialog -->
     <string name="puk2_requested">Password incorrect, SIM is locked! PUK2 requested.</string>
-
     <!-- SIM PIN screen: button label -->
     <string name="doneButton">Done</string>
-
     <!-- In-call screen: status label for a conference call -->
-    <string name="caller_manage_header">Conference call <xliff:g id="conf_call_time">%s</xliff:g></string>
+    <string name="caller_manage_header">Conference call <xliff:g id="conf_call_time">%s</xliff:g>
+    </string>
     <!-- In-call screen: Button label on "Manage conference" panel -->
     <string name="caller_manage_manage_done_text">Back to call</string>
-
     <!-- Used in FakePhoneActivity test code.  DO NOT TRANSLATE. -->
     <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
     <!-- Used in FakePhoneActivity test code.  DO NOT TRANSLATE. -->
     <string name="fake_phone_activity_infoText_text">Incoming phone number</string>
     <!-- Used in FakePhoneActivity test code.  DO NOT TRANSLATE. -->
     <string name="fake_phone_activity_placeCall_text">Fake Incoming Call</string>
-
     <!-- Button label on "SIM Missing" screen -->
     <string name="sim_missing_continueView_text">Continue without SIM card</string>
     <!-- Message displayed on "SIM Missing" screen -->
     <string name="sim_missing_msg_text">No SIM card found. Please insert a SIM card into the phone.</string>
-
     <!-- Button label on "SIM Unlock" screen -->
     <string name="sim_unlock_dismiss_text">Dismiss</string>
     <!-- Button label on "SIM Unlock" screen -->
     <string name="sim_unlock_unlock_text">Unlock</string>
     <!-- Progress message displayed on "SIM Unlock" screen -->
     <string name="sim_unlock_status_text">Authenticating PIN\u2026</string>
-
     <!-- Call settings screen, Set voicemail dialog title -->
     <string name="voicemail_settings_number_label">Voicemail number</string>
-
     <!-- Card titles -->
     <!-- In-call screen: status label for a call in the "dialing" state -->
     <string name="card_title_dialing">Dialing</string>
@@ -866,30 +830,35 @@
     <string name="card_title_hanging_up">Hanging up</string>
     <!-- In-call screen: status label for a call that's in CDMA flash mode -->
     <string name="card_title_in_call">In call</string>
-
     <!-- Notification strings -->
     <!-- Missed call notification label, used when there's exactly one missed call -->
     <string name="notification_missedCallTitle">Missed call</string>
     <!-- Missed call notification label, used when there are two or more missed calls -->
     <string name="notification_missedCallsTitle">Missed calls</string>
     <!-- Missed call notification message used when there are multiple missed calls -->
-    <string name="notification_missedCallsMsg"><xliff:g id="num_missed_calls">%s</xliff:g> missed calls</string>
+    <string name="notification_missedCallsMsg">
+        <xliff:g id="num_missed_calls">%s</xliff:g> missed calls
+    </string>
     <!-- Missed call notification message used for a single missed call, including
          the caller-id info from the missed call -->
-    <string name="notification_missedCallTicker">Missed call from <xliff:g id="missed_call_from">%s</xliff:g></string>
+    <string name="notification_missedCallTicker">Missed call from <xliff:g id="missed_call_from">%s</xliff:g>
+    </string>
     <!-- The "label" of the in-call Notification for an ongoing call, used
          as the format string for a Chronometer widget. -->
-    <string name="notification_ongoing_call_format">Current call (<xliff:g id="duration">%s</xliff:g>)</string>
+    <string name="notification_ongoing_call_format">Current call (<xliff:g id="duration">%s</xliff:g>)
+    </string>
     <!-- The "label" of the in-call Notification for a call that's on hold -->
     <string name="notification_on_hold">On hold</string>
     <!-- Label for the "Voicemail" notification item, when expanded. -->
     <string name="notification_voicemail_title">New voicemail</string>
     <!-- Label for the expanded "Voicemail" notification item,
          including a count of messages. -->
-    <string name="notification_voicemail_title_count">New voicemail (<xliff:g id="count">%d</xliff:g>)</string>
+    <string name="notification_voicemail_title_count">New voicemail (<xliff:g id="count">%d</xliff:g>)
+    </string>
     <!-- Message displayed in the "Voicemail" notification item, allowing the user
          to dial the indicated number. -->
-    <string name="notification_voicemail_text_format">Dial <xliff:g id="voicemail_number">%s</xliff:g></string>
+    <string name="notification_voicemail_text_format">Dial <xliff:g id="voicemail_number">%s</xliff:g>
+    </string>
     <!-- Message displayed in the "Voicemail" notification item,
          indicating that there's no voicemail number available -->
     <string name="notification_voicemail_no_vm_number">Voicemail number unknown</string>
@@ -897,8 +866,8 @@
     <string name="notification_network_selection_title">No service</string>
     <!-- Label for the expanded "No service" notification item, including the
          operator name set by user -->
-    <string name="notification_network_selection_text">Selected network (<xliff:g id="operator_name">%s</xliff:g>) unavailable</string>
-
+    <string name="notification_network_selection_text">Selected network (<xliff:g id="operator_name">%s</xliff:g>) unavailable
+    </string>
     <!-- In-call screen: call failure message displayed in an error dialog -->
     <string name="incall_error_power_off">To place a call, first turn off Airplane mode.</string>
     <!-- In-call screen: call failure message displayed in an error dialog.
@@ -928,38 +897,32 @@
     <string name="incall_error_supp_service_reject">Unable to reject call.</string>
     <!-- In-call screen: message displayed in an error dialog -->
     <string name="incall_error_supp_service_hangup">Unable to release call(s).</string>
-
     <!-- Dialog title for the "radio enable" UI for emergency calls -->
     <string name="emergency_enable_radio_dialog_title">Emergency call</string>
     <!-- Status message for the "radio enable" UI for emergency calls -->
     <string name="emergency_enable_radio_dialog_message">Turning on radio\u2026</string>
     <!-- Status message for the "radio enable" UI for emergency calls -->
     <string name="emergency_enable_radio_dialog_retry">Out of service area, retrying\u2026</string>
-
     <!-- Dialer text on Emergency Dialer -->
     <!-- Emergency dialer: message displayed in an error dialog -->
-    <string name="dial_emergency_error">Call not sent, <xliff:g id="non_emergency_number">%s</xliff:g> is not an emergency number!</string>
+    <string name="dial_emergency_error">Call not sent, <xliff:g id="non_emergency_number">%s</xliff:g> is not an emergency number!
+    </string>
     <!-- Emergency dialer: message displayed in an error dialog -->
     <string name="dial_emergency_empty_error">Call not sent, please dial an emergency number!</string>
-
     <!-- Displayed in the text entry box in the dialer when in landscape mode to guide the user
          to dial using the physical keyboard -->
     <string name="dialerKeyboardHintText">Use keyboard to dial</string>
-
     <!-- Hint text displayed in the "digits" field at the top of the
          in-call DTMF dialpad.  (This hint reminds the user that the
          dialpad is there to generate tones, not to add a new call.) -->
     <string name="dtmfDialpadHintText">Touch tone keypad</string>
-
     <!-- Text displayed in the "sliding drawer handle" that you use to
          open the in-call DTMF dialpad. -->
     <string name="dtmfDialpadHandleLabel">Dialpad</string>
-
     <!-- Text displayed on the in-call screen's "touch lock" overlay,
          instructing the user that they need to double-tap to unlock the
          screen. -->
     <string name="touchLockText">Double-tap\nto unlock</string>
-
     <!-- Text for the onscreen "Answer" button, instructing the user that
          they need to double-tap to answer the incoming call. -->
     <string name="onscreenAnswerText">Double-tap\nto answer</string>
@@ -991,7 +954,6 @@
     <string name="onscreenManageCallsText">Manage calls</string>
     <!-- Text for the onscreen "Manage conference" button -->
     <string name="onscreenManageConferenceText">Manage</string>
-
     <!-- Menu item label in SIM Contacts: Import a single contact entry from the SIM card -->
     <string name="importSimEntry">Import</string>
     <!-- Menu item label in SIM Contacts: Import all contact entries from the SIM card -->
@@ -1000,11 +962,9 @@
     <string name="importingSimContacts">Importing SIM contacts</string>
     <!-- Import a single contact entry from contacts to the SIM card -->
     <string name="importToFDNfromContacts">Import from contacts</string>
-
     <!-- Hearing aid settings -->
     <string name="hac_mode_title">Hearing aids</string>
     <string name="hac_mode_summary">Turn on hearing aid compatibility</string>
-
     <!-- Service option entries.  -->
     <string-array name="tty_mode_entries">
         <item>TTY Off</item>
@@ -1012,7 +972,6 @@
         <item>TTY HCO</item>
         <item>TTY VCO</item>
     </string-array>
-
     <!-- Do not translate. -->
     <string-array name="tty_mode_values" translatable="false">
         <!-- Do not translate. -->
@@ -1024,10 +983,8 @@
         <!-- Do not translate. -->
         <item>3</item>
     </string-array>
-
     <!-- Label for ERI text widget, shown in list of all gadgets -->
     <string name="eri_text_label">ERI text</string>
-
     <!-- Dtmf tones settings -->
     <!-- Title for the DTMF Tones options displayed in Call Settings -->
     <string name="dtmf_tones_title">DTMF Tones</string>
@@ -1035,18 +992,16 @@
     <string name="dtmf_tones_summary">Set the length of DTMF tones</string>
     <!-- Options displayed as part of DTMF Tones in Call Settings -->
     <string-array name="dtmf_tone_entries">
-      <item>Normal</item>
-      <item>Long</item>
+        <item>Normal</item>
+        <item>Long</item>
     </string-array>
     <!-- Do not translate. -->
     <string-array name="dtmf_tone_values">
-       <item>0</item>
-       <item>1</item>
+        <item>0</item>
+        <item>1</item>
     </string-array>
-
     <!-- Title for the dialog used to display CDMA DisplayInfo -->
     <string name="network_message">Network Message</string>
-
     <!-- OTA-specific strings -->
     <!-- Title shown on OTA screen -->
     <string name="ota_title_activate">Activate your phone</string>
@@ -1099,7 +1054,6 @@
     <string name="ota_next">Next</string>
     <!-- Button label shown on OTA screens to go back to the previous screen -->
     <string name="ota_back">Back</string>
-
     <!-- Emergency Callback Mode (ECM) -->
     <string name="ecm_exit_dialog">EcmExitDialog</string>
     <!-- ECM: Status bar notification message -->
@@ -1110,23 +1064,29 @@
     <string name="phone_in_ecm_call_notification_text">Data connection disabled</string>
     <plurals name="phone_in_ecm_notification_time">
         <!-- number of minutes is one -->
-        <item quantity="one">No data connection for <xliff:g id="count">%s</xliff:g> minute</item>
+        <item quantity="one">No data connection for <xliff:g id="count">%s</xliff:g> minute
+        </item>
         <!-- number of minutes is not equal to one -->
-        <item quantity="other">No data connection for <xliff:g id="count">%s</xliff:g> minutes</item>
+        <item quantity="other">No data connection for <xliff:g id="count">%s</xliff:g> minutes
+        </item>
     </plurals>
     <!-- ECM: Dialog box message for exiting from the notifications screen -->
     <plurals name="alert_dialog_exit_ecm">
         <!-- number of minutes is one -->
-        <item quantity="one">The phone will be in emergency callback mode for <xliff:g id="count">%s</xliff:g> minute. While in this mode no applications using a data connection can be used. Would you like to exit now?</item>
+        <item quantity="one">The phone will be in emergency callback mode for <xliff:g id="count">%s</xliff:g> minute. While in this mode no applications using a data connection can be used. Would you like to exit now?
+        </item>
         <!-- number of minutes is not equal to one -->
-        <item quantity="other">The phone will be in emergency callback mode for <xliff:g id="count">%s</xliff:g> minutes. While in this mode no applications using a data connection can be used. Would you like to exit now?</item>
+        <item quantity="other">The phone will be in emergency callback mode for <xliff:g id="count">%s</xliff:g> minutes. While in this mode no applications using a data connection can be used. Would you like to exit now?
+        </item>
     </plurals>
     <!-- ECM: Dialog box message for exiting from any other app -->
     <plurals name="alert_dialog_not_avaialble_in_ecm">
         <!-- number of minutes is one -->
-        <item quantity="one">The selected action is not available while in the emergency callback mode. The phone will be in this mode for <xliff:g id="count">%s</xliff:g> minute. Would you like to exit now?</item>
+        <item quantity="one">The selected action is not available while in the emergency callback mode. The phone will be in this mode for <xliff:g id="count">%s</xliff:g> minute. Would you like to exit now?
+        </item>
         <!-- number of minutes is not equal to one -->
-        <item quantity="other">The selected action is not available while in the emergency callback mode. The phone will be in this mode for <xliff:g id="count">%s</xliff:g> minutes. Would you like to exit now?</item>
+        <item quantity="other">The selected action is not available while in the emergency callback mode. The phone will be in this mode for <xliff:g id="count">%s</xliff:g> minutes. Would you like to exit now?
+        </item>
     </plurals>
     <!-- ECM: Dialog box message while in emergency call -->
     <string name="alert_dialog_in_ecm_call">The selected action is not available while in an emergency call</string>
@@ -1147,27 +1107,23 @@
     <string name="voicemail_settings">Voicemail settings</string>
 
     <!-- String to display in voicemail number summary when no voicemail num is set -->
-    <string name="voicemail_number_not_set">&lt;not set&gt;</string>
-
+    <string name="voicemail_number_not_set">&lt;not set></string>
     <!-- Voicemail service pref title -->
     <string name="voicemail_provider">Voicemail service</string>
-
     <!-- Prefix on the voicemail settings preference. The full string will be Settings for <provider name> -->
-    <string name="voicemail_settings_for">Settings for <xliff:g id="provider_name">%s</xliff:g></string>
-
+    <string name="voicemail_settings_for">Settings for <xliff:g id="provider_name">%s</xliff:g>
+    </string>
     <!-- Title displayed above settings coming after voicemail in the call features screen -->
     <string name="other_settings">Other call settings</string>
-
     <!-- Label for onscreen "Dial" button used in the EmergencyDialer -->
     <string name="dial_button_label">Dial</string>
-
     <!-- Title displayed in the overlay when a call is placed using a 3rd party provider.
          ^1 is the localized name of the provider obtained from the package manager.
          ^2 is a phone number.
          E.g: "Calling via Google Voice\n 1-800-666-1234"
     -->
-    <string name="calling_via_template">Calling via ^1\n<b>^2</b></string>
-
+    <string name="calling_via_template">Calling via ^1\n<b>^2</b>
+    </string>
     <!-- Onscreen hints used for various states of the SlidingTab
          widget used for incoming calls. -->
     <eat-comment />
@@ -1183,10 +1139,40 @@
     <string name="slide_to_answer_and_end_active">Drag right to answer and\nend active call</string>
     <!-- Incoming call hint: drag the tab right to answer and end the call on hold -->
     <string name="slide_to_answer_and_end_onhold">Drag right to answer and\nend call on hold</string>
-
     <!-- Incoming call hint shown on tab (must be kept very short): answer incoming call -->
     <string name="slide_to_answer_hint">Answer</string>
     <!-- Incoming call hint shown on tab (must be kept very short): decline incoming call -->
     <string name="slide_to_decline_hint">Decline</string>
+    <!-- added by cytown@gmail.com -->
+    <string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)
+    </string>
+    <string name="advanced_setting">Advanced Settings V.30.1</string>
+    <string name="vibrate_outgoing">Vibrate on answer</string>
+    <string name="vibrate_outgoing_sum">Vibrate when a call is answered</string>
+    <string name="vibrate_45">Vibrate every 45 seconds</string>
+    <string name="vibrate_45_sum">Vibrate every 45 seconds during outgoing calls</string>
+    <string name="vibrate_hangup">Vibrate on hangup</string>
+    <string name="vibrate_hangup_sum">Vibrate when a call has ended</string>
+    <string name="screen_awake">Keep screen awake</string>
+    <string name="screen_awake_sum">Screen will stay awake longer than normal while in-call</string>
+    <string name="led_notify_call">Missed call LED notify</string>
+    <string name="led_notify_call_sum">LED will blink when call is missed</string>
+    <string name="led_show_organ">"Show nick/organization"</string>
+    <string name="led_show_organ_sum">"Nickname/Organization will be shown on in-call screen."</string>
+    <string name="vibrate_call_waiting">Vibrate call waiting</string>
+    <string name="vibrate_call_waiting_sum">Vibrate on call waiting</string>
+    <string name="return_home">Always back to call log</string>
+    <string name="return_home_sum">Force return to call log screen after a call ends.</string>
+    <string name="menu_addBlackList">Add to blacklist</string>
+    <string name="black_list">Blacklist</string>
+    <string name="black_list_sum">Incoming call in black list will be rejected.</string>
+    <string name="add_black">Add phone number</string>
+    <string name="remove_black">Remove %s from List</string>
+    <string name="turn_silence">Turn over silence</string>
+    <string name="turn_silence_sum">Turn over to silence ring</string>
+    <string name="left_hand">Left-hand mode</string>
+    <string name="left_hand_sum">Use left hand hold the phone, need a reboot to effect.</string>
+    <string name="set_force_touch">In-call touch UI</string>
+    <string name="set_force_touch_sum">Force in-call touch UI without proximity sensor</string>
 
 </resources>

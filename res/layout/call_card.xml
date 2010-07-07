@@ -37,7 +37,7 @@
                   android:gravity="center_horizontal"
                   android:layout_alignParentTop="true"
                   android:layout_alignParentRight="true"
-                  android:layout_marginTop="16dp"
+                  android:layout_marginTop="6dp"
                   >
         <TextView android:id="@+id/secondaryCallStatus"
               android:text="@string/onHold"
@@ -74,7 +74,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="18dip"
+        android:layout_marginTop="8dip"
         >
 
         <!-- "Upper title" at the very top of the CallCard. -->

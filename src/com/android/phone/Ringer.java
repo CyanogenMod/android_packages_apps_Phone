@@ -127,9 +127,9 @@ public class Ringer {
             try {
                 if (PhoneApp.getInstance().showBluetoothIndication()) {
                     mPowerManager.setAttentionLight(true, 0x000000ff);
-		} else {
+                } else {
                     mPowerManager.setAttentionLight(true, 0x00ffffff);
-		}
+                }
             } catch (RemoteException ex) {
                 // the other end of this binder call is in the system process.
             }
@@ -149,6 +149,7 @@ public class Ringer {
             }
 
             makeLooper();
+            mRingHandler.removeCallbacksAndMessages(null);
             if (mFirstRingEventTime < 0) {
                 mFirstRingEventTime = SystemClock.elapsedRealtime();
                 mRingHandler.sendEmptyMessage(PLAY_RING_ONCE);
