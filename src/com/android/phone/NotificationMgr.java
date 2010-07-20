@@ -429,7 +429,7 @@ mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPr
                 expandedText, // expandedText
                 intent // contentIntent
                 );
-        configureLedNotification(note);
+        if (mSettings.mLedNotify) configureLedNotification(note);
         mNotificationMgr.notify(MISSED_CALL_NOTIFICATION, note);
     }
 
@@ -857,7 +857,7 @@ if (callDurationMsec > 0) {
                     );
             notification.defaults |= Notification.DEFAULT_SOUND;
             notification.flags |= Notification.FLAG_NO_CLEAR;
-            configureLedNotification(notification);
+            if (mSettings.mLedNotify) configureLedNotification(notification);
             mNotificationMgr.notify(VOICEMAIL_NOTIFICATION, notification);
         } else {
             mNotificationMgr.cancel(VOICEMAIL_NOTIFICATION);
