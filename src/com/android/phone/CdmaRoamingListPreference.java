@@ -77,6 +77,9 @@ public class CdmaRoamingListPreference extends ListPreference {
                     case Phone.CDMA_RM_ANY:
                         statusCdmaRoamingMode = Phone.CDMA_RM_ANY;
                         break;
+                    case Phone.CDMA_RM_AFFILIATED:
+                        statusCdmaRoamingMode = Phone.CDMA_RM_AFFILIATED;
+                        break;
                     case Phone.CDMA_RM_HOME:
                     default:
                         statusCdmaRoamingMode = Phone.CDMA_RM_HOME;
@@ -123,7 +126,8 @@ public class CdmaRoamingListPreference extends ListPreference {
                         Secure.CDMA_ROAMING_MODE, Phone.CDMA_RM_HOME);
                 //check that statusCdmaRoamingMode is from an accepted value
                 if (statusCdmaRoamingMode == Phone.CDMA_RM_HOME ||
-                        statusCdmaRoamingMode == Phone.CDMA_RM_ANY ) {
+                        statusCdmaRoamingMode == Phone.CDMA_RM_ANY ||
+			statusCdmaRoamingMode == Phone.CDMA_RM_AFFILIATED ) {
                     //check changes in statusCdmaRoamingMode and updates settingsRoamingMode
                     if (statusCdmaRoamingMode != settingsRoamingMode) {
                         settingsRoamingMode = statusCdmaRoamingMode;
