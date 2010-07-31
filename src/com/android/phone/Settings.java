@@ -154,6 +154,12 @@ public class Settings extends PreferenceActivity implements DialogInterface.OnCl
                     (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 
             cm.setMobileDataEnabled(mButtonDataEnabled.isChecked());
+            //{PIAF
+            Intent intent = new Intent(PhoneToggler.MOBILE_DATA_CHANGED);
+            intent.putExtra(PhoneToggler.NETWORK_MODE, mButtonDataEnabled.isChecked());
+            mPhone.getContext().sendBroadcast(intent);                
+            //PIAF}
+            
             return true;
         } else {
             // if the button is anything but the simple toggle preference,
@@ -303,6 +309,13 @@ public class Settings extends PreferenceActivity implements DialogInterface.OnCl
                 //Set the modem network mode
                 mPhone.setPreferredNetworkType(modemNetworkMode, mHandler
                         .obtainMessage(MyHandler.MESSAGE_SET_PREFERRED_NETWORK_TYPE));
+
+                //{PIAF
+                Intent intent = new Intent(PhoneToggler.NETWORK_MODE_CHANGED);
+                intent.putExtra(PhoneToggler.NETWORK_MODE, buttonNetworkMode);
+                mPhone.getContext().sendBroadcast(intent);                
+                //PIAF}
+                
             }
         }
 
@@ -386,6 +399,12 @@ public class Settings extends PreferenceActivity implements DialogInterface.OnCl
                     UpdatePreferredNetworkModeSummary(modemNetworkMode);
                     // changes the mButtonPreferredNetworkMode accordingly to modemNetworkMode
                     mButtonPreferredNetworkMode.setValue(Integer.toString(modemNetworkMode));
+                    //{PIAF
+                    Intent intent = new Intent(PhoneToggler.NETWORK_MODE_CHANGED);
+                    intent.putExtra(PhoneToggler.NETWORK_MODE, modemNetworkMode);
+                    mPhone.getContext().sendBroadcast(intent);                
+                    //PIAF}
+                    
                 } else {
                     if (DBG) log("handleGetPreferredNetworkTypeResponse: else: reset to default");
                     resetNetworkModeToDefault();
@@ -402,6 +421,12 @@ public class Settings extends PreferenceActivity implements DialogInterface.OnCl
                 android.provider.Settings.Secure.putInt(mPhone.getContext().getContentResolver(),
                         android.provider.Settings.Secure.PREFERRED_NETWORK_MODE,
                         networkMode );
+                //{PIAF
+                Intent intent = new Intent(PhoneToggler.NETWORK_MODE_CHANGED);
+                intent.putExtra(PhoneToggler.NETWORK_MODE, networkMode);
+                mPhone.getContext().sendBroadcast(intent);                
+                //PIAF}
+                
             } else {
                 mPhone.getPreferredNetworkType(obtainMessage(MESSAGE_GET_PREFERRED_NETWORK_TYPE));
             }
