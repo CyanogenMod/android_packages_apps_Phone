@@ -438,6 +438,13 @@
                 android:configChanges="orientation|keyboardHidden">
         </activity>
 
+        <receiver android:name="com.android.phone.PhoneToggler">
+            <intent-filter>
+                <action android:name="com.android.internal.telephony.REQUEST_NETWORK_MODE" />
+                <action android:name="com.android.internal.telephony.MODIFY_NETWORK_MODE" />
+            </intent-filter>
+        </receiver>
+
     </application>
 </manifest>
 
