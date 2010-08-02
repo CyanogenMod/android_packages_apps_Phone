@@ -19,7 +19,8 @@ public class PhoneToggler extends BroadcastReceiver  {
     public static final String MODIFY_NETWORK_MODE="com.android.internal.telephony.MODIFY_NETWORK_MODE";
     public static final String MOBILE_DATA_CHANGED="com.android.internal.telephony.MOBILE_DATA_CHANGED";
     public static final String NETWORK_MODE = "networkMode";
-	
+
+    public static final String CHANGE_NETWORK_MODE_PERM= "com.android.phone.CHANGE_NETWORK_MODE";
     private static final String LOG_TAG = "PhoneToggler";
     private static final boolean DBG = true;    
 
@@ -153,7 +154,7 @@ public class PhoneToggler extends BroadcastReceiver  {
                     }
                     Intent intent = new Intent(NETWORK_MODE_CHANGED);
                     intent.putExtra(NETWORK_MODE, settingsNetworkMode);
-                    getPhone().getContext().sendBroadcast(intent);
+                    getPhone().getContext().sendBroadcast(intent,CHANGE_NETWORK_MODE_PERM);
                 } else {
                     if (DBG) log("handleGetPreferredNetworkTypeResponse: else: reset to default");
                     resetNetworkModeToDefault();
