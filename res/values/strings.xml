@@ -1458,4 +1458,8 @@
     <string translatable="false" name="set_primary">SetPrimary</string>
     <string translatable="false" name="advanced_settings_container">advanced settings container</string>
     <!-- End of SIP settings related strings -->
+
+    <string name="per_change_mobile_network">Change network (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Application with this permission can, at any time, change between 2G Data and 3G data. 3G is faster, consumes more batery, and can also cost you more money.</string>
+
 </resources>
