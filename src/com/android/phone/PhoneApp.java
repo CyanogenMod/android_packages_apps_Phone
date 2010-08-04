@@ -229,6 +229,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     private static Vibrator mVibrator = null;
     private static AlarmManager mAM;
 
+    //for adding to Blacklist from call log 
+    private static final String INSERT_BLACKLIST = "com.android.phone.INSERT_BLACKLIST";
+
     public void startVib45(long callDurationMsec) {
         if (VDBG) Log.i(LOG_TAG, "vibrate start @" + callDurationMsec);
         stopVib45();
@@ -520,7 +523,8 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
             intentFilter.addAction(TelephonyIntents.ACTION_SERVICE_STATE_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_EMERGENCY_CALLBACK_MODE_CHANGED);
             intentFilter.addAction(ACTION_VIBRATE_45);
-            if (mTtyEnabled) {
+            intentFilter.addAction(INSERT_BLACKLIST);
+	    if (mTtyEnabled) {
                 intentFilter.addAction(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION);
             }
             intentFilter.addAction(AudioManager.RINGER_MODE_CHANGED_ACTION);
@@ -1551,7 +1555,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                 if(ringerMode == AudioManager.RINGER_MODE_SILENT) {
                     notifier.silenceRinger();
                 }
-            }
+            }else if (action.equals(INSERT_BLACKLIST)) {
+	    	PhoneApp.getInstance().getSettings().addBlackList(intent.getStringExtra("Insert.BLACKLIST"));
+	    }
         }
     }
 
