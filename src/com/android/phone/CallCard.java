@@ -1147,34 +1147,66 @@ public class CallCard extends FrameLayout
 
     private void updateOrganization(final long person_id) {
         android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
-                new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY, 
-                    ContactsContract.CommonDataKinds.Nickname.NAME },
-                ContactsContract.Data.CONTACT_ID + " = ? and (" + ContactsContract.Data.MIMETYPE + " = '" +
-                ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "' or " + 
-                ContactsContract.Data.MIMETYPE + " = '" + ContactsContract.CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "' )", 
+                new String[] {ContactsContract.CommonDataKinds.Organization.COMPANY},
+                ContactsContract.Data.CONTACT_ID + " = ? and " + ContactsContract.Data.MIMETYPE + " = '" +
+                ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "'", 
                 new String[] { person_id + "" },
                 null);
+        android.database.Cursor n = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
+                new String[] {ContactsContract.CommonDataKinds.Nickname.NAME},
+                ContactsContract.Data.CONTACT_ID + " = ? and " + ContactsContract.Data.MIMETYPE + " = '" +
+                ContactsContract.CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "'", 
+                new String[] { person_id + "" },
+                null);
+        String company = null;
+        String nick = null;
         if (c != null) {
-            if (c.moveToNext()) {
-                try {
-                    // we have found an organization.  set the organization name and exit loop
-                    String organ = c.getString(1);
-                    if (TextUtils.isEmpty(organ)) {
-                        organ = c.getString(0);
-                    }
-                    if (!TextUtils.isEmpty(organ)) {
-                        mOrganization.setText(organ);
-                        mOrganization.setVisibility(View.VISIBLE);
-                        mOrganization.invalidate();
-                    }
-                } catch (Exception e) {}
-            } else {
-                mOrganization.setVisibility(View.GONE);
-            }
+        	while (c.moveToNext()) {
+        	    int len = c.getColumnCount();
+        	    boolean done = false;
+        	    for (int i=len-1; !done; i--) {
+        	    	try {
+        	    	    company = c.getString(i);
+        	    	    if (!TextUtils.isEmpty(company)) {
+            	    	    done = true;
+            	    	    }
+        	    	    } catch (Exception e) { }
+        	    	if (i==0) { done = true; }
+            	    }
+                } 
             c.close();
-        }
+            }
+        if (n != null) {
+        	while (n.moveToNext()) {
+        	    int len = n.getColumnCount();
+        	    boolean done = false;
+        	    for (int i=len-1; !done; i--) {
+        	    	try {
+        	    	    nick = n.getString(i);
+        	    	    if (!TextUtils.isEmpty(nick)) {
+            	    	    done = true;
+            	    	    }
+        	    	    } catch (Exception e) { }
+        	    	if (i==0) { done = true; }
+            	    }
+                } 
+            n.close();
+            }
+               
+        if ((nick != null) && (!TextUtils.isEmpty(nick))) {
+        	mOrganization.setText(nick);
+            mOrganization.setVisibility(View.VISIBLE);
+            mOrganization.invalidate();
+            } else
+        if ((company != null) && (!TextUtils.isEmpty(company))) {
+        	mOrganization.setText(company);
+            mOrganization.setVisibility(View.VISIBLE);
+            mOrganization.invalidate();	
+        	} else {
+        	mOrganization.setVisibility(View.GONE);
+        	}
     }
-
+    
     private String getPresentationString(int presentation) {
         String name = getContext().getString(R.string.unknown);
         if (presentation == Connection.PRESENTATION_RESTRICTED) {
