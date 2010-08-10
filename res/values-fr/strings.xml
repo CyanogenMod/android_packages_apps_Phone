@@ -628,4 +628,12 @@
     <string name="black_list_sum">Les appels entrants provenant de cette liste seront rejetés</string>
     <string name="add_black">Ajouter un numéro</string>
     <string name="remove_black">Enlever %s de la liste noire ?</string>
+    <string name="turn_silence">Silence par retournement</string>
+    <string name="turn_silence_sum">Retourner le téléphone afin d\'annuler la sonnerie</string>
+    <string name="left_hand">Mode gaucher</string>
+    <string name="left_hand_sum">Utiliser le mode pour gauchers. Un redémarrage est requis afin d\'appliquer les changements.</string>
+    <string name="set_force_touch">Mode tactile en appel</string>
+    <string name="set_force_touch_sum">Utiliser le mode tactile, même sans capteur de proximité</string>
+    <string name="per_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus.</string>
 </resources>
