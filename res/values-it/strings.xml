@@ -645,4 +645,6 @@
     <string name="goPrivate">vai in privato</string>
     <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
     <string name="selectContact">seleziona contatto</string>
+    <string name="phone_number_label">Mio numero</string>
+    <string name="phone_number_summary">Imposta il numero di telefono per questo dispositivo</string>
 </resources>
