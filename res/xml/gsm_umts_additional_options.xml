@@ -18,4 +18,14 @@
         android:persistent="false"
         android:summaryOn="@string/sum_cw_enabled"
         android:summaryOff="@string/sum_cw_disabled"/>
+
+    <EditTextPreference
+        android:key="button_pn_key"
+        android:title="@string/phone_number_label"
+        android:summary="@string/phone_number_summary"
+        android:dialogTitle="@string/phone_number_label"
+        android:dialogMessage="@string/phone_number_summary"
+        android:negativeButtonText="@string/cancel"
+        android:positiveButtonText="@string/ok" />
+
 </PreferenceScreen>

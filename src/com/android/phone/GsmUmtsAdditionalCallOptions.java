@@ -1,35 +1,46 @@
 package com.android.phone;
 
-import java.util.ArrayList;
+import com.android.internal.telephony.Phone;
+import com.android.internal.telephony.PhoneFactory;
 
 import android.os.Bundle;
+import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.util.Log;
 
+import java.util.ArrayList;
+
 public class GsmUmtsAdditionalCallOptions extends
-        TimeConsumingPreferenceActivity {
+        TimeConsumingPreferenceActivity implements Preference.OnPreferenceChangeListener {
     private static final String LOG_TAG = "GsmUmtsAdditionalCallOptions";
     private final boolean DBG = (PhoneApp.DBG_LEVEL >= 2);
 
     private static final String BUTTON_CLIR_KEY  = "button_clir_key";
     private static final String BUTTON_CW_KEY    = "button_cw_key";
+    private static final String BUTTON_PN_KEY    = "button_pn_key";
 
     private CLIRListPreference mCLIRButton;
     private CallWaitingCheckBoxPreference mCWButton;
+    private EditTextPreference mPhoneNumberPref;
 
     private ArrayList<Preference> mPreferences = new ArrayList<Preference> ();
     private int mInitIndex= 0;
 
+    private Phone mPhone;
+
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
+
+        mPhone = PhoneFactory.getDefaultPhone();
 
         addPreferencesFromResource(R.xml.gsm_umts_additional_options);
 
         PreferenceScreen prefSet = getPreferenceScreen();
         mCLIRButton = (CLIRListPreference) prefSet.findPreference(BUTTON_CLIR_KEY);
         mCWButton = (CallWaitingCheckBoxPreference) prefSet.findPreference(BUTTON_CW_KEY);
+        mPhoneNumberPref = (EditTextPreference) prefSet.findPreference(BUTTON_PN_KEY);
 
         mPreferences.add(mCLIRButton);
         mPreferences.add(mCWButton);
@@ -51,6 +62,9 @@ public class GsmUmtsAdditionalCallOptions extends
                 mCLIRButton.init(this, false);
             }
         }
+
+        mPhoneNumberPref.setText(mPhone.getLine1Number());
+        mPhoneNumberPref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -74,4 +88,13 @@ public class GsmUmtsAdditionalCallOptions extends
         super.onFinished(preference, reading);
     }
 
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mPhoneNumberPref) {
+            if (newValue != null) {
+                mPhone.setLine1Number(mPhone.getLine1AlphaTag(), (String)newValue, null);
+                return true;
+            }
+        }
+        return false;
+    }
 }
