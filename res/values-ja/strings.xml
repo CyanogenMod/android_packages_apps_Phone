@@ -645,4 +645,10 @@
     <string name="left_hand_sum">左手で携帯電話を持って使用する (再起動が必要)</string>
     <string name="set_force_touch">タッチパネル</string>
     <string name="set_force_touch_sum">近接センサの反応によらずタッチUIを表示する</string>
+
+    <string name="per_change_mobile_network">ネットワークを変更(2G/3G)</string>
+    <string name="per_change_mobile_network_desc">この権限を許可されたアプリケーションは、いつでも2G/3Gデータの切り替えが可能です。3Gは高速ですが、バッテリ消費が増加します。また、キャリアの課金も増加することがあります。</string>
+    <string name="phone_number_label">自分の電話番号</string>
+    <string name="phone_number_summary">この携帯電話の電話番号をセットする</string>
+
 </resources>
