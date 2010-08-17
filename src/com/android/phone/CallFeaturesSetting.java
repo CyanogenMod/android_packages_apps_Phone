@@ -28,6 +28,8 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.database.Cursor;
+import android.hardware.Sensor;
+import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.net.sip.SipManager;
 import android.net.sip.SipProfile;
@@ -388,6 +390,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     String mNewVMNumber;
 
 // add by cytown for vibrate
+private static final String CATEGORY_ADVANCED = "pref_advanced_settings";
 private static CallFeaturesSetting mInstance = null;
 private static final String BUTTON_VIBRATE_OUTGOING = "button_vibrate_outgoing";
 private CheckBoxPreference mButtonVibOutgoing;
@@ -401,6 +404,9 @@ static boolean mVibHangup;
 private static final String BUTTON_SCREEN_AWAKE     = "button_screen_awake";
 private CheckBoxPreference mButtonScreenAwake;
 static boolean mScreenAwake;
+private static final String BUTTON_ALWAYS_PROXIMITY = "button_always_proximity";
+private CheckBoxPreference mButtonAlwaysProximity;
+static boolean mAlwaysProximity;
 private static final String BUTTON_RETURN_HOME     = "button_return_home";
 private CheckBoxPreference mButtonReturnHome;
 static boolean mReturnHome;
@@ -1530,6 +1536,8 @@ mButtonVibHangup   = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_
 mButtonVibHangup.setChecked(mVibHangup);
 mButtonScreenAwake = (CheckBoxPreference) prefSet.findPreference(BUTTON_SCREEN_AWAKE);
 mButtonScreenAwake.setChecked(mScreenAwake);
+mButtonAlwaysProximity = (CheckBoxPreference) prefSet.findPreference(BUTTON_ALWAYS_PROXIMITY);
+mButtonAlwaysProximity.setChecked(mAlwaysProximity);
 mButtonReturnHome = (CheckBoxPreference) prefSet.findPreference(BUTTON_RETURN_HOME);
 mButtonReturnHome.setChecked(mReturnHome);
 mButtonLedNotify   = (CheckBoxPreference) prefSet.findPreference(BUTTON_LED_NOTIFY);
@@ -1544,11 +1552,8 @@ mButtonVibCallWaiting = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRA
 mButtonVibCallWaiting.setChecked(mVibCallWaiting);
 mButtonForceTouch  = (CheckBoxPreference) prefSet.findPreference(BUTTON_FORCE_TOUCH);
 if (getResources().getBoolean(R.bool.allow_in_call_touch_ui)) {
-    // don't know why removePreference always return false and not working.... if someone knows just mail me.
-    //prefSet.removePreference(prefSet.findPreference(BUTTON_FORCE_TOUCH));
-    //mButtonForceTouch = null;
-    mButtonForceTouch.setChecked(true);
-    mButtonForceTouch.setEnabled(false);
+    ((PreferenceCategory) prefSet.findPreference(CATEGORY_ADVANCED)).
+            removePreference(mButtonForceTouch);
 } else {
     mButtonForceTouch.setChecked(mForceTouch);
 }
@@ -1557,6 +1562,14 @@ mButtonAddBlack.setParentActivity(this, ADD_BLACK_LIST_ID, this);
 mButtonAddBlack.setDialogOnClosedListener(this);
 mCatBlackList = (PreferenceCategory) prefSet.findPreference(CATEGORY_BLACK);
 initPrefBlackList();
+
+// No reason to show this if no proximity sensor on device
+if (((SensorManager)getSystemService(SENSOR_SERVICE)).getDefaultSensor(
+        Sensor.TYPE_PROXIMITY) == null) {
+    ((PreferenceCategory) prefSet.findPreference(CATEGORY_ADVANCED)).
+            removePreference(mButtonAlwaysProximity);
+}
+
 //====
     }
 
@@ -1947,6 +1960,7 @@ private void init(SharedPreferences pref) {
     mVib45       = pref.getBoolean(BUTTON_VIBRATE_45, false);
     mVibHangup   = pref.getBoolean(BUTTON_VIBRATE_HANGUP, true);
     mScreenAwake = pref.getBoolean(BUTTON_SCREEN_AWAKE, false);
+    mAlwaysProximity = pref.getBoolean(BUTTON_ALWAYS_PROXIMITY, false);
     mReturnHome = pref.getBoolean(BUTTON_RETURN_HOME, true);
     mLedNotify   = pref.getBoolean(BUTTON_LED_NOTIFY, true);
     mShowOrgan   = pref.getBoolean(BUTTON_SHOW_ORGAN, false);
@@ -2060,6 +2074,7 @@ protected void onDestroy() {
     outState.putBoolean(BUTTON_VIBRATE_45, mButtonVib45.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_HANGUP, mButtonVibHangup.isChecked());
     outState.putBoolean(BUTTON_SCREEN_AWAKE, mButtonScreenAwake.isChecked());
+    outState.putBoolean(BUTTON_ALWAYS_PROXIMITY, mButtonAlwaysProximity.isChecked());
     outState.putBoolean(BUTTON_RETURN_HOME, mButtonReturnHome.isChecked());
     outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
     outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());

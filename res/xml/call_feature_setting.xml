@@ -92,6 +92,11 @@
         android:persistent="false"
         android:summary="@string/screen_awake_sum"/>
     <CheckBoxPreference
+        android:key="button_always_proximity"
+        android:title="@string/always_proximity"
+        android:persistent="false"
+        android:summary="@string/always_proximity_sum"/>
+    <CheckBoxPreference
         android:key="button_return_home"
         android:title="@string/return_home"
         android:persistent="false"
