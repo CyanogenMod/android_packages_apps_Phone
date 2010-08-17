@@ -1155,6 +1155,8 @@
     <string name="vibrate_hangup_sum">Vibrate when a call has ended</string>
     <string name="screen_awake">Keep screen awake</string>
     <string name="screen_awake_sum">Screen will stay awake longer than normal while in-call</string>
+    <string name="always_proximity">Always use proximity</string>
+    <string name="always_proximity_sum">Enable to let the proximity sensor lock the screen even if phone is horizontal.</string>
     <string name="led_notify_call">Missed call LED notify</string>
     <string name="led_notify_call_sum">LED will blink when call is missed</string>
     <string name="led_show_organ">"Show nick/organization"</string>

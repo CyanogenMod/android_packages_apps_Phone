@@ -1273,7 +1273,8 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
             if (mAccelerometerListener != null) {
                 // use accelerometer to augment proximity sensor when in call
                 mOrientation = AccelerometerListener.ORIENTATION_UNKNOWN;
-                mAccelerometerListener.enable(state == Phone.State.OFFHOOK);
+                mAccelerometerListener.enable(!mSettings.mAlwaysProximity &&
+                        state == Phone.State.OFFHOOK);
             }
             // clear our beginning call flag
             mBeginningCall = false;
