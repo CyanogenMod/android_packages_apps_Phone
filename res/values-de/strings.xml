@@ -346,10 +346,18 @@
     <string name="cdma_system_select_title" msgid="5757657769327732833">"Systemauswahl"</string>
     <string name="cdma_system_select_summary" msgid="2528661990595284707">"CDMA-Roamingmodus ändern"</string>
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Systemauswahl"</string>
+<<<<<<< HEAD
   <string-array name="cdma_system_select_choices">
     <item msgid="176474317493999285">"Nur Startseite"</item>
     <item msgid="1205664026446156265">"Automatisch"</item>
   </string-array>
+=======
+    <string-array name="cdma_system_select_choices">
+        <item msgid="176474317493999285">"Nur Startseite"</item>
+	<item>Unternehmensnetzwerke</item>
+        <item msgid="1205664026446156265">"Automatisch"</item>
+    </string-array>
+>>>>>>> 5975ff9... German:
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"CDMA-Roamingmodus"</string>
     <string name="cdma_roaming_mode_summary" msgid="8604713111805562261">"CDMA-Roamingmodus ändern"</string>
     <string name="cdma_roaming_mode_dialogtitle" msgid="1802896889172094947">"CDMA-Roamingmodus"</string>
@@ -616,8 +624,6 @@
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Zum Annehmen nach rechts ziehen und"\n"aktiven Anruf halten"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Zum Annehmen nach rechts ziehen und"\n"aktiven Anruf beenden"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Zum Annehmen nach rechts ziehen und"\n"gehaltenen Anruf beenden"</string>
-    <string name="slide_to_answer_hint" msgid="4901042355463593903">"Annehmen"</string>
-    <string name="slide_to_decline_hint" msgid="4484576372463030324">"Abweisen"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"Kontaktbild"</string>
     <string name="goPrivate" msgid="865837794424530980">"privat sprechen"</string>
     <string name="selectContact" msgid="781975788478987237">"Kontakt wählen"</string>
@@ -700,8 +706,11 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Überprüfen Sie zunächst Ihre Internetverbindung, bevor Sie einen Internetanruf tätigen."</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Für Internetanrufe ist eine aktive WLAN-Verbindung notwendig. Wählen Sie die entsprechenden Einstellungen unter \"Drahtlos &amp; Netzwerke\"."</string>
     <string name="no_voip" msgid="8901474054537199865">"Internetanrufe werden nicht unterstützt."</string>
-    <string name="notification_ongoing_calling_format">Wähle (<xliff:g id="duration">%s</xliff:g>)
-    </string>
+    <string name="slide_to_answer_hint" msgid="4901042355463593903">"Antwort"</string>
+    <string name="slide_to_decline_hint" msgid="4484576372463030324">"Ablehnen"</string>
+    <string name="notification_ongoing_calling_format">Wähle (<xliff:g id="duration">%s</xliff:g>)</string>
+
+    <!-- added by cytown@gmail.com -->
     <string name="advanced_setting">Erweiterte Einstellungen v.30.1</string>
     <string name="vibrate_outgoing">Bei Antwort vibrieren</string>
     <string name="vibrate_outgoing_sum">Vibriere wenn Anruf angenommen wurde.</string>
@@ -711,6 +720,8 @@
     <string name="vibrate_hangup_sum">Vibriere wenn Anruf beendet wurde.</string>
     <string name="screen_awake">Bildschirm anlassen</string>
     <string name="screen_awake_sum">Bildschirm wird länger angelassen als normal bei eingehendem Anruf.</string>
+    <string name="always_proximity">Immer Näherungssensor nutzen</string>
+    <string name="always_proximity_sum">Einschalten um den Näherungssensor den Bildschirm sperren zu lassen, auch wenn das Gerät horizontal.</string>
     <string name="led_notify_call">LED Benachrichtigung</string>
     <string name="led_notify_call_sum">LED blinkt bei verpasstem Anruf.</string>
     <string name="led_show_organ">Zeige Organisation</string>
@@ -730,4 +741,10 @@
     <string name="left_hand_sum">Gerät als Linkshänder nutzen. (Neustart erforderlich)</string>
     <string name="set_force_touch">Touch Tastatur</string>
     <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur.</string>
+
+    <string name="per_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechslen. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein.</string>
+
+    <string name="phone_number_label">Meine Nummer</string>
+    <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
 </resources>
