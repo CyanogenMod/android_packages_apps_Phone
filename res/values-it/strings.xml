@@ -714,6 +714,8 @@
     <string name="vibrate_call_waiting_sum">Vibra quando c\'è una chiamata in attesa</string>
     <string name="screen_awake">Tieni lo schermo acceso</string>
     <string name="screen_awake_sum">Lo schermo restera acceso più del normale durante una chiamata</string>
+    <string name="always_proximity">Usa sempre sensore</string>
+    <string name="always_proximity_sum">Attiva per permettere al sensore di prossimità di bloccare lo schermo anche se il telefono è orizzontale</string>
     <string name="return_home">Ritorno elenco chiamate</string>
     <string name="return_home_sum">Forza il ritorno all\'elenco delle chiamate dopo che termini una chiamata</string>
     <string name="led_notify_call">Led di notifica</string>
