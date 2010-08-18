@@ -21,10 +21,13 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.StatusBarManager;
 import android.content.AsyncQueryHandler;
+import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.media.AudioManager;
@@ -110,6 +113,8 @@ private CallFeaturesSetting mSettings;
     private QueryHandler mQueryHandler = null;
     private static final int CALL_LOG_TOKEN = -1;
     private static final int CONTACT_TOKEN = -2;
+    private static final int CLEAR_TOKEN = -3;
+    private static final String CLEAR_MISSED_CALLS = "com.android.phone.clearmissedcalls";
 
     NotificationMgr(Context context) {
         mContext = context;
@@ -121,6 +126,9 @@ mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPr
 
         PhoneApp app = PhoneApp.getInstance();
         mPhone = app.phone;
+        IntentFilter filter = new IntentFilter();
+        filter.addAction(CLEAR_MISSED_CALLS);
+        context.registerReceiver(mClearReceiver, filter);
     }
 
     static void init(Context context) {
@@ -133,6 +141,27 @@ mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPr
     static NotificationMgr getDefault() {
         return sMe;
     }
+
+    /**
+     * Executed when the user presses the "Clear all notifications" button.
+     * Updates the provider to reflect the fact these calls aren't regared as
+     * "new" missed calls anymore by the user and shouldn't show up on reboot.
+     * Code taken from Contacts.
+     */
+    private BroadcastReceiver mClearReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (CLEAR_MISSED_CALLS.equals(intent.getAction())) {
+                StringBuilder where = new StringBuilder("type=");
+                where.append(Calls.MISSED_TYPE);
+                where.append(" AND new=1");
+                ContentValues values = new ContentValues(1);
+                values.put(Calls.NEW, "0");
+                mQueryHandler.startUpdate(CLEAR_TOKEN, null, Calls.CONTENT_URI,
+                        values, where.toString(), null);
+            }
+        }
+    };
 
     /**
      * Class that controls the status bar.  This class maintains a set
@@ -430,6 +459,7 @@ mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPr
                 intent // contentIntent
                 );
         if (mSettings.mLedNotify) configureLedNotification(note);
+        note.deleteIntent = PendingIntent.getBroadcast(mContext, -1, new Intent(CLEAR_MISSED_CALLS), 0);
         mNotificationMgr.notify(MISSED_CALL_NOTIFICATION, note);
     }
 
