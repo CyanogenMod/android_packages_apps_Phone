@@ -340,6 +340,7 @@
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Systemauswahl"</string>
     <string-array name="cdma_system_select_choices">
         <item msgid="176474317493999285">"Nur Startseite"</item>
+	<item>Unternehmensnetzwerke</item>
         <item msgid="1205664026446156265">"Automatisch"</item>
     </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"CDMA-Roamingmodus"</string>
@@ -614,8 +615,9 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Zum Annehmen nach rechts ziehen und"\n"gehaltenen Anruf beenden"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Antwort"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Ablehnen"</string>
-    <string name="notification_ongoing_calling_format">Wähle (<xliff:g id="duration">%s</xliff:g>)
-    </string>
+    <string name="notification_ongoing_calling_format">Wähle (<xliff:g id="duration">%s</xliff:g>)</string>
+
+    <!-- added by cytown@gmail.com -->
     <string name="advanced_setting">Erweiterte Einstellungen v.30.1</string>
     <string name="vibrate_outgoing">Bei Antwort vibrieren</string>
     <string name="vibrate_outgoing_sum">Vibriere wenn Anruf angenommen wurde.</string>
@@ -625,6 +627,8 @@
     <string name="vibrate_hangup_sum">Vibriere wenn Anruf beendet wurde.</string>
     <string name="screen_awake">Bildschirm anlassen</string>
     <string name="screen_awake_sum">Bildschirm wird länger angelassen als normal bei eingehendem Anruf.</string>
+    <string name="always_proximity">Immer Näherungssensor nutzen</string>
+    <string name="always_proximity_sum">Einschalten um den Näherungssensor den Bildschirm sperren zu lassen, auch wenn das Gerät horizontal.</string>
     <string name="led_notify_call">LED Benachrichtigung</string>
     <string name="led_notify_call_sum">LED blinkt bei verpasstem Anruf.</string>
     <string name="led_show_organ">Zeige Organisation</string>
@@ -645,10 +649,9 @@
     <string name="set_force_touch">Touch Tastatur</string>
     <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur.</string>
 
-    <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
-    <string name="contactPhoto">Kontaktbild</string>
-    <!-- Use this to describe the separate conference call button; currently for screen readers through accessibility. -->
-    <string name="goPrivate">vertraulich</string>
-    <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
-    <string name="selectContact">Wähle Kontakt</string>
+    <string name="per_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechslen. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein.</string>
+
+    <string name="phone_number_label">Meine Nummer</string>
+    <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
 </resources>
