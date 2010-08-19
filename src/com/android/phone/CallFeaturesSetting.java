@@ -2066,7 +2066,8 @@ private void initPrefBlackList() {
 }
 
 @Override
-protected void onDestroy() {
+protected void onStop() {
+
     //System.out.println("save please!");
     SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
     Editor outState = pref.edit();
@@ -2084,7 +2085,7 @@ protected void onDestroy() {
     outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch == null || mButtonForceTouch.isChecked());
     outState.commit();
     init(pref);
-    super.onDestroy();
+    super.onStop();
 }
 
 static class PhoneNo implements Comparable<PhoneNo>, java.io.Externalizable, java.io.Serializable {
