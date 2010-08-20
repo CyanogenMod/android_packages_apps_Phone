@@ -1,10 +1,6 @@
 package com.android.phone;
 
-import com.android.internal.telephony.Phone;
-import com.android.internal.telephony.PhoneFactory;
-
 import android.os.Bundle;
-import android.preference.EditTextPreference;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
 import android.util.Log;
@@ -12,7 +8,7 @@ import android.util.Log;
 import java.util.ArrayList;
 
 public class GsmUmtsAdditionalCallOptions extends
-        TimeConsumingPreferenceActivity implements Preference.OnPreferenceChangeListener {
+        TimeConsumingPreferenceActivity {
     private static final String LOG_TAG = "GsmUmtsAdditionalCallOptions";
     private final boolean DBG = (PhoneApp.DBG_LEVEL >= 2);
 
@@ -22,29 +18,26 @@ public class GsmUmtsAdditionalCallOptions extends
 
     private CLIRListPreference mCLIRButton;
     private CallWaitingCheckBoxPreference mCWButton;
-    private EditTextPreference mPhoneNumberPref;
+    private MSISDNEditPreference mMSISDNButton;
 
     private ArrayList<Preference> mPreferences = new ArrayList<Preference> ();
     private int mInitIndex= 0;
 
-    private Phone mPhone;
-
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-
-        mPhone = PhoneFactory.getDefaultPhone();
 
         addPreferencesFromResource(R.xml.gsm_umts_additional_options);
 
         PreferenceScreen prefSet = getPreferenceScreen();
         mCLIRButton = (CLIRListPreference) prefSet.findPreference(BUTTON_CLIR_KEY);
         mCWButton = (CallWaitingCheckBoxPreference) prefSet.findPreference(BUTTON_CW_KEY);
-        mPhoneNumberPref = (EditTextPreference) prefSet.findPreference(BUTTON_PN_KEY);
+        mMSISDNButton = (MSISDNEditPreference) prefSet.findPreference(BUTTON_PN_KEY);
 
         mPreferences.add(mCLIRButton);
         mPreferences.add(mCWButton);
-
+        mPreferences.add(mMSISDNButton);
+        
         if (icicle == null) {
             if (DBG) Log.d(LOG_TAG, "start to init ");
             mCLIRButton.init(this, false);
@@ -53,6 +46,8 @@ public class GsmUmtsAdditionalCallOptions extends
             mInitIndex = mPreferences.size();
             mCLIRButton.init(this, true);
             mCWButton.init(this, true);
+            mMSISDNButton.init(this, true);
+            
             int[] clirArray = icicle.getIntArray(mCLIRButton.getKey());
             if (clirArray != null) {
                 if (DBG) Log.d(LOG_TAG, "onCreate:  clirArray[0]="
@@ -62,9 +57,6 @@ public class GsmUmtsAdditionalCallOptions extends
                 mCLIRButton.init(this, false);
             }
         }
-
-        mPhoneNumberPref.setText(mPhone.getLine1Number());
-        mPhoneNumberPref.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -83,18 +75,11 @@ public class GsmUmtsAdditionalCallOptions extends
             Preference pref = mPreferences.get(mInitIndex);
             if (pref instanceof CallWaitingCheckBoxPreference) {
                 ((CallWaitingCheckBoxPreference) pref).init(this, false);
+            } else if (pref instanceof MSISDNEditPreference) {
+                ((MSISDNEditPreference) pref).init(this, false);
             }
         }
         super.onFinished(preference, reading);
     }
 
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mPhoneNumberPref) {
-            if (newValue != null) {
-                mPhone.setLine1Number(mPhone.getLine1AlphaTag(), (String)newValue, null);
-                return true;
-            }
-        }
-        return false;
-    }
 }
