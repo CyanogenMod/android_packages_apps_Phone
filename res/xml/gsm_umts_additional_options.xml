@@ -19,7 +19,7 @@
         android:summaryOn="@string/sum_cw_enabled"
         android:summaryOff="@string/sum_cw_disabled"/>
 
-    <EditTextPreference
+    <com.android.phone.MSISDNEditPreference
         android:key="button_pn_key"
         android:title="@string/phone_number_label"
         android:summary="@string/phone_number_summary"
