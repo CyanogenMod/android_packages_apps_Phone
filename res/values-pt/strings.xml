@@ -597,4 +597,44 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Arraste para a direita para atender e"\n"encerrar a chamada em espera"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Atender"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Recusar"</string>
+
+    <string name="notification_ongoing_calling_format">Chamando (<xliff:g id="duration">%s</xliff:g>)
+    </string>
+    <string name="advanced_setting">Advanced Settings V.30.1</string>
+    <string name="vibrate_outgoing">Vibrar ao atender</string>
+    <string name="vibrate_outgoing_sum">Vibrar quando uma chamada é atendida</string>
+    <string name="vibrate_45">Vibrar sempre 45 segundos</string>
+    <string name="vibrate_45_sum">Vibrar sempre 45 segundos durante recebimento de chamadas</string>
+    <string name="vibrate_hangup">Vibrate ao terminar</string>
+    <string name="vibrate_hangup_sum">Vibrar ao terminar uma chamada</string>
+    <string name="screen_awake">Manter tela acesa</string>
+    <string name="screen_awake_sum">Tela ficará acesa por mais tempo do que o normal durante a chamada</string>
+    <string name="always_proximity">Sensor de proximidade</string>
+    <string name="always_proximity_sum">Permitir o sensor de proximidade bloquear a tela do telefone mesmo se estiver na horizontal.</string>
+    <string name="led_notify_call">Notificação para chamadas perdidas</string>
+    <string name="led_notify_call_sum">LED piscará quando uma chamada é perdida</string>
+    <string name="led_show_organ">"Exibir apelido/organização"</string>
+    <string name="led_show_organ_sum">"Apelido/Organização serão exibidos na tela ao receber uma chamada."</string>
+    <string name="vibrate_call_waiting">Vibrar chamada em espera</string>
+    <string name="vibrate_call_waiting_sum">Vibrar com chamadas em espera</string>
+    <string name="return_home">Sempre voltar para lista de chamadas</string>
+    <string name="return_home_sum">Forçar retorno para lista de chamadas após fim de uma chamada.</string>
+    <string name="menu_addBlackList">Adicionar a Lista de bloqueio</string>
+    <string name="black_list">Lista de bloqueiot</string>
+    <string name="black_list_sum">Chamadas recebidas da lista de bloqueio serão rejeitadas.</string>
+    <string name="add_black">Adicionar número de telefone</string>
+    <string name="remove_black">Remover %s da lista</string>
+    <string name="turn_silence">Ligar em silencioso</string>
+    <string name="turn_silence_sum">Ligar com campainha em modo silencios.</string>
+    <string name="left_hand">Modo mão esquerda</string>
+    <string name="left_hand_sum">Usar mão esquerda para segurar telefone. Necessita de reinicialização para ter efeito.</string>
+    <string name="set_force_touch">UI touch em chamadas</string>
+    <string name="set_force_touch_sum">Forcar interface touch durante chamadas sem sensor de proximidade.</string>
+
+    <string name="per_change_mobile_network">Alternar rede de dados (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Aplicação com está permissão pode a qualquer momento, alterar entre dados 2G and 3G. 3G é mais rápido, consome mais bateria, e também pode gastar mais seu dinheiro.</string>
+    <string name="phone_number_label">Meu número de telefone</string>
+    <string name="phone_number_summary">Definir o número de telefone deste dispositivo</string>
+
+
 </resources>
