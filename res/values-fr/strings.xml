@@ -615,6 +615,8 @@
     <string name="vibrate_hangup_sum">Vibrer lorsqu\'un appel se termine</string>
     <string name="screen_awake">Garder l\'écran actif</string>
     <string name="screen_awake_sum">L\'écran restera actif plus longtemps lors d\'un appel</string>
+    <string name="always_proximity">Forcer capteur de proximité</string>
+    <string name="always_proximity_sum">Activer afin que le capteur de proximité verrouille l\'écran en toutes circonstances, y compris en orientation paysage</string>
     <string name="led_notify_call">Nofitier par DEL d\'un appel manqué</string>
     <string name="led_notify_call_sum">Le DEL clignotera quand un appel est manqué</string>
     <string name="led_show_organ">Montrer organisation</string>
@@ -636,4 +638,6 @@
     <string name="set_force_touch_sum">Utiliser le mode tactile, même sans capteur de proximité</string>
     <string name="per_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus.</string>
+    <string name="phone_number_label">Mon numéro de téléphone</string>
+    <string name="phone_number_summary">Régler le numéro d\'appel de ce téléphone</string>
 </resources>
