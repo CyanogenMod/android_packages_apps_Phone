@@ -641,15 +641,10 @@
     <string name="left_hand_sum">Usa la mano sinistra per tenere il telefono, richiede riavvio.</string>
     <string name="set_force_touch">Forza Tastiera Touch</string>
     <string name="set_force_touch_sum">Forza la visualizzazione del Touch UI senza individuare il sensore di prossimità</string>
-    <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
-    <string name="contactPhoto">foto contatto</string>
-    <!-- Use this to describe the separate conference call button; currently for screen readers through accessibility. -->
-    <string name="goPrivate">vai in privato</string>
     <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
     <string name="per_change_mobile_network">Cambia rete (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
 
-    <string name="selectContact">seleziona contatto</string>
     <string name="phone_number_label">Mio numero</string>
     <string name="phone_number_summary">Imposta il numero di telefono per questo dispositivo</string>
 </resources>
