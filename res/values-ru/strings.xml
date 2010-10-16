@@ -597,4 +597,36 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Перетащите вкладку вправо, чтобы ответить,"\n"завершив удерживаемый вызов"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Ответить"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Отклонить"</string>
+	
+    <string name="notification_ongoing_calling_format">Звонок (<xliff:g id="duration">%s</xliff:g>)</string>
+    <string name="advanced_setting">Дополнительные настройки V.30.1</string>
+    <string name="vibrate_outgoing">Вибрировать при ответе</string>
+    <string name="vibrate_outgoing_sum">Вибрировать когда на звонок отвечают</string>
+    <string name="vibrate_45">Вибрировать каждые 45с</string>
+    <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течении исходящего звонка</string>
+    <string name="vibrate_hangup">Вибрировать при отбое</string>
+    <string name="vibrate_hangup_sum">Вибрировать когда разговор окончен</string>
+    <string name="screen_awake">Держать экран включённым</string>
+    <string name="screen_awake_sum">Экран будет включен дольше, чем обычно при входящем звонке.</string>
+    <string name="always_proximity">Всегда использовать приближение</string>
+    <string name="always_proximity_sum">Всегда использовать датчик приближения для отключения экрана, даже если телефон горизонтален.</string>
+    <string name="led_notify_call">Мигать при пропущенных</string>
+    <string name="led_notify_call_sum">Мигать светодиодом при наличии пропущенных звонков</string>
+    <string name="led_show_organ">Показывать Ник/Организацию</string>
+    <string name="led_show_organ_sum">Ник/Организация будут показаны на экране входящего вызова</string>
+    <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
+    <string name="vibrate_call_waiting_sum">Вибрировать при ожидании на линии</string>
+    <string name="return_home">Возвращаться к списку вызовов</string>
+    <string name="return_home_sum">Всегда возвращаться к списку вызовов после окончания разговора.</string>
+    <string name="menu_addBlackList">Добавить в чёрный список</string>
+    <string name="black_list">Чёрный список</string>
+    <string name="black_list_sum">Входящие звонки из чёрного списка будут сбрасываться.</string>
+    <string name="add_black">Добавить телефонный номер</string>
+    <string name="remove_black">Удалить %s из списка?</string>
+    <string name="turn_silence">Переворот - тишина</string>
+    <string name="turn_silence_sum">Переверните телефон чтобы отключить звонок</string>
+    <string name="left_hand">Режим левши</string>
+    <string name="left_hand_sum">Используйте телефон левой рукой, необходима перезагрузка.</string>
+    <string name="phone_number_label">Мой номер телефона</string>
+    <string name="phone_number_summary">Установите номер телефона для этого устройства</string>
 </resources>
