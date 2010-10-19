@@ -1480,6 +1480,7 @@
     <string name="per_change_mobile_network_desc">Application with this permission can, at any time, change between 2G Data and 3G data. 3G is faster, consumes more batery, and can also cost you more money.</string>
     <string name="phone_number_label">My phone number</string>
     <string name="phone_number_summary">Set the phone number for this device</string>
+
     <!-- TrackBall Answer - Added by Nushio -->
     <string name="trackball_answer">Trackball Answer</string>  
     <string name="trackball_answer_sum">Press the Trackball to Answer the incoming phone call.</string>
@@ -1501,4 +1502,13 @@
        <item>Tap to Hang up</item>
        <item>Double Tap to Hang up</item>    
     </string-array> 
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">You are not allowed to make phone calls at this time. Please try again later.</string>
+    <string name="dialog_phone_goggles_title">Call blocked</string>
+    <string name="dialog_phone_goggles_title_unlocked">Call authorized</string>
+    <string name="dialog_phone_goggles_content">Making a phone call may not be wise at this time. Are you sure you want to continue?</string>
+    <string name="dialog_phone_goggles_unauthorized">Making a phone call may not be wise at this time.</string>
+    <string name="dialog_phone_goggles_ok">Call</string>
+    <string name="dialog_phone_goggles_cancel">Cancel</string>
 </resources>

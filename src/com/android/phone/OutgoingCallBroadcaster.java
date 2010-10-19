@@ -16,6 +16,11 @@
 
 package com.android.phone;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -46,10 +51,27 @@ import com.android.internal.telephony.Phone;
  */
 public class OutgoingCallBroadcaster extends Activity {
 
+    // Phone Goggles block created for compatibility and demonstration to
+    // to external developers
+    private static Method phoneGoggles;
+    static {
+        try {
+            Class phoneGogglesClass = Class.forName("android.util.PhoneGoggles");
+            phoneGoggles = phoneGogglesClass.getMethod("processCommunication",
+                    new Class[] {Context.class, int.class, String[].class,
+                    Runnable.class, Runnable.class, int.class, int.class,
+                    int.class, int.class, int.class, int.class});
+
+        } catch (ClassNotFoundException e) {
+        } catch (SecurityException e) {
+        } catch (NoSuchMethodException e) {
+        }
+    }
+
     private static final String PERMISSION = android.Manifest.permission.PROCESS_OUTGOING_CALLS;
     private static final String TAG = "OutgoingCallBroadcaster";
     private static final boolean DBG =
-            (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
+        (PhoneApp.DBG_LEVEL >= 1) && (SystemProperties.getInt("ro.debuggable", 0) == 1);
 
     public static final String EXTRA_ALREADY_CALLED = "android.phone.extra.ALREADY_CALLED";
     public static final String EXTRA_ORIGINAL_URI = "android.phone.extra.ORIGINAL_URI";
@@ -109,7 +131,7 @@ public class OutgoingCallBroadcaster extends Activity {
                 if ((app.cdmaOtaScreenState.otaScreenState
                         == OtaUtils.CdmaOtaScreenState.OtaScreenState.OTA_STATUS_PROGRESS)
                         || (app.cdmaOtaScreenState.otaScreenState
-                        == OtaUtils.CdmaOtaScreenState.OtaScreenState.OTA_STATUS_LISTENING)) {
+                                == OtaUtils.CdmaOtaScreenState.OtaScreenState.OTA_STATUS_LISTENING)) {
                     isOtaCallActive = true;
                 }
 
@@ -195,7 +217,7 @@ public class OutgoingCallBroadcaster extends Activity {
             // that the NEW_OUTGOING_CALL broadcast for this new call has
             // already been sent.
             Log.i(TAG, "onCreate: non-null icicle!  "
-                  + "Bailing out, not sending NEW_OUTGOING_CALL broadcast...");
+                    + "Bailing out, not sending NEW_OUTGOING_CALL broadcast...");
 
             // No need to finish() here, since the OutgoingCallReceiver from
             // our original instance will do that.  (It'll actually call
@@ -219,7 +241,7 @@ public class OutgoingCallBroadcaster extends Activity {
             }
         }
         final boolean emergencyNumber =
-                (number != null) && PhoneNumberUtils.isEmergencyNumber(number);
+            (number != null) && PhoneNumberUtils.isEmergencyNumber(number);
 
         boolean callNow;
 
@@ -237,7 +259,7 @@ public class OutgoingCallBroadcaster extends Activity {
         // TODO: This code is redundant with some code in InCallScreen: refactor.
         if (Intent.ACTION_CALL_PRIVILEGED.equals(action)) {
             action = emergencyNumber
-                    ? Intent.ACTION_CALL_EMERGENCY
+            ? Intent.ACTION_CALL_EMERGENCY
                     : Intent.ACTION_CALL;
             if (DBG) Log.v(TAG, "- updating action from CALL_PRIVILEGED to " + action);
             intent.setAction(action);
@@ -256,12 +278,12 @@ public class OutgoingCallBroadcaster extends Activity {
                 // opposed to a Context which look up known android
                 // packages only)
                 invokeFrameworkDialer.setClassName("com.android.contacts",
-                                                   "com.android.contacts.DialtactsActivity");
+                "com.android.contacts.DialtactsActivity");
                 invokeFrameworkDialer.setAction(Intent.ACTION_DIAL);
                 invokeFrameworkDialer.setData(intent.getData());
 
                 if (DBG) Log.v(TAG, "onCreate(): calling startActivity for Dialer: "
-                               + invokeFrameworkDialer);
+                        + invokeFrameworkDialer);
                 startActivity(invokeFrameworkDialer);
                 finish();
                 return;
@@ -328,13 +350,60 @@ public class OutgoingCallBroadcaster extends Activity {
         // EXTRA_PHONE_NUMBER extra, but instead using a new separate extra to hold
         // the outgoing SIP address.  (Be sure to document whether it's a URI or just
         // a plain address, whether it could be a tel: URI, etc.)
-        Uri uri = intent.getData();
+        final Uri uri = intent.getData();
         String scheme = uri.getScheme();
         if ("sip".equals(scheme) || PhoneNumberUtils.isUriNumber(number)) {
             startSipCallOptionsHandler(this, intent, uri, number);
             finish();
             return;
         }
+
+        /* We can't use a BroadcastReceiver has we need to display an AlertDialog,
+         * which is not allowed with a BroadcastReceiver */
+        final String[] numbers = new String[] {number};
+        final Intent finalIntent = intent;
+        final boolean finalCallNow = callNow;
+        final String finalNumber = number;
+        final Runnable onRun = new Runnable() {
+            public void run() {
+                createAndBroadcastIntent(finalIntent, finalCallNow, finalNumber, uri);
+            }
+        };
+        final Runnable onCancel = new Runnable() {
+            public void run() {
+                createAndBroadcastIntent(finalIntent, finalCallNow, null, uri);
+            }
+        };
+
+        if (phoneGoggles != null) {
+            try {
+                phoneGoggles.invoke(null, this,
+                        1, // 1 for phone numbers, 2 for email addresses, 0 otherwise
+                        numbers, onRun, onCancel,
+                        R.string.dialog_phone_goggles_title,
+                        R.string.dialog_phone_goggles_title_unlocked,
+                        R.string.dialog_phone_goggles_content,
+                        R.string.dialog_phone_goggles_unauthorized,
+                        R.string.dialog_phone_goggles_ok,
+                        R.string.dialog_phone_goggles_cancel);
+
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            }
+
+        // If the Phone Goggles API doesn't exist
+        } else {
+            onRun.run();
+        }
+    }
+    /**
+     *  Actually broadcast the intent
+     */
+    private void createAndBroadcastIntent(Intent intent, boolean callNow, String number, Uri uri) {
 
         Intent broadcastIntent = new Intent(Intent.ACTION_NEW_OUTGOING_CALL);
         if (number != null) {

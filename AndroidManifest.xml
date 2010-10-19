@@ -158,6 +158,9 @@
                 <data android:mimeType="vnd.android.cursor.item/phone_v2" />
                 <data android:mimeType="vnd.android.cursor.item/person" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_GOGGLES_COMMUNICATION" />
+            </intent-filter>
         </activity>
 
         <activity-alias android:name="EmergencyOutgoingCallBroadcaster"

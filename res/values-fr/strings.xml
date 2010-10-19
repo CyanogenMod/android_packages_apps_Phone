@@ -749,4 +749,13 @@
        <item>Un appui pour raccrocher</item>
        <item>Deux appuis pour raccrocher</item>   
     </string-array> 
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Vous n\'êtes pas autorisé a effectuer d\'appels pour le moment. Veuillez réitérer votre demande plus tard.</string>
+    <string name="dialog_phone_goggles_title">Appel bloqué</string>
+    <string name="dialog_phone_goggles_title_unlocked">Appel autorisé</string>
+    <string name="dialog_phone_goggles_content">Effectuer un appel n\'est pas recommandé pour le moment. Etes vous sûr de vouloir continuer ?</string>
+    <string name="dialog_phone_goggles_unauthorized">Effectuer un appel n\'est pas recommandé pour le moment.</string>
+    <string name="dialog_phone_goggles_ok">Appeler</string>
+    <string name="dialog_phone_goggles_cancel">Annuler</string>
 </resources>
