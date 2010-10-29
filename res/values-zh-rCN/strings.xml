@@ -698,4 +698,38 @@
     <string name="no_internet_available" msgid="1100564991026313234">"要拨打互联网电话，请先检查互联网连接情况"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"您必须连接到 Wi-Fi 网络才能使用互联网电话（使用“无线和网络设置”）"</string>
     <string name="no_voip" msgid="8901474054537199865">"不支持互联网电话"</string>
+    <string name="notification_ongoing_calling_format">"当前拨出 (<xliff:g id="DURATION">%s</xliff:g>)"
+    </string>
+    <string name="advanced_setting">高级设置 V.30.1</string>
+    <string name="vibrate_outgoing">接听震动</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_45">45秒震动</string>
+    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_hangup">挂断震动</string>
+    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="screen_awake">屏幕保持</string>
+    <string name="screen_awake_sum">通话时, 屏幕等待更长时间才关闭.</string>
+    <string name="always_proximity">强制使用传感器</string>
+    <string name="always_proximity_sum">启用后,即使手机水平放置, 接近传感器也会锁屏.</string>
+    <string name="led_notify_call">未接电话LED通知</string>
+    <string name="led_notify_call_sum">有未接电话时LED会闪烁.</string>
+    <string name="led_show_organ">"显示昵称或公司名称"</string>
+    <string name="led_show_organ_sum">"打电话界面显示昵称或公司名称在姓名后面."</string>
+    <string name="vibrate_call_waiting">呼叫等待震动</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+    <string name="return_home">强制返回到通话记录</string>
+    <string name="return_home_sum">当呼出通话结束后会强制返回到通话记录屏幕.</string>
+    <string name="menu_addBlackList">加入黑名单</string>
+    <string name="black_list">黑名单</string>
+    <string name="black_list_sum">列入黑名单的来电会被自动挂断.</string>
+    <string name="add_black">添加来电</string>
+    <string name="remove_black">从名单中去除 %s</string>
+    <string name="turn_silence">翻转静音</string>
+    <string name="turn_silence_sum">来电时翻转就静音</string>
+    <string name="left_hand">左手模式</string>
+    <string name="left_hand_sum">用左手拿手机操作和接听电话, 需要重启.</string>
+    <string name="set_force_touch">强制显示触摸键盘</string>
+    <string name="set_force_touch_sum">强制在通话中使用触摸键盘无论是否有近距传感器.</string>
+    <string name="phone_number_label">我的手机号码</string>
+    <string name="phone_number_summary">为这部手机设置号码</string>
 </resources>
