@@ -618,6 +618,8 @@
     <string name="vibrate_hangup_sum">通话结束时震动.</string>
     <string name="screen_awake">屏幕保持</string>
     <string name="screen_awake_sum">通话时, 屏幕等待更长时间才关闭.</string>
+    <string name="always_proximity">强制使用传感器</string>
+    <string name="always_proximity_sum">启用后,即使手机水平放置, 接近传感器也会锁屏.</string>
     <string name="led_notify_call">未接电话LED通知</string>
     <string name="led_notify_call_sum">有未接电话时LED会闪烁.</string>
     <string name="led_show_organ">"显示昵称或公司名称"</string>
@@ -637,4 +639,6 @@
     <string name="left_hand_sum">用左手拿手机操作和接听电话, 需要重启.</string>
     <string name="set_force_touch">强制显示触摸键盘</string>
     <string name="set_force_touch_sum">强制在通话中使用触摸键盘无论是否有近距传感器.</string>
+    <string name="phone_number_label">我的手机号码</string>
+    <string name="phone_number_summary">为这部手机设置号码</string>
 </resources>
