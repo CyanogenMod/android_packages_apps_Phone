@@ -30,6 +30,12 @@
         android:summaryOn="@string/roaming_enable"
         android:summaryOff="@string/roaming_disable"/>
 
+    <CheckBoxPreference
+        android:key="button_mvno_roaming_key"
+        android:title="@string/mvno_roaming"
+        android:persistent="false"
+        android:summary="@string/mvno_roaming_summary"/>
+
     <PreferenceScreen
         android:key="button_data_usage_key"
         android:title="@string/throttle_data_usage"
