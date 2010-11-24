@@ -211,11 +211,16 @@
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Daten aktiviert"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Datenzugriff über mobile Netzwerke aktivieren"</string>
-    <string name="roaming" msgid="8871412572928323707">"Daten-Roaming"</string>
+    <string name="roaming" msgid="8871412572928323707">"Internationales Daten-Roaming"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Bei Roaming mit Datendienst verbinden"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Bei Roaming mit Datendienst verbinden"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Die Datenverbindung wurde unterbrochen, da Sie Ihr Mobilfunknetz verlassen haben und Daten-Roaming nicht aktiviert ist."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Daten-Roaming zulassen? Es können beträchtliche Roaming-Gebühren anfallen!"</string>
+
+    <string name="mvno_roaming">"Nationales Daten-Roaming"</string>
+    <string name="mvno_roaming_summary">"Erlaubt das benutzen eines fremden Mobilfunknetzes im eigenen Land."</string>
+    <string name="mvno_roaming_warning">Nationales Daten-Roaming zulassen? Dies könnte das Roaming Problem mit virtuellen Mobilfunkanbietern lösen. Aktivieren Sie dies Option nicht wenn Sie nicht sicher sind ob diese bei Ihrem Mobilfunkanbieter benötigt wird. Es können beträchtliche Roaming-Gebühren anfallen! Zum übernehmen Flugmodus ein- und wieder ausschalten oder Telefon neu starten."</string>
+
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM-/UMTS-Optionen"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA-Optionen"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Datennutzung"</string>
