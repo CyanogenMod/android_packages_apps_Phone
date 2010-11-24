@@ -25,6 +25,7 @@
         android:summary="@string/phone_number_summary"
         android:dialogTitle="@string/phone_number_label"
         android:dialogMessage="@string/phone_number_summary"
+        android:inputType="phone"
         android:negativeButtonText="@string/cancel"
         android:positiveButtonText="@string/ok" />
 
