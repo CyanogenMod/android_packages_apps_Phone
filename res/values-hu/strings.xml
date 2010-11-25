@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Launcher labels -->
+    <!-- Tab title -->
+    <string name="contactsIconLabel">Névjegyek</string>
+    <!-- Tab title -->
+    <string name="contactsFavoritesLabel">Kedvencek</string>
+    <!-- Tab title -->
+    <string name="dialerIconLabel">Tárcsázó</string>
+    <!-- Screen title for Emergency Dialer UI -->
+    <string name="emergencyDialerIconLabel">Segélyhívás</string>
+    <!-- Application name on Home screen -->
+    <string name="phoneIconLabel">Telefon</string>
+    <!-- Tab title -->
+    <string name="recentCallsIconLabel">Hívásnapló</string>
+    <!-- Title of FDN list screen -->
+    <string name="fdnListLabel">Fixlista</string>
+    <!-- Call status -->
+    <!-- Incoming call screen, name of "unknown" caller -->
+    <string name="unknown">Ismeretlen</string>
+    <!-- Incoming call screen, string when number hidden -->
+    <string name="private_num">Privát szám</string>
+    <!-- Incoming call screen, string when called from a pay phone -->
+    <string name="payphone">Telefonfülke</string>
+    <!-- In-call screen: status label for a call that's on hold -->
+    <string name="onHold">Tartásban</string>
+    <!-- In-call screen: status label for the current active call -->
+    <string name="ongoing">Aktuális hívás</string>
+    <!-- Possible error messages with outgoing calls -->
+    <!-- In-call screen: call failure reason (busy) --> 
+    <string name="callFailed_userBusy">A vonal foglalt</string>
+    <!-- In-call screen: call failure reason (network congestion) -->
+    <string name="callFailed_congestion">A hálózat foglalt</string>
+    <!-- In-call screen: call failure reason (no signal) -->
+    <string name="callFailed_noSignal">Nincs jel</string>
+    <!-- In-call screen: call failure reason (GSM ACM limit exceeded) -->
+    <string name="callFailed_limitExceeded">Túllépte az ACM-korlátot</string>
+    <!-- In-call screen: call failure reason (radio is off) -->
+    <string name="callFailed_powerOff">Rádió ki</string>
+    <!-- In-call screen: call failure reason (SIM error) -->
+    <string name="callFailed_simError">Nincs SIM, vagy SIM-hiba</string>
+    <!-- In-call screen: call failure reason (out of service) -->
+    <string name="callFailed_outOfService">Szolgáltatási területen kívül</string>
+    <!-- In-call screen: call failure reason (call denied because of current FDN setting) -->
+    <string name="callFailed_fdn_only">A fixlista korlátozza a kimenő hívásokat</string>
+    <!-- In-call screen: call failure reason (call denied because call barring is on) -->
+    <string name="callFailed_cb_enabled">Amíg be van kapcsolva a híváskorlátozás, nem kezdeményezhet hívást</string>
+    <!-- In-call screen: call failure reason (call denied because domain specific access control is on) -->
+    <string name="callFailed_dsac_restricted">A hozzáférés-vezérlés minden hívást korlátoz</string>
+    <!-- In-call screen: call failure reason (Emergency call denied because domain specific access control is on)-->
+    <string name="callFailed_dsac_restricted_emergency">A hozzáférés-vezérlés korlátozza a segélyhívásokat</string>
+    <!-- In-call screen: call failure reason (Normal call denied because domain specific access control is on)-->
+    <string name="callFailed_dsac_restricted_normal">A hozzáférés-vezérlés korlátozza a normál hívásokat</string>
+    <!-- In-call screen: call failure reason (Phone is locked until next power cycle)-->
+    <string name="callFailed_cdma_lockedUntilPowerCycle">A telefon az újraindításig le lesz zárva</string>
+    <!-- In-call screen: call failure reason (CDMA: call dropped)-->
+    <string name="callFailed_cdma_drop">A hívás megszakadt</string>
+    <!-- In-call screen: call failure reason (CDMA: call intercepted)-->
+    <string name="callFailed_cdma_intercept">Hívás lehallgatva</string>
+    <!-- In-call screen: call failure reason (CDMA reorder)-->
+    <string name="callFailed_cdma_reorder">Átrendezés</string>
+    <!-- In-call screen: call failure reason (CDMA: Service Option Reject)-->
+    <string name="callFailed_cdma_SO_reject">Szolgáltatási opció elutasítva</string>
+    <!-- In-call screen: call failure reason (CDMA: retry order)-->
+    <string name="callFailed_cdma_retryOrder">Újrapróbálkozások max. száma</string>
+    <!-- In-call screen: call failure reason (CDMA: Access failure)-->
+    <string name="callFailed_cdma_accessFailure">Sikertelen hozzáférés</string>
+    <!-- In-call screen: call failure reason (CDMA: Preempted)-->
+    <string name="callFailed_cdma_preempted">Lefoglalt cella</string>
+    <!-- In-call screen: call failure reason (Only Emergency calls are possible)-->
+    <string name="callFailed_cdma_notEmergency">Nem megfelelő SIM kártyát használ. Csak segélyhívás kezdeményezhető</string>
+    <!-- In-call screen: status label for a conference call -->
+    <string name="confCall">Konferenciahívás</string>
+    <!-- In-call screen: call lost dialog text -->
+    <string name="call_lost">A hívás elveszett</string>
+    <!-- In-call screen: auto retry  -->
+    <string name="retry">Újra</string>
+    <!-- In-call screen: call lost title of dialog -->
+    <string name="call_lost_title">A hívás elveszett</string>
+    <!-- MMI strings -->
+    <!-- Dialog label when an MMI code starts running -->
+    <string name="mmiStarted">MMI-kód elindítva</string>
+    <!-- Dialog label when a USSD code starts running -->
+    <string name="ussdRunning">USSD-kód futása</string>
+    <!-- Dialog label when an MMI code is canceled -->
+    <string name="mmiCancelled">MMI-kód megszakítva</string>
+    <!-- Label for "cancel" button on the MMI dialog -->
+    <string name="cancel">Mégse</string>
+    <!-- In-call menu item labels -->
+    <!-- Regular in-call menu items: -->
+    <!-- In-call menu: Label for "speakerphone" menu item -->
+    <string name="menu_speaker">Hangsz.</string>
+    <!-- In-call menu: Label for "bluetooth" menu item -->
+    <string name="menu_bluetooth">Bluetooth</string>
+    <!-- In-call menu: Label for "mute" menu item -->
+    <string name="menu_mute">Néma</string>
+    <!-- In-call menu: Label for "hold" menu item -->
+    <string name="menu_hold">Tart</string>
+    <!-- In-call menu: Label for "end call" menu item -->
+    <string name="menu_endCall">Befejez</string>
+    <!-- In-call menu: Label for "swap calls" menu item -->
+    <string name="menu_swapCalls">Hívásváltás</string>
+    <!-- In-call menu: Label for "merge calls" menu item -->
+    <string name="menu_mergeCalls">Hívások egyesítése</string>
+    <!-- In-call menu: Label for "add call" menu item -->
+    <string name="menu_addCall">Hívás hozzáadása</string>
+    <!-- In-call menu: Label for "manage conference call" menu item -->
+    <string name="menu_manageConference">Konferenciahívás kezelése</string>
+    <!-- In-call menu: Label for "show dialpad" menu item -->
+    <string name="menu_showDialpad">Tárcsázó megjelenítése</string>
+    <!-- In-call menu: Label for "hide dialpad" menu item -->
+    <string name="menu_hideDialpad">Tárcsázó elrejtése</string>
+    <!-- Incoming call menu items: -->
+    <!-- Incoming call menu: Label for "Hold and answer" menu item -->
+    <string name="menu_answerAndHold">Az aktuális hívás tartásba helyezése és az új hívás fogadása</string>
+    <!-- Incoming call menu: Label for "End and answer" menu item -->
+    <string name="menu_answerAndEnd">Az aktuális hívás befejezése és az új hívás fogadása</string>
+    <!-- Other misc labels for the in-call UI -->
+    <!-- Positive button label ("OK") used in several dialogs in the phone UI -->
+    <string name="ok">OK</string>
+    <!-- In-call screen, message just under call window when keyboard is closed -->
+    <string name="menuButtonHint">A hívásopciók megjelenítéséhez nyomja meg a Menü gombot</string>
+    <!-- In-call screen, message just under call window when keyboard is revealed -->
+    <string name="menuButtonKeyboardDialHint">A hívásopciók megjelenítéséhez nyomja meg a Menü gombot... Tárcsázzon a billentyűzettel</string>
+    <!-- Incoming call menu: Label for "Answer" menu item -->
+    <string name="menu_answer">Fogad</string>
+    <!-- Incoming call menu: Label for "Ignore" menu item -->
+    <string name="menu_ignore">Elutasít</string>
+    <!-- post dial -->
+    <!-- In-call screen: body text of the dialog that appears when we encounter
+         the "wait" character in a phone number to be dialed; this dialog asks the
+         user if it's OK to send the numbers following the "wait". -->
+    <string name="wait_prompt_str">Elküldi a következő hangokat?\n</string>
+    <!-- In-call screen: body text of the dialog that appears when we encounter
+         the "PAUSE" character in a phone number to be dialed; this dialog gives
+         informative message to the user to show the sending numbers following the "Pause". -->
+    <string name="pause_prompt_str">Küldés...</string>
+    <!-- In-call screen: button label on the "wait" prompt dialog -->
+    <string name="send_button">Küldés</string>
+    <!-- In-call screen: button label on the "wait" prompt dialog in CDMA Mode-->
+    <string name="pause_prompt_yes">Igen</string>
+    <!-- In-call screen: button label on the "wait" prompt dialog in CDMA Mode-->
+    <string name="pause_prompt_no">Nem</string>
+    <!-- In-call screen: on the "wild" character dialog, this is the label
+         for a text widget that lets the user enter the digits that should
+         replace the "wild" character. -->
+    <string name="wild_prompt_str">Helyettesítő karakterek felcserélése erre:</string>
+    <!-- missing voicemail number -->
+    <!-- Title of the "Missing voicemail number" dialog -->
+    <string name="no_vm_number">Nincs hangpostaszám</string>
+    <!-- Body text of the "Missing voicemail number" dialog -->
+    <string name="no_vm_number_msg">A SIM kártyán nem található hangpostaszám</string>
+    <!-- Button label on the "Missing voicemail number" dialog -->
+    <string name="add_vm_number_str">Szám hozzáadása</string>
+    <!-- Placeholder text displayed while loading a list of phone numbers
+         into the dialer UI -->
+    <string name="dialer_emptyListWorking">Betöltés</string>
+    <!-- SIM PIN strings -->
+    <!-- Instructional text on SIM PIN unlock panel -->
+    <string name="enterPin">Írja be a PIN kódot a SIM kártya feloldásához</string>
+    <!-- Success message displayed on SIM PIN unlock panel -->
+    <string name="pinUnlocked">SIM feloldva</string>
+    <!-- Label for PIN entry widget on SIM PIN unlock panel -->
+    <string name="enterNewPin">Új SIM PIN kód</string>
+    <!-- Label for PIN entry widget on SIM PIN unlock panel -->
+    <string name="verifyNewPin">Írja be mégegszer az új PIN kódot</string>
+    <!-- Error message displayed on SIM PIN unlock panel -->
+    <string name="verifyFailed">A megadott SIM PIN kódok nem egyeznek. Próbálja újra</string>
+    <!-- Instructional text on SIM PIN unlock panel -->
+    <string name="enterPuk">Írja be a PUK kódot a SIM kártya feloldásához</string>
+    <!-- Error message displayed on SIM PIN unlock panel -->
+    <string name="badPuk">Helytelen PUK kód!</string>
+    <!-- Button label on SIM PIN unlock panel -->
+    <string name="buttonTxtContinue">Folytatás</string>
+    <!-- Status message displayed on SIM PIN unlock panel -->
+    <string name="puk_unlocked">A SIM kártya blokkolása feloldva. A telefon feloldása folyamatban...</string>
+    <!-- network depersonalization -->
+    <!-- Label text for PIN entry widget on SIM Network Depersonalization panel -->
+    <string name="label_ndp">SIM hálózatfeloldó PIN kódja</string>
+    <!-- Button label on SIM Network Depersonalization panel -->
+    <string name="sim_ndp_unlock_text">Feloldás</string>
+    <!-- Button label on SIM Network Depersonalization panel -->
+    <string name="sim_ndp_dismiss_text">Elutasít</string>
+    <!-- Status message displayed on SIM Network Depersonalization panel -->
+    <string name="requesting_unlock">Hálózatfeloldás kérése...</string>
+    <!-- Error message displayed on SIM Network Depersonalization panel -->
+    <string name="unlock_failed">Hálózatfeloldási kérés sikertelen</string>
+    <!-- Success message displayed on SIM Network Depersonalization panel -->
+    <string name="unlock_success">Hálózat sikeresen feloldva</string>
+    <!-- Title for the dialog used to display the user's IMEI number -->
+    <string name="imei">IMEI</string>
+    <!-- Title for the dialog used to display the user's MEID number on CDMA network -->
+    <string name="meid">MEID</string>
+    <!-- settings strings -->
+    <!-- GSM Call settings screen, setting option name -->
+    <string name="labelGSMMore">GSM-hívásbeállítások</string>
+    <!-- CDM Call settings screen, setting option name -->
+    <string name="labelCDMAMore">CDMA-hívásbeállítások</string>
+    <!-- Mobile network settings screen, setting option name -->
+    <string name="apn_settings">Hozzáférési pontok neve</string>
+    <!-- Label for the "Network settings" screen in the Settings UI -->
+    <string name="settings_label">Hálózati beállítások</string>
+    <!-- Call settings screen, setting option name -->
+    <string name="voicemail">Hangposta</string>
+    <!-- Call forwarding dialog box, voicemail number prefix -->
+    <string name="voicemail_abbreviated">Hangposta:</string>
+    <!-- Mobile network settings screen, setting option name -->
+    <string name="networks">Mobilszolgáltatók</string>
+    <!-- Call settings screen title -->
+    <string name="call_settings">Hívásbeállítások</string>
+    <!-- GSM Call settings screen, setting option name -->
+    <string name="additional_gsm_call_settings">További beállítások</string>
+    <!-- GSM-only Call settings screen, setting option name-->
+    <string name="sum_gsm_call_settings">További hívásbeállítások csak GSM-hálózathoz</string>
+    <!-- CDMA Call settings screen, setting option name -->
+    <string name="additional_cdma_call_settings">További hívásbeállítások csak CDMA-hálózathoz</string>
+    <!-- CDMA-only Call settings screen, setting option name-->
+    <string name="sum_cdma_call_settings">További hívásbeállítások csak CDMA-hálózathoz</string>
+    <!-- Call setting screen, nework service setting name -->
+    <string name="labelNwService">Hálózati szolgáltatás beállításai</string>
+    <!-- Call settings screen, setting option name -->
+    <string name="labelCallerId">Hívóazonosító</string>
+    <!-- Additional call settings screen, setting summary text when Caller ID is hidden -->
+    <string name="sum_hide_caller_id">Szám elrejtése a kimenő hívásokban</string>
+    <!-- Additional call settings screen, setting summary text when Caller ID is shown -->
+    <string name="sum_show_caller_id">Szám megjelenítése a kimenő hívásokban</string>
+    <!-- Additional call settings screen, setting summary text for default Caller ID value -->
+    <string name="sum_default_caller_id">Saját szám megjelenítése vagy elrejtése a kimenő hívásokban a szolgáltató alapértelmezett beállításai alapján</string>
+    <!-- Additional call settings screen, setting check box name -->
+    <string name="labelCW">Hívásvárakoztatás</string>
+    <!-- Additional call settings screen, setting summary text when call waiting check box is selected -->
+    <string name="sum_cw_enabled">Hívás közben értesítsen a bejövő hívásokról</string>
+    <!-- Additional call settings screen, setting summary text when call waiting check box is clear -->
+    <string name="sum_cw_disabled">Hívás közben értesítsen a bejövő hívásokról</string>
+    <!-- Call forwarding settings screen, section heading -->
+    <string name="call_forwarding_settings">Hívásátirányítás</string>
+    <!-- Call settings screen, setting option name -->
+    <string name="labelCF">Hívásátirányítás</string>
+    <!-- Call forwarding settings screen, setting option name -->
+    <string name="labelCFU">Átirányítás mindig</string>
+    <!-- Call forwarding dialog box, text field label -->
+    <string name="messageCFU">Mindig ezt a számot használja</string>
+    <!-- Call forwarding settings screen, setting summary text when forwarding all calls -->
+    <string name="sum_cfu_enabled_indicator">Minden hívás átirányítása</string>
+    <!-- Call forwarding settings screen, setting summary text the Always forward is set -->
+    <string name="sum_cfu_enabled">Minden hanghívás átirányítása ide: %s</string>
+    <!-- Call forwarding settings screen, Always forward is enabled but the number is unavailable -->
+    <string name="sum_cfu_enabled_no_number">Nincs telefonszám</string>
+    <!-- Call forwarding settings screen, setting summary text when Always forward is disabled -->
+    <string name="sum_cfu_disabled">Kikapcsolva</string>
+    <!-- Call forwarding settings screen, setting option name -->
+    <string name="labelCFB">Átirányítás, ha foglalt</string>
+    <!-- Call forwarding dialog box, text field label -->
+    <string name="messageCFB">Szám, ha foglalt</string>
+    <!-- Call forwarding settings screen, setting summary text when forwarding to specific number when busy -->
+    <string name="sum_cfb_enabled">Átirányítás ide: %s</string>
+    <!-- Call forwarding settings screen, setting summary text when forwarding when busy is disabled -->
+    <string name="sum_cfb_disabled">Kikapcsolva</string>
+    <!-- Error message displayed after failing to disable forwarding calls when the phone is busy -->
+    <string name="disable_cfb_forbidden">Nem lehet deaktiválni a hívásátirányítást, amikor a telefon foglalt. A szolgáltató nem támogatja ezt a lehetőséget</string>
+
+    <!-- Call forwarding settings screen, setting option name -->
+    <string name="labelCFNRy">Átirányítás, ha nincs válasz</string>
+    <!-- Call forwarding dialog box, text field label -->
+    <string name="messageCFNRy">Szám, ha nincs válasz</string>
+    <!-- Call forwarding settings screen, setting summary text when forwarding to a specific number when unanswered -->
+    <string name="sum_cfnry_enabled">Átirányítás ide: %s</string>
+    <!-- Call forwarding settings screen, setting summary text when Forward when unanswered is disabled -->
+    <string name="sum_cfnry_disabled">Kikapcsolva</string>
+    <!-- Error message displayed after failing to disable forwarding calls when the phone does not answer -->
+    <string name="disable_cfnry_forbidden">Nem lehet deaktiválni a hívásátirányítást, ha nem fogadja a hívást. A szolgáltató nem támogatja ezt a lehetőséget</string>
+    
+    <!-- Call forwarding settings screen, setting option name -->
+    <string name="labelCFNRc">Átirányítás, ha nem elérhető</string>
+    <!-- Call forwarding dialog box, text field label -->
+    <string name="messageCFNRc">Szám, ha nem elérhető</string>
+    <!-- Call forwarding settings screen, setting summary text when forwarding to a specific number when unreachable-->
+    <string name="sum_cfnrc_enabled">Átirányítás ide: %s</string>
+    <!-- Call forwarding settings screen, setting summary text when Forward when unreachable is disabled -->
+    <string name="sum_cfnrc_disabled">Kikapcsolva</string>
+    <!-- Error message displayed after failing to disable forwarding calls when the phone is unreachable -->
+    <string name="disable_cfnrc_forbidden">Nem lehet deaktiválni a hívásátirányítást, amikor a telefon nem elérhető. A szolgáltató nem támogatja ezt a lehetőséget</string>
+
+    <!-- Title of the progress dialog displayed while updating Call settings -->
+    <string name="updating_title">Hívásbeállítások</string>
+    <!-- Title of the alert dialog displayed if an error occurs while updating Call settings -->
+    <string name="error_updating_title">Hívásbeállítási hiba</string>
+    <!-- Toast in Call settings dialog while settings are being read -->
+    <string name="reading_settings">Beállítások olvasása...</string>
+    <!-- Toast in Call settings dialog while settings are being saved -->
+    <string name="updating_settings">Beállítások frissítése...</string>
+    <!-- Toast in Call settings dialog while settings are being reverted -->
+    <string name="reverting_settings">Beállítások visszaállítása...</string>
+    <!-- Status message displayed in the "Call settings error" dialog -->
+    <string name="response_error">A hálózat nem várt választ adott</string>
+    <!-- Status message displayed in the "Call settings error" dialog -->
+    <string name="exception_error">Hálózat vagy SIM kártya hiba</string>
+    <!-- Status message displayed in the "Call settings error" dialog -->
+    <string name="radio_off_error">A beállítások megtekintése előtt kapcsolja be a rádiót</string>
+    <!-- Button label used to dismiss the "Call settings error" dialog -->
+    <string name="close_dialog">OK</string>
+    <!-- Button label used in several settings-related dialogs -->
+    <string name="enable">Engedélyezés</string>
+    <!-- Button label used in several settings-related dialogs -->
+    <string name="disable">Letiltás</string>
+    <!-- Button label which indicates the user wants to update a stored
+         phone number; used in several settings-related dialogs -->
+    <string name="change_num">Frissítés</string>
+    <string-array name="clir_display_values">
+        <!-- Phone settings "Caller ID" preference option: use the default value -->
+        <item>Hálózati alapértelmezés</item>
+        <!-- Phone settings "Caller ID" preference option: hide outgoing Caller ID info -->
+        <item>Szám rejtése</item>
+        <!-- Phone settings "Caller ID" preference option: show outgoing Caller ID info -->
+        <item>Szám mutatása</item>
+    </string-array>
+    <!-- voicemail setting strings -->
+    <!-- Call settings screen, Label used in "Save voicemail number" dialog -->
+    <string name="vm_save_number">Hangposta számának mentése</string>
+    <!-- Call settings screen, Set voicemail number dialog text -->
+    <string name="vm_changed">A hangposta száma módosult</string>
+    <!-- Call settings screen, Set voicemail number dialog text -->
+    <string name="vm_change_failed">Nem sikerült módosítani a hangposta számát</string>
+    <!-- Call settings screen, displayed when vm provider supplied forwarding number change fails-->
+    <string name="fw_change_failed">Nem sikerült módosítani az átirányítás tel.számát</string>
+    <!-- Call settings screen, displayed when forwarding number read fails-->
+    <string name="fw_get_in_vm_failed">Átvált új szolgáltatóra?</string>
+    <!-- Call settings screen, Set voicemail number dialog text -->
+    <string name="no_change">Nem történt módosítás</string>
+    <!-- Call settings screen, "Voicemail" provider setting summary text when no provider is selected -->
+    <string name="sum_voicemail_choose_provider">Hangposta számának beállítása</string>
+    <!-- Call settings screen, "Voicemail" screen, default option - My Carrier -->
+    <string name="voicemail_default">Szolgáltatóm</string>
+    <!-- networks setting strings -->
+    <!-- Mobile network settings screen title -->
+    <string name="mobile_networks">Mobilhálózat beállításai</string>
+    <!-- Available networks screen title/heading -->
+    <string name="label_available">Elérhető hálózatok</string>
+    <!-- Mobile network settings screen, toast when searching for available networks -->
+    <string name="load_networks_progress">Keresés...</string>
+    <!-- Available networks screen, text when no networks are found -->
+    <string name="empty_networks_list">Hálózat nem található</string>
+    <!-- Available networks screen, setting option name -->
+    <string name="search_networks">Hálózatok keresése</string>
+    <!-- Available networks screen, toast when an error is encountered when searching for networks -->
+    <string name="network_query_error">A hálózatkeresés során hiba történt</string>
+    <!-- Available networks screen, toast when registering on a specific network -->
+    <string name="register_on_network">Regisztrálás a(z) %s hálózaton...</string>
+    <!-- Available networks screen, toast when SIM card isn't allowed on a network -->
+    <string name="not_allowed">A SIM kártya nem teszi lehetővé a kapcsolódást ehhez a hálózathoz</string>
+    <!-- Available networks screen, toast when unable to connect to a network temporarily -->
+    <string name="connect_later">Nem lehet kapcsolódni. Próbálja meg később</string>
+    <!-- Available networks screen, toast when registered on a specific network -->
+    <string name="registration_done">Regisztrálva a hálózaton</string>
+    <!-- Mobile network settings screen setting option summary text -->
+    <string name="sum_carrier_select">Mobilszolgáltató kiválasztása</string>
+    <!-- Available networks screen, setting summary text -->
+    <string name="sum_search_networks">Összes elérhető hálózat megkeresése</string>
+    <!-- Available networks screen, setting option name -->
+    <string name="select_automatically">Automatikus választás</string>
+    <!-- Available networks screen, setting summary text -->
+    <string name="sum_select_automatically">Preferált hálózat automatikus kiválasztása</string>
+    <string name="register_automatically">Automatikus regisztrálás...</string>
+    <string name="preferred_network_mode_title">Hálózat mód</string>
+    <string name="preferred_network_mode_summary">Hálózat üzemmódjának megváltoztatása</string>
+    <string name="preferred_network_mode_dialogtitle">Preferált hálózati üzemmód</string>
+    <string-array name="preferred_network_mode_choices">
+        <item>Globális</item>
+        <item>Csak EvDo</item>
+        <item>CDMA EvDo nélkül</item>
+        <item>CDMA / EvDo automatikus</item>
+        <item>GSM / WCDMA automatikus</item>
+        <item>csak WCDMA</item>
+        <item>csak GSM</item>
+        <item>GSM / WCDMA preferált</item>
+    </string-array>
+    <!-- Mobile network settings screen, data enabling checkbox name -->
+    <string name="data_enabled">Csomagkapcs. haszn.</string>
+    <!-- Mobile network settings screen, setting summary text when check box is not selected (explains what selecting it would do) -->
+    <string name="data_enable_summary">Adathálózat aktiválása</string>
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="roaming">Adatroaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="roaming_enable">Kapcsolódás adatszolgáltatásokhoz roaming közben</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="roaming_disable">Kapcsolódás adatszolgáltatásokhoz roaming közben</string>
+    <!-- Mobile network settings UI: notification message shown when you
+         lose data connectivity because you're roaming and you have the
+         "data roaming" feature turned off. -->
+    <string name="roaming_reenable_message">Az adatkapcsolat megszakadt, mivel elhagyta a hazai hálózatát, és nincs bekapcsolva az adatroaming</string>
+    <!-- Mobile network settings screen, dialog message when user selects the Data roaming check box -->
+    <string name="roaming_warning">Engedélyezi az adatroamingot? Ez magas roamingdíjakkal járhat!</string>
+    <string name="gsm_umts_options">GSM/UMTS-beállítások</string>
+    <string name="cdma_options">CDMA-beállítások</string>
+
+    <!-- Screen option on the mobile network settings to go into data usage settings -->
+    <string name="throttle_data_usage">Adathasználat</string>
+    <!-- Title for the data usage settings screen -->
+    <string name="throttle_settings_title">Szolgáltatói irányelvek</string>
+    <!-- Data usage settings screen option for checking the current usage -->
+    <string name="throttle_current_usage">Jelenlegi adathasználat</string>
+    <!-- Data usage settings screen option for time frame-->
+    <string name="throttle_time_frame">Adatok használatának időszaka</string>
+    <!-- Data usage settings screen option for throttling rate-->
+    <string name="throttle_rate">Adatsebességi irányelv</string>
+    <!-- Data usage settings screen option for accessing the carrier website-->
+    <string name="throttle_help">További infó</string>
+    
+    <string name="throttle_status_subtext">%s (%d%) felhasználva ebben az időszakban ennyiből: %s. A következő időszakig %d nap van hátra</string>
+
+    <string name="throttle_data_usage_subtext">%s (%d%) felhasználva ebben az időszakban ennyiből: %s. A következő időszakig %d nap van hátra</string>
+
+    <string name="throttle_data_rate_reduced_subtext">Túllépte a maximális adathasználat korlátját (%s). Az adatátviteli sebesség %s értékre csökken</string>
+
+    <string name="throttle_time_frame_subtext">%d%-ot használt fel. A következő időszakig %d nap van hátra</string>
+
+    <string name="throttle_rate_subtext">Túllépte a maximális adathasználat korlátját (%s). Az adatátviteli sebesség %s értékre csökken</string>
+
+    <string name="throttle_help_subtext">További tudnivalók a szolgáltatói irányelvekről</string>
+
+    <!-- Cell broadcast SMS strings -->
+    <string name="cdma_cell_broadcast_sms">Hírszolgálati SMS</string>
+
+    <string name="cell_broadcast_sms">Hírszolgálati SMS</string>
+
+    <string name="enable_disable_cell_bc_sms">Hírszolgálati SMS</string>
+    <string name="cell_bc_sms_enable">Hírszolgálati SMS engedélyezve</string>
+    <string name="cell_bc_sms_disable">Kikapcsolva</string>
+
+    <string name="cb_sms_settings">Hírszolgálati SMS beállításai</string>
+
+    <string name="enable_disable_emergency_broadcast">Vészhelyzeti adás</string>
+    <string name="emergency_broadcast_enable">Vészhelyzeti hírüzenetek engedélyezve</string>
+    <string name="emergency_broadcast_disable">Vészhelyzet módban le vannak tiltva a hírszolgálati üzenetek</string>
+
+    <string name="enable_disable_administrative">Adminisztratív</string>
+    <string name="administrative_enable">Adminisztratív engedélyezve</string>
+    <string name="administrative_disable">Adminisztratív letiltva</string>
+
+    <string name="enable_disable_maintenance">Karbantartás</string>
+    <string name="maintenance_enable">Karbantartás engedélyezve</string>
+    <string name="maintenance_disable">Karbantartás letiltva</string>
+
+    <string name="general_news_settings">Általános hírek</string>
+    <string name="bf_news_settings">Üzleti és pénzügyi hírek</string>
+    <string name="sports_news_settings">Sporthírek</string>
+    <string name="entertainment_news_settings">Szórakozás</string>
+
+    <string name="enable_disable_local">Helyi</string>
+    <string name="local_enable">Helyi hírek engedélyezve</string>
+    <string name="local_disable">Helyi hírek letiltva</string>
+
+    <string name="enable_disable_regional">Régiós</string>
+    <string name="regional_enable">Régiós hírek engedélyezve</string>
+    <string name="regional_disable">Régiós hírek letiltva</string>
+
+    <string name="enable_disable_national">Nemzeti</string>
+    <string name="national_enable">Nemzeti hírek engedélyezve</string>
+    <string name="national_disable">Nemzeti hírek letiltva</string>
+
+    <string name="enable_disable_international">Nemzetközi</string>
+    <string name="international_enable">Nemzetközi hírek engedélyezve</string>
+    <string name="international_disable">Nemzetközi hírek letiltva</string>
+
+    <string name="list_language_title">Nyelv</string>
+    <string name="list_language_summary">Nyelv kiválasztása</string>
+    <string-array name="list_language_entries">
+        <item>Angol</item>
+        <item>Francia</item>
+        <item>Spanyol</item>
+        <item>Japán</item>
+        <item>Koreai</item>
+        <item>Kinai</item>
+        <item>Héber</item>
+    </string-array>
+    <string name="list_language_dtitle">Nyelv</string>
+    <string name="enable_disable_local_weather">Helyi időjárás</string>
+    <string name="local_weather_enable">Helyi időjárás engedélyezve</string>
+    <string name="local_weather_disable">Helyi időjárás letiltva</string>
+    <string name="enable_disable_atr">Helyi közlekedési hírek</string>
+    <string name="atr_enable">Helyi közlekedési hírek engedélyezve</string>
+    <string name="atr_disable">Helyi közlekedési hírek letiltva</string>
+    <string name="enable_disable_lafs">Helyi reptéri hírek</string>
+    <string name="lafs_enable">Helyi reptéri menetrend engedélyezve</string>
+    <string name="lafs_disable">Helyi reptéri menetrend letiltva</string>
+    <string name="enable_disable_restaurants">Éttermek</string>
+    <string name="restaurants_enable">Éttermek engedélyezve</string>
+    <string name="restaurants_disable">Éttermek letiltva</string>
+    <string name="enable_disable_lodgings">Lodgings</string>
+    <string name="lodgings_enable">Lodgings engedélyezve</string>
+    <string name="lodgings_disable">Lodgings letiltva</string>
+    <string name="enable_disable_retail_directory">Kereskedelmi adatbázis</string>
+    <string name="retail_directory_enable">Kereskedelmi adatbázis engedélyezve</string>
+    <string name="retail_directory_disable">Kereskedelmi adatbázis letiltva</string>
+    <string name="enable_disable_advertisements">Hirdetések</string>
+    <string name="advertisements_enable">Hirdetések engedélyezve</string>
+    <string name="advertisements_disable">Hirdetések letiltva</string>
+    <string name="enable_disable_stock_quotes">Tőzsdei árfolyamok</string>
+    <string name="stock_quotes_enable">Tőzsdei árfolyamok engedélyezve</string>
+    <string name="stock_quotes_disable">Tőzsdei árfolyamok letiltva</string>
+    <string name="enable_disable_eo">Állás ajánlatok</string>
+    <string name="eo_enable">Állás ajánlatok engedélyezve</string>
+    <string name="eo_disable">Állás ajánlatok letiltva</string>
+    <string name="enable_disable_mhh">Egészségügy és korház</string>
+    <string name="mhh_enable">Egészségügy és korház engedélyezve</string>
+    <string name="mhh_disable">Egészségügy és korházl letiltva</string>
+    <string name="enable_disable_technology_news">Technológiai hírek</string>
+    <string name="technology_news_enable">Technológiai hírek engedélyezve</string>
+    <string name="technology_news_disable">Technológiai hírek letiltva</string>
+    <string name="enable_disable_multi_category">Multi-kategória</string>
+    <string name="multi_category_enable">Multi-kategória engedélyezve</string>
+    <string name="multi_category_disable">Multi-category letiltva</string>
+    <!-- GSM/UMTS Options strings -->
+    <string name="gsm_umts_network_preferences_title">GSM/UMTS-hálózat beállításai</string>
+    <string name="gsm_umts_network_preferneces_summary">Nincs megvalósítva</string>
+    <string name="gsm_umts_network_preferences_dialogtitle">GSM/UMTS-hálózat beállításai</string>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item>GSM/WCDMA (autmatikus mód)</item>
+        <item>csak WCDMA</item>
+        <item>csak GSM</item>
+        <item>GSM/WCDA (WCDMA preferált)</item>
+    </string-array>
+    <!-- Mobile network settings screen, setting option name -->
+    <string name="prefer_2g">Csak 2G-hálózatok használata</string>
+    <!-- Mobile network settings screen, setting summary text -->
+    <string name="prefer_2g_summary">Az akkumulátor kímélése</string>
+    <!-- CDMA System select strings -->
+    <!-- Mobile network settings screen, setting option name -->
+    <string name="cdma_system_select_title">Rendszer kiválasztása</string>
+    <!-- Mobile network settings screen, setting summary text -->
+    <string name="cdma_system_select_summary">CDMA-roaming üzemmód megváltoztatása</string>
+    <!-- System select settings screen title -->
+    <string name="cdma_system_select_dialogtitle">Rendszer kiválasztása</string>
+    <string-array name="cdma_system_select_choices">
+        <!-- System select dialog screen, setting option name -->
+        <item>Csak saját hálózatban</item>
+        <!-- Remove the following option "Affiliated Networks" from the option list -->
+        <item>Társ hálózatokban</item>
+        <!-- System select dialog screen, setting option name -->
+        <item>Automatikus</item>
+    </string-array>
+    <!-- CDMA Options strings -->
+     <string name="cdma_roaming_mode_title">CDMA-roaming üzemmód</string>
+    <string name="cdma_roaming_mode_summary">CDMA-roaming üzemmód megváltoztatása</string>
+    <string name="cdma_roaming_mode_dialogtitle">CDMA-roaming üzemmód</string>
+    <string-array name="cdma_roaming_mode_choices">
+        <item>Csak saját hálózatban</item>
+        <item>Társ hálózatokban</item>
+        <item>Bármely hálózatban</item>
+    </string-array>
+    <string name="cdma_network_preferences_title">CDMA-hálózat beállításai</string>
+    <string name="cdma_network_preferneces_summary">Nincs megvalósítva</string>
+    <string name="cdma_network_preferences_dialogtitle">CDMA-hálózat beállításai</string>
+    <string-array name="cdma_network_preferences_choices">
+        <item>CDMA/EvDo</item>
+        <item>csak CDMA</item>
+        <item>csak EvDo</item>
+    </string-array>
+    <string name="subscription_title">CDMA-előfizetés tesztje</string>
+    <string name="subscription_summary">Válasszon a RUIM kártya, a SIM kártya és a NV között</string>
+    <string name="subscription_dialogtitle">Előfizetés</string>
+    <string-array name="subscription_choices">
+        <item>RUIM/SIM</item>
+        <item>NV</item>
+    </string-array>
+    <!-- FDN settings strings -->
+    <!-- Call settings screen, setting option name -->
+    <string name="fdn">Fixlistás számok</string>
+    <!-- Call settings screen, button label that takes you to
+         the Fixed Dialing Number management screen -->
+    <string name="manage_fdn_list">Fixlista</string>
+    <!-- Call settings screen, preference item label -->
+    <string name="fdn_activation">Fixlista aktiválása</string>
+    <!-- Call settings setting option name when FDN is enabled -->
+    <string name="fdn_enabled">A Fixlista engedélyezve</string>
+    <!-- Call settings setting option name  when FDN is disabled-->
+    <string name="fdn_disabled">A fixlistás számok le vannak tiltva</string>
+    <!-- Call settings screen, setting option name -->
+    <string name="enable_fdn">Fixlista engedélyezése</string>
+    <!-- Call settings screen, setting option name -->
+    <string name="disable_fdn">Fixlista kikapcsolása</string>
+    <!-- Call settings screen, setting option name -->
+    <string name="change_pin2">PIN2 módosítása</string>
+    <!-- Call settings screen, setting option name when FDN is enabled -->
+    <string name="enable_fdn_ok">Fixlista kikapcsolása</string>
+    <!-- Call settings screen, setting option name when FDN is disabled -->
+    <string name="disable_fdn_ok">Fixlista engedélyezése</string>
+    <!-- Call settings screen, setting summary text -->
+    <string name="sum_fdn">Fixlistás számok kezelése</string>
+    <!-- Call settings, FDN screen, setting option name -->
+    <string name="sum_fdn_change_pin">Fixlista hozzáférési PIN kódjának módosítása</string>
+    <!-- Call settings, FDN screen, setting option name -->
+    <string name="sum_fdn_manage_list">Telefonszámjegyzék kezelése</string>
+    <string name="voice_privacy">Védett hang</string>
+    <string name="voice_privacy_summary">Védett hang üzemmód bekapcsolása</string>
+    <string name="tty_mode_title">TTY üzemmód</string>
+    <string name="tty_mode_summary">TTY üzemmód bekapcsolása</string>
+    <string name="tty_mode_option_title">TTY üzemmód</string>
+    <string name="tty_mode_option_summary">TTY üzemmód beállítása</string>
+    <string name="auto_retry_mode_title">Automatikus újraprķbálás</string>
+    <string name="auto_retry_mode_summary">Automatikus újrapróbálkozás üzemmód engedélyezése</string>
+    <!-- FDN list screen: menu item label -->
+    <string name="menu_add">Új névjegy</string>
+    <!-- FDN list screen: menu item label -->
+    <string name="menu_edit">Névjegy szerkesztése</string>
+    <!-- FDN list screen: menu item label -->
+    <string name="menu_delete">Név törlése</string>
+    <!-- FDN related strings -->
+    <!-- Label for PIN2 entry screen -->
+    <string name="get_pin2">Írja be a PIN2-kódot!</string>
+    <!-- "Edit FDN Contact" screen: Label for the "name" text field -->
+    <string name="name">Név</string>
+    <!-- "Edit FDN Contact" screen: Label for the "number" text field -->
+    <string name="number">Szám</string>
+    <!-- "Edit FDN Contact" screen: Button label for "save" action -->
+    <string name="save">Ment</string>
+    <!-- Title of "Edit FDN Contact" screen for a new contact -->
+    <string name="add_fdn_contact">Fixlistás névjegy hozzáadása</string>
+    <!-- "Edit FDN Contact" screen: status message displayed in a popup (toast) -->
+    <string name="adding_fdn_contact">Fixlistás névjegy hozzáadása...</string>
+    <!-- "Edit FDN Contact" screen: status message displayed in a popup (toast) -->
+    <string name="fdn_contact_added">Fixlistás névjegy hozzáadva</string>
+    <!-- Title of "Edit FDN Contact" screen when editing an already-existing contact -->
+    <string name="edit_fdn_contact">Fixlistás névjegy szerkesztése</string>
+    <!-- "Edit FDN Contact" screen: status message displayed in a popup (toast) -->
+    <string name="updating_fdn_contact">Fixlistás névjegy frissítése</string>
+    <!-- "Edit FDN Contact" screen: status message displayed in a popup (toast) -->
+    <string name="fdn_contact_updated">Fixlistás névjegy frissítve</string>
+    <!-- Title of "Delete FDN Contact" screen -->
+    <string name="delete_fdn_contact">Fixlistás névjegy törlése...</string>
+    <!-- "Delete FDN Contact" screen: status message displayed in a popup (toast) -->
+    <string name="deleting_fdn_contact">Fixlistás névjegy törlése...</string>
+    <!-- "Delete FDN Contact" screen: status message displayed in a popup (toast) -->
+    <string name="fdn_contact_deleted">Fixlistás névjegy törölve</string>
+    <!-- FDN settings: error message displayed in a popup (toast) -->
+    <string name="pin2_invalid">A PIN2 érvénytelen!</string>
+    <!-- FDN settings: error message displayed in a popup (toast) -->
+    <string name="fdn_invalid_number">A szám legfeljebb 20 jegyű lehet</string>
+
+    <!-- ADN related strings -->
+    <!-- Placeholder text displayed while loading the list of SIM contacts -->
+    <string name="simContacts_emptyLoading">Olvasás a SIM kártyáról...</string>
+    <!-- Call settings, string that appears on FDN contact list when there are no contacts on the SIM. -->
+    <string name="simContacts_empty">A SIM kártyán nincsenek fixlistás névjegyek</string>
+    <!-- Call settings: title of the dialog that lets you select contacts from the SIM. -->
+    <string name="simContacts_title">Válassza ki az importálni kívánt névjegyeket</string>
+    <!-- SIM PIN strings -->
+    <!-- Title of "Enable/disable SIM PIN" screen -->
+    <string name="enable_pin">SIM PIN engedélyezése/letiltása</string>
+    <!-- Title of "Change SIM PIN" screen -->
+    <string name="change_pin">SIM PIN módosítása</string>
+    <!-- SIM PIN screen: label for PIN entry widget -->
+    <string name="enter_pin_text">SIM PIN:</string>
+    <!-- SIM PIN screen: label for PIN entry widget -->
+    <string name="oldPinLabel">Régi PIN</string>
+    <!-- SIM PIN screen: label for PIN entry widget -->
+    <string name="newPinLabel">Új PIN</string>
+    <!-- SIM PIN screen: label for PIN entry widget -->
+    <string name="confirmPinLabel">Írja be újra az új PIN-kódot!</string>
+    <!-- SIM PIN screen: error message -->
+    <string name="badPin">A megadott régi PIN kód helytelen. Próbálja újra</string>
+    <!-- SIM PIN screen: error message -->
+    <string name="mismatchPin">A megadott PIN kódok nem egyeznek. Próbálja újra</string>
+    <!-- SIM PIN screen: error message when PIN is too short or too long -->
+    <string name="invalidPin">Írjon be egy 4–8 számjegyből álló PIN kódot</string>
+    <!-- Title of "Disable SIM PIN" screen -->
+    <string name="disable_sim_pin">SIM PIN letiltása</string>
+    <!-- Title of "Enable SIM PIN" screen -->
+    <string name="enable_sim_pin">SIM PIN engedélyezése</string>
+    <!-- SIM PIN screen: progress message displayed while enabling -->
+    <string name="enable_in_progress">Kérem, várjon...</string>
+    <!-- SIM PIN screen: status message displayed in a popup (toast) -->
+    <string name="enable_pin_ok">SIM PIN engedélyezése</string>
+    <!-- SIM PIN screen: status message displayed in a popup (toast) -->
+    <string name="disable_pin_ok">SIM PIN letiltva</string>
+    <!-- SIM PIN screen: error message displayed in a popup (toast) -->
+    <string name="pin_failed">Helytelen PIN kódot adott meg</string>
+    <!-- SIM PIN screen: status message displayed in a popup (toast) -->
+    <string name="pin_changed">SIM PIN sikeresen módosítva</string>
+    <!-- SIM PIN screen: error message displayed in a dialog -->
+    <string name="puk_requested">Helytelen jelszó, SIM kártya blokkolva! PUK2 szükséges</string>
+    <!-- SIM PIN2 strings -->
+    <!-- SIM PIN2 screen: label for PIN entry widget -->
+    <string name="enter_pin2_text">PIN2</string>
+    <!-- SIM PIN2 screen: label for PIN entry widget -->
+    <string name="oldPin2Label">Régi PIN2</string>
+    <!-- SIM PIN2 screen: label for PIN entry widget -->
+    <string name="newPin2Label">Új PIN2-kód</string>
+    <!-- SIM PIN2 screen: label for PIN entry widget -->
+    <string name="confirmPin2Label">Írja be újra az új PIN2-kódot!</string>
+    <!-- SIM PIN2 screen: error message -->
+    <string name="badPuk2">A megadott régi PUK2 kód helytelen. Próbálja újra</string>
+    <!-- SIM PIN2 screen: error message -->
+    <string name="badPin2">A megadott régi PIN2 kód helytelen. Próbálja újra</string>
+    <!-- SIM PIN2 screen: error message -->
+    <string name="mismatchPin2">A megadott PIN2 kódok nem egyeznek. Próbálja újra</string>
+    <!-- SIM PIN2 screen: error message -->
+    <string name="invalidPin2">Írjon be egy 4–8 számjegyből álló PIN2 kódot</string>
+    <!-- SIM PIN2 screen: error message -->
+    <string name="invalidPuk2">Írjon be egy 8 számjegyből álló PUK kódot</string>
+    <!-- SIM PIN2 screen: status message displayed in a popup (toast) -->
+    <string name="pin2_changed">PIN2 sikeresen módosítva</string>
+    <!-- SIM PIN2 screen: label for PUK2 entry widget -->
+    <string name="label_puk2_code">Írja be a PUK2 kódot</string>
+    <!-- SIM PIN2 screen: error message displayed in a dialog -->
+    <string name="fdn_enable_puk2_requested">Helytelen jelszó, módosítsa a PIN2 kódot, és próbálja újra!</string>
+    <!-- SIM PIN2 screen: error message displayed in a dialog -->
+    <string name="puk2_requested">Helytelen jelszó, SIM kártya blokkolva! PUK2 szükséges</string>
+    <!-- SIM PIN screen: button label -->
+    <string name="doneButton">Kész</string>
+    <!-- In-call screen: status label for a conference call -->
+    <string name="caller_manage_header">“%s” konferenciahívás</string>
+    <!-- In-call screen: Button label on "Manage conference" panel -->
+    <string name="caller_manage_manage_done_text">Vissza a híváshoz</string>
+    <!-- Button label on "SIM Missing" screen -->
+    <string name="sim_missing_continueView_text">SIM kártya nélküli munka</string>
+    <!-- Message displayed on "SIM Missing" screen -->
+    <string name="sim_missing_msg_text">Nincs SIM kártya a készülékben. Helyezzen be SIM kártyát</string>
+    <!-- Button label on "SIM Unlock" screen -->
+    <string name="sim_unlock_dismiss_text">Elutasítás</string>
+    <!-- Button label on "SIM Unlock" screen -->
+    <string name="sim_unlock_unlock_text">Feloldás</string>
+    <!-- Progress message displayed on "SIM Unlock" screen -->
+    <string name="sim_unlock_status_text">PIN hitelesítése...</string>
+    <!-- Call settings screen, Set voicemail dialog title -->
+    <string name="voicemail_settings_number_label">Hangposta száma</string>
+    <!-- Card titles -->
+    <!-- In-call screen: status label for a call in the "dialing" state -->
+    <string name="card_title_dialing">Tárcsázás</string>
+    <!-- In-call screen: status label for a re-dialing call -->
+    <string name="card_title_redialing">Újra</string>
+    <!-- In-call screen: status label for a call in progress -->
+    <string name="card_title_in_progress">Aktuális hívás</string>
+    <!-- In-call screen: status label for a conference call -->
+    <string name="card_title_conf_call">Konferenciahívás</string>
+    <!-- In-call screen: status label for an incoming call -->
+    <string name="card_title_incoming_call">Bejövő hívás</string>
+    <!-- In-call screen: status label for an cdma call waiting -->
+    <string name="card_title_cdma_call_waiting">Cdma hívás várakoztatás</string>
+    <!-- In-call screen: status label displayed briefly after a call ends -->
+    <string name="card_title_call_ended">Hívás vége</string>
+    <!-- In-call screen: status label for call that's on hold -->
+    <string name="card_title_on_hold">Tartásban</string>
+    <!-- In-call screen: status label for a call that's in the process of hanging up -->
+    <string name="card_title_hanging_up">Vonal bontása</string>
+    <!-- In-call screen: status label for a call that's in CDMA flash mode -->
+    <string name="card_title_in_call">Hívásban</string>
+    <!-- Notification strings -->
+    <!-- Missed call notification label, used when there's exactly one missed call -->
+    <string name="notification_missedCallTitle">Nem fogadott hívás</string>
+    <!-- Missed call notification label, used when there are two or more missed calls -->
+    <string name="notification_missedCallsTitle">Nem fogadott hívások</string>
+    <!-- Missed call notification message used when there are multiple missed calls -->
+    <string name="notification_missedCallsMsg">
+        <xliff:g id="num_missed_calls">%s</xliff:g> nem fogadott hívás
+    </string>
+    <!-- Missed call notification message used for a single missed call, including
+         the caller-id info from the missed call -->
+    <string name="notification_missedCallTicker">Nem fogadott hívás a következőtől: <xliff:g id="missed_call_from">%s</xliff:g>
+    </string>
+    <!-- The "label" of the in-call Notification for an ongoing call, used
+         as the format string for a Chronometer widget. -->
+    <string name="notification_ongoing_call_format">Aktuális hívás (<xliff:g id="duration">%s</xliff:g>)
+    </string>
+    <!-- The "label" of the in-call Notification for a call that's on hold -->
+    <string name="notification_on_hold">Tartásban</string>
+    <!-- Label for the "Voicemail" notification item, when expanded. -->
+    <string name="notification_voicemail_title">Hangposta</string>
+    <!-- Label for the expanded "Voicemail" notification item,
+         including a count of messages. -->
+    <string name="notification_voicemail_title_count"><xliff:g id="count">%d</xliff:g> új hangüzenet</string>
+    <!-- Message displayed in the "Voicemail" notification item, allowing the user
+         to dial the indicated number. -->
+    <string name="notification_voicemail_text_format">Tárcsázza a(z) <xliff:g id="voicemail_number">%s</xliff:g> számot
+    </string>
+    <!-- Message displayed in the "Voicemail" notification item,
+         indicating that there's no voicemail number available -->
+    <string name="notification_voicemail_no_vm_number">A hangposta száma ismeretlen</string>
+    <!-- Label for the "No service" notification item, when expanded. -->
+    <string name="notification_network_selection_title">Nincs szolgáltatás</string>
+    <!-- Label for the expanded "No service" notification item, including the
+         operator name set by user -->
+    <string name="notification_network_selection_text">A kiválasztott hálózat (<xliff:g id="operator_name">%s</xliff:g>) nem elérhető
+    </string>
+    <!-- In-call screen: call failure message displayed in an error dialog -->
+    <string name="incall_error_power_off">Híváshoz előbb kapcsolja ki a Repülő üzemmódot</string>
+    <!-- In-call screen: call failure message displayed in an error dialog.
+         This string is currently unused (see comments in InCallScreen.java.) -->
+    <string name="incall_error_emergency_only">Nincs regisztrálva a hálózaton</string>
+    <!-- In-call screen: call failure message displayed in an error dialog -->
+    <string name="incall_error_out_of_service">Az adathálózat nem elérhető</string>
+    <!-- In-call screen: call failure message displayed in an error dialog -->
+    <string name="incall_error_no_phone_number_supplied">A hívás nincs elküldve, nem adott meg érvényes számot</string>
+    <!-- In-call screen: call failure message displayed in an error dialog -->
+    <string name="incall_error_call_failed">A hívás nincs elküldve</string>
+    <!-- In-call screen: status message displayed in a dialog when starting an MMI -->
+    <string name="incall_status_dialed_mmi">MMI-szekvencia indítása</string>
+    <!-- In-call screen: status message displayed in a dialog when starting a feature code -->
+    <string name="incall_status_dialed_fc">Funkciókód-szekvencia indítása</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_unknown">Nem támogatott szolgáltatás</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_switch">Nem lehet átkapcsolni a hívásokat</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_separate">Nem lehet a hívást elkülöníteni</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_transfer">Nem lehet átadni a hívást</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_conference">Nem lehet konferenciahívást létrehozni</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_reject">Nem lehet elutasítani a hívást</string>
+    <!-- In-call screen: message displayed in an error dialog -->
+    <string name="incall_error_supp_service_hangup">A hívás(ok) nem oldható(k) fel</string>
+    <!-- Dialog title for the "radio enable" UI for emergency calls -->
+    <string name="emergency_enable_radio_dialog_title">Segélyhívás</string>
+    <!-- Status message for the "radio enable" UI for emergency calls -->
+    <string name="emergency_enable_radio_dialog_message">Rádió bekapcsolása\u2026</string>
+    <!-- Status message for the "radio enable" UI for emergency calls -->
+    <string name="emergency_enable_radio_dialog_retry">Szolgáltatási területen kívül, újabb próbálkozás\u2026</string>
+    <!-- Dialer text on Emergency Dialer -->
+    <!-- Emergency dialer: message displayed in an error dialog -->
+    <string name="dial_emergency_error">A hívás nincs elküldve, a(z) <xliff:g id="non_emergency_number">%s</xliff:g> nem segélyhívó szám!
+    </string>
+    <!-- Emergency dialer: message displayed in an error dialog -->
+    <string name="dial_emergency_empty_error">A hívás nincs elküldve, tárcsázzon egy segélyhívó számot!</string>
+    <!-- Displayed in the text entry box in the dialer when in landscape mode to guide the user
+         to dial using the physical keyboard -->
+    <string name="dialerKeyboardHintText">Tárcsázzon a billentyűzettel</string>
+    <!-- Hint text displayed in the "digits" field at the top of the
+         in-call DTMF dialpad.  (This hint reminds the user that the
+         dialpad is there to generate tones, not to add a new call.) -->
+    <string name="dtmfDialpadHintText">DTMF-billentyűzet</string>
+    <!-- Text displayed in the "sliding drawer handle" that you use to
+         open the in-call DTMF dialpad. -->
+    <string name="dtmfDialpadHandleLabel">Tárcsázó</string>
+    <!-- Text displayed on the in-call screen's "touch lock" overlay,
+         instructing the user that they need to double-tap to unlock the
+         screen. -->
+    <string name="touchLockText">Érintse meg duplán a feloldáshoz</string>
+    <!-- Text for the onscreen "Answer" button, instructing the user that
+         they need to double-tap to answer the incoming call. -->
+    <string name="onscreenAnswerText">Érintse meg kétszer a válaszhoz</string>
+    <!-- Text for the onscreen "Decline" button -->
+    <string name="onscreenRejectText">Érintse meg kétszer az elutasításhoz</string>
+    <!-- Text for the onscreen "Hold" button -->
+    <string name="onscreenHoldText">Tart</string>
+    <!-- Text for the onscreen "Hold" button in the "Unhold" state -->
+    <string name="onscreenUnholdText">Beléptet</string>
+    <!-- Text for the onscreen "End call" button -->
+    <string name="onscreenEndCallText">Befejezés</string>
+    <!-- Text for the onscreen "Show Dialpad" button -->
+    <string name="onscreenShowDialpadText">Billentyűzet</string>
+    <!-- Text for the onscreen "Hide Dialpad" button -->
+    <string name="onscreenHideDialpadText">Elrejt</string>
+    <!-- Text for the onscreen "Speaker" button -->
+    <string name="onscreenSpeakerText">Hangszoró</string>
+    <!-- Text for the onscreen "Mute" button -->
+    <string name="onscreenMuteText">Mikrofon ki</string>
+    <!-- Text for the onscreen "Bluetooth" button -->
+    <string name="onscreenBluetoothText">Bluetooth</string>
+    <!-- Text for the onscreen "Add call" button -->
+    <string name="onscreenAddCallText">Hívás hozzáadás</string>
+    <!-- Text for the onscreen "Merge calls" button -->
+    <string name="onscreenMergeCallsText">Hívások egyesítése</string>
+    <!-- Text for the onscreen "Swap calls" button -->
+    <string name="onscreenSwapCallsText">Átvált</string>
+    <!-- Text for the onscreen "Manage calls" button -->
+    <string name="onscreenManageCallsText">Hívások kezelése</string>
+    <!-- Text for the onscreen "Manage conference" button -->
+    <string name="onscreenManageConferenceText">Kezelés</string>
+    <!-- Menu item label in SIM Contacts: Import a single contact entry from the SIM card -->
+    <string name="importSimEntry">Importálás</string>
+    <!-- Menu item label in SIM Contacts: Import all contact entries from the SIM card -->
+    <string name="importAllSimEntries">Összes importálása</string>
+    <!-- SIM Contacts: status message displayed while importing card -->
+    <string name="importingSimContacts">SIM-névjegyek importálása</string>
+    <!-- Import a single contact entry from contacts to the SIM card -->
+    <string name="importToFDNfromContacts">Importálás a névjegyzékből</string>
+    <!-- Hearing aid settings -->
+    <string name="hac_mode_title">Hallókészülék-kompatibilitás</string>
+    <string name="hac_mode_summary">Hallókészülék-kompatibilitás engedélyezése</string>
+    <!-- Service option entries.  -->
+    <string-array name="tty_mode_entries">
+        <item>TTY Ki</item>
+        <item>TTY Teljes</item>
+        <item>TTY HCO</item>
+        <item>TTY VCO</item>
+    </string-array>
+    <!-- Label for ERI text widget, shown in list of all gadgets -->
+    <string name="eri_text_label">ERI text</string>
+    <!-- Dtmf tones settings -->
+    <!-- Title for the DTMF Tones options displayed in Call Settings -->
+    <string name="dtmf_tones_title">DTMF-hangok</string>
+    <!-- Summary for the DTMF Tones options displayed in Call Settings -->
+    <string name="dtmf_tones_summary">DTMF-hangok hosszúságának beállítása</string>
+    <!-- Options displayed as part of DTMF Tones in Call Settings -->
+    <string-array name="dtmf_tone_entries">
+        <item>Normál</item>
+        <item>Hosszú</item>
+    </string-array>
+    <!-- Title for the dialog used to display CDMA DisplayInfo -->
+    <string name="network_message">Hálózati üzenet</string>
+    <!-- OTA-specific strings -->
+    <!-- Title shown on OTA screen -->
+    <string name="ota_title_activate">Telefon aktiválása</string>
+    <!-- Message displayed on the OTA activation screen. -->
+    <string name="ota_touch_activate">A telefonszolgáltatás aktiválásához speciális hívás szükséges.\n\nAz \u201CAktivál\u201D gomb megnyomása után kövesse az útmutatást a telefon aktiválásához</string>
+
+    <!-- Message displayed on the OTA activation screen -->
+    <string name="ota_touch_activate_new">Speciális hívások használatához és mobil adathálózati kapcsolat létesítéséhez érintse meg az \u201CAktivál\u201D gombot</string>
+    <!-- Title of skip activation dialog -->
+    <string name="ota_skip_activation_dialog_title">Átugorja az aktiválást?</string>
+    <!-- Message displayed in skip activation dialog  -->
+    <string name="ota_skip_activation_dialog_message">Amíg nem aktiválja a telefont, a speciális hívások és a mobil adathálózati kapcsolat nem áll rendelkezésre. A Wi-Fi-hálózatok használhatók. A készülék minden bekapcsolásakor kérdés jelenik meg a telefon aktiválására vonatkozóan</string>
+    <!-- Label shown on dialog button that allows the user to skip activation -->
+    <string name="ota_skip_activation_dialog_skip_label">Átugrik</string>
+    <!-- Label shown on dialog button that continues with activation -->
+    <string name="ota_skip_activation_dialog_continue_label">Aktivál</string>
+
+    <!-- Button label within the OTA activation screen -->
+    <string name="ota_activate">Aktivál</string>
+    <!-- Title text shown when phone activation is successful -->
+    <string name="ota_title_activate_success">Telefon aktiválva</string>
+    <!-- Title text shown on screen where activation fails -->
+    <string name="ota_title_problem_with_activation">Aktiválás sikertelen</string>
+    <!-- Message displayed on the OTA listen screen. This message should be short to ensure the dialer fits. -->
+    <string name="ota_listen">Hallgassa meg az útmutatást a telefon aktiválásához. Ne bontsa a vonalat, amíg megerősítést nem kap a telefon aktválásáról</string>
+
+    <!-- Button label within the OTA listen screen -->
+    <string name="ota_dialpad">Billentyűzet</string>
+    <!-- Button label within the OTA listen screen -->
+    <string name="ota_speaker">Hangszoró.</string>
+    <!-- String to be displayed on OTA listen screen once user has selected the
+         correct option to begin provisioning -->
+    <string name="ota_progress">Kérem, várjon! A telefon programozása folyamatban...</string>
+    <!-- String to display within the OTA Fail Notice dialog -->
+    <string name="ota_failure">Programozás sikertelen</string>
+    <!-- String to be displayed on the OTA Fail/Success screen upon successful provisioning -->
+    <string name="ota_successful">Telefon aktiválva. A szolgáltatás beindítása 15 percet is igénybe vehet</string>
+    <!-- String to be displayed on the OTA Fail/Success screen upon unsuccessful provisioning -->
+    <string name="ota_unsuccessful">Nem sikerült aktiválni a telefont.
+    \nLehet, hogy olyan helyet kell keresnie, ahol jobb a vétel (az ablak közelében vagy a szabadban).
+    \n\nPróbálja újra, vagy további lehetőségekért hívja az ügyfélszolgálatot</string>
+    <!-- String to display within the OTA SPC Fail Notice dialog -->
+    <string name="ota_spc_failure">Túl sok SPC Hiba.</string>
+    <!-- Button label in OTA listen screen that cancels activation and goes to the previous screen -->
+    <string name="ota_call_end">Vissza</string>
+    <!-- Button label shown on OTA error screen to allow the user to try again -->
+    <string name="ota_try_again">Próbálja újra</string>
+    <!-- Button label shown on OTA screens that have a next screen -->
+    <string name="ota_next">Következő</string>
+    <!-- Button label shown on OTA screens to go back to the previous screen -->
+    <string name="ota_back">Vissza</string>
+    <!-- Emergency Callback Mode (ECM) -->
+    <string name="ecm_exit_dialog">Ecm Kilépés Ablak</string>
+    <!-- ECM: Status bar notification message -->
+    <string name="phone_entered_ecm_text">Vész visszahívási mód bekapcsolva</string>
+    <!-- ECM: Notification title -->
+    <string name="phone_in_ecm_notification_title">Vész visszahívási mód</string>
+    <!-- ECM: Notification body -->
+    <string name="phone_in_ecm_call_notification_text">Adatkapcsolat letiltva</string>
+    <plurals name="phone_in_ecm_notification_time">
+        <!-- number of minutes is one -->
+        <item quantity="one"><xliff:g id="count">%s</xliff:g> percig nincs adat kapcsolat
+        </item>
+        <!-- number of minutes is not equal to one -->
+        <item quantity="other"><xliff:g id="count">%s</xliff:g>  percig nincs adat kapcsolat
+        </item>
+    </plurals>
+    <!-- ECM: Dialog box message for exiting from the notifications screen -->
+    <plurals name="alert_dialog_exit_ecm">
+        <!-- number of minutes is one -->
+        <item quantity="one">A telefon vész visszahívás módban van <xliff:g id="count">%s</xliff:g> percig. Ebben az üzemmódban az adatkapcsolatot használó alkalmazások nem működnek. Ki akar most lépni?
+        </item>
+        <!-- number of minutes is not equal to one -->
+        <item quantity="other">TA telefon vész visszahívás módban van <xliff:g id="count">%s</xliff:g> percig. Ebben az üzemmódban az adatkapcsolatot használó alkalmazások nem működnek. Ki akar most lépni?
+        </item>
+    </plurals>
+    <!-- ECM: Dialog box message for exiting from any other app -->
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <!-- number of minutes is one -->
+        <item quantity="one">Vész visszahívási módban a kiválasztot funkció nemhasználható. A telefon ebben a módban marad még <xliff:g id="count">%s</xliff:g> percig. Ki akar most lépni?
+        </item>
+        <!-- number of minutes is not equal to one -->
+        <item quantity="other">Vész visszahívási módban a kiválasztot funkció nemhasználható. A telefon ebben a módban marad még <xliff:g id="count">%s</xliff:g> percig. Ki akar most lépni?
+        </item>
+    </plurals>
+    <!-- ECM: Dialog box message while in emergency call -->
+    <string name="alert_dialog_in_ecm_call">A kiválasztott művelet nem érhető el vészhívási üzemmódban</string>
+    <!-- ECM: Progress text -->
+    <string name="progress_dialog_exiting_ecm">Kilépés vészhívási módból</string>
+    <!-- ECM: ECM exit dialog choice -->
+    <string name="alert_dialog_yes">Igen</string>
+    <!-- ECM: ECM exit dialog choice -->
+    <string name="alert_dialog_no">Nem</string>
+    <!-- ECM: ECM exit dialog choice -->
+    <string name="alert_dialog_dismiss">Mégse</string>
+
+    <!-- Voicemail dialog title -->
+    <string name="voicemail_settings">Hangposta</string>
+
+    <!-- String to display in voicemail number summary when no voicemail num is set -->
+    <string name="voicemail_number_not_set">(Nincs beállítva)</string>
+    <!-- Voicemail service pref title -->
+    <string name="voicemail_provider">Hangposta</string>
+    <!-- Prefix on the voicemail settings preference. The full string will be Settings for <provider name> -->
+    <string name="voicemail_settings_for"><xliff:g id="provider_name">%s</xliff:g> beállításai
+    </string>
+    <!-- Title displayed above settings coming after voicemail in the call features screen -->
+    <string name="other_settings">Egyéb hívásbeállítások</string>
+    <!-- Label for onscreen "Dial" button used in the EmergencyDialer -->
+    <string name="dial_button_label">Tárcsázás</string>
+    <!-- Title displayed in the overlay when a call is placed using a 3rd party provider.
+         ^1 is the localized name of the provider obtained from the package manager.
+         ^2 is a phone number.
+         E.g: "Calling via Google Voice\n 1-800-666-1234"
+    -->
+    <string name="calling_via_template">Calling via ^1\n<b>^2</b>
+    </string>
+    <!-- Onscreen hints used for various states of the SlidingTab
+         widget used for incoming calls. -->
+    <eat-comment />
+    <!-- Incoming call hint: drag the tab right to answer -->
+    <string name="slide_to_answer">Húzzá jobbra a hívás fogadásához</string>
+    <!-- Incoming call hint: drag the tab left to silence ringer -->
+    <string name="slide_to_silence">Húzza balra a némításhoz</string>
+    <!-- Incoming call hint: drag the tab left to decline the incoming call -->
+    <string name="slide_to_decline">Húzza balra az elutasításhoz</string>
+    <!-- Incoming call hint: drag the tab right to answer and hold the active call -->
+    <string name="slide_to_answer_and_hold">Húzza jobbra a hívás fogadásához és\naz aktív hívás tartásba helyezéséhez.</string>
+    <!-- Incoming call hint: drag the tab right to answer and end the active call -->
+    <string name="slide_to_answer_and_end_active">Húzza jobbra a hívás fogadásához és\naz aktív hívás befelyezéséhez.</string>
+    <!-- Incoming call hint: drag the tab right to answer and end the call on hold -->
+    <string name="slide_to_answer_and_end_onhold">Húzza jobbra a hívás fogadásához és\na tartásban lévő hívás befelyezéséhez.</string>
+    <!-- Incoming call hint shown on tab (must be kept very short): answer incoming call -->
+    <string name="slide_to_answer_hint">Hívás fogadása</string>
+    <!-- Incoming call hint shown on tab (must be kept very short): decline incoming call -->
+    <string name="slide_to_decline_hint">Hívás elutasítása</string>
+    <!-- added by cytown@gmail.com -->
+    <string name="notification_ongoing_calling_format">(<xliff:g id="duration">%s</xliff:g>) hív
+    </string>
+    <string name="advanced_setting">Advanced Settings V.30.1</string>
+    <string name="vibrate_outgoing">Rezgés válaszadásnál</string>
+    <string name="vibrate_outgoing_sum">Rezeg a telefon hívás fogadásakor</string>
+    <string name="vibrate_45">Rezgés 45 másodpercenként</string>
+    <string name="vibrate_45_sum">Hívás közben 45 másodpercenként rezeg a készülék</string>
+    <string name="vibrate_hangup">Rezgés hívás befejezésekor</string>
+    <string name="vibrate_hangup_sum">Rezgés a hívás befejezésénél</string>
+    <string name="screen_awake">Képernyő bekapcsolva</string>
+    <string name="screen_awake_sum">A képernyő a hívás teljes időtartama alatt bekapcsolva marad</string>
+    <string name="always_proximity">mindig használja a közelség szenzort</string>
+    <string name="always_proximity_sum">Engedélyezze, hogy a közelség szenzor lezárhassa a képernyőt akkor is ha a telefon vizszintesen van.</string>
+    <string name="led_notify_call">Nemfogadott hívás LED jelzés</string>
+    <string name="led_notify_call_sum">A LED villogni fog nemfogadott hívás esetén</string>
+    <string name="led_show_organ">"Nick/cég név"</string>
+    <string name="led_show_organ_sum">"Nick név/cég megjelenítésre kerül hívás közben."</string>
+    <string name="vibrate_call_waiting">Rezgés hívásvárakoztatásnál</string>
+    <string name="vibrate_call_waiting_sum">Hívásvárakoztatást a készülék rezgéssel jelzi</string>
+    <string name="return_home">Minidg vissza a hícáslistába</string>
+    <string name="return_home_sum">Hívás végén mindig a híváslistába térjen vissza a készülék.</string>
+    <string name="menu_addBlackList">Hozzáadás a blokkolt számok listájához</string>
+    <string name="black_list">Blokkolt számok</string>
+    <string name="black_list_sum">A listába szereplő számokról érkező hívás elutasításra kerül.</string>
+    <string name="add_black">Szám hozzáadása</string>
+    <string name="remove_black">%s eltávolítása a listából</string>
+    <string name="turn_silence">Némítás fordítással</string>
+    <string name="turn_silence_sum">A készülék megfordítása némítja a csöngést.</string>
+    <string name="left_hand">Balkezes üzemmód</string>
+    <string name="left_hand_sum">Balkézben tartott telefon esetén. Újraindítás szükséges!.</string>
+    <string name="set_force_touch">Érintő interface a hívás közben</string>
+    <string name="set_force_touch_sum">Hívás közben az érintő interface vezérlése a közelség szenzorral</string>
+
+    <string name="per_change_mobile_network">Hálózat változtatás (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">A jogosultsággal rendelkező alkalmazások bármikor válthatnak 2G és 3G adatkapcsolati mód között. A 3G gyorsabb, de jobban terheli az elemet és több költsége is lehet az adatforgalomnak.</string>
+    <string name="phone_number_label">Saját szám</string>
+    <string name="phone_number_summary">A készülék saját számának a beállítása</string>
+</resources>
