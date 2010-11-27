@@ -64,7 +64,7 @@
     <string name="menu_endCall" msgid="2142958047156634241">"Завершить вызов"</string>
     <string name="menu_swapCalls" msgid="1548647524816600795">"Другой вызов"</string>
     <string name="menu_mergeCalls" msgid="6414754941392181303">"Соединить"</string>
-    <string name="menu_addCall" msgid="7829255032442131930">"+ вызов"</string>
+    <string name="menu_addCall" msgid="7829255032442131930">"Добавить вызов"</string>
     <string name="menu_manageConference" msgid="3770984362002266733">"Управление конференц-связью"</string>
     <string name="menu_showDialpad" msgid="5198200217528406980">"Показать кнопки"</string>
     <string name="menu_hideDialpad" msgid="2733813546746296771">"Скрыть кнопки"</string>
