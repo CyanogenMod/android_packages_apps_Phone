@@ -216,6 +216,9 @@
     <string name="roaming_disable" msgid="1843417228755568110">"ローミング時にデータサービスに接続する"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"データローミングをオフにしてホームネットワークを離れたため、データ接続が切断されました。"</string>
     <string name="roaming_warning" msgid="7820963598559553967">"データローミングを許可すると、ローミング料金が発生する場合があります。"</string>
+    <string name="mvno_roaming">国内データローミング</string>
+    <string name="mvno_roaming_summary">国内で異なるネットワークプロバイダを利用可能にします。</string>
+    <string name="mvno_roaming_warning">あなたのサービスプロバイダについて同一国内でデータローミングを可能にしますか？いくつかの仮想ネットワークプロバイダはデータアクセスのためにこの設定を必要とします。あなたのプロバイダが国内ローミングに課金を請求する場合、このオプションは有効にしないでください。このオプションは有効にした後、再起動するか機内モードをトグルするまで機能が働きません。</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTSオプション"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMAオプション"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"データ使用"</string>
@@ -626,6 +629,8 @@
     <string name="vibrate_hangup_sum">通話を終了した時にバイブレーションする</string>
     <string name="screen_awake">スクリーン維持</string>
     <string name="screen_awake_sum">着信中は通常時より長くスクリーンオンを維持する</string>
+    <string name="always_proximity">常に近接センサを有効にする</string>
+    <string name="always_proximity_sum">端末が水平であっても近接センサによりスクリーンをロックさせる</string>
     <string name="led_notify_call">不在着信をLEDで通知</string>
     <string name="led_notify_call_sum">不在着信がある場合にLEDを点滅して通知する</string>
     <string name="led_show_organ">会社名表示</string>
