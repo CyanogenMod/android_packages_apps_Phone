@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="contactsIconLabel">Contactes</string>
+  <string name="contactsFavoritesLabel">Preferits</string>
+  <string name="dialerIconLabel">Marcador</string>
+  <string name="emergencyDialerIconLabel">Emergència</string>
+  <string name="phoneIconLabel">Telèfon</string>
+  <string name="recentCallsIconLabel">Registre de trucades</string>
+  <string name="fdnListLabel">Llista FDN</string>
+  <string name="unknown">Desconegut</string>
+  <string name="private_num">Número privat</string>
+  <string name="payphone">Telèfon públic</string>
+  <string name="onHold">En espera</string>
+  <string name="ongoing">Trucada actual</string>
+  <string name="callFailed_userBusy">Ocupat</string>
+  <string name="callFailed_congestion">Xarxa ocupada</string>
+  <string name="callFailed_noSignal">Sense senyal</string>
+  <string name="callFailed_limitExceeded">S\'ha superat el límit ACM</string>
+  <string name="callFailed_powerOff">Ràdio apagada</string>
+  <string name="callFailed_simError">No hi ha targeta o error SIM</string>
+  <string name="callFailed_outOfService">Fora de l\'àrea de servei</string>
+  <string name="callFailed_fdn_only">Les trucades sortints estan restringides per l\'FDN.</string>
+  <string name="callFailed_cb_enabled">No podeu fer trucades sortints quan la restricció de trucades està activada.</string>
+  <string name="callFailed_dsac_restricted">Totes les trucades estan restringides pel control d\'accés.</string>
+  <string name="callFailed_dsac_restricted_emergency">Les trucades d\'emergència estan restringides pel control d\'accés.</string>
+  <string name="callFailed_dsac_restricted_normal">Les trucades normals estan restringides pel control d\'accés.</string>
+  <string name="callFailed_cdma_lockedUntilPowerCycle">CDMA: Telèfon bloquejat fins el cicle d\'alimentació.</string>
+  <string name="callFailed_cdma_drop">CDMA: Trucada perduda.</string>
+  <string name="callFailed_cdma_intercept">CDMA: Trucada interceptada.</string>
+  <string name="callFailed_cdma_reorder">CDMA: reordena.</string>
+  <string name="callFailed_cdma_SO_reject">CDMA: rebuig de l\'opció de servei.</string>
+  <string name="callFailed_cdma_retryOrder">CDMA: Reintenta l\'ordre.</string>
+  <string name="callFailed_cdma_accessFailure">CDMA: Error d\'accés.</string>
+  <string name="callFailed_cdma_preempted">CDMA: Anul·lada.</string>
+  <string name="callFailed_cdma_notEmergency">Només es poden fer trucades d\'emergència.</string>
+  <string name="confCall">Conferència</string>
+  <string name="call_lost">S\'ha perdut la trucada.</string>
+  <string name="retry">Reintenta</string>
+  <string name="call_lost_title">Trucada perduda</string>
+  <string name="mmiStarted">Trucada perduda</string>
+  <string name="ussdRunning">S\'està executant codi USSD…</string>
+  <string name="mmiCancelled">S\'ha cancel·lat el codi MMI</string>
+  <string name="cancel">Cancel·la</string>
+  <string name="menu_speaker">Altaveu</string>
+  <string name="menu_bluetooth">Bluetooth</string>
+  <string name="menu_mute">Silenci</string>
+  <string name="menu_hold">Mantén</string>
+  <string name="menu_endCall">Finalitza la trucada</string>
+  <string name="menu_swapCalls">Intercanvia les trucades</string>
+  <string name="menu_mergeCalls">Combina les trucades</string>
+  <string name="menu_addCall">Afegeix una trucada</string>
+  <string name="menu_manageConference">Gestiona la conferència telefònica</string>
+  <string name="menu_showDialpad">Mostra el teclat</string>
+  <string name="menu_hideDialpad">Amaga el teclat</string>
+  <string name="menu_answerAndHold">Mantén la trucada\n&amp; resposta actual</string>
+  <string name="menu_answerAndEnd">Fi de la trucada\nactual i respon</string>
+  <string name="ok">D\'acord</string>
+  <string name="menuButtonHint">Prem Menú per a les opcions de trucada.</string>
+  <string name="menuButtonKeyboardDialHint">Premeu Menú per a opcions de trucada \u0020• \u0020Feu servir el teclat per marcar</string>
+  <string name="menu_answer">Resp</string>
+  <string name="menu_ignore">Ignora</string>
+  <string name="wait_prompt_str">Voleu enviar els tons següents?\n</string>
+  <string name="pause_prompt_str">S\'estan enviant els tons\n</string>
+  <string name="send_button">Envia</string>
+  <string name="pause_prompt_yes">Sí</string>
+  <string name="pause_prompt_no">No</string>
+  <string name="wild_prompt_str">Reemplaça el caràcter salvatge amb</string>
+  <string name="no_vm_number">No es troba el número del contestador</string>
+  <string name="no_vm_number_msg">No hi ha cap número de contestador a la targeta SIM.</string>
+  <string name="add_vm_number_str">Afegeix un número</string>
+  <string name="dialer_emptyListWorking">S\'està carregant</string>
+  <string name="enterPin">Escriu el codi PIN per desbloquejar la targeta SIM.</string>
+  <string name="pinUnlocked">S\'ha desbloquejat la SIM</string>
+  <string name="enterNewPin">Codi PIN de la SIM nou</string>
+  <string name="verifyNewPin">Escriu de nou el codi PIN de la SIM per confirmar</string>
+  <string name="verifyFailed">Els codis PIN de la SIM que has marcat no coincideixen. Proveu de nou.</string>
+  <string name="enterPuk">Escriu el codi PUK per desbloquejar la targeta SIM</string>
+  <string name="badPuk">Codi PUK incorrecte!</string>
+  <string name="buttonTxtContinue">Continua</string>
+  <string name="puk_unlocked">La targeta SIM s\'ha desbloquejat. S\'està desbloquejant el telèfon…</string>
+  <string name="label_ndp">PIN de desbloqueig de xarxa de la SIM</string>
+  <string name="sim_ndp_unlock_text">Desbloqueja</string>
+  <string name="sim_ndp_dismiss_text">Rebutja</string>
+  <string name="requesting_unlock">S\'està sol·licitant el desbloqueig de xarxa…</string>
+  <string name="unlock_failed">Ha fallat la sol·licitud de desbloqueig de xarxa.</string>
+  <string name="unlock_success">Ha fallat el desbloqueig de xarxa.</string>
+  <string name="imei">IMEI</string>
+  <string name="meid">MEID</string>
+  <string name="labelGSMMore">Paràmetres de trucada GSM</string>
+  <string name="labelCDMAMore">Paràmetres de trucada CDMA</string>
+  <string name="apn_settings">Noms dels punts d\'accés</string>
+  <string name="settings_label">Paràmetres de xarxa</string>
+  <string name="voicemail">Contestador</string>
+  <string name="voicemail_abbreviated">C.Aut.:</string>
+  <string name="networks">Operadors de xarxa</string>
+  <string name="call_settings">Paràmetres de trucada</string>
+  <string name="additional_gsm_call_settings">Paràmetres addicionals</string>
+  <string name="sum_gsm_call_settings">Paràmetres addicionals de trucades GSM</string>
+  <string name="additional_cdma_call_settings">Paràmetres addicionals de trucades CDMA</string>
+  <string name="sum_cdma_call_settings">Paràmetres addicionals de trucades CDMA</string>
+  <string name="labelNwService">Paràmetres de servei de xarxa</string>
+  <string name="labelCallerId">Identificador de la trucada</string>
+  <string name="sum_hide_caller_id">Número ocult a les trucades sortints</string>
+  <string name="sum_show_caller_id">Número visible a les trucades sortints</string>
+  <string name="sum_default_caller_id">Fes servir les opcions per defecte de l\'operador per mostrar el meu número a les trucades sortints</string>
+  <string name="labelCW">Trucada en espera</string>
+  <string name="sum_cw_enabled">Informa\'m de les trucades entrants durant una trucada</string>
+  <string name="sum_cw_disabled">No m\'informis de trucades entrants durant una trucada</string>
+  <string name="call_forwarding_settings">Paràmetres de la transferència de trucades</string>
+  <string name="labelCF">Transfereix la trucada</string>
+  <string name="labelCFU">Transfereix sempre</string>
+  <string name="messageCFU">Fes servir sempre aquest número</string>
+  <string name="sum_cfu_enabled_indicator">S\'estan desviant totes les trucades</string>
+  <string name="sum_cfu_enabled">S\'estan desviant totes les trucades a {0}</string>
+  <string name="sum_cfu_enabled_no_number">El número no està disponible</string>
+  <string name="sum_cfu_disabled">Inhabilitat</string>
+  <string name="labelCFB">Transfereix si està ocupat</string>
+  <string name="messageCFB">Número quan estigui ocupat</string>
+  <string name="sum_cfb_enabled">S\'està desviant a {0}</string>
+  <string name="sum_cfb_disabled">Inhabilitat</string>
+  <string name="disable_cfb_forbidden">La teva companyia no permet desactivar la transferència de trucades quan el telèfon està ocupat.</string>
+  <string name="labelCFNRy">Transfereix quan no hi hagi resposta</string>
+  <string name="messageCFNRy">Número quan no hi hagi resposta</string>
+  <string name="sum_cfnry_enabled">S\'està transferint a {0}</string>
+  <string name="sum_cfnry_disabled">Inhabilitat</string>
+  <string name="disable_cfnry_forbidden">El seu proveïdor no suporta el desviament de trucades quan el seu telèfon no respon.</string>
+  <string name="labelCFNRc">Desviar quan està fora de cobertura</string>
+  <string name="messageCFNRc">Nombre de telèfon quan està fora de cobertura</string>
+  <string name="sum_cfnrc_enabled">S\'està desviant a {0}</string>
+  <string name="sum_cfnrc_disabled">Deshabilitat</string>
+  <string name="disable_cfnrc_forbidden">El seu proveïdor no suporta la deshabilitació del desviament de trucada quan el seu telèfon és fora de cobertura.</string>
+  <string name="updating_title">Paràmetres de trucada</string>
+  <string name="error_updating_title">Error de preferències de trucada</string>
+  <string name="reading_settings">S\'estan llegint els paràmetres…</string>
+  <string name="updating_settings">S\'estan actualitzant els paràmetres…</string>
+  <string name="reverting_settings">S\'estan desfent els paràmetres…</string>
+  <string name="response_error">Resposta inesperada de la xarxa.</string>
+  <string name="exception_error">Error de xarxa o de targeta SIM.</string>
+  <string name="radio_off_error">Engegueu la ràdio abans de veure aquests paràmetres.</string>
+  <string name="close_dialog">D\'acord</string>
+  <string name="enable">Habilita</string>
+  <string name="disable">Inhabilita</string>
+  <string name="change_num">Actualitza</string>
+  <string name="vm_save_number">Desa el número del contestador</string>
+  <string name="vm_changed">S\'ha canviat el número del contestador.</string>
+  <string name="vm_change_failed">No s\'ha canviat el número del contestador.\nContacteu amb el vostre proveïdor si el problema persisteix.</string>
+  <string name="fw_change_failed">No s\'ha canviat el número de transferència.\nContacteu amb el vostre proveïdor si el problema persisteix.</string>
+  <string name="fw_get_in_vm_failed">No s\'ha pogut obtenir i desar els paràmetres de la transferència de trucada actual.\nVols canviar al proveïdor nou igualment?</string>
+  <string name="no_change">No s\'ha fet cap canvi.</string>
+  <string name="sum_voicemail_choose_provider">Tria el servei de contestador</string>
+  <string name="voicemail_default">El meu proveïdor</string>
+  <string name="mobile_networks">Paràmetres de la xarxa mòbil</string>
+  <string name="label_available">Xarxes disponibles</string>
+  <string name="load_networks_progress">S\'està cercant…</string>
+  <string name="empty_networks_list">No s\'ha trobat cap xarxa.</string>
+  <string name="search_networks">Cerca xarxes</string>
+  <string name="network_query_error">S\'ha produït un error en cercar xarxes.</string>
+  <string name="register_on_network">S\'està registrant a <xliff:g id="network">%s</xliff:g>\u2026</string>
+  <string name="not_allowed">La vostra targeta SIM no permet la connexió a aquesta xarxa.</string>
+  <string name="connect_later">No es pot connectar a aquesta xarxa ara mateix. Proveu més tard.</string>
+  <string name="registration_done">S\'ha registrat a la xarxa.</string>
+  <string name="sum_carrier_select">Tria un operador de xarxa</string>
+  <string name="sum_search_networks">Cerca totes les xarxes disponibles</string>
+  <string name="select_automatically">Selecciona automàticament</string>
+  <string name="sum_select_automatically">Selecciona automàticament la xarxa preferida</string>
+  <string name="register_automatically">Registrament automàtic...</string>
+  <string name="preferred_network_mode_title">Mode de xarxa</string>
+  <string name="preferred_network_mode_summary">Canvia el mode d\'operació de la xarxa</string>
+  <string name="preferred_network_mode_dialogtitle">Mode de xarxa preferit</string>
+  <string name="data_enabled">Dades habilitades</string>
+  <string name="data_enable_summary">Habilita l\'accés a dades a través de la xarxa mòbil</string>
+  <string name="roaming">Dades en itinerància</string>
+  <string name="roaming_enable">Connecta\'t al servei de dades en itinerància</string>
+  <string name="roaming_disable">Disable data services when roaming</string>
+  <string name="roaming_reenable_message">Has perdut connectivitat perquè has abandonat la teva xarxa amb la itinerància desactivada.</string>
+  <string name="roaming_warning">Vols permetre la itinerància de dades? Et pot augmentar la factura!</string>
+  <string name="gsm_umts_options">Opcions GSM/UMTS</string>
+  <string name="cdma_options">Opcions CDMA</string>
+  <string name="throttle_data_usage">Ús de dades</string>
+  <string name="throttle_settings_title">Política del proveïdor de dades</string>
+  <string name="throttle_current_usage">Dades utilitzades al període actual</string>
+  <string name="throttle_time_frame">Període d\'ús de dades</string>
+  <string name="throttle_rate">Política de velocitat de dades</string>
+  <string name="throttle_help">Més informació</string>
+  <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) de <xliff:g id="used">%3$s</xliff:g> màxim període\nEl proper període comença d\'aquí <xliff:g id="used">%4$d</xliff:g> dies (<xliff:g id="used">%5$s</xliff:g>)</string>
+  <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) de <xliff:g id="used">%3$s</xliff:g> període màxim</string>
+  <string name="throttle_data_rate_reduced_subtext"><xliff:g id="used">%1$s</xliff:g> màxim excedit\nVelocitat reduïda a <xliff:g id="used">%2$d</xliff:g> Kb/s</string>
+  <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A del cicle transcorregut\nEl proper període comença d\'aquí <xliff:g id="used">%2$d</xliff:g> dies (<xliff:g id="used">%3$s</xliff:g>)</string>
+  <string name="throttle_rate_subtext">Volum de dades reduït a <xliff:g id="used">%1$d</xliff:g> Kb/s quan s\'excedeix el límit de dades</string>
+  <string name="throttle_help_subtext">Més informació sobre la política d\'ús del seu proveïdor de telefonia</string>
+  <string name="cdma_cell_broadcast_sms">Xarxa mòbil de difusió SMS</string>
+  <string name="cell_broadcast_sms">Xarxa mòbil de difusió SMS</string>
+  <string name="enable_disable_cell_bc_sms">Xarxa mòbil de difusió SMS</string>
+  <string name="cell_bc_sms_enable">Xarxa mòbil de difusió SMS activa</string>
+  <string name="cell_bc_sms_disable">Xarxa mòbil de difusió SMS inactiva</string>
+  <string name="cb_sms_settings">Paràmetres de la xarxa mòbil de difusió SMS</string>
+  <string name="enable_disable_emergency_broadcast">Xarxa mòbil de difusió d\'emergència</string>
+  <string name="emergency_broadcast_enable">Xarxa mòbil de difusió d\'emergència activa</string>
+  <string name="emergency_broadcast_disable">Xarxa mòbil de difusió d\'emergència inactiva</string>
+  <string name="enable_disable_administrative">Administració</string>
+  <string name="administrative_enable">Administració habilitada</string>
+  <string name="administrative_disable">Administratiu deshabilitat</string>
+  <string name="enable_disable_maintenance">Manteniment</string>
+  <string name="maintenance_enable">Manteniment activat</string>
+  <string name="maintenance_disable">Manteniment desactivat</string>
+  <string name="general_news_settings">Notícies generals</string>
+  <string name="bf_news_settings">Notícies empresarials i de finances</string>
+  <string name="sports_news_settings">Notícies d\'esports</string>
+  <string name="entertainment_news_settings">Notícies d\'entreteniment</string>
+  <string name="enable_disable_local">Local</string>
+  <string name="local_enable">Notícies locals activades</string>
+  <string name="local_disable">Notícies locals desactivades</string>
+  <string name="enable_disable_regional">Regional</string>
+  <string name="regional_enable">Notícies regionals activades</string>
+  <string name="regional_disable">Notícies regionals desactivades</string>
+  <string name="enable_disable_national">Nacional</string>
+  <string name="national_enable">Notícies nacionals activades</string>
+  <string name="national_disable">Notícies nacionals desactivades</string>
+  <string name="enable_disable_international">Internacional</string>
+  <string name="international_enable">Notícies internacionals activades</string>
+  <string name="international_disable">Notícies internacionals desactivades</string>
+  <string name="list_language_title">Idioma</string>
+  <string name="list_language_summary">Tria l\'idioma de les notícies</string>
+  <string name="list_language_dtitle">Idiomes</string>
+  <string name="enable_disable_local_weather">Oratge local</string>
+  <string name="local_weather_enable">Oratge local activat</string>
+  <string name="local_weather_disable">Oratge local desactivat</string>
+  <string name="enable_disable_atr">Informes de trànsit</string>
+  <string name="atr_enable">Informes de trànsit activats</string>
+  <string name="atr_disable">Informes de trànsit desactivats</string>
+  <string name="enable_disable_lafs">Horaris de vols a aeroports locals</string>
+  <string name="lafs_enable">Horaris de vols a aeroports locals activats</string>
+  <string name="lafs_disable">Horaris de vols a aeroports locals desactivats</string>
+  <string name="enable_disable_restaurants">Restaurants</string>
+  <string name="restaurants_enable">Restaurants activats</string>
+  <string name="restaurants_disable">Restaurants desactivats</string>
+  <string name="enable_disable_lodgings">Allotjaments</string>
+  <string name="lodgings_enable">Allotjaments activats</string>
+  <string name="lodgings_disable">Allotjaments desactivats</string>
+  <string name="enable_disable_retail_directory">Directori de venda al detall</string>
+  <string name="retail_directory_enable">Directori de venda al detall habilitat</string>
+  <string name="retail_directory_disable">Directori de venda al detall deshabilitat</string>
+  <string name="enable_disable_advertisements">Anuncis</string>
+  <string name="advertisements_enable">Anuncis actius</string>
+  <string name="advertisements_disable">Anuncis inactius</string>
+  <string name="enable_disable_stock_quotes">Cotització d\'accions</string>
+  <string name="stock_quotes_enable">Cotització d\'accions habilitat</string>
+  <string name="stock_quotes_disable">Cotització d\'accions deshabilitat</string>
+  <string name="enable_disable_eo">Oportunitats de feina</string>
+  <string name="eo_enable">Oportunitats de feina activat</string>
+  <string name="eo_disable">Oportunitats de feina desactivat</string>
+  <string name="enable_disable_mhh">Medicina, salut i hospitals</string>
+  <string name="mhh_enable">Medicina, salut i hospitals habilitat</string>
+  <string name="mhh_disable">Medicina, salut i hospitals deshabilitat</string>
+  <string name="enable_disable_technology_news">Notícies de tecnologia</string>
+  <string name="technology_news_enable">Notícies de tecnologia actives</string>
+  <string name="technology_news_disable">Notícies de tecnologia inactives</string>
+  <string name="enable_disable_multi_category">Multi-categoria</string>
+  <string name="multi_category_enable">Multi-categoria actiu</string>
+  <string name="multi_category_disable">Multi-categoria inactiu</string>
+  <string name="gsm_umts_network_preferences_title">Preferències de la Xarxa GSM/UMTS</string>
+  <string name="gsm_umts_network_preferneces_summary">Encara no s\'ha implementat!</string>
+  <string name="gsm_umts_network_preferences_dialogtitle">Preferències de la xarxa GSM/UMTS</string>
+  <string name="prefer_2g">Usa únicament 2G</string>
+  <string name="prefer_2g_summary">Estalvia bateria</string>
+  <string name="cdma_system_select_title">Selecció de sistema</string>
+  <string name="cdma_system_select_summary">Canvia el mode d\'itinerància cdma</string>
+  <string name="cdma_system_select_dialogtitle">Selecció de sistema</string>
+  <string name="cdma_roaming_mode_title">Mode d\'itinerància CDMA</string>
+  <string name="cdma_roaming_mode_summary">Canvia el mode d\'itinerància cdma</string>
+  <string name="cdma_roaming_mode_dialogtitle">Mode d\'itinerància CDMA</string>
+  <string name="cdma_network_preferences_title">Preferències de la xarxa CDMA</string>
+  <string name="cdma_network_preferneces_summary">Encara no s\'ha implementat!</string>
+  <string name="cdma_network_preferences_dialogtitle">Preferències de la xarxa CDMA</string>
+  <string name="subscription_title">Prova de suscripció CDMA</string>
+  <string name="subscription_summary">Canviar entre RUIM/SIM i NV</string>
+  <string name="subscription_dialogtitle">subscripció</string>
+  <string name="fdn">Números de marcatge fixe</string>
+  <string name="manage_fdn_list">Llista NMF</string>
+  <string name="fdn_activation">Activació NMF</string>
+  <string name="fdn_enabled">Els números de marcatge fixe estan activats</string>
+  <string name="fdn_disabled">Els números de marcatge fixe estan desactivats</string>
+  <string name="enable_fdn">Activa els NMF</string>
+  <string name="disable_fdn">Desactiva els NMF</string>
+  <string name="change_pin2">Canvia el PIN2</string>
+  <string name="enable_fdn_ok">Desactiva els NMF</string>
+  <string name="disable_fdn_ok">Activa els NMF</string>
+  <string name="sum_fdn">Gestiona els números de marcatge fixe</string>
+  <string name="sum_fdn_change_pin">Canvia el PIN per a l\'accés als NMF</string>
+  <string name="sum_fdn_manage_list">Gestiona la llista de números del telèfon</string>
+  <string name="voice_privacy">Privacitat de veu</string>
+  <string name="voice_privacy_summary">Habilitat la privacitat de veu incrementada</string>
+  <string name="tty_mode_title">Mode TTY</string>
+  <string name="tty_mode_summary">Habilita el mode TTY</string>
+  <string name="tty_mode_option_title">Mode TTY</string>
+  <string name="tty_mode_option_summary">Estableix el mode TTY</string>
+  <string name="auto_retry_mode_title">Torna a provar automàticament</string>
+  <string name="auto_retry_mode_summary">Habilita el mode de tornar a provar automàticament</string>
+  <string name="menu_add">Afegeix un contacte</string>
+  <string name="menu_edit">Edita un contacte</string>
+  <string name="menu_delete">Esborra un contacte</string>
+  <string name="get_pin2">Introduïu el PIN2</string>
+  <string name="name">Nom</string>
+  <string name="number">Número</string>
+  <string name="save">Desa</string>
+  <string name="add_fdn_contact">Afegeix un número de marcatge fixe</string>
+  <string name="adding_fdn_contact">S\'està afegint un número de marcatge fixe…</string>
+  <string name="fdn_contact_added">S\'ha afegit un número de marcatge fixe.</string>
+  <string name="edit_fdn_contact">Edita un número de marcatge fixe</string>
+  <string name="updating_fdn_contact">S\'està actualitzant el número de marcatge fixe…</string>
+  <string name="fdn_contact_updated">S\'ha actualitzat el número de marcatge fixe.</string>
+  <string name="delete_fdn_contact">Esborra el número de marcatge fixe</string>
+  <string name="deleting_fdn_contact">S\'està esborrant el número de marcatge fixe…</string>
+  <string name="fdn_contact_deleted">S\'ha esborrat el número de marcatge fixe.</string>
+  <string name="pin2_invalid">FDN no actualitzat: Heu entrat un PIN incorrecte.</string>
+  <string name="fdn_invalid_number">FDN no actualitzat: el nombre no pot excedir els 20 dígits.</string>
+  <string name="simContacts_emptyLoading">Llegint la targeta SIM...</string>
+  <string name="simContacts_empty">No hi ha contactes a la seva targeta SIM.</string>
+  <string name="simContacts_title">Seleccioneu els contactes per importar</string>
+  <string name="enable_pin">Habilita/deshabilita el PIN de la targeta SIM</string>
+  <string name="change_pin">Canvia PIN de la SIM</string>
+  <string name="enter_pin_text">PIN de la SIM:</string>
+  <string name="oldPinLabel">PIN antic</string>
+  <string name="newPinLabel">PIN nou</string>
+  <string name="confirmPinLabel">Confirma el PIN nou</string>
+  <string name="badPin">El PIN antic que has introduït no és correcte. Prova de nou.</string>
+  <string name="mismatchPin">Els PINs que has introduït no coincideixen. Prova de nou.</string>
+  <string name="invalidPin">Escriu un PIN de 4 a 8 números.</string>
+  <string name="disable_sim_pin">Inhabilita el PIN de la SIM</string>
+  <string name="enable_sim_pin">Habilita el PIN de la SIM</string>
+  <string name="enable_in_progress">Espera…</string>
+  <string name="enable_pin_ok">S\'ha habilitat el PIN de la SIM</string>
+  <string name="disable_pin_ok">S\'ha inhabilitat el PIN de la SIM</string>
+  <string name="pin_failed">El PIN que has introduït no és correcte</string>
+  <string name="pin_changed">S\'ha canviat el PIN de la SIM</string>
+  <string name="puk_requested">Contrasenya incorrecta, s\'ha bloquejat la SIM! Necessitaràs el codi PUK2.</string>
+  <string name="enter_pin2_text">PIN2</string>
+  <string name="oldPin2Label">PIN2 antic</string>
+  <string name="newPin2Label">PIN2 nou</string>
+  <string name="confirmPin2Label">Confirma el PIN2 nou</string>
+  <string name="badPuk2">El codi PUK2 que has introduït no és correcte. Prova de nou.</string>
+  <string name="badPin2">L\'antic PIN2 que has introduït no és correcte. Si us plau intenta-ho de nou.</string>
+  <string name="mismatchPin2">El PIN2 que has introduït no concorda. Si us plau intenta-ho de nou.</string>
+  <string name="invalidPin2">Escriu un PIN2 de 4 a 8 números.</string>
+  <string name="invalidPuk2">Intrudueix un PUK2 de 8 xifres.</string>
+  <string name="pin2_changed">El PIN2 s\'ha canviat amb èxit</string>
+  <string name="label_puk2_code">Introdueix el PUK2</string>
+  <string name="fdn_enable_puk2_requested">Contrasenya incorrecta, si us plau canvia el PIN2 i torna-ho a provar!</string>
+  <string name="puk2_requested">Contrasenya incorrecta, s\'ha bloquejat la SIM! Necessitaràs el PUK2.</string>
+  <string name="doneButton">Fet</string>
+  <string name="caller_manage_header">Trucada de conferència <xliff:g id="conf_call_time">%s</xliff:g></string>
+  <string name="caller_manage_manage_done_text">Torna a la trucada</string>
+  <string name="sim_missing_continueView_text">Continua sense la targeta SIM</string>
+  <string name="sim_missing_msg_text">No s\'ha trobat cap targeta SIM. Inseriu una targeta SIM al telèfon.</string>
+  <string name="sim_unlock_dismiss_text">Rebutja</string>
+  <string name="sim_unlock_unlock_text">Desbloqueja</string>
+  <string name="sim_unlock_status_text">S\'està autenticant el PIN…</string>
+  <string name="voicemail_settings_number_label">Número del contestador</string>
+  <string name="card_title_dialing">Marcació</string>
+  <string name="card_title_redialing">Resposta</string>
+  <string name="card_title_in_progress">Trucada actual</string>
+  <string name="card_title_conf_call">Conferència</string>
+  <string name="card_title_incoming_call">Trucada entrant</string>
+  <string name="card_title_cdma_call_waiting">Trucada en espera Cdma</string>
+  <string name="card_title_call_ended">S\'ha finalitzat la trucada</string>
+  <string name="card_title_on_hold">En espera</string>
+  <string name="card_title_hanging_up">S\'està penjant</string>
+  <string name="card_title_in_call">En trucada</string>
+  <string name="notification_missedCallTitle">Trucada perduda</string>
+  <string name="notification_missedCallsTitle">Trucades perdudes</string>
+  <string name="notification_missedCallsMsg"><xliff:g id="num_missed_calls">%s</xliff:g> trucades perdudes</string>
+  <string name="notification_missedCallTicker">Trucada perduda de <xliff:g id="missed_call_from">%s</xliff:g></string>
+  <string name="notification_ongoing_call_format">Trucada actual (<xliff:g id="duration">%s</xliff:g>)</string>
+  <string name="notification_on_hold">En espera</string>
+  <string name="notification_voicemail_title">Missatge nou al contestador</string>
+  <string name="notification_voicemail_title_count">Missatge al contestador nou (<xliff:g id="count">%d</xliff:g>)</string>
+  <string name="notification_voicemail_text_format">Truca a <xliff:g id="voicemail_number">%s</xliff:g></string>
+  <string name="notification_voicemail_no_vm_number">Número de contestador desconegut</string>
+  <string name="notification_network_selection_title">Sense servei</string>
+  <string name="notification_network_selection_text">La xarxa seleccionada (<xliff:g id="operator_name">%s</xliff:g>) no està disponible</string>
+  <string name="incall_error_power_off">Desactiva el mode d\'avió per fer una trucada.</string>
+  <string name="incall_error_emergency_only">No està registrat a la xarxa.</string>
+  <string name="incall_error_out_of_service">No hi ha cap xarxa mòbil disponible.</string>
+  <string name="incall_error_no_phone_number_supplied">No s\'ha enviat la trucada, el número introduït no és vàlid.</string>
+  <string name="incall_error_call_failed">No s\'ha enviat la trucada.</string>
+  <string name="incall_status_dialed_mmi">S\'està iniciant la seqüència MMI…</string>
+  <string name="incall_status_dialed_fc">S\'està iniciant la seqüència de codi característic…</string>
+  <string name="incall_error_supp_service_unknown">No s\'accepta aquest tipus de servei.</string>
+  <string name="incall_error_supp_service_switch">No es poden intercanviar trucades.</string>
+  <string name="incall_error_supp_service_separate">No es pot separar la trucada.</string>
+  <string name="incall_error_supp_service_transfer">No es pot transferir la trucada.</string>
+  <string name="incall_error_supp_service_conference">No es poden conferenciar les trucades.</string>
+  <string name="incall_error_supp_service_reject">No es pot rebutjar la trucada.</string>
+  <string name="incall_error_supp_service_hangup">No es pot alliberar la trucada.</string>
+  <string name="emergency_enable_radio_dialog_title">Trucada d\'emergència</string>
+  <string name="emergency_enable_radio_dialog_message">S\'està engegant la ràdio…</string>
+  <string name="emergency_enable_radio_dialog_retry">Fora de l\'àrea de servei, es torna a provar…</string>
+  <string name="dial_emergency_error">No s\'ha enviat la trucada ja que <xliff:g id="non_emergency_number">%s</xliff:g> no és un número d\'emergència!</string>
+  <string name="dial_emergency_empty_error">No s\'ha enviat la traucada, marqueu un número d\'emergència!</string>
+  <string name="dialerKeyboardHintText">Utilitza el teclat per marcar</string>
+  <string name="dtmfDialpadHintText">To quan es toca el teclat</string>
+  <string name="dtmfDialpadHandleLabel">Teclat de marcatge</string>
+  <string name="touchLockText">Toca dos cops\nper a desbloquejar</string>
+  <string name="onscreenAnswerText">Toca dos cops\nper a contestar</string>
+  <string name="onscreenRejectText">Toca dos cops\nper a rebutjar</string>
+  <string name="onscreenHoldText">En espera</string>
+  <string name="onscreenUnholdText">Recupera</string>
+  <string name="onscreenEndCallText">Fi</string>
+  <string name="onscreenShowDialpadText">Teclat numèric</string>
+  <string name="onscreenHideDialpadText">Amaga</string>
+  <string name="onscreenSpeakerText">Altaveu</string>
+  <string name="onscreenMuteText">Silencia</string>
+  <string name="onscreenBluetoothText">Bluetooth</string>
+  <string name="onscreenAddCallText">Afegeix una trucada</string>
+  <string name="onscreenMergeCallsText">Ajunta trucades</string>
+  <string name="onscreenSwapCallsText">Intercanvia</string>
+  <string name="onscreenManageCallsText">Gestiona trucades</string>
+  <string name="onscreenManageConferenceText">Gestiona</string>
+  <string name="importSimEntry">Importa</string>
+  <string name="importAllSimEntries">Importa\'ls tots</string>
+  <string name="importingSimContacts">Importa contactes de la SIM</string>
+  <string name="importToFDNfromContacts">Importa dels contactes</string>
+  <string name="hac_mode_title">Audiòfon</string>
+  <string name="hac_mode_summary">Activa la compatibilitat amb audiòfons</string>
+  <string name="eri_text_label">Text ERI</string>
+  <string name="dtmf_tones_title">Tons DTMF</string>
+  <string name="dtmf_tones_summary">Ajusta la longitud dels tons DTMF</string>
+  <string name="network_message">Missatge de xarxa</string>
+  <string name="ota_title_activate">Activa el teu telèfon</string>
+  <string name="ota_touch_activate">És necessari fer una trucada especial per activar el servei del teu mòbil. \n\nDesprés de prémer «Activa», escolteu les instruccions donades per activar el teu telèfon.</string>
+  <string name="ota_touch_activate_new">Toca "Activa" per a fer una trucada especial que activa el telèfon a la xarxa del teu operador, així podràs fer trucades i connectar-te a les xarxes de dades mòbils.</string>
+  <string name="ota_skip_activation_dialog_title">Ometre l\'activació?</string>
+  <string name="ota_skip_activation_dialog_message">Si omets l\'activació, no podràs fer trucades o connectar-te a xarxes de dades mòbils, a no ser que et connectis a una xarxa Wi-FI. Mentre no activis el telèfon, se\'t demanarà cada vegada que l\'engeguis.</string>
+  <string name="ota_skip_activation_dialog_skip_label">Omet</string>
+  <string name="ota_skip_activation_dialog_continue_label">Activa</string>
+  <string name="ota_activate">Activa</string>
+  <string name="ota_title_activate_success">El telèfon està activat!</string>
+  <string name="ota_title_problem_with_activation">Problema amb l\'activació</string>
+  <string name="ota_listen">Segueix les instruccions de veu fins que l\'activació s\'hagi completat.</string>
+  <string name="ota_dialpad">Teclat</string>
+  <string name="ota_speaker">Altaveu</string>
+  <string name="ota_progress">Si us plau espera mentre es programa el teu telèfon.</string>
+  <string name="ota_failure">La programació no ha tingut èxit</string>
+  <string name="ota_successful">El teu telèfon ja està activat. El servei pot trigar fins a 15 minuts en estar actiu.</string>
+  <string name="ota_unsuccessful">El telèfon no s\'ha activat. \nEt caldrà trobar una àrea amb millor cobertura (a prop d\'una finestra o a l\'exterior). \n\nProva-ho un altre cop o truca al teu operador per a més opcions.</string>
+  <string name="ota_spc_failure">Excés d\'errors SPC</string>
+  <string name="ota_call_end">Enrere</string>
+  <string name="ota_try_again">Torna-ho a provar</string>
+  <string name="ota_next">Següent</string>
+  <string name="ota_back">Enrere</string>
+  <string name="ecm_exit_dialog">EcmExitDialog</string>
+  <string name="phone_entered_ecm_text">S\'ha entrat en mode de Trucada d\'Emergència</string>
+  <string name="phone_in_ecm_notification_title">Mode de Trucada d\'Emergència</string>
+  <string name="phone_in_ecm_call_notification_text">Connexió de dades deshabilitada</string>
+  <string name="alert_dialog_in_ecm_call">L\'acció seleccionada no està disponible en una trucada d\'emergència</string>
+  <string name="progress_dialog_exiting_ecm">Sortint del Mode de Trucada d\'Emergència</string>
+  <string name="alert_dialog_yes">Sí</string>
+  <string name="alert_dialog_no">No</string>
+  <string name="alert_dialog_dismiss">Rebutja</string>
+  <string name="voicemail_settings">Ajustaments del correu de veu</string>
+  <string name="voicemail_number_not_set">&lt;no definit&gt;</string>
+  <string name="voicemail_provider">Servei de correu de veu</string>
+  <string name="voicemail_settings_for">Ajustaments per a <xliff:g id="provider_name">%s</xliff:g></string>
+  <string name="other_settings">Ajustaments d\'altres tipus de trucada</string>
+  <string name="dial_button_label">Truca</string>
+  <string name="calling_via_template">Trucant via ^1\n</string>
+  <string name="slide_to_answer">Arrossega a la dreta per contestar</string>
+  <string name="slide_to_silence">Arrossega a l\'esquerra per silenciar el timbre</string>
+  <string name="slide_to_decline">Arrossega a l\'esquerra per rebutjar</string>
+  <string name="slide_to_answer_and_hold">Arrossega a la dreta i\nretingues la trucada activa</string>
+  <string name="slide_to_answer_and_end_active">Arrossega a la dreta i\npenja la trucada activa</string>
+  <string name="slide_to_answer_and_end_onhold">Arrossega a la dreta per contestar i\npenjar la trucada retinguda</string>
+  <string name="slide_to_answer_hint">Respon</string>
+  <string name="slide_to_decline_hint">Refusa</string>
+  <string name="notification_ongoing_calling_format">Trucant a (<xliff:g id="duration">%s</xliff:g>)</string>
+  <string name="advanced_setting">Paràmetres avançats</string>
+  <string name="vibrate_outgoing">Vibra en respondre</string>
+  <string name="vibrate_outgoing_sum">Vibra quan es respon una trucada</string>
+  <string name="vibrate_45">Vibra cada 45 segons</string>
+  <string name="vibrate_45_sum">Vibra cada 45 segons durant les trucades sortints</string>
+  <string name="vibrate_hangup">Vibra en penjar</string>
+  <string name="vibrate_hangup_sum">Vibra quan es finalitza una trucada</string>
+  <string name="screen_awake">Mantén la pantalla activa</string>
+  <string name="screen_awake_sum">La pantalla es mantindrà activa més temps del normal durant les trucades</string>
+  <string name="always_proximity">Sempre usa proximitat</string>
+  <string name="always_proximity_sum">Habiliteu per a permetre que el sensor de proximitat bloquegi la pantalla, fins i tot si el telèfon està horitzontal.</string>
+  <string name="led_notify_call">El LED notifica trucades perdudes</string>
+  <string name="led_notify_call_sum">LED intermitent en perdre trucades</string>
+  <string name="led_show_organ">"Mostra àlies/organització"</string>
+  <string name="led_show_organ_sum">"Es mostrarà l\'àlies/organització a la pantalla durant una trucada."</string>
+  <string name="vibrate_call_waiting">Vibra amb trucada en espera</string>
+  <string name="vibrate_call_waiting_sum">Vibra quan hi hagi una trucada en espera</string>
+  <string name="return_home">Sempre torna al registre de trucades</string>
+  <string name="return_home_sum">Força el retorn a la pantalla del registre de trucades després de finalitzar una trucada.</string>
+  <string name="menu_addBlackList">Afegeix a la llista negra</string>
+  <string name="black_list">Llista negra</string>
+  <string name="black_list_sum">Les trucades entrants de números de la llista negra seran rebutjades.</string>
+  <string name="add_black">Afegeix un número de telèfon</string>
+  <string name="remove_black">Elimina %s de la llista</string>
+  <string name="turn_silence">Posa en silenci</string>
+  <string name="turn_silence_sum">Activa el timbre silenciós</string>
+  <string name="left_hand">Mode per a esquerrans</string>
+  <string name="left_hand_sum">Utilitzeu el telèfon amb la mà esquerra, cal reiniciar perquè tingui efecte.</string>
+  <string name="set_force_touch">UI tàctil durant les trucades</string>
+  <string name="set_force_touch_sum">Força la interfície d\'usuari tàctil durant les trucades sense sensor de proximitat</string>
+  <string name="per_change_mobile_network">Canvia de xarxa (2G/3G)</string>
+  <string name="per_change_mobile_network_desc">Les aplicacions amb aquest permís poden, en qualsevol moment, canviar entre dades 2G i 3G. El 3G és més ràpid, però consumeix més bateria i també us pot costar més diners.</string>
+  <string name="phone_number_label">El meu número de telèfon</string>
+  <string name="phone_number_summary">Estableix el número de telèfon per a aquest dispositiu</string>
+  <string-array name="preferred_network_mode_choices">
+    <item>Global</item>
+    <item>Només EvDo</item>
+    <item>CDMA sense EvDo</item>
+    <item>Automàtic CDMA/EvDo</item>
+    <item>Automàtic GSM/WCDMA</item>
+    <item>Només WCDMA</item>
+    <item>Només GSM</item>
+    <item>Preferentment GSM/WCDMA</item>
+  </string-array>
+  <string-array name="list_language_entries">
+    <item>Anglès</item>
+    <item>Francès</item>
+    <item>Castellà</item>
+    <item>Japonès</item>
+    <item>Coreà</item>
+    <item>Xinès</item>
+    <item>Hebreu</item>
+  </string-array>
+  <string-array name="gsm_umts_network_preferences_choices">
+    <item>GSM/WCDMA (mode automàtic)</item>
+    <item>Només WCDMA</item>
+    <item>Només GSM</item>
+    <item>GSM/WCDA (preferit WCDMA)</item>
+  </string-array>
+  <string-array name="cdma_system_select_choices">
+    <item>Només domèstiques</item>
+    <item>Xarxes subscrites</item>
+    <item>Automàtic</item>
+  </string-array>
+  <string-array name="cdma_roaming_mode_choices">
+    <item>Només xarxes domèstiques</item>
+    <item>Xarxes subscrites</item>
+    <item>Qualsevol xarxa</item>
+  </string-array>
+  <string-array name="cdma_network_preferences_choices">
+    <item>CDMA/EvDo</item>
+    <item>Només CDMA</item>
+    <item>Només EvDo</item>
+  </string-array>
+  <string-array name="subscription_choices">
+    <item>RUIM/SIM</item>
+    <item>NV</item>
+  </string-array>
+  <string-array name="tty_mode_entries">
+    <item>TTY desactivat</item>
+    <item>TTY complet</item>
+    <item>TTY HCO</item>
+    <item>TTY VCO</item>
+  </string-array>
+  <string-array name="dtmf_tone_entries">
+    <item>Normal</item>
+    <item>Llarg</item>
+  </string-array>
+  <plurals name="phone_in_ecm_notification_time">
+      <item quantity="one">Sense connexió de dades des de fa <xliff:g id="count">%s</xliff:g> minut
+      </item>
+      <item quantity="other">Sense connexió de dades des de fa <xliff:g id="count">%s</xliff:g> minuts
+      </item>
+  </plurals>
+  <plurals name="alert_dialog_exit_ecm">
+      <item quantity="one">El telèfon estarà en mode de trucada d\'emergència durant <xliff:g id="count">%s</xliff:g> minut. Mentre estigui en aquest estat no es podran fer servir aplicacions que facin ús de la connexió de dades. Voleu sortir?
+      </item>
+      <item quantity="other">El telèfon estarà en mode de trucada d\'emergència durant <xliff:g id="count">%s</xliff:g> minuts. Mentre estigui en aquest estat no es podran fer servir aplicacions que facin ús de la connexió de dades. Voleu sortir? 
+      </item>
+  </plurals>
+  <plurals name="alert_dialog_not_avaialble_in_ecm">
+      <item quantity="one">L\'acció seleccionada no està disponible en el mode de trucada d\'emergència. El telèfon estarà en aquest mode durant <xliff:g id="count">%s</xliff:g> minut. Voleu sortir ara?
+      </item>
+      <item quantity="other">L\'acció seleccionada no està disponible en el mode de trucada d\'emergència. El telèfon estarà en aquest mode durant <xliff:g id="count">%s</xliff:g> minuts. Voleu sortir ara?
+      </item>
+  </plurals>
+</resources>
