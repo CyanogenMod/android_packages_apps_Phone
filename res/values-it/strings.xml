@@ -216,6 +216,9 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Connessione a servizi di dati in roaming"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Connettività dati persa: hai lasciato la rete del tuo operatore con il roaming dati disattivato."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Consentire il roaming dati? I costi potrebbero essere elevati."</string>
+    <string name="mvno_roaming">Roaming dati nazionale</string>
+    <string name="mvno_roaming_summary">Attiva l\'accesso ai dati sulle reti di altri operatori di telefonia mobile del tuo paese.</string>
+    <string name="mvno_roaming_warning">Attivare il roaming dati con gli altri operatori di telefonia mobile nazionali? Alcuni operatori mobili virtuali necessitano di questa opzione per accedere ai servizi dati. NON attivare questa opzione se il tuo operatore addebita costi aggiuntivi per il roaming dati nazionale. Riavvia il telefono o attiva e poi disattiva la modalità aereo per renderla effettiva.</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Opzioni GSM/UMTS"</string>
     <string name="cdma_options" msgid="4016822858172249884">"Opzioni CDMA"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Utilizzo dati"</string>
