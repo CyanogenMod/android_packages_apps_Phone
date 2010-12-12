@@ -216,6 +216,9 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Se connecter aux services de données lors de l\'itinérance"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Vous avez été déconnecté car vous avez quitté votre réseau alors que l\'itinérance des données était désactivée."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Autoriser l\'itinérance des données ? Des frais d\'itinérance importants peuvent s\'appliquer !"</string>
+    <string name="mvno_roaming">Itinérance nationale</string>
+    <string name="mvno_roaming_summary">Permettre l\'utilisation d\'un autre réseau à l\'intérieur du pays</string>
+    <string name="mvno_roaming_warning">Activer l\'itinérance des données à l\'intérieur du pays ? Certains opérateurs virtuels requièrent cette option afin d\'accéder au réseau des données. N\'ACTIVEZ PAS cette option si votre opérateur fait payer l\'itinérance nationale ! Cette option prendra effet après un redémarrage ou un passage au mode avion.</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Options GSM/UMTS"</string>
     <string name="cdma_options" msgid="4016822858172249884">"Options CDMA"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Utilisation des données"</string>
