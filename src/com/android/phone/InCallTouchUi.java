@@ -94,6 +94,8 @@ public class InCallTouchUi extends FrameLayout
     private boolean mAllowIncomingCallTouchUi;
     private boolean mAllowInCallTouchUi;
 
+    private CallFeaturesSetting mSettings;
+
     public InCallTouchUi(Context context, AttributeSet attrs) {
         super(context, attrs);
 
@@ -104,7 +106,8 @@ public class InCallTouchUi extends FrameLayout
         // Inflate our contents, and add it (to ourself) as a child.
         LayoutInflater inflater = LayoutInflater.from(context);
         inflater.inflate(
-                R.layout.incall_touch_ui,  // resource
+                //R.layout.incall_touch_ui,  // resource
+                mSettings.mLeftHand ? R.layout.incall_touch_ui_left : R.layout.incall_touch_ui,  // resource
                 this,                      // root
                 true);
 
@@ -120,10 +123,12 @@ public class InCallTouchUi extends FrameLayout
         mAllowInCallTouchUi = getResources().getBoolean(R.bool.allow_in_call_touch_ui);
         if (DBG) log("- regular in-call touch UI: "
                      + (mAllowInCallTouchUi ? "ENABLED" : "DISABLED"));
+        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
     }
 
     void setInCallScreenInstance(InCallScreen inCallScreen) {
         mInCallScreen = inCallScreen;
+        if (mEndButton != null) mEndButton.setOnLongClickListener(mInCallScreen);
     }
 
     @Override
@@ -280,7 +285,7 @@ public class InCallTouchUi extends FrameLayout
                 // it *more* confusing.
             }
         } else {
-            if (mAllowInCallTouchUi) {
+            if (mAllowInCallTouchUi || mSettings.mForceTouch) {
                 // Ok, the in-call touch UI is available on this platform,
                 // so make it visible (with some exceptions):
                 if (mInCallScreen.okToShowInCallTouchUi()) {
@@ -424,7 +429,7 @@ public class InCallTouchUi extends FrameLayout
             // Show the "hide dialpad" state.
             mDialpadButton.setText(R.string.onscreenHideDialpadText);
             mDialpadButton.setCompoundDrawablesWithIntrinsicBounds(
-                null, mHideDialpadIcon, null, null);
+                    null, mHideDialpadIcon, null, null);
         } else {
             // Show the "show dialpad" state.
             mDialpadButton.setText(R.string.onscreenShowDialpadText);
@@ -517,7 +522,7 @@ public class InCallTouchUi extends FrameLayout
      * "ongoing call" states) on the current device.
      */
     /* package */ boolean isTouchUiEnabled() {
-        return mAllowInCallTouchUi;
+        return mAllowInCallTouchUi || mSettings.mForceTouch;
     }
 
     /**

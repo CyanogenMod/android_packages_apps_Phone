@@ -1209,6 +1209,37 @@
     <string name="slide_to_answer_hint">Answer</string>
     <!-- Incoming call hint shown on tab (must be kept very short): decline incoming call -->
     <string name="slide_to_decline_hint">Decline</string>
+    <!-- added by cytown@gmail.com -->
+    <string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)
+    </string>
+    <string name="advanced_setting">Advanced Settings V.30.1</string>
+    <string name="vibrate_outgoing">Vibrate on answer</string>
+    <string name="vibrate_outgoing_sum">Vibrate when a call is answered</string>
+    <string name="vibrate_45">Vibrate every 45 seconds</string>
+    <string name="vibrate_45_sum">Vibrate every 45 seconds during outgoing calls</string>
+    <string name="vibrate_hangup">Vibrate on hangup</string>
+    <string name="vibrate_hangup_sum">Vibrate when a call has ended</string>
+    <string name="screen_awake">Keep screen awake</string>
+    <string name="screen_awake_sum">Screen will stay awake longer than normal while in-call</string>
+    <string name="led_notify_call">Missed call LED notify</string>
+    <string name="led_notify_call_sum">LED will blink when call is missed</string>
+    <string name="led_show_organ">"Show nick/organization"</string>
+    <string name="led_show_organ_sum">"Nickname/Organization will be shown on in-call screen."</string>
+    <string name="vibrate_call_waiting">Vibrate call waiting</string>
+    <string name="vibrate_call_waiting_sum">Vibrate on call waiting</string>
+    <string name="return_home">Always back to call log</string>
+    <string name="return_home_sum">Force return to call log screen after a call ends.</string>
+    <string name="menu_addBlackList">Add to blacklist</string>
+    <string name="black_list">Blacklist</string>
+    <string name="black_list_sum">Incoming call in black list will be rejected.</string>
+    <string name="add_black">Add phone number</string>
+    <string name="remove_black">Remove %s from List</string>
+    <string name="turn_silence">Turn over silence</string>
+    <string name="turn_silence_sum">Turn over to silence ring</string>
+    <string name="left_hand">Left-hand mode</string>
+    <string name="left_hand_sum">Use left hand hold the phone, need a reboot to effect.</string>
+    <string name="set_force_touch">In-call touch UI</string>
+    <string name="set_force_touch_sum">Force in-call touch UI without proximity sensor</string>
 
     <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
     <string name="contactPhoto">contact photo</string>

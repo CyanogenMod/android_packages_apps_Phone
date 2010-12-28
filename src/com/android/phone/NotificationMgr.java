@@ -50,6 +50,8 @@ import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneBase;
 import com.android.internal.telephony.CallManager;
 
+import android.preference.PreferenceManager;
+
 
 /**
  * NotificationManager-related utility code for the Phone app.
@@ -89,6 +91,8 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
     private boolean mShowingSpeakerphoneIcon;
     private boolean mShowingMuteIcon;
 
+private static CallFeaturesSetting mSettings;
+
     // used to track the missed call counter, default to 0.
     private int mNumberMissedCalls = 0;
 
@@ -111,6 +115,7 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
 
     NotificationMgr(Context context) {
         mContext = context;
+mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext()));
         mNotificationMgr = (NotificationManager)
             context.getSystemService(Context.NOTIFICATION_SERVICE);
 
@@ -367,8 +372,11 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
      * missed-call signal.
      */
     private static void configureLedNotification(Notification note) {
+        if (!mSettings.mLedNotify) return;
         note.flags |= Notification.FLAG_SHOW_LIGHTS;
-        note.defaults |= Notification.DEFAULT_LIGHTS;
+        note.ledARGB = 0xff00ffff;
+        note.ledOnMS = 500;
+        note.ledOffMS = 2000;
     }
 
     /**
@@ -625,7 +633,11 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
             } else {
                 // Normal ongoing call.
                 // Format string with a "%s" where the current call time should go.
+if (callDurationMsec > 0) {
                 expandedViewLine1 = mContext.getString(R.string.notification_ongoing_call_format);
+} else {
+    expandedViewLine1 = mContext.getString(R.string.notification_ongoing_calling_format);
+}
             }
 
             if (DBG) log("- Updating expanded view: line 1 '" + /*expandedViewLine1*/ "xxxxxxx" + "'");

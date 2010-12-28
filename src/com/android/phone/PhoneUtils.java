@@ -45,6 +45,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.hardware.SensorManager;
+import android.hardware.Sensor;
 
 import com.android.internal.telephony.Call;
 import com.android.internal.telephony.CallStateException;
@@ -113,6 +115,9 @@ public class PhoneUtils {
 
     /** Noise suppression status as selected by user */
     private static boolean sIsNoiseSuppressionEnabled = true;
+
+    /** Proximity Sensor available or not, 0 not initial, 1 available, -1 unavailable */
+    private static int sProximitySensorAvailable = 0;
 
     /**
      * Handler that tracks the connections and updates the value of the
@@ -344,6 +349,34 @@ public class PhoneUtils {
         if (DBG) log("hungup=" + hungup);
 
         return hungup;
+    }
+
+    static Call getCurrentCall(Phone phone) {
+        Call ringing = phone.getRingingCall();
+        Call fg = phone.getForegroundCall();
+        Call bg = phone.getBackgroundCall();
+        return (!ringing.isIdle()) ? ringing : ((!fg.isIdle()) ? fg : ((!bg.isIdle()) ? bg : fg));
+    }
+
+    static Connection getConnection(Phone phone, Call call) {
+        if (call == null) return null;
+        Connection conn = null;
+        if (phone.getPhoneName().equals("CDMA")) {
+            conn = call.getLatestConnection();
+        } else {
+            conn = call.getEarliestConnection();
+        }
+        return conn;
+    }
+
+    static boolean isProximitySensorAvailable(Context ctx) {
+        if (sProximitySensorAvailable != 0) {
+            return sProximitySensorAvailable == 1;
+        }
+        SensorManager sm = (SensorManager) ctx.getSystemService(Context.SENSOR_SERVICE);
+        Sensor sensor = sm.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+        sProximitySensorAvailable = (sensor != null) ? 1 : -1;
+        return isProximitySensorAvailable(ctx);
     }
 
     static boolean hangupRingingCall(Call ringing) {
@@ -818,9 +851,9 @@ public class PhoneUtils {
      * @return the dialog handle
      */
     static Dialog displayMMIInitiate(Context context,
-                                          MmiCode mmiCode,
-                                          Message buttonCallbackMessage,
-                                          Dialog previousAlert) {
+                                     MmiCode mmiCode,
+                                     Message buttonCallbackMessage,
+                                     Dialog previousAlert) {
         if (DBG) log("displayMMIInitiate: " + mmiCode);
         if (previousAlert != null) {
             previousAlert.dismiss();
@@ -1499,7 +1532,11 @@ public class PhoneUtils {
             }
         } else {
             cit = new CallerInfoToken();
-            cit.currentInfo = (CallerInfo) userDataObject;
+            if (userDataObject instanceof String) { // only blacklist will cause this, so just ignore this.
+                cit.currentInfo = new CallerInfo();
+            } else {
+                cit.currentInfo = (CallerInfo) userDataObject;
+            }
             cit.asyncQuery = null;
             cit.isFinal = true;
             // since the query is already done, call the listener.
@@ -1972,6 +2009,42 @@ public class PhoneUtils {
         return true;
     }
 
+    static boolean handleHeadsetHookHangup(Phone phone) {
+        if (DBG) log("handleHeadsetHookHangup()...");
+        if (phone.getState() == Phone.State.IDLE) {
+            return false;
+        }
+
+        final boolean hasRingingCall = !phone.getRingingCall().isIdle();
+        final boolean hasActiveCall = !phone.getForegroundCall().isIdle();
+        final boolean hasHoldingCall = !phone.getBackgroundCall().isIdle();
+
+        if (hasRingingCall) {
+            int phoneType = phone.getPhoneType();
+            if (phoneType == Phone.PHONE_TYPE_CDMA) {
+                answerCall(phone.getRingingCall());
+            } else if (phoneType == Phone.PHONE_TYPE_GSM) {
+                if (hasActiveCall && hasHoldingCall) {
+                    if (DBG) log("handleHeadsetHookHangup: ringing (both lines in use) ==> answer!");
+                    answerAndEndActive(PhoneApp.getInstance().mCM, phone.getRingingCall());
+                } else {
+                    if (DBG) log("handleHeadsetHookHangup: ringing ==> answer!");
+                    answerCall(phone.getRingingCall());  // Automatically holds the current active call,
+                                        // if there is one
+                }
+            } else {
+                throw new IllegalStateException("Unexpected phone type: " + phoneType);
+            }
+        } else {
+            Connection c = phone.getForegroundCall().getLatestConnection();
+            if (c != null && !PhoneNumberUtils.isEmergencyNumber(c.getAddress())) {
+                hangup(PhoneApp.getInstance().mCM);
+            }
+        }
+        return true;
+    }
+    // End Hangup Headset option mod
+
     /**
      * Look for ANY connections on the phone that qualify as being
      * disconnected.
@@ -2067,9 +2140,9 @@ public class PhoneUtils {
         int phoneType = phone.getPhoneType();
         final Call.State fgCallState = cm.getActiveFgCall().getState();
         if (phoneType == Phone.PHONE_TYPE_CDMA) {
-           // CDMA: "Add call" menu item is only enabled when the call is in
-           // - ForegroundCall is in ACTIVE state
-           // - After 30 seconds of user Ignoring/Missing a Call Waiting call.
+            // CDMA: "Add call" menu item is only enabled when the call is in
+            // - ForegroundCall is in ACTIVE state
+            // - After 30 seconds of user Ignoring/Missing a Call Waiting call.
             PhoneApp app = PhoneApp.getInstance();
             return ((fgCallState == Call.State.ACTIVE)
                     && (app.cdmaPhoneCallState.getAddCallMenuStateAfterCallWaiting()));

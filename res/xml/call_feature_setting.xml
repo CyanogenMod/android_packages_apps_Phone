@@ -64,6 +64,80 @@
       </PreferenceScreen>
   </PreferenceCategory>
 
+<!--  Created and modified by cytown@gmail.com for modified Phone app usage -->
+<PreferenceCategory android:key="pref_advanced_settings" android:title="@string/advanced_setting">
+    <CheckBoxPreference
+        android:key="button_vibrate_outgoing"
+        android:title="@string/vibrate_outgoing"
+        android:persistent="false"
+        android:summary="@string/vibrate_outgoing_sum"/>
+    <CheckBoxPreference
+        android:key="button_vibrate_45"
+        android:title="@string/vibrate_45"
+        android:persistent="false"
+        android:summary="@string/vibrate_45_sum"/>
+    <CheckBoxPreference
+        android:key="button_vibrate_hangup"
+        android:title="@string/vibrate_hangup"
+        android:persistent="false"
+        android:summary="@string/vibrate_hangup_sum"/>
+    <CheckBoxPreference
+        android:key="button_vibrate_call_waiting"
+        android:title="@string/vibrate_call_waiting"
+        android:persistent="false"
+        android:summary="@string/vibrate_call_waiting_sum"/>
+    <CheckBoxPreference
+        android:key="button_screen_awake"
+        android:title="@string/screen_awake"
+        android:persistent="false"
+        android:summary="@string/screen_awake_sum"/>
+    <CheckBoxPreference
+        android:key="button_return_home"
+        android:title="@string/return_home"
+        android:persistent="false"
+        android:summary="@string/return_home_sum"/>
+    <CheckBoxPreference
+        android:key="button_led_notify"
+        android:title="@string/led_notify_call"
+        android:persistent="false"
+        android:summary="@string/led_notify_call_sum"/>
+    <CheckBoxPreference
+        android:key="button_show_organ"
+        android:title="@string/led_show_organ"
+        android:persistent="false"
+        android:summary="@string/led_show_organ_sum"/>
+    <CheckBoxPreference
+        android:key="button_force_touch"
+        android:title="@string/set_force_touch"
+        android:persistent="false"
+        android:summary="@string/set_force_touch_sum"/>
+    <CheckBoxPreference
+        android:key="button_turn_silence"
+        android:title="@string/turn_silence"
+        android:persistent="false"
+        android:summary="@string/turn_silence_sum"/>
+    <CheckBoxPreference
+        android:key="button_left_hand"
+        android:title="@string/left_hand"
+        android:persistent="false"
+        android:summary="@string/left_hand_sum"/>
+    <PreferenceScreen
+        android:key="button_black_list"
+        android:title="@string/black_list"
+        android:summary="@string/black_list_sum"
+        android:persistent="false">
+        <com.android.phone.EditPhoneNumberPreference
+            android:key="button_add_black"
+            android:title="@string/add_black"
+            android:persistent="false"
+            android:dialogTitle="@string/add_black"
+            phone:confirmMode="confirm"
+            android:singleLine="true"
+            android:autoText="false"/>
+        <PreferenceCategory android:key="cat_black_list" android:title="@string/black_list"/>
+    </PreferenceScreen>
+</PreferenceCategory>
+
   <PreferenceCategory android:key="button_misc_category_key"
         android:title="@string/other_settings"
         android:persistent="false" />

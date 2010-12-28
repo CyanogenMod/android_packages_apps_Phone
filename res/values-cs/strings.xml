@@ -689,4 +689,28 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Chcete-li uskutečnit internetový hovor, zkontrolujte, zda jste připojeni k internetu"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Abyste mohli uskutečnit internetový hovor musíte být připojeni k síti WiFi (viz část Nastavení bezdrátového připojení a sítě)."</string>
     <string name="no_voip" msgid="8901474054537199865">"Internetové hovory nejsou podporovány"</string>
+<string name="notification_ongoing_calling_format">Calling (<xliff:g id="duration">%s</xliff:g>)</string>
+<string name="vibrate_outgoing">Vibrace při odpovědi</string>
+<string name="vibrate_outgoing_sum">Vibrace při odpovědi na vaše volání</string>
+<string name="vibrate_45">Vibrace každých 45 sekund</string>
+<string name="vibrate_45_sum">Vibrace každých 45 sekund, při odchozím hovoru</string>
+<string name="vibrate_hangup">Vibrace po zavěšení</string>
+<string name="vibrate_hangup_sum">Vibrace po ukončení hovoru</string>
+<string name="screen_awake">Zapnutá obrazovka</string>
+<string name="screen_awake_sum">Obrazovka zůstane při hovoru déle zapnutá</string>
+<string name="led_notify_call">LED při zmeškaném hovoru</string>
+<string name="led_notify_call_sum">LED bude blikat pokud budete mít zmeškaný hovor</string>
+<string name="led_show_organ">Zobrazit organizace</string>
+<string name="led_show_organ_sum">Organizace budou zobrazeny při příchozím hovoru</string>
+<string name="vibrate_call_waiting">Vibrace při dalším hovoru</string>
+<string name="vibrate_call_waiting_sum">Vibrace při čekajícím hovoru na lince</string>
+<string name="return_home">Vynutit seznam hovorů</string>
+<string name="return_home_sum">Vynutit návrat do seznamu hovorů po ukončení hovoru</string>
+<string name="menu_addBlackList">Přidat k blokovaným</string>
+<string name="black_list">Blokovaný seznam</string>
+<string name="black_list_sum">Příchozí hovory ze seznamu budou odmítnuty</string>
+<string name="add_black">Přidat telefonní číslo</string>
+<string name="remove_black">Odstranit %s z seznamu</string>
+<string name="set_force_touch">Vynutit Touch Keyboard</string>
+<string name="set_force_touch_sum">Vynutit zobrazení Touch UI bez detekce proximity sensoru.</string>
 </resources>
