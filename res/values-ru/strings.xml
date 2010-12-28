@@ -607,7 +607,6 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Перетащите вкладку вправо, чтобы ответить,"\n"завершив удерживаемый вызов"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Ответить"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Отклонить"</string>
-<<<<<<< HEAD
     <string name="contactPhoto" msgid="4713193418046639466">"фотография контакта"</string>
     <string name="goPrivate" msgid="865837794424530980">"приватная конференция"</string>
     <string name="sip_settings" msgid="6699045718560859691">"Настройки интернет-вызова"</string>
