@@ -438,6 +438,11 @@ private PreferenceCategory mCatBlackList;
 private static HashSet<PhoneNo> setBlackList = new HashSet<PhoneNo>();
 private static final int ADD_BLACK_LIST_ID = 3;
 
+//Trackball Answer
+private static final String BUTTON_TRACKBALL_ANSWER = "button_trackball_answer_timed";
+private ListPreference mTrackballAnswer;
+static String mTrackAnswer;
+
     private boolean mForeground;
 
     @Override
@@ -1563,6 +1568,14 @@ mButtonAddBlack.setDialogOnClosedListener(this);
 mCatBlackList = (PreferenceCategory) prefSet.findPreference(CATEGORY_BLACK);
 initPrefBlackList();
 
+mTrackballAnswer = (ListPreference) prefSet.findPreference(BUTTON_TRACKBALL_ANSWER);
+mTrackballAnswer.setValue(mTrackAnswer);
+
+//No reason to show Trackball Answer if it doesn't have a Trackball.
+if(getResources().getConfiguration().navigation != 3){
+   ((PreferenceCategory) prefSet.findPreference(CATEGORY_ADVANCED)).removePreference(mTrackballAnswer);
+}
+
 // No reason to show this if no proximity sensor on device
 if (((SensorManager)getSystemService(SENSOR_SERVICE)).getDefaultSensor(
         Sensor.TYPE_PROXIMITY) == null) {
@@ -1968,6 +1981,9 @@ private void init(SharedPreferences pref) {
     mLeftHand = pref.getBoolean(BUTTON_LEFT_HAND, false);
     mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
     mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, PhoneUtils.isProximitySensorAvailable(PhoneApp.getInstance()));
+    //Trackball Answer
+    mTrackAnswer = pref.getString(BUTTON_TRACKBALL_ANSWER, "-1");
+
     ObjectInputStream ois = null;
     boolean correctVer = false;
     try {
@@ -2065,6 +2081,17 @@ private void initPrefBlackList() {
 //====
 }
 
+   /**
+    * Initializes Advanced Settings Variables
+    */
+    public static CallFeaturesSetting getInstance(SharedPreferences pref) {
+       if (mInstance == null) {
+           mInstance = new CallFeaturesSetting();
+           mInstance.init(pref);
+       }
+    return mInstance;
+    }
+
 @Override
 protected void onStop() {
 
@@ -2083,6 +2110,8 @@ protected void onStop() {
     outState.putBoolean(BUTTON_LEFT_HAND, mButtonLeftHand.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
     outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch == null || mButtonForceTouch.isChecked());
+    //Trackball Answer
+    outState.putString(BUTTON_TRACKBALL_ANSWER,mTrackballAnswer.getValue());
     outState.commit();
     init(pref);
     super.onStop();

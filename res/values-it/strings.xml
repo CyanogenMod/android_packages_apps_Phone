@@ -742,4 +742,13 @@
 
     <string name="phone_number_label">Mio numero</string>
     <string name="phone_number_summary">Imposta il numero di telefono per questo dispositivo</string>
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Risposta con Trackball</string>
+    <string name="trackball_answer_sum">Premi la Trackball per Rispondere alle Chiamate in Arrivo.</string>
+    <string-array name="trackballLabels">
+       <item>Disattivato</item>  
+       <item>Premi per Rispondere</item>
+       <item>Toccare due volte per rispondere</item>
+    </string-array>
+    <!-- End TrackBall Answer - Added by Nushio -->
 </resources>

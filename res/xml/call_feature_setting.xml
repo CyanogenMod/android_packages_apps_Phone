@@ -126,7 +126,16 @@
         android:title="@string/left_hand"
         android:persistent="false"
         android:summary="@string/left_hand_sum"/>
-    <PreferenceScreen
+    <!-- Trackball Answer - Added by Nushio -->
+    <ListPreference android:key="button_trackball_answer_timed"
+        android:title="@string/trackball_answer" 
+        android:summary="@string/trackball_answer_sum" 
+        android:entries="@array/trackballLabels" 
+        android:entryValues="@array/trackballValues"
+        android:dialogTitle="@string/trackball_answer" 
+        android:persistent="false" />
+    <!-- end Trackball Answer -->
+  <PreferenceScreen
         android:key="button_black_list"
         android:title="@string/black_list"
         android:summary="@string/black_list_sum"

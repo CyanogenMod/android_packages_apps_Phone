@@ -728,4 +728,13 @@
     <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus.</string>
     <string name="phone_number_label">Mon numéro de téléphone</string>
     <string name="phone_number_summary">Régler le numéro d\'appel de ce téléphone</string>
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Répondeur Trackball</string>  
+    <string name="trackball_answer_sum">Utiliser le Trackball pour Répondre aux appels entrants.</string>
+    <string-array name="trackballLabels">
+       <item>Désactivé</item> 
+       <item>Cliquer pour Répondre</item>
+       <item>Double Cliquez pour Répondre</item> 
+    </string-array>
+    <!-- End TrackBall Answer - Added by Nushio -->
 </resources>

@@ -689,4 +689,13 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Para realizar una llamada por Internet, comprueba la conexión."</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Para realizar llamadas por Internet, debes estar conectado a una red WiFi (utiliza la configuración inalámbrica y de red)."</string>
     <string name="no_voip" msgid="8901474054537199865">"No se admiten llamadas por Internet"</string>
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Contestar con Trackball</string>  
+    <string name="trackball_answer_sum">Presiona el Trackball para contestar la llamada</string>
+    <string-array name="trackballLabels">
+       <item>Desactivado</item>
+       <item>Presiona para Contestar</item>
+       <item>Doble click para Contestar</item>    
+    </string-array>
+    <!-- End TrackBall Answer - Added by Nushio -->
 </resources>
