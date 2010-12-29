@@ -134,6 +134,13 @@
         android:entryValues="@array/trackballValues"
         android:dialogTitle="@string/trackball_answer" 
         android:persistent="false" />
+    <ListPreference android:key="button_trackball_hangup_timed"
+        android:title="@string/trackball_hangup" 
+        android:summary="@string/trackball_hangup_sum" 
+        android:entries="@array/trackballHangupLabels" 
+        android:entryValues="@array/trackballValues"
+        android:dialogTitle="@string/trackball_hangup" 
+        android:persistent="false" />
     <!-- end Trackball Answer -->
   <PreferenceScreen
         android:key="button_black_list"

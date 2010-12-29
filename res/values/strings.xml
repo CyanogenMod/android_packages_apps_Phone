@@ -1483,4 +1483,12 @@
        <item>350</item>
        <item>dt</item> 
     </string-array>
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Trackball Hangup</string>  
+    <string name="trackball_hangup_sum">Press the Trackball to Hang up the current call.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Disabled</item> 
+       <item>Tap to Hang up</item>
+       <item>Double Tap to Hang up</item>    
+    </string-array> 
 </resources>

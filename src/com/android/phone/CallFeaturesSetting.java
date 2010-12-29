@@ -442,6 +442,10 @@ private static final int ADD_BLACK_LIST_ID = 3;
 private static final String BUTTON_TRACKBALL_ANSWER = "button_trackball_answer_timed";
 private ListPreference mTrackballAnswer;
 static String mTrackAnswer;
+//Trackball Hangup
+private static final String BUTTON_TRACKBALL_HANGUP = "button_trackball_hangup_timed";
+private ListPreference mTrackballHangup;
+static String mTrackHangup;
 
     private boolean mForeground;
 
@@ -1570,12 +1574,14 @@ initPrefBlackList();
 
 mTrackballAnswer = (ListPreference) prefSet.findPreference(BUTTON_TRACKBALL_ANSWER);
 mTrackballAnswer.setValue(mTrackAnswer);
+mTrackballHangup = (ListPreference) prefSet.findPreference(BUTTON_TRACKBALL_HANGUP);
+mTrackballHangup.setValue(mTrackHangup);
 
-//No reason to show Trackball Answer if it doesn't have a Trackball.
+//No reason to show Trackball Answer & Hangup if it doesn't have a Trackball.
 if(getResources().getConfiguration().navigation != 3){
    ((PreferenceCategory) prefSet.findPreference(CATEGORY_ADVANCED)).removePreference(mTrackballAnswer);
+   ((PreferenceCategory) prefSet.findPreference(CATEGORY_ADVANCED)).removePreference(mTrackballHangup);
 }
-
 // No reason to show this if no proximity sensor on device
 if (((SensorManager)getSystemService(SENSOR_SERVICE)).getDefaultSensor(
         Sensor.TYPE_PROXIMITY) == null) {
@@ -1981,8 +1987,9 @@ private void init(SharedPreferences pref) {
     mLeftHand = pref.getBoolean(BUTTON_LEFT_HAND, false);
     mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
     mForceTouch  = pref.getBoolean(BUTTON_FORCE_TOUCH, PhoneUtils.isProximitySensorAvailable(PhoneApp.getInstance()));
-    //Trackball Answer
+    //Trackball Answer & Hangup
     mTrackAnswer = pref.getString(BUTTON_TRACKBALL_ANSWER, "-1");
+    mTrackHangup = pref.getString(BUTTON_TRACKBALL_HANGUP, "-1");
 
     ObjectInputStream ois = null;
     boolean correctVer = false;
@@ -2099,8 +2106,9 @@ protected void onStop() {
     outState.putBoolean(BUTTON_LEFT_HAND, mButtonLeftHand.isChecked());
     outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
     outState.putBoolean(BUTTON_FORCE_TOUCH, mButtonForceTouch == null || mButtonForceTouch.isChecked());
-    //Trackball Answer
+    //Trackball Answer & Hangup
     outState.putString(BUTTON_TRACKBALL_ANSWER,mTrackballAnswer.getValue());
+    outState.putString(BUTTON_TRACKBALL_HANGUP,mTrackballHangup.getValue());
     outState.commit();
     init(pref);
     super.onStop();
