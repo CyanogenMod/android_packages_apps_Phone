@@ -2081,17 +2081,6 @@ private void initPrefBlackList() {
 //====
 }
 
-   /**
-    * Initializes Advanced Settings Variables
-    */
-    public static CallFeaturesSetting getInstance(SharedPreferences pref) {
-       if (mInstance == null) {
-           mInstance = new CallFeaturesSetting();
-           mInstance.init(pref);
-       }
-    return mInstance;
-    }
-
 @Override
 protected void onStop() {
 

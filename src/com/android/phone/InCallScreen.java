@@ -40,6 +40,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.os.SystemProperties;
+import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.ServiceState;
