@@ -5179,7 +5179,7 @@ public class InCallScreen extends Activity
 		   internalAnswerCall();
 	       }
 	     }
-     }else if(mCM.hasActiveFgCall()  && !mSettings.mTrackHangup.equals("-1"){ //We're in a call and trackbal hangup is enabled
+     }else if(mCM.hasActiveFgCall()  && !mSettings.mTrackHangup.equals("-1")){ //We're in a call and trackbal hangup is enabled
 	if(event.getAction() == MotionEvent.ACTION_DOWN){
 	       if(mSettings.mTrackAnswer.equals("dt")){
 		 //Double Tap Code taken from MetalHead's Double-Tap-to-skip-song. 
