@@ -68,7 +68,6 @@ public class Settings extends PreferenceActivity implements DialogInterface.OnCl
     private CheckBoxPreference mButtonDataRoam;
     private CheckBoxPreference mButtonDataEnabled;
     private CheckBoxPreference mButtonMvnoDataRoam;
-    private CdmaRoamingListPreference mButtonCdmaRoam;
 
     private Preference mButtonDataUsage;
     private DataUsageListener mDataUsageListener;
