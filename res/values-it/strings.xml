@@ -624,6 +624,10 @@
     <string name="contactPhoto" msgid="4713193418046639466">"foto contatto"</string>
     <string name="goPrivate" msgid="865837794424530980">"Privato"</string>
     <string name="selectContact" msgid="781975788478987237">"seleziona contatto"</string>
+    <!-- Title displayed for the checkbox to (en|dis)able voicemail notifications. [CHAR LIMIT=NONE] -->
+    <string name="voicemail_notification_title">Notifiche segr. telefonica</string>
+    <!-- Summary for the checkbox to (en|dis)able voicemail notifications. [CHAR LIMIT=NONE] -->
+    <string name="voicemail_notification_summary">Attiva le notifiche per (nuovi) messaggi in segreteria telefonica</string>
     <string name="sip_settings" msgid="6699045718560859691">"Impostazioni chiamate Internet"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"Account di chiamata Internet (SIP)"</string>
     <string name="sip_accounts_title" msgid="1212889069281054570">"Account"</string>
@@ -743,12 +747,20 @@
     <string name="phone_number_label">Mio numero</string>
     <string name="phone_number_summary">Imposta il numero di telefono per questo dispositivo</string>
     <!-- TrackBall Answer - Added by Nushio -->
-    <string name="trackball_answer">Risposta con Trackball</string>
+    <string name="trackball_answer">Rispondi con Trackball</string>
     <string name="trackball_answer_sum">Premi la Trackball per Rispondere alle Chiamate in Arrivo.</string>
     <string-array name="trackballLabels">
-       <item>Disattivato</item>  
+       <item>Non attivo</item>
        <item>Premi per Rispondere</item>
-       <item>Toccare due volte per rispondere</item>
+       <item>Premi due volte per rispondere</item>
     </string-array>
     <!-- End TrackBall Answer - Added by Nushio -->
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Termina con trackball</string>
+    <string name="trackball_hangup_sum">Premi la trackball per terminare la chiamata in corso.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Non attivo</item>
+       <item>Premi per terminare</item>
+       <item>Premi due volte per terminare</item>
+    </string-array>
 </resources>
