@@ -78,6 +78,9 @@
          apps/Contacts. -->
     <bool name="config_enable_dialer_key_vibration">true</bool>
 
+    <!-- Flag indicating if the voicemail notification option is enabled -->
+    <bool name="voicemail_notification_enabled">true</bool>
+
     <!-- Flag indicating if the tty is enabled -->
     <bool name="tty_enabled">false</bool>
 
