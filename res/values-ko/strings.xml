@@ -689,4 +689,62 @@
     <string name="no_internet_available" msgid="1100564991026313234">"인터넷 전화를 걸려면 먼저 인터넷 연결을 확인하세요."</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"인터넷 전화를 사용하려면 Wi-Fi 네트워크에 연결되어 있어야 합니다(\'무선 및 네트워크\' 설정 사용)."</string>
     <string name="no_voip" msgid="8901474054537199865">"인터넷 전화가 지원되지 않습니다."</string>
+
+    <string name="advanced_setting">고급 설정 V.30.1</string>
+    <string name="vibrate_outgoing">통화 시작 시 진동</string>
+    <string name="vibrate_outgoing_sum">통화가 시작되었을 때 진동합니다. </string>
+    <string name="vibrate_45">45초마다 진동</string>
+    <string name="vibrate_45_sum">거는 통화일 때 45초마다 진동합니다.</string>
+    <string name="vibrate_hangup">통화 종료 시 진동</string>
+    <string name="vibrate_hangup_sum">통화가 끝났을 때 진동합니다.</string>
+    <string name="screen_awake">화면 켜져있기</string>
+    <string name="screen_awake_sum">통화중에 화면을 평상시보다 더 길게 켭니다. </string>
+    <string name="always_proximity">근접 센서 사용</string>
+    <string name="always_proximity_sum">휴대전화가 수평으로 놓여져 있어도 근접 센서를 사용하여 화면을 잠급니다.</string>
+    <string name="led_notify_call">부재중 통화 LED 알림</string>
+    <string name="led_notify_call_sum">부재중 통화가 있을 때 LED를 깜빡입니다.</string>
+    <string name="led_show_organ">별명/단체 보이기</string>
+    <string name="led_show_organ_sum">통화 중 화면에 별명/단체가 보입니다.</string>
+    <string name="vibrate_call_waiting">통화 중 대기시 진동</string>
+    <string name="vibrate_call_waiting_sum">통화 중 대기가 있을 경우 진동합니다.</string>
+    <string name="return_home">항상 통화 내역으로 돌아가기</string>
+    <string name="return_home_sum">통화가 끝났을 때 통화 내역으로 돌아가도록 강제합니다.</string>
+    <string name="menu_addBlackList">수신거부 추가</string>
+    <string name="black_list">수신거부</string>
+    <string name="black_list_sum">수신거부 목록에 있는 번호에서의 전화는 자동으로 거절됩니다.</string>
+    <string name="add_black">전화번호 추가</string>
+    <string name="remove_black">목록에서 %s 지우기</string>
+    <string name="turn_silence">뒤집어 조용히 하기</string>
+    <string name="turn_silence_sum">휴대전화를 뒤집어 벨소리를 끌 수 있습니다.</string>
+    <string name="left_hand">왼손잡이 방식</string>
+    <string name="left_hand_sum">왼손을 사용하여 전화를 쥘 수 있습니다. 재부팅을 해야 효과를 확인할 수 있습니다.</string>
+    <string name="set_force_touch">통화중 터치</string>
+    <string name="set_force_touch_sum">근접 센서를 사용하지 않고 통화중 센서를 사용할 수 있게 합니다.</string>
+
+    <!-- Title displayed for the checkbox to (en|dis)able voicemail notifications. [CHAR LIMIT=NONE] -->
+    <string name="voicemail_notification_title">음성사서함 알림</string>
+    <!-- Summary for the checkbox to (en|dis)able voicemail notifications. [CHAR LIMIT=NONE] -->
+    <string name="voicemail_notification_summary">새로운 음성사서함에 대한 알림을 표시합니다.</string>
+
+    <string name="per_change_mobile_network">네트워크 바꾸기 (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">이 권한을 가진 어플리케이션은 아무 때나 2G 데이터와 3G 데이터를 선택할 수 있습니다. 3G는 더 빠르지만 배터리를 더 많이 소모하며 요금이 더 많이 나올 수 있습니다.</string>
+    <string name="phone_number_label">내 전화번호</string>
+    <string name="phone_number_summary">이 휴대전화에 대한 전화번호 설정</string>
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">트랙볼 전화받기 </string>  
+    <string name="trackball_answer_sum">트랙볼을 눌러 전화를 받을 수 있습니다.</string>
+    <string-array name="trackballLabels">
+       <item>비활성화</item> 
+       <item>한번 눌러 받기 </item>
+       <item>두번 눌러 받기</item>    
+    </string-array>  
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">트랙볼 전화끊기</string>  
+    <string name="trackball_hangup_sum">트랙볼을 눌러 잔화를 끊을 수 있습니다.</string>
+    <string-array name="trackballHangupLabels">
+       <item>비활성화</item> 
+       <item>한번 눌러 끊기</item>
+       <item>두번 눌러 끊기</item>    
+    </string-array> 
+
 </resources>
