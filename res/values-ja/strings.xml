@@ -742,5 +742,22 @@
     <string name="per_change_mobile_network_desc">この権限を許可されたアプリケーションは、いつでも2G/3Gデータの切り替えが可能です。3Gは高速ですが、バッテリ消費が増加します。また、キャリアの課金も増加することがあります。</string>
     <string name="phone_number_label">自分の電話番号</string>
     <string name="phone_number_summary">この携帯電話の電話番号をセットする</string>
+    <!-- CM extra -->
+    <string name="voicemail_notification_title">ボイスメールの通知</string>
+    <string name="voicemail_notification_summary">新着ボイスメールの通知を有効にする</string>
+    <string name="trackball_answer">トラックボールで応答</string>
+    <string name="trackball_answer_sum">トラックボールを押して着信に応答する</string>
+    <string-array name="trackballLabels">
+       <item>無効</item>
+       <item>タップで応答</item>
+       <item>ダブルタップで応答</item>
+    </string-array>
+    <string name="trackball_hangup">トラックボールで通話終了</string>
+    <string name="trackball_hangup_sum">トラックボールを押して現在の通話を終了させる</string>
+    <string-array name="trackballHangupLabels">
+       <item>無効</item>
+       <item>タップで終了</item>
+       <item>ダブルタップで終了</item>
+    </string-array>
 
 </resources>
