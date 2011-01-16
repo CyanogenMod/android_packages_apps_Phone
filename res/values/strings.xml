@@ -1403,6 +1403,8 @@
     <string name="send_keepalive_title">Send keep-alive</string>
     <!-- Text of the keepalive preference summary. [CHAR LIMIT=NONE] -->
     <string name="send_keepalive_summary">Send SIP keep-alive messages</string>
+    <!-- Text of the user agent preference. [CHAR LIMIT=NONE] -->
+    <string name="user_agent_title">SIP User-Agent</string>
     <!-- Text of the auto registration preference. [CHAR LIMIT=NONE] -->
     <string name="auto_registration_title">Auto-registration</string>
     <!-- Text of the auto registration preference summary. [CHAR LIMIT=NONE] -->
@@ -1463,6 +1465,7 @@
     <string translatable="false" name="password">Password</string>
     <string translatable="false" name="display_name">DisplayName</string>
     <string translatable="false" name="proxy_address">ProxyAddress</string>
+    <string translatable="false" name="user_agent">UserAgent</string>
     <string translatable="false" name="port">Port</string>
     <string translatable="false" name="transport">Protocol</string>
     <string translatable="false" name="send_keepalive">SendKeepAlive</string>

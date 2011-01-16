@@ -62,5 +62,14 @@
             android:entryValues="@array/sip_send_keepalive_options"
             android:persistent="false"
             android:summary="@string/sip_system_decide"/>
+
+        <EditTextPreference
+            android:key="@string/user_agent"
+            android:title="@string/user_agent_title"
+            android:dialogTitle="@string/user_agent_title"
+            android:summary="@string/optional_summary"
+            android:persistent="false"
+            android:singleLine="true"/>
+
     </PreferenceCategory>
 </PreferenceScreen>

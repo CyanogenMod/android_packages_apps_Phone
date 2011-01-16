@@ -78,6 +78,7 @@ public class SipEditor extends PreferenceActivity
         DomainAddress(R.string.domain_address, 0, R.string.default_preference_summary),
         DisplayName(R.string.display_name, 0, R.string.display_name_summary),
         ProxyAddress(R.string.proxy_address, 0, R.string.optional_summary),
+        UserAgent(R.string.user_agent, 0, R.string.optional_summary),
         Port(R.string.port, R.string.default_port, R.string.default_port),
         Transport(R.string.transport, R.string.default_transport, NA),
         SendKeepAlive(R.string.send_keepalive, R.string.sip_system_decide, NA);
@@ -304,6 +305,9 @@ public class SipEditor extends PreferenceActivity
                         case ProxyAddress:
                             // optional; do nothing
                             break;
+                        case UserAgent:
+                            // optional; do nothing
+                            break;
                         case Port:
                             pref.setText(getString(R.string.default_port));
                             break;
@@ -390,6 +394,7 @@ public class SipEditor extends PreferenceActivity
                     .setOutboundProxy(PreferenceKey.ProxyAddress.getValue())
                     .setProtocol(PreferenceKey.Transport.getValue())
                     .setDisplayName(PreferenceKey.DisplayName.getValue())
+                    .setUserAgent(PreferenceKey.UserAgent.getValue())
                     .setPort(Integer.parseInt(PreferenceKey.Port.getValue()))
                     .setSendKeepAlive(isAlwaysSendKeepAlive())
                     .setAutoRegistration(
@@ -412,6 +417,7 @@ public class SipEditor extends PreferenceActivity
             ((EditTextPreference) pref).setText(value);
             checkIfDisplayNameSet();
         }
+
         return true;
     }
 
