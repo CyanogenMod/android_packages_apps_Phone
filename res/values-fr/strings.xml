@@ -616,6 +616,8 @@
     <string name="contactPhoto" msgid="4713193418046639466">"photo du contact"</string>
     <string name="goPrivate" msgid="865837794424530980">"mode privé"</string>
     <string name="selectContact" msgid="781975788478987237">"sélectionner un contact"</string>
+    <string name="voicemail_notification_title">Notifications messagerie vocale</string>
+    <string name="voicemail_notification_summary">Activer la réception de notifications lors de (nouveaux) messages vocaux</string>
     <string name="sip_settings" msgid="6699045718560859691">"Paramètres d\'appel Internet"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"Comptes d\'appels Internet (SIP)"</string>
     <string name="sip_accounts_title" msgid="1212889069281054570">"Comptes"</string>
@@ -678,6 +680,7 @@
     <string name="transport_title" msgid="8253139511847746640">"Type de transport"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Envoyer un keep-alive"</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"Envoyer des messages keep-alive SIP"</string>
+    <string name="user_agent_title">User-Agent SIP</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Enregistrement automatique"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Enregistrer le profil automatiquement"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Définir comme compte principal"</string>
@@ -711,6 +714,7 @@
     <string name="led_show_organ">Montrer organisation</string>
     <string name="led_show_organ_sum">L\'organisation sera montrée sur l\'écran d\'appel</string>
     <string name="vibrate_call_waiting">Vibrer sur appel en attente</string>
+    <string name="vibrate_call_waiting_sum">Vibrer lorsqu\'un appel est mis en attente</string>
     <string name="return_home">Forcer retour au journal d\'appels</string>
     <string name="return_home_sum">Force le retour à l\'écran du journal d\'appels après une conversation</string>
     <string name="menu_addBlackList">Ajouter à la liste noire</string>
@@ -728,13 +732,21 @@
     <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus.</string>
     <string name="phone_number_label">Mon numéro de téléphone</string>
     <string name="phone_number_summary">Régler le numéro d\'appel de ce téléphone</string>
-    <!-- TrackBall Answer - Added by Nushio -->
-    <string name="trackball_answer">Répondeur Trackball</string>  
-    <string name="trackball_answer_sum">Utiliser le Trackball pour Répondre aux appels entrants.</string>
+
+    <string name="trackball_answer">Trackball pour répondre</string>  
+    <string name="trackball_answer_sum">Presser sur la Trackball pour répondre aux appels entrants</string>
+
     <string-array name="trackballLabels">
        <item>Désactivé</item> 
-       <item>Cliquer pour Répondre</item>
-       <item>Double Cliquez pour Répondre</item> 
+       <item>Un appui pour répondre</item>
+       <item>Deux appuis pour répondre</item>    
     </string-array>
-    <!-- End TrackBall Answer - Added by Nushio -->
+
+    <string name="trackball_hangup">Trackball pour raccrocher</string>  
+    <string name="trackball_hangup_sum">Une pression sur la Trackball met fin à l\'appel courant</string>
+    <string-array name="trackballHangupLabels">
+       <item>Désactivé</item> 
+       <item>Un appui pour raccrocher</item>
+       <item>Deux appuis pour raccrocher</item>   
+    </string-array> 
 </resources>
