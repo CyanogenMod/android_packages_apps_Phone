@@ -745,13 +745,24 @@
 
     <string name="phone_number_label">Meine Nummer</string>
     <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
-    <!-- TrackBall Answer - Added by Nushio -->
-    <string name="trackball_answer">Trackball Annahme</string>  
-    <string name="trackball_answer_sum">Drücke auf den Trackball um den eingehenden Anruf anzunehmen</string>
+
+    <!-- TrackBall Answer and Hangup - Added by Nushio -->
+    <string name="trackball_answer">Trackball Annahme</string>
+    <string name="trackball_answer_sum">Drücke auf den Trackball, um den eingehenden Anruf anzunehmen.</string>
     <string-array name="trackballLabels">
         <item>Ausgeschaltet</item>
-        <item>Halten zum annehmen</item>
-        <item>Doppelt drücken zum annehmen</item>    
+        <item>Halten zum Annehmen</item>
+        <item>Doppelt drücken zum annehmen</item>
     </string-array>
-    <!-- End TrackBall Answer - Added by Nushio -->
+    <string name="trackball_hangup">Trackball Auflegen</string>
+    <string name="trackball_hangup_sum">Drücke den Trackball, um das Gespräch zu beenden.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Ausgeschaltet</item>
+       <item>Einmal drücken</item>
+       <item>Doppelt drücken</item>
+    </string-array>
+    <!-- End TrackBall Answer and Hangup - Added by Nushio -->
+
+    <string name="voicemail_notification_title">Mailbox-Benachrichtigungen</string>
+    <string name="voicemail_notification_summary">Benachrichtigungen für (neue) Mailbox-Nachrichten einschalten.</string>
 </resources>
