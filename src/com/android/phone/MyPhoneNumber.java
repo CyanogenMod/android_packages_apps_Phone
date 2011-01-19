@@ -22,8 +22,13 @@ public class MyPhoneNumber extends BroadcastReceiver {
 
         String phoneNum = mTelephonyMgr.getLine1Number();
         String savedNum = prefs.getString(MSISDNEditPreference.PHONE_NUMBER, null);
+        boolean airplaneModeOn = intent.getBooleanExtra("state", false);
 
-        if (phoneNum == null) {
+        if (airplaneModeOn) {
+            if (DBG)
+                Log.d(LOG_TAG, "Airplane Mode On.  No modification to phone number.");
+        }
+        else if (phoneNum == null) {
             if (DBG)
                 Log.d(LOG_TAG, "Trying to read the phone number from file");
 
