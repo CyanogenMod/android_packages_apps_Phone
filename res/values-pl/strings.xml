@@ -689,4 +689,24 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Aby nawiązać połączenie przez internet, sprawdź najpierw połączenie internetowe"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Połączenia przez internet wymagają nawiązania połączenia z siecią Wi-Fi (użyj ustawień sieci zwykłych i bezprzewodowych)"</string>
     <string name="no_voip" msgid="8901474054537199865">"Brak obsługi połączeń przez internet"</string>
+    <string name="per_change_mobile_network">Zmień sieć (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Aplikacja ma możliwość przełącania się między siecią 2G i 3G. 3G jest szybsze, ale zużywa szybciej baterię.</string>
+    <string name="phone_number_label">Mój numer telefonu</string>
+    <string name="phone_number_summary">Ustaw numer urządzenia</string>
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Odbierz Trackballem</string>  
+    <string name="trackball_answer_sum">Wciśnij Trackball, by odebrać połączenie.</string>
+    <string-array name="trackballLabels">
+       <item>Wyłączone</item> 
+       <item>Stuknij by odebrać</item>
+       <item>Stuknij dwukrotnie by odebrać</item>    
+    </string-array>  
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Odrzucić Trackball</string>  
+    <string name="trackball_hangup_sum">ciśnij Trackball, by odrzucić połączenie.</string>
+    <string-array name="trackballHangupLabels">
+        <item>Wyłączone</item> 
+       <item>Stuknij by odrzucić</item>
+       <item>Stuknij dwukrotnie by odrzucić</item>    
+    </string-array>  
 </resources>
