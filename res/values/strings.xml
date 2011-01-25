@@ -1199,10 +1199,12 @@
     <eat-comment />
     <!-- Incoming call hint: drag the tab right to answer -->
     <string name="slide_to_answer">Drag right to answer</string>
+    <string name="rotate_to_answer">Rotate right to answer</string>
     <!-- Incoming call hint: drag the tab left to silence ringer -->
     <string name="slide_to_silence">Drag left to silence ringer</string>
     <!-- Incoming call hint: drag the tab left to decline the incoming call -->
     <string name="slide_to_decline">Drag left to decline</string>
+    <string name="rotate_to_decline">Rotate left to decline</string>
     <!-- Incoming call hint: drag the tab right to answer and hold the active call -->
     <string name="slide_to_answer_and_hold">Drag right to answer and\nhold active call</string>
     <!-- Incoming call hint: drag the tab right to answer and end the active call -->
