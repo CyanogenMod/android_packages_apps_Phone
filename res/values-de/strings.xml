@@ -617,8 +617,10 @@
     <string name="calling_via_template" msgid="7374498518104190489">"Anruf über ^1"\n<b>"^2"</b>
     </string>
     <string name="slide_to_answer" msgid="255903188611244476">"Zum Annehmen nach rechts ziehen"</string>
+    <string name="rotate_to_answer">Zum Annehmen nach rechts rotieren</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Zum Stummschalten des Klingeltons nach links ziehen"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Zum Abweisen nach links ziehen"</string>
+    <string name="rotate_to_decline">Zum Abweisen nach links rotieren</string>
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Zum Annehmen nach rechts ziehen und"\n"aktiven Anruf halten"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Zum Annehmen nach rechts ziehen und"\n"aktiven Anruf beenden"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Zum Annehmen nach rechts ziehen und"\n"gehaltenen Anruf beenden"</string>
