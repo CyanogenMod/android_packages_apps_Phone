@@ -614,8 +614,10 @@
     <string name="calling_via_template" msgid="7374498518104190489">"Chiamata in corso tramite ^1"\n<b>"^2"</b>
     </string>
     <string name="slide_to_answer" msgid="255903188611244476">"Trascina a destra per rispondere"</string>
+    <string name="rotate_to_answer">Ruota a destra per rispondere</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Trascina a sinistra per disattivare la suoneria"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Trascina a sinistra per rifiutare"</string>
+    <string name="rotate_to_decline">Ruota a sinistra per rifiutare</string>
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Trascina a destra per rispondere e"\n"mettere in attesa la chiamata attiva"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Trascina a destra per rispondere e"\n"terminare la chiamata attiva"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Trascina a destra per rispondere e"\n"terminare la chiamata in attesa"</string>
