@@ -759,5 +759,6 @@
        <item>タップで終了</item>
        <item>ダブルタップで終了</item>
     </string-array>
-
+    <string name="rotate_to_answer">右に回転で応答</string>
+    <string name="rotate_to_decline">左に回転で拒否</string>
 </resources>
