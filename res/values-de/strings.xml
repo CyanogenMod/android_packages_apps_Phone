@@ -767,4 +767,13 @@
 
     <string name="voicemail_notification_title">Mailbox-Benachrichtigungen</string>
     <string name="voicemail_notification_summary">Benachrichtigungen für (neue) Mailbox-Nachrichten einschalten.</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Du darfst zur Zeit keine Anrufe tätigen. Bitte später erneut versuchen.</string>
+    <string name="dialog_phone_goggles_title">Anruf blockiert</string>
+    <string name="dialog_phone_goggles_title_unlocked">Anruf erlaubt</string>
+    <string name="dialog_phone_goggles_content">Jetzt einen Anruf zu tätigen wäre nicht sehr schlau. Sicher, dass du fortfahren willst?</string>
+    <string name="dialog_phone_goggles_unauthorized">Jetzt einen Anruf zu tätigen wäre nicht sehr schlau.</string>
+    <string name="dialog_phone_goggles_ok">Anrufen</string>
+    <string name="dialog_phone_goggles_cancel">Abbrechen</string>
 </resources>
