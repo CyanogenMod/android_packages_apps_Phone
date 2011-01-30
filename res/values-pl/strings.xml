@@ -702,11 +702,20 @@
        <item>Stuknij dwukrotnie by odebrać</item>    
     </string-array>  
     <!-- TrackBall Hangup - Added by Nushio -->
-    <string name="trackball_hangup">Odrzucić Trackball</string>  
-    <string name="trackball_hangup_sum">ciśnij Trackball, by odrzucić połączenie.</string>
+    <string name="trackball_hangup">Odrzuć Trackballem</string>  
+    <string name="trackball_hangup_sum">Wciśnij Trackball, by odrzucić połączenie.</string>
     <string-array name="trackballHangupLabels">
-        <item>Wyłączone</item> 
+       <item>Wyłączone</item> 
        <item>Stuknij by odrzucić</item>
        <item>Stuknij dwukrotnie by odrzucić</item>    
     </string-array>  
+    
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Nie możesz teraz wykonywać połączeń. Spróbuj ponownie później.</string>
+    <string name="dialog_phone_goggles_title">Połączenie zablokowane</string>
+    <string name="dialog_phone_goggles_title_unlocked">Połączenie odblokowane</string>
+    <string name="dialog_phone_goggles_content">Wykonywanie połączeń w tej chwili może być nierozsądne. Czy napewno chcesz kontynuować?</string>
+    <string name="dialog_phone_goggles_unauthorized">Wykonywanie połączeń w tej chwili może być nierozsądne.</string>
+    <string name="dialog_phone_goggles_ok">Zadzwoń</string>
+    <string name="dialog_phone_goggles_cancel">Anuluj</string>
 </resources>
