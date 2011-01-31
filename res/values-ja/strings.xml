@@ -761,4 +761,14 @@
     </string-array>
     <string name="rotate_to_answer">右に回転で応答</string>
     <string name="rotate_to_decline">左に回転で拒否</string>
+
+    <!-- Phone Goggles -->
+    <string name="toast_phone_goggles">今の時間に発信することは許可されていません。あとで再度お試しください。</string>
+    <string name="dialog_phone_goggles_title">発信はブロックされました</string>
+    <string name="dialog_phone_goggles_title_unlocked">発信あ承認されました</string>
+    <string name="dialog_phone_goggles_content">今の時間に発信するのは賢明ではないかもしれません。本当に続けますか？</string>
+    <string name="dialog_phone_goggles_unauthorized">今の時間に発信するのは賢明ではないかもしれません。</string>
+    <string name="dialog_phone_goggles_ok">発信</string>
+    <string name="dialog_phone_goggles_cancel">キャンセル</string>
+
 </resources>
