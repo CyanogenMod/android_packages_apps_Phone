@@ -767,4 +767,13 @@
        <item>Premi per terminare</item>
        <item>Premi due volte per terminare</item>
     </string-array>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Non ti è permesso telefonare a quest\'ora. Riprova più tardi.</string>
+    <string name="dialog_phone_goggles_title">Chiamata bloccata</string>
+    <string name="dialog_phone_goggles_title_unlocked">Chiamata autorizzata</string>
+    <string name="dialog_phone_goggles_content">Può non esser saggio telefonare a quest\'ora. Sicuro di voler continuare?</string>
+    <string name="dialog_phone_goggles_unauthorized">Può non esser saggio telefonare a quest\'ora.</string>
+    <string name="dialog_phone_goggles_ok">Chiama</string>
+    <string name="dialog_phone_goggles_cancel">Annulla</string>
 </resources>
