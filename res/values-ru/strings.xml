@@ -524,7 +524,7 @@
     <string name="onscreenSpeakerText" msgid="9013795366801657948">"Динамик"</string>
     <string name="onscreenMuteText" msgid="5011369181754261374">"Откл. звук"</string>
     <string name="onscreenBluetoothText" msgid="2479639597725504499">"Bluetooth"</string>
-    <string name="onscreenAddCallText" msgid="5140385634712287403">"+ вызов"</string>
+    <string name="onscreenAddCallText" msgid="5140385634712287403">"Добавить вызов"</string>
     <string name="onscreenMergeCallsText" msgid="6640195098064538950">"Соединить"</string>
     <string name="onscreenSwapCallsText" msgid="1602990689244030047">"Перевод звонка"</string>
     <string name="onscreenManageCallsText" msgid="5473231160123254154">"Управление вызовами"</string>
@@ -688,7 +688,7 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Перед звонком через Интернет проверьте подключение"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Для совершения интернет-вызовов необходимо подключение к сети Wi-Fi (используйте настройки беспроводной сети)."</string>
     <string name="no_voip" msgid="8901474054537199865">"Интернет-вызов не поддерживается"</string>
-	
+
     <string name="notification_ongoing_calling_format">Звонок (<xliff:g id="duration">%s</xliff:g>)</string>
     <string name="advanced_setting">Дополнительные настройки V.30.1</string>
     <string name="vibrate_outgoing">Вибрировать при ответе</string>
@@ -720,4 +720,32 @@
     <string name="left_hand_sum">Используйте телефон левой рукой, необходима перезагрузка.</string>
     <string name="phone_number_label">Мой номер телефона</string>
     <string name="phone_number_summary">Установите номер телефона для этого устройства</string>
+
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Ответ по trackball</string>
+    <string name="trackball_answer_sum">Ответить на звонок нажатием на trackball.</string>
+    <string-array name="trackballLabels">
+       <item>Отключено</item>
+       <item>Нажать для ответа</item>
+       <item>Двойное нажатие для ответа</item>
+    </string-array>
+
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Отбой по trackball</string>
+    <string name="trackball_hangup_sum">Сбросить звонок нажатие на trackball.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Отключено</item>
+       <item>Нажать для отбоя</item>
+       <item>Двойное нажатие для отбоя</item>
+    </string-array>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Сейчас вы не сможете позвонить по телефону. Пожалуйста, повторите попытку позже.</string>
+    <string name="dialog_phone_goggles_title">Звонок заблокирован</string>
+    <string name="dialog_phone_goggles_title_unlocked">Звонок разрешен</string>
+    <string name="dialog_phone_goggles_content">Совершение звонка может быть неуместно в это время. Вы уверены, что хотите продолжить?</string>
+    <string name="dialog_phone_goggles_unauthorized">Совершение звонка может быть неуместно в это время.</string>
+    <string name="dialog_phone_goggles_ok">Позвонить</string>
+    <string name="dialog_phone_goggles_cancel">Отменить</string>
+
 </resources>
