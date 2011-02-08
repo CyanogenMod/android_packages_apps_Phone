@@ -223,6 +223,9 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Anslut till datatjänster vid roaming"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Du förlorade dataanslutningen eftersom du lämnade ditt hemnätverk utan att aktivera roaming."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Tillåta roaming? Observera att detta kan leda till höga kostnader!"</string>
+    <string name="mvno_roaming">"Nationell data-roaming"</string>
+    <string name="mvno_roaming_summary">"Detta kommer låta dig använda olika operatörer inom landet."</string>
+    <string name="mvno_roaming_warning">"Aktivera data-roaming inom samma land som din operatör? Vissa virtuella operatörer kräver denna inställning för att komma åt data. Aktivera INTE denna inställning om din operatör debiterar för roaming inom landet! Denna inställning börjar inte gälla förrän du startat om telefonen eller byter till Flygplansläge och tillbaka."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Alternativ för GSM/UMTS"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA-alternativ"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Dataanvändning"</string>
@@ -600,16 +603,55 @@
     <string name="dial_button_label" msgid="5551611636419190229">"Ring"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Ringer via ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Tryck och dra till höger om du vill svara"</string>
+    <string name="rotate_to_answer">"Rotera höger om du vill svara"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Tryck och dra till vänster för tyst signal"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Tryck och dra till vänster om du vill avvisa"</string>
+    <string name="rotate_to_decline">"Rotera vänster om du vill avvisa"</string>
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Tryck och dra till höger om du vill svara och"\n"parkera det aktiva samtalet"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Tryck och dra till höger om du vill svara och"\n"avsluta det aktiva samtalet"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Tryck och dra till höger om du vill svara och"\n"avsluta det parkerade samtalet"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Svara"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Avvisa"</string>
+    <string name="notification_ongoing_calling_format">Ringer (<xliff:g id="duration">%s</xliff:g>)
+    </string>
+    <string name="advanced_setting">Avancerade inställningar V.30.1</string>
+    <string name="vibrate_outgoing">Vibrera vid svar</string>
+    <string name="vibrate_outgoing_sum">Vibrera när du svarar på ett samtal</string>
+    <string name="vibrate_45">Vibrera var 45:e sekund</string>
+    <string name="vibrate_45_sum">Vibrera var 45:e sekund under utgående samtal</string>
+    <string name="vibrate_hangup">Vibrera vid avslut</string>
+    <string name="vibrate_hangup_sum">Vibrera när ett samtal har avslutats</string>
+    <string name="screen_awake">Håll skärmen igång</string>
+    <string name="screen_awake_sum">Skärmen kommer hållas igång längre än normalt när ett samtal pågår</string>
+    <string name="always_proximity">Använd alltid närhet</string>
+    <string name="always_proximity_sum">Aktivera för att låta närhetssensorn låsa skärmen, även om telefonen är i horisontellt läge.</string>
+    <string name="led_notify_call">LED-avisering vid missade samtal</string>
+    <string name="led_notify_call_sum">LED kommer blinka när ett samtal har missats</string>
+    <string name="led_show_organ">"Visa smeknamn/organisation"</string>
+    <string name="led_show_organ_sum">"Smeknamn/organisation kommer visas på skärmen för pågående samtal."</string>
+    <string name="vibrate_call_waiting">Vibrera vid samtal väntar</string>
+    <string name="vibrate_call_waiting_sum">Vibrera när samtal väntar</string>
+    <string name="return_home">Backa alltid till samtalslogg</string>
+    <string name="return_home_sum">Tvinga återgång till skärmen med samtalslogg när ett samtal avslutas.</string>
+    <string name="menu_addBlackList">Lägg till i svartlista</string>
+    <string name="black_list">Svartlista</string>
+    <string name="black_list_sum">Inkommande samtal i svartlistan kommer avvisas.</string>
+    <string name="add_black">Lägg till telefonnummer</string>
+    <string name="remove_black">Ta bort %s från listan</string>
+    <string name="turn_silence">Tysta med vändning</string>
+    <string name="turn_silence_sum">Vänd telefonen för att tysta ringning</string>
+    <string name="left_hand">Vänsterhandsläge</string>
+    <string name="left_hand_sum">Använd vänster hand för att hålla i telefonen, behöver omstart för att börja gälla.</string>
+    <string name="set_force_touch">Pekgränssnitt under samtal</string>
+    <string name="set_force_touch_sum">Tvinga pekgränssnitt under samtal utan närhetssensor</string>
+    
     <string name="contactPhoto" msgid="4713193418046639466">"kontaktbild"</string>
     <string name="goPrivate" msgid="865837794424530980">"gör privat"</string>
     <string name="selectContact" msgid="781975788478987237">"välj kontakt"</string>
+    
+    <string name="voicemail_notification_title">Aviseringar för röstbrevlåda</string>
+    <string name="voicemail_notification_summary">Aktivera aviseringar för (ny) röstbrevlåda</string>
+    
     <string name="sip_settings" msgid="6699045718560859691">"Inställningar för Internetsamtal"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"Konton för Internetsamtal (SIP)"</string>
     <string name="sip_accounts_title" msgid="1212889069281054570">"Konton"</string>
@@ -689,4 +731,35 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Kontrollera Internetanslutningen om du vill ringa Internetsamtal"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Telefonen måste vara ansluten till ett WiFi-nätverk för att du ska kunna ringa Internetsamtal (använd inställningarna för trådlöst och nätverk)"</string>
     <string name="no_voip" msgid="8901474054537199865">"Inget stöd för Internetsamtal"</string>
+    
+    <string name="per_change_mobile_network">Byt nätverk (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
+    <string name="phone_number_label">Mitt telefonnummer</string>
+    <string name="phone_number_summary">Ställ in enhetens telefonnummer</string>
+
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Svara med styrkula</string>  
+    <string name="trackball_answer_sum">Svara på inkommande samtal genom att trycka på styrkulan.</string>
+    <string-array name="trackballLabels">
+       <item>Inaktiverat</item>
+       <item>Klicka för att svara</item>
+       <item>Dubbelklicka för att svara</item>    
+    </string-array>  
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Lägga på med styrkula</string>  
+    <string name="trackball_hangup_sum">Tryck på styrkulan för att lägga på pågående samtal.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Inaktiverat</item> 
+       <item>Klicka för att lägga på</item>
+       <item>Dubbelklicka för att lägga på</item>    
+    </string-array> 
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Du är inte tillåten att ringa samtal just nu. Försök igen senare.</string>
+    <string name="dialog_phone_goggles_title">Samtal blockerat</string>
+    <string name="dialog_phone_goggles_title_unlocked">Samtal godkänt</string>
+    <string name="dialog_phone_goggles_content">Det kan vara oklokt att ringa just nu. Är du säker på att du vill fortsätta?</string>
+    <string name="dialog_phone_goggles_unauthorized">Det kan vara oklokt att ringa just nu.</string>
+    <string name="dialog_phone_goggles_ok">Ring</string>
+    <string name="dialog_phone_goggles_cancel">Avbryt</string>
 </resources>
