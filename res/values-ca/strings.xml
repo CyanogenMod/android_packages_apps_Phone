@@ -272,9 +272,9 @@
   <string name="cdma_network_preferences_title">Preferències de la xarxa CDMA</string>
   <string name="cdma_network_preferneces_summary">Encara no s\'ha implementat!</string>
   <string name="cdma_network_preferences_dialogtitle">Preferències de la xarxa CDMA</string>
-  <string name="subscription_title">Prova de suscripció CDMA</string>
-  <string name="subscription_summary">Canviar entre RUIM/SIM i NV</string>
-  <string name="subscription_dialogtitle">subscripció</string>
+  <string name="cdma_subscription_title">Prova de suscripció CDMA</string>
+  <string name="cdma_subscription_summary">Canviar entre RUIM/SIM i NV</string>
+  <string name="cdma_subscription_dialogtitle">subscripció</string>
   <string name="fdn">Números de marcatge fixe</string>
   <string name="manage_fdn_list">Llista NMF</string>
   <string name="fdn_activation">Activació NMF</string>
