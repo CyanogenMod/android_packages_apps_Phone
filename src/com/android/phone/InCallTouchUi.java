@@ -736,7 +736,39 @@ public class InCallTouchUi extends FrameLayout
                 Settings.System.LOCKSCREEN_STYLE_PREF, 1));
         mUseRotaryLockscreen = (mLockscreenStyle == 2);
 
-            Animation anim = mIncomingRotarySelectorCallWidget.getAnimation();
+// tolemaC & Superatmel begin
+        // Hide the incoming call screen with a transition
+        AlphaAnimation animAlpha = new AlphaAnimation(0.0f, 1.0f);
+        animAlpha.setDuration(IN_CALL_WIDGET_TRANSITION_TIME);
+        animAlpha.setAnimationListener(new AnimationListener() {
+
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+
+            public void onAnimationEnd(Animation animation) {
+                // hide the incoming call UI.
+                if (mUseRotaryLockscreen) {
+                    mIncomingRotarySelectorCallWidget.clearAnimation();
+                    mIncomingRotarySelectorCallWidget.setVisibility(View.VISIBLE);
+                } else {
+                    mIncomingSlidingTabCallWidget.clearAnimation();
+                    mIncomingSlidingTabCallWidget.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        if (mUseRotaryLockscreen) {
+            mIncomingRotarySelectorCallWidget.startAnimation(animAlpha);
+        } else {
+            mIncomingSlidingTabCallWidget.startAnimation(animAlpha);
+        }
+// tolemaC & Superatmel end
+
+            Animation anim = mIncomingRotarySelectorCallWidget.getAnimation();	    
             if (anim != null) {
                 anim.reset();
                 if (mUseRotaryLockscreen) {
