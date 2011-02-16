@@ -308,6 +308,16 @@ public class InCallScreen extends Activity
     private String mPostDialStrAfterPause;
     private boolean mPauseInProgress = false;
 
+    // Flag indicating whether or not we should bring up the Call Log when
+    // exiting the in-call UI due to the Phone becoming idle.  (This is
+    // true if the most recently disconnected Call was initiated by the
+    // user, or false if it was an incoming call.)
+    // This flag is used by delayedCleanupAfterDisconnect(), and is set by
+    // onDisconnect() (which is the only place that either posts a
+    // DELAYED_CLEANUP_AFTER_DISCONNECT event *or* calls
+    // delayedCleanupAfterDisconnect() directly.)
+    private boolean mShowCallLogAfterDisconnect;
+
     // Info about the most-recently-disconnected Connection, which is used
     // to determine what should happen when exiting the InCallScreen after a
     // call.  (This info is set by onDisconnect(), and used by
@@ -1897,6 +1907,10 @@ public class InCallScreen extends Activity
         // DELAYED_CLEANUP_AFTER_DISCONNECT message.
         mLastDisconnectCause = cause;
 
+        // Keep track of whether this call was user-initiated or not.
+        // (This affects where we take the user next; see delayedCleanupAfterDisconnect().)
+        mShowCallLogAfterDisconnect = !c.isIncoming() && CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(this)).mReturnHome;
+
         // We bail out immediately (and *don't* display the "call ended"
         // state at all) in a couple of cases, including those where we
         // are waiting for the radio to finish powering up for an
@@ -2911,7 +2925,7 @@ public class InCallScreen extends Activity
 
                 if ((mLastDisconnectCause != Connection.DisconnectCause.INCOMING_MISSED)
                         && (mLastDisconnectCause != Connection.DisconnectCause.INCOMING_REJECTED)
-                        && !isPhoneStateRestricted()) {
+                        && !isPhoneStateRestricted() && mShowCallLogAfterDisconnect) {
                     if (VDBG) log("- Show Call Log after disconnect...");
                     final Intent intent = PhoneApp.createCallLogIntent();
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
