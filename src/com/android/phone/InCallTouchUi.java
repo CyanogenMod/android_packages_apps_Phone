@@ -60,9 +60,6 @@ public class InCallTouchUi extends FrameLayout
      */
     private InCallScreen mInCallScreen;
 
-    // Phone app instance
-    private PhoneApp mApplication;
-
     // UI containers / elements
     private SlidingTab mIncomingSlidingTabCallWidget;  // UI used for an incoming call
     private RotarySelector mIncomingRotarySelectorCallWidget;  // UI used for an incoming call
@@ -101,15 +98,14 @@ public class InCallTouchUi extends FrameLayout
     private CallFeaturesSetting mSettings;
 
     // Look up the various UI elements.
-    private int mLockscreenStyle = (Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.LOCKSCREEN_STYLE_PREF, 3));
+    private int mInCallStyle = (Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.IN_CALL_STYLE_PREF, 3));
 
     private boolean mRotaryHideArrows = (Settings.System.getInt(mContext.getContentResolver(),
-            Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
+                Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
 
-    private boolean mUseRotaryLockscreen = (mLockscreenStyle == 2);
-    private boolean mUseLenseSquareLockscreen = (mLockscreenStyle == 4);
-    private boolean mUseRotaryRevLockscreen = (mUseLenseSquareLockscreen ? true : (mLockscreenStyle == 3));
+    private boolean mUseRotaryInCall = (mInCallStyle == 2);
+    private boolean mUseRotaryRevInCall = (mInCallStyle == 3);
 
     public InCallTouchUi(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -125,8 +121,6 @@ public class InCallTouchUi extends FrameLayout
                 mSettings.mLeftHand ? R.layout.incall_touch_ui_left : R.layout.incall_touch_ui,  // resource
                 this,                      // root
                 true);
-
-        mApplication = PhoneApp.getInstance();
 
         // The various touch UI features are enabled on a per-product
         // basis.  (These flags in config.xml may be overridden by
@@ -156,7 +150,7 @@ public class InCallTouchUi extends FrameLayout
             mIncomingRotarySelectorCallWidget.setLeftHandleResource(R.drawable.ic_jog_dial_answer);
             mIncomingRotarySelectorCallWidget.setRightHandleResource(R.drawable.ic_jog_dial_decline);
             mIncomingRotarySelectorCallWidget.setOnDialTriggerListener(this);
-            mIncomingRotarySelectorCallWidget.setRevamped(mUseRotaryRevLockscreen);
+            mIncomingRotarySelectorCallWidget.setRevamped(mUseRotaryRevInCall);
             mIncomingRotarySelectorCallWidget.hideArrows(mRotaryHideArrows);
 
         // "slide-to-answer" widget for incoming calls.
@@ -688,7 +682,7 @@ public class InCallTouchUi extends FrameLayout
      * Apply an animation to hide the incoming call widget.
      */
     private void hideIncomingCallWidget() {
-        if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+        if (mUseRotaryInCall || mUseRotaryRevInCall) {
             if (mIncomingRotarySelectorCallWidget.getVisibility() != View.VISIBLE
                 || mIncomingRotarySelectorCallWidget.getAnimation() != null) {
                 // Widget is already hidden or in the process of being hidden
@@ -715,7 +709,7 @@ public class InCallTouchUi extends FrameLayout
 
             public void onAnimationEnd(Animation animation) {
                 // hide the incoming call UI.
-                if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+                if (mUseRotaryInCall || mUseRotaryRevInCall) {
                     mIncomingRotarySelectorCallWidget.clearAnimation();
                     mIncomingRotarySelectorCallWidget.setVisibility(View.GONE);
                 } else {
@@ -724,7 +718,7 @@ public class InCallTouchUi extends FrameLayout
                 }
             }
         });
-        if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+        if (mUseRotaryInCall || mUseRotaryRevInCall) {
             mIncomingRotarySelectorCallWidget.startAnimation(anim);
         } else {
             mIncomingSlidingTabCallWidget.startAnimation(anim);
@@ -737,19 +731,18 @@ public class InCallTouchUi extends FrameLayout
     private void showIncomingCallWidget() {
         // Look up the various UI elements.
         // This needs to be called every Incoming Call to recheck settings
-        mLockscreenStyle = (Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.LOCKSCREEN_STYLE_PREF, 3));
+        mInCallStyle = (Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.IN_CALL_STYLE_PREF, 3));
         mRotaryHideArrows = (Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
 
-        mUseRotaryLockscreen = (mLockscreenStyle == 2);
-        mUseLenseSquareLockscreen = (mLockscreenStyle == 4);
-        mUseRotaryRevLockscreen = (mUseLenseSquareLockscreen ? true : (mLockscreenStyle == 3));
-        mIncomingRotarySelectorCallWidget.setRotary(mUseRotaryLockscreen);
-        mIncomingRotarySelectorCallWidget.setRevamped(mUseRotaryRevLockscreen);
+        mUseRotaryInCall = (mInCallStyle == 2);
+        mUseRotaryRevInCall = (mInCallStyle == 3);
+        mIncomingRotarySelectorCallWidget.setRotary(mUseRotaryInCall);
+        mIncomingRotarySelectorCallWidget.setRevamped(mUseRotaryRevInCall);
         mIncomingRotarySelectorCallWidget.hideArrows(mRotaryHideArrows);
-        mIncomingRotarySelectorCallWidget.setVisibility((mUseRotaryLockscreen || mUseRotaryRevLockscreen) ? View.VISIBLE : View.GONE);
-        mIncomingSlidingTabCallWidget.setVisibility((mUseRotaryLockscreen || mUseRotaryRevLockscreen) ? View.GONE : View.VISIBLE);
+        mIncomingRotarySelectorCallWidget.setVisibility((mUseRotaryInCall || mUseRotaryRevInCall) ? View.VISIBLE : View.GONE);
+        mIncomingSlidingTabCallWidget.setVisibility((mUseRotaryInCall || mUseRotaryRevInCall) ? View.GONE : View.VISIBLE);
 
 
 // tolemaC & Superatmel begin
@@ -768,7 +761,7 @@ public class InCallTouchUi extends FrameLayout
 
             public void onAnimationEnd(Animation animation) {
                 // hide the incoming call UI.
-                if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+                if (mUseRotaryInCall || mUseRotaryRevInCall) {
                     mIncomingRotarySelectorCallWidget.clearAnimation();
                     mIncomingRotarySelectorCallWidget.setVisibility(View.VISIBLE);
                 } else {
@@ -777,7 +770,7 @@ public class InCallTouchUi extends FrameLayout
                 }
             }
         });
-        if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+        if (mUseRotaryInCall || mUseRotaryRevInCall) {
             mIncomingRotarySelectorCallWidget.startAnimation(animAlpha);
         } else {
             mIncomingSlidingTabCallWidget.startAnimation(animAlpha);
@@ -787,13 +780,13 @@ public class InCallTouchUi extends FrameLayout
             Animation anim = mIncomingRotarySelectorCallWidget.getAnimation();
             if (anim != null) {
                 anim.reset();
-                if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+                if (mUseRotaryInCall || mUseRotaryRevInCall) {
                     mIncomingRotarySelectorCallWidget.clearAnimation();
                 } else {
                     mIncomingSlidingTabCallWidget.clearAnimation();
                 }
             }
-            if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+            if (mUseRotaryInCall || mUseRotaryRevInCall) {
                 //Rotary Widget has no public reset function
                 //mIncomingRotarySelectorCallWidget.reset();
                 mIncomingRotarySelectorCallWidget.setVisibility(View.VISIBLE);
@@ -815,7 +808,7 @@ public class InCallTouchUi extends FrameLayout
             // since *this* class is the only place that knows that the left
             // handle means "Answer" and the right handle means "Decline".)
             int hintTextResId, hintColorResId;
-            if (mUseRotaryLockscreen || mUseRotaryRevLockscreen) {
+            if (mUseRotaryInCall || mUseRotaryRevInCall) {
                 switch (grabbedState) {
                     case RotarySelector.NOTHING_GRABBED:
                         hintTextResId = 0;
