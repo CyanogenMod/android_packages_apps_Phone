@@ -728,5 +728,34 @@
     <string name="phone_number_label">Meu número de telefone</string>
     <string name="phone_number_summary">Definir o número de telefone deste dispositivo</string>
 
+    <string name="mvno_roaming">Roaming de dados Nacional</string>
+    <string name="mvno_roaming_summary">Isto vai deixar você usar uma diferente operadora no seu país.</string>
+    <string name="mvno_roaming_warning">Habilitar roaming de dados dentro do mesmo país que sua operadora? Algumas operadoras exigem esta configuração para acesso a dados. NÃO habilite esta opção se sua operadora cobra tarifas de roaming de dados no país! Esta configuração não terá efeito até que reinicie o seu telefone ou alternar para o Modo Avião e voltar.</string>
 
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Atender com Trackball</string>
+    <string name="trackball_answer_sum">Pressione o Trackball para atender a ligação recebida.</string>
+    <string-array name="trackballLabels">
+       <item>Desabilitado</item>
+       <item>Toque para Atender</item>
+       <item>Toque duplo para Atender</item>
+    </string-array>
+
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Desligar com Trackball</string>
+    <string name="trackball_hangup_sum">Pressione o Trackball para desligar a ligação atual.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Desabilitado</item>
+       <item>Toque para desligar</item>
+       <item>Toque duplo para desligar</item>
+    </string-array>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Você não tem permissão para fazer ligações no momento. Tente mais tarde.</string>
+    <string name="dialog_phone_goggles_title">Ligação Bloqueada</string>
+    <string name="dialog_phone_goggles_title_unlocked">Ligação Autorizada</string>
+    <string name="dialog_phone_goggles_content">Fazer uma ligação neste momento pode não ser uma boa idéia. Tem certeza que deseja continuar?</string>
+    <string name="dialog_phone_goggles_unauthorized">Fazer uma ligação neste momento pode não ser uma boa idéia.</string>
+    <string name="dialog_phone_goggles_ok">Ligar</string>
+    <string name="dialog_phone_goggles_cancel">Cancelar</string>
 </resources>
