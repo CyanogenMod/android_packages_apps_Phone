@@ -1,0 +1,804 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+  <string name="contactsIconLabel">אנשי קשר</string>
+  <string name="contactsFavoritesLabel">מועדפים</string>
+  <string name="dialerIconLabel">חייגן</string>
+  <string name="emergencyDialerIconLabel">חייגן חרום</string>
+  <string name="phoneIconLabel">טלפון</string>
+  <string name="recentCallsIconLabel">יומן שיחות</string>
+  <string name="fdnListLabel">רשימת FDN</string>
+  <string name="unknown">לא ידוע</string>
+  <string name="private_num">מספר חסוי</string>
+  <string name="payphone">טלפון ציבורי</string>
+  <string name="onHold">בהמתנה</string>
+  <string name="ongoing">שיחה נוכחית</string>
+  <string name="callFailed_userBusy">הקו תפוס</string>
+  <string name="callFailed_congestion">רשת עמוסה</string>
+  <string name="callFailed_timedOut">אין תגובה, נגמר הזמן</string>
+  <string name="callFailed_server_unreachable">השרת אינו נגיש</string>
+  <string name="callFailed_number_unreachable">המספר אינו ניתן להשגה</string>
+  <string name="callFailed_invalid_credentials">שם משתמש או סיסמה שגויים</string>
+  <string name="callFailed_out_of_network">שיחה מחוץ לרשת</string>
+  <string name="callFailed_server_error">שגיאת שרת. נסה שוב מאוחר יותר.</string>
+  <string name="callFailed_noSignal">אין אות</string>
+  <string name="callFailed_limitExceeded">אירעה חריגה ממגבלת ACM</string>
+  <string name="callFailed_powerOff">רדיו מכובה</string>
+  <string name="callFailed_simError">אין סים, או יש תקלה בסים</string>
+  <string name="callFailed_outOfService">אזור ללא קליטה</string>
+  <string name="callFailed_fdn_only">שיחות יוצאות מוגבלות על ידי FDN.</string>
+  <string name="callFailed_cb_enabled">אתה לא יכול לבצע שיחות יוצאות בזמן שחסימת שיחות פועלת.</string>
+  <string name="callFailed_dsac_restricted">כל השיחות מוגבלות על ידי בקרת הגישה.</string>
+  <string name="callFailed_dsac_restricted_emergency">שיחות חירום מוגבלים על ידי בקרת הגישה.</string>
+  <string name="callFailed_dsac_restricted_normal">שיחות רגילות מוגבלות על ידי בקרת הגישה.</string>
+  <string name="callFailed_cdma_lockedUntilPowerCycle">CDMA: הטלפון נעול עד להפעלה מחדש.</string>
+  <string name="callFailed_cdma_drop">CDMA: השיחה התנתקה.</string>
+  <string name="callFailed_cdma_intercept">CDMA: שיחה נותקה.</string>
+  <string name="callFailed_cdma_reorder">CDMA: סדר מחדש.</string>
+  <string name="callFailed_cdma_SO_reject">שגיאת התחברות.</string>
+  <string name="callFailed_cdma_retryOrder">השיחה נדחתה.</string>
+  <string name="callFailed_cdma_accessFailure">CDMA: גישה נכשלה.</string>
+  <string name="callFailed_cdma_preempted">CDMA: הקדימה.</string>
+  <string name="callFailed_cdma_notEmergency">שיחות חירום בלבד</string>
+  <string name="callFailed_unobtainable_number">מספר לא חוקי</string>
+  <string name="confCall">שיחת ועידה</string>
+  <string name="call_lost">שיחה אבדה</string>
+  <string name="retry">נסה שנית</string>
+  <string name="call_lost_title">שיחה שלא נענתה</string>
+  <string name="mmiStarted">קוד MMI הופעל</string>
+  <string name="ussdRunning">קוד USSD פועל\u2026</string>
+  <string name="mmiCancelled">קוד MMI בוטל</string>
+  <string name="cancel">ביטול</string>
+  <string name="menu_speaker">רמקול</string>
+  <string name="menu_bluetooth">Bluetooth</string>
+  <string name="menu_mute">השתק</string>
+  <string name="menu_hold">השהה</string>
+  <string name="menu_endCall">סיים שיחה</string>
+  <string name="menu_swapCalls">החלפת שיחה</string>
+  <string name="menu_mergeCalls">שיחת ועידה</string>
+  <string name="menu_addCall">הוסף שיחה</string>
+  <string name="menu_manageConference">נהל שיחת ועידה</string>
+  <string name="menu_showDialpad">הראה חייגן</string>
+  <string name="menu_hideDialpad">הסתר חייגן</string>
+  <string name="menu_answerAndHold">להחזיק שיחה נוכחית\n&amp;amp; לענות</string>
+  <string name="menu_answerAndEnd">לסיים שיחה נוכחית\n&amp;amp; לענות</string>
+  <string name="ok">אישור</string>
+  <string name="menuButtonHint">לחץ על תפריט עבור אפשרויות שיחה.</string>
+  <string name="menuButtonKeyboardDialHint">לחץ על כפתור התפריט בשביל לראות את אפשרויות השיחה \u0020• \u0020Use מקלדת בשביל לחייג</string>
+  <string name="menu_answer">ענה</string>
+  <string name="menu_ignore">התעלם</string>
+  <string name="wait_prompt_str">לשלוח את הצלילים הבאים?\n</string>
+  <string name="pause_prompt_str">שולח צלילים\n</string>
+  <string name="send_button">שלח</string>
+  <string name="pause_prompt_yes">כן</string>
+  <string name="pause_prompt_no">לא</string>
+  <string name="wild_prompt_str">החלף את התו עם</string>
+  <string name="no_vm_number">אין מספר תא-קולי</string>
+  <string name="no_vm_number_msg">אין מספר תא-קולי בכרטיס הסים</string>
+  <string name="add_vm_number_str">הוסף מספר</string>
+  <string name="dialer_emptyListWorking">טעינה...</string>
+  <string name="enterPin">הכנס קוד PIN לשחרור כרטיס הסים</string>
+  <string name="pinUnlocked">SIM אינו נעול</string>
+  <string name="enterNewPin">קוד SIM PIN חדש</string>
+  <string name="verifyNewPin">הקלד סיסמת PIN שוב לאימות</string>
+  <string name="verifyFailed">הסיסמה לא תואמת. נסה שוב.</string>
+  <string name="enterPuk">הכנס קוד PIN לשחרור כרטיס הסים</string>
+  <string name="badPuk">סיסמת PUK שגויה!</string>
+  <string name="buttonTxtContinue">המשך</string>
+  <string name="puk_unlocked">כרטיס הסים שלך נפתח. מכשירך נפתח…</string>
+  <string name="label_ndp">SIM network unlock PIN</string>
+  <string name="sim_ndp_unlock_text">הסר נעילה</string>
+  <string name="sim_ndp_dismiss_text">דחה</string>
+  <string name="requesting_unlock">שלח בקשה לשחרור נעילת SIM</string>
+  <string name="unlock_failed">בקשה לשחרור נעילת SIM נכשלה.</string>
+  <string name="unlock_success">בקשה לשחרור נעילת SIM הצליחה.</string>
+  <string name="imei">IMEI</string>
+  <string name="meid">MEID</string>
+  <string name="labelGSMMore">הגדרות שיחה GSM</string>
+  <string name="labelCDMAMore">CDMA הגדרות שיחה</string>
+  <string name="apn_settings">שמות נקודות גישה</string>
+  <string name="settings_label">הגדרות רשת</string>
+  <string name="voicemail">תא קולי</string>
+  <string name="voicemail_abbreviated">דואר קולי:</string>
+  <string name="networks">מפעילי רשת</string>
+  <string name="call_settings">הגדרות שיחה</string>
+  <string name="additional_gsm_call_settings">הגדרות נוספות</string>
+  <string name="sum_gsm_call_settings">שיחת וידאו</string>
+  <string name="additional_cdma_call_settings">הגדרות CDMA נוספות של שיחה</string>
+  <string name="sum_cdma_call_settings">שיחה קולית</string>
+  <string name="labelNwService">הגדרות שירותי רשת</string>
+  <string name="labelCallerId">שיחה מזהה</string>
+  <string name="sum_hide_caller_id">הסתרת המספר בשיחות יוצאות</string>
+  <string name="sum_show_caller_id">הצגת מספר בשיחות יוצאות</string>
+  <string name="sum_default_caller_id">השתמש בהגדרות המפעיל בשביל להציג את הטלפון שלי בשיחות יוצאות</string>
+  <string name="labelCW">שיחות ממתינות</string>
+  <string name="sum_cw_enabled">במהלך שיחות, תודיע לי על שיחות נכנסות</string>
+  <string name="sum_cw_disabled">התראה על שיחה נכנסת בעת שיחה</string>
+  <string name="call_forwarding_settings">הגדרות העברת שיחה</string>
+  <string name="labelCF">העברת שיחה</string>
+  <string name="labelCFU">העבר תמיד</string>
+  <string name="messageCFU">השתמש תמיד במספר זה</string>
+  <string name="sum_cfu_enabled_indicator">העבר את כל השיחות</string>
+  <string name="sum_cfu_enabled">העבר את כל השיחות אל {0}</string>
+  <string name="sum_cfu_enabled_no_number">המספר אינו זמין</string>
+  <string name="sum_cfu_disabled">לא מאופשר</string>
+  <string name="labelCFB">העבר כשתפוס</string>
+  <string name="messageCFB">מספר כאשר תפוס</string>
+  <string name="sum_cfb_enabled">העבר אל {0}</string>
+  <string name="sum_cfb_disabled">מבוטל</string>
+  <string name="disable_cfb_forbidden">חשבונך אינו תומך בהשבתת העברת שיחה כאשר מכשירך עסוק.</string>
+  <string name="labelCFNRy">העבר שיחה באין מענה</string>
+  <string name="messageCFNRy">מספר באין מענה</string>
+  <string name="sum_cfnry_enabled">העבר אל {0}</string>
+  <string name="sum_cfnry_disabled">מבוטל</string>
+  <string name="disable_cfnry_forbidden">חשבונך אינו תומך בהשבתת העברת שיחה כאשר אינך עונה.</string>
+  <string name="labelCFNRc">המשך כאשר לא נגיש</string>
+  <string name="messageCFNRc">מספר באי זמינות</string>
+  <string name="sum_cfnrc_enabled">הפנייה אל {0}</string>
+  <string name="sum_cfnrc_disabled">מופסק</string>
+  <string name="disable_cfnrc_forbidden">חשבונך אינו תומך בהשבתת העברת שיחה כאשר אינך נגיש.</string>
+  <string name="updating_title">הגדרות שיחה</string>
+  <string name="error_updating_title">שגיאה בהגדרות שיחה</string>
+  <string name="reading_settings">קורא הגדרות</string>
+  <string name="updating_settings">מעדכן הגדרות...</string>
+  <string name="reverting_settings">משחזר הגדרות...</string>
+  <string name="response_error">תגובה לא צפויה מהרשת.</string>
+  <string name="exception_error">שגיאת רשת או כרטיס סים.</string>
+  <string name="fdn_only_error">פעולות מותרות רק על מספרי טלפון קבועים.</string>
+  <string name="radio_off_error">בבקשה הדלק את הרדיו לפני הצפייה בהגדרות אלו.</string>
+  <string name="close_dialog">בסדר</string>
+  <string name="enable">אפשר</string>
+  <string name="disable">אל תאפשר</string>
+  <string name="change_num">עדכון</string>
+  <string name="vm_save_number">שמירת מספר תא קולי</string>
+  <string name="vm_changed">מספר התא הקולי הוחלף.</string>
+  <string name="vm_change_failed">החלפת מספר התא הקולי נכשלה.\nאנא צור קשר עם המפעילה הסלולרית שלך אם בעיה זו ממשיכה להופיע.</string>
+  <string name="fw_change_failed">החלפת מספר ההפנייה נכשלה אנא צור קשר עם המפעילה הסלולרית שלך אם בעיה זו ממשיכה להופיע.</string>
+  <string name="fw_get_in_vm_failed">נכשל בקבלת ושמירת הגדרות הפניית המספר הנוכחית.\nהאם ברצונך להחליף לספק החדש בכל זאת?</string>
+  <string name="no_change">לא נעשו שינויים.</string>
+  <string name="sum_voicemail_choose_provider">בחר שירות תא קולי</string>
+  <string name="voicemail_default">המפעילה הסלולרית שלי</string>
+  <string name="mobile_networks">הגדרות הרשת הסלולרית</string>
+  <string name="label_available">רשתות פנויות</string>
+  <string name="load_networks_progress">מחפש</string>
+  <string name="empty_networks_list">לא מוצא רשתות</string>
+  <string name="search_networks">מחפש רשתות</string>
+  <string name="network_query_error">.שגיאה במהלך חיפוש הרשתות</string>
+  <string name="register_on_network">מבצע רישום ב %s</string>
+  <string name="not_allowed">כרטיס הסים שלך לא מצא רשתות מורשות</string>
+  <string name="connect_later">לא מצליח להתחבר לרשת. בבקשה נסה מאוחר יותר.</string>
+  <string name="registration_done">רשום ברשת.</string>
+  <string name="sum_carrier_select">בחר מפעיל רשת</string>
+  <string name="sum_search_networks">חפש רשתות זמינות</string>
+  <string name="select_automatically">בחר אוטומטית</string>
+  <string name="sum_select_automatically">אוטומטית בחר רשת מועדפת</string>
+  <string name="register_automatically">הרשמה אוטומטית...</string>
+  <string name="preferred_network_mode_title">מצב רשת</string>
+  <string name="preferred_network_mode_summary">שנה את מצב הפעלת הרשת</string>
+  <string name="preferred_network_mode_dialogtitle">מצב רשת מועדף</string>
+  <string name="data_enabled">אפשר מנות נתונים</string>
+  <string name="data_enable_summary">גלישה סלולרית</string>
+  <string name="roaming">נדידת נתונים</string>
+  <string name="roaming_enable">התחבר ל-3G בעת נדידה</string>
+  <string name="roaming_disable">אל תתחבר ל-3G בעת נדידה</string>
+  <string name="roaming_reenable_message">איבדת את קישוריות הנתונים כי עזבת את הרשת הביתית שלך כשנדידת נתונים כבויה.</string>
+  <string name="roaming_warning">אפשר נדידת נתונים? הדבר עלול לגרום לחיובי נדידה משמעותיים!</string>
+  <string name="mvno_roaming">מצב נדידה ארצי</string>
+  <string name="mvno_roaming_summary">פעולה זו תאפשר לך להשתמש בספקית תקשורת שונה בארץ שלך.</string>
+  <string name="mvno_roaming_warning">אפשר גלישה במצב נדידה באותה ארץ כמו ספק השירות שלך? מספר מפעילים וירטואלים דורשים זאת לצריכת נתונים.
+אל (!) תאפשר זאת אם הספק שלך גובה תעריפי נדידה פנים-ארציים. שינויים אלו לא יחולו עד שתפעיל את מכשירך מחדש או תעבור למצב טיסה וחזרה.</string>
+  <string name="gsm_umts_options">אפשרויות GSM/UMTS</string>
+  <string name="cdma_options">אפשרויות CDMA</string>
+  <string name="throttle_data_usage">תצרוכת נתונים</string>
+  <string name="throttle_settings_title">מדיניות נתונים של הספקית</string>
+  <string name="throttle_current_usage">שימוש נתונים בפרק הזמן הנוכחי</string>
+  <string name="throttle_time_frame">משך השימוש בנתונים</string>
+  <string name="throttle_rate">מדיניות קצב הנתונים</string>
+  <string name="throttle_help">למד עוד</string>
+  <string name="throttle_status_subtext">%1$s (%2$d٪) מתוך %3$s פרק זמן מקסימלי\nפרק זמן הבא מתחיל בעוד %4$d ימים (%5$s)</string>
+  <string name="throttle_data_usage_subtext">%1$s (%2$d٪) מתוך %3$s פרק זמן מקסימלי</string>
+  <string name="throttle_data_rate_reduced_subtext">חריגה במכסה %1$s \nקצב נתונים הופחת ל %2$d kb/s</string>
+  <string name="throttle_time_frame_subtext">%1$d٪ מהסבב חלף\nפרק הזמן הבא מתחיל בעוד %2$d ימים (%3$s)</string>
+  <string name="throttle_rate_subtext">קצב הנתונים מופחת ל %1$d kb/s אם מתבצעת חריגה ממכסת השימוש בנתונים</string>
+  <string name="throttle_help_subtext">מידע נוסף על מדיניות השימוש בנתונים ברשת הסלולרית של הספקית שלך</string>
+  <string name="cdma_cell_broadcast_sms">הודעות שידור סלולרי</string>
+  <string name="cell_broadcast_sms">הודעות שידור סלולרי</string>
+  <string name="enable_disable_cell_bc_sms">הודעות שידור סלולרי</string>
+  <string name="cell_bc_sms_enable">הודעות שידור סלולרי הופעל</string>
+  <string name="cell_bc_sms_disable">הודעות שידור סלולרי הופסק</string>
+  <string name="cb_sms_settings">הגדרות הודעות שידור סלולרי</string>
+  <string name="enable_disable_emergency_broadcast">שידור חירום</string>
+  <string name="emergency_broadcast_enable">שידור חירום הופעל</string>
+  <string name="emergency_broadcast_disable">שידור חירום הופסק</string>
+  <string name="enable_disable_administrative">מנהלי</string>
+  <string name="administrative_enable">מנהלי הופעל</string>
+  <string name="administrative_disable">מנהלי הופסק</string>
+  <string name="enable_disable_maintenance">תחזוקה</string>
+  <string name="maintenance_enable">תחזוקה הופעלה</string>
+  <string name="maintenance_disable">תחזוקה הופסקה</string>
+  <string name="general_news_settings">חדשות כלליות</string>
+  <string name="bf_news_settings">חדשות עסקים ופיננסים</string>
+  <string name="sports_news_settings">חדשות ספורט</string>
+  <string name="entertainment_news_settings">חדשות הבידור</string>
+  <string name="enable_disable_local">מקומי</string>
+  <string name="local_enable">חדשות מקומיות מופעלות</string>
+  <string name="local_disable">חדשות מקומיות מופסקות</string>
+  <string name="enable_disable_regional">אזורי</string>
+  <string name="regional_enable">חדשות אזוריות מופעלות</string>
+  <string name="regional_disable">חדשות אזוריות מופסקות</string>
+  <string name="enable_disable_national">לאומי</string>
+  <string name="national_enable">חדשות מדיניות הופעלו</string>
+  <string name="national_disable">חדשות מדיניות הופסקו</string>
+  <string name="enable_disable_international">בינלאומי</string>
+  <string name="international_enable">חדשות בינלאומיות הופעלו</string>
+  <string name="international_disable">חדשות בינלאומיות הופסקו</string>
+  <string name="list_language_title">שפה</string>
+  <string name="list_language_summary">בחר שפה חדשה</string>
+  <string name="list_language_dtitle">שפות</string>
+  <string name="enable_disable_local_weather">מזג אויר מקומי</string>
+  <string name="local_weather_enable">מזג אוויר מופעל</string>
+  <string name="local_weather_disable">מזג אוויר מבוטל</string>
+  <string name="enable_disable_atr">דיווחי תנועה איזוריים</string>
+  <string name="atr_enable">דיווחי תנועה איזוריים הופעלו</string>
+  <string name="atr_disable">דיווחי תנועה איזוריים הופסקו</string>
+  <string name="enable_disable_lafs">לוחות זמני טיסה של נמל התעופה האזורי</string>
+  <string name="lafs_enable">לוחות זמני טיסה של נמל התעופה האזורי הופעלו</string>
+  <string name="lafs_disable">לוחות זמני טיסה של נמל התעופה האזורי הופסקו</string>
+  <string name="enable_disable_restaurants">מסעדות</string>
+  <string name="restaurants_enable">מסעדות הופעלו</string>
+  <string name="restaurants_disable">מסעדות הופסקו</string>
+  <string name="enable_disable_lodgings">דיור</string>
+  <string name="lodgings_enable">ומלונאות מופעלת</string>
+  <string name="lodgings_disable">ומלונאות מופסקות</string>
+  <string name="enable_disable_retail_directory">חייגן</string>
+  <string name="retail_directory_enable">מכירת הדרכה מופעלת</string>
+  <string name="retail_directory_disable">מכירת הדרכה מכובת</string>
+  <string name="enable_disable_advertisements">פרסומות</string>
+  <string name="advertisements_enable">פרסומות הופעלו</string>
+  <string name="advertisements_disable">פרסומות הופסקו</string>
+  <string name="enable_disable_stock_quotes">מחירי מניות</string>
+  <string name="stock_quotes_enable">הודעות מחירי מנויות מופעלים</string>
+  <string name="stock_quotes_disable">הודעות מחירי מניות מכובים</string>
+  <string name="enable_disable_eo">הזדמנויות תעסוקה</string>
+  <string name="eo_enable">הזדמנויות תעסוקה מופעלות</string>
+  <string name="eo_disable">הזדמנויות תעסוקה מופסקות</string>
+  <string name="enable_disable_mhh">רפואה, בריאות ובית חולים</string>
+  <string name="mhh_enable">רפואה בריאות ובית חולים מאופשר</string>
+  <string name="mhh_disable">רפואה בריאות ובית חולים מבוטל</string>
+  <string name="enable_disable_technology_news">חדשות טכנולוגיה</string>
+  <string name="technology_news_enable">חדשות טכנולוגיה מאופשר</string>
+  <string name="technology_news_disable">חדשות טכנולוגיה מבוטל</string>
+  <string name="enable_disable_multi_category">קטגוריות מרובות</string>
+  <string name="multi_category_enable">רב-קטגוריה מאופשר</string>
+  <string name="multi_category_disable">רב-קטגוריה מבוטל</string>
+  <string name="gsm_umts_network_preferences_title">הגדרות רשת GSM/UMTS </string>
+  <string name="gsm_umts_network_preferneces_summary">!עדיין לא מיושם</string>
+  <string name="gsm_umts_network_preferences_dialogtitle">העדפות רשת GSM/UMTS</string>
+  <string name="prefer_2g">השתמש ברשת דור 2 בלבד</string>
+  <string name="prefer_2g_summary">חיסכון בזמן סוללה</string>
+  <string name="cdma_system_select_title">בחירת מערכת</string>
+  <string name="cdma_system_select_summary">שנה מצב נדידת cdma</string>
+  <string name="cdma_system_select_dialogtitle">בחירת מערכת</string>
+  <string name="cdma_roaming_mode_title">מצב נדידת CDMA</string>
+  <string name="cdma_roaming_mode_summary">שנה מצב נדידת cdma</string>
+  <string name="cdma_roaming_mode_dialogtitle">מצב נדידת CDMA</string>
+  <string name="cdma_network_preferences_title">העדפות רשת CDMA</string>
+  <string name="cdma_network_preferneces_summary">עדיין לא מיושם!</string>
+  <string name="cdma_network_preferences_dialogtitle">העדפות רשת CDMA</string>
+  <string name="cdma_subscription_title">רישום לרשת CDMA</string>
+  <string name="cdma_subscription_summary">שינוי בין RUIM / SIM ו NV</string>
+  <string name="cdma_subscription_dialogtitle">רישום</string>
+  <string name="fdn">מספרי חיוג קבועים</string>
+  <string name="manage_fdn_list">רשימת מספרים קבועים</string>
+  <string name="fdn_activation">הפעלת מספרים קבועים</string>
+  <string name="fdn_enabled">מספרי חיוג קבועים מופעלים</string>
+  <string name="fdn_disabled">מספרי חיוג קבועים מופסקים</string>
+  <string name="enable_fdn">הפעל מספרים קבועים</string>
+  <string name="disable_fdn">הפסק מספרים קבועים</string>
+  <string name="change_pin2">החלף PIN2</string>
+  <string name="enable_fdn_ok">הפסק מספרים קבועים</string>
+  <string name="disable_fdn_ok">אפשר מספרים קבועים</string>
+  <string name="sum_fdn">נהל מספרי חיוג קבועים</string>
+  <string name="sum_fdn_change_pin">החלף PIN לגישת מספרים קבועים</string>
+  <string name="sum_fdn_manage_list">נהל רשימת מספרי טלפון</string>
+  <string name="voice_privacy">פרטיות קול</string>
+  <string name="voice_privacy_summary">הפעל מצב פרטיות מוגברת</string>
+  <string name="tty_mode_title">מצב TTY</string>
+  <string name="tty_mode_summary">הפעל מצב TTY</string>
+  <string name="tty_mode_option_title">מצב TTY</string>
+  <string name="tty_mode_option_summary">עבור למצב TTY</string>
+  <string name="auto_retry_mode_title">נסה שנית באופן אוטומטי</string>
+  <string name="auto_retry_mode_summary">אפשר מצב ניסוי חוזר באופן אוטומטי</string>
+  <string name="menu_add">הוסף איש קשר</string>
+  <string name="menu_edit">ערוך איש קשר</string>
+  <string name="menu_delete">מחק איש קשר</string>
+  <string name="get_pin2">PIN2 הכנס </string>
+  <string name="name">שם</string>
+  <string name="number">מספר</string>
+  <string name="save">שמור</string>
+  <string name="add_fdn_contact">הוסף מספר טלפון קבוע</string>
+  <string name="adding_fdn_contact">מוסיף מספר טלפון מתוקן</string>
+  <string name="fdn_contact_added">מספר טלפון מתוקן נוסף</string>
+  <string name="edit_fdn_contact">ערוף מספר טלפון מתוקן</string>
+  <string name="updating_fdn_contact">מעדכן מספר טלפון מתוקן</string>
+  <string name="fdn_contact_updated">מספר חיוג קבוע עודכן.</string>
+  <string name="delete_fdn_contact">מחק מספר חיוג קבוע</string>
+  <string name="deleting_fdn_contact">מוחק מספר חיוג קבוע</string>
+  <string name="fdn_contact_deleted">מספר חיוג קבוע נמחק.</string>
+  <string name="pin2_invalid">מספרים קבועים לא עודכן: הכנסת PIN שגוי.</string>
+  <string name="fdn_invalid_number">מספרים קבועים לא עודכן: מספר לא יכול לחרוג מ 20 ספרות.</string>
+  <string name="simContacts_emptyLoading">קורא מכרטיס סים</string>
+  <string name="simContacts_empty">אין אנשי קשר על כרטיס הסים.</string>
+  <string name="simContacts_title">בחר אנשי קשר ליבוא</string>
+  <string name="enable_pin">הפעל/הפסק SIM PIN</string>
+  <string name="change_pin">שנה קוד PIN</string>
+  <string name="enter_pin_text">סים PIN</string>
+  <string name="oldPinLabel">PIN ישן</string>
+  <string name="newPinLabel">PIN חדש</string>
+  <string name="confirmPinLabel">חדש PIN אשר </string>
+  <string name="badPin">ה PIN הישן שהקשת שגוי. אנא נסה שוב.</string>
+  <string name="mismatchPin">ה PINים שהכנסת לא תואמים. אנא נסה שוב.</string>
+  <string name="invalidPin">הקלד PIN בן 4 עד 8 מספרים.</string>
+  <string name="disable_sim_pin">הפסק SIM PIN</string>
+  <string name="enable_sim_pin">הפעל SIM PIN</string>
+  <string name="enable_in_progress">אנא המתן</string>
+  <string name="enable_pin_ok">SIM PIN הופעל</string>
+  <string name="disable_pin_ok">SIM PIN הופסק</string>
+  <string name="pin_failed">ה PIN שהקלדת שגוי</string>
+  <string name="pin_changed">SIM PIN הוחלף בהצלחה</string>
+  <string name="puk_requested">סיסמה שגויה, סים נעול נצרך קוד טכנאי</string>
+  <string name="enter_pin2_text">PIN2</string>
+  <string name="oldPin2Label">PIN2 ישן</string>
+  <string name="newPin2Label">PIN2 חדש</string>
+  <string name="confirmPin2Label">אשר PIN2 חדש</string>
+  <string name="badPuk2">PUK2 שהקלדת אינו נכון. אנא נסה שנית.</string>
+  <string name="badPin2">ה PIN2 הישן שהקשת שגוי. אנא נסה שוב.</string>
+  <string name="mismatchPin2">ה PIN2ים שהכנסת לא תואמים. אנא נסה שוב.</string>
+  <string name="invalidPin2">הקלד PIN2 בן 4 עד 8 מספרים.</string>
+  <string name="invalidPuk2">סוג PUK2 כי הוא 8 מספרים.</string>
+  <string name="pin2_changed">PIN2 שונה בהצלחה</string>
+  <string name="label_puk2_code">הקלד קוד PUK2</string>
+  <string name="fdn_enable_puk2_requested">סיסמה שגויה, אנא PIN2 שינוי ונסה שוב!</string>
+  <string name="puk2_requested">סיסמה שגויה, סים נעול נדרש קוד טכנאי.</string>
+  <string name="doneButton">בוצע</string>
+  <string name="caller_manage_header">שיחת ועידה עם %s</string>
+  <string name="caller_manage_manage_done_text">חזרה לשיחה</string>
+  <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
+  <string name="fake_phone_activity_infoText_text">מספר טלפון נכנס</string>
+  <string name="fake_phone_activity_placeCall_text">שיחת טלפון מזוייפת נכנסת</string>
+  <string name="sim_missing_continueView_text">המשך בלי כרטיס סים</string>
+  <string name="sim_missing_msg_text">לא נמצא כרטיס סים,הכנס כרטיס סים</string>
+  <string name="sim_unlock_dismiss_text">דחה</string>
+  <string name="sim_unlock_unlock_text">הסר נעילה</string>
+  <string name="sim_unlock_status_text">מאמת PIN</string>
+  <string name="voicemail_settings_number_label">מספר תא קולי</string>
+  <string name="card_title_dialing">מחייג</string>
+  <string name="card_title_redialing">מנסה שנית</string>
+  <string name="card_title_in_progress">שיחה נוכחית</string>
+  <string name="card_title_conf_call">שיחת ועידה</string>
+  <string name="card_title_incoming_call">שיחה נכנסת</string>
+  <string name="card_title_cdma_call_waiting">שיחה ממתינה של CDMA</string>
+  <string name="card_title_call_ended">שיחה הסתיימה</string>
+  <string name="card_title_on_hold">בהמתנה</string>
+  <string name="card_title_hanging_up">מנתק</string>
+  <string name="card_title_in_call">בשיחה</string>
+  <string name="notification_missedCallTitle">שיחה לא נענתה</string>
+  <string name="notification_missedCallsTitle">שיחות שלא נענו</string>
+  <string name="notification_missedCallsMsg">%s  שיחות שלא נענו</string>
+  <string name="notification_missedCallTicker">שיחה שלא נענתה מ %s</string>
+  <string name="notification_ongoing_call_format">שיחה נוכחית (%s)</string>
+  <string name="notification_on_hold">בהמתנה</string>
+  <string name="notification_incoming_call">שיחה נכנסת</string>
+  <string name="notification_voicemail_title">הודעה חדשה בתא הקולי</string>
+  <string name="notification_voicemail_title_count">שיחה קולית חדשה (%d)</string>
+  <string name="notification_voicemail_text_format">חייג %s</string>
+  <string name="notification_voicemail_no_vm_number">מספר תא קולי לא ידוע</string>
+  <string name="notification_network_selection_title">אין קליטה</string>
+  <string name="notification_network_selection_text">הרשת שנבחרה (%s) לא זמינה</string>
+  <string name="incall_error_power_off">בכדי לבצע שיחה כבה את מצב המטוס</string>
+  <string name="incall_error_emergency_only">לא רשום לרשת</string>
+  <string name="incall_error_out_of_service">רשת סלולרית לא זמינה</string>
+  <string name="incall_error_no_phone_number_supplied">שיחה לא בוצעה ,מספר טלפון לא חוקי</string>
+  <string name="incall_error_call_failed">שיחה לא בוצעה</string>
+  <string name="incall_status_dialed_mmi">מתחיל רצף MMI</string>
+  <string name="incall_status_dialed_fc">מתחיל רצף של יכולת…</string>
+  <string name="incall_error_supp_service_unknown">שרות לא נתמך</string>
+  <string name="incall_error_supp_service_switch">אי אפשר להחליף שיחות</string>
+  <string name="incall_error_supp_service_separate">אי אפשר להפריד שיחה</string>
+  <string name="incall_error_supp_service_transfer">אי אפשר להעביר שיחה</string>
+  <string name="incall_error_supp_service_conference">אי אפשר לבצע שיחת ועידה</string>
+  <string name="incall_error_supp_service_reject">אי אפשר לדחות את השיחה</string>
+  <string name="incall_error_supp_service_hangup">אי אפשר לדחות את השיחה</string>
+  <string name="incall_call_type_label_sip">שיחה אינטרנטית</string>
+  <string name="emergency_enable_radio_dialog_title">שיחת חרום</string>
+  <string name="emergency_enable_radio_dialog_message">...מדליק רדיו</string>
+  <string name="emergency_enable_radio_dialog_retry">מחוץ לתווך קליטה,מנסה שוב</string>
+  <string name="dial_emergency_error">שיחה לא בוצעה, %s אינו מספר חירום!</string>
+  <string name="dial_emergency_empty_error">שיחה לא בוצעה, אנא חייג מספר חרום</string>
+  <string name="dialerKeyboardHintText">השתמש במקלדת בכדי להתקשר</string>
+  <string name="dtmfDialpadHintText">צליל לוח מקשים</string>
+  <string name="dtmfDialpadHandleLabel">לוח מקשים</string>
+  <string name="touchLockText">לחיצה כפולה\nלפתיחה</string>
+  <string name="onscreenAnswerText">לחיצה כפולה\nכדי לענות</string>
+  <string name="onscreenRejectText">לחיצה כפולה\nכדי לדחות</string>
+  <string name="onscreenHoldText">החזק</string>
+  <string name="onscreenUnholdText">שחרר</string>
+  <string name="onscreenEndCallText">נתק</string>
+  <string name="onscreenShowDialpadText">לוח מקשים</string>
+  <string name="onscreenHideDialpadText">הסתר</string>
+  <string name="onscreenSpeakerText">רמקול</string>
+  <string name="onscreenMuteText">השתק</string>
+  <string name="onscreenBluetoothText">בלוטות\'</string>
+  <string name="onscreenAddCallText">הוסף שיחה</string>
+  <string name="onscreenMergeCallsText">מזג שיחות</string>
+  <string name="onscreenSwapCallsText">החלף בין שיחות</string>
+  <string name="onscreenManageCallsText">נהל שיחות</string>
+  <string name="onscreenManageConferenceText">נהל</string>
+  <string name="importSimEntry">ייבא</string>
+  <string name="importAllSimEntries">ייבא הכל</string>
+  <string name="importingSimContacts">מייבא אנשי קשר מכרטיס הסים</string>
+  <string name="importToFDNfromContacts">ייבא מאנשי קשר</string>
+  <string name="hac_mode_title">עזרי שמע</string>
+  <string name="hac_mode_summary">הפעל מכשיר עזר לשמיעה</string>
+  <string name="eri_text_label">ERI טקסט</string>
+  <string name="dtmf_tones_title">צלילי DTMF</string>
+  <string name="dtmf_tones_summary">הגדרת את האורך של צלילי DTMF</string>
+  <string name="network_message">הודעת רשת</string>
+  <string name="ota_title_activate">הפעל את הטלפון שלך</string>
+  <string name="ota_touch_activate">יש לבצע שיחה מיוחדת כדי להירשם לשירות הטלפון שלך. \n\n אחרי לחיצה על "הירשם", הקשב להוראות כדי לרשום את הטלפון שלך.</string>
+  <string name="ota_touch_activate_new">לחץ "הירשם" כדי להוציא שיחה מיוחדת שרושמת את הטלפון שלך ברשת הסלולרית של המפעילה שלך, כך שתוכל להוציא שיחות ולהתחבר לרשתות נתונים סלולריות.</string>
+  <string name="ota_skip_activation_dialog_title">לדלג על ההרשמה?</string>
+  <string name="ota_skip_activation_dialog_message">אם אתה מדלג על ההרשמה, אתה לא יכול להוציא שיחות או להתחבר לרשתות נתונים סלולריות (אך תוכל להתחבר לרשתות אלחוטיות). עד שתרשום את הטלפון, אתה תתבקש לרשום אותו בכל פעם שתדליק אותו.</string>
+  <string name="ota_skip_activation_dialog_skip_label">דלג</string>
+  <string name="ota_skip_activation_dialog_continue_label">הפעל</string>
+  <string name="ota_activate">הירשם</string>
+  <string name="ota_title_activate_success">הטלפון רשום!</string>
+  <string name="ota_title_problem_with_activation">בעיה בהרשמה</string>
+  <string name="ota_listen">עקוב אחר ההוראות הקוליות עד שתשמע שההרשמה הסתיימה.</string>
+  <string name="ota_dialpad">לוח מקשים</string>
+  <string name="ota_speaker">רמקול</string>
+  <string name="ota_progress">אנא המתן בזמן שהטלפון שלך מתוכנת.</string>
+  <string name="ota_failure">התכנות לא הצליח</string>
+  <string name="ota_successful">הטלפון שלך רשום כעת. לשירות יכול לקחת עד 15 דקות כדי להתחיל.</string>
+  <string name="ota_unsuccessful">הטלפון שלך לא נרשם. \nקיימת אפשרות שעליך למצוא אזור עם כיסוי טוב יותר (ליד חלון, או בחוץ). \n\nנסה שוב או התקשר לשירות לקוחות לאפשרויות נוספות.</string>
+  <string name="ota_spc_failure">עודף כשלי SPC</string>
+  <string name="ota_call_end">חזור</string>
+  <string name="ota_try_again">נסה שוב</string>
+  <string name="ota_next">המשך</string>
+  <string name="ota_back">חזור</string>
+  <string name="ecm_exit_dialog">EcmExitDialog</string>
+  <string name="phone_entered_ecm_text">היכנס למצב שיחה חוזרת חרום</string>
+  <string name="phone_in_ecm_notification_title">מצב שיחות חירום </string>
+  <string name="phone_in_ecm_call_notification_text">חיבור הנתונים מבוטלים</string>
+  <string name="alert_dialog_in_ecm_call">הפעולה שנבחרה אינה זמינה במהלך שיחה על מצב חירום</string>
+  <string name="progress_dialog_exiting_ecm">יציאה איתות מצב חירום</string>
+  <string name="alert_dialog_yes">כן</string>
+  <string name="alert_dialog_no">לא</string>
+  <string name="alert_dialog_dismiss">בטל</string>
+  <string name="absent_num">מספר חסר</string>
+  <string name="voicemail_settings">הגדרות תא קולי</string>
+  <string name="voicemail_number_not_set">&amp;lt;לא מוגדר&amp;gt;</string>
+  <string name="voicemail_provider">שרות תא קולי</string>
+  <string name="voicemail_settings_for">הגדרות בשביל %s</string>
+  <string name="other_settings">הגדרות שיחה נוספות</string>
+  <string name="dial_button_label">התקשר</string>
+  <string name="calling_via_template">מחייג דרך ^1\n&lt;b&gt;^2&lt;/b&gt;</string>
+  <string name="slide_to_answer">גרור ימינה כדי לענות</string>
+  <string name="rotate_to_answer">גרור ימינה למענה</string>
+  <string name="slide_to_silence">גרור שמאלה כדי להשתיק את הצלצול</string>
+  <string name="slide_to_decline">גרור שמאלה כדי לדחות</string>
+  <string name="rotate_to_decline">גרור שמאלה לדחיה</string>
+  <string name="slide_to_answer_and_hold">גרור ימינה כדי לענות לשיחה</string>
+  <string name="slide_to_answer_and_end_active">גרור ימינה כדי לענות\nולסיים שיחה פעילה</string>
+  <string name="slide_to_answer_and_end_onhold">גרור ימינה כדי לענות\nולסיים שיחה בהמתנה</string>
+  <string name="slide_to_answer_hint">הזז כדי לענות</string>
+  <string name="slide_to_decline_hint">דחה</string>
+  <string name="notification_ongoing_calling_format">(%s) מתקשר</string>
+  <string name="advanced_setting">הגדרות מורחבות</string>
+  <string name="vibrate_outgoing">רטט בעת מענה</string>
+  <string name="vibrate_outgoing_sum">רטט כאשר שיחה נענית</string>
+  <string name="vibrate_45">רטט כל 45 שניות</string>
+  <string name="vibrate_45_sum">רטט בכל 45 שניות במהלך שיחות יוצאות</string>
+  <string name="vibrate_hangup">רטט בעת ניתוק</string>
+  <string name="vibrate_hangup_sum">רטט בסיום שיחה</string>
+  <string name="screen_awake">השאר מסך דולק</string>
+  <string name="screen_awake_sum">השאר מסך דולק יותר מהרגיל בזמן שיחה</string>
+  <string name="always_proximity">השתמש תמיד בחיישן הקרבה</string>
+  <string name="always_proximity_sum">אפשר לחיישן הקרבה לנעול את המסך אף אם המכשיר במצב אופקי</string>
+  <string name="led_notify_call">התראת LED על שיחה שלא נענתה</string>
+  <string name="led_notify_call_sum">LED יהבהב כשיחה לא נענתה</string>
+  <string name="led_show_organ">הראה כינוי/ארגון</string>
+  <string name="led_show_organ_sum">כינוי/ארגון ייראו בזמן השיחה</string>
+  <string name="vibrate_call_waiting">רטט בשיחה ממתינה</string>
+  <string name="vibrate_call_waiting_sum">רטט כששיחה ממתינה</string>
+  <string name="return_home">תמיד חזור ליומן שיחות</string>
+  <string name="return_home_sum">הכרח חזרה ליומן שיחות בסיום שיחה</string>
+  <string name="menu_addBlackList">הוסף לרשימה שחורה</string>
+  <string name="black_list">רשימה שחורה</string>
+  <string name="black_list_sum">שיחה ממספר ברשימה השחורה תדחה</string>
+  <string name="add_black">הוסף מספר טלפון</string>
+  <string name="remove_black">מרשימה %s הסר</string>
+  <string name="turn_silence">הפוך להשתקה</string>
+  <string name="turn_silence_sum">הפוך להשתקת צילצול</string>
+  <string name="left_hand">מצב שימוש ביד שמאל</string>
+  <string name="left_hand_sum">השתמש ביד שמאל לאחיזת המכשיר, הפעלה מחדש נדרשת על מנת שהשינוי ייכנס לתוקף.</string>
+  <string name="set_force_touch">ממשק מגע במהלך שיחה</string>
+  <string name="set_force_touch_sum">בטל חיישן קירבה בזמן שיחה</string>
+  <string name="contactPhoto">תמונת איש קשר</string>
+  <string name="goPrivate">עבור לפרטיות</string>
+  <string name="selectContact">בחירת איש קשר</string>
+  <string name="voicemail_notification_title">התראות הודעה קולית</string>
+  <string name="voicemail_notification_summary">אפשר התראות על הודעות קוליות (חדשות)</string>
+  <string name="sip_settings">הגדרות שיחה אינטרנטית</string>
+  <string name="sip_accounts">חשבונות שיחות אינטרנט (SIP)</string>
+  <string name="sip_accounts_title">חשבונות</string>
+  <string name="sip_accounts_summary">נהל חשבונות שיחות אינטרנטיות (SIP) ומצבן</string>
+  <string name="sip_receive_calls">קבל שיחות נכנסות</string>
+  <string name="sip_receive_calls_summary">מפחית את חיי הסוללה</string>
+  <string name="sip_call_options">הגדרות אפשרויות שיחה</string>
+  <string name="sip_call_options_title">השתמש בשיחות אינטרנט</string>
+  <string name="sip_call_options_wifi_only_title">השתמש בשיחות אינטרנט (בחיבור Wi-Fi בלבד)</string>
+  <string name="sip_call_options_entry_1">עבור כל השיחות, כאשר חיבור רשת נתונים זמינה</string>
+  <string name="sip_call_options_entry_2">רק עבור שיחות אינטרנט</string>
+  <string name="sip_call_options_entry_3">שאל עבור כל שיחה</string>
+  <string name="sip_call_options_wifi_only_entry_1">עבור כל השיחות</string>
+  <string name="auto_reg">רישום אוטומטי</string>
+  <string name="call_priority">שיחה יוצאת באמצעות SIP</string>
+  <string name="pick_outgoing_call_phone_type">בצע שיחה</string>
+  <string name="pick_outgoing_sip_phone">השתמש בחשבון שיחות אינטרנט:</string>
+  <string name="remember_my_choice">השתמש תמיד לביצוע שיחות אינטרנט</string>
+  <string name="reset_my_choice_hint">השתמש בהגדרות שיחה על מנת לבחור את חשבון ברירת המחדל לשיחות אינטרנט, באמצעות בחירת חשבון אחר בהגדרות שיחה </string>
+  <string name="pstn_phone">שיחה סלולרית</string>
+  <string name="internet_phone">שיחת אינטרנט</string>
+  <string name="no_sip_account_found_title">אין חשבון חיוג אינטרנט</string>
+  <string name="no_sip_account_found">לא קיימים חשבונות לשיחת אינטרנט. ברצונך להוסיף כעת?</string>
+  <string name="sip_menu_add">הוסף</string>
+  <string name="add_sip_account">הוספת חשבון</string>
+  <string name="remove_sip_account">הסר חשבון</string>
+  <string name="sip_account_list">חשבונות SIP</string>
+  <string name="saving_account">שמירת חשבון...</string>
+  <string name="removing_account">הסרת חשבון...</string>
+  <string name="sip_menu_save">שמור</string>
+  <string name="sip_menu_discard">בטל שינויים</string>
+  <string name="alert_dialog_close">סגור את הפרופיל</string>
+  <string name="alert_dialog_ok">אישור</string>
+  <string name="close_profile">סגור</string>
+  <string name="primary_account">ראשי</string>
+  <string name="primary_account_title">הפוך חשבון זה לראשי שלי</string>
+  <string name="primary_account_summary">משמש עבור שיחות יוצאות</string>
+  <string name="advanced_settings_title">הגדרות מתקדמות</string>
+  <string name="primary_account_summary_with">חשבון ראשי. &lt;xliff:g id="registration_status" example="Registering..."&gt;%s&lt;/xliff:g&gt;</string>
+  <string name="registration_status_checking_status">בודק מצב...</string>
+  <string name="registration_status_registering">נרשם...</string>
+  <string name="registration_status_still_trying">עדיין מנסה...</string>
+  <string name="registration_status_not_receiving">לא מקבל שיחות</string>
+  <string name="registration_status_no_data">רישום חשבון הפסיק כי אין חיבור לאינטרנט</string>
+  <string name="registration_status_no_wifi_data">רישום חשבון הפסיק כי אין חיבור Wi-Fi</string>
+  <string name="registration_status_not_running">הרשמה לחשבון נכשלה</string>
+  <string name="registration_status_done">מקבל שיחות</string>
+  <string name="registration_status_failed_try_later">רישום חשבון נכשל: ( &lt;xliff:g id="registration_error_message" example="timed out"&gt; %s &lt;/xliff:g&gt; ); ינסה מאוחר יותר</string>
+  <string name="registration_status_invalid_credentials">רישום חשבון נכשל: שם משתמש או סיסמה שגויים</string>
+  <string name="registration_status_server_unreachable">רישום חשבון נכשל: אנא בדוק את שם השרת</string>
+  <string name="third_party_account_summary">חשבון זה נמצא כעת בשימוש על-ידי היישום &lt;xliff:g id="account_owner" example="Google Talk"&gt; %s &lt;/xliff:g&gt;</string>
+  <string name="sip_edit_title">SIP פרטי החשבון</string>
+  <string name="sip_edit_new_title">SIP פרטי החשבון</string>
+  <string name="domain_address_title">שרת</string>
+  <string name="username_title">שם משתמש</string>
+  <string name="password_title">סיסמה</string>
+  <string name="display_name_title">שם לתצוגה</string>
+  <string name="proxy_address_title">כתובת פרוקסי יוצאת</string>
+  <string name="port_title">מספר יציאה ‏‪(port)‏</string>
+  <string name="transport_title">סוג תעבורה</string>
+  <string name="send_keepalive_title">שלח keep-alive</string>
+  <string name="send_keepalive_summary">SIP keep-alive שלח הודעות</string>
+  <string name="user_agent_title">ממשק SIP</string>
+  <string name="auto_registration_title">רישום אוטומטי</string>
+  <string name="auto_registration_summary">רשום את הפרופיל בצורה אוטומטית</string>
+  <string name="set_primary_title">הגדר כחשבון הראשי</string>
+  <string name="set_primary_summary">השתמש עבור שיחות יוצאות</string>
+  <string name="advanced_settings">הגדרות אופציונליות</string>
+  <string name="default_preference_summary">&lt;אינו מוגדר&gt;</string>
+  <string name="display_name_summary">&lt;שם משתמש זהה&gt;</string>
+  <string name="optional_summary">&lt;אופציונלי&gt;</string>
+  <string name="default_port">5060</string>
+  <string name="default_transport">UDP</string>
+  <string name="advanced_settings_show">▷ גע להראות את הכל</string>
+  <string name="advanced_settings_hide">▽ גע כדי להסתיר את הכל</string>
+  <string name="empty_alert">&lt;xliff:g id="שדה קלט" example="שם משתמש, סיסמא..."&gt; %s &lt;/xliff:g&gt; נדרשת, לא יכול להישאר ריק</string>
+  <string name="not_a_valid_port">מספר פורט צריך להיות בתווך 1000 - 65534</string>
+  <string name="no_internet_available_title">אין חיבור לאינטרנט</string>
+  <string name="no_wifi_available_title">אין חיבור Wi-Fi</string>
+  <string name="no_internet_available">על מנת לבצע שיחה אינטרנטית, בדוק תחילה את חיבור האינטרנט</string>
+  <string name="no_wifi_available">עליך להיות מחובר לרשת Wi-Fi על מנת לבצע שיחות אינטרנטיות (השתמש בהגדרות רשת &amp; אלחוטי)</string>
+  <string name="no_voip">שיחות דרך האינטרנט לא נתמכות</string>
+  <string name="sip_always">SIP_ALWAYS</string>
+  <string name="sip_address_only">SIP_ADDRESS_ONLY</string>
+  <string name="sip_ask_me_each_time">SIP_ASK_ME_EACH_TIME</string>
+  <string name="sip_system_decide">אוטומטי</string>
+  <string name="sip_always_send_keepalive">שלח תמיד</string>
+  <string name="domain_address">SipDomain</string>
+  <string name="username">שם משתמש</string>
+  <string name="password">סיסמה</string>
+  <string name="display_name">שם לתצוגה</string>
+  <string name="proxy_address">כתובת פרוקסי</string>
+  <string name="user_agent">UserAgent</string>
+  <string name="port">פיתחה</string>
+  <string name="transport">פרוטוקול</string>
+  <string name="send_keepalive">SendKeepAlive</string>
+  <string name="auto_registration">רישום אוטומטי</string>
+  <string name="set_primary">הגדר כראשי</string>
+  <string name="advanced_settings_container">הגדרות מתקדמות</string>
+  <string name="per_change_mobile_network">(2G/3G) שנה רשת</string>
+  <string name="per_change_mobile_network_desc">תוכנה עם הרשאות אלו יכולה בכל עת לבצע מיתוג בין רשת 2G לרשת 3G. במצב 3G הגלישה מהירה יותר, אך צורכת יותר סוללה ועלולה להיות יקרה יותר.</string>
+  <string name="phone_number_label">מספר הטלפון שלי</string>
+  <string name="phone_number_summary">הגדר את מספר הטלפון עבור התקן זה</string>
+  <string name="trackball_answer">מענה עם הכדור האופטי</string>
+  <string name="trackball_answer_sum">לחץ על הכדור האופטי בכדי לענות לשיחה.</string>
+  <string name="trackball_hangup">נתק בעזרת הכדור האופטי</string>
+  <string name="trackball_hangup_sum">לחץ על כדור העקיבה לנתק את השיחה הנוכחית</string>
+  <string name="toast_phone_goggles">אינך מורשה לבצע שיחות בזמן זה. אנא נסה שוב מאוחר יותר</string>
+  <string name="dialog_phone_goggles_title">שיחה נחסמה</string>
+  <string name="dialog_phone_goggles_title_unlocked">שיחה מורשה</string>
+  <string name="dialog_phone_goggles_content">ביצוע שיחה כרגע עלול להיות לא מומלץ. האם אתה בטוח כי ברצונך להמשיך?</string>
+  <string name="dialog_phone_goggles_unauthorized">ביצוע שיחה כרגע עלול להיות לא מומלץ.</string>
+  <string name="dialog_phone_goggles_ok">התקשר</string>
+  <string name="dialog_phone_goggles_cancel">בטל</string>
+  <string-array name="clir_display_values">
+    <item>רשת ברירת מחדל</item>
+    <item>הסתר מספר</item>
+    <item>הצג מספר</item>
+  </string-array>
+  <string-array name="clir_values">
+    <item></item>
+    <item></item>
+    <item></item>
+  </string-array>
+  <string-array name="preferred_network_mode_choices">
+    <item>גלובלי</item>
+    <item>EVDO בלבד</item>
+    <item>CDMA ללא EvDo</item>
+    <item>CDMA / EVDO אוטומטית</item>
+    <item>GSM / WCDMA אוטומטית</item>
+    <item>WCDMA בלבד</item>
+    <item>GSM בלבד</item>
+    <item>GSM / WCDMA מועדפת</item>
+  </string-array>
+  <string-array name="preferred_network_mode_values">
+    <item>"7"</item>
+    <item>"6"</item>
+    <item>"5"</item>
+    <item>"4"</item>
+    <item>"3"</item>
+    <item>"2"</item>
+    <item>"1"</item>
+    <item>"0"</item>
+  </string-array>
+  <string-array name="list_language_entries">
+    <item>אנגלית</item>
+    <item>צרפתית</item>
+    <item>ספרדית</item>
+    <item>יפנית</item>
+    <item>קוריאנית</item>
+    <item>סינית</item>
+    <item>עברית</item>
+  </string-array>
+  <string-array name="list_language_values">
+    <item>"1"</item>
+    <item>"2"</item>
+    <item>"3"</item>
+    <item>"4"</item>
+    <item>"5"</item>
+    <item>"6"</item>
+    <item>"7"</item>
+  </string-array>
+  <string-array name="gsm_umts_network_preferences_choices">
+    <item>GSM / WCDMA (מצב אוטומטי)</item>
+    <item>WCDMA בלבד</item>
+    <item>GSM בלבד</item>
+    <item>GSM / WCDA (WCDMA מועדפת)</item>
+  </string-array>
+  <string-array name="gsm_umts_network_preferences_values">
+    <item>"0"</item>
+    <item>"1"</item>
+    <item>"2"</item>
+    <item>"3"</item>
+  </string-array>
+  <string-array name="cdma_system_select_choices">
+    <item>בית בלבד</item>
+    <item>רשתות כלולות</item>
+    <item>אוטומטי</item>
+  </string-array>
+  <string-array name="cdma_system_select_values">
+    <item>"3"</item>
+    <item>"1"</item>
+    <item>"2"</item>
+  </string-array>
+  <string-array name="cdma_roaming_mode_choices">
+    <item>רשתות ביתיות בלבד</item>
+    <item>רשתות כלולות</item>
+    <item>כל רשת</item>
+  </string-array>
+  <string-array name="cdma_roaming_mode_values">
+    <item>"0"</item>
+    <item>"1"</item>
+    <item>"2"</item>
+  </string-array>
+  <string-array name="cdma_network_preferences_choices">
+    <item>CDMA/EvDo</item>
+    <item>CDMA בלבד</item>
+    <item>EVDO בלבד</item>
+  </string-array>
+  <string-array name="cdma_network_preferences_values">
+    <item>"0"</item>
+    <item>"1"</item>
+    <item>"2"</item>
+  </string-array>
+  <string-array name="cdma_subscription_choices">
+    <item>RUIM/SIM</item>
+    <item>NV</item>
+  </string-array>
+  <string-array name="cdma_subscription_values">
+    <item>"0"</item>
+    <item>"1"</item>
+  </string-array>
+  <string-array name="tty_mode_entries">
+    <item>TTY Off</item>
+    <item>TTY Full</item>
+    <item>TTY HCO</item>
+    <item>TTY VCO</item>
+  </string-array>
+  <string-array name="tty_mode_values">
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string-array name="dtmf_tone_entries">
+    <item>רגיל</item>
+    <item>ארוך</item>
+  </string-array>
+  <string-array name="dtmf_tone_values">
+    <item>0</item>
+    <item>1</item>
+  </string-array>
+  <string-array name="trackballLabels">
+    <item>לא זמין</item>
+    <item>הקש לענות</item>
+    <item>הקש פעמיים לענות</item>
+  </string-array>
+  <string-array name="trackballValues">
+    <item>-1</item>
+    <item>350</item>
+    <item>dt</item>
+  </string-array>
+  <string-array name="trackballHangupLabels">
+    <item>לא זמין</item>
+    <item>הקש לניתוק</item>
+    <item>הקש פעמיים לניתוק</item>
+  </string-array>
+  <plurals name="phone_in_ecm_notification_time">
+    <item quantity="one">אין חיבור נתונים במשך דקה</item>
+    <item quantity="other">אין חיבור נתונים במשך דקות</item>
+  </plurals>
+  <plurals name="alert_dialog_exit_ecm">
+    <item quantity="one">הטלפון יהיה במצב חירום איתות במשך דקה. במצב זה אין אפשרות שימוש בישומים באמצעות חיבור נתונים. אתה רוצה לצאת עכשיו?</item>
+    <item quantity="other">הטלפון יהיה במצב חירום איתות במשך מספר דקות. במצב זה אין אפשרות שימוש בישומים באמצעות חיבור נתונים. אתה רוצה לצאת עכשיו?</item>
+  </plurals>
+  <plurals name="alert_dialog_not_avaialble_in_ecm">
+    <item quantity="one">הפעולה שנבחרה אינה זמינה במצב חירום. הטלפון יהיה במצב זה במשך דקה. האם ברצונך לצאת עכשיו?</item>
+    <item quantity="other">הפעולה שנבחרה אינה זמינה במצב החירום. הטלפון יהיה במצב זה במשך דקות. האם ברצונך לצאת עכשיו?</item>
+  </plurals>
+</resources>
