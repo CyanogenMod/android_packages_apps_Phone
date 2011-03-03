@@ -534,7 +534,7 @@ public class InCallScreen extends Activity
 
     private CallFeaturesSetting mSettings;
     private boolean mForceTouch;
-    
+
     //Trackball Answer
     Long mTrackballHitTime;
 
@@ -1764,6 +1764,10 @@ public class InCallScreen extends Activity
         Connection.DisconnectCause cause = c.getDisconnectCause();
         if (DBG) log("onDisconnect: " + c + ", cause=" + cause);
 
+        // Stash away a copy of the "current intent" in case we need it
+        // later (see the EmergencyCallHandler-related code below.)
+        Intent originalInCallIntent = getIntent();
+
         boolean currentlyIdle = !phoneIsInUse();
         int autoretrySetting = AUTO_RETRY_OFF;
         boolean phoneIsCdma = (mPhone.getPhoneType() == Phone.PHONE_TYPE_CDMA);
@@ -1924,12 +1928,48 @@ public class InCallScreen extends Activity
 
         if (bailOutImmediately) {
             if (VDBG) log("- onDisconnect: bailOutImmediately...");
-            // Retry the call, by resending the intent to the emergency
-            // call handler activity.
+
+            // Exit the in-call UI!
+            // (This is basically the same "delayed cleanup" we do below,
+            // just with zero delay.  Since the Phone is currently idle,
+            // this call is guaranteed to immediately finish this activity.)
+            delayedCleanupAfterDisconnect();
+
+            // Also, if this was a failed emergency call, we may need to
+            // (re)launch the EmergencyCallHandler in order to retry the
+            // call.
+            // (Note that emergencyCallRetryCount will be -1 if we weren't
+            // launched via the EmergencyCallHandler in the first place.)
             if ((cause == Connection.DisconnectCause.OUT_OF_SERVICE)
                     && (emergencyCallRetryCount > 0)) {
-                startActivity(((Intent)getIntent().clone())
-                        .setClassName(this, EmergencyCallHandler.class.getName()));
+                Log.i(LOG_TAG, "onDisconnect: OUT_OF_SERVICE; need to retry emergency call!");
+                Log.i(LOG_TAG, "- emergencyCallRetryCount = " + emergencyCallRetryCount);
+
+                // Fire off the EmergencyCallHandler, and pass it the
+                // original CALL_EMERGENCY intent that got us here.  (The
+                // EmergencyCallHandler will re-try turning the radio on,
+                // and then pass this intent back to us.)
+
+                // Watch out: we use originalInCallIntent here rather than
+                // the current value of getIntent(), since the current intent
+                // just got reset by the delayedCleanupAfterDisconnect() call
+                // immediately above!
+
+                Intent i = originalInCallIntent.setClassName(this,
+                        EmergencyCallHandler.class.getName());
+                Log.i(LOG_TAG, "- launching: " + i);
+                startActivity(i);
+
+                // TODO: the sequence of startActivity() calls is a little
+                // ugly here.  We just launched the EmergencyCallHandler (see
+                // the code immediately above here), but right before doing
+                // that we *also* called delayedCleanupAfterDisconnect() which
+                // itself calls startActivity() in order to launch the call
+                // log.  Issuing two startActivity() calls in a row like this
+                // makes no sense; in practice the 2nd call wins, but it would
+                // be cleaner for us to force delayedCleanupAfterDisconnect()
+                // to not even try launching the call log if we know we're
+                // about to launch the EmergencyCallHandler instead.
             }
             // Exit the in-call UI!
             // (This is basically the same "delayed cleanup" we do below,
@@ -2545,7 +2585,7 @@ public class InCallScreen extends Activity
      *    the other InCallInitStatus codes indicating what went wrong.
      */
     private InCallInitStatus placeCall(Intent intent) {
-        if (VDBG) log("placeCall()...  intent = " + intent);
+        if (DBG) log("placeCall()...  intent = " + intent);
 
         String number;
         Phone phone = null;
@@ -2630,10 +2670,9 @@ public class InCallScreen extends Activity
             // expecting a callback when the emergency call handler dictates
             // it) and just return the success state.
             if (isEmergencyNumber && (okToCallStatus == InCallInitStatus.POWER_OFF)) {
-                if(DBG) log("EmergencyCall Intent: " + intent);
-                startActivity(((Intent)intent.clone())
-                        .setClassName(this, EmergencyCallHandler.class.getName()));
-                if (DBG) log("placeCall: starting EmergencyCallHandler, finishing InCallScreen...");
+                Log.i(LOG_TAG, "placeCall: Trying to make emergency call while POWER_OFF!");
+                Log.i(LOG_TAG, "- starting EmergencyCallHandler, finishing InCallScreen...");
+                startActivity(intent.setClassName(this, EmergencyCallHandler.class.getName()));
                 endInCallScreenSession();
                 return InCallInitStatus.SUCCESS;
             } else {
@@ -4985,10 +5024,7 @@ public class InCallScreen extends Activity
      * Updates and returns the InCallControlState instance.
      */
     public InCallControlState getUpdatedInCallControlState() {
-        if (VDBG) {
-            log("InCallScreen getUpdatedInCallControlState : ");
-            PhoneUtils.dumpCallManager();
-        }
+        if (VDBG) log("getUpdatedInCallControlState()...");
         mInCallControlState.update();
         return mInCallControlState;
     }
@@ -5167,7 +5203,7 @@ public class InCallScreen extends Activity
      if(mCM.hasActiveRingingCall() && !mSettings.mTrackAnswer.equals("-1")){ //Call is ringing and Trackball Answer is on
 	     if(event.getAction() == MotionEvent.ACTION_DOWN){
 	       if(mSettings.mTrackAnswer.equals("dt")){
-		 //Double Tap Code taken from MetalHead's Double-Tap-to-skip-song. 
+		 //Double Tap Code taken from MetalHead's Double-Tap-to-skip-song.
 		 long timeBetweenHits;
 		 if (mTrackballHitTime == null)
 		   mTrackballHitTime = realTime;
@@ -5176,7 +5212,7 @@ public class InCallScreen extends Activity
 		     timeBetweenHits = realTime - mTrackballHitTime; // System clock rolled over
 		   else
 		     timeBetweenHits = realTime + (Long.MAX_VALUE - mTrackballHitTime); // Time to Answer Call
-	 
+
 		   if (timeBetweenHits < 400) { //400 being double-tap duration distance
 		     internalAnswerCall();
 		   }
@@ -5196,7 +5232,7 @@ public class InCallScreen extends Activity
      }else if(mCM.hasActiveFgCall()  && !mSettings.mTrackHangup.equals("-1")){ //We're in a call and trackbal hangup is enabled
 	if(event.getAction() == MotionEvent.ACTION_DOWN){
 	       if(mSettings.mTrackAnswer.equals("dt")){
-		 //Double Tap Code taken from MetalHead's Double-Tap-to-skip-song. 
+		 //Double Tap Code taken from MetalHead's Double-Tap-to-skip-song.
 		 long timeBetweenHits;
 		 if (mTrackballHitTime == null)
 		   mTrackballHitTime = realTime;
@@ -5205,7 +5241,7 @@ public class InCallScreen extends Activity
 		     timeBetweenHits = realTime - mTrackballHitTime; // System clock rolled over
 		   else
 		     timeBetweenHits = realTime + (Long.MAX_VALUE - mTrackballHitTime); // Time to Answer Call
-	 
+
 		   if (timeBetweenHits < 400) { //400 being double-tap duration distance
 		     internalHangup();
 		   }

@@ -702,7 +702,7 @@
     <string name="registration_status_failed_try_later" msgid="3045686593819835879">"Det gick inte att registrera kontot: (<xliff:g id="REGISTRATION_ERROR_MESSAGE">%s</xliff:g>). Försöker igen senare"</string>
     <string name="registration_status_invalid_credentials" msgid="1830368411591265203">"Det gick inte att registrera kontot: felaktigt användarnamn eller lösenord"</string>
     <string name="registration_status_server_unreachable" msgid="8173553259218123653">"Det gick inte att registrera kontot. Kontrollera servernamnet"</string>
-    <string name="third_party_account_summary" msgid="1069915789382987226">"Kontot används för närvarande i programmet <xliff:g id="ACCOUNT_OWNER">%s</xliff:g>"</string>
+    <string name="third_party_account_summary" msgid="1069915789382987226">"Kontot används för närvarande i appen <xliff:g id="ACCOUNT_OWNER">%s</xliff:g>"</string>
     <string name="sip_edit_title" msgid="489288416435014385">"Information om SIP-kontot"</string>
     <string name="sip_edit_new_title" msgid="3659149255856520385">"Information om SIP-kontot"</string>
     <string name="domain_address_title" msgid="9071787581316160480">"Server"</string>
@@ -719,6 +719,8 @@
     <string name="set_primary_title" msgid="5351892327447571451">"Använd som primärt konto"</string>
     <string name="set_primary_summary" msgid="2219064654523258577">"Används för utgående samtal"</string>
     <string name="advanced_settings" msgid="8350631795335495338">"Valfria inställningar"</string>
+    <string name="auth_username_title" msgid="851473016307947120">"Användarnamn vid autentisering"</string>
+    <string name="auth_username_summary" msgid="6782012405225938629">"Användarnamn som används vid autentisering"</string>
     <string name="default_preference_summary" msgid="868766740121667450">"&lt;Har inte angetts&gt;"</string>
     <string name="display_name_summary" msgid="8636377460518225523">"&lt;Samma som användarnamn&gt;"</string>
     <string name="optional_summary" msgid="1464058793789832411">"&lt;Valfri&gt;"</string>

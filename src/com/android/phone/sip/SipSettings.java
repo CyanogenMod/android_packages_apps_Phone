@@ -16,6 +16,8 @@
 
 package com.android.phone.sip;
 
+import com.android.internal.telephony.CallManager;
+import com.android.internal.telephony.Phone;
 import com.android.phone.R;
 import com.android.phone.SipUtil;
 
@@ -39,6 +41,7 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -71,10 +74,12 @@ public class SipSettings extends PreferenceActivity {
 
     private PackageManager mPackageManager;
     private SipManager mSipManager;
+    private CallManager mCallManager;
     private SipProfileDb mProfileDb;
 
     private SipProfile mProfile; // profile that's being edited
 
+    private Button mButtonAddSipAccount;
     private CheckBoxPreference mButtonSipReceiveCalls;
     private PreferenceCategory mSipListContainer;
     private Map<String, SipPreference> mSipPreferenceMap;
@@ -95,7 +100,7 @@ public class SipSettings extends PreferenceActivity {
 
         void setProfile(SipProfile p) {
             mProfile = p;
-            setTitle(p.getProfileName());
+            setTitle(getProfileName(p));
             updateSummary(mSipSharedPreferences.isReceivingCallsEnabled()
                     ? getString(R.string.registration_status_checking_status)
                     : getString(R.string.registration_status_not_receiving));
@@ -150,6 +155,7 @@ public class SipSettings extends PreferenceActivity {
         mSipListContainer = (PreferenceCategory) findPreference(PREF_SIP_LIST);
         registerForAddSipListener();
         registerForReceiveCallsCheckBox();
+        mCallManager = CallManager.getInstance();
 
         updateProfilesStatus();
     }
@@ -157,6 +163,14 @@ public class SipSettings extends PreferenceActivity {
     @Override
     public void onResume() {
         super.onResume();
+
+        if (mCallManager.getState() != Phone.State.IDLE) {
+            mButtonAddSipAccount.setEnabled(false);
+            mButtonSipReceiveCalls.setEnabled(false);
+        } else {
+            mButtonAddSipAccount.setEnabled(true);
+            mButtonSipReceiveCalls.setEnabled(true);
+        }
     }
 
     @Override
@@ -190,8 +204,10 @@ public class SipSettings extends PreferenceActivity {
     }
 
     private void registerForAddSipListener() {
-        ((Button) findViewById(R.id.add_remove_account_button))
-                .setOnClickListener(new android.view.View.OnClickListener() {
+        mButtonAddSipAccount =
+                (Button) findViewById(R.id.add_remove_account_button);
+        mButtonAddSipAccount.setOnClickListener(
+                new android.view.View.OnClickListener() {
                     public void onClick(View v) {
                         startSipEditor(null);
                     }
@@ -268,13 +284,21 @@ public class SipSettings extends PreferenceActivity {
         }).start();
     }
 
+    private String getProfileName(SipProfile profile) {
+        String profileName = profile.getProfileName();
+        if (TextUtils.isEmpty(profileName)) {
+            profileName = profile.getUserName() + "@" + profile.getSipDomain();
+        }
+        return profileName;
+    }
+
     private void retrieveSipLists() {
         mSipPreferenceMap = new LinkedHashMap<String, SipPreference>();
         mSipProfileList = mProfileDb.retrieveSipProfileList();
         processActiveProfilesFromSipService();
         Collections.sort(mSipProfileList, new Comparator<SipProfile>() {
             public int compare(SipProfile p1, SipProfile p2) {
-                return p1.getProfileName().compareTo(p2.getProfileName());
+                return getProfileName(p1).compareTo(getProfileName(p2));
             }
 
             public boolean equals(SipProfile p) {
