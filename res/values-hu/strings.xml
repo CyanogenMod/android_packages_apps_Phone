@@ -691,4 +691,74 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Internetes hívás kezdeményezéséhez először ellenőrizze az internetkapcsolatot"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Internetes hívások kezdeményezéséhez Wi-Fi hálózathoz kell csatlakoznia (használja a Vezeték nélküli és hálózati beállításokat)"</string>
     <string name="no_voip" msgid="8901474054537199865">"Az internetes hívás nem támogatott"</string>
+
+    <string name="mvno_roaming">Országos adatroaming</string>
+    <string name="mvno_roaming_summary">Ezzel engedélyezheti, hogy országon belül más szolgáltatót használhasson.</string>
+    <string name="mvno_roaming_warning">Engedélyezni szerené az adatroaming szolgáltatást az országon belül más szolgáltatóval? Néhány virtuális mobilszolgáltató számára szükséges ez a beállítás az adatkapcsolathoz. Ez a beállítás a telefon újraindításáig nem lép érvénybe.</string>
+    <string name="rotate_to_answer">Forgassa jobbra a válaszhoz</string>
+    <string name="rotate_to_decline">Forgassa balra az elutasításhoz</string>
+    <string name="notification_ongoing_calling_format">Hívás (%s)</string>
+    <string name="advanced_setting">Speciális beállítások V.30.1</string>
+    <string name="vibrate_outgoing">Rezgés válaszkor</string>
+    <string name="vibrate_outgoing_sum">Rezgéssel jelzi a telefonhívás létrejöttét</string>
+    <string name="vibrate_45">45 mp-ként rezeg</string>
+    <string name="vibrate_45_sum">Minden 45. másodpercben rezeg a kimenő hívások során</string>
+    <string name="vibrate_hangup">Bontáskor rezeg</string>
+    <string name="vibrate_hangup_sum">Rezgéssel jelzi a hívás befejeztét</string>
+    <string name="screen_awake">Képernyő ébrentartása</string>
+    <string name="screen_awake_sum">A képernyő hosszabb ideig ébren marad, mint a normál idő, bejövő hívás alatt</string>
+    <string name="always_proximity">Proximity használata</string>
+    <string name="always_proximity_sum">Lehetővé teszi, hogy a közelség-érzékelő zárolja a képernyőt, vízszintes állapotban is.</string>
+    <string name="led_notify_call">LED értesítés nem fogadott hívásról</string>
+    <string name="led_notify_call_sum">LED villog, ha nem fogadott hívása van</string>
+    <string name="led_show_organ">"A nick/szervezet megjelenítése"</string>
+    <string name="led_show_organ_sum">"Becenév/szervezet jelenik meg a hívás képernyőn."</string>
+    <string name="vibrate_call_waiting">Hívásvárakoztatáskor rezeg</string>
+    <string name="vibrate_call_waiting_sum">Hívásvárakoztatáskor rezeg a telefon</string>
+    <string name="return_home">Mindig vissza a hívásnaplóhoz</string>
+    <string name="return_home_sum">Hívás után mindig a hívásnapló jelenik meg.</string>
+    <string name="menu_addBlackList">Hozzáadás a feketelistához</string>
+    <string name="black_list">Feketelista</string>
+    <string name="black_list_sum">A Feketelista bejövő hívásai elutasításra kerülnek.</string>
+    <string name="add_black">Telefonszám hozzáadása</string>
+    <string name="remove_black">%s eltávolítása a listáról</string>
+    <string name="turn_silence">Elnémítás fordítással</string>
+    <string name="turn_silence_sum">Csengetés közben átfordítva a másik oldalára néma üzemmódba kerül.</string>
+    <string name="left_hand">Balkezes mód</string>
+    <string name="left_hand_sum">Balkezes üzemmód, újraindítás szükséges.</string>
+    <string name="set_force_touch">Bejövő híváskor érintőképernyő</string>
+    <string name="set_force_touch_sum">Közelségérzékelő nélküli telefonon erőlteti az érintőképernyőt a hívás alatt.</string>
+    <string name="voicemail_notification_title">Hangposta értesítések</string>
+    <string name="voicemail_notification_summary">Hangposta értesítések bekapcsolása új üzenetekhez</string>
+    <string name="user_agent_title">SIP Felhasználóazonosító</string>
+    <string name="per_change_mobile_network">Hálózat módosítása (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Az ilyen engedéllyel rendelkező alkalmazás, bármikor válthat 2G és 3G közt. A 3G gyorsabb, jobban meríti az akkumulátort, és több pénzbe is kerülhet a nagyobb adatforgalom miatt.</string>
+    <string name="phone_number_label">Saját telefonszám</string>
+    <string name="phone_number_summary">Állítsa be a telefonszámát a készüléknek</string>
+    <string name="trackball_answer">Trackball válasz</string>
+    <string name="trackball_answer_sum">Nyomja meg a Trackball-t a bejövő hívás fogadásához.</string>
+    <string-array name="trackballLabels">
+       <item>Kikapcsolva</item>
+       <item>Fogadás érintésre</item>
+       <item>Fogadás dupla érintésre</item>
+    </string-array>
+    <string-array name="trackballValues">
+       <item>-1</item>
+       <item>350</item>
+       <item>dt</item>
+    </string-array>
+    <string name="trackball_hangup">Trackball befejezés</string>
+    <string name="trackball_hangup_sum">Hívás befejezése a Trackball segítségével.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Kikapcsolva</item>
+       <item>Befejezés érintésre</item>
+       <item>Befejezés dupla érintésre</item>
+    </string-array>
+    <string name="toast_phone_goggles">Ebben az időszakban nem engedélyezett a hívás-indítás. Kérem próbálkozzon meg később.</string>
+    <string name="dialog_phone_goggles_title">Hívás letiltva</string>
+    <string name="dialog_phone_goggles_title_unlocked">Hívás engedélyezve</string>
+    <string name="dialog_phone_goggles_content">Hívás-indítás nem engedélyezett ebben az időszakban. Biztos, hogy folytatni szeretné?</string>
+    <string name="dialog_phone_goggles_unauthorized">Hívás-indítás nem engedélyezett ebben az időszakban.</string>
+    <string name="dialog_phone_goggles_ok">Hívás</string>
+    <string name="dialog_phone_goggles_cancel">Mégsem</string>
 </resources>
