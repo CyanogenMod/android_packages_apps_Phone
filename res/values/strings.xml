@@ -360,7 +360,7 @@
         <item>Show number</item>
     </string-array>
     <!-- Phone settings: Internal keys used for Caller ID preference values.  DO NOT TRANSLATE. -->
-    <string-array name="clir_values">
+    <string-array name="clir_values" translatable="false">
         <!-- Phone settings: Internal key used for Caller ID preference values.  DO NOT TRANSLATE. -->
         <item><xliff:g>DEFAULT</xliff:g></item>
         <!-- Phone settings: Internal key used for Caller ID preference values.  DO NOT TRANSLATE. -->
@@ -1065,7 +1065,7 @@
       <item>Long</item>
     </string-array>
     <!-- Do not translate. -->
-    <string-array name="dtmf_tone_values">
+    <string-array name="dtmf_tone_values" translatable="false">
        <item>0</item>
        <item>1</item>
     </string-array>
@@ -1494,7 +1494,7 @@
        <item>Tap to Answer</item>
        <item>Double Tap to Answer</item>    
     </string-array>  
-    <string-array name="trackballValues">  
+    <string-array name="trackballValues" translatable="false">
        <item>-1</item>
        <item>350</item>
        <item>dt</item> 
