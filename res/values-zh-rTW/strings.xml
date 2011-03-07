@@ -1190,7 +1190,7 @@
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"拒絕"</string>
     <!-- added by cytown@gmail.com -->
     <string name="notification_ongoing_calling_format">"目前撥出 (<xliff:g id="DURATION">%s</xliff:g>)"</string>
-    <string name="advanced_setting">高級設置 V.30.1</string>
+    <string name="advanced_setting">進階設定 V.30.1</string>
     <string name="vibrate_outgoing">接聽震動</string>
     <string name="vibrate_outgoing_sum">當對方接聽時震動</string>
     <string name="vibrate_45">45秒震動</string>
@@ -1199,7 +1199,7 @@
     <string name="vibrate_hangup_sum">通話結束時震動</string>
     <string name="screen_awake">螢幕保持清醒</string>
     <string name="screen_awake_sum">螢幕在通話時會比正常等待更久才關閉</string>
-    <string name="always_proximity">總是使用距離感應</string>
+    <string name="always_proximity">始終使用距離感應</string>
     <string name="always_proximity_sum">允許距離感應器在手機位於水平角度時鎖定螢幕</string>
     <string name="led_notify_call">未接來電閃爍通知</string>
     <string name="led_notify_call_sum">有未接來電時提示燈會閃爍。</string>
@@ -1388,8 +1388,12 @@
     <string name="set_primary_summary" msgid="2219064654523258577">"用於外撥通話"</string>
     <!-- Text of the advanced settings section. [CHAR LIMIT=NONE] -->
     <string name="advanced_settings" msgid="8350631795335495338">"選用設定"</string>
+    <!-- Text of the username used in authentication. [CHAR LIMIT=NONE] -->
     <string name="auth_username_title" msgid="851473016307947120">"驗證使用者名稱"</string>
+    <!-- Help text of the auth_username field. [CHAR LIMIT=NONE] -->
     <string name="auth_username_summary" msgid="6782012405225938629">"用於進行驗證的使用者名稱"</string>
+
+    <!-- Initial status of the preferences is '<Not set>'. [CHAR LIMIT=NONE] -->
     <string name="default_preference_summary" msgid="868766740121667450">"&lt;未設定&gt;"</string>
     <!-- Default value for the display-name preference summary. [CHAR LIMIT=NONE] -->
     <string name="display_name_summary" msgid="8636377460518225523">"&lt;與使用者名稱相同&gt;"</string>
@@ -1445,10 +1449,11 @@
     <!-- skipping untranslatable /resources:0/string:name=auto_registration -->
     <!-- skipping untranslatable /resources:0/string:name=set_primary -->
     <!-- skipping untranslatable /resources:0/string:name=advanced_settings_container -->
+    <!-- skipping untranslatable /resources:0/string:name=auth_username -->
     <!-- End of SIP settings related strings -->
 
     <string name="per_change_mobile_network">切換行動網路（2G／3G）</string>
-    <string name="per_change_mobile_network_desc">獲得此權限的應用程式能夠於任何時候在 2G 及 3G 行動網路之間進行切換。使用 3G 行動網路取存資料的速度會比較快，但相對的會消耗較多的電池電量，亦會令您花費較多的金錢。</string>
+    <string name="per_change_mobile_network_desc">被授予此權限的應用程式能夠於任何時候在 2G 及 3G 行動網路之間進行切換。使用 3G 行動網路取存資料的速度會比較快，但相對的會消耗較多的電池電量，亦會令您花費較多的金錢。</string>
     <string name="phone_number_label">我的電話號碼</string>
     <string name="phone_number_summary">設定本裝置的電話號碼</string>
 
@@ -1456,16 +1461,16 @@
     <string name="trackball_answer">軌跡球接聽</string>
     <string name="trackball_answer_sum">按軌跡球接聽來電</string>
     <string-array name="trackballLabels">
-       <item>不要</item>
+       <item>不使用</item>
        <item>按一下接聽</item>
        <item>按兩下接聽</item>
     </string-array>
-
+    <!-- skipping untranslatable /resources:0/string-array:name=trackballValues -->
     <!-- TrackBall Hangup - Added by Nushio -->
     <string name="trackball_hangup">軌跡球掛斷</string>
     <string name="trackball_hangup_sum">按軌跡球來結束目前通話</string>
     <string-array name="trackballHangupLabels">
-       <item>不要</item>
+       <item>不使用</item>
        <item>按一下掛斷</item>
        <item>按兩下掛斷</item>
     </string-array>
