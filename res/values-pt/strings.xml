@@ -760,4 +760,9 @@
     <string name="dialog_phone_goggles_unauthorized">Fazer uma ligação neste momento pode não ser uma boa idéia.</string>
     <string name="dialog_phone_goggles_ok">Ligar</string>
     <string name="dialog_phone_goggles_cancel">Cancelar</string>
+    <string name="rotate_to_decline">Rotacione a esquerda para recusar</string>
+    <string name="voicemail_notification_summary">Habilitar notificações para (novas) mensagens de voz</string>
+    <string name="voicemail_notification_title">Notificações de mensagem de voz</string>
+    <string name="rotate_to_answer">Rotacione a direita para atender</string>
+    <string name="user_agent_title">Usuário-Agente SIP</string>
 </resources>
