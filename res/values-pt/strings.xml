@@ -714,7 +714,7 @@
     <string name="return_home">Sempre voltar para lista de chamadas</string>
     <string name="return_home_sum">Forçar retorno para lista de chamadas após fim de uma chamada.</string>
     <string name="menu_addBlackList">Adicionar a Lista de bloqueio</string>
-    <string name="black_list">Lista de bloqueiot</string>
+    <string name="black_list">Lista de bloqueio</string>
     <string name="black_list_sum">Chamadas recebidas da lista de bloqueio serão rejeitadas.</string>
     <string name="add_black">Adicionar número de telefone</string>
     <string name="remove_black">Remover %s da lista</string>
