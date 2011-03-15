@@ -439,10 +439,10 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_VIBRATE_CALL_WAITING = "button_vibrate_call_waiting";
     private CheckBoxPreference mButtonVibCallWaiting;
     static boolean mVibCallWaiting;
-    static boolean mTurnSilence;
-
-    private static final String BUTTON_TURN_SILENCE     = "button_turn_silence";
-    private CheckBoxPreference mButtonTurnSilence;
+    // static boolean mTurnSilence;
+    // Hide this option until it is fixed.
+    // private static final String BUTTON_TURN_SILENCE     = "button_turn_silence";
+    // private CheckBoxPreference mButtonTurnSilence;
     static boolean mLeftHand;
 
     private static final String BUTTON_LEFT_HAND        = "button_left_hand";
@@ -1603,8 +1603,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         mButtonLedNotify.setChecked(mLedNotify);
         mButtonShowOrgan = (CheckBoxPreference) prefSet.findPreference(BUTTON_SHOW_ORGAN);
         mButtonShowOrgan.setChecked(mShowOrgan);
-        mButtonTurnSilence = (CheckBoxPreference) prefSet.findPreference(BUTTON_TURN_SILENCE);
-        mButtonTurnSilence.setChecked(mTurnSilence);
+        // mButtonTurnSilence = (CheckBoxPreference) prefSet.findPreference(BUTTON_TURN_SILENCE);
+        // mButtonTurnSilence.setChecked(mTurnSilence);
         mButtonLeftHand = (CheckBoxPreference) prefSet.findPreference(BUTTON_LEFT_HAND);
         mButtonLeftHand.setChecked(mLeftHand);
         mButtonVibCallWaiting = (CheckBoxPreference) prefSet
@@ -2043,7 +2043,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         mReturnHome = pref.getBoolean(BUTTON_RETURN_HOME, true);
         mLedNotify = pref.getBoolean(BUTTON_LED_NOTIFY, true);
         mShowOrgan = pref.getBoolean(BUTTON_SHOW_ORGAN, false);
-        mTurnSilence = pref.getBoolean(BUTTON_TURN_SILENCE, false);
+        //mTurnSilence = pref.getBoolean(BUTTON_TURN_SILENCE, false);
         mLeftHand = pref.getBoolean(BUTTON_LEFT_HAND, false);
         mVibCallWaiting = pref.getBoolean(BUTTON_VIBRATE_CALL_WAITING, false);
         mForceTouch = pref.getBoolean(BUTTON_FORCE_TOUCH,
@@ -2178,7 +2178,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         outState.putBoolean(BUTTON_RETURN_HOME, mButtonReturnHome.isChecked());
         outState.putBoolean(BUTTON_LED_NOTIFY, mButtonLedNotify.isChecked());
         outState.putBoolean(BUTTON_SHOW_ORGAN, mButtonShowOrgan.isChecked());
-        outState.putBoolean(BUTTON_TURN_SILENCE, mButtonTurnSilence.isChecked());
+        // outState.putBoolean(BUTTON_TURN_SILENCE, mButtonTurnSilence.isChecked());
         outState.putBoolean(BUTTON_LEFT_HAND, mButtonLeftHand.isChecked());
         outState.putBoolean(BUTTON_VIBRATE_CALL_WAITING, mButtonVibCallWaiting.isChecked());
         outState.putBoolean(BUTTON_FORCE_TOUCH,

@@ -116,11 +116,11 @@
         android:title="@string/set_force_touch"
         android:persistent="false"
         android:summary="@string/set_force_touch_sum"/>
-    <CheckBoxPreference
+   <!-- <CheckBoxPreference
         android:key="button_turn_silence"
         android:title="@string/turn_silence"
         android:persistent="false"
-        android:summary="@string/turn_silence_sum"/>
+        android:summary="@string/turn_silence_sum"/> -->
     <CheckBoxPreference
         android:key="button_left_hand"
         android:title="@string/left_hand"
