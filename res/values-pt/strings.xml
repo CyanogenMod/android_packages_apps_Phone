@@ -699,8 +699,8 @@
     <string name="vibrate_outgoing_sum">Vibrar quando uma chamada é atendida</string>
     <string name="vibrate_45">Vibrar sempre 45 segundos</string>
     <string name="vibrate_45_sum">Vibrar sempre 45 segundos durante recebimento de chamadas</string>
-    <string name="vibrate_hangup">Vibrar ao terminar</string>
-    <string name="vibrate_hangup_sum">Vibrar ao terminar uma chamada</string>
+    <string name="vibrate_hangup">Vibrar ao desligar</string>
+    <string name="vibrate_hangup_sum">Vibrar ao desligar uma chamada</string>
     <string name="screen_awake">Manter tela acesa</string>
     <string name="screen_awake_sum">Tela ficará acesa por mais tempo do que o normal durante a chamada</string>
     <string name="always_proximity">Sensor de proximidade</string>
@@ -709,8 +709,8 @@
     <string name="led_notify_call_sum">LED piscará quando uma chamada é perdida</string>
     <string name="led_show_organ">"Exibir apelido/organização"</string>
     <string name="led_show_organ_sum">"Apelido/Organização serão exibidos na tela ao receber uma chamada."</string>
-    <string name="vibrate_call_waiting">Vibrar chamada em espera</string>
-    <string name="vibrate_call_waiting_sum">Vibrar com chamadas em espera</string>
+    <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>
+    <string name="vibrate_call_waiting_sum">Vibrar ao receber chamadas durante uma ligação</string>
     <string name="return_home">Sempre voltar para lista de chamadas</string>
     <string name="return_home_sum">Forçar retorno para lista de chamadas após fim de uma chamada.</string>
     <string name="menu_addBlackList">Adicionar a Lista de bloqueio</string>
@@ -732,7 +732,7 @@
 
     <string name="mvno_roaming">Roaming de dados Nacional</string>
     <string name="mvno_roaming_summary">Isto vai deixar você usar uma diferente operadora no seu país.</string>
-    <string name="mvno_roaming_warning">Habilitar roaming de dados dentro do mesmo país que sua operadora? Algumas operadoras exigem esta configuração para acesso a dados. NÃO habilite esta opção se sua operadora cobra tarifas de roaming de dados no país! Esta configuração não terá efeito até que reinicie o seu telefone ou alternar para o Modo Avião e voltar.</string>
+    <string name="mvno_roaming_warning">Ativar roaming de dados dentro do mesmo país que sua operadora? Algumas operadoras exigem esta configuração para acesso a dados. NÃO ative esta opção se sua operadora cobra tarifas de roaming de dados no país! Esta configuração não terá efeito até que reinicie o seu telefone ou alternar para o Modo Avião e voltar.</string>
 
     <!-- TrackBall Answer - Added by Nushio -->
     <string name="trackball_answer">Atender com Trackball</string>
@@ -760,9 +760,9 @@
     <string name="dialog_phone_goggles_unauthorized">Fazer uma ligação neste momento pode não ser uma boa idéia.</string>
     <string name="dialog_phone_goggles_ok">Ligar</string>
     <string name="dialog_phone_goggles_cancel">Cancelar</string>
-    <string name="rotate_to_decline">Rotacione a esquerda para recusar</string>
-    <string name="voicemail_notification_summary">Habilitar notificações para (novas) mensagens de voz</string>
+    <string name="rotate_to_decline">Gire a esquerda para recusar</string>
+    <string name="voicemail_notification_summary">Ativar notificações para (novas) mensagens de voz</string>
     <string name="voicemail_notification_title">Notificações de mensagem de voz</string>
-    <string name="rotate_to_answer">Rotacione a direita para atender</string>
+    <string name="rotate_to_answer">Gire a direita para atender</string>
     <string name="user_agent_title">Usuário-Agente SIP</string>
 </resources>
