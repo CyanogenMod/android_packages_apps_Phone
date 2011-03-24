@@ -223,6 +223,9 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Establecer conexión con servicios de datos en itinerancia"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Has perdido la conectividad de datos porque has dejado desactivada la itinerancia de datos de tu red doméstica."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"¿Permitir itinerancia de datos? Los costes de itinerancia que deberás asumir pueden ser significativos."</string>
+    <string name="mvno_roaming">Datos en itinerancia nacionales</string>
+    <string name="mvno_roaming_summary">Esto le permitirá utilizar un proveedor de red diferente en su país.</string>
+    <string name="mvno_roaming_warning">Habilitar la itinerancia de datos en el mismo país que su proveedor de servicios? Algunos proveedores de redes virtuales requieren este ajuste a los datos de acceso. NO active esta opción si su proveedor cobra honorarios en el país de roaming! Este ajuste no tendrá efecto hasta que reinicie el teléfono o cambie a modo de avión y vuelva..</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Opciones GSM/UMTS"</string>
     <string name="cdma_options" msgid="4016822858172249884">"Opciones de CDMA"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Uso de datos"</string>
@@ -347,6 +350,7 @@
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Selección de sistema"</string>
   <string-array name="cdma_system_select_choices">
     <item msgid="176474317493999285">"Solo sistema doméstico"</item>
+        <item>Redes afiliadas</item>
     <item msgid="1205664026446156265">"Automático"</item>
   </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"Modo de itinerancia CDMA"</string>
@@ -461,6 +465,9 @@
     <string name="doneButton" msgid="2859593360997984240">"Listo"</string>
     <string name="caller_manage_header" msgid="3231519674734638786">"Conferencia telefónica<xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Volver a la llamada"</string>
+    <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
+    <string name="fake_phone_activity_infoText_text">Número de teléfono entrante</string>
+    <string name="fake_phone_activity_placeCall_text">Llamada entrante falsa</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continuar sin tarjeta SIM"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"No se ha encontrado ninguna tarjeta SIM. Inserta una tarjeta SIM en el teléfono."</string>
     <string name="sim_unlock_dismiss_text" msgid="8292343981739813597">"Descartar"</string>
@@ -491,6 +498,8 @@
     <string name="vibrate_hangup_sum">Vibra cuando termina la llamada.</string>
     <string name="screen_awake">Mantener pantalla encendida</string>
     <string name="screen_awake_sum">La pantalla permanece encendida durante la llamada</string>
+    <string name="always_proximity">Usar siempre proximidad</string>
+    <string name="always_proximity_sum">Habilitar para permitir que el sensor de proximidad bloquee la pantalla, incluso si el teléfono está horizontal.</string>
     <string name="led_notify_call">Notificar llamada perdida con LED</string>
     <string name="led_notify_call_sum">El LED parpadeacuando hay una llamada perdida</string>
     <string name="led_show_organ">"Ver nick/organización"</string>
@@ -620,6 +629,7 @@
     <string name="alert_dialog_yes" msgid="6674268047820703974">"Sí"</string>
     <string name="alert_dialog_no" msgid="1476091437797628703">"No"</string>
     <string name="alert_dialog_dismiss" msgid="2491494287075907171">"Descartar"</string>
+    <string name="absent_num">NO HAY NUMERO</string>
     <string name="voicemail_settings" msgid="2288633492587133022">"Configuración de buzón de voz"</string>
     <string name="voicemail_number_not_set" msgid="1604580506447265808">"&lt;sin definir&gt;"</string>
     <string name="voicemail_provider" msgid="6299679757491942924">"Servicio de buzón de voz"</string>
@@ -628,13 +638,16 @@
     <string name="dial_button_label" msgid="5551611636419190229">"Llamar"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Llamando a través de ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Arrastrar a la derecha para responder"</string>
+    <string name="rotate_to_answer">Girar a la derecha para responder</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Arrastrar a la izquierda para silenciar el timbre"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Arrastrar a la izquierda para rechazar"</string>
+    <string name="rotate_to_decline">Girar a la izquierda para rechazar</string>
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Arrastrar a la derecha para responder y"\n"retener una llamada activa"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Arrastrar a la derecha para responder y"\n"finalizar una llamada activa"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Arrastrar a la derecha para responder y"\n"finalizar una llamada en espera"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Responder"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Rechazar"</string>
+    <string name="notification_ongoing_calling_format">Llamando (<xliff:g id="duration">%s</xliff:g>)    </string>
     <string name="contactPhoto" msgid="4713193418046639466">"foto de contacto"</string>
     <string name="goPrivate" msgid="865837794424530980">"llamada privada"</string>
     <string name="selectContact" msgid="781975788478987237">"seleccionar contacto"</string>
@@ -702,6 +715,7 @@
     <string name="transport_title" msgid="8253139511847746640">"Tipo de transporte"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Enviar señal conexión"</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"Enviar mensajes SIP de conexión"</string>
+    <string name="user_agent_title">Agente de Usuario SIP</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Registro automático"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Registrar el perfil automáticamente"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Establecer como principal"</string>
@@ -739,4 +753,12 @@
        <item>Presiona para colgar</item>
        <item>Presiona dos veces para colgar</item>
     </string-array>
+        <!-- Phone goggles -->
+    <string name="toast_phone_goggles">No se le permite hacer llamadas de teléfono en este momento. Por favor, inténtelo de nuevo más tarde.</string>
+    <string name="dialog_phone_goggles_title">Llamada bloqueada</string>
+    <string name="dialog_phone_goggles_title_unlocked">Llamada autorizada</string>
+    <string name="dialog_phone_goggles_content">La realización de una llamada telefónica puede no ser aconsejable en este momento. ¿Está seguro que desea continuar?</string>
+    <string name="dialog_phone_goggles_unauthorized">La realización de una llamada telefónica puede no ser aconsejable en este momento.</string>
+    <string name="dialog_phone_goggles_ok">Llamar</string>
+    <string name="dialog_phone_goggles_cancel">Cancelar</string>
 </resources>
