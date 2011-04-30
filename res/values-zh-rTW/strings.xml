@@ -297,7 +297,6 @@
     <string name="messageCFB" msgid="3711089705936187129">"忙線時轉接號碼"</string>
     <!-- Call forwarding settings screen, setting summary text when forwarding to specific number when busy -->
     <string name="sum_cfb_enabled" msgid="5984198104833116690">"轉接至 <xliff:g id="PHONENUMBER">{0}</xliff:g>"</string>
-    <string name="sum_cfb_enabled" msgid="2501948432392255856">"轉接到 {0}"</string>
     <!-- Call forwarding settings screen, setting summary text when forwarding when busy is disabled -->
     <string name="sum_cfb_disabled" msgid="227440009979537651">"停用"</string>
     <!-- Error message displayed after failing to disable forwarding calls when the phone is busy -->
