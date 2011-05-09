@@ -1410,6 +1410,10 @@
     <string name="send_keepalive_title">Send keep-alive</string>
     <!-- Text of the keepalive preference summary. [CHAR LIMIT=NONE] -->
     <string name="send_keepalive_summary">Send SIP keep-alive messages</string>
+    <!-- Text of the keepalive interval preference. [CHAR LIMIT=NONE] -->
+    <string name="keepalive_interval_title">Keep-alive interval</string>
+    <!-- Text of the keepalive interval preference summary. [CHAR LIMIT=NONE] -->
+    <string name="keepalive_interval_summary">SIP keep-alive interval in seconds</string>
     <!-- Text of the user agent preference. [CHAR LIMIT=NONE] -->
     <string name="user_agent_title">SIP User-Agent</string>
     <!-- Text of the auto registration preference. [CHAR LIMIT=NONE] -->
@@ -1439,6 +1443,8 @@
     <!-- Default sip server/proxy transport protocol. -->
     <string translatable="false" name="default_transport">UDP</string>
 
+    <!-- Default sip keep-alive interval in seconds -->
+    <string translatable="false" name="default_keepalive_interval">15</string>
 
     <!-- Hint to show the advanced settings section. [CHAR LIMIT=NONE] -->
     <string name="advanced_settings_show">▷ Touch to show all</string>
@@ -1480,6 +1486,7 @@
     <string translatable="false" name="port">Port</string>
     <string translatable="false" name="transport">Protocol</string>
     <string translatable="false" name="send_keepalive">SendKeepAlive</string>
+    <string translatable="false" name="keepalive_interval">KeepAliveInterval</string>
     <string translatable="false" name="auto_registration">AutoRegistration</string>
     <string translatable="false" name="set_primary">SetPrimary</string>
     <string translatable="false" name="advanced_settings_container">advanced settings container</string>
