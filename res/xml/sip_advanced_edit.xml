@@ -72,6 +72,15 @@
             android:summary="@string/sip_system_decide"/>
 
         <EditTextPreference
+            android:key="@string/keepalive_interval"
+            android:title="@string/keepalive_interval_title"
+            android:summary="@string/keepalive_interval_summary"
+            android:dialogTitle="@string/keepalive_interval_title"
+            android:persistent="false"
+            android:inputType="number|numberDecimal"
+            android:singleLine="true"/>
+
+        <EditTextPreference
             android:key="@string/user_agent"
             android:title="@string/user_agent_title"
             android:dialogTitle="@string/user_agent_title"
