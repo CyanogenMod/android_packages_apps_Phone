@@ -1252,6 +1252,8 @@
     <string name="left_hand_sum">Use left hand hold the phone, need a reboot to effect.</string>
     <string name="set_force_touch">In-call touch UI</string>
     <string name="set_force_touch_sum">Force in-call touch UI without proximity sensor</string>
+    <string name="rotate_incall">Enable sensor rotation</string>
+    <string name="rotate_incall_sum">Allow incall screen to rotate with orientation change.</string>
 
     <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
     <string name="contactPhoto">contact photo</string>
