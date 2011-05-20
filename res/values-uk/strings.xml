@@ -165,11 +165,11 @@
     <string name="enable" msgid="1059008390636773574">"Увімкнути"</string>
     <string name="disable" msgid="7274240979164762320">"Вимкнути"</string>
     <string name="change_num" msgid="239476305819844391">"Оновити"</string>
-  <string-array name="clir_display_values">
+    <string-array name="clir_display_values">
         <item>Типове налаштування мережі</item>
         <item>Приховати номер</item>
         <item>Показати номер</item>
-  </string-array>
+    </string-array>
     <string name="vm_save_number" msgid="4579969432544566719">"Збер. номер голос. пошти"</string>
     <string name="vm_changed" msgid="380744030726254139">"Номер голос. пошти змінено."</string>
     <string name="vm_change_failed">Не вдалося змінити номер голосової пошти.\nЯкщо проблема повториться зверніться до оператора.</string>
@@ -605,6 +605,8 @@
     <string name="left_hand_sum">Використання телефону лівою рукою (потребує перезавантаження).</string>
     <string name="set_force_touch">Не вимикати екран на час розмови</string>
     <string name="set_force_touch_sum">Під час вхідного виклику сигнали датчика наближення будуть ігноруватися</string>
+    <string name="rotate_incall">Датчик обертання</string>
+    <string name="rotate_incall_sum">Обертання вікна вхідного виклику за зміни оріентації пристрою.</string>
     <string name="contactPhoto" msgid="4713193418046639466">"фото контакта"</string>
     <string name="goPrivate" msgid="865837794424530980">"конфіденц."</string>
     <string name="selectContact" msgid="781975788478987237">"вибрати контакт"</string>
