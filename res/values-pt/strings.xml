@@ -766,4 +766,6 @@
     <string name="voicemail_notification_title">Notificações de mensagem de voz</string>
     <string name="rotate_to_answer">Gire a direita para atender</string>
     <string name="user_agent_title">Usuário-Agente SIP</string>
+    <string name="rotate_incall">Habilitar sensor de rotação</string>
+    <string name="rotate_incall_sum">Permitir tela de ligação rotacionar com a mudança de orientação.</string>
 </resources>
