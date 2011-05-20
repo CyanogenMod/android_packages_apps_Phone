@@ -768,4 +768,6 @@
     <string name="user_agent_title">Usuário-Agente SIP</string>
     <string name="rotate_incall">Habilitar sensor de rotação</string>
     <string name="rotate_incall_sum">Permitir tela de ligação rotacionar com a mudança de orientação.</string>
+    <string name="keepalive_interval_title">Intervalo para manter ativo</string>
+    <string name="keepalive_interval_summary">Intervalo para manter SIP ativo em segundos</string>
 </resources>
