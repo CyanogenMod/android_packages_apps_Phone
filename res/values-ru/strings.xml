@@ -608,9 +608,17 @@
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Перетащите вкладку вправо, чтобы ответить,"\n"завершив удерживаемый вызов"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Ответить"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Отклонить"</string>
+    <string name="rotate_incall">Включить датчик вращения</string>
+    <string name="rotate_incall_sum">Разрешить вращение экрана входящего звонка при изменении ориентации.</string>
     <string name="contactPhoto" msgid="4713193418046639466">"фотография контакта"</string>
     <string name="goPrivate" msgid="865837794424530980">"приватная конференция"</string>
     <string name="selectContact" msgid="781975788478987237">"выбрать контакт"</string>
+
+    <!-- Title displayed for the checkbox to (en|dis)able voicemail notifications. [CHAR LIMIT=NONE] -->
+    <string name="voicemail_notification_title">Уведомления голосовой почты</string>
+    <!-- Summary for the checkbox to (en|dis)able voicemail notifications. [CHAR LIMIT=NONE] -->
+    <string name="voicemail_notification_summary">Включить уведомления о новых голосовых сообщениях</string>
+
     <string name="sip_settings" msgid="6699045718560859691">"Настройки интернет-телефонии"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"Аккаунты интернет-телефонии (SIP)"</string>
     <string name="sip_accounts_title" msgid="1212889069281054570">"Аккаунты"</string>
@@ -726,8 +734,8 @@
     <string name="phone_number_summary">Установите номер телефона для этого устройства</string>
 
     <!-- TrackBall Answer - Added by Nushio -->
-    <string name="trackball_answer">Ответ по trackball</string>
-    <string name="trackball_answer_sum">Ответить на звонок нажатием на trackball.</string>
+    <string name="trackball_answer">Ответ по трекболу</string>
+    <string name="trackball_answer_sum">Ответить на звонок нажатием на трекбол.</string>
     <string-array name="trackballLabels">
        <item>Отключено</item>
        <item>Нажать для ответа</item>
@@ -735,8 +743,8 @@
     </string-array>
 
     <!-- TrackBall Hangup - Added by Nushio -->
-    <string name="trackball_hangup">Отбой по trackball</string>
-    <string name="trackball_hangup_sum">Сбросить звонок нажатие на trackball.</string>
+    <string name="trackball_hangup">Отбой по трекболу</string>
+    <string name="trackball_hangup_sum">Сбросить звонок нажатием на трекбол.</string>
     <string-array name="trackballHangupLabels">
        <item>Отключено</item>
        <item>Нажать для отбоя</item>
