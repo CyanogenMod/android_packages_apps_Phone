@@ -90,6 +90,7 @@ public class SipEditor extends PreferenceActivity
         Port(R.string.port, R.string.default_port, R.string.default_port),
         Transport(R.string.transport, R.string.default_transport, NA),
         SendKeepAlive(R.string.send_keepalive, R.string.sip_system_decide, NA),
+        KeepAliveInterval(R.string.keepalive_interval, R.string.default_keepalive_interval, R.string.default_keepalive_interval),
         AuthUserName(R.string.auth_username, 0, R.string.optional_summary);
 
         final int text;
@@ -336,6 +337,9 @@ public class SipEditor extends PreferenceActivity
                         case Port:
                             pref.setText(getString(R.string.default_port));
                             break;
+                        case KeepAliveInterval:
+                            pref.setText(getString(R.string.default_keepalive_interval));
+                            break;
                         default:
                             if (firstEmptyFieldTitle == null) {
                                 firstEmptyFieldTitle = pref.getTitle();
@@ -427,6 +431,7 @@ public class SipEditor extends PreferenceActivity
                     .setUserAgent(PreferenceKey.UserAgent.getValue())
                     .setPort(Integer.parseInt(PreferenceKey.Port.getValue()))
                     .setSendKeepAlive(isAlwaysSendKeepAlive())
+                    .setKeepAliveInterval(Integer.parseInt(PreferenceKey.KeepAliveInterval.getValue()))
                     .setAutoRegistration(
                             mSharedPreferences.isReceivingCallsEnabled())
                     .setAuthUserName(PreferenceKey.AuthUserName.getValue())
