@@ -1381,6 +1381,10 @@
     <string name="send_keepalive_title" msgid="7533342573918645113">"傳送 keep-alive"</string>
     <!-- Text of the keepalive preference summary. [CHAR LIMIT=NONE] -->
     <string name="send_keepalive_summary" msgid="9038969409950960640">"傳送 SIP keep-alive 訊息"</string>
+    <!-- Text of the keepalive interval preference. [CHAR LIMIT=NONE] -->
+    <string name="keepalive_interval_title">Keep-alive 區間</string>
+    <!-- Text of the keepalive interval preference summary. [CHAR LIMIT=NONE] -->
+    <string name="keepalive_interval_summary">設定每隔多少秒傳送一次 SIP keep-alive 訊息</string>
     <!-- Text of the user agent preference. [CHAR LIMIT=NONE] -->
     <string name="user_agent_title">SIP 使用者代理程式</string>
     <!-- Text of the auto registration preference. [CHAR LIMIT=NONE] -->
@@ -1410,6 +1414,8 @@
     <!-- Default sip server/proxy transport protocol. -->
     <!-- skipping untranslatable /resources:0/string:name=default_transport -->
 
+    <!-- Default sip keep-alive interval in seconds -->
+    <!-- skipping untranslatable /resources:0/string:name=default_keepalive_interval -->
 
     <!-- Hint to show the advanced settings section. [CHAR LIMIT=NONE] -->
     <string name="advanced_settings_show" msgid="4668880308290857597">"▷ 輕觸即可全部顯示"</string>
@@ -1451,6 +1457,7 @@
     <!-- skipping untranslatable /resources:0/string:name=port -->
     <!-- skipping untranslatable /resources:0/string:name=transport -->
     <!-- skipping untranslatable /resources:0/string:name=send_keepalive -->
+    <!-- skipping untranslatable /resources:0/string:name=keepalive_interval -->
     <!-- skipping untranslatable /resources:0/string:name=auto_registration -->
     <!-- skipping untranslatable /resources:0/string:name=set_primary -->
     <!-- skipping untranslatable /resources:0/string:name=advanced_settings_container -->
