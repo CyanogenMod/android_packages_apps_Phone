@@ -1245,6 +1245,8 @@
     <string name="black_list">Blacklist</string>
     <string name="black_list_sum">Incoming call in black list will be rejected.</string>
     <string name="add_black">Add phone number</string>
+    <string name="black_regex_title">Use wildcards</string>
+    <string name="black_regex_summary">Use . as a wildcard and * for repetition. Eg. 123.* blocks numbers starting with 123 and .*123.* blocks numbers containing 123</string>
     <string name="remove_black">Remove %s from List</string>
     <string name="turn_silence">Turn over silence</string>
     <string name="turn_silence_sum">Turn over to silence ring</string>

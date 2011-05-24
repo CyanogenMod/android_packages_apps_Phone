@@ -160,6 +160,11 @@
             phone:confirmMode="confirm"
             android:singleLine="true"
             android:autoText="false"/>
+        <CheckBoxPreference
+            android:key="button_black_regex"
+            android:title="@string/black_regex_title"
+            android:summary="@string/black_regex_summary"
+            android:persistent="false" />
         <PreferenceCategory android:key="cat_black_list" android:title="@string/black_list"/>
     </PreferenceScreen>
 </PreferenceCategory>
