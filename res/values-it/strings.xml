@@ -744,6 +744,8 @@
     <string name="black_list">Contatti Bloccati</string>
     <string name="black_list_sum">Le chiamate in arrivo dai contatti bloccati verranno rifiutate</string>
     <string name="add_black">Aggiungi numero di telefono</string>
+    <string name="black_regex_title">Usa metacaratteri</string>
+    <string name="black_regex_summary">Usa . per indicare un qualsiasi numero, aggiungi * per indicare una qualsiasi sequenza di numeri. Es. 123.* blocca i numeri che iniziano con 123 e .*123.* blocca i numeri contenenti 123</string>
     <string name="remove_black">Rimuovi %s dall\'elenco</string>
     <string name="turn_silence">Gira per disatt. suoneria</string>
     <string name="turn_silence_sum">Gira il telefono per disattivare la suoneria quando ricevi una chiamata</string>
