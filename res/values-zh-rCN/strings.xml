@@ -735,4 +735,33 @@
     <string name="set_force_touch_sum">强制在通话中使用触摸键盘无论是否有近距传感器.</string>
     <string name="phone_number_label">我的手机号码</string>
     <string name="phone_number_summary">为这部手机设置号码</string>
+
+
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">轨迹球接听</string>  
+    <string name="trackball_answer_sum">按下轨迹球接听呼入电话.</string>
+    <string-array name="trackballLabels">
+       <item>关闭</item> 
+       <item>单击接听</item>
+       <item>双击接听</item>    
+    </string-array>  
+
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">轨迹球挂断</string>  
+    <string name="trackball_hangup_sum">按下轨迹球挂断当前电话.</string>
+    <string-array name="trackballHangupLabels">
+       <item>关闭</item> 
+       <item>单击挂断</item>
+       <item>单击挂断</item>    
+    </string-array> 
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">现在无法拨打电话，请稍后再试.</string>
+    <string name="dialog_phone_goggles_title">呼叫阻塞</string>
+    <string name="dialog_phone_goggles_title_unlocked">呼叫授权</string>
+    <string name="dialog_phone_goggles_content">现在可能无法拨打电话.需要继续尝试?</string>
+    <string name="dialog_phone_goggles_unauthorized">现在可能无法拨打电话.</string>
+    <string name="dialog_phone_goggles_ok">确定</string>
+    <string name="dialog_phone_goggles_cancel">取消</string>
+
 </resources>
