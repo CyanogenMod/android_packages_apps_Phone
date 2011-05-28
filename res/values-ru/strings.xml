@@ -727,6 +727,8 @@
     <string name="black_list">Чёрный список</string>
     <string name="black_list_sum">Входящие звонки из чёрного списка будут сбрасываться.</string>
     <string name="add_black">Добавить телефонный номер</string>
+    <string name="black_regex_title">Использовать маски</string>
+    <string name="black_regex_summary">Используйте . как маску и * для повторения. Например. 123.* блокирует номера, начинающиеся с 123 и .*123.* блокирует номера, содержащие 123</string>
     <string name="remove_black">Удалить %s из списка?</string>
     <string name="turn_silence">Переворот - тишина</string>
     <string name="turn_silence_sum">Переверните телефон чтобы отключить звонок</string>
