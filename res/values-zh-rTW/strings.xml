@@ -1216,6 +1216,8 @@
     <string name="black_list">黑名單</string>
     <string name="black_list_sum">列入黑名單的來電會被自動掛斷</string>
     <string name="add_black">新增來電號碼</string>
+    <string name="black_regex_title">使用萬用字元</string>
+    <string name="black_regex_summary">使用 . 作為萬用字元，以 * 代表重複。例：123.* 會攔截開首為 123 的號碼，而 .*123.* 會攔截包含 123 的號碼</string>
     <string name="remove_black">從名單中刪除 %s</string>
     <string name="turn_silence">翻轉靜音</string>
     <string name="turn_silence_sum">來電時把手機翻轉來將鈴聲靜音</string>
