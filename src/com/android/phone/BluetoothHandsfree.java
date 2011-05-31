@@ -116,7 +116,10 @@ public class BluetoothHandsfree {
     private DebugThread mDebugThread;
     private int mScoGain = Integer.MIN_VALUE;
 
+    private static final String ACTION_VOICE_COMMAND_STOP = "com.android.internal.intent.action.VOICE_COMMAND_STOP";
+
     private static Intent sVoiceCommandIntent;
+    private static Intent sVoiceCommandStopIntent;
 
     // Audio parameters
     private static final String HEADSET_NREC = "bt_headset_nrec";
@@ -190,6 +193,9 @@ public class BluetoothHandsfree {
         if (sVoiceCommandIntent == null) {
             sVoiceCommandIntent = new Intent(Intent.ACTION_VOICE_COMMAND);
             sVoiceCommandIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        }
+        if (sVoiceCommandStopIntent == null) {
+            sVoiceCommandStopIntent = new Intent(ACTION_VOICE_COMMAND_STOP);
         }
         if (mContext.getPackageManager().resolveActivity(sVoiceCommandIntent, 0) != null &&
                 BluetoothHeadset.isBluetoothVoiceDialingEnabled(mContext)) {
@@ -2107,6 +2113,7 @@ public class BluetoothHandsfree {
                     }
                     return new AtCommandResult(AtCommandResult.UNSOLICITED);  // send nothing yet
                 } else if (args.length >= 1 && args[0].equals(0)) {
+                    mContext.sendBroadcast(sVoiceCommandStopIntent);
                     audioOff();
                     return new AtCommandResult(AtCommandResult.OK);
                 }
