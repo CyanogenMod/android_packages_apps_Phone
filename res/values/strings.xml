@@ -1412,6 +1412,10 @@
     <string name="send_keepalive_title">Send keep-alive</string>
     <!-- Text of the keepalive preference summary. [CHAR LIMIT=NONE] -->
     <string name="send_keepalive_summary">Send SIP keep-alive messages</string>
+    <!-- Item of the the keepalive option dialog: Automatic. [CHAR LIMIT=NONE] -->
+    <string name="sip_system_decide_entry">Automatic</string>
+    <!-- Item of the the keepalive option dialog: Always send. [CHAR LIMIT=NONE] -->
+    <string name="sip_always_send_keepalive_entry">Always send</string>
     <!-- Text of the keepalive interval preference. [CHAR LIMIT=NONE] -->
     <string name="keepalive_interval_title">Keep-alive interval</string>
     <!-- Text of the keepalive interval preference summary. [CHAR LIMIT=NONE] -->

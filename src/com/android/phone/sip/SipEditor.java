@@ -138,6 +138,8 @@ public class SipEditor extends PreferenceActivity
             } else if ((this == DisplayName)
                     && value.equals(getDefaultDisplayName())) {
                 preference.setSummary(defaultSummary);
+            } else if (preference instanceof ListPreference) {
+                preference.setSummary(((ListPreference) preference).getEntry());
             } else {
                 preference.setSummary(value);
             }

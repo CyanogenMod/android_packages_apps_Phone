@@ -1383,6 +1383,10 @@
     <string name="send_keepalive_title" msgid="7533342573918645113">"傳送 keep-alive"</string>
     <!-- Text of the keepalive preference summary. [CHAR LIMIT=NONE] -->
     <string name="send_keepalive_summary" msgid="9038969409950960640">"傳送 SIP keep-alive 訊息"</string>
+    <!-- Item of the the keepalive option dialog: Automatic. [CHAR LIMIT=NONE] -->
+    <string name="sip_system_decide_entry">自動</string>
+    <!-- Item of the the keepalive option dialog: Always send. [CHAR LIMIT=NONE] -->
+    <string name="sip_always_send_keepalive_entry">總是傳送</string>
     <!-- Text of the keepalive interval preference. [CHAR LIMIT=NONE] -->
     <string name="keepalive_interval_title">Keep-alive 區間</string>
     <!-- Text of the keepalive interval preference summary. [CHAR LIMIT=NONE] -->

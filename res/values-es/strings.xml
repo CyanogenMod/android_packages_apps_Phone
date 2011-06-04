@@ -465,9 +465,6 @@
     <string name="doneButton" msgid="2859593360997984240">"Listo"</string>
     <string name="caller_manage_header" msgid="3231519674734638786">"Conferencia telefónica<xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Volver a la llamada"</string>
-    <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
-    <string name="fake_phone_activity_infoText_text">Número de teléfono entrante</string>
-    <string name="fake_phone_activity_placeCall_text">Llamada entrante falsa</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continuar sin tarjeta SIM"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"No se ha encontrado ninguna tarjeta SIM. Inserta una tarjeta SIM en el teléfono."</string>
     <string name="sim_unlock_dismiss_text" msgid="8292343981739813597">"Descartar"</string>
@@ -630,7 +627,6 @@
     <string name="alert_dialog_yes" msgid="6674268047820703974">"Sí"</string>
     <string name="alert_dialog_no" msgid="1476091437797628703">"No"</string>
     <string name="alert_dialog_dismiss" msgid="2491494287075907171">"Descartar"</string>
-    <string name="absent_num">NO HAY NUMERO</string>
     <string name="voicemail_settings" msgid="2288633492587133022">"Configuración de buzón de voz"</string>
     <string name="voicemail_number_not_set" msgid="1604580506447265808">"&lt;sin definir&gt;"</string>
     <string name="voicemail_provider" msgid="6299679757491942924">"Servicio de buzón de voz"</string>

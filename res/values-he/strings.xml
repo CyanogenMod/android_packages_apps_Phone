@@ -376,9 +376,6 @@
   <string name="doneButton">בוצע</string>
   <string name="caller_manage_header">שיחת ועידה עם %s</string>
   <string name="caller_manage_manage_done_text">חזרה לשיחה</string>
-  <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
-  <string name="fake_phone_activity_infoText_text">מספר טלפון נכנס</string>
-  <string name="fake_phone_activity_placeCall_text">שיחת טלפון מזוייפת נכנסת</string>
   <string name="sim_missing_continueView_text">המשך בלי כרטיס סים</string>
   <string name="sim_missing_msg_text">לא נמצא כרטיס סים,הכנס כרטיס סים</string>
   <string name="sim_unlock_dismiss_text">דחה</string>
@@ -488,7 +485,6 @@
   <string name="alert_dialog_yes">כן</string>
   <string name="alert_dialog_no">לא</string>
   <string name="alert_dialog_dismiss">בטל</string>
-  <string name="absent_num">מספר חסר</string>
   <string name="voicemail_settings">הגדרות תא קולי</string>
   <string name="voicemail_number_not_set">&amp;lt;לא מוגדר&amp;gt;</string>
   <string name="voicemail_provider">שרות תא קולי</string>
@@ -613,8 +609,6 @@
   <string name="default_preference_summary">&lt;אינו מוגדר&gt;</string>
   <string name="display_name_summary">&lt;שם משתמש זהה&gt;</string>
   <string name="optional_summary">&lt;אופציונלי&gt;</string>
-  <string name="default_port">5060</string>
-  <string name="default_transport">UDP</string>
   <string name="advanced_settings_show">▷ גע להראות את הכל</string>
   <string name="advanced_settings_hide">▽ גע כדי להסתיר את הכל</string>
   <string name="empty_alert">&lt;xliff:g id="שדה קלט" example="שם משתמש, סיסמא..."&gt; %s &lt;/xliff:g&gt; נדרשת, לא יכול להישאר ריק</string>
@@ -624,23 +618,6 @@
   <string name="no_internet_available">על מנת לבצע שיחה אינטרנטית, בדוק תחילה את חיבור האינטרנט</string>
   <string name="no_wifi_available">עליך להיות מחובר לרשת Wi-Fi על מנת לבצע שיחות אינטרנטיות (השתמש בהגדרות רשת &amp; אלחוטי)</string>
   <string name="no_voip">שיחות דרך האינטרנט לא נתמכות</string>
-  <string name="sip_always">SIP_ALWAYS</string>
-  <string name="sip_address_only">SIP_ADDRESS_ONLY</string>
-  <string name="sip_ask_me_each_time">SIP_ASK_ME_EACH_TIME</string>
-  <string name="sip_system_decide">אוטומטי</string>
-  <string name="sip_always_send_keepalive">שלח תמיד</string>
-  <string name="domain_address">SipDomain</string>
-  <string name="username">שם משתמש</string>
-  <string name="password">סיסמה</string>
-  <string name="display_name">שם לתצוגה</string>
-  <string name="proxy_address">כתובת פרוקסי</string>
-  <string name="user_agent">UserAgent</string>
-  <string name="port">פיתחה</string>
-  <string name="transport">פרוטוקול</string>
-  <string name="send_keepalive">SendKeepAlive</string>
-  <string name="auto_registration">רישום אוטומטי</string>
-  <string name="set_primary">הגדר כראשי</string>
-  <string name="advanced_settings_container">הגדרות מתקדמות</string>
   <string name="per_change_mobile_network">(2G/3G) שנה רשת</string>
   <string name="per_change_mobile_network_desc">תוכנה עם הרשאות אלו יכולה בכל עת לבצע מיתוג בין רשת 2G לרשת 3G. במצב 3G הגלישה מהירה יותר, אך צורכת יותר סוללה ועלולה להיות יקרה יותר.</string>
   <string name="phone_number_label">מספר הטלפון שלי</string>

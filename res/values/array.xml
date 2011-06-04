@@ -20,13 +20,13 @@
         <item>TCP</item>
     </string-array>
 
-    <string-array translatable="true" name="sip_call_options_entries">
+    <string-array translatable="false" name="sip_call_options_entries">
         <item>@string/sip_call_options_entry_1</item>
         <item>@string/sip_call_options_entry_2</item>
         <item>@string/sip_call_options_entry_3</item>
     </string-array>
 
-    <string-array translatable="true" name="sip_call_options_wifi_only_entries">
+    <string-array translatable="false" name="sip_call_options_wifi_only_entries">
         <item>@string/sip_call_options_wifi_only_entry_1</item>
         <item>@string/sip_call_options_entry_2</item>
         <item>@string/sip_call_options_entry_3</item>
@@ -43,9 +43,14 @@
         <item>@string/internet_phone</item>
     </string-array>
 
-    <string-array translatable="true" name="sip_send_keepalive_options">
+    <string-array translatable="false" name="sip_send_keepalive_options">
         <item>@string/sip_system_decide</item>
         <item>@string/sip_always_send_keepalive</item>
+    </string-array>
+
+    <string-array translatable="false" name="sip_send_keepalive_entries">
+        <item>@string/sip_system_decide_entry</item>
+        <item>@string/sip_always_send_keepalive_entry</item>
     </string-array>
 </resources>
 
