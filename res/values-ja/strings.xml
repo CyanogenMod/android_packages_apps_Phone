@@ -745,6 +745,7 @@
     <string name="per_change_mobile_network_desc">この権限を許可されたアプリケーションは、いつでも2G/3Gデータの切り替えが可能です。3Gは高速ですが、バッテリ消費が増加します。また、キャリアの課金も増加することがあります。</string>
     <string name="phone_number_label">自分の電話番号</string>
     <string name="phone_number_summary">この携帯電話の電話番号をセットする</string>
+
     <!-- CM extra -->
     <string name="voicemail_notification_title">ボイスメールの通知</string>
     <string name="voicemail_notification_summary">新着ボイスメールの通知を有効にする</string>
@@ -764,6 +765,15 @@
     </string-array>
     <string name="rotate_to_answer">右に回転で応答</string>
     <string name="rotate_to_decline">左に回転で拒否</string>
+    <string name="black_regex_title">ワイルドカードを使用</string>
+    <string name="black_regex_summary"> . をワイルドカード、* を繰り返しとして使用する。例: 123.* は123で始まる番号を、.*123.* は123を含む番号をブロックする。</string>
+    <string name="rotate_incall">回転センサを有効にする</string>
+    <string name="rotate_incall_sum">着信画面において回転による画面の向きの変更を許可する</string>
+    <string name="sip_system_decide_entry">自動</string>
+    <string name="sip_always_send_keepalive_entry">常に送信</string>
+    <string name="keepalive_interval_title">キープアライブの間隔</string>
+    <string name="keepalive_interval_summary">SIPキープアライブの間隔(秒)</string>
+    <string name="user_agent_title">SIPユーザエージェント</string>
 
     <!-- Phone Goggles -->
     <string name="toast_phone_goggles">今の時間に発信することは許可されていません。あとで再度お試しください。</string>
