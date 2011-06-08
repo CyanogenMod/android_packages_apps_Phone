@@ -280,6 +280,13 @@ public class InCallUiState {
      */
     boolean needToShowCallLostDialog;
 
+    /**
+     * Flag used to control the "additional call forwarded" dialog
+     *
+     * If true, that means during the (currently) ongoing call another
+     * call was coming in and was forwarded to another party.
+     */
+    boolean needToShowAdditionalCallForwardedDialog;
 
     //
     // Progress indications

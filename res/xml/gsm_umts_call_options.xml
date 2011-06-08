@@ -3,6 +3,12 @@
      xmlns:phone="http://schemas.android.com/apk/res/com.android.phone"
      android:title="@string/labelGSMMore">
 
+    <CheckBoxPreference
+        android:key="button_show_ssn_key"
+        android:title="@string/show_ssn_label"
+        android:defaultValue="false"
+        android:summary="@string/show_ssn_summary" />
+
     <PreferenceScreen
         android:key="button_cf_expand_key"
         android:title="@string/labelCF"

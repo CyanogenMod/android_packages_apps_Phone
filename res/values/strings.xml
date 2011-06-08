@@ -81,6 +81,8 @@
     <string name="callFailed_dsac_restricted_normal">Normal calls are restricted by access control.</string>
     <!-- In-call screen: call failure reason (Dialed number doesn't exist) -->
     <string name="callFailed_unobtainable_number">Invalid number</string>
+    <!-- In-call screen: status label for an incoming call that is not answered and forwarded  -->
+    <string name="callUnanswered_forwarded">Call Unanswered and Forwarded</string>
     <!-- In-call screen: status label for a conference call -->
     <string name="confCall">Conference call</string>
     <!-- In-call screen: call lost dialog text -->
@@ -794,10 +796,13 @@
     <string name="card_title_dialing">Dialing</string>
     <!-- In-call screen: status label for a re-dialing call -->
     <string name="card_title_redialing">Retrying</string>
+
     <!-- In-call screen: status label for a conference call -->
     <string name="card_title_conf_call">Conference call</string>
     <!-- In-call screen: status label for an incoming call -->
     <string name="card_title_incoming_call">Incoming call</string>
+    <!-- In-call screen: status label for a call that is held remotely  -->
+    <string name="card_title_waiting_call">Waiting call</string>
     <!-- In-call screen: status label displayed briefly after a call ends -->
     <string name="card_title_call_ended">Call ended</string>
     <!-- In-call screen: status label for call that's on hold -->
@@ -809,6 +814,38 @@
     <!-- In-call screen: special status label that shows your own phone
          number during emergency callback mode (ECM) [CHAR LIMIT=30] -->
     <string name="card_title_my_phone_number">My number is <xliff:g id="my_phone_number">%s</xliff:g></string>
+
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">Unconditional call forwarding active</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">Conditional call forwarding active</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">Outgoing call is forwarded</string>
+    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
+    <string name="call_notif_calliswaiting">Remote party is busy, call is waiting</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">Call in closed user group</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">Outgoing calls barred</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">Incoming calls barred at remote party</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">Own number suppression rejected by network</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">Call forwarded by remote party</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">Incoming call is forwarded</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">Multi-party call</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">Call released remotely</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">Call was forwarded</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">Call connecting through explicit call transfer</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">Call connected through explicit call transfer</string>
 
     <!-- Notification strings -->
     <!-- The "label" of the in-call Notification for a dialing call, used
@@ -890,6 +927,8 @@
 
     <!-- In-call screen: "call type" indication for a SIP call [CHAR LIMIT=30]  -->
     <string name="incall_call_type_label_sip">Internet call</string>
+    <!-- In-call screen: "call type" indication for a forwarded call [CHAR LIMIT=30] -->
+    <string name="incall_call_type_label_forwarded">Forwarded call</string>
 
     <!-- Dialog title for the "radio enable" UI for emergency calls -->
     <string name="emergency_enable_radio_dialog_title">Emergency call</string>
@@ -1504,6 +1543,8 @@
     <string name="vibrate_hangup">Vibrate on hang up</string>
     <string name="vibrate_45">Vibrate every 45 seconds</string>
     <string name="vibrate_45_sum">Vibrates at the 45 second mark of every minute during outgoing calls</string>
+    <string name="show_ssn_label">Event notification</string>
+    <string name="show_ssn_summary">Show a notification for various network events related to call handling</string>
 
     <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">National data roaming</string>
