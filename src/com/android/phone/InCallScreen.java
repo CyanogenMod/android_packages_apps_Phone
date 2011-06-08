@@ -70,6 +70,7 @@ import com.android.internal.telephony.CallManager;
 import com.android.internal.telephony.Connection;
 import com.android.internal.telephony.MmiCode;
 import com.android.internal.telephony.Phone;
+import com.android.internal.telephony.gsm.SuppServiceNotification;
 import com.android.phone.OtaUtils.CdmaOtaInCallScreenUiState;
 import com.android.phone.OtaUtils.CdmaOtaScreenState;
 
@@ -172,6 +173,8 @@ public class InCallScreen extends Activity
     private static final int EVENT_PAUSE_DIALOG_COMPLETE = 120;
     private static final int EVENT_HIDE_PROVIDER_OVERLAY = 121;  // Time to remove the overlay.
     private static final int REQUEST_UPDATE_TOUCH_UI = 122;
+    private static final int SUPP_SERVICE_NOTIFY = 123;
+    private static final int REQUEST_UPDATE_CALL_STATE = 124;
 
     //following constants are used for OTA Call
     public static final String ACTION_SHOW_ACTIVATION =
@@ -235,6 +238,7 @@ public class InCallScreen extends Activity
 
     private boolean mRegisteredForPhoneStates;
     private boolean mNeedShowCallLostDialog;
+    private boolean mNeedShowAdditionalCallForwardedDialog;
 
     private CallManager mCM;
 
@@ -346,6 +350,10 @@ public class InCallScreen extends Activity
             switch (msg.what) {
                 case SUPP_SERVICE_FAILED:
                     onSuppServiceFailed((AsyncResult) msg.obj);
+                    break;
+
+                case SUPP_SERVICE_NOTIFY:
+                    onSuppServiceNotification((AsyncResult) msg.obj);
                     break;
 
                 case PHONE_STATE_CHANGED:
@@ -509,6 +517,10 @@ public class InCallScreen extends Activity
 
                 case REQUEST_UPDATE_TOUCH_UI:
                     updateInCallTouchUi();
+                    break;
+
+                case REQUEST_UPDATE_CALL_STATE:
+                    mCallCard.updateState(mCM);
                     break;
             }
         }
@@ -1134,6 +1146,7 @@ public class InCallScreen extends Activity
             mCM.registerForPostDialCharacter(mHandler, POST_ON_DIAL_CHARS, null);
             mCM.registerForSuppServiceFailed(mHandler, SUPP_SERVICE_FAILED, null);
             mCM.registerForCdmaOtaStatusChange(mHandler, EVENT_OTA_PROVISION_CHANGE, null);
+            mCM.registerForSuppServiceNotification(mHandler, SUPP_SERVICE_NOTIFY, null);
             mRegisteredForPhoneStates = true;
         }
     }
@@ -1147,6 +1160,7 @@ public class InCallScreen extends Activity
         mCM.unregisterForSuppServiceFailed(mHandler);
         mCM.unregisterForPostDialCharacter(mHandler);
         mCM.unregisterForCdmaOtaStatusChange(mHandler);
+        mCM.unregisterForSuppServiceNotification(mHandler);
         mRegisteredForPhoneStates = false;
     }
 
@@ -1755,6 +1769,18 @@ public class InCallScreen extends Activity
         mSuppServiceFailureDialog.show();
     }
 
+    private void onSuppServiceNotification(AsyncResult r) {
+        SuppServiceNotification notification = (SuppServiceNotification) r.result;
+
+        if (notification.notificationType == SuppServiceNotification.NOTIFICATION_TYPE_MT) {
+            if (notification.code == SuppServiceNotification.MT_CODE_ADDITIONAL_CALL_FORWARDED) {
+                if (!PhoneUtils.getCurrentCall(mPhone).isIdle()) {
+                    mNeedShowAdditionalCallForwardedDialog = true;
+                }
+            }
+        }
+    }
+
     /**
      * Something has changed in the phone's state.  Update the UI.
      */
@@ -1835,7 +1861,12 @@ public class InCallScreen extends Activity
         // Under certain call disconnected states, we want to alert the user
         // with a dialog instead of going through the normal disconnect
         // routine.
-        if (cause == Connection.DisconnectCause.CALL_BARRED) {
+        if (cause == Connection.DisconnectCause.INCOMING_MISSED) {
+            if (mNeedShowAdditionalCallForwardedDialog) {
+                showGenericErrorDialog(R.string.callUnanswered_forwarded, false);
+                mNeedShowAdditionalCallForwardedDialog = false;
+            }
+        } else if (cause == Connection.DisconnectCause.CALL_BARRED) {
             showGenericErrorDialog(R.string.callFailed_cb_enabled, false);
             return;
         } else if (cause == Connection.DisconnectCause.FDN_BLOCKED) {
@@ -4335,6 +4366,17 @@ public class InCallScreen extends Activity
      */
     public boolean isIncomingCallTouchUiEnabled() {
         return (mInCallTouchUi != null) && mInCallTouchUi.isIncomingCallTouchUiEnabled();
+    }
+
+    /**
+     * Posts a handler message telling the InCallScreen to update the
+     * call state UI (thus, the CallCard)
+     */
+    /* package */ void requestUpdateCallState() {
+        if (DBG) log("requestUpdateCallState()...");
+
+        mHandler.removeMessages(REQUEST_UPDATE_CALL_STATE);
+        mHandler.sendEmptyMessage(REQUEST_UPDATE_CALL_STATE);
     }
 
     /**

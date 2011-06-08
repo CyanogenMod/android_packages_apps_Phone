@@ -58,6 +58,7 @@
     <string name="callFailed_unobtainable_number" msgid="7886274717456712105">"Número no válido"</string>
     <string name="confCall" msgid="1904840547188336828">"Conferencia telefónica"</string>
     <string name="call_lost" msgid="317670617901479594">"La llamada se ha perdido."</string>
+    <string name="callUnanswered_forwarded">Llamada no respondida y reenviada</string>
     <string name="retry" msgid="8462986804300767852">"Reintentar"</string>
     <string name="call_lost_title" msgid="6696949678847938515">"Llamada perdida"</string>
     <string name="mmiStarted" msgid="6347869857061147003">"El código MMI se ha iniciado."</string>
@@ -437,12 +438,28 @@
     <string name="card_title_in_progress" msgid="8603765629781648862">"Llamada actual"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Conferencia telefónica"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Llamada entrante"</string>
+    <string name="card_title_waiting_call">Llamada en espera</string>
     <string name="card_title_cdma_call_waiting" msgid="4532445524811272644">"Llamada en espera de CDMA"</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"Llamada finalizada"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"En espera"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Colgando"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Llamada entrante"</string>
     <string name="card_title_my_phone_number" msgid="112428362494434191">"Mi número es <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>."</string>
+    <string name="call_notif_unconditionalCF">Desvío incondicional de llamada activo</string>
+    <string name="call_notif_conditionalCF">Desvío condicional de llamada activo</string>
+    <string name="call_notif_MOcall_forwarding">Reenvío de llamada saliente</string>
+    <string name="call_notif_calliswaiting">Llamada en espera</string>
+    <string name="call_notif_cugcall">Llamada de grupo cerrado</string>
+    <string name="call_notif_outgoing_barred">Excluídas llamadas salientes</string>
+    <string name="call_notif_incoming_barred">Excluídas llamadas entrantes</string>
+    <string name="call_notif_clir_suppression_rejected">Rechazadas llamadas ocultas</string>
+    <string name="call_notif_call_deflected">Llamada desviada</string>
+    <string name="call_notif_MTcall_forwarding">Llamada entrante desviada</string>
+    <string name="call_notif_multipartycall">Llamada múltiple</string>
+    <string name="call_notif_callonhold_released">Llamada recuperada</string>
+    <string name="call_notif_forwardcheckreceived">Llamada enviada</string>
+    <string name="call_notif_callconnectingect">Llamada conectándose por centralita</string>
+    <string name="call_notif_callconnectedect">Llamada conectada por centralita</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Llamada perdida"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Llamadas perdidas"</string>
     <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="NUM_MISSED_CALLS">%s</xliff:g> llamadas perdidas"</string>
@@ -508,6 +525,7 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"No se ha podido rechazar la llamada."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"No es posible finalizar las llamadas activas."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Llamada por Internet"</string>
+    <string name="incall_call_type_label_forwarded">Llamada desviada</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Llamada de emergencia"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Activando señal móvil\u2026"</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Área fuera de servicio; reintentando\u2026"</string>
@@ -704,6 +722,8 @@
     <string name="per_change_mobile_network_desc">Aplicaciones con este permisio pueden, en cualquier momento, cambiar entre datos 2G y 3G. 3G es rapido, consume mas bateria, y puede costarte mas dinero.</string>
     <string name="phone_number_label">Mi número de teléfono</string>
     <string name="phone_number_summary">Especifica el número de teléfono para este dispositivo</string>
+    <string name="show_ssn_label">Notificación de eventos</string>
+    <string name="show_ssn_summary">Mostrar la notificación de eventos de red relacionados con la gestión de llamadas</string>
     <string name="trackball_answer">Contestar con Trackball</string>
     <string name="trackball_answer_sum">Presiona el Trackball para contestar la llamada</string>
     <string-array name="trackballLabels">

@@ -58,6 +58,22 @@
     <string name="callFailed_unobtainable_number" msgid="7886274717456712105">"Ungültige Nummer"</string>
     <string name="confCall" msgid="1904840547188336828">"Telefonkonferenz"</string>
     <string name="call_lost" msgid="317670617901479594">"Anruf ist verloren gegangen."</string>
+    <string name="callUnanswered_forwarded">Anruf wurde nicht beantwortet und weitergeleitet</string>
+    <string name="call_notif_unconditionalCF">Dauerhafte Anrufweiterleitung ist aktiviert</string>
+    <string name="call_notif_conditionalCF">Bedingte Anrufweiterleitung ist aktiviert</string>
+    <string name="call_notif_MOcall_forwarding">Anruf wird weitergeleitet</string>
+    <string name="call_notif_calliswaiting">Gegenseite ist besetzt, Anruf wartet</string>
+    <string name="call_notif_cugcall">Anruf in geschlossener Benutzergruppe</string>
+    <string name="call_notif_outgoing_barred">Ausgehende Anrufe sind gesperrt</string>
+    <string name="call_notif_incoming_barred">Eingehende Anrufe sind bei der Gegenseite gesperrt</string>
+    <string name="call_notif_clir_suppression_rejected">Unterdrückung der ausgehenden Rufnummer wurde abgewiesen</string>
+    <string name="call_notif_call_deflected">Anruf wird von der Gegenseite weitergeleitet</string>
+    <string name="call_notif_MTcall_forwarding">Eingehender Anruf wird weitergeleitet</string>
+    <string name="call_notif_multipartycall">Telefonkonferenz</string>
+    <string name="call_notif_callonhold_released">Gehaltener Anruf wurde beendet</string>
+    <string name="call_notif_forwardcheckreceived">Anruf wurde weitergeleitet</string>
+    <string name="call_notif_callconnectingect">Anruf wird in Vermittlungsstelle verbunden</string>
+    <string name="call_notif_callconnectedect">Anruf wurde in Vermittlungsstelle verbunden</string>
     <string name="retry" msgid="8462986804300767852">"Wiederholen"</string>
     <string name="call_lost_title" msgid="6696949678847938515">"Anruf verloren"</string>
     <string name="mmiStarted" msgid="6347869857061147003">"MMI-Code gestartet"</string>
@@ -439,6 +455,7 @@
     <string name="card_title_in_progress" msgid="8603765629781648862">"Aktueller Anruf"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Telefonkonferenz"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Eingehender Anruf"</string>
+    <string name="card_title_waiting_call">Wartender Anruf</string>
     <string name="card_title_cdma_call_waiting" msgid="4532445524811272644">"CDMA-Anruf wartet"</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"Anruf beendet"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"Gehaltener Anruf"</string>
@@ -473,6 +490,7 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Anruf kann nicht abgelehnt werden."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Anrufe können nicht freigegeben werden."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Internetanruf"</string>
+    <string name="incall_call_type_label_forwarded">Weitergeleiteter Anruf"</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Notruf"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Mobilfunkverbindung wird aktiviert..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Gebiet ohne Netzabdeckung, erneuter Versuch..."</string>
@@ -716,6 +734,9 @@
 
     <string name="phone_number_label">Meine Nummer</string>
     <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
+
+    <string name="show_ssn_label">Ereignis-Benachrichtigung</string>
+    <string name="show_ssn_summary">Benachrichtigungen für verschiedene Anrufereignisse, z.B. zu Weiterleitungsstatus, anzeigen</string>
 
     <!-- TrackBall Answer and Hangup - Added by Nushio -->
     <string name="trackball_answer">Trackball-Annahme</string>
