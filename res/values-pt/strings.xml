@@ -772,4 +772,6 @@
     <string name="keepalive_interval_summary">Intervalo para manter SIP ativo em segundos</string>
     <string name="black_regex_title">Use coringas</string>
     <string name="black_regex_summary">Use . como um coringa e * para repetição. Ex: 123.* bloqueia números começando com 123 e .*123.* bloqueia números contendo 123</string>
+    <string name="sip_system_decide_entry">Automático</string>
+    <string name="sip_always_send_keepalive_entry">Sempre enviar</string>
 </resources>
