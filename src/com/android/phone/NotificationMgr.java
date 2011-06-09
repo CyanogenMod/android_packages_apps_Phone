@@ -118,6 +118,9 @@ private static CallFeaturesSetting mSettings;
     private static final int CLEAR_TOKEN = -3;
     private static final String CLEAR_MISSED_CALLS = "com.android.phone.clearmissedcalls";
 
+    // Was the screen on when the incoming call arrived?
+    private static boolean wasScreenOn = false;
+
     NotificationMgr(Context context) {
         mContext = context;
 mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(context.getApplicationContext()));
@@ -143,6 +146,11 @@ mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPr
 
     static NotificationMgr getDefault() {
         return sMe;
+    }
+
+    // state of screen when call arrived, set by CallNotifier
+    static void setScreenStateAtIncomingCall(boolean isScreenOn) {
+        wasScreenOn = isScreenOn;
     }
 
     /**
@@ -731,8 +739,12 @@ if (callDurationMsec > 0) {
             // (rather than just posting a notification to the status bar).
             // Setting fullScreenIntent will cause the InCallScreen to be
             // launched immediately.
-            if (DBG) log("- Setting fullScreenIntent: " + inCallPendingIntent);
-            notification.fullScreenIntent = inCallPendingIntent;
+            if (!mSettings.mBgIncall || !wasScreenOn) {
+                if (DBG) log("- Setting fullScreenIntent: " + inCallPendingIntent);
+                notification.fullScreenIntent = inCallPendingIntent;
+            } else {
+                notification.tickerText = expandedViewLine2;
+            }
 
             // Ugly hack alert:
             //

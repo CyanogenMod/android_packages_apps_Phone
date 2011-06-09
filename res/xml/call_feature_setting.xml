@@ -131,6 +131,11 @@
         android:title="@string/rotate_incall"
         android:persistent="false"
         android:summary="@string/rotate_incall_sum"/>
+    <CheckBoxPreference
+        android:key="bg_incall_screen"
+        android:title="@string/bg_incall"
+        android:persistent="false"
+        android:summary="@string/bg_incall_sum"/>
     <!-- Trackball Answer - Added by Nushio -->
     <ListPreference android:key="button_trackball_answer_timed"
         android:title="@string/trackball_answer" 

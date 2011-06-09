@@ -35,6 +35,7 @@ import android.media.ToneGenerator;
 import android.os.AsyncResult;
 import android.os.Handler;
 import android.os.Message;
+import android.os.PowerManager;
 import android.os.RemoteException;
 import android.os.SystemClock;
 import android.os.SystemProperties;
@@ -71,7 +72,8 @@ public class CallNotifier extends Handler
 
     // Maximum time we allow the CallerInfo query to run,
     // before giving up and falling back to the default ringtone.
-    private static final int RINGTONE_QUERY_WAIT_TIME = 500;  // msec
+    private static final int RINGTONE_QUERY_WAIT_TIME =
+            SystemProperties.getInt("ro.ringtone_query_wait_time", 500);  // msec
 
     // Timers related to CDMA Call Waiting
     // 1) For displaying Caller Info
@@ -181,6 +183,8 @@ public class CallNotifier extends Handler
     // Cached AudioManager
     private AudioManager mAudioManager;
 
+    private PowerManager mPowerManager;
+
     // add by cytown
     private CallFeaturesSetting mSettings;
     private static final String BLACKLIST = "blacklist";
@@ -194,6 +198,8 @@ public class CallNotifier extends Handler
         mCallLog = callLog;
 
         mAudioManager = (AudioManager) mApplication.getSystemService(Context.AUDIO_SERVICE);
+
+        mPowerManager = (PowerManager) mApplication.getSystemService(Context.POWER_SERVICE);
 
         registerForNotifications();
 
@@ -692,6 +698,9 @@ public class CallNotifier extends Handler
         //
         // TODO: also, we should probably *not* do any of this if the
         // screen is already on(!)
+
+        // let the NotificationMgr know the original state of screen
+        NotificationMgr.getDefault().setScreenStateAtIncomingCall(mPowerManager.isScreenOn());
 
         mApplication.preventScreenOn(true);
         mApplication.requestWakeState(PhoneApp.WakeState.FULL);

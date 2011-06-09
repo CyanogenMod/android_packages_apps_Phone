@@ -440,6 +440,10 @@ public class CallFeaturesSetting extends PreferenceActivity
     private CheckBoxPreference mRotateIncallScreen;
     static boolean mRotateIncall;
 
+    private static final String BG_INCALL_SCREEN = "bg_incall_screen";
+    private CheckBoxPreference mBgIncallScreen;
+    static boolean mBgIncall;
+
     private static final String BUTTON_BLACK_REGEX = "button_black_regex";
     private CheckBoxPreference mButtonBlackRegex;
     static boolean mBlackRegex;
@@ -1668,6 +1672,8 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
         mRotateIncallScreen = (CheckBoxPreference) prefSet.findPreference(ROTATE_INCALL_SCREEN);
         mRotateIncallScreen.setChecked(mRotateIncall);
+        mBgIncallScreen = (CheckBoxPreference) prefSet.findPreference(BG_INCALL_SCREEN);
+        mBgIncallScreen.setChecked(mBgIncall);
         mButtonAddBlack = (EditPhoneNumberPreference) prefSet.findPreference(BUTTON_ADD_BLACK);
         mButtonAddBlack.setParentActivity(this, ADD_BLACK_LIST_ID, this);
         mButtonAddBlack.setDialogOnClosedListener(this);
@@ -2105,6 +2111,7 @@ public class CallFeaturesSetting extends PreferenceActivity
                 PhoneUtils.isProximitySensorAvailable(PhoneApp.getInstance()));
         // Trackball Answer & Hangup
         mRotateIncall = pref.getBoolean(ROTATE_INCALL_SCREEN, false);
+        mBgIncall = pref.getBoolean(BG_INCALL_SCREEN, false);
         mTrackAnswer = pref.getString(BUTTON_TRACKBALL_ANSWER, "-1");
         mTrackHangup = pref.getString(BUTTON_TRACKBALL_HANGUP, "-1");
         mHideHoldButton = pref.getBoolean(BUTTON_HIDE_HOLD_BUTTON, false);
@@ -2256,6 +2263,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         outState.putBoolean(BUTTON_FORCE_TOUCH,
                 mButtonForceTouch == null || mButtonForceTouch.isChecked());
         outState.putBoolean(ROTATE_INCALL_SCREEN, mRotateIncallScreen.isChecked());
+        outState.putBoolean(BG_INCALL_SCREEN, mBgIncallScreen.isChecked());
         outState.putBoolean(BUTTON_BLACK_REGEX, mButtonBlackRegex.isChecked());
         // Trackball Answer & Hangup
         outState.putString(BUTTON_TRACKBALL_ANSWER, mTrackballAnswer.getValue());
