@@ -470,7 +470,7 @@ public class InCallTouchUi extends FrameLayout
         // This button is totally hidden (rather than just disabled)
         // when the operation isn't available.
         mHoldButtonContainer.setVisibility(
-                inCallControlState.canHold ? View.VISIBLE : View.GONE);
+                (inCallControlState.canHold && !mSettings.mHideHoldButton) ? View.VISIBLE : View.GONE);
         if (inCallControlState.canHold) {
             // The Hold button icon and label (either "Hold" or "Unhold")
             // depend on the current Hold state.

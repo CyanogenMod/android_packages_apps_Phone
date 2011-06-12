@@ -474,6 +474,11 @@ public class CallFeaturesSetting extends PreferenceActivity
     private ListPreference mTrackballHangup;
     static String mTrackHangup;
 
+    //Hide Hold button
+    private static final String BUTTON_HIDE_HOLD_BUTTON = "button_hide_hold_button";
+    private CheckBoxPreference mButtonHideHoldButton;
+    static boolean mHideHoldButton;
+
     private boolean mForeground;
 
     @Override
@@ -1691,6 +1696,8 @@ public class CallFeaturesSetting extends PreferenceActivity
                     .removePreference(mButtonAlwaysProximity);
         }
 //====
+        mButtonHideHoldButton = (CheckBoxPreference) prefSet.findPreference(BUTTON_HIDE_HOLD_BUTTON);
+        mButtonHideHoldButton.setChecked(mHideHoldButton);
     }
 
     private void createSipCallSettings() {
@@ -2100,6 +2107,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         mRotateIncall = pref.getBoolean(ROTATE_INCALL_SCREEN, false);
         mTrackAnswer = pref.getString(BUTTON_TRACKBALL_ANSWER, "-1");
         mTrackHangup = pref.getString(BUTTON_TRACKBALL_HANGUP, "-1");
+        mHideHoldButton = pref.getBoolean(BUTTON_HIDE_HOLD_BUTTON, false);
         mBlackRegex = pref.getBoolean(BUTTON_BLACK_REGEX, false);
 
         ObjectInputStream ois = null;
@@ -2252,6 +2260,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         // Trackball Answer & Hangup
         outState.putString(BUTTON_TRACKBALL_ANSWER, mTrackballAnswer.getValue());
         outState.putString(BUTTON_TRACKBALL_HANGUP, mTrackballHangup.getValue());
+        outState.putBoolean(BUTTON_HIDE_HOLD_BUTTON, mButtonHideHoldButton.isChecked());
         outState.commit();
         init(pref);
         super.onStop();

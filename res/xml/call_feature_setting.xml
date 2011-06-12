@@ -147,6 +147,13 @@
         android:dialogTitle="@string/trackball_hangup" 
         android:persistent="false" />
     <!-- end Trackball Answer -->
+    <!-- Hide Hold button - Added by leinardi -->
+    <CheckBoxPreference
+        android:key="button_hide_hold_button"
+        android:title="@string/hide_hold_button"
+        android:persistent="false"
+        android:summary="@string/hide_hold_button_sum"/>
+    <!-- end Hide Hold button -->
   <PreferenceScreen
         android:key="button_black_list"
         android:title="@string/black_list"

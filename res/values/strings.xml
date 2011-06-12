@@ -1526,6 +1526,10 @@
        <item>Double Tap to Hang up</item>    
     </string-array> 
 
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Hide Hold button</string>  
+    <string name="hide_hold_button_sum">Hide the button that puts the current call on hold.</string>
+
     <!-- Phone goggles -->
     <string name="toast_phone_goggles">You are not allowed to make phone calls at this time. Please try again later.</string>
     <string name="dialog_phone_goggles_title">Call blocked</string>
