@@ -693,11 +693,10 @@
     <string name="transport_title" msgid="8253139511847746640">"Tipo trasporto"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Invia keep-alive"</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"Invia messaggi keep-alive SIP"</string>
-    <!-- Text of the keepalive interval preference. [CHAR LIMIT=NONE] -->
+    <string name="sip_system_decide_entry">Automatico</string>
+    <string name="sip_always_send_keepalive_entry">Invia sempre</string>
     <string name="keepalive_interval_title">Intervallo keep-alive</string>
-    <!-- Text of the keepalive interval preference summary. [CHAR LIMIT=NONE] -->
     <string name="keepalive_interval_summary">Intervallo keep-alive SIP in secondi</string>
-    <!-- Text of the user agent preference. [CHAR LIMIT=NONE] -->
     <string name="user_agent_title">User-Agent SIP</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Registrazione automatica"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Registra automaticamente il profilo"</string>
