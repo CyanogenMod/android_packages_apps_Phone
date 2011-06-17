@@ -754,6 +754,8 @@
     <string name="set_force_touch_sum">Forza la visualizzazione della Touch UI senza individuare il sensore di prossimità</string>
     <string name="rotate_incall">Attiva rotazione automatica</string>
     <string name="rotate_incall_sum">Rotazione automatica per la schermata chiamata in arrivo.</string>
+    <string name="bg_incall">Chiamata in secondo piano</string>
+    <string name="bg_incall_sum">In caso di chiamata in arrivo con schermo acceso l\'interfaccia della chiamata rimarrà in secondo piano. Al suo posto verrà visualizzata una notifica.</string>
     <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
     <string name="per_change_mobile_network">Cambia rete (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
