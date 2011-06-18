@@ -774,4 +774,8 @@
     <string name="black_regex_summary">Use . como um coringa e * para repetição. Ex: 123.* bloqueia números começando com 123 e .*123.* bloqueia números contendo 123</string>
     <string name="sip_system_decide_entry">Automático</string>
     <string name="sip_always_send_keepalive_entry">Sempre enviar</string>
+    <string name="bg_incall">Chamada recebida em segundo plano</string>
+    <string name="bg_incall_sum">Mantem IU de chamada recebida em segundo plano quando a tela está ligada, mostra somente notificação e toca campainha.</string>
+    <string name="hide_hold_button_sum">Esconde o botão que põe a chamada atual em espera.</string>
+    <string name="hide_hold_button">Esconde botão de espera</string>
 </resources>
