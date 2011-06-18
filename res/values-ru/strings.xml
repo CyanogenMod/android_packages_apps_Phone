@@ -610,6 +610,8 @@
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Отклонить"</string>
     <string name="rotate_incall">Включить датчик вращения</string>
     <string name="rotate_incall_sum">Разрешить вращение экрана входящего звонка при изменении ориентации.</string>
+    <string name="bg_incall">Входящий вызов в фоне</string>
+    <string name="bg_incall_sum">Держит интерфейс входящего звонка в фоне, когда экран включен. Показывается только уведомление и проигрывается мелодия.</string>
     <string name="contactPhoto" msgid="4713193418046639466">"фотография контакта"</string>
     <string name="goPrivate" msgid="865837794424530980">"приватная конференция"</string>
     <string name="selectContact" msgid="781975788478987237">"выбрать контакт"</string>
@@ -754,6 +756,10 @@
        <item>Нажать для отбоя</item>
        <item>Двойное нажатие для отбоя</item>
     </string-array>
+
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Скрыть кнопку удержания</string>  
+    <string name="hide_hold_button_sum">Скрыть кнопку, которая ставит текущий вызов на удержание.</string>
 
     <!-- Phone goggles -->
     <string name="toast_phone_goggles">Сейчас вы не сможете позвонить по телефону. Пожалуйста, повторите попытку позже.</string>
