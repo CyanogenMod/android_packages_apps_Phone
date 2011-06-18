@@ -1227,6 +1227,8 @@
     <string name="set_force_touch_sum">忽略距離感應，強制在通話中顯示撥號鍵盤。</string>
     <string name="rotate_incall">啟用旋轉感應</string>
     <string name="rotate_incall_sum">允許來電螢幕隨著方向變動而旋轉</string>
+    <string name="bg_incall">背境來電</string>
+    <string name="bg_incall_sum">當螢幕已開啟、來電時不顯示通話介面，只顯示通知及播放鈴聲</string>
 
     <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
     <string name="contactPhoto" msgid="4713193418046639466">"聯絡人相片"</string>
@@ -1492,6 +1494,10 @@
        <item>按一下掛斷</item>
        <item>按兩下掛斷</item>
     </string-array>
+
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">隱藏保留按鈕</string>
+    <string name="hide_hold_button_sum">在通話中不顯示將目前通話保留的按鈕</string>
 
     <!-- Phone goggles -->
     <string name="toast_phone_goggles">現在不容許您撥出通話，請稍後再試一次。</string>
