@@ -166,9 +166,9 @@
     <string name="disable" msgid="7274240979164762320">"Вимкнути"</string>
     <string name="change_num" msgid="239476305819844391">"Оновити"</string>
     <string-array name="clir_display_values">
-        <item>Типове налаштування мережі</item>
-        <item>Приховати номер</item>
-        <item>Показати номер</item>
+      <item>Типове налаштування мережі</item>
+      <item>Приховати номер</item>
+      <item>Показати номер</item>
     </string-array>
     <string name="vm_save_number" msgid="4579969432544566719">"Збер. номер голос. пошти"</string>
     <string name="vm_changed" msgid="380744030726254139">"Номер голос. пошти змінено."</string>
@@ -598,6 +598,8 @@
     <string name="black_list">Чорний список</string>
     <string name="black_list_sum">Вхідний виклик, який занесений у чорний список, буде відхилений.</string>
     <string name="add_black">Додати номер телефону</string>
+    <string name="black_regex_title">Підставні символи</string>
+    <string name="black_regex_summary">Використовуйте “.” замість будь-якого символу та “*” для позначення повторення. Наприклад: “123.*” блокуватиме номери, що починаються з 123; “.*123.*” блокуватиме номери, що містять 123</string>
     <string name="remove_black">Видалити %s зі списку</string>
     <string name="turn_silence">Вимкнення мелодії перевертанням</string>
     <string name="turn_silence_sum">Вимкнення мелодії вхідного виклику перевертанням</string>
@@ -607,6 +609,8 @@
     <string name="set_force_touch_sum">Під час вхідного виклику сигнали датчика наближення будуть ігноруватися</string>
     <string name="rotate_incall">Датчик обертання</string>
     <string name="rotate_incall_sum">Обертання вікна вхідного виклику за зміни оріентації пристрою.</string>
+    <string name="bg_incall">Вхідні на задньому плані</string>
+    <string name="bg_incall_sum">За увімкненого екрана вікно вхідного виклику перебуватиме на задньому плані, натомість буде надіслане сповіщення та відтворюватиметься мелодія.</string>
     <string name="contactPhoto" msgid="4713193418046639466">"фото контакта"</string>
     <string name="goPrivate" msgid="865837794424530980">"конфіденц."</string>
     <string name="selectContact" msgid="781975788478987237">"вибрати контакт"</string>
@@ -674,6 +678,10 @@
     <string name="transport_title" msgid="8253139511847746640">"Тип транспортування"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Надсилання для підтримки з\'єднання"</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"Надсилати повідомлення SIP для підтримки з\'єднання"</string>
+    <string name="sip_system_decide_entry">Автоматично</string>
+    <string name="sip_always_send_keepalive_entry">Завжди надсилати</string>
+    <string name="keepalive_interval_title">Період надсилань</string>
+    <string name="keepalive_interval_summary">Період надсилань для підтримки SIP-з’єднання у секундах</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Автоматична реєстрація"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Автоматично реєструвати профіль"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Установити як основний обліковий запис"</string>
@@ -711,6 +719,8 @@
       <item>Покласти слухавку натисканням</item>
       <item>Покласти слухавку подвійним натисканням</item>
     </string-array>
+    <string name="hide_hold_button">Прих. кн. “Утримати”</string>
+    <string name="hide_hold_button_sum">Приховання кнопки, що дозволяє утримати поточний виклик.</string>
     <string name="toast_phone_goggles">Ви не можете здійснювати виклики у цей час. Будь ласка, спробуйте пізніше.</string>
     <string name="dialog_phone_goggles_title">Виклик блокований</string>
     <string name="dialog_phone_goggles_title_unlocked">Виклик авторизований</string>
