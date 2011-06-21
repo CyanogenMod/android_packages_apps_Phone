@@ -755,7 +755,7 @@
     <string name="rotate_incall">Attiva rotazione automatica</string>
     <string name="rotate_incall_sum">Rotazione automatica per la schermata chiamata in arrivo.</string>
     <string name="bg_incall">Chiamata in secondo piano</string>
-    <string name="bg_incall_sum">In caso di chiamata in arrivo con schermo acceso l\'interfaccia della chiamata rimarrà in secondo piano. Al suo posto verrà visualizzata una notifica.</string>
+    <string name="bg_incall_sum">Se lo schermo è acceso l\'interfaccia della chiamata in arrivo rimarrà in secondo piano e al suo posto verrà visualizzata una notifica.</string>
     <!--  Use this to describe the select contact button in EditPhoneNumberPreference; currently for screen readers through accessibility. -->
     <string name="per_change_mobile_network">Cambia rete (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
@@ -779,6 +779,9 @@
        <item>Premi per terminare</item>
        <item>Premi due volte per terminare</item>
     </string-array>
+
+    <string name="hide_hold_button">Nascondi tasto In attesa</string>
+    <string name="hide_hold_button_sum">Nascondi il tasto che mette in attesa la chiamata in corso.</string>
 
     <!-- Phone goggles -->
     <string name="toast_phone_goggles">Non ti è permesso telefonare a quest\'ora. Riprova più tardi.</string>
