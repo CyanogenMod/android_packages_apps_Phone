@@ -774,6 +774,11 @@
     <string name="keepalive_interval_title">キープアライブの間隔</string>
     <string name="keepalive_interval_summary">SIPキープアライブの間隔(秒)</string>
     <string name="user_agent_title">SIPユーザエージェント</string>
+    <string name="bg_incall">バックグラウンドで着信</string>
+    <string name="bg_incall_sum">スクリーンONのとき着信UIをバックグラウンドで維持し、通知と着信を再生するのみにする</string>
+    <string name="hide_hold_button">保留ボタンを隠す</string>  
+    <string name="hide_hold_button_sum">現在の通話を保留にするボタンを隠す</string>
+
 
     <!-- Phone Goggles -->
     <string name="toast_phone_goggles">今の時間に発信することは許可されていません。あとで再度お試しください。</string>
