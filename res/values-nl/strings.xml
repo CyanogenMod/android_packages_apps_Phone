@@ -223,7 +223,12 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Verbinding maken met gegevensservices tijdens roaming"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"De gegevensverbinding is verbroken, omdat u uw thuisnetwerk heeft verlaten terwijl gegevensroaming was uitgeschakeld."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Gegevensroaming toestaan? Er kunnen hoge roamingkosten in rekening worden gebracht."</string>
-    <string name="gsm_umts_options" msgid="6538311689850981686">"GSM-/UMTS-opties"</string>
+	
+	<string name="mvno_roaming">"Nationale data roaming"</string>
+    <string name="mvno_roaming_summary">"Deze optie geeft toestemming om een andere netwerk provider te kiezen in je eigen land."</string>
+    <string name="mvno_roaming_warning">Data roaming inschakelen in het zelfde land als je provider? Sommige virtuele netwerk providers werken niet zonder deze instellingen. Schakel deze optie niet in als je provider geld vraagt voor roaming binnen je eigen land. De instellingen worden pas actief na het herstarten van het toestel of het aan en vervolgens weer uitzetten van de vliegtuigmodus."</string>
+    
+	<string name="gsm_umts_options" msgid="6538311689850981686">"GSM-/UMTS-opties"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA-opties"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Gegevensgebruik"</string>
     <string name="throttle_settings_title" msgid="2761975408383706589">"Gegevensbeleid van provider"</string>
@@ -692,4 +697,73 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Controleer uw internetverbinding voordat u belt via internet"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Voor internetoproepen moet u verbinding hebben met een Wi-Fi-netwerk (gebruik \'Draadloze en netwerkinstellingen\')"</string>
     <string name="no_voip" msgid="8901474054537199865">"Bellen via internet niet ondersteund"</string>
+    <string name="slide_to_answer_hint" msgid="4901042355463593903">"Beantwoorden"</string>
+    <string name="slide_to_decline_hint" msgid="4484576372463030324">"Weigeren"</string>
+    <string name="notification_ongoing_calling_format">Belt (<xliff:g id="duration">%s</xliff:g>)</string>
+
+    <string name="advanced_setting">Geavanceerde instellingen V.30.1</string>
+    <string name="vibrate_outgoing">Trillen bij vibreren</string>
+    <string name="vibrate_outgoing_sum">Trillen wanneer oproep aangenomen wordt.</string>
+    <string name="vibrate_45">Tril elke 45 seconden</string>
+    <string name="vibrate_45_sum">Tril elke 45 seconden bij uitgaande oproepen.</string>
+    <string name="vibrate_hangup">Trillen bij ophangen</string>
+    <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een oproep.</string>
+    <string name="screen_awake">Beeldscherm aanhouden</string>
+    <string name="screen_awake_sum">Beeldscherm blijft langer dan normaal aan tijdens een gesprek.</string>
+    <string name="always_proximity">Gebruik proximity altijd</string>
+    <string name="always_proximity_sum">Inschakelen om de proximity sensor het scherm te laten blokkeren, ook wanneer het toestel horizontaal ligt.</string>
+    <string name="led_notify_call">LED notificaties</string>
+    <string name="led_notify_call_sum">LED licht op bij wanneer er een gemist gesprek is.</string>
+    <string name="led_show_organ">Organisatie weergeven</string>
+    <string name="led_show_organ_sum">Organisatie wordt weergegeven op het scherm tijdens een gesprek</string>
+    <string name="vibrate_call_waiting">Trillen wachten gesprek</string>
+    <string name="vibrate_call_waiting_sum">Trillen bij wachten op een gesprek.</string>
+    <string name="return_home">Altijd terug naar gesprekslijst</string>
+    <string name="return_home_sum">Na het ophangen altijd de gesprekkenlijst laten zien.</string>
+    <string name="menu_addBlackList">Toevoegen aan zwarte lijst</string>
+    <string name="black_list">Zwarte iljst</string>
+    <string name="black_list_sum">Inkomend gesprek uit zwarte lijst wordt opgehangen.</string>
+    <string name="add_black">Nummer toevoegen</string>
+    <string name="remove_black">%s van lijst verwijderen</string>
+    <string name="turn_silence">Stilte</string>
+    <string name="turn_silence_sum">Terugschakelen naar stilte modus</string>
+    <string name="left_hand">Linkshandig</string>
+    <string name="left_hand_sum">Toestel als linkshandige gebruiken (herstart vereist).</string>
+    <string name="set_force_touch">Aanraak UI in gesprek</string>
+    <string name="set_force_touch_sum">Aanraak UI in gesprek zonder gebruik te maken van proximity sensor.</string>
+
+    <string name="per_change_mobile_network">Verander netwerk (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Applicatie met deze toegang kan op elk moment wisselen tussen 2G en 3G. 3G is sneller, verbruikt meer stroom en kan duurder zijn.</string>
+
+    <string name="phone_number_label">Mijn nummer</string>
+    <string name="phone_number_summary">Het telefoonnummer voor dit apparaat instellen</string>
+
+    <!-- TrackBall Answer and Hangup -->
+    <string name="trackball_answer">Trackball opnemen</string>
+    <string name="trackball_answer_sum">Druk op de trackball om het gesprek op te nemen.</string>
+    <string-array name="trackballLabels">
+        <item>Uitgeschakeld</item>
+       <item>Één keer drukken</item>
+       <item>Dubbel drukken</item>
+    </string-array>
+    <string name="trackball_hangup">Trackball ophangen</string>
+    <string name="trackball_hangup_sum">Druk op de trackball om het gesprek te beëndigen.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Uitgeschakeld</item>
+       <item>Één keer drukken</item>
+       <item>Dubbel drukken</item>
+    </string-array>
+    <!-- End TrackBall Answer and Hangup  -->
+
+    <string name="voicemail_notification_title">Voicemail notificaties</string>
+    <string name="voicemail_notification_summary">Notificaties voor nieuwe voicemails activeren.</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Je bent op dit moment niet gemachtigd om te bellen, probeer het later opnieuw.</string>
+    <string name="dialog_phone_goggles_title">Oproep geblokkeerd</string>
+    <string name="dialog_phone_goggles_title_unlocked">Oproep toegestaan</string>
+    <string name="dialog_phone_goggles_content">Een gesprek starten is op dit moment mogelijk niet verstandig, weet je zeker dat je door wilt gaan?</string>
+    <string name="dialog_phone_goggles_unauthorized">Een gesprek starten is op dit moment mogelijk niet verstandig.</string>
+    <string name="dialog_phone_goggles_ok">Oproep</string>
+    <string name="dialog_phone_goggles_cancel">Annuleren</string>
 </resources>
