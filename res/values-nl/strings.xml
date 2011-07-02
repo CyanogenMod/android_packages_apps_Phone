@@ -611,8 +611,6 @@
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Sleep naar rechts om op te nemen en"\n"actieve oproep in de wacht te zetten"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Sleep naar rechts om op te nemen en"\n"actieve oproep te beëindigen"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Sleep naar rechts om op te nemen en"\n"oproep in de wacht te beëindigen"</string>
-    <string name="slide_to_answer_hint" msgid="4901042355463593903">"Beantw."</string>
-    <string name="slide_to_decline_hint" msgid="4484576372463030324">"Weigeren"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"contactfoto"</string>
     <string name="goPrivate" msgid="865837794424530980">"privé"</string>
     <string name="selectContact" msgid="781975788478987237">"contact selecteren"</string>
