@@ -411,7 +411,7 @@ mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPr
     private static void configureLedNotification(Notification note) {
         if (mSettings.mLedNotify) {
             note.flags |= Notification.FLAG_SHOW_LIGHTS;
-            note.flags |= Notification.DEFAULT_LIGHTS;
+            note.defaults |= Notification.DEFAULT_LIGHTS;
         }
     }
 
