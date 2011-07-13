@@ -3032,6 +3032,8 @@ public class InCallScreen extends Activity
         int id = view.getId();
         if (id == R.id.endButton) {
             Connection c = PhoneUtils.getConnection(mPhone, PhoneUtils.getCurrentCall(mPhone));
+            if (c == null)
+                return false; // c can be null from getConnection(), so don't crash below
             String number = c.getAddress();
             // Confirm for addBlack
             new AlertDialog.Builder(this)
