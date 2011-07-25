@@ -778,4 +778,10 @@
     <string name="bg_incall_sum">Mantem IU de chamada recebida em segundo plano quando a tela está ligada, mostra somente notificação e toca campainha.</string>
     <string name="hide_hold_button_sum">Esconde o botão que põe a chamada atual em espera.</string>
     <string name="hide_hold_button">Esconde botão de espera</string>
+    <string name="voice_quality_preferences_title">Qualidade de voz</string>
+    <string name="voice_quality_summary">Definir um perfil de voz para melhorar a sua experiência de audição</string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Limpo</string>
+    <string name="voice_quality_entry_crisp">Nítido</string>
+    <string name="voice_quality_entry_bright">Claro</string>
 </resources>
