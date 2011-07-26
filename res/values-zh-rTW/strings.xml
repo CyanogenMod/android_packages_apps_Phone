@@ -122,7 +122,7 @@
     <!-- In-call menu item labels -->
     <!-- Regular in-call menu items: -->
     <!-- In-call menu: Label for "speakerphone" menu item -->
-    <string name="menu_speaker" msgid="6069700688651964705">"喇叭"</string>
+    <string name="menu_speaker" msgid="6069700688651964705">"擴音"</string>
     <!-- In-call menu: Label for "bluetooth" menu item -->
     <string name="menu_bluetooth" msgid="8842523654717305695">"藍牙"</string>
     <!-- In-call menu: Label for "mute" menu item -->
@@ -992,7 +992,7 @@
     <!-- Text for the onscreen "Hide Dialpad" button -->
     <string name="onscreenHideDialpadText" msgid="2572388822571686252">"隱藏"</string>
     <!-- Text for the onscreen "Speaker" button -->
-    <string name="onscreenSpeakerText" msgid="9013795366801657948">"喇叭"</string>
+    <string name="onscreenSpeakerText" msgid="9013795366801657948">"擴音"</string>
     <!-- Text for the onscreen "Mute" button -->
     <string name="onscreenMuteText" msgid="5011369181754261374">"靜音"</string>
     <!-- Text for the onscreen "Bluetooth" button -->
@@ -1080,7 +1080,7 @@
     <!-- Button label within the OTA listen screen -->
     <string name="ota_dialpad" msgid="3530900997110658409">"小鍵盤"</string>
     <!-- Button label within the OTA listen screen -->
-    <string name="ota_speaker" msgid="6904589278542719647">"喇叭"</string>
+    <string name="ota_speaker" msgid="6904589278542719647">"擴音"</string>
     <!-- String to be displayed on OTA listen screen once user has selected the
          correct option to begin provisioning -->
     <string name="ota_progress" msgid="4644512049143969504">"手機正在進行程式化設定，請稍候。"</string>
