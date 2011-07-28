@@ -239,4 +239,13 @@
             android:targetPackage="com.android.phone"
             android:targetClass="com.android.phone.CdmaCallOptions"/>
     </PreferenceScreen>
+
+    <ListPreference
+        android:key="button_voice_quality_key"
+        android:title="@string/voice_quality_preferences_title"
+        android:summary="@string/voice_quality_summary"
+        android:entries="@array/voice_quality_entries"
+        android:entryValues="@array/voice_quality_values"
+        android:dialogTitle="@string/voice_quality_preferences_title"/>
+
 </PreferenceScreen>

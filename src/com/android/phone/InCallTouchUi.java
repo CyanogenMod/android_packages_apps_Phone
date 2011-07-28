@@ -136,7 +136,7 @@ public class InCallTouchUi extends FrameLayout
         mAllowInCallTouchUi = getResources().getBoolean(R.bool.allow_in_call_touch_ui);
         if (DBG) log("- regular in-call touch UI: "
                      + (mAllowInCallTouchUi ? "ENABLED" : "DISABLED"));
-        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
+        mSettings = CallFeaturesSetting.getInstance(context);
     }
 
     void setInCallScreenInstance(InCallScreen inCallScreen) {

@@ -1540,4 +1540,14 @@
     <string name="dialog_phone_goggles_unauthorized">Making a phone call may not be wise at this time.</string>
     <string name="dialog_phone_goggles_ok">Call</string>
     <string name="dialog_phone_goggles_cancel">Cancel</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Voice quality</string>
+    <string name="voice_quality_summary">Set a voice profile to enhance your listening experience</string>
+    <!-- Do not remove those, they're used from overlays -->
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Clear</string>
+    <string name="voice_quality_entry_crisp">Crisp</string>
+    <string name="voice_quality_entry_bright">Bright</string>
+
 </resources>

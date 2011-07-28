@@ -139,7 +139,7 @@ public class CallCard extends FrameLayout
         mApplication = PhoneApp.getInstance();
 
         // add by cytown
-        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(context));
+        mSettings = CallFeaturesSetting.getInstance(context);
 
         mCallTime = new CallTime(this);
 

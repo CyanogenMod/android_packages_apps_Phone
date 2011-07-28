@@ -41,7 +41,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
 import android.os.SystemProperties;
-import android.preference.PreferenceManager;
 import android.provider.Settings;
 import android.telephony.PhoneNumberUtils;
 import android.telephony.ServiceState;
@@ -614,7 +613,7 @@ public class InCallScreen extends Activity
             mInCallInitialStatus = InCallInitStatus.SUCCESS;
         }
 
-        mSettings = CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(this));
+        mSettings = CallFeaturesSetting.getInstance(this);
         mForceTouch = mSettings.mForceTouch;
         // The "touch lock overlay" feature is used only on devices that
         // *don't* use a proximity sensor to turn the screen off while in-call.
@@ -1947,7 +1946,7 @@ public class InCallScreen extends Activity
 
         // Keep track of whether this call was user-initiated or not.
         // (This affects where we take the user next; see delayedCleanupAfterDisconnect().)
-        mShowCallLogAfterDisconnect = !c.isIncoming() && CallFeaturesSetting.getInstance(android.preference.PreferenceManager.getDefaultSharedPreferences(this)).mReturnHome;
+        mShowCallLogAfterDisconnect = !c.isIncoming() && CallFeaturesSetting.getInstance(this).mReturnHome;
 
         // We bail out immediately (and *don't* display the "call ended"
         // state at all) in a couple of cases, including those where we
@@ -5307,7 +5306,7 @@ public class InCallScreen extends Activity
 
    @Override
    public boolean onTrackballEvent(MotionEvent event) {
-     mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(this));
+     mSettings = CallFeaturesSetting.getInstance(this);
      long realTime = android.os.SystemClock.elapsedRealtime();
      long downTime = event.getDownTime();
      if(mCM.hasActiveRingingCall() && !mSettings.mTrackAnswer.equals("-1")){ //Call is ringing and Trackball Answer is on

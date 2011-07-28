@@ -774,4 +774,8 @@
     <string name="mvno_roaming_summary">Использовать другого поставщика услуг в вашей стране.</string>
     <string name="mvno_roaming_warning">Включить роуминг данных в пределах одной страны? Некоторые виртуальные операторы связи требуют этот параметр. Не включайте эту опцию, если оператор взимает плату в роуминге! Этот параметр вступит в силу только после перезагрузки телефона или включения-выключения Режима Полета.</string>
 
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Настройка CrystalTalk</string>
+    <string name="voice_quality_summary">Аудио-профили входящего вызова</string>
+
 </resources>

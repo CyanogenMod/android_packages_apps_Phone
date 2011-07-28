@@ -52,5 +52,16 @@
         <item>@string/sip_system_decide_entry</item>
         <item>@string/sip_always_send_keepalive_entry</item>
     </string-array>
+
+    <string-array translatable="false" name="voice_quality_entries">
+        <!-- Overlay appropriately, using string constants as above. E.g.:
+        <item>@string/voice_quality_normal</item>
+        <item>@string/voice_quality_clear</item>
+        -->
+    </string-array>
+
+    <string-array translatable="false" name="voice_quality_values">
+        <!-- Overlay appropriately -->
+    </string-array>
 </resources>
 

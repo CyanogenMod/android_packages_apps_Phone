@@ -789,4 +789,13 @@
     <string name="dialog_phone_goggles_unauthorized">Jetzt einen Anruf zu tätigen wäre nicht sehr schlau!</string>
     <string name="dialog_phone_goggles_ok">Anrufen</string>
     <string name="dialog_phone_goggles_cancel">Abbrechen</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Sprachqualität</string>
+    <string name="voice_quality_summary">Ein Sprachprofil zur Verbesserung der Hörqualität festlegen</string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Klar</string>
+    <string name="voice_quality_entry_crisp">Sehr klar</string>
+    <string name="voice_quality_entry_bright">Hell</string>
+
 </resources>

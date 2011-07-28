@@ -30,6 +30,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.media.AudioManager;
+import android.media.AudioSystem;
 import android.net.Uri;
 import android.os.AsyncResult;
 import android.os.Binder;
@@ -228,6 +229,8 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     private boolean mTtyEnabled;
     // Current TTY operating mode selected by user
     private int mPreferredTtyMode = Phone.TTY_MODE_OFF;
+
+    private String mVoiceQualityParam;
 
     // add by cytown
     private static final String ACTION_VIBRATE_45 = "com.android.phone.PhoneApp.ACTION_VIBRATE_45";
@@ -530,6 +533,8 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
             // Read platform settings for TTY feature
             mTtyEnabled = getResources().getBoolean(R.bool.tty_enabled);
 
+            mVoiceQualityParam = getResources().getString(R.string.voice_quality_param);
+
             // Register for misc other intent broadcasts.
             IntentFilter intentFilter =
                     new IntentFilter(Intent.ACTION_AIRPLANE_MODE_CHANGED);
@@ -591,7 +596,7 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
         mShouldRestoreMuteOnInCallResume = false;
 
         // add by cytown
-        mSettings = CallFeaturesSetting.getInstance(PreferenceManager.getDefaultSharedPreferences(this));
+        mSettings = CallFeaturesSetting.getInstance(this);
         if (mVibrator == null) {
             mVibrator = (Vibrator) this.getSystemService(Context.VIBRATOR_SERVICE);
             mAM = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
@@ -1261,6 +1266,10 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
      */
     /* package */ void updatePhoneState(Phone.State state) {
         if (state != mLastPhoneState) {
+            String voiceQualSetting = mSettings.getVoiceQuality();
+            if (mVoiceQualityParam != null && voiceQualSetting != null) {
+                AudioSystem.setParameters(mVoiceQualityParam + "=" + voiceQualSetting);
+            }
             mLastPhoneState = state;
             updateProximitySensorMode(state);
             if (mAccelerometerListener != null) {

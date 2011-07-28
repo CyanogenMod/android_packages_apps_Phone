@@ -770,4 +770,13 @@
     <string name="dialog_phone_goggles_unauthorized">Effectuer un appel n\'est pas recommandé en ce moment</string>
     <string name="dialog_phone_goggles_ok">Appeler</string>
     <string name="dialog_phone_goggles_cancel">Annuler</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Qualité d\'écoute</string>
+    <string name="voice_quality_summary">Utiliser un filtre audio pour améliorer la qualité d\'écoute</string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Claire</string>
+    <string name="voice_quality_entry_crisp">Nette</string>
+    <string name="voice_quality_entry_bright">Vive</string>
+
 </resources>

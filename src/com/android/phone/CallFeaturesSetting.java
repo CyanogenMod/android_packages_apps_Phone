@@ -132,6 +132,8 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_VOICEMAIL_PROVIDER_KEY = "button_voicemail_provider_key";
     private static final String BUTTON_VOICEMAIL_SETTING_KEY = "button_voicemail_setting_key";
     private static final String BUTTON_FDN_KEY   = "button_fdn_key";
+    private static final String BUTTON_VOICE_QUALITY_KEY = "button_voice_quality_key";
+    private static String mVoiceQuality;
 
     /**
      * @hide
@@ -215,6 +217,7 @@ public class CallFeaturesSetting extends PreferenceActivity
     private ListPreference mButtonTTY;
     private ListPreference mButtonSipCallOptions;
     private ListPreference mVoicemailProviders;
+    private ListPreference mButtonVoiceQuality;
     private PreferenceScreen mVoicemailSettings;
     private SipSharedPreferences mSipSharedPreferences;
 
@@ -508,6 +511,8 @@ public class CallFeaturesSetting extends PreferenceActivity
     public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
         if (preference == mSubMenuVoicemailSettings) {
             return true;
+        } else if (preference == mButtonVoiceQuality) {
+            return true;
         } else if (preference == mButtonDTMF) {
             return true;
         } else if (preference == mButtonTTY) {
@@ -551,6 +556,8 @@ public class CallFeaturesSetting extends PreferenceActivity
                     Settings.System.DTMF_TONE_TYPE_WHEN_DIALING, index);
         } else if (preference == mButtonTTY) {
             handleTTYChange(preference, objValue);
+        } else if (preference == mButtonVoiceQuality) {
+            mVoiceQuality = (String) objValue;
         } else if (preference == mButtonNotifications) {
             handleNotificationChange(objValue);
         } else if (preference == mVoicemailProviders) {
@@ -591,6 +598,10 @@ public class CallFeaturesSetting extends PreferenceActivity
         }
         // always let the preference setting proceed.
         return true;
+    }
+
+    public String getVoiceQuality() {
+        return mVoiceQuality;
     }
 
     private void handleNotificationChange(Object objValue) {
@@ -1539,6 +1550,17 @@ public class CallFeaturesSetting extends PreferenceActivity
         mButtonHAC = (CheckBoxPreference) findPreference(BUTTON_HAC_KEY);
         mButtonTTY = (ListPreference) findPreference(BUTTON_TTY_KEY);
         mVoicemailProviders = (ListPreference) findPreference(BUTTON_VOICEMAIL_PROVIDER_KEY);
+        mButtonVoiceQuality = (ListPreference) findPreference(BUTTON_VOICE_QUALITY_KEY);
+
+        if (mButtonVoiceQuality != null) {
+            if (TextUtils.isEmpty(getResources().getString(R.string.voice_quality_param))) {
+                prefSet.removePreference(mButtonVoiceQuality);
+                mButtonVoiceQuality = null;
+            } else {
+                mButtonVoiceQuality.setOnPreferenceChangeListener(this);
+            }
+        }
+
         if (mVoicemailProviders != null) {
             mVoicemailProviders.setOnPreferenceChangeListener(this);
             mVoicemailSettings = (PreferenceScreen)findPreference(BUTTON_VOICEMAIL_SETTING_KEY);
@@ -1640,7 +1662,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         createSipCallSettings();
 
         // add by cytown for vibrate
-        init(PreferenceManager.getDefaultSharedPreferences(getApplicationContext()));
+        init(getApplicationContext(), PreferenceManager.getDefaultSharedPreferences(getApplicationContext()));
         mButtonVibOutgoing = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_OUTGOING);
         mButtonVibOutgoing.setChecked(mVibOutgoing);
         mButtonVib45 = (CheckBoxPreference) prefSet.findPreference(BUTTON_VIBRATE_45);
@@ -1688,6 +1710,10 @@ public class CallFeaturesSetting extends PreferenceActivity
         mTrackballAnswer.setValue(mTrackAnswer);
         mTrackballHangup = (ListPreference) prefSet.findPreference(BUTTON_TRACKBALL_HANGUP);
         mTrackballHangup.setValue(mTrackHangup);
+
+        if (mButtonVoiceQuality != null) {
+            mButtonVoiceQuality.setValue(mVoiceQuality);
+        }
 
         // No reason to show Trackball Answer & Hangup if it doesn't have a
         // Trackball.
@@ -2089,15 +2115,16 @@ public class CallFeaturesSetting extends PreferenceActivity
     }
 
     // add by cytown
-    public static CallFeaturesSetting getInstance(SharedPreferences pref) {
+    public static CallFeaturesSetting getInstance(Context context) {
         if (mInstance == null) {
+            SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
             mInstance = new CallFeaturesSetting();
-            mInstance.init(pref);
+            mInstance.init(context, pref);
         }
         return mInstance;
     }
 
-    private void init(SharedPreferences pref) {
+    private void init(Context context, SharedPreferences pref) {
         mVibOutgoing = pref.getBoolean(BUTTON_VIBRATE_OUTGOING, true);
         mVib45 = pref.getBoolean(BUTTON_VIBRATE_45, false);
         mVibHangup = pref.getBoolean(BUTTON_VIBRATE_HANGUP, true);
@@ -2118,7 +2145,18 @@ public class CallFeaturesSetting extends PreferenceActivity
         mTrackHangup = pref.getString(BUTTON_TRACKBALL_HANGUP, "-1");
         mHideHoldButton = pref.getBoolean(BUTTON_HIDE_HOLD_BUTTON, false);
         mBlackRegex = pref.getBoolean(BUTTON_BLACK_REGEX, false);
-
+        if (TextUtils.isEmpty(context.getResources().getString(R.string.voice_quality_param))) {
+            mVoiceQuality = null;
+        } else {
+            mVoiceQuality = pref.getString(BUTTON_VOICE_QUALITY_KEY, null);
+            if (mVoiceQuality == null) {
+                /* use first value of entry list */
+                String[] values = context.getResources().getStringArray(R.array.voice_quality_values);
+                if (values.length > 0) {
+                    mVoiceQuality = values[0];
+                }
+            }
+        }
         ObjectInputStream ois = null;
         boolean correctVer = false;
         try {
@@ -2246,10 +2284,9 @@ public class CallFeaturesSetting extends PreferenceActivity
 
     @Override
     protected void onStop() {
-
+        Context context = getApplicationContext();
         // System.out.println("save please!");
-        SharedPreferences pref = PreferenceManager
-                .getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(context);
         Editor outState = pref.edit();
         outState.putBoolean(BUTTON_VIBRATE_OUTGOING, mButtonVibOutgoing.isChecked());
         outState.putBoolean(BUTTON_VIBRATE_45, mButtonVib45.isChecked());
@@ -2271,8 +2308,11 @@ public class CallFeaturesSetting extends PreferenceActivity
         outState.putString(BUTTON_TRACKBALL_ANSWER, mTrackballAnswer.getValue());
         outState.putString(BUTTON_TRACKBALL_HANGUP, mTrackballHangup.getValue());
         outState.putBoolean(BUTTON_HIDE_HOLD_BUTTON, mButtonHideHoldButton.isChecked());
+        if (mButtonVoiceQuality != null) {
+            outState.putString(BUTTON_VOICE_QUALITY_KEY, mButtonVoiceQuality.getValue());
+        }
         outState.commit();
-        init(pref);
+        init(context, pref);
         super.onStop();
     }
 
