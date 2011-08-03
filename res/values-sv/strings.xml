@@ -638,6 +638,8 @@
     <string name="black_list">Svartlista</string>
     <string name="black_list_sum">Inkommande samtal i svartlistan kommer avvisas.</string>
     <string name="add_black">Lägg till telefonnummer</string>
+    <string name="black_regex_title">Använd jokertecken</string>
+    <string name="black_regex_summary">Använd . som ett jokertecken och * för repetition. T. ex. 123.* blockerar nummer som börjar med 123 och .*123.* blockerar nummer som innehåller 123</string>
     <string name="remove_black">Ta bort %s från listan</string>
     <string name="turn_silence">Tysta med vändning</string>
     <string name="turn_silence_sum">Vänd telefonen för att tysta ringning</string>
@@ -645,6 +647,10 @@
     <string name="left_hand_sum">Använd vänster hand för att hålla i telefonen, behöver omstart för att börja gälla.</string>
     <string name="set_force_touch">Pekgränssnitt under samtal</string>
     <string name="set_force_touch_sum">Tvinga pekgränssnitt under samtal utan närhetssensor</string>
+    <string name="rotate_incall">Aktivera sensorrotation</string>
+    <string name="rotate_incall_sum">Tillåt skärmen med inkommande samtal att rotera vid orienteringsbyte.</string>
+    <string name="bg_incall">Inkommande samtal i bakgrunden</string>
+    <string name="bg_incall_sum">Håll gränssnittet för inkommande samtal i bakgrunden när skärmen är på - visa endast avisering och spela upp ringsignalen.</string>
     
     <string name="contactPhoto" msgid="4713193418046639466">"kontaktbild"</string>
     <string name="goPrivate" msgid="865837794424530980">"gör privat"</string>
@@ -715,6 +721,10 @@
     <string name="transport_title" msgid="8253139511847746640">"Transporttyp"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Skicka \"behåll aktiv\""</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"Skicka SIP-meddelanden om \"behåll aktiv\""</string>
+    <string name="sip_system_decide_entry">Automatisk</string>
+    <string name="sip_always_send_keepalive_entry">Skicka alltid</string>
+    <string name="keepalive_interval_title">Keep-alive-intervall</string>
+    <string name="keepalive_interval_summary">SIP keep-alive-intervall i sekunder</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Automatisk registrering"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Registrera profilen automatiskt"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Använd som primärt konto"</string>
@@ -756,6 +766,10 @@
        <item>Klicka för att lägga på</item>
        <item>Dubbelklicka för att lägga på</item>    
     </string-array> 
+    
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Göm Parkera-knappen</string>  
+    <string name="hide_hold_button_sum">Göm knappen som parkerar pågående samtal.</string>
 
     <!-- Phone goggles -->
     <string name="toast_phone_goggles">Du är inte tillåten att ringa samtal just nu. Försök igen senare.</string>
