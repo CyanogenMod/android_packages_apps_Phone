@@ -701,25 +701,25 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Pour passer un appel Internet, vérifiez tout d\'abord la connexion Internet."</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Les appels Internet exigent une connexion Wi-Fi (celle-ci peut être activée sous Paramètres &gt; Sans fil et réseaux)"</string>
     <string name="no_voip" msgid="8901474054537199865">"Appels Internet non pris en charge"</string>
-    <string name="advanced_setting">Paramètres avancés v.30.1</string>
+    <string name="advanced_setting">Paramètres avancés V.30.1</string>
     <string name="vibrate_outgoing">Vibrer sur réponse</string>
-    <string name="vibrate_outgoing_sum">Vibrer quand appel est répondu</string>
-    <string name="vibrate_45">Vibrer toutes les 45 secondes</string>
-    <string name="vibrate_45_sum">Vibrer chaque 45 secondes pendant un appel sortant</string>
-    <string name="vibrate_hangup">Vibrer sur fin d\'appel</string>
-    <string name="vibrate_hangup_sum">Vibrer lorsqu\'un appel se termine</string>
+    <string name="vibrate_outgoing_sum">Vibration quand la communication est établie</string>
+    <string name="vibrate_45">Vibrer régulièrement</string>
+    <string name="vibrate_45_sum">Vibration toutes les 45 secondes pendant un appel sortant</string>
+    <string name="vibrate_hangup">Vibrer en fin d\'appel</string>
+    <string name="vibrate_hangup_sum">Vibration lorsque l\' appel est terminé</string>
     <string name="screen_awake">Garder l\'écran actif</string>
-    <string name="screen_awake_sum">L\'écran restera actif plus longtemps lors d\'un appel</string>
+    <string name="screen_awake_sum">L\'écran reste actif plus longtemps pendant l\'appel</string>
     <string name="always_proximity">Forcer capteur de proximité</string>
-    <string name="always_proximity_sum">Activer afin que le capteur de proximité verrouille l\'écran en toutes circonstances, y compris en orientation paysage</string>
-    <string name="led_notify_call">Nofitier par DEL d\'un appel manqué</string>
-    <string name="led_notify_call_sum">Le DEL clignotera quand un appel est manqué</string>
+    <string name="always_proximity_sum">Cocher pour que le capteur de proximité verrouille l\'écran  y compris en orientation paysage</string>
+    <string name="led_notify_call">Notifier par LED</string>
+    <string name="led_notify_call_sum">La LED doit clignoter lorsqu\'un appel est manqué</string>
     <string name="led_show_organ">Montrer organisation</string>
-    <string name="led_show_organ_sum">L\'organisation sera montrée sur l\'écran d\'appel</string>
-    <string name="vibrate_call_waiting">Vibrer sur appel en attente</string>
-    <string name="vibrate_call_waiting_sum">Vibrer lorsqu\'un appel est mis en attente</string>
-    <string name="return_home">Forcer retour au journal d\'appels</string>
-    <string name="return_home_sum">Force le retour à l\'écran du journal d\'appels après une conversation</string>
+    <string name="led_show_organ_sum">L\'organisation sera affichée sur l\'écran d\'appel</string>
+    <string name="vibrate_call_waiting">Vibrer sur double appel</string>
+    <string name="vibrate_call_waiting_sum">Vibrer lorsqu\'un appel est en attente</string>
+    <string name="return_home">Retour vers historique</string>
+    <string name="return_home_sum">Force le retour à l\'historique des appels après une conversation</string>
     <string name="menu_addBlackList">Ajouter à la liste noire</string>
     <string name="black_list">Liste noire</string>
     <string name="black_list_sum">Les appels entrants provenant de cette liste seront rejetés</string>
@@ -728,16 +728,21 @@
     <string name="turn_silence">Silence par retournement</string>
     <string name="turn_silence_sum">Retourner le téléphone afin d\'annuler la sonnerie</string>
     <string name="left_hand">Mode gaucher</string>
-    <string name="left_hand_sum">Utiliser le mode pour gauchers. Un redémarrage est requis afin d\'appliquer les changements.</string>
+    <string name="left_hand_sum">Utiliser le mode pour gaucher. Un redémarrage est requis afin d\'appliquer les changements</string>
     <string name="set_force_touch">Mode tactile en appel</string>
     <string name="set_force_touch_sum">Utiliser le mode tactile, même sans capteur de proximité</string>
+    <string name="rotate_incall">Rotation en appel</string>
+    <string name="rotate_incall_sum">Permettre à l\'écran de pivoter en fonction du capteur d\'orientation pendant une conversation</string>
+    <string name="bg_incall">Appels en arrière plan</string>
+    <string name="bg_incall_sum">Ne pas afficher la fenêtre d\'appel lorsque l\'écran est allumé. Affiche uniquement une notification et déclenche la sonnerie</string>
+
     <string name="per_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
-    <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus.</string>
+    <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus</string>
     <string name="phone_number_label">Mon numéro de téléphone</string>
     <string name="phone_number_summary">Régler le numéro d\'appel de ce téléphone</string>
 
     <string name="trackball_answer">Trackball pour répondre</string>  
-    <string name="trackball_answer_sum">Presser sur la Trackball pour répondre aux appels entrants</string>
+    <string name="trackball_answer_sum">Presser sur le Trackball pour répondre aux appels entrants</string>
 
     <string-array name="trackballLabels">
        <item>Désactivé</item> 
@@ -746,19 +751,23 @@
     </string-array>
 
     <string name="trackball_hangup">Trackball pour raccrocher</string>  
-    <string name="trackball_hangup_sum">Une pression sur la Trackball met fin à l\'appel courant</string>
+    <string name="trackball_hangup_sum">Une pression sur le Trackball met fin à l\'appel en cours</string>
     <string-array name="trackballHangupLabels">
        <item>Désactivé</item> 
        <item>Un appui pour raccrocher</item>
        <item>Deux appuis pour raccrocher</item>   
     </string-array> 
 
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Cacher Mise en attente</string>
+    <string name="hide_hold_button_sum">Ne pas afficher le bouton de mise en attente de l\'appel en cours</string>
+
     <!-- Phone goggles -->
-    <string name="toast_phone_goggles">Vous n\'êtes pas autorisé a effectuer d\'appels pour le moment. Veuillez réitérer votre demande plus tard.</string>
+    <string name="toast_phone_goggles">Vous n\'êtes pas autorisé à effectuer des appels pour le moment. Veuillez réitérer votre demande ultérieurement</string>
     <string name="dialog_phone_goggles_title">Appel bloqué</string>
     <string name="dialog_phone_goggles_title_unlocked">Appel autorisé</string>
-    <string name="dialog_phone_goggles_content">Effectuer un appel n\'est pas recommandé pour le moment. Etes vous sûr de vouloir continuer ?</string>
-    <string name="dialog_phone_goggles_unauthorized">Effectuer un appel n\'est pas recommandé pour le moment.</string>
+    <string name="dialog_phone_goggles_content">Effectuer un appel n\'est pas recommandé en ce moment. Etes vous sûr de vouloir continuer ?</string>
+    <string name="dialog_phone_goggles_unauthorized">Effectuer un appel n\'est pas recommandé en ce moment</string>
     <string name="dialog_phone_goggles_ok">Appeler</string>
     <string name="dialog_phone_goggles_cancel">Annuler</string>
 </resources>
