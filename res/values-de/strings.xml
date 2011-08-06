@@ -715,51 +715,56 @@
     <!-- added by cytown@gmail.com -->
     <string name="advanced_setting">Erweiterte Einstellungen v.30.1</string>
     <string name="vibrate_outgoing">Bei Antwort vibrieren</string>
-    <string name="vibrate_outgoing_sum">Vibriere wenn Anruf angenommen wurde.</string>
+    <string name="vibrate_outgoing_sum">Vibriere, wenn Anruf angenommen wurde</string>
     <string name="vibrate_45">Vibriere alle 45 Sekunden</string>
-    <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe.</string>
+    <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe</string>
     <string name="vibrate_hangup">Vibriere bei Auflegen</string>
-    <string name="vibrate_hangup_sum">Vibriere wenn Anruf beendet wurde.</string>
+    <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
     <string name="screen_awake">Bildschirm anlassen</string>
-    <string name="screen_awake_sum">Bildschirm wird länger angelassen als normal bei eingehendem Anruf.</string>
+    <string name="screen_awake_sum">Bei eingehendem Anruf den Bildschirm länger aktiv halten</string>
     <string name="always_proximity">Immer Näherungssensor nutzen</string>
-    <string name="always_proximity_sum">Einschalten um den Näherungssensor den Bildschirm sperren zu lassen, auch wenn das Gerät horizontal.</string>
+    <string name="always_proximity_sum">Einschalten, um den Näherungssensor den Bildschirm sperren zu lassen, auch wenn das Gerät horizontal</string>
     <string name="led_notify_call">LED Benachrichtigung</string>
-    <string name="led_notify_call_sum">LED blinkt bei verpasstem Anruf.</string>
+    <string name="led_notify_call_sum">LED blinkt bei verpasstem Anruf</string>
     <string name="led_show_organ">Zeige Organisation</string>
-    <string name="led_show_organ_sum">Organisation wird angezeigt auf Anrufanzeige</string>
+    <string name="led_show_organ_sum">Organisation wird in der Anrufanzeige angezeigt</string>
     <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
-    <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen.</string>
+    <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
     <string name="return_home">Erzwinge Rückkehr zu Anrufliste</string>
-    <string name="return_home_sum">Erzwinge Rückkehr zu Anrufliste nach Gesprächsende.</string>
-    <string name="menu_addBlackList">Hinzufügen zur Black List</string>
-    <string name="black_list">Black List</string>
-    <string name="black_list_sum">Anruf von Black List Eintrag wird abgelehnt.</string>
+    <string name="return_home_sum">Erzwinge Rückkehr zu Anrufliste nach Gesprächsende</string>
+    <string name="menu_addBlackList">Zur Sperrliste hinzufügen</string>
+    <string name="black_list">Sperrliste</string>
+    <string name="black_list_sum">Anrufe aus der Sperrliste werden abgelehnt</string>
     <string name="add_black">Nummer hinzufügen</string>
     <string name="remove_black">Lösche %s von Liste</string>
     <string name="turn_silence">Stummdrehen</string>
-    <string name="turn_silence_sum">Umdrehen des Gerätes zum Stummschalten bei eing. Anruf.</string>
+    <string name="turn_silence_sum">Umdrehen des Gerätes zum Stummschalten bei eing. Anruf</string>
     <string name="left_hand">Linkshänder</string>
-    <string name="left_hand_sum">Gerät als Linkshänder nutzen. (Neustart erforderlich)</string>
+    <string name="left_hand_sum">Gerät als Linkshänder nutzen (Neustart erforderlich)</string>
     <string name="set_force_touch">Touch Tastatur</string>
-    <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur.</string>
+    <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur</string>
+    <string name="rotate_incall">Sensorbasierte Drehung</string>
+    <string name="rotate_incall_sum">Erlaube Bildschirmdrehung durch Lageänderung während eines Gesprächs</string>
+    <string name="bg_incall">Eingeh. Anruf im Hintergrund</string>
+    <string name="bg_incall_sum">Telefon im Hintergrund lassen, wenn Bilschirm aktiv ist. Zeige nur Benachrichtigung und spiele Klingelton</string>
+
 
     <string name="per_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
-    <string name="per_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechslen. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein.</string>
+    <string name="per_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechslen. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein</string>
 
     <string name="phone_number_label">Meine Nummer</string>
     <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
 
     <!-- TrackBall Answer and Hangup - Added by Nushio -->
     <string name="trackball_answer">Trackball Annahme</string>
-    <string name="trackball_answer_sum">Drücke auf den Trackball, um den eingehenden Anruf anzunehmen.</string>
+    <string name="trackball_answer_sum">Drücke auf den Trackball, um den eingehenden Anruf anzunehmen</string>
     <string-array name="trackballLabels">
         <item>Ausgeschaltet</item>
         <item>Halten zum Annehmen</item>
         <item>Doppelt drücken zum annehmen</item>
     </string-array>
     <string name="trackball_hangup">Trackball Auflegen</string>
-    <string name="trackball_hangup_sum">Drücke den Trackball, um das Gespräch zu beenden.</string>
+    <string name="trackball_hangup_sum">Drücke den Trackball, um das Gespräch zu beenden</string>
     <string-array name="trackballHangupLabels">
        <item>Ausgeschaltet</item>
        <item>Einmal drücken</item>
@@ -768,14 +773,18 @@
     <!-- End TrackBall Answer and Hangup - Added by Nushio -->
 
     <string name="voicemail_notification_title">Mailbox-Benachrichtigungen</string>
-    <string name="voicemail_notification_summary">Benachrichtigungen für (neue) Mailbox-Nachrichten einschalten.</string>
+    <string name="voicemail_notification_summary">Benachrichtigungen für (neue) Mailbox-Nachrichten einschalten</string>
+
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Verstecke Halten-Button</string>
+    <string name="hide_hold_button_sum">Verstecke den Button, der den aktuellen Anruf hält</string>
 
     <!-- Phone goggles -->
-    <string name="toast_phone_goggles">Du darfst zur Zeit keine Anrufe tätigen. Bitte später erneut versuchen.</string>
+    <string name="toast_phone_goggles">Du darfst zur Zeit keine Anrufe tätigen. Bitte später erneut versuchen!</string>
     <string name="dialog_phone_goggles_title">Anruf blockiert</string>
     <string name="dialog_phone_goggles_title_unlocked">Anruf erlaubt</string>
-    <string name="dialog_phone_goggles_content">Jetzt einen Anruf zu tätigen wäre nicht sehr schlau. Sicher, dass du fortfahren willst?</string>
-    <string name="dialog_phone_goggles_unauthorized">Jetzt einen Anruf zu tätigen wäre nicht sehr schlau.</string>
+    <string name="dialog_phone_goggles_content">Jetzt einen Anruf zu tätigen, wäre nicht sehr schlau! Sicher, dass du fortfahren willst?</string>
+    <string name="dialog_phone_goggles_unauthorized">Jetzt einen Anruf zu tätigen wäre nicht sehr schlau!</string>
     <string name="dialog_phone_goggles_ok">Anrufen</string>
     <string name="dialog_phone_goggles_cancel">Abbrechen</string>
 </resources>
