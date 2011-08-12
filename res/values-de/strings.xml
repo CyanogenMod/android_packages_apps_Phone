@@ -736,6 +736,8 @@
     <string name="black_list">Sperrliste</string>
     <string name="black_list_sum">Anrufe aus der Sperrliste werden abgelehnt</string>
     <string name="add_black">Nummer hinzufügen</string>
+    <string name="black_regex_title">Platzhalter benutzen</string>
+    <string name="black_regex_summary">Benutze . als Platzhalter und * für Wiederholungen. Beispiel: 123.* blockiert Nummern, die mit 123 beginnen, und .*123.* blockiert Nummern, die 123 enthalten.</string>
     <string name="remove_black">Lösche %s von Liste</string>
     <string name="turn_silence">Stummdrehen</string>
     <string name="turn_silence_sum">Umdrehen des Gerätes zum Stummschalten bei eing. Anruf</string>
