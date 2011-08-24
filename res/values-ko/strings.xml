@@ -115,7 +115,7 @@
     <string name="settings_label" msgid="3876743539816984008">"네트워크 설정"</string>
     <string name="voicemail" msgid="8693759337917898954">"음성사서함"</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"VM:"</string>
-    <string name="networks" msgid="8873030692174541976">"네트워크 운영자"</string>
+    <string name="networks" msgid="8873030692174541976">"네트워크 사업자"</string>
     <string name="call_settings" msgid="6112441768261754562">"통화 설정"</string>
     <string name="additional_gsm_call_settings" msgid="1391795981938800617">"추가 설정"</string>
     <string name="sum_gsm_call_settings" msgid="4076647190996778012">"GSM 전용 통화 설정 추가"</string>
@@ -188,7 +188,7 @@
     <string name="not_allowed" msgid="3540496123717833833">"SIM 카드에서 이 네트워크에 연결할 수 없습니다."</string>
     <string name="connect_later" msgid="500090982903469816">"현재 네트워크에 연결할 수 없습니다. 나중에 다시 시도해 주세요."</string>
     <string name="registration_done" msgid="495135664535876612">"네트워크에 등록되었습니다."</string>
-    <string name="sum_carrier_select" msgid="6526225502314751575">"네트워크 운영자 선택"</string>
+    <string name="sum_carrier_select" msgid="6526225502314751575">"네트워크 사업자 선택"</string>
     <string name="sum_search_networks" msgid="2921092249873272715">"사용 가능한 모든 네트워크 검색"</string>
     <string name="select_automatically" msgid="8615980695510888796">"자동으로 선택"</string>
     <string name="sum_select_automatically" msgid="8460954604521755275">"기본 설정 네트워크를 자동으로 선택"</string>
@@ -750,4 +750,21 @@
        <item>두번 눌러 끊기</item>    
     </string-array> 
 
+    <string name="mvno_roaming">국가 데이터 로밍</string>
+    <string name="mvno_roaming_summary">사용자의 국가에 있는 다른 네트워크 사업자의 회선 사용을 허용합니다.</string>
+    <string name="mvno_roaming_warning">같은 국가의 데이터 로밍 서비스를 활성화하시겠습니까? 일부 가상 네트워크 사업자는 이 설정을 활성화해야 데이터망을 이용할 수 있습니다. 만일 당신의 네트워크 제공자가 데이터 로밍에 요금을 청구한다면 이 옵션을 활성화하지 마십시오. 이 설정은 휴대전화 다시 시작이나 에어플레인 모드 활성화 후 비활성화하기 전까지 적용되지 않습니다.</string>
+
+    <string name="rotate_incall">센서 회전 사용</string>
+    <string name="rotate_incall_sum">방향 전환 시 통화 중 화면이 회전하도록 허용합니다.</string>
+    <string name="bg_incall">들어오는 전화 알림 간소화</string>
+    <string name="bg_incall_sum">들어오는 전화 알림을 보여주지 않고 알림 표시와 벨소리 재생만 수행합니다.</string>
+
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">대기 버튼 숨기기</string>  
+    <string name="hide_hold_button_sum">현재 통화를 대기 상태로 두는 버튼을 숨깁니다.</string>
+    <string name="keepalive_interval_title">Keep-alive 주기</string>
+    <!-- Text of the keepalive interval preference summary. [CHAR LIMIT=NONE] -->
+    <string name="keepalive_interval_summary">SIP keep-alive 주기를 초 단위로 입력하세요</string>
+    <string name="sip_system_decide_entry">자동</string>
+    <string name="sip_always_send_keepalive_entry">항상 보내기</string>
 </resources>
