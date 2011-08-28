@@ -719,6 +719,10 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
                 return TelephonyManager.NETWORK_TYPE_EVDO_A;
             case ServiceState.RADIO_TECHNOLOGY_EVDO_B:
                 return TelephonyManager.NETWORK_TYPE_EVDO_B;
+            case ServiceState.RADIO_TECHNOLOGY_LTE:
+                return TelephonyManager.NETWORK_TYPE_LTE;
+            case ServiceState.RADIO_TECHNOLOGY_HSPAP:
+                return TelephonyManager.NETWORK_TYPE_HSPAP;
             default:
                 return TelephonyManager.NETWORK_TYPE_UNKNOWN;
         }
