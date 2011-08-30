@@ -96,7 +96,6 @@
         <receiver android:name=".MyPhoneNumber">
             <intent-filter>
                 <action android:name="android.intent.action.SIM_STATE_CHANGED" />
-                <action android:name="android.intent.action.AIRPLANE_MODE" />
             </intent-filter>
         </receiver>
 

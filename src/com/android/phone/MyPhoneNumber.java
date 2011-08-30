@@ -1,5 +1,6 @@
 package com.android.phone;
 
+import com.android.internal.telephony.IccCard;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneFactory;
 
@@ -8,6 +9,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.telephony.TelephonyManager;
+import android.text.TextUtils;
 import android.util.Log;
 
 
@@ -22,17 +24,15 @@ public class MyPhoneNumber extends BroadcastReceiver {
 
         String phoneNum = mTelephonyMgr.getLine1Number();
         String savedNum = prefs.getString(MSISDNEditPreference.PHONE_NUMBER, null);
-        boolean airplaneModeOn = intent.getBooleanExtra("state", false);
-        int simState = intent.getIntExtra("ss", -1);
+        String simState = intent.getStringExtra(IccCard.INTENT_KEY_ICC_STATE);
 
-        if (airplaneModeOn) {
+        if (!IccCard.INTENT_VALUE_ICC_LOADED.equals(simState)) {
+            /* Don't set line 1 number unless SIM_STATE is LOADED
+             * (We're not using READY because the MSISDN record is not yet loaded on READY)
+             */
             if (DBG)
-                Log.d(LOG_TAG, "Airplane Mode On.  No modification to phone number.");
-        }
-        else if (phoneNum == null && 
-                         (simState == 4 || simState == 6 || simState < 0) ) {
-            /* If we were triggered by a SIM_STATE change, it has to be
-             * 4 (SIM_READY) or 6 (RUIM_READY) */
+                Log.d(LOG_TAG, "simState not correct. No modification to phone number. simState: " + simState);
+        } else if (TextUtils.isEmpty(phoneNum)) {
             if (DBG)
                 Log.d(LOG_TAG, "Trying to read the phone number from file");
 
@@ -40,7 +40,7 @@ public class MyPhoneNumber extends BroadcastReceiver {
                 Phone mPhone = PhoneFactory.getDefaultPhone();
                 String alphaTag = mPhone.getLine1AlphaTag();
 
-                if (alphaTag == null || "".equals(alphaTag)) {
+                if (TextUtils.isEmpty(alphaTag)) {
                     // No tag, set it.
                     alphaTag = "Voice Line 1";
                 }
