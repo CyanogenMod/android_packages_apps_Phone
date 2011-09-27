@@ -1507,4 +1507,14 @@
     <string name="dialog_phone_goggles_unauthorized">此刻撥出通話似非明智之舉。</string>
     <string name="dialog_phone_goggles_ok">撥打</string>
     <string name="dialog_phone_goggles_cancel">取消</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">語音品質</string>
+    <string name="voice_quality_summary">使用語音設定檔來提升您的聽覺感受</string>
+    <!-- Do not remove those, they're used from overlays -->
+    <string name="voice_quality_entry_normal">正常</string>
+    <string name="voice_quality_entry_clear">清晰</string>
+    <string name="voice_quality_entry_crisp">清脆</string>
+    <string name="voice_quality_entry_bright">明亮</string>
+
 </resources>
