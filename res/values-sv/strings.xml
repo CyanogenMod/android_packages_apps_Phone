@@ -725,6 +725,7 @@
     <string name="sip_always_send_keepalive_entry">Skicka alltid</string>
     <string name="keepalive_interval_title">Keep-alive-intervall</string>
     <string name="keepalive_interval_summary">SIP keep-alive-intervall i sekunder</string>
+    <string name="user_agent_title">SIP Användaragent</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Automatisk registrering"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Registrera profilen automatiskt"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Använd som primärt konto"</string>
@@ -779,4 +780,10 @@
     <string name="dialog_phone_goggles_unauthorized">Det kan vara oklokt att ringa just nu.</string>
     <string name="dialog_phone_goggles_ok">Ring</string>
     <string name="dialog_phone_goggles_cancel">Avbryt</string>
+    <string name="voice_quality_preferences_title">Röstkvalitet</string>
+    <string name="voice_quality_summary">Ange en röstprofil för att förbättra din lyssnarupplevelse</string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Klart</string>
+    <string name="voice_quality_entry_crisp">Skarp</string>
+    <string name="voice_quality_entry_bright">Ljus</string>
 </resources>
