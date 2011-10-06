@@ -39,6 +39,7 @@ import android.text.TextWatcher;
 import android.text.method.DialerKeyListener;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
@@ -62,6 +63,7 @@ import android.widget.EditText;
  */
 public class EmergencyDialer extends Activity
         implements View.OnClickListener, View.OnLongClickListener,
+        View.OnTouchListener,
         View.OnKeyListener, TextWatcher {
     // Keys used with onSaveInstanceState().
     private static final String LAST_NUMBER = "lastNumber";
@@ -167,6 +169,7 @@ public class EmergencyDialer extends Activity
         mDigits.setKeyListener(DialerKeyListener.getInstance());
         mDigits.setOnClickListener(this);
         mDigits.setOnKeyListener(this);
+        mDigits.setOnTouchListener(this);
         mDigits.setLongClickable(false);
         maybeAddNumberFormatting();
 
@@ -189,10 +192,12 @@ public class EmergencyDialer extends Activity
 
             mDialButton = mVoicemailDialAndDeleteRow.findViewById(R.id.dialButton);
             mDialButton.setOnClickListener(this);
+            mDialButton.setOnTouchListener(this);
 
             mDelete = mVoicemailDialAndDeleteRow.findViewById(R.id.deleteButton);
             mDelete.setOnClickListener(this);
             mDelete.setOnLongClickListener(this);
+            mDelete.setOnTouchListener(this);
         } else {
             mVoicemailDialAndDeleteRow.setVisibility(View.GONE); // It's VISIBLE by default
             mVoicemailDialAndDeleteRow = null;
@@ -286,11 +291,24 @@ public class EmergencyDialer extends Activity
         findViewById(R.id.nine).setOnClickListener(this);
         findViewById(R.id.star).setOnClickListener(this);
 
+        findViewById(R.id.one).setOnTouchListener(this);
+        findViewById(R.id.two).setOnTouchListener(this);
+        findViewById(R.id.three).setOnTouchListener(this);
+        findViewById(R.id.four).setOnTouchListener(this);
+        findViewById(R.id.five).setOnTouchListener(this);
+        findViewById(R.id.six).setOnTouchListener(this);
+        findViewById(R.id.seven).setOnTouchListener(this);
+        findViewById(R.id.eight).setOnTouchListener(this);
+        findViewById(R.id.nine).setOnTouchListener(this);
+        findViewById(R.id.star).setOnTouchListener(this);
+
         View view = findViewById(R.id.zero);
         view.setOnClickListener(this);
         view.setOnLongClickListener(this);
+        view.setOnTouchListener(this);
 
         findViewById(R.id.pound).setOnClickListener(this);
+        findViewById(R.id.pound).setOnTouchListener(this);
     }
 
     /**
@@ -316,9 +334,16 @@ public class EmergencyDialer extends Activity
     }
 
     private void keyPressed(int keyCode) {
-        mHaptic.vibrate();
         KeyEvent event = new KeyEvent(KeyEvent.ACTION_DOWN, keyCode);
         mDigits.onKeyDown(keyCode, event);
+    }
+
+    public boolean onTouch(View view, MotionEvent event) {
+        if (event.getAction() == MotionEvent.ACTION_DOWN) {
+            mHaptic.vibrate();
+        }
+        // always return false, so onClick() is still launched afterwards
+        return false;
     }
 
     public boolean onKey(View view, int keyCode, KeyEvent event) {
@@ -400,7 +425,6 @@ public class EmergencyDialer extends Activity
                 return;
             }
             case R.id.dialButton: {
-                mHaptic.vibrate();  // Vibrate here too, just like we do for the regular keys
                 placeCall();
                 return;
             }
