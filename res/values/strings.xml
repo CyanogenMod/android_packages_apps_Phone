@@ -430,7 +430,7 @@
         <item>GSM only</item>
         <item>GSM / WCDMA preferred</item>
     </string-array>
-    <string-array name="preferred_network_mode_values">
+    <string-array name="preferred_network_mode_values" translatable="false">
         <item>"7"</item>
         <item>"6"</item>
         <item>"5"</item>
@@ -544,7 +544,7 @@
         <item>Chinese</item>
         <item>Hebrew</item>
     </string-array>
-    <string-array name="list_language_values">
+    <string-array name="list_language_values" translatable="false">
         <item>"1"</item>
         <item>"2"</item>
         <item>"3"</item>
@@ -604,8 +604,8 @@
     <string name="multi_category_disable">Multi-category disabled</string>
 
     <!-- GSM/UMTS Options strings -->
-    <string name="gsm_umts_network_preferences_title">GSM/UMTS Network Preferences</string>
-    <string name="gsm_umts_network_preferneces_summary">Not implemented yet! </string>
+    <string name="gsm_umts_network_preferences_title">Network Preferences</string>
+    <string name="gsm_umts_network_preferneces_summary">Change the network operating mode</string>
     <string name="gsm_umts_network_preferences_dialogtitle">GSM/UMTS network preferences</string>
     <string-array name="gsm_umts_network_preferences_choices">
         <item>GSM/WCDMA (auto mode)</item>
@@ -613,13 +613,12 @@
         <item>GSM only</item>
         <item>GSM/WCDA (WCDMA preferred)</item>
     </string-array>
-    <string-array name="gsm_umts_network_preferences_values">
-        <item>"0"</item>
-        <item>"1"</item>
-        <item>"2"</item>
+    <string-array name="gsm_umts_network_preferences_values" translatable="false">
         <item>"3"</item>
+        <item>"2"</item>
+        <item>"1"</item>
+        <item>"0"</item>
     </string-array>
-
     <!-- Mobile network settings screen, setting option name -->
     <string name="prefer_2g">Use only 2G networks</string>
     <!-- Mobile network settings screen, setting summary text -->
@@ -658,23 +657,23 @@
         <item>Affiliated Networks</item>
         <item>Any Network</item>
     </string-array>
-    <string-array name="cdma_roaming_mode_values">
+    <string-array name="cdma_roaming_mode_values" translatable="false">
         <item>"0"</item>
         <item>"1"</item>
         <item>"2"</item>
     </string-array>
-    <string name="cdma_network_preferences_title">CDMA Network Preferences</string>
-    <string name="cdma_network_preferneces_summary">Not implemented yet! </string>
+    <string name="cdma_network_preferences_title">Network Preferences</string>
+    <string name="cdma_network_preferneces_summary">Change the network operating mode</string>
     <string name="cdma_network_preferences_dialogtitle">CDMA network preferences</string>
     <string-array name="cdma_network_preferences_choices">
         <item>CDMA/EvDo</item>
         <item>CDMA only</item>
         <item>EvDo only</item>
     </string-array>
-    <string-array name="cdma_network_preferences_values">
-        <item>"0"</item>
-        <item>"1"</item>
-        <item>"2"</item>
+    <string-array name="cdma_network_preferences_values" translatable="false">
+        <item>"4"</item>
+        <item>"5"</item>
+        <item>"6"</item>
     </string-array>
     <string name="cdma_subscription_title">CDMA Subscription</string>
     <string name="cdma_subscription_summary">Change between RUIM/SIM and NV</string>
@@ -683,7 +682,7 @@
         <item>RUIM/SIM</item>
         <item>NV</item>
     </string-array>
-    <string-array name="cdma_subscription_values">
+    <string-array name="cdma_subscription_values" translatable="false">
         <item>"0"</item>
         <item>"1"</item>
     </string-array>

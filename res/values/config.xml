@@ -130,4 +130,8 @@
 
     <!-- If true, removes the Voice Privacy option from Call Settings -->
     <bool name="config_voice_privacy_disable">false</bool>
+
+    <!-- If true, removes the Preferred Network Mode selection from Mobile Network Settings -->
+    <bool name="config_preferred_mode_disable">false</bool>
+
 </resources>

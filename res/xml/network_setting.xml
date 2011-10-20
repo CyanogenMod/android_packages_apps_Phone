@@ -54,4 +54,21 @@
         android:entryValues="@array/preferred_network_mode_values"
         android:dialogTitle="@string/preferred_network_mode_dialogtitle" />
 
+    <ListPreference
+        android:key="preferred_umts_network_mode_key"
+        android:title="@string/gsm_umts_network_preferences_title"
+        android:summary="@string/preferred_network_mode_summary"
+        android:entries="@array/gsm_umts_network_preferences_choices"
+        android:entryValues="@array/gsm_umts_network_preferences_values"
+        android:dialogTitle="@string/gsm_umts_network_preferences_dialogtitle" />
+
+    <ListPreference
+        android:key="preferred_cdma_network_mode_key"
+        android:title="@string/cdma_network_preferences_title"
+        android:summary="@string/preferred_network_mode_summary"
+        android:entries="@array/cdma_network_preferences_choices"
+        android:entryValues="@array/cdma_network_preferences_values"
+        android:dialogTitle="@string/cdma_network_preferences_dialogtitle" />
+
+
 </PreferenceScreen>
