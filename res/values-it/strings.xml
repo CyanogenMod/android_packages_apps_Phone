@@ -791,4 +791,14 @@
     <string name="dialog_phone_goggles_unauthorized">Può non esser saggio telefonare a quest\'ora.</string>
     <string name="dialog_phone_goggles_ok">Chiama</string>
     <string name="dialog_phone_goggles_cancel">Annulla</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Qualità d\'ascolto</string>
+    <string name="voice_quality_summary">Imposta un filtro audio per migliorare la qualità d\'ascolto</string>
+    <!-- Do not remove those, they're used from overlays -->
+    <string name="voice_quality_entry_normal">Normale</string>
+    <string name="voice_quality_entry_clear">Chiaro</string>
+    <string name="voice_quality_entry_crisp">Nitido</string>
+    <string name="voice_quality_entry_bright">Vivo</string>
+
 </resources>
