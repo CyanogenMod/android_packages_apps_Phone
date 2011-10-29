@@ -30,6 +30,7 @@ import android.os.ServiceManager;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.os.Vibrator;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.android.internal.telephony.Phone;
@@ -287,6 +288,10 @@ public class Ringer {
                                 // create the ringtone with the uri
                                 if (DBG) log("creating ringtone: " + mCustomRingtoneUri);
                                 r = RingtoneManager.getRingtone(mContext, mCustomRingtoneUri);
+                                if (r == null) {
+                                    mCustomRingtoneUri = Settings.System.DEFAULT_RINGTONE_URI;
+                                    r = RingtoneManager.getRingtone(mContext,mCustomRingtoneUri);
+                                }
                                 synchronized (Ringer.this) {
                                     if (!hasMessages(STOP_RING)) {
                                         mRingtone = r;
