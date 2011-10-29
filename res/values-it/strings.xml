@@ -310,8 +310,8 @@
     <string name="enable_disable_multi_category" msgid="626771003122899280">"Multicategoria"</string>
     <string name="multi_category_enable" msgid="1179299804641721768">"Multicategoria attivata"</string>
     <string name="multi_category_disable" msgid="880104702904139505">"Multicategoria disattivata"</string>
-    <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"Preferenze di rete GSM/UMTS"</string>
-    <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Non ancora implementato."</string>
+    <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"Preferenze di rete"</string>
+    <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Cambia la modalità di operatività della rete"</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"Preferenze di rete GSM/UMTS"</string>
   <string-array name="gsm_umts_network_preferences_choices">
     <item msgid="935612021902787683">"GSM/WCDMA (modalità automatica)"</item>
@@ -336,8 +336,8 @@
     <item msgid="8174642753290624634">"Reti affiliate"</item>
     <item msgid="2241951431403168661">"Qualsiasi rete"</item>
   </string-array>
-    <string name="cdma_network_preferences_title" msgid="41193174429510391">"Preferenze di rete CDMA"</string>
-    <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Non ancora implementato."</string>
+    <string name="cdma_network_preferences_title" msgid="41193174429510391">"Preferenze di rete"</string>
+    <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Cambia la modalità di operatività della rete"</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"Preferenze di rete CDMA"</string>
   <string-array name="cdma_network_preferences_choices">
     <item msgid="3711054371631487248">"CDMA/EvDo"</item>
