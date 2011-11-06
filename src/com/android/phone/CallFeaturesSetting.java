@@ -737,7 +737,7 @@ public class CallFeaturesSetting extends PreferenceActivity
                             mNewVMNumber,
                             Message.obtain(mRevertOptionComplete, EVENT_VOICEMAIL_CHANGED));
                 }
-                if (mFwdChangesRequireRollback) {
+                if (mFwdChangesRequireRollback && prevSettings != null) {
                     if (DBG) log("have to revert fwd");
                     final CallForwardInfo[] prevFwdSettings =
                         prevSettings.forwardingSettings;
