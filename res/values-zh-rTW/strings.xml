@@ -424,6 +424,7 @@
         <item msgid="5714714953966979187">"僅限 GSM"</item>
         <item msgid="4775796025725908913">"GSM/WCDMA 優先"</item>
     </string-array>
+    <!-- skipping untranslatable /resources:0/string-array:name=preferred_network_mode_values -->
     <!-- Mobile network settings screen, data enabling checkbox name -->
     <string name="data_enabled" msgid="5972538663568715366">"已啟用資料"</string>
     <!-- Mobile network settings screen, setting summary text when check box is not selected (explains what selecting it would do) -->
@@ -528,6 +529,7 @@
         <item msgid="1933212028684529632">"中文"</item>
         <item msgid="1908428006803639064">"希伯來文"</item>
     </string-array>
+    <!-- skipping untranslatable /resources:0/string-array:name=list_language_values -->
     <string name="list_language_dtitle" msgid="5442908726538951934">"語言"</string>
 
     <string name="enable_disable_local_weather" msgid="986967454867219114">"當地天氣預報"</string>
@@ -580,7 +582,7 @@
 
     <!-- GSM/UMTS Options strings -->
     <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"GSM/UMTS 網路偏好設定"</string>
-    <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"尚未建置！"</string>
+    <string name="gsm_umts_network_preferneces_summary">選用偏好的網路模式</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"GSM/UMTS 網路偏好設定"</string>
     <string-array name="gsm_umts_network_preferences_choices">
         <item msgid="935612021902787683">"GSM/WCDMA (自動模式)"</item>
@@ -588,7 +590,7 @@
         <item msgid="8776934131146642662">"僅限 GSM"</item>
         <item msgid="4684679567848300935">"GSM/WCDA (WCDMA 優先)"</item>
     </string-array>
-
+    <!-- skipping untranslatable /resources:0/string-array:name=gsm_umts_network_preferences_values -->
     <!-- Mobile network settings screen, setting option name -->
     <string name="prefer_2g" msgid="8442550937280449639">"只使用 2G 網路"</string>
     <!-- Mobile network settings screen, setting summary text -->
@@ -620,14 +622,16 @@
         <item msgid="8174642753290624634">"聯盟網路"</item>
         <item msgid="2241951431403168661">"任何網路"</item>
     </string-array>
+    <!-- skipping untranslatable /resources:0/string-array:name=cdma_roaming_mode_values -->
     <string name="cdma_network_preferences_title" msgid="41193174429510391">"CDMA 網路偏好設定"</string>
-    <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"尚未建置！"</string>
+    <string name="cdma_network_preferneces_summary">選用偏好的網路模式</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"CDMA 網路偏好設定"</string>
     <string-array name="cdma_network_preferences_choices">
         <item msgid="3711054371631487248">"CDMA/EvDo"</item>
         <item msgid="6143696847467859795">"僅限 CDMA"</item>
         <item msgid="2683555124647197574">"僅限 EvDo"</item>
     </string-array>
+    <!-- skipping untranslatable /resources:0/string-array:name=cdma_network_preferences_values -->
     <string name="cdma_subscription_title" msgid="445607520753045412">"CDMA 訂閱"</string>
     <string name="cdma_subscription_summary" msgid="2530890766115781140">"在 RUIM/SIM 和 NV 之間切換"</string>
     <string name="cdma_subscription_dialogtitle" msgid="2699527950523333110">"訂閱"</string>
@@ -635,6 +639,7 @@
         <item msgid="2258014151300708431">"RUIM/SIM"</item>
         <item msgid="5127722015571873880">"NV"</item>
     </string-array>
+    <!-- skipping untranslatable /resources:0/string-array:name=cdma_subscription_values -->
 
     <!-- FDN settings strings -->
     <!-- Call settings screen, setting option name -->
