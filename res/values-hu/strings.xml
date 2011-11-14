@@ -723,4 +723,10 @@
     <string name="dialog_phone_goggles_unauthorized">Hívás-indítás nem engedélyezett ebben az időszakban.</string>
     <string name="dialog_phone_goggles_ok">Hívás</string>
     <string name="dialog_phone_goggles_cancel">Mégsem</string>
+    <string name="hide_hold_button">Tartás gomb elrejtése</string>
+    <string name="hide_hold_button_sum">Hívás közbeni tartás gomb elrejtése.</string>
+    <string name="rotate_incall">Képernyő forgatás bekapcsolása</string>
+    <string name="rotate_incall_sum">Engedélyezi a hívás közbeni képernyőforgatást szenzor szerint.</string>
+    <string name="bg_incall">Bejövő hívás háttérben</string>
+    <string name="bg_incall_sum">Bekapcsolt képernyőnél a bejövő hívás háttérbe kerül, csak állapotsori értesítés és csengőhang lejátszása.</string>
 </resources>
