@@ -471,6 +471,8 @@
     <string name="black_list">Lista negra</string>
     <string name="black_list_sum">Las llamadas entrantes en la lista negra serán rechazadas.</string>
     <string name="add_black">Añadir número de teléfono</string>
+    <string name="black_regex_title">Usar comodines</string>
+    <string name="black_regex_summary">Usar . como comodín y * para repetición. P.e. 123.* bloqueará números que comiencen por 123 y .*123.* bloqueará números que contengan 123</string>
     <string name="remove_black">Eliminar %s de la lista</string>
     <string name="turn_silence">Rotar para silenciar</string>
     <string name="turn_silence_sum">Rotar para silenciar sonido.</string>
@@ -478,6 +480,11 @@
     <string name="left_hand_sum">Use la mano izquierda para coger el teléfono, necesita reiniciar.</string>
     <string name="set_force_touch">Interfaz tactil en llamada</string>
     <string name="set_force_touch_sum">Fuerza en llamada interfaz de usuario táctil sin sensor de proximidad</string>
+    <string name="rotate_incall">Sensor de rotación</string>
+    <string name="rotate_incall_sum">Permitir la rotación de la pantalla durante una llamada.</string>
+    <string name="bg_incall">Llamada en segundo plano</string>
+    <string name="bg_incall_sum">Mantener la llamada entrante en segundo plano cuando la pantalla está encendida y mostrar solamente una notificación y aviso sonoro.</string>
+
     <string name="notification_on_hold" msgid="3480694969511790465">"En espera"</string>
     <string name="notification_incoming_call" msgid="2820429205043529642">"Llamada entrante"</string>
     <string name="notification_voicemail_title" msgid="8933468752045550523">"Buzón de voz nuevo"</string>
@@ -513,7 +520,7 @@
     <string name="onscreenAnswerText" msgid="3000799558804019765">"Toca dos veces"\n"para responder."</string>
     <string name="onscreenRejectText" msgid="1456649473993020449">"Toca dos veces"\n"para rechazar la llamada."</string>
     <string name="onscreenHoldText" msgid="2285258239691145872">"Retener"</string>
-    <string name="onscreenUnholdText" msgid="5033582269005230794">"Soltar"</string>
+    <string name="onscreenUnholdText" msgid="5033582269005230794">"Recuperar"</string>
     <string name="onscreenEndCallText" msgid="4403855834875398585">"Finalizar"</string>
     <string name="onscreenShowDialpadText" msgid="8561805492659639893">"Teclado"</string>
     <string name="onscreenHideDialpadText" msgid="2572388822571686252">"Ocultar"</string>
@@ -711,7 +718,12 @@
        <item>Presiona para colgar</item>
        <item>Presiona dos veces para colgar</item>
     </string-array>
-        <!-- Phone goggles -->
+
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Ocultar botón Retener</string>
+    <string name="hide_hold_button_sum">Ocultar el botón que pone la llamada actual en espera.</string>
+
+    <!-- Phone goggles -->
     <string name="toast_phone_goggles">No se le permite hacer llamadas de teléfono en este momento. Por favor, inténtelo de nuevo más tarde.</string>
     <string name="dialog_phone_goggles_title">Llamada bloqueada</string>
     <string name="dialog_phone_goggles_title_unlocked">Llamada autorizada</string>
