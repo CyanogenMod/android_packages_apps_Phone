@@ -19,6 +19,9 @@ package com.android.phone;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
+import android.provider.CmSystem.InCallStyle;
+import android.provider.CmSystem.RotaryStyle;
+import android.provider.CmSystem.RinglockStyle;
 import android.provider.Settings;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -101,15 +104,8 @@ public class InCallTouchUi extends FrameLayout
     private CallFeaturesSetting mSettings;
 
     // Look up the various UI elements.
-    private int mInCallStyle = (Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.IN_CALL_STYLE_PREF, 4));
-
-    private boolean mRotaryHideArrows = (Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
-
-    private boolean mUseRotaryInCall = (mInCallStyle == 2);
-    private boolean mUseRotaryRevInCall = (mInCallStyle == 3);
-    private boolean mUseRingInCall = (mInCallStyle == 4);
+    private boolean mUseRotaryInCall;
+    private boolean mUseRingInCall;
 
     public InCallTouchUi(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -154,22 +150,10 @@ public class InCallTouchUi extends FrameLayout
             mIncomingRotarySelectorCallWidget.setLeftHandleResource(R.drawable.ic_jog_dial_answer);
             mIncomingRotarySelectorCallWidget.setRightHandleResource(R.drawable.ic_jog_dial_decline);
             mIncomingRotarySelectorCallWidget.setOnDialTriggerListener(this);
-            mIncomingRotarySelectorCallWidget.setRevamped(mUseRotaryRevInCall);
-            mIncomingRotarySelectorCallWidget.hideArrows(mRotaryHideArrows);
 
             mIncomingRingSelectorCallWidget = (RingSelector) findViewById(R.id.incomingRingSelectorCallWidget);
             mIncomingRingSelectorCallWidget.enableMiddleRing(false);
             mIncomingRingSelectorCallWidget.setOnRingTriggerListener(this);
-            mIncomingRingSelectorCallWidget.setLeftRingResources(
-                    R.drawable.ic_jog_dial_answer,
-                    com.android.internal.R.drawable.jog_tab_target_green,
-                    com.android.internal.R.drawable.jog_ring_ring_green
-                    );
-            mIncomingRingSelectorCallWidget.setRightRingResources(
-                    R.drawable.ic_jog_dial_decline,
-                    com.android.internal.R.drawable.jog_tab_target_red,
-                    com.android.internal.R.drawable.jog_ring_ring_red
-                    );
 
         // "slide-to-answer" widget for incoming calls.
             mIncomingSlidingTabCallWidget = (SlidingTab) findViewById(R.id.incomingSlidingTabCallWidget);
@@ -192,6 +176,8 @@ public class InCallTouchUi extends FrameLayout
 
             mIncomingSlidingTabCallWidget.setOnTriggerListener(this);
         //}
+
+        updateInCallStyle();
 
         // Container for the UI elements shown while on a regular call.
         mInCallControls = findViewById(R.id.inCallControls);
@@ -712,7 +698,7 @@ public class InCallTouchUi extends FrameLayout
      * Apply an animation to hide the incoming call widget.
      */
     private void hideIncomingCallWidget() {
-        if (mUseRotaryInCall || mUseRotaryRevInCall) {
+        if (mUseRotaryInCall) {
             if (mIncomingRotarySelectorCallWidget.getVisibility() != View.VISIBLE
                 || mIncomingRotarySelectorCallWidget.getAnimation() != null) {
                 // Widget is already hidden or in the process of being hidden
@@ -745,7 +731,7 @@ public class InCallTouchUi extends FrameLayout
 
             public void onAnimationEnd(Animation animation) {
                 // hide the incoming call UI.
-                if (mUseRotaryInCall || mUseRotaryRevInCall) {
+                if (mUseRotaryInCall) {
                     mIncomingRotarySelectorCallWidget.clearAnimation();
                     mIncomingRotarySelectorCallWidget.setVisibility(View.GONE);
                 } else if (mUseRingInCall) {
@@ -757,7 +743,7 @@ public class InCallTouchUi extends FrameLayout
                 }
             }
         });
-        if (mUseRotaryInCall || mUseRotaryRevInCall) {
+        if (mUseRotaryInCall) {
             mIncomingRotarySelectorCallWidget.startAnimation(anim);
         } else if (mUseRingInCall) {
             mIncomingRingSelectorCallWidget.startAnimation(anim);
@@ -766,25 +752,54 @@ public class InCallTouchUi extends FrameLayout
         }
     }
 
+    private void updateInCallStyle() {
+        int inCallStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.IN_CALL_STYLE_PREF,
+                InCallStyle.getIdByStyle(InCallStyle.Ring));
+        boolean rotaryHideArrows = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1;
+
+        mUseRotaryInCall = (inCallStyle == InCallStyle.getIdByStyle(InCallStyle.Rotary));
+        mUseRingInCall = (inCallStyle == InCallStyle.getIdByStyle(InCallStyle.Ring));
+
+        int rotaryStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.ROTARY_STYLE_PREF,
+                RotaryStyle.getIdByStyle(RotaryStyle.Normal));
+        mIncomingRotarySelectorCallWidget.setRotary(
+                rotaryStyle == RotaryStyle.getIdByStyle(RotaryStyle.Normal));
+        mIncomingRotarySelectorCallWidget.setRevamped(
+                rotaryStyle == RotaryStyle.getIdByStyle(RotaryStyle.Revamped));
+        mIncomingRotarySelectorCallWidget.hideArrows(rotaryHideArrows);
+
+        int ringlockStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.RINGLOCK_STYLE_PREF,
+                RinglockStyle.getIdByStyle(RinglockStyle.Bubble));
+         int resRingGreen = (ringlockStyle == RinglockStyle.getIdByStyle(RinglockStyle.Bubble) ?
+                com.android.internal.R.drawable.jog_ring_ring_green :
+                com.android.internal.R.drawable.jog_ring_rev_ring_green);
+        int resRingRed = (ringlockStyle == RinglockStyle.getIdByStyle(RinglockStyle.Bubble) ?
+                com.android.internal.R.drawable.jog_ring_ring_red :
+                com.android.internal.R.drawable.jog_ring_rev_ring_red);
+
+        mIncomingRingSelectorCallWidget.setLeftRingResources(
+                R.drawable.ic_jog_dial_answer,
+                com.android.internal.R.drawable.jog_tab_target_green,
+                resRingGreen);
+        mIncomingRingSelectorCallWidget.setRightRingResources(
+                R.drawable.ic_jog_dial_decline,
+                com.android.internal.R.drawable.jog_tab_target_red,
+                resRingRed);
+    }
+
     /**
      * Shows the incoming call widget and cancels any animation that may be fading it out.
      */
     private void showIncomingCallWidget() {
         // Look up the various UI elements.
         // This needs to be called every Incoming Call to recheck settings
-        mInCallStyle = (Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.IN_CALL_STYLE_PREF, 4));
-        mRotaryHideArrows = (Settings.System.getInt(mContext.getContentResolver(),
-                Settings.System.LOCKSCREEN_ROTARY_HIDE_ARROWS, 0) == 1);
-
-        mUseRotaryInCall = (mInCallStyle == 2);
-        mUseRotaryRevInCall = (mInCallStyle == 3);
-        mUseRingInCall = (mInCallStyle == 4);
-        mIncomingRotarySelectorCallWidget.setRotary(mUseRotaryInCall);
-        mIncomingRotarySelectorCallWidget.setRevamped(mUseRotaryRevInCall);
-        mIncomingRotarySelectorCallWidget.hideArrows(mRotaryHideArrows);
-        mIncomingRotarySelectorCallWidget.setVisibility((mUseRotaryInCall || mUseRotaryRevInCall) ? View.VISIBLE : View.GONE);
-        mIncomingSlidingTabCallWidget.setVisibility((mUseRotaryInCall || mUseRotaryRevInCall || mUseRingInCall) ? View.GONE : View.VISIBLE);
+        updateInCallStyle();
+        mIncomingRotarySelectorCallWidget.setVisibility(mUseRotaryInCall ? View.VISIBLE : View.GONE);
+        mIncomingSlidingTabCallWidget.setVisibility((mUseRotaryInCall || mUseRingInCall) ? View.GONE : View.VISIBLE);
         mIncomingRingSelectorCallWidget.setVisibility(mUseRingInCall ? View.VISIBLE : View.GONE);
 
 
@@ -804,7 +819,7 @@ public class InCallTouchUi extends FrameLayout
 
             public void onAnimationEnd(Animation animation) {
                 // hide the incoming call UI.
-                if (mUseRotaryInCall || mUseRotaryRevInCall) {
+                if (mUseRotaryInCall) {
                     mIncomingRotarySelectorCallWidget.clearAnimation();
                     mIncomingRotarySelectorCallWidget.setVisibility(View.VISIBLE);
                 } else if (mUseRingInCall) {
@@ -816,7 +831,7 @@ public class InCallTouchUi extends FrameLayout
                 }
             }
         });
-        if (mUseRotaryInCall || mUseRotaryRevInCall) {
+        if (mUseRotaryInCall) {
             mIncomingRotarySelectorCallWidget.startAnimation(animAlpha);
         } else if (mUseRingInCall) {
             mIncomingRingSelectorCallWidget.startAnimation(animAlpha);
@@ -828,7 +843,7 @@ public class InCallTouchUi extends FrameLayout
             Animation anim = mIncomingRotarySelectorCallWidget.getAnimation();
             if (anim != null) {
                 anim.reset();
-                if (mUseRotaryInCall || mUseRotaryRevInCall) {
+                if (mUseRotaryInCall) {
                     mIncomingRotarySelectorCallWidget.clearAnimation();
                 } else if (mUseRingInCall) {
                     mIncomingRingSelectorCallWidget.clearAnimation();
@@ -836,7 +851,7 @@ public class InCallTouchUi extends FrameLayout
                     mIncomingSlidingTabCallWidget.clearAnimation();
                 }
             }
-            if (mUseRotaryInCall || mUseRotaryRevInCall) {
+            if (mUseRotaryInCall) {
                 //Rotary Widget has no public reset function
                 //mIncomingRotarySelectorCallWidget.reset();
                 mIncomingRotarySelectorCallWidget.setVisibility(View.VISIBLE);
@@ -861,7 +876,7 @@ public class InCallTouchUi extends FrameLayout
             // since *this* class is the only place that knows that the left
             // handle means "Answer" and the right handle means "Decline".)
             int hintTextResId, hintColorResId;
-            if (mUseRotaryInCall || mUseRotaryRevInCall) {
+            if (mUseRotaryInCall) {
                 switch (grabbedState) {
                     case RotarySelector.NOTHING_GRABBED:
                         hintTextResId = 0;
