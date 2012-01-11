@@ -774,21 +774,37 @@ public class InCallTouchUi extends FrameLayout
         int ringlockStyle = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.RINGLOCK_STYLE_PREF,
                 RinglockStyle.getIdByStyle(RinglockStyle.Bubble));
-         int resRingGreen = (ringlockStyle == RinglockStyle.getIdByStyle(RinglockStyle.Bubble) ?
-                com.android.internal.R.drawable.jog_ring_ring_green :
-                com.android.internal.R.drawable.jog_ring_rev_ring_green);
-        int resRingRed = (ringlockStyle == RinglockStyle.getIdByStyle(RinglockStyle.Bubble) ?
-                com.android.internal.R.drawable.jog_ring_ring_red :
-                com.android.internal.R.drawable.jog_ring_rev_ring_red);
+        int resRingGreen, resRingRed, resTargetGreen, resTargetRed, resAnswer, resDecline;
 
-        mIncomingRingSelectorCallWidget.setLeftRingResources(
-                R.drawable.ic_jog_dial_answer,
-                com.android.internal.R.drawable.jog_tab_target_green,
-                resRingGreen);
-        mIncomingRingSelectorCallWidget.setRightRingResources(
-                R.drawable.ic_jog_dial_decline,
-                com.android.internal.R.drawable.jog_tab_target_red,
-                resRingRed);
+        switch (RinglockStyle.getStyleById(ringlockStyle)) {
+            case Revamped:
+                resRingGreen = com.android.internal.R.drawable.jog_ring_rev_ring_green;
+                resRingRed = com.android.internal.R.drawable.jog_ring_rev_ring_red;
+                resTargetRed = com.android.internal.R.drawable.jog_tab_target_red;
+                resTargetGreen = com.android.internal.R.drawable.jog_tab_target_green;
+                resAnswer = R.drawable.ic_jog_dial_answer;
+                resDecline = R.drawable.ic_jog_dial_decline;
+                break;
+            case Holo:
+                resRingGreen = com.android.internal.R.drawable.jog_ring_holo_ring;
+                resRingRed = com.android.internal.R.drawable.jog_ring_holo_ring;
+                resTargetRed = com.android.internal.R.drawable.jog_tab_target_holo;
+                resTargetGreen = com.android.internal.R.drawable.jog_tab_target_holo;
+                resAnswer = com.android.internal.R.drawable.ic_jog_dial_holo_answer;
+                resDecline = com.android.internal.R.drawable.ic_jog_dial_holo_decline;
+                break;
+            default:
+                resRingGreen = com.android.internal.R.drawable.jog_ring_ring_green;
+                resRingRed = com.android.internal.R.drawable.jog_ring_ring_red;
+                resTargetRed = com.android.internal.R.drawable.jog_tab_target_red;
+                resTargetGreen = com.android.internal.R.drawable.jog_tab_target_green;
+                resAnswer = R.drawable.ic_jog_dial_answer;
+                resDecline = R.drawable.ic_jog_dial_decline;
+                break;
+        }
+
+        mIncomingRingSelectorCallWidget.setLeftRingResources(resAnswer, resTargetGreen, resRingGreen);
+        mIncomingRingSelectorCallWidget.setRightRingResources(resDecline, resTargetRed, resRingRed);
     }
 
     /**
