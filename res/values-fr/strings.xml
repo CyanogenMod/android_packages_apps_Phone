@@ -684,6 +684,8 @@
     <string name="black_list">Liste noire</string>
     <string name="black_list_sum">Les appels entrants provenant de cette liste seront rejetés</string>
     <string name="add_black">Ajouter un numéro</string>
+    <string name="black_regex_title">Utiliser des jockers</string>
+    <string name="black_regex_summary">Utiliser . comme jocker et * pour une répétition. Ex. 123.* bloque les numéros débutant par 123 et .*123.* bloque les numéros contenant 123</string>
     <string name="remove_black">Enlever %s de la liste noire ?</string>
     <string name="turn_silence">Silence par retournement</string>
     <string name="turn_silence_sum">Retourner le téléphone afin d\'annuler la sonnerie</string>
