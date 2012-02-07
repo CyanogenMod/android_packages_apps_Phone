@@ -208,11 +208,14 @@
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Veri etkin"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Mobil ağ üzerinden veri erişimini etkinleştir"</string>
-    <string name="roaming" msgid="8871412572928323707">"Veri dolaşımı"</string>
+    <string name="roaming">"Uluslararası veri dolaşımı"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Dolaşırken veri hizmetlerine bağlan"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Dolaşırken veri hizmetlerine bağlan"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Veri dolaşımı kapalıyken ana ağınızdan ayrıldığınız için veri bağlantısını kaybettiniz."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Veri dolaşımına izin verilsin mi? Kayda değer dolaşım ücretleri ödeyebilirsiniz!"</string>
+    <string name="mvno_roaming">Ulusal veri dolaşımı</string>
+    <string name="mvno_roaming_summary">Bu ayar, ülkenizdeki farklı şebekeler arasında geçiş yapmanızı sağlar.</string>
+    <string name="mvno_roaming_warning">Ülkenizdeki servis sağlayıcılar arasında veri dolaşımı etkinleştirilsin mi? Bazı sanal şebeke sağlayıcıları veri erişimi için bu ayarı gerektirebilir. Servis sağlayıcınız ülkenizdeki veri dolaşımı için ücret kesiyorsa ETKİNLEŞTİRMEYİN! Bu ayar, telefonunuzu yeniden başlatasıya veya Uçak Moduna alıp geri dönesiye kadar etkili olmayacaktır.</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTS Seçenekleri"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA Seçenekleri"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Veri kullanımı"</string>
@@ -306,8 +309,8 @@
     <string name="enable_disable_multi_category" msgid="626771003122899280">"Çoklu kategori"</string>
     <string name="multi_category_enable" msgid="1179299804641721768">"Çoklu kategori etkinleştirildi"</string>
     <string name="multi_category_disable" msgid="880104702904139505">"Çoklu kategori devre dışı bırakıldı"</string>
-    <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"GSM/UMTS Ağ Tercihleri"</string>
-    <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Henüz uygulanmadı!"</string>
+    <string name="gsm_umts_network_preferences_title">"Şebeke Seçenekleri"</string>
+    <string name="gsm_umts_network_preferneces_summary">"Şebeke türünü değiştir"</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"GSM/UMTS ağ tercihleri"</string>
   <string-array name="gsm_umts_network_preferences_choices">
     <item msgid="935612021902787683">"GSM/WCDMA (otomatik mod)"</item>
@@ -322,6 +325,7 @@
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Sistem seçin"</string>
   <string-array name="cdma_system_select_choices">
     <item msgid="176474317493999285">"Yalnızca ev"</item>
+    <item>"Bağlı ağlar"</item>
     <item msgid="1205664026446156265">"Otomatik"</item>
   </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"CDMA Dolaşım Modu"</string>
@@ -332,8 +336,8 @@
     <item msgid="8174642753290624634">"Bağlı Ağlar"</item>
     <item msgid="2241951431403168661">"Tüm Ağlar"</item>
   </string-array>
-    <string name="cdma_network_preferences_title" msgid="41193174429510391">"CDMA Ağ Tercihleri"</string>
-    <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Henüz uygulanmadı!"</string>
+    <string name="cdma_network_preferences_title">"Ağ Tercihleri"</string>
+    <string name="cdma_network_preferneces_summary">"Ağ türünü değiştir"</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"CDMA ağ tercihleri"</string>
   <string-array name="cdma_network_preferences_choices">
     <item msgid="3711054371631487248">"CDMA/EvDo"</item>
@@ -562,16 +566,57 @@
     <string name="dial_button_label" msgid="5551611636419190229">"Çevir"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"^1"\n<b>"^2"</b>" aracılığıyla aranıyor"</string>
     <string name="slide_to_answer" msgid="255903188611244476">"Yanıtlamak için sağa sürükleyin"</string>
+    <string name="rotate_to_answer">Yanıtlamak için sağa çevirin</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Zil programını susturmak için sola sürükleyin"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Reddetmek için sola sürükleyin"</string>
+    <string name="rotate_to_decline">Reddetmek için sola çevirin</string>
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Yanıtlamak ve"\n"etkin çağrıyı beklemeye almak için sağa sürükleyin"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Yanıtlamak ve"\n"etkin çağrıyı sonlandırmak için sağa sürükleyin"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Yanıtlamak ve"\n"beklemedeki çağrıyı sonlandırmak için sağa sürükleyin"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Yanıtla"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Reddet"</string>
+    <string name="notification_ongoing_calling_format">Ara (<xliff:g id="duration">%s</xliff:g>)</string>
+    <string name="advanced_setting">Gelişmiş Ayarlar</string>
+    <string name="vibrate_outgoing">Cevap verince titret</string>
+    <string name="vibrate_outgoing_sum">Bir çağrıya cevap verildiğinde titret</string>
+    <string name="vibrate_45">Her 45 saniyede titret</string>
+    <string name="vibrate_45_sum">Giden çağrı sırasında her 45 saniyede titret</string>
+    <string name="vibrate_hangup">Çağrı sonlanırsa titret</string>
+    <string name="vibrate_hangup_sum">Çağrı sonlandığında titret</string>
+    <string name="screen_awake">Ekranı açık tut</string>
+    <string name="screen_awake_sum">Çağrı sırasında ekran sürekli açık kalır</string>
+    <string name="always_proximity">Yakınlık sensörü kullan</string>
+    <string name="always_proximity_sum">Telefon yatay modda olsa bile yakınlık sensörünün ekranı kilitlemesine izin ver.</string>
+    <string name="led_notify_call">Cevapsız çağrı LED bildirimi</string>
+    <string name="led_notify_call_sum">Cevapsız çağrı varsa LED yanıp söner</string>
+    <string name="led_show_organ">"Rumuzu/kurumu göster"</string>
+    <string name="led_show_organ_sum">"Rumuz/kurum çağrı ekranında gösterilir."</string>
+    <string name="vibrate_call_waiting">Çağrı bekletilirse titret</string>
+    <string name="vibrate_call_waiting_sum">Çağrı bekletildiğinde titret</string>
+    <string name="return_home">Her zaman arama kayıtlarına dön</string>
+    <string name="return_home_sum">Çağrı sonlandıktan sonra çağrı kayıtları ekranına dön.</string>
+    <string name="menu_addBlackList">Kara listeye ekle</string>
+    <string name="black_list">Kara liste</string>
+    <string name="black_list_sum">Kara listeden gelen çağrılar reddedilir.</string>
+    <string name="add_black">Telefon numarası ekle</string>
+    <string name="black_regex_title">Joker karakter kullan</string>
+    <string name="black_regex_summary">Bir karakter için nokta(.), tekrar için yıldız(*) kullan. Örnek: 123.*, 123 ile başlayan numaraları, .*123.* ise içinde 123 olan numaraları engeller</string>
+    <string name="remove_black">%s kişisini listeden sil</string>
+    <string name="turn_silence">Ters çevirince sessize al</string>
+    <string name="turn_silence_sum">Telefonu sessize almak için ters çevirin</string>
+    <string name="left_hand">Sol-el modu</string>
+    <string name="left_hand_sum">Telefonu sol elle kullan, değişikliklerin etkili olması için yeniden başlatma gerekir.</string>
+    <string name="set_force_touch">Çağrı sırasında ekrana dokun</string>
+    <string name="set_force_touch_sum">Çağrı sırasında yakınlık sensörü olmaksızın telefonla etkileşime girmek için ekrana dokunun</string>
+    <string name="rotate_incall">Sensör dönüşünü etkinleştir</string>
+    <string name="rotate_incall_sum">Çağrı sırasında ekran yönü değiştiğinde ekranı çevir.</string>
+    <string name="bg_incall">Gelen çağrıyı arkaplanda tut</string>
+    <string name="bg_incall_sum">Ekran açıkken gelen çağrı ekranını arkaplanda tut, sadece bildirim göster ve zil sesi çal.</string>
     <string name="contactPhoto" msgid="4713193418046639466">"kişi fotoğrafı"</string>
     <string name="goPrivate" msgid="865837794424530980">"özele git"</string>
     <string name="selectContact" msgid="781975788478987237">"kişi seçin"</string>
+    <string name="voicemail_notification_title">Sesli mesaj bildirimleri</string>
+    <string name="voicemail_notification_summary">Yeni sesli mesajlar için bildirimleri etkinleştir</string>
     <string name="sip_settings" msgid="6699045718560859691">"İnternet üzerinden çağrı ayarları"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"İnternet çağrısı (SIP) hesapları"</string>
     <string name="sip_accounts_title" msgid="1212889069281054570">"Hesaplar"</string>
@@ -634,6 +679,11 @@
     <string name="transport_title" msgid="8253139511847746640">"Aktarım türü"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Canlı tutma mesajı gönder"</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"SIP canlı tutma mesajları gönder"</string>
+    <string name="sip_system_decide_entry">Otomatik</string>
+    <string name="sip_always_send_keepalive_entry">Her zaman gönder</string>
+    <string name="keepalive_interval_title">Canlı tutma aralığı</string>
+    <string name="keepalive_interval_summary">Saniye olarak SIP canlı tutma aralığı</string>
+    <string name="user_agent_title">SIP User-Agent</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Otomatik kayıt"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Profili otomatik olarak kaydet"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Birincil hesap olarak ayarla"</string>
@@ -653,4 +703,37 @@
     <string name="no_internet_available" msgid="1100564991026313234">"İnternet çağrısı yapmak için öncelikle İnternet bağlantınızı denetleyin"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"İnternet çağrıları için bir Kablosuz ağa bağlı olmalısınız (Kablosuz ve Ağ ayarlarını kullanın)"</string>
     <string name="no_voip" msgid="8901474054537199865">"İnternet çağrısı desteklenmiyor"</string>
+    <string name="per_change_mobile_network">Şebeke değiştir (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Bu ayar istediğiniz zaman 2G ve 3G arasında geçiş yapmanızı sağlar. 3G daha hızlıdır ama daha fazla pil tüketir ve ek olarak daha fazla ücret ödemenize sebep olabilir.</string>
+    <string name="phone_number_label">Telefon numaram</string>
+    <string name="phone_number_summary">Bu cihaz için telefon numarasını ayarlayın</string>
+    <string name="trackball_answer">İztopu kabul eder</string>
+    <string name="trackball_answer_sum">Gelen telefon çağrısını cevaplamak için iztopuna basın.</string>
+    <string-array name="trackballLabels">
+       <item>Pasif</item>
+       <item>Cevap vermek için dokun</item>
+       <item>Cevap vermek için çift dokun</item>
+    </string-array>
+    <string name="trackball_hangup">İztopu çağrıyı sonlandırır</string>
+    <string name="trackball_hangup_sum">Çağrıyı sonlandırmak için iztopuna basın.</string>
+    <string-array name="trackballHangupLabels">
+       <item>Pasif</item>
+       <item>Çağrıyı sonlandırmak için dokun</item>
+       <item>Çağrıyı sonlandırmak için çift dokun</item>
+    </string-array>
+    <string name="hide_hold_button">Beklet düğmesini gizle</string>
+    <string name="hide_hold_button_sum">Çağrıyı bekletmek için kullanılan düğmeyi gizle.</string>
+    <string name="toast_phone_goggles">Şu an telefon çağrısı yapma izniniz yok. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="dialog_phone_goggles_title">Çağrı engellendi</string>
+    <string name="dialog_phone_goggles_title_unlocked">Çağrıya izin verildi</string>
+    <string name="dialog_phone_goggles_content">Şu an çağrı yapmak engellenmiş olabilir. Devam etmek istediğinizden emin misiniz?</string>
+    <string name="dialog_phone_goggles_unauthorized">Şu an çağrı yapmak engellenmiş olabilir.</string>
+    <string name="dialog_phone_goggles_ok">Ara</string>
+    <string name="dialog_phone_goggles_cancel">İptal</string>
+    <string name="voice_quality_preferences_title">Ses kalitesi</string>
+    <string name="voice_quality_summary">Daha iyi dinleme deneyimi için bir ses profili ayarlayın</string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Net</string>
+    <string name="voice_quality_entry_crisp">Dalgalı</string>
+    <string name="voice_quality_entry_bright">Parlak</string>
 </resources>
