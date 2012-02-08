@@ -197,26 +197,16 @@
     <string name="preferred_network_mode_title" msgid="8873246565334559308">"Netzwerkmodus"</string>
     <string name="preferred_network_mode_summary" msgid="1434820673166126609">"Netzwerkbetriebsmodus ändern"</string>
     <string name="preferred_network_mode_dialogtitle" msgid="8176355237105593793">"Bevorzugter Netzwerkmodus"</string>
-  <string-array name="preferred_network_mode_choices">
-    <item msgid="2987674222882365152">"Global"</item>
-    <item msgid="3273348576277144124">"Nur EvDo"</item>
-    <item msgid="454610224530856274">"CDMA ohne EvDo"</item>
-    <item msgid="8928247118825616081">"CDMA/EvDo (automatisch)"</item>
-    <item msgid="8595462903294812666">"GSM/WCDMA (automatisch)"</item>
-    <item msgid="5189164180446264504">"Nur WCDMA"</item>
-    <item msgid="5714714953966979187">"Nur GSM"</item>
-    <item msgid="4775796025725908913">"GSM/WCDMA bevorzugt"</item>
-  </string-array>
-  <string-array name="preferred_network_mode_values">
-    <item msgid="7164534877603905916">"7"</item>
-    <item msgid="2520921432080278213">"6"</item>
-    <item msgid="4978887990900575049">"5"</item>
-    <item msgid="6891436459357445885">"4"</item>
-    <item msgid="339825043192186272">"3"</item>
-    <item msgid="3062641619893382241">"2"</item>
-    <item msgid="2494009747968041784">"1"</item>
-    <item msgid="2568449734331711605">"0"</item>
-  </string-array>
+    <string-array name="preferred_network_mode_choices">
+        <item msgid="2987674222882365152">"Global"</item>
+        <item msgid="3273348576277144124">"Nur EvDo"</item>
+        <item msgid="454610224530856274">"CDMA ohne EvDo"</item>
+        <item msgid="8928247118825616081">"CDMA/EvDo (automatisch)"</item>
+        <item msgid="8595462903294812666">"GSM/WCDMA (automatisch)"</item>
+        <item msgid="5189164180446264504">"Nur WCDMA"</item>
+        <item msgid="5714714953966979187">"Nur GSM"</item>
+        <item msgid="4775796025725908913">"GSM/WCDMA bevorzugt"</item>
+    </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Daten aktiviert"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Datenzugriff über mobile Netzwerke aktivieren"</string>
     <string name="roaming" msgid="8871412572928323707">"Internationales Daten-Roaming"</string>
@@ -227,7 +217,7 @@
 
     <string name="mvno_roaming">"Nationales Daten-Roaming"</string>
     <string name="mvno_roaming_summary">"Erlaubt das benutzen eines fremden Mobilfunknetzes im eigenen Land."</string>
-    <string name="mvno_roaming_warning">Nationales Daten-Roaming zulassen? Dies könnte das Roaming Problem mit virtuellen Mobilfunkanbietern lösen. Aktivieren Sie dies Option nicht wenn Sie nicht sicher sind ob diese bei Ihrem Mobilfunkanbieter benötigt wird. Es können beträchtliche Roaming-Gebühren anfallen! Zum übernehmen Flugmodus ein- und wieder ausschalten oder Telefon neu starten."</string>
+    <string name="mvno_roaming_warning">Nationales Daten-Roaming zulassen? Dies könnte Roaming-Probleme mit virtuellen Mobilfunkanbietern lösen. Aktivieren Sie dies Option nicht, wenn Sie nicht sicher sind, ob diese bei Ihrem Mobilfunkanbieter benötigt wird. Es können beträchtliche Roaming-Gebühren anfallen! Zum Übernehmen Flugmodus ein- und wieder ausschalten oder Telefon neu starten."</string>
 
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM-/UMTS-Optionen"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA-Optionen"</string>
@@ -325,44 +315,44 @@
     <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"GSM-/UMTS-Netzwerkeinstellungen"</string>
     <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Noch nicht implementiert"</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"GSM-/UMTS-Netzwerkeinstellungen"</string>
-  <string-array name="gsm_umts_network_preferences_choices">
-    <item msgid="935612021902787683">"GSM/WCDMA (automatischer Modus)"</item>
-    <item msgid="8912042051809329533">"Nur WCDMA"</item>
-    <item msgid="8776934131146642662">"Nur GSM"</item>
-    <item msgid="4684679567848300935">"GSM/WCDA (WCDMA bevorzugt)"</item>
-  </string-array>
+    <string-array name="gsm_umts_network_preferences_choices">
+        <item msgid="935612021902787683">"GSM/WCDMA (automatisch)"</item>
+        <item msgid="8912042051809329533">"Nur WCDMA"</item>
+        <item msgid="8776934131146642662">"Nur GSM"</item>
+        <item msgid="4684679567848300935">"GSM/WCDA (WCDMA bevorzugt)"</item>
+    </string-array>
     <string name="prefer_2g" msgid="8442550937280449639">"Nur 2G-Netzwerke"</string>
     <string name="prefer_2g_summary" msgid="1976491403210690759">"Energiesparend"</string>
     <string name="cdma_system_select_title" msgid="5757657769327732833">"Systemauswahl"</string>
     <string name="cdma_system_select_summary" msgid="2528661990595284707">"CDMA-Roamingmodus ändern"</string>
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Systemauswahl"</string>
-  <string-array name="cdma_system_select_choices">
-    <item msgid="176474317493999285">"Nur Heimatnetz"</item>
-    <item msgid="1205664026446156265">"Automatisch"</item>
-  </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item msgid="176474317493999285">"Nur Heimatnetz"</item>
+        <item msgid="1205664026446156265">"Automatisch"</item>
+    </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"CDMA-Roamingmodus"</string>
     <string name="cdma_roaming_mode_summary" msgid="8604713111805562261">"CDMA-Roamingmodus ändern"</string>
     <string name="cdma_roaming_mode_dialogtitle" msgid="1802896889172094947">"CDMA-Roamingmodus"</string>
-  <string-array name="cdma_roaming_mode_choices">
-    <item msgid="6024072766548865002">"Nur private Netzwerke"</item>
-    <item msgid="8174642753290624634">"Zugehörige Netzwerke"</item>
-    <item msgid="2241951431403168661">"Beliebiges Netzwerk"</item>
-  </string-array>
+    <string-array name="cdma_roaming_mode_choices">
+        <item msgid="6024072766548865002">"Nur private Netzwerke"</item>
+        <item msgid="8174642753290624634">"Zugehörige Netzwerke"</item>
+        <item msgid="2241951431403168661">"Beliebiges Netzwerk"</item>
+    </string-array>
     <string name="cdma_network_preferences_title" msgid="41193174429510391">"CDMA-Netzwerkeinstellungen"</string>
     <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Noch nicht implementiert"</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"CDMA-Netzwerkeinstellungen"</string>
-  <string-array name="cdma_network_preferences_choices">
-    <item msgid="3711054371631487248">"CDMA/EvDo"</item>
-    <item msgid="6143696847467859795">"Nur CDMA"</item>
-    <item msgid="2683555124647197574">"Nur EvDo"</item>
-  </string-array>
+    <string-array name="cdma_network_preferences_choices">
+        <item msgid="3711054371631487248">"CDMA/EvDo"</item>
+        <item msgid="6143696847467859795">"Nur CDMA"</item>
+        <item msgid="2683555124647197574">"Nur EvDo"</item>
+    </string-array>
     <string name="cdma_subscription_title" msgid="445607520753045412">"CDMA-Abonnement"</string>
     <string name="cdma_subscription_summary" msgid="2530890766115781140">"Zwischen RUIM/SIM und NV wechseln"</string>
     <string name="cdma_subscription_dialogtitle" msgid="2699527950523333110">"Abonnement"</string>
-  <string-array name="cdma_subscription_choices">
-    <item msgid="2258014151300708431">"RUIM/SIM"</item>
-    <item msgid="5127722015571873880">"NV"</item>
-  </string-array>
+    <string-array name="cdma_subscription_choices">
+        <item msgid="2258014151300708431">"RUIM/SIM"</item>
+        <item msgid="5127722015571873880">"NV"</item>
+    </string-array>
     <string name="fdn" msgid="7878832555095183202">"Anrufbegrenzung"</string>
     <string name="manage_fdn_list" msgid="8777755791892122369">"Zugelassene Rufnummern"</string>
     <string name="fdn_activation" msgid="2156479741307463576">"Aktivierung der Anrufbegrenzung"</string>
@@ -436,8 +426,7 @@
     <string name="fdn_enable_puk2_requested" msgid="2608836967081385948">"Passwort falsch. Ändern Sie die PIN2 und versuchen Sie es erneut!"</string>
     <string name="puk2_requested" msgid="5863580927788820813">"Passwort falsch, SIM-Karte gesperrt! Eingabe des PUK2 erforderlich."</string>
     <string name="doneButton" msgid="2859593360997984240">"Fertig"</string>
-    <string name="caller_manage_header" msgid="3231519674734638786">"Telefonkonferenz <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"
-    </string>
+    <string name="caller_manage_header" msgid="3231519674734638786">"Telefonkonferenz <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Zurück zu Anruf"</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Ohne SIM-Karte fortfahren"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"Keine SIM-Karte gefunden. Legen Sie eine SIM-Karte in das Telefon ein."</string>
@@ -487,8 +476,7 @@
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Notruf"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Mobilfunkverbindung wird aktiviert..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Gebiet ohne Netzabdeckung, erneuter Versuch..."</string>
-    <string name="dial_emergency_error" msgid="8362624131726575194">"Anruf nicht verbunden; <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> ist keine Notrufnummer!"
-    </string>
+    <string name="dial_emergency_error" msgid="8362624131726575194">"Anruf nicht verbunden; <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> ist keine Notrufnummer!"</string>
     <string name="dial_emergency_empty_error" msgid="5048645338094088229">"Anruf nicht verbunden. Wählen Sie eine Notrufnummer!"</string>
     <string name="dialerKeyboardHintText" msgid="9192914825413747792">"Zum Wählen Tastatur verwenden"</string>
     <string name="dtmfDialpadHintText" msgid="2153335217920679451">"Tonwahltasten"</string>
@@ -581,12 +569,10 @@
     <string name="voicemail_settings" msgid="2288633492587133022">"Mailbox-Einstellungen"</string>
     <string name="voicemail_number_not_set" msgid="1604580506447265808">"&lt;nicht festgelegt>"</string>
     <string name="voicemail_provider" msgid="6299679757491942924">"Mailbox-Dienst"</string>
-    <string name="voicemail_settings_for" msgid="9018656268027893088">"Einstellungen für <xliff:g id="PROVIDER_NAME">%s</xliff:g>"
-    </string>
+    <string name="voicemail_settings_for" msgid="9018656268027893088">"Einstellungen für <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="other_settings" msgid="3672912580359716394">"Sonstige Anrufeinstellungen"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Wählen"</string>
-    <string name="calling_via_template" msgid="7374498518104190489">"Anruf über ^1"\n<b>"^2"</b>
-    </string>
+    <string name="calling_via_template" msgid="7374498518104190489">"Anruf über ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Zum Annehmen nach rechts ziehen"</string>
     <string name="rotate_to_answer">Zum Annehmen nach rechts rotieren</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Zum Stummschalten des Klingeltons nach links ziehen"</string>
@@ -688,8 +674,8 @@
     <string name="notification_ongoing_calling_format">Wähle (<xliff:g id="duration">%s</xliff:g>)</string>
 
     <!-- added by cytown@gmail.com -->
-    <string name="advanced_setting">Erweiterte Einstellungen v.30.1</string>
-    <string name="vibrate_outgoing">Bei Antwort vibrieren</string>
+    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="vibrate_outgoing">Vibriere bei Annahme</string>
     <string name="vibrate_outgoing_sum">Vibriere, wenn Anruf angenommen wurde</string>
     <string name="vibrate_45">Vibriere alle 45 Sekunden</string>
     <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe</string>
@@ -697,15 +683,15 @@
     <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
     <string name="screen_awake">Bildschirm anlassen</string>
     <string name="screen_awake_sum">Bei eingehendem Anruf den Bildschirm länger aktiv halten</string>
-    <string name="always_proximity">Immer Näherungssensor nutzen</string>
-    <string name="always_proximity_sum">Einschalten, um den Näherungssensor den Bildschirm sperren zu lassen, auch wenn das Gerät horizontal</string>
-    <string name="led_notify_call">LED Benachrichtigung</string>
+    <string name="always_proximity">Immer Näherungssensor</string>
+    <string name="always_proximity_sum">Näherungssensor auch aktivieren, wenn das Gerät horizontal gehalten wird</string>
+    <string name="led_notify_call">LED-Benachrichtigung</string>
     <string name="led_notify_call_sum">LED blinkt bei verpasstem Anruf</string>
     <string name="led_show_organ">Zeige Organisation</string>
     <string name="led_show_organ_sum">Organisation wird in der Anrufanzeige angezeigt</string>
     <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
     <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
-    <string name="return_home">Erzwinge Rückkehr zu Anrufliste</string>
+    <string name="return_home">Anrufliste nach Gespräch</string>
     <string name="return_home_sum">Erzwinge Rückkehr zu Anrufliste nach Gesprächsende</string>
     <string name="menu_addBlackList">Zur Sperrliste hinzufügen</string>
     <string name="black_list">Sperrliste</string>
@@ -713,18 +699,17 @@
     <string name="add_black">Nummer hinzufügen</string>
     <string name="black_regex_title">Platzhalter benutzen</string>
     <string name="black_regex_summary">Benutze . als Platzhalter und * für Wiederholungen. Beispiel: 123.* blockiert Nummern, die mit 123 beginnen, und .*123.* blockiert Nummern, die 123 enthalten.</string>
-    <string name="remove_black">Lösche %s von Liste</string>
+    <string name="remove_black">\'%s\' aus Liste entfernen</string>
     <string name="turn_silence">Stummdrehen</string>
     <string name="turn_silence_sum">Umdrehen des Gerätes zum Stummschalten bei eing. Anruf</string>
     <string name="left_hand">Linkshänder</string>
     <string name="left_hand_sum">Gerät als Linkshänder nutzen (Neustart erforderlich)</string>
-    <string name="set_force_touch">Touch Tastatur</string>
+    <string name="set_force_touch">Touch-Tastatur</string>
     <string name="set_force_touch_sum">Erzwinge die Bildschirmtastatur</string>
     <string name="rotate_incall">Sensorbasierte Drehung</string>
     <string name="rotate_incall_sum">Erlaube Bildschirmdrehung durch Lageänderung während eines Gesprächs</string>
     <string name="bg_incall">Eingeh. Anruf im Hintergrund</string>
-    <string name="bg_incall_sum">Telefon im Hintergrund lassen, wenn Bilschirm aktiv ist. Zeige nur Benachrichtigung und spiele Klingelton</string>
-
+    <string name="bg_incall_sum">Telefon im Hintergrund lassen, wenn Bildschirm aktiv ist. Zeige nur Benachrichtigung und spiele Klingelton</string>
 
     <string name="per_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechslen. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein</string>
@@ -733,14 +718,14 @@
     <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
 
     <!-- TrackBall Answer and Hangup - Added by Nushio -->
-    <string name="trackball_answer">Trackball Annahme</string>
+    <string name="trackball_answer">Trackball-Annahme</string>
     <string name="trackball_answer_sum">Drücke auf den Trackball, um den eingehenden Anruf anzunehmen</string>
     <string-array name="trackballLabels">
         <item>Ausgeschaltet</item>
         <item>Halten zum Annehmen</item>
-        <item>Doppelt drücken zum annehmen</item>
+        <item>Doppelt drücken zum Annehmen</item>
     </string-array>
-    <string name="trackball_hangup">Trackball Auflegen</string>
+    <string name="trackball_hangup">Trackball-Auflegen</string>
     <string name="trackball_hangup_sum">Drücke den Trackball, um das Gespräch zu beenden</string>
     <string-array name="trackballHangupLabels">
        <item>Ausgeschaltet</item>
