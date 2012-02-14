@@ -230,7 +230,7 @@
             android:excludeFromRecents="true"
             android:launchMode="singleInstance"
             android:screenOrientation="nosensor"
-            android:configChanges="orientation|keyboardHidden|uiMode"
+            android:configChanges="keyboardHidden|uiMode"
             android:exported="false">
         </activity>
 
