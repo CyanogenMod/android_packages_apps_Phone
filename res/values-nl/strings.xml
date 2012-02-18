@@ -698,7 +698,7 @@
     <string name="return_home">Altijd terug naar gesprekslijst</string>
     <string name="return_home_sum">Na het ophangen altijd de gesprekkenlijst laten zien.</string>
     <string name="menu_addBlackList">Toevoegen aan zwarte lijst</string>
-    <string name="black_list">Zwarte iljst</string>
+    <string name="black_list">Zwarte lijst</string>
     <string name="black_list_sum">Inkomend gesprek uit zwarte lijst wordt opgehangen.</string>
     <string name="add_black">Nummer toevoegen</string>
     <string name="remove_black">%s van lijst verwijderen</string>
@@ -708,6 +708,10 @@
     <string name="left_hand_sum">Toestel als linkshandige gebruiken (herstart vereist).</string>
     <string name="set_force_touch">Aanraak UI in gesprek</string>
     <string name="set_force_touch_sum">Aanraak UI in gesprek zonder gebruik te maken van proximity sensor.</string>
+    <string name="rotate_incall">Sensorrotatie activeren</string>
+    <string name="rotate_incall_sum">Toestaan om schermweergave tijdens oproep te roteren bij draaien toestel.</string>
+    <string name="bg_incall">Inkomende oproep op achtergrond</string>
+    <string name="bg_incall_sum">Laat inkomende oproep op achtergrond als het scherm aan is, toon enkel notificatie en laat beltoon horen.</string>
 
     <string name="per_change_mobile_network">Verander netwerk (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Applicatie met deze toegang kan op elk moment wisselen tussen 2G en 3G. 3G is sneller, verbruikt meer stroom en kan duurder zijn.</string>
@@ -737,6 +741,9 @@
 
     <string name="voicemail_notification_title">Voicemail notificaties</string>
     <string name="voicemail_notification_summary">Notificaties voor nieuwe voicemails activeren.</string>
+
+    <string name="hide_hold_button">Verberg wacht-knop</string>
+    <string name="hide_hold_button_sum">Verberg de knop die het actieve gesprek in de wacht zet.</string>
 
     <!-- Phone goggles -->
     <string name="toast_phone_goggles">Je bent op dit moment niet gemachtigd om te bellen, probeer het later opnieuw.</string>
