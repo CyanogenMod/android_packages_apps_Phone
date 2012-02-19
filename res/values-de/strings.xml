@@ -749,4 +749,6 @@
     <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
     <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
     <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
+    <string name="perm_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechseln. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein</string>
 </resources>

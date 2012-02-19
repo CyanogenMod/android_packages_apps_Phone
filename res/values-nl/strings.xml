@@ -741,4 +741,6 @@
     <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een oproep.</string>
     <string name="vibrate_call_waiting">Trillen wachten gesprek</string>
     <string name="vibrate_call_waiting_sum">Trillen bij wachten op een gesprek.</string>
+    <string name="perm_change_mobile_network">Verander netwerk (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Applicatie met deze toegang kan op elk moment wisselen tussen 2G en 3G. 3G is sneller, verbruikt meer stroom en kan duurder zijn.</string>
 </resources>

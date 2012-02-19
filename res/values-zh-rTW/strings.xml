@@ -733,4 +733,6 @@
     <string name="vibrate_hangup_sum">通話結束時震動</string>
     <string name="vibrate_call_waiting">來電待接震動</string>
     <string name="vibrate_call_waiting_sum">當有來電待接時震動通知</string>
+    <string name="perm_change_mobile_network">切換行動網路（2G／3G）</string>
+    <string name="perm_change_mobile_network_desc">被授予此權限的應用程式能夠於任何時候在 2G 及 3G 行動網路之間進行切換。使用 3G 行動網路取存資料的速度會比較快，但相對的會消耗較多的電池電量，亦會令您花費較多的金錢。</string>
 </resources>

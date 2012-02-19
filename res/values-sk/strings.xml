@@ -729,4 +729,6 @@
     <string name="vibrate_hangup_sum">Vibrovať pri ukončení hovoru</string>
     <string name="vibrate_call_waiting">Vibrovať pri čakajúcom hovore</string>
     <string name="vibrate_call_waiting_sum">Vibrovať pri čakajúcom hovore</string>
+    <string name="perm_change_mobile_network">Zmeniť sieť (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Aplikácia s týmito povoleniami môže kedykoľvek zmeniť sieť medzi 2G a 3G. 3G je rýchlejšie, viac využíva batériu, a taktiež Vás môže stáť viac peňazí.</string>
 </resources>

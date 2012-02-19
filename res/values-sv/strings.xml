@@ -735,4 +735,6 @@
     <string name="vibrate_hangup_sum">Vibrera när ett samtal har avslutats</string>
     <string name="vibrate_call_waiting">Vibrera vid samtal väntar</string>
     <string name="vibrate_call_waiting_sum">Vibrera när samtal väntar</string>
+    <string name="perm_change_mobile_network">Byt nätverk (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
 </resources>

@@ -729,4 +729,6 @@
     <string name="vibrate_hangup_sum">Сигналізування про завершення виклику вібруванням</string>
     <string name="vibrate_call_waiting">Вібросигнал очікування виклику</string>
     <string name="vibrate_call_waiting_sum">Сигналізування про очікування виклику вібруванням</string>
+    <string name="perm_change_mobile_network">Змінення режиму мережі (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Програма з цими правами може в будь-який момент змінити режим мережі. 3G швидше, але споживає більше енергії, а також може тарифікуватися дорожче.</string>
 </resources>

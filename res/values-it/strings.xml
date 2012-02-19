@@ -733,4 +733,6 @@
     <string name="vibrate_hangup_sum">Vibra quando termini una chiamata</string>
     <string name="vibrate_call_waiting">Vibra quando in attesa</string>
     <string name="vibrate_call_waiting_sum">Vibra quando c\'è una chiamata in attesa</string>
+    <string name="perm_change_mobile_network">Cambia rete (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
 </resources>
