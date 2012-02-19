@@ -621,4 +621,6 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"响铃时振动"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"拨号键盘触摸音效"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"铃声"</string>
+    <string name="perm_change_mobile_network">2G／3G移动网络切换</string>
+    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。使用3G网络存取资料的速度会比较快，但是也会相应消耗比较多的电量并消耗您更多金钱。</string>
 </resources>
