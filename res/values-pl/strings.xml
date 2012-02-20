@@ -713,4 +713,13 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Odpowiedz"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Wyślij SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Odrzuć"</string>
+    
+    <!-- **** CYANOGENMOD EDITS START **** -->
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Wybieranie numeru</string>
+    <string name="dialer_ui_settings_summary">Ustawienia wybierania numeru</string>
+    
+    <string name="phone_number_label">Mój numer</string>
+    <string name="phone_number_summary">Ustaw numer telefoniczny tego urządzenia</string>
+    <!-- **** CYANOGENMOD EDITS END **** -->
 </resources>
