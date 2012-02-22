@@ -531,6 +531,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
             intentFilter.addAction(TelephonyIntents.ACTION_RADIO_TECHNOLOGY_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_SERVICE_STATE_CHANGED);
             intentFilter.addAction(TelephonyIntents.ACTION_EMERGENCY_CALLBACK_MODE_CHANGED);
+            intentFilter.addAction(Intent.ACTION_SCREEN_OFF);
+            intentFilter.addAction(Intent.ACTION_SCREEN_ON);
+
             if (mTtyEnabled) {
                 intentFilter.addAction(TtyIntent.TTY_PREFERRED_MODE_CHANGE_ACTION);
             }
@@ -1516,6 +1519,18 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
                 if (ringerMode == AudioManager.RINGER_MODE_SILENT) {
                     notifier.silenceRinger();
                 }
+            } else if (action.equals(Intent.ACTION_SCREEN_OFF) ||
+                    action.equals(Intent.ACTION_SCREEN_ON)) {
+                  if (VDBG) Log.d(LOG_TAG, "mReceiver: ACTION_SCREEN_OFF / ACTION_SCREEN_ON");
+                  /*
+                   * Disable Accelerometer Listener while in-call and the screen is off.
+                   * This is done to ensure that power consumption is kept to a minimum
+                   * in such a scenario
+                   */
+                  if (mAccelerometerListener != null) {
+                      mAccelerometerListener.enable(mLastPhoneState == Phone.State.OFFHOOK &&
+                              action.equals(Intent.ACTION_SCREEN_ON));
+                  }
             }
         }
     }
