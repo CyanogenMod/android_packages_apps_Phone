@@ -407,6 +407,7 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
      */
     private static void configureLedNotification(Notification note) {
         note.flags |= Notification.FLAG_SHOW_LIGHTS;
+        note.flags |= Notification.FLAG_FORCE_LED_SCREEN_OFF;
         note.defaults |= Notification.DEFAULT_LIGHTS;
     }
 
