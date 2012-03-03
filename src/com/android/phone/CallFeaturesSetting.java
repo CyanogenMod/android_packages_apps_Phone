@@ -146,6 +146,10 @@ public class CallFeaturesSetting extends PreferenceActivity
     private static final String BUTTON_TTY_KEY    = "button_tty_mode_key";
     private static final String BUTTON_HAC_KEY    = "button_hac_key";
 
+    private static final String BUTTON_CALLFORWARD = "button_cf_expand_key";
+    private static final String BUTTON_GSM_UMTS_MORE = "button_more_expand_key";
+    private static final String BUTTON_CDMA_PRIVACY = "button_voice_privacy_key";
+
     private static final String BUTTON_GSM_UMTS_OPTIONS = "button_gsm_more_expand_key";
     private static final String BUTTON_CDMA_OPTIONS = "button_cdma_more_expand_key";
 
@@ -1778,16 +1782,22 @@ public class CallFeaturesSetting extends PreferenceActivity
         mForeground = true;
 
         if (isAirplaneModeOn()) {
-            Preference sipSettings = findPreference(SIP_SETTINGS_CATEGORY_KEY);
-            PreferenceScreen screen = getPreferenceScreen();
-            int count = screen.getPreferenceCount();
-            for (int i = 0 ; i < count ; ++i) {
-                Preference pref = screen.getPreference(i);
-                if (pref != sipSettings) pref.setEnabled(false);
-            }
-            return;
+            Preference button = findPreference(BUTTON_FDN_KEY);
+            if (button != null) button.setEnabled(false);
+            if (mVoicemailProviders != null) mVoicemailProviders.setEnabled(false);
+            if (mVoicemailSettings != null) mVoicemailSettings.setEnabled(false);
+            if (mButtonDTMF != null) mButtonDTMF.setEnabled(false);
+            button = findPreference(BUTTON_CALLFORWARD);
+            if (button != null) button.setEnabled(false);
+            button = findPreference(BUTTON_GSM_UMTS_MORE);
+            if (button != null) button.setEnabled(false);
+            button = findPreference(BUTTON_CDMA_PRIVACY);
+            if (button != null) button.setEnabled(false);
+            button = findPreference(BUTTON_GSM_UMTS_OPTIONS);
+            if (button != null) button.setEnabled(false);
+            button = findPreference(BUTTON_CDMA_OPTIONS);
+            if (button != null) button.setEnabled(false);
         }
-
         if (mButtonNotifications != null) {
             boolean notification =
                 mButtonNotifications.getSharedPreferences()
