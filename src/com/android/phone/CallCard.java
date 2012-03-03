@@ -685,8 +685,13 @@ public class CallCard extends FrameLayout
                         // Display the brief "Hanging up" indication.
                         setUpperTitle(cardTitle, mTextColorDefaultPrimary, state);
                     } else {  // state == Call.State.ACTIVE
-                        // Normal "ongoing call" state; don't use any "title" at all.
-                        clearUpperTitle();
+                        if (mApplication.notifier.isCallHeldRemotely(call)) {
+                            // Show indication that the call is currently waiting
+                            setUpperTitle(cardTitle, mTextColorDefaultPrimary, state);
+                        } else {
+                            // Normal "ongoing call" state; don't use any "title" at all.
+                            clearUpperTitle();
+                        }
                     }
                 }
 
@@ -784,8 +789,13 @@ public class CallCard extends FrameLayout
                     } else {
                         retVal = context.getString(R.string.card_title_in_progress);
                     }
-                } else if ((phoneType == Phone.PHONE_TYPE_GSM)
-                        || (phoneType == Phone.PHONE_TYPE_SIP)) {
+                } else if (phoneType == Phone.PHONE_TYPE_GSM) {
+                    if (mApplication.notifier.isCallHeldRemotely(call)) {
+                        retVal = context.getString(R.string.card_title_waiting_call);
+                    } else {
+                        retVal = context.getString(R.string.card_title_in_progress);
+                    }
+                } else if (phoneType == Phone.PHONE_TYPE_SIP) {
                     retVal = context.getString(R.string.card_title_in_progress);
                 } else {
                     throw new IllegalStateException("Unexpected phone type: " + phoneType);
@@ -1551,6 +1561,10 @@ public class CallCard extends FrameLayout
             //   mCallTypeLabel.setCompoundDrawablesWithIntrinsicBounds(
             //           callTypeSpecificBadge, null, null, null);
             //   mCallTypeLabel.setCompoundDrawablePadding((int) (mDensity * 6));
+        } else if (call != null && mApplication.notifier.isCallForwarded(call)) {
+            mCallTypeLabel.setVisibility(View.VISIBLE);
+            mCallTypeLabel.setText(R.string.incall_call_type_label_forwarded);
+            mCallTypeLabel.setTextColor(mTextColorDefaultSecondary);
         } else {
             mCallTypeLabel.setVisibility(View.GONE);
         }

@@ -1697,6 +1697,14 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
         }
     }
 
+    // Update InCallScreen's call state UI. It is safe to call even if InCallScreen isn't active
+    public void updateInCallScreenCallState() {
+        if (DBG) Log.d(LOG_TAG, "- updateInCallScreenCallState ...");
+        if (mInCallScreen != null) {
+            mInCallScreen.requestUpdateCallState();
+        }
+    }
+
     // Update InCallScreen's touch UI. It is safe to call even if InCallScreen isn't active
     public void updateInCallScreenTouchUi() {
         if (DBG) Log.d(LOG_TAG, "- updateInCallScreenTouchUi ...");

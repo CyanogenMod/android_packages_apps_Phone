@@ -29,6 +29,8 @@ public class GsmUmtsCallOptions extends PreferenceActivity {
     private static final String LOG_TAG = "GsmUmtsCallOptions";
     private final boolean DBG = (PhoneApp.DBG_LEVEL >= 2);
 
+    public static final String SHOW_SSN_KEY = "button_show_ssn_key";
+
     @Override
     protected void onCreate(Bundle icicle) {
         super.onCreate(icicle);
