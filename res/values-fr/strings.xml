@@ -56,6 +56,7 @@
     <string name="callFailed_cdma_preempted" msgid="1097095321180029879">"CDMA : anticipé"</string>
     <string name="callFailed_cdma_notEmergency" msgid="2347377816822720761">"Services d\'urgence uniquement"</string>
     <string name="callFailed_unobtainable_number" msgid="7886274717456712105">"Numéro incorrect"</string>
+    <string name="callUnanswered_forwarded">Appel en absence redirigé</string>
     <string name="confCall" msgid="1904840547188336828">"Conférence tél."</string>
     <string name="call_lost" msgid="317670617901479594">"L\'appel a été perdu."</string>
     <string name="retry" msgid="8462986804300767852">"Réessayer"</string>
@@ -443,6 +444,7 @@
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Fin d\'appel"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Appel en cours"</string>
     <string name="card_title_my_phone_number" msgid="112428362494434191">"Mon numéro est le <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="card_title_waiting_call">Appel mis en attente</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Appel manqué"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Appels manqués"</string>
     <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="NUM_MISSED_CALLS">%s</xliff:g> appels manqués"</string>
@@ -471,6 +473,7 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Impossible de refuser l\'appel."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Impossible de libérer le(s) appel(s)."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Appel Internet"</string>
+    <string name="incall_call_type_label_forwarded">Appel redirigé</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Appel d\'urgence"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Activation du signal radio..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Hors zone de couverture. Nouvelle tentative..."</string>
@@ -698,10 +701,45 @@
     <string name="bg_incall">Appels en arrière plan</string>
     <string name="bg_incall_sum">Ne pas afficher la fenêtre d\'appel lorsque l\'écran est allumé. Affiche uniquement une notification et déclenche la sonnerie</string>
 
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">Redirection des appels active</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">Redirection conditionnelle des appels active</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">Appel sortant redirigé</string>
+    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
+    <string name="call_notif_calliswaiting">Appel mis en attente</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">Appel en groupe CUG</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">Appels sortants restreints</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">Appels entrants restreints</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">Suppression du CLIR rejetée</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">Appel dévié</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">L\'appel entrant est redirigé</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">Appel en mode conférence</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">Fin de la mise en attente</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">Forward Check received</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">Connexion par ECT...</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">Appel ECT établi</string>
+
     <string name="per_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
     <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus</string>
     <string name="phone_number_label">Mon numéro de téléphone</string>
     <string name="phone_number_summary">Régler le numéro d\'appel de ce téléphone</string>
+
+    <string name="show_ssn_label">Notifications</string>
+    <string name="show_ssn_summary">Notifier les événements en rapport avec les appels téléphoniques</string>
 
     <string name="trackball_answer">Trackball pour répondre</string>  
     <string name="trackball_answer_sum">Presser sur le Trackball pour répondre aux appels entrants</string>
