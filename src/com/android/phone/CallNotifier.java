@@ -2077,7 +2077,7 @@ public class CallNotifier extends Handler
     private int getSuppServiceToastTextResId(SuppServiceNotification notification) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mApplication);
 
-        if (!prefs.getBoolean(GsmUmtsCallOptions.SHOW_SSN_KEY, true)) {
+        if (!prefs.getBoolean(GsmUmtsCallOptions.SHOW_SSN_KEY, false)) {
             /* don't show anything if the user doesn't want it */
             return -1;
         }
