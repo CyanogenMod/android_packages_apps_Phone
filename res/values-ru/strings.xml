@@ -715,4 +715,8 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Правильный вариант"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Отправить SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Отклонить"</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Настройки кнопок</string>
+    <string name="dialer_ui_settings_summary">Настройки номеронабирателя</string>
 </resources>
