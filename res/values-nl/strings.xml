@@ -721,7 +721,6 @@
     <string name="fake_phone_activity_phoneNumber_text">(020) 1234567</string>
     <string name="fake_phone_activity_infoText_text">Inkomende telefoonnummer</string>
     <string name="fake_phone_activity_placeCall_text">Valse inkomende oproep</string>
-    <string-array name="dtmf_tone_values">
     <string name="absent_num">AFWEZIGE NUMMER</string>
     <string name="dialer_ui_settings_title">Toetsenblokinstellingen</string>
     <string name="dialer_ui_settings_summary">Instellingen voor het numerieke toetsenblok</string>
