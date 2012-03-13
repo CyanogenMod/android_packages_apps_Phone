@@ -901,19 +901,19 @@
     <!-- Toast text for Conditional Call Forwarding enabled  -->
     <string name="call_notif_conditionalCF">Conditional call forwarding active</string>
     <!-- Toast text for a forwarded MO call  -->
-    <string name="call_notif_MOcall_forwarding">Outgoing forwarded call</string>
+    <string name="call_notif_MOcall_forwarding">Outgoing call is forwarded</string>
     <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
-    <string name="call_notif_calliswaiting">Call is waiting</string>
+    <string name="call_notif_calliswaiting">Remote party is busy, call is waiting</string>
     <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
-    <string name="call_notif_cugcall">CUG call</string>
+    <string name="call_notif_cugcall">Call in closed user group</string>
     <!-- In-call screen: status label when MO calls are barred -->
     <string name="call_notif_outgoing_barred">Outgoing calls barred</string>
     <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
-    <string name="call_notif_incoming_barred">Incoming calls barred</string>
+    <string name="call_notif_incoming_barred">Incoming calls barred at remote party</string>
     <!-- Toast text for MO calls when CLIR Suppression is rejected -->
-    <string name="call_notif_clir_suppression_rejected">CLIR suppression rejected</string>
+    <string name="call_notif_clir_suppression_rejected">Own number suppression rejected by network</string>
     <!-- In-call screen: status label when MO call gets deflected to another party -->
-    <string name="call_notif_call_deflected">Call deflected</string>
+    <string name="call_notif_call_deflected">Call forwarded by remote party</string>
     <!-- Toast text for incoming call being forwarded to other remote party  -->
     <string name="call_notif_MTcall_forwarding">Incoming call is forwarded</string>
     <!-- Toast text for incoming call which is part of MultiParty Call -->
@@ -921,11 +921,11 @@
     <!-- Toast text for incoming call which is answered,put on hold & then released -->
     <string name="call_notif_callonhold_released">Call released remotely</string>
     <!-- Toast text for incoming call forward check received -->
-    <string name="call_notif_forwardcheckreceived">Forward Check received</string>
+    <string name="call_notif_forwardcheckreceived">Call was forwarded</string>
     <!-- Toast text for incoming call connecting through ECT -->
-    <string name="call_notif_callconnectingect">Call connecting through ECT</string>
+    <string name="call_notif_callconnectingect">Call connecting through explicit call transfer</string>
     <!-- Toast text for incoming call connected through ECT -->
-    <string name="call_notif_callconnectedect">Call connected through ECT</string>
+    <string name="call_notif_callconnectedect">Call connected through explicit call transfer</string>
 
     <!-- Notification strings -->
     <!-- Missed call notification label, used when there's exactly one missed call -->
