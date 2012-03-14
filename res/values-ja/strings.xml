@@ -713,4 +713,21 @@
     <string name="description_target_answer" msgid="7205604197797472471">"電話に出る"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"SMSを送信"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"着信拒否"</string>
+
+    <!-- CM Extra entries -->
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">国内データローミング</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">国内ローミング中にデータサービスに接続する</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">国内ローミング中にデータサービスに接続する</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">ダイヤルパッドの設定</string>
+    <string name="dialer_ui_settings_summary">ダイヤルパッドの設定</string>
+
+    <string name="phone_number_label">自分の電話番号</string>
+    <string name="phone_number_summary">この端末に電話番号をセットする</string>
+
 </resources>
+
