@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  Copyright (C) 2007 The Android Open Source Project
+<!-- Copyright (C) 2007, The Android Open Source Project
+     Copyright (C) 2012, The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -58,6 +59,7 @@
     <string name="callFailed_unobtainable_number" msgid="7886274717456712105">"Geçersiz Numara"</string>
     <string name="confCall" msgid="1904840547188336828">"Konferans görüşmesi"</string>
     <string name="call_lost" msgid="317670617901479594">"Çağrı istemeden sonlandırıldı."</string>
+    <string name="callUnanswered_forwarded">Çağrı Cevaplanmadı ve Yönlendirildi</string>
     <string name="retry" msgid="8462986804300767852">"Tekrar Dene"</string>
     <string name="call_lost_title" msgid="6696949678847938515">"Çağrı İstemeden Sonlandırıldı"</string>
     <string name="mmiStarted" msgid="6347869857061147003">"MMI kodu başlatıldı"</string>
@@ -437,12 +439,28 @@
     <string name="card_title_in_progress" msgid="8603765629781648862">"Geçerli çağrı"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Konferans görüşmesi"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Gelen çağrı"</string>
+    <string name="card_title_waiting_call">Bekletilen çağrı</string>
     <string name="card_title_cdma_call_waiting" msgid="4532445524811272644">"Cdma çağrısı beklemede"</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"Çağrı sonlandırıldı"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"Beklemede"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Sonlandırılıyor"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Çağrı halinde"</string>
     <string name="card_title_my_phone_number" msgid="112428362494434191">"Numaram: <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="call_notif_unconditionalCF">Koşulsuz çağrı yönlendirme etkin</string>
+    <string name="call_notif_conditionalCF">Koşullu çağrı yönlendirme etkin</string>
+    <string name="call_notif_MOcall_forwarding">Giden çağrı yönlendiriliyor</string>
+    <string name="call_notif_calliswaiting">Karşı taraf meşgul, çağrı bekletiliyor</string>
+    <string name="call_notif_cugcall">Kapalı kullanıcı grubu araması</string>
+    <string name="call_notif_outgoing_barred">Giden çağrılar engellendi</string>
+    <string name="call_notif_incoming_barred">Gelen çağrılar engellendi</string>
+    <string name="call_notif_clir_suppression_rejected">Numara gizleme şebeke tarafından reddedildi</string>
+    <string name="call_notif_call_deflected">Çağrı karşıdaki kişi tarafından yönlendirildi</string>
+    <string name="call_notif_MTcall_forwarding">Gelen çağrı yönlendiriliyor</string>
+    <string name="call_notif_multipartycall">Konferans çağrı</string>
+    <string name="call_notif_callonhold_released">Çağrı karşı taraftan sonlandırıldı</string>
+    <string name="call_notif_forwardcheckreceived">Yönlendirme Kontrolü kabul edildi</string>
+    <string name="call_notif_callconnectingect">Açık çağrı transferi (ECT) yoluyla çağrı bağlanıyor</string>
+    <string name="call_notif_callconnectedect">Açık çağrı transferi (ECT) yoluyla çağrı bağlandı</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Cevapsız çağrı"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Cevapsız çağrılar"</string>
     <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="NUM_MISSED_CALLS">%s</xliff:g> cevapsız çağrı"</string>
@@ -471,6 +489,7 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Çağrı reddedilemiyor."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Çağrılar serbest bırakılamıyor."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"İnternet çağrısı"</string>
+    <string name="incall_call_type_label_forwarded">Yönlendirilen çağrı</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Acil durum çağrısı"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Radyo açılıyor..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Hizmet alanı dışında, tekrar deneniyor..."</string>
@@ -707,6 +726,8 @@
     <string name="per_change_mobile_network_desc">Bu ayar istediğiniz zaman 2G ve 3G arasında geçiş yapmanızı sağlar. 3G daha hızlıdır ama daha fazla pil tüketir ve ek olarak daha fazla ücret ödemenize sebep olabilir.</string>
     <string name="phone_number_label">Telefon numaram</string>
     <string name="phone_number_summary">Bu cihaz için telefon numarasını ayarlayın</string>
+    <string name="show_ssn_label">Şebeke bildirimleri</string>
+    <string name="show_ssn_summary">Çağrı sırasında şebeke ile ilgili bir olay gerçekleştiğinde (yönlendirildi, bekletiliyor v.b.) bildirim göster</string>
     <string name="trackball_answer">İztopu kabul eder</string>
     <string name="trackball_answer_sum">Gelen telefon çağrısını cevaplamak için iztopuna basın.</string>
     <string-array name="trackballLabels">
