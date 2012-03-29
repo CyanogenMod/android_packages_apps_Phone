@@ -718,4 +718,12 @@
 
     <string name="phone_number_label">我的电话号码</string>
     <string name="phone_number_summary">为该设备设置电话号码</string>
+
+    <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"振动"</string>
+    <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"振动"</string>
+  <string-array name="voicemail_notification_vibrate_when_entries">
+    <item msgid="468237575962916558">"始终"</item>
+    <item msgid="1595097872875714252">"仅在静音时"</item>
+    <item msgid="1458182414036878616">"一律不"</item>
+  </string-array>
 </resources>

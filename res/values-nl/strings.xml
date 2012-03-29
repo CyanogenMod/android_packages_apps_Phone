@@ -724,4 +724,12 @@
     <string name="absent_num">AFWEZIGE NUMMER</string>
     <string name="dialer_ui_settings_title">Toetsenblokinstellingen</string>
     <string name="dialer_ui_settings_summary">Instellingen voor het numerieke toetsenblok</string>
+
+    <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Trillen"</string>
+    <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Trillen"</string>
+  <string-array name="voicemail_notification_vibrate_when_entries">
+    <item msgid="468237575962916558">"Altijd"</item>
+    <item msgid="1595097872875714252">"Alleen indien stil"</item>
+    <item msgid="1458182414036878616">"Nooit"</item>
+  </string-array>
 </resources>

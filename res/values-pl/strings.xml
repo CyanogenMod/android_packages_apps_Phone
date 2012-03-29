@@ -722,4 +722,12 @@
     <string name="phone_number_label">Mój numer</string>
     <string name="phone_number_summary">Ustaw numer telefoniczny tego urządzenia</string>
     <!-- **** CYANOGENMOD EDITS END **** -->
+
+    <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Wibracje"</string>
+    <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Wibracje"</string>
+  <string-array name="voicemail_notification_vibrate_when_entries">
+    <item msgid="468237575962916558">"Zawsze"</item>
+    <item msgid="1595097872875714252">"Tylko po wyciszeniu"</item>
+    <item msgid="1458182414036878616">"Nigdy"</item>
+  </string-array>
 </resources>

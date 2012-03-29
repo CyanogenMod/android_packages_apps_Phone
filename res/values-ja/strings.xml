@@ -729,5 +729,12 @@
     <string name="phone_number_label">自分の電話番号</string>
     <string name="phone_number_summary">この端末に電話番号をセットする</string>
 
+    <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"バイブレーション"</string>
+    <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"バイブレーション"</string>
+  <string-array name="voicemail_notification_vibrate_when_entries">
+    <item msgid="468237575962916558">"常に使用"</item>
+    <item msgid="1595097872875714252">"マナーモード時のみ"</item>
+    <item msgid="1458182414036878616">"使用しない"</item>
+  </string-array>
 </resources>
 
