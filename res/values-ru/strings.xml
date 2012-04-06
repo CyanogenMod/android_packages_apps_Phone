@@ -210,6 +210,9 @@
     <string name="roaming" msgid="8871412572928323707">"Интернет-роуминг"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Подключаться к службам передачи данных в роуминге"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Подключаться к службам передачи данных в роуминге"</string>
+    <string name="national_roaming">Национальный роуминг</string>
+    <string name="national_roaming_enable">Подключаться к службам передачи данных в национальном роуминге</string>
+    <string name="national_roaming_disable">Подключаться к службам передачи данных в национальном роуминге</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Передача данных прекращена, потому что телефон находится за пределами домашней сети, а интернет-роуминг выключен."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Разрешить интернет-роуминг? Возможны высокие расходы за использование роуминга."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Параметры GSM/UMTS"</string>
@@ -726,5 +729,7 @@
     <item msgid="468237575962916558">"Всегда"</item>
     <item msgid="1595097872875714252">"Только в режиме без звука"</item>
     <item msgid="1458182414036878616">"Никогда"</item>
+    <string name="phone_number_label">Мой номер телефона</string>
+    <string name="phone_number_summary">Установка номера телефона для этого устройства</string>
   </string-array>
 </resources>
