@@ -724,4 +724,13 @@
     <item msgid="1595097872875714252">"靜音時才啟用"</item>
     <item msgid="1458182414036878616">"永遠不要"</item>
   </string-array>
+    <string name="advanced_setting">進階設定</string>
+    <string name="vibrate_outgoing">接聽震動</string>
+    <string name="vibrate_outgoing_sum">當對方接聽時震動</string>
+    <string name="vibrate_45">45秒震動</string>
+    <string name="vibrate_45_sum">撥出通話後到45秒時震動</string>
+    <string name="vibrate_hangup">掛斷震動</string>
+    <string name="vibrate_hangup_sum">通話結束時震動</string>
+    <string name="vibrate_call_waiting">來電待接震動</string>
+    <string name="vibrate_call_waiting_sum">當有來電待接時震動通知</string>
 </resources>

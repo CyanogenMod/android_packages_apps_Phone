@@ -726,4 +726,13 @@
     <item msgid="1595097872875714252">"仅在静音时"</item>
     <item msgid="1458182414036878616">"一律不"</item>
   </string-array>
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">接听震动</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_45">45秒震动</string>
+    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_hangup">挂断震动</string>
+    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="vibrate_call_waiting">呼叫等待震动</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
 </resources>

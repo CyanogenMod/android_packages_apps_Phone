@@ -715,11 +715,6 @@
     <string name="description_target_decline" msgid="4789834364389731957">"Recusar"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Vibrar"</string>
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Vibrar"</string>
-    <string-array name="voicemail_notification_vibrate_when_entries">
-        <item msgid="468237575962916558">"Sempre"</item>
-        <item msgid="1595097872875714252">"Apenas quando estiver no silencioso"</item>
-        <item msgid="1458182414036878616">"Nunca"</item>
-    </string-array>
     <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">Roaming de dados nacional</string>
     <!-- Mobile network settings screen, setting summary text when check box is selected -->
@@ -731,4 +726,18 @@
     <!-- Dialer UI Settings -->
     <string name="dialer_ui_settings_title">Teclado</string>
     <string name="dialer_ui_settings_summary">Configurações do teclado</string>
+  <string-array name="voicemail_notification_vibrate_when_entries">
+    <item msgid="468237575962916558">"Sempre"</item>
+    <item msgid="1595097872875714252">"Apenas quando estiver no silencioso"</item>
+    <item msgid="1458182414036878616">"Nunca"</item>
+  </string-array>
+    <string name="advanced_setting">Configuração avançada</string>
+    <string name="vibrate_outgoing">Vibrar ao atender</string>
+    <string name="vibrate_outgoing_sum">Vibra quando a chamada efetuada é atendida</string>
+    <string name="vibrate_45">Vibrar a cada 45 segundos</string>
+    <string name="vibrate_45_sum">Vibrar aos 45 segundos de cada minuto durante chamada efetuada</string>
+    <string name="vibrate_hangup">Vibrar ao desligar</string>
+    <string name="vibrate_hangup_sum">Vibra quando a chamada é desligada</string>
+    <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>
+    <string name="vibrate_call_waiting_sum">Vibra quando existem chamadas em espera</string>
 </resources>

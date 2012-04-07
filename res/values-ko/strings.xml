@@ -720,4 +720,13 @@
     <item msgid="1595097872875714252">"무음 시에만"</item>
     <item msgid="1458182414036878616">"사용 안함"</item>
   </string-array>
+    <string name="advanced_setting">고급 설정</string>
+    <string name="vibrate_outgoing">통화 시작 시 진동</string>
+    <string name="vibrate_outgoing_sum">통화가 시작되었을 때 진동합니다. </string>
+    <string name="vibrate_45">45초마다 진동</string>
+    <string name="vibrate_45_sum">거는 통화일 때 45초마다 진동합니다.</string>
+    <string name="vibrate_hangup">통화 종료 시 진동</string>
+    <string name="vibrate_hangup_sum">통화가 끝났을 때 진동합니다.</string>
+    <string name="vibrate_call_waiting">통화 중 대기시 진동</string>
+    <string name="vibrate_call_waiting_sum">통화 중 대기가 있을 경우 진동합니다.</string>
 </resources>

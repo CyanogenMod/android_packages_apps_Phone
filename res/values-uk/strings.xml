@@ -720,4 +720,13 @@
     <item msgid="1595097872875714252">"Лише в беззвуч. реж."</item>
     <item msgid="1458182414036878616">"Ніколи"</item>
   </string-array>
+    <string name="advanced_setting">Додаткові налаштування</string>
+    <string name="vibrate_outgoing">Вібросигнал відповіді</string>
+    <string name="vibrate_outgoing_sum">Сигналізування про відповідь на виклик вібруванням</string>
+    <string name="vibrate_45">Вібросигнал кожні 45 секунд</string>
+    <string name="vibrate_45_sum">Вібрування кожні 45 секунд під час вихідного виклику</string>
+    <string name="vibrate_hangup">Вібросигнал роз\u2019єднання</string>
+    <string name="vibrate_hangup_sum">Сигналізування про завершення виклику вібруванням</string>
+    <string name="vibrate_call_waiting">Вібросигнал очікування виклику</string>
+    <string name="vibrate_call_waiting_sum">Сигналізування про очікування виклику вібруванням</string>
 </resources>

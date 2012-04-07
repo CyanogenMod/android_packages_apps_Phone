@@ -726,4 +726,13 @@
     <item msgid="1595097872875714252">"Bara vid tyst"</item>
     <item msgid="1458182414036878616">"Aldrig"</item>
   </string-array>
+    <string name="advanced_setting">Avancerade inställningar</string>
+    <string name="vibrate_outgoing">Vibrera vid svar</string>
+    <string name="vibrate_outgoing_sum">Vibrera när du svarar på ett samtal</string>
+    <string name="vibrate_45">Vibrera var 45:e sekund</string>
+    <string name="vibrate_45_sum">Vibrera var 45:e sekund under utgående samtal</string>
+    <string name="vibrate_hangup">Vibrera vid avslut</string>
+    <string name="vibrate_hangup_sum">Vibrera när ett samtal har avslutats</string>
+    <string name="vibrate_call_waiting">Vibrera vid samtal väntar</string>
+    <string name="vibrate_call_waiting_sum">Vibrera när samtal väntar</string>
 </resources>

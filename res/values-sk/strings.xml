@@ -720,4 +720,13 @@
     <item msgid="1595097872875714252">"Iba v tichom režime"</item>
     <item msgid="1458182414036878616">"Nikdy"</item>
   </string-array>
+    <string name="advanced_setting">Rozšírené Nastavenia</string>
+    <string name="vibrate_outgoing">Vibrovať pri odpovedi</string>
+    <string name="vibrate_outgoing_sum">Vibrovať keď je hovor zodvihnutý</string>
+    <string name="vibrate_45">Vibrovať každých 45 sekúnd</string>
+    <string name="vibrate_45_sum">Vibrovať každých 45 sekúnd počas odchádzajúceho hovoru</string>
+    <string name="vibrate_hangup">Vibrovať pri zložení</string>
+    <string name="vibrate_hangup_sum">Vibrovať pri ukončení hovoru</string>
+    <string name="vibrate_call_waiting">Vibrovať pri čakajúcom hovore</string>
+    <string name="vibrate_call_waiting_sum">Vibrovať pri čakajúcom hovore</string>
 </resources>

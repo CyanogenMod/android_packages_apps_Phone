@@ -732,4 +732,13 @@
     <item msgid="1595097872875714252">"Alleen indien stil"</item>
     <item msgid="1458182414036878616">"Nooit"</item>
   </string-array>
+    <string name="advanced_setting">Geavanceerde instellingen</string>
+    <string name="vibrate_outgoing">Trillen bij vibreren</string>
+    <string name="vibrate_outgoing_sum">Trillen wanneer oproep aangenomen wordt.</string>
+    <string name="vibrate_45">Tril elke 45 seconden</string>
+    <string name="vibrate_45_sum">Tril elke 45 seconden bij uitgaande oproepen.</string>
+    <string name="vibrate_hangup">Trillen bij ophangen</string>
+    <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een oproep.</string>
+    <string name="vibrate_call_waiting">Trillen wachten gesprek</string>
+    <string name="vibrate_call_waiting_sum">Trillen bij wachten op een gesprek.</string>
 </resources>

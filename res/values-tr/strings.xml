@@ -720,4 +720,13 @@
     <item msgid="1595097872875714252">"Yalnızca sessizken"</item>
     <item msgid="1458182414036878616">"Hiçbir zaman"</item>
   </string-array>
+    <string name="advanced_setting">Gelişmiş Ayarlar</string>
+    <string name="vibrate_outgoing">Cevap verince titret</string>
+    <string name="vibrate_outgoing_sum">Bir çağrıya cevap verildiğinde titret</string>
+    <string name="vibrate_45">Her 45 saniyede titret</string>
+    <string name="vibrate_45_sum">Giden çağrı sırasında her 45 saniyede titret</string>
+    <string name="vibrate_hangup">Çağrı sonlanırsa titret</string>
+    <string name="vibrate_hangup_sum">Çağrı sonlandığında titret</string>
+    <string name="vibrate_call_waiting">Çağrı bekletilirse titret</string>
+    <string name="vibrate_call_waiting_sum">Çağrı bekletildiğinde titret</string>
 </resources>

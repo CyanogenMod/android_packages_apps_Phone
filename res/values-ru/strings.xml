@@ -733,4 +733,13 @@
     <item msgid="1595097872875714252">"Только в режиме без звука"</item>
     <item msgid="1458182414036878616">"Никогда"</item>
   </string-array>
+    <string name="advanced_setting">Дополнительные настройки</string>
+    <string name="vibrate_outgoing">Вибрировать при ответе</string>
+    <string name="vibrate_outgoing_sum">Вибрировать когда на звонок отвечают</string>
+    <string name="vibrate_45">Вибрировать каждые 45с</string>
+    <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течении исходящего звонка</string>
+    <string name="vibrate_hangup">Вибрировать при отбое</string>
+    <string name="vibrate_hangup_sum">Вибрировать когда разговор окончен</string>
+    <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
+    <string name="vibrate_call_waiting_sum">Вибрировать при ожидании на линии</string>
 </resources>

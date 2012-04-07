@@ -740,4 +740,13 @@
     <item msgid="1595097872875714252">"Nur im Lautlos-Modus"</item>
     <item msgid="1458182414036878616">"Nie"</item>
   </string-array>
+    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="vibrate_outgoing">Vibriere bei Annahme</string>
+    <string name="vibrate_outgoing_sum">Vibriere, wenn Anruf angenommen wurde</string>
+    <string name="vibrate_45">Vibriere alle 45 Sekunden</string>
+    <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe</string>
+    <string name="vibrate_hangup">Vibriere bei Auflegen</string>
+    <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
+    <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
+    <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
 </resources>
