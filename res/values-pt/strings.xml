@@ -715,9 +715,20 @@
     <string name="description_target_decline" msgid="4789834364389731957">"Recusar"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Vibrar"</string>
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Vibrar"</string>
-  <string-array name="voicemail_notification_vibrate_when_entries">
-    <item msgid="468237575962916558">"Sempre"</item>
-    <item msgid="1595097872875714252">"Apenas quando estiver no silencioso"</item>
-    <item msgid="1458182414036878616">"Nunca"</item>
-  </string-array>
+    <string-array name="voicemail_notification_vibrate_when_entries">
+        <item msgid="468237575962916558">"Sempre"</item>
+        <item msgid="1595097872875714252">"Apenas quando estiver no silencioso"</item>
+        <item msgid="1458182414036878616">"Nunca"</item>
+    </string-array>
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Roaming de dados nacional</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
+    <string name="phone_number_label">Meu número de telefone</string>
+    <string name="phone_number_summary">Definir o número de telefone para este dispositivo</string>
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Teclado</string>
+    <string name="dialer_ui_settings_summary">Configurações do teclado</string>
 </resources>
