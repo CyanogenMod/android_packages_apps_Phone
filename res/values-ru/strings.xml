@@ -191,19 +191,26 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Предпочтительная сеть: только CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Предпочтительная сеть: только EvDo"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Предпочтительная сеть: LTE или CDMA"</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Предпочтительная сеть: LTE или WCDMA или GSM</string>
   <string-array name="preferred_network_mode_choices">
+    <item>LTE/WCDMA/GSM</item>
+    <item>LTE/CDMA/EvDo</item>
     <item msgid="5886604709726177211">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"Только EvDo"</item>
     <item msgid="454610224530856274">"CDMA без EvDo"</item>
-    <item msgid="8928247118825616081">"CDMA / EvDo (автоматический режим)"</item>
-    <item msgid="8595462903294812666">"GSM / WCDMA (автоматический режим)"</item>
+    <item msgid="8928247118825616081">"CDMA/EvDo (автоматический режим)"</item>
+    <item msgid="8595462903294812666">"GSM/WCDMA (автоматический режим)"</item>
     <item msgid="5189164180446264504">"Только WCDMA"</item>
     <item msgid="5714714953966979187">"Только GSM"</item>
-    <item msgid="4775796025725908913">"GSM / WCDMA (предпочтительная сеть)"</item>
+    <item msgid="4775796025725908913">"GSM/WCDMA (предпочтительная сеть)"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte">
     <item msgid="7345284701413565429">"LTE/CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
+  </string-array>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>LTE/GSM</item>
+    <item>GSM</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Передача данных"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Разрешить передачу данных по сети мобильной связи"</string>
@@ -719,6 +726,9 @@
     <string name="description_target_send_sms" msgid="2098326025587950144">"Отправить SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Отклонить"</string>
 
+    <string name="perm_change_mobile_network">Изменение сети (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Данная настройка может в любое время изменить 2G на 3G. 3G быстрее, потребляет больше батареи, а также может потратить ваши деньги.</string>
+
     <!-- Dialer UI Settings -->
     <string name="dialer_ui_settings_title">Настройки кнопок</string>
     <string name="dialer_ui_settings_summary">Настройки номеронабирателя</string>
@@ -736,7 +746,7 @@
     <string name="advanced_setting">Дополнительные настройки</string>
     <string name="vibrate_outgoing">Вибрировать при ответе</string>
     <string name="vibrate_outgoing_sum">Вибрировать когда на звонок отвечают</string>
-    <string name="vibrate_45">Вибрировать каждые 45с</string>
+    <string name="vibrate_45">Вибрировать каждые 45 сек</string>
     <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течении исходящего звонка</string>
     <string name="vibrate_hangup">Вибрировать при отбое</string>
     <string name="vibrate_hangup_sum">Вибрировать когда разговор окончен</string>
