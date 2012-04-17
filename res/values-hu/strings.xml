@@ -587,6 +587,12 @@
     <string name="voicemail_settings_for" msgid="9018656268027893088">"<xliff:g id="PROVIDER_NAME">%s</xliff:g> - Beállítások"</string>
     <string name="other_settings" msgid="3672912580359716394">"Egyéb hívásbeállítások"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Tárcsázás"</string>
+
+    <!-- 20120417 -->
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Tárcsázó beállítások</string>
+    <string name="dialer_ui_settings_summary">Tárcsázó beállításai</string>
+
     <string name="calling_via_template" msgid="7374498518104190489">"Hívás a következőn keresztül: ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Húzza jobbra a hívás fogadásához"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Húzza balra a csörgés elnémításához"</string>
@@ -715,6 +721,11 @@
     <string name="description_target_decline" msgid="4789834364389731957">"Elutasítás"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Rezgés"</string>
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Rezgés"</string>
+
+    <!-- 20120417 -->
+    <string name="phone_number_label">Saját telefonszámom</string>
+    <string name="phone_number_summary">Állítsd be a készülékhez tartozó telefonszámot</string>
+
   <string-array name="voicemail_notification_vibrate_when_entries">
     <item msgid="468237575962916558">"Mindig"</item>
     <item msgid="1595097872875714252">"Csak néma üzemmódban"</item>
