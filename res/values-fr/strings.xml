@@ -210,6 +210,9 @@
     <string name="roaming" msgid="8871412572928323707">"Itinérance des données"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Se connecter aux services de données lors de l\'itinérance"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Se connecter aux services de données lors de l\'itinérance"</string>
+    <string name="national_roaming">"Itinérance nationale"</string>
+    <string name="national_roaming_enable">"Se connecter aux services de données lors de l\'itinérance à l\'intérieur du pays"</string>
+    <string name="national_roaming_disable">"Se connecter aux services de données lors de l\'itinérance à l\'intérieur du pays"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Vous avez été déconnecté car vous avez quitté votre réseau alors que l\'itinérance des données était désactivée."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Autoriser l\'itinérance des données ? Des frais d\'itinérance importants peuvent s\'appliquer !"</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Options GSM/UMTS"</string>
@@ -587,6 +590,8 @@
     <string name="voicemail_settings_for" msgid="9018656268027893088">"Paramètres pour <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="other_settings" msgid="3672912580359716394">"Autres paramètres d\'appel"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Composer"</string>
+    <string name="dialer_ui_settings_title">"Paramètres du clavier"</string>
+    <string name="dialer_ui_settings_summary">"Paramètres pour le clavier téléphonique"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Appel via ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Déplacer vers la droite pour répondre"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Déplacer vers la gauche pour passer en mode silencieux"</string>
@@ -713,6 +718,8 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Réponse"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Envoyer un SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Refuser"</string>
+    <string name="phone_number_label">"Mon numéro de téléphone"</string>
+    <string name="phone_number_summary">"Régler le numéro d\'appel de ce téléphone"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Vibreur"</string>
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Vibreur"</string>
   <string-array name="voicemail_notification_vibrate_when_entries">
