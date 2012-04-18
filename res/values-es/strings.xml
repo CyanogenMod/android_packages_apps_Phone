@@ -191,7 +191,10 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Modo de red preferido: solo CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Modo de red preferida: solo EvDo"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Modo de red preferido: LTE / CDMA"</string>
+    <string name="preferred_network_mode_lte_gsm_summary">"Modo de red preferido: LTE / WCDMA / GSM"</string>
   <string-array name="preferred_network_mode_choices">
+    <item>"LTE / WCDMA / GSM"</item>
+    <item>"LTE / CDMA / EvDo"</item>
     <item msgid="5886604709726177211">"LTE / CDMA"</item>
     <item msgid="3273348576277144124">"Solo EvDo"</item>
     <item msgid="454610224530856274">"CDMA sin EvDo"</item>
@@ -205,11 +208,18 @@
     <item msgid="7345284701413565429">"LTE / CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
   </string-array>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>"LTE / GSM"</item>
+    <item>"GSM"</item>
+  </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Habilitar datos"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Permitir el acceso a los datos a través de la red móvil"</string>
     <string name="roaming" msgid="8871412572928323707">"Itinerancia de datos"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Establecer conexión con servicios de datos en itinerancia"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Establecer conexión con servicios de datos en itinerancia"</string>
+    <string name="national_roaming">"Datos en itinerancia nacional"</string>
+    <string name="national_roaming_enable">"Establecer conexión con servicios de datos en itinerancia nacional"</string>
+    <string name="national_roaming_disable">"Establecer conexión con servicios de datos en itinerancia nacional"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Has perdido la conectividad de datos porque has dejado desactivada la itinerancia de datos de tu red doméstica."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"¿Permitir itinerancia de datos? Los costes de itinerancia que deberás asumir pueden ser significativos."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Opciones GSM/UMTS"</string>
@@ -220,12 +230,8 @@
     <string name="throttle_time_frame" msgid="1915198770363734685">"Período uso datos"</string>
     <string name="throttle_rate" msgid="4710388992676803508">"Política velocidad datos"</string>
     <string name="throttle_help" msgid="243651091785169900">"Más información"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for throttle_status_subtext (1657318943142085170) -->
-    <skip />
-    <!-- String.format failed for translation -->
-    <!-- no translation found for throttle_data_usage_subtext (6029276011123694701) -->
-    <skip />
+    <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) de <xliff:g id="used">%3$s</xliff:g> del máximo para el período.\nEl próximo período comienza en <xliff:g id="used">%4$d</xliff:g> días (<xliff:g id="used">%5$s</xliff:g>)</string>
+    <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) de <xliff:g id="used">%3$s</xliff:g> del máximo para el período.</string>
     <string name="throttle_data_rate_reduced_subtext" msgid="7492763592720107737">"Máx de <xliff:g id="USED_0">%1$s</xliff:g> superado."\n"Frec datos reducida a <xliff:g id="USED_1">%2$d</xliff:g> Kb/s"</string>
     <string name="throttle_time_frame_subtext" msgid="7732763021560399960">"<xliff:g id="USED_0">%1$d</xliff:g>% del ciclo transcurrido."\n"Próx período en <xliff:g id="USED_1">%2$d</xliff:g> días (<xliff:g id="USED_2">%3$s</xliff:g>)"</string>
     <string name="throttle_rate_subtext" msgid="2149102656120726855">"Frec datos se reduce a <xliff:g id="USED">%1$d</xliff:g> Kb/s si se supera límite uso datos"</string>
@@ -457,6 +463,9 @@
     <string name="doneButton" msgid="2859593360997984240">"Listo"</string>
     <string name="caller_manage_header" msgid="3231519674734638786">"Conferencia telefónica<xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Volver a la llamada"</string>
+    <string name="fake_phone_activity_phoneNumber_text">"(650) 555-1234"</string>
+    <string name="fake_phone_activity_infoText_text">"Número de teléfono entrante"</string>
+    <string name="fake_phone_activity_placeCall_text">"Llamada entrante falsa"</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continuar sin tarjeta SIM"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"No se ha encontrado ninguna tarjeta SIM. Inserta una tarjeta SIM en el teléfono."</string>
     <string name="sim_unlock_dismiss_text" msgid="8292343981739813597">"Descartar"</string>
@@ -591,6 +600,8 @@
     <string name="voicemail_settings_for" msgid="9018656268027893088">"Configuración de <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="other_settings" msgid="3672912580359716394">"Otras opciones de llamada"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Llamar"</string>
+    <string name="dialer_ui_settings_title">"Ajustes de marcación"</string>
+    <string name="dialer_ui_settings_summary">"Ajustes del teclado de marcación"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Llamando a través de ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Arrastrar a la derecha para responder"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Arrastrar a la izquierda para silenciar el timbre"</string>
@@ -717,6 +728,8 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Responder"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Enviar SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Rechazar"</string>
+    <string name="phone_number_label">"Mi número de teléfono"</string>
+    <string name="phone_number_summary">"Establecer el número de teléfono para este dispositivo"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Vibrar"</string>
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Vibración"</string>
   <string-array name="voicemail_notification_vibrate_when_entries">
