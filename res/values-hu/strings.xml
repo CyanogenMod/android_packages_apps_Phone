@@ -212,6 +212,12 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Csatlakozás adatszolgáltatásokhoz barangolás során"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Megszakadt az adatkapcsolat, mert elhagyta az otthoni hálózatot, és az adatbarangolás nincs bekapcsolva."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Engedélyezi az adatbarangolást? Lehet, hogy jelentős összeget számítanak fel érte!"</string>
+    <!-- 20120418 -->
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Nemzeti adatbarangolás</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Csatlakozzon adatszolgáltatásokhoz nemzeti barangolás során</string>
+    <string name="national_roaming_disable">Ne csatlakozzon adatszolgáltatásokhoz nemzeti barangolás során</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTS beállítások"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA-beállítások"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Adathasználat"</string>
@@ -329,10 +335,10 @@
     <item msgid="1268081943590316978">"2"</item>
     <item msgid="4469871047641902607">"3"</item>
   </string-array>
-    <string name="prefer_2g" msgid="8442550937280449639">"Csak 2G hálózatok használata"</string>
-    <string name="prefer_2g_summary" msgid="1976491403210690759">"Spórol az energiával"</string>
+    <string name="prefer_2g" msgid="8442550937280449639">"Csak 2G hálózatok"</string>
+    <string name="prefer_2g_summary" msgid="1976491403210690759">"Csak 2G hálózatok használata (spórol az energiával)"</string>
     <string name="cdma_system_select_title" msgid="5757657769327732833">"Rendszer kiválasztása"</string>
-    <string name="cdma_system_select_summary" msgid="2528661990595284707">"A cdma barangolási mód megváltoztatása"</string>
+    <string name="cdma_system_select_summary" msgid="2528661990595284707">"A CDMA barangolási mód megváltoztatása"</string>
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Rendszer kiválasztása"</string>
   <string-array name="cdma_system_select_choices">
     <item msgid="176474317493999285">"Csak otthoni"</item>
@@ -725,6 +731,12 @@
     <!-- 20120417 -->
     <string name="phone_number_label">Saját telefonszámom</string>
     <string name="phone_number_summary">Állítsd be a készülékhez tartozó telefonszámot</string>
+    <!-- 20120420 -->
+    <string name="preferred_network_mode_lte_gsm_summary">Preferált hálózati mód: LTE / WCDMA / GSM</string>
+    <string name="absent_num">HIÁNYZÓ SZÁM</string>
+    <string name="fake_phone_activity_infoText_text">Bejövő álhívás száma</string>
+    <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
+    <string name="fake_phone_activity_placeCall_text">Bejövő álhívás</string>
 
   <string-array name="voicemail_notification_vibrate_when_entries">
     <item msgid="468237575962916558">"Mindig"</item>
