@@ -168,7 +168,7 @@ public class CallNotifier extends Handler
     private boolean mHasRingingCall;
 
     private boolean mNextGsmCallIsForwarded;
-    private Set<Call> mForwardedCalls;
+    private Set<Connection> mForwardedCalls;
     private Set<Call> mWaitingCalls;
 
     // ToneGenerator instance for playing SignalInfo tones
@@ -209,7 +209,7 @@ public class CallNotifier extends Handler
         mCM = app.mCM;
         mCallLog = callLog;
 
-        mForwardedCalls = new HashSet<Call>();
+        mForwardedCalls = new HashSet<Connection>();
         mWaitingCalls = new HashSet<Call>();
 
         mAudioManager = (AudioManager) mApplication.getSystemService(Context.AUDIO_SERVICE);
@@ -242,7 +242,13 @@ public class CallNotifier extends Handler
     }
 
     public boolean isCallForwarded(Call call) {
-        return mForwardedCalls.contains(call);
+        for (Connection c : mForwardedCalls) {
+            if (call.hasConnection(c)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     public boolean isCallHeldRemotely(Call call) {
@@ -412,7 +418,7 @@ public class CallNotifier extends Handler
         Phone phone = ringing.getPhone();
 
         if (phone.getPhoneType() == Phone.PHONE_TYPE_GSM && mNextGsmCallIsForwarded) {
-            mForwardedCalls.add(ringing);
+            mForwardedCalls.add(c);
             mNextGsmCallIsForwarded = false;
         }
 
@@ -994,9 +1000,8 @@ public class CallNotifier extends Handler
         }
 
         if (c != null) {
-            Call call = c.getCall();
-            mForwardedCalls.remove(call);
-            mWaitingCalls.remove(call);
+            mForwardedCalls.remove(c);
+            mWaitingCalls.remove(c.getCall());
         }
 
         mCdmaVoicePrivacyState = false;
@@ -2047,9 +2052,10 @@ public class CallNotifier extends Handler
         if (notification.notificationType == SuppServiceNotification.NOTIFICATION_TYPE_MT) {
             if (notification.code == SuppServiceNotification.MT_CODE_FORWARDED_CALL
                     || notification.code == SuppServiceNotification.MT_CODE_DEFLECTED_CALL) {
-                Call ringing = PhoneUtils.getGsmPhone(mCM).getRingingCall();
+                Phone gsmPhone = PhoneUtils.getGsmPhone(mCM);
+                Call ringing = gsmPhone.getRingingCall();
                 if (ringing.getState().isRinging()) {
-                    mForwardedCalls.add(ringing);
+                    mForwardedCalls.add(PhoneUtils.getConnection(gsmPhone, ringing));
                 } else {
                     mNextGsmCallIsForwarded = true;
                 }
