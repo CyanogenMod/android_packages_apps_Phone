@@ -191,7 +191,10 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Modalità di rete preferita: solo CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Modalità di rete preferita: solo EvDo"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Modalità di rete preferita: LTE/CDMA"</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE/WCDMA/GSM</string>
   <string-array name="preferred_network_mode_choices">
+    <item>LTE/WCDMA/GSM</item>
+    <item>LTE/CDMA/EvDo</item>
     <item msgid="5886604709726177211">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"Solo EvDo"</item>
     <item msgid="454610224530856274">"CDMA senza EvDo"</item>
@@ -205,11 +208,18 @@
     <item msgid="7345284701413565429">"LTE/CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
   </string-array>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>LTE/GSM</item>
+    <item>GSM</item>
+  </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Dati attivati"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Attiva l\'accesso ai dati sulla rete cellulare"</string>
     <string name="roaming" msgid="8871412572928323707">"Roaming dati"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Connessione a servizi di dati in caso di roaming"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Connessione a servizi di dati in roaming"</string>
+    <string name="national_roaming">"Roaming dati nazionale"</string>
+    <string name="national_roaming_enable">"Connessione a servizi di dati in roaming nazionale" </string>
+    <string name="national_roaming_disable">"Connessione a servizi di dati in roaming nazionale"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Connettività dati persa: hai lasciato la rete del tuo operatore con il roaming dati disattivato."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Consentire il roaming dati? I costi potrebbero essere elevati."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Opzioni GSM/UMTS"</string>
@@ -220,12 +230,8 @@
     <string name="throttle_time_frame" msgid="1915198770363734685">"Periodo utilizzo dati"</string>
     <string name="throttle_rate" msgid="4710388992676803508">"Norme velocità dati"</string>
     <string name="throttle_help" msgid="243651091785169900">"Ulteriori informazioni"</string>
-    <!-- String.format failed for translation -->
-    <!-- no translation found for throttle_status_subtext (1657318943142085170) -->
-    <skip />
-    <!-- String.format failed for translation -->
-    <!-- no translation found for throttle_data_usage_subtext (6029276011123694701) -->
-    <skip />
+    <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo del periodo\nIl periodo successivo comincierà fra <xliff:g id="used">%4$d</xliff:g> giorni (<xliff:g id="used">%5$s</xliff:g>)</string>
+    <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo dell\'intervallo</string>
     <string name="throttle_data_rate_reduced_subtext" msgid="7492763592720107737">"<xliff:g id="USED_0">%1$s</xliff:g> max superato"\n"Velocità dati ridotta a <xliff:g id="USED_1">%2$d</xliff:g> Kb/s"</string>
     <string name="throttle_time_frame_subtext" msgid="7732763021560399960">"<xliff:g id="USED_0">%1$d</xliff:g>% del ciclo trascorso"\n"Il periodo succ. inizia tra <xliff:g id="USED_1">%2$d</xliff:g> gg (<xliff:g id="USED_2">%3$s</xliff:g>)"</string>
     <string name="throttle_rate_subtext" msgid="2149102656120726855">"Velocità dati ridotta a <xliff:g id="USED">%1$d</xliff:g> Kb/s se limite utilizzo dati superato"</string>
@@ -457,6 +463,9 @@
     <string name="doneButton" msgid="2859593360997984240">"Fine"</string>
     <string name="caller_manage_header" msgid="3231519674734638786">"Audioconferenza <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Torna a chiamata"</string>
+    <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
+    <string name="fake_phone_activity_infoText_text">Numero di telefono in entrata</string>
+    <string name="fake_phone_activity_placeCall_text">Chiamata in arrivo falsa</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continua senza SIM"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"Nessuna SIM trovata. Inserisci una SIM nel telefono."</string>
     <string name="sim_unlock_dismiss_text" msgid="8292343981739813597">"Chiudi"</string>
@@ -591,6 +600,8 @@
     <string name="voicemail_settings_for" msgid="9018656268027893088">"Impostazioni per <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="other_settings" msgid="3672912580359716394">"Altre impostazioni chiamate"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Componi"</string>
+    <string name="dialer_ui_settings_title">"Impostazioni tastierino"</string>
+    <string name="dialer_ui_settings_summary">"Impostazioni per il tastierino"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Chiamata in corso tramite ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Trascina a destra per rispondere"</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Trascina a sinistra per disattivare la suoneria"</string>
@@ -717,6 +728,8 @@
     <string name="description_target_answer" msgid="7205604197797472471">"Rispondi"</string>
     <string name="description_target_send_sms" msgid="2098326025587950144">"Invia SMS"</string>
     <string name="description_target_decline" msgid="4789834364389731957">"Rifiuta"</string>
+    <string name="phone_number_label">"Il mio numero di telefono"</string>
+    <string name="phone_number_summary">"Imposta il numero di telefono per questo terminale"</string>
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Vibrazione"</string>
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Vibrazione"</string>
   <string-array name="voicemail_notification_vibrate_when_entries">
@@ -728,11 +741,12 @@
     <string name="vibrate_outgoing">Vibra alla risposta</string>
     <string name="vibrate_outgoing_sum">Vibra quando rispondi a una chiamata</string>
     <string name="vibrate_45">Vibra ogni 45 sec</string>
-   <string name="vibrate_45_sum">Vibra ogni 45 secondi durante le chiamate in uscita</string>
+    <string name="vibrate_45_sum">Vibra ogni 45 secondi durante le chiamate in uscita</string>
     <string name="vibrate_hangup">Vibra al termine</string>
     <string name="vibrate_hangup_sum">Vibra quando termini una chiamata</string>
     <string name="vibrate_call_waiting">Vibra quando in attesa</string>
     <string name="vibrate_call_waiting_sum">Vibra quando c\'è una chiamata in attesa</string>
     <string name="perm_change_mobile_network">Cambia rete (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
+
 </resources>
