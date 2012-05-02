@@ -684,6 +684,8 @@
     <string name="black_list_sum">A Feketelista bejövő hívásai elutasításra kerülnek.</string>
     <string name="add_black">Telefonszám hozzáadása</string>
     <string name="remove_black">%s eltávolítása a listáról</string>
+    <string name="black_regex_title">Karakterek használata</string>
+    <string name="black_regex_summary">Használja a .* karaktereket egyszerre az ismétlődésekhez. Pl.: 123.* blokkolja az 123-al kezdődő telefonszámokat és a .*123.* blokkolja az 123-at tartalmazó telefonszámokat</string>
     <string name="turn_silence">Elnémítás fordítással</string>
     <string name="turn_silence_sum">Csengetés közben átfordítva a másik oldalára néma üzemmódba kerül.</string>
     <string name="left_hand">Balkezes mód</string>
