@@ -723,6 +723,10 @@
 
     <string name="phone_number_label">Mio numero</string>
     <string name="phone_number_summary">Imposta il numero di telefono per questo dispositivo</string>
+
+    <string name="show_ssn_label">Eventi di notifica</string>
+    <string name="show_ssn_summary">Visualizza una notifica per vari eventi della rete relativi alla gestione delle chiamate</string>
+
     <!-- TrackBall Answer - Added by Nushio -->
     <string name="trackball_answer">Rispondi con Trackball</string>
     <string name="trackball_answer_sum">Premi la Trackball per Rispondere alle Chiamate in Arrivo.</string>
