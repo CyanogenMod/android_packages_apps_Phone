@@ -720,4 +720,27 @@
     <item msgid="1595097872875714252">"במצב שקט בלבד"</item>
     <item msgid="1458182414036878616">"אף פעם"</item>
   </string-array>
+    <string name="vibrate_call_waiting_sum">"רטט בזמן שיחה ממתינה"</string>
+    <string name="vibrate_hangup_sum">"רטט כששיחה מסתיימת"</string>
+    <string name="vibrate_call_waiting">"רטט בשיחה ממתינה"</string>
+    <string name="vibrate_45_sum">"רטט ב45 שניות של כל דקה בזמן שיחות יוצאות"</string>
+    <string name="vibrate_hangup">"רטט בניתוק שיחה"</string>
+    <string name="vibrate_outgoing_sum">"רטט כששיחה נכנסת נענית"</string>
+    <string name="vibrate_45">"רטט כל 45 שניות"</string>
+    <string name="advanced_setting">"הגדרות מתקדמות"</string>
+    <string name="vibrate_outgoing">"רטט במענה"</string>
+    <string name="phone_number_label">"מס' הטלפון שלי"</string>
+    <string name="perm_change_mobile_network">"שנה מצב רשת (דור שני\שלישי)</string>
+    <string name="dialer_ui_settings_title">"הגדרות חיגן"</string>
+    <string name="fake_phone_activity_infoText_text">"המספר של השיחה הנכנסת"</string>
+    <string name="perm_change_mobile_network_desc">"אפליקציות עם ההרשאה הזו יכולים בכל זמן לשנות בין מצבי דור שני ושלישי. דור שלישי 3 יותר מהיר וצורך יותר סוללה, ואף עלול לעלות לך יותר כסף."</string>
+    <string name="phone_number_summary">"קבע את מס' הטלפון עבור מכשיר זה"</string>
+    <string name="national_roaming_enable">"התחבר לשירותי נתונים כשנמצא במצב נדידה"</string>
+    <string name="absent_num">מספר זנוח</string>
+    <string name="preferred_network_mode_lte_gsm_summary">"מצב רשת נבחר: דור רביעי \ דור שלישי \ דור ראשון"</string>
+    <string name="national_roaming_disable">"התחבר לשירותי נתונים בזמן נדידה"</string>
+    <string name="dialer_ui_settings_summary">"הגדרות החיגן"</string>
+    <string name="national_roaming">"נדידת נתונים"</string>
+    <string name="fake_phone_activity_placeCall_text">"זייף שיחה נכנסת"</string>
+    <string name="fake_phone_activity_phoneNumber_text">"(03) 555-1234"</string>
 </resources>
