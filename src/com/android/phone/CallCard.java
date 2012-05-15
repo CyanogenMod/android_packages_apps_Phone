@@ -18,9 +18,11 @@ package com.android.phone;
 
 import android.content.ContentUris;
 import android.content.Context;
+import android.database.Cursor;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.pim.ContactsAsyncHelper;
+import android.provider.ContactsContract.CommonDataKinds;
 import android.provider.ContactsContract.Contacts;
 import android.provider.ContactsContract.RawContacts;
 import android.telephony.PhoneNumberUtils;
@@ -1218,35 +1220,45 @@ public class CallCard extends FrameLayout
         updateSocialStatus(socialStatusText, socialStatusBadge, call);  // Currently unused
     }
 
-    private void updateOrganization(final long person_id) {
-        android.database.Cursor c = CallCard.this.getContext().getContentResolver().query(ContactsContract.Data.CONTENT_URI,
-                new String[] { ContactsContract.CommonDataKinds.Organization.COMPANY, 
-                    ContactsContract.CommonDataKinds.Nickname.NAME },
-                ContactsContract.Data.CONTACT_ID + " = ? and (" + ContactsContract.Data.MIMETYPE + " = '" +
-                ContactsContract.CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "' or " + 
-                ContactsContract.Data.MIMETYPE + " = '" + ContactsContract.CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "' )", 
-                new String[] { person_id + "" },
-                null);
+    private void updateOrganization(final long contactId) {
+        final String[] projection = new String[] {
+            ContactsContract.Data.MIMETYPE,
+            ContactsContract.CommonDataKinds.Organization.COMPANY,
+            ContactsContract.CommonDataKinds.Nickname.NAME
+        };
+        final String where =
+                ContactsContract.Data.CONTACT_ID + " = " + contactId + " and (" +
+                ContactsContract.Data.MIMETYPE + " = '" +
+                CommonDataKinds.Organization.CONTENT_ITEM_TYPE + "' or " +
+                ContactsContract.Data.MIMETYPE + " = '" +
+                CommonDataKinds.Nickname.CONTENT_ITEM_TYPE + "')";
+
+        String nickName = null, organization = null;
+        Cursor c = getContext().getContentResolver().query(
+                ContactsContract.Data.CONTENT_URI, projection, where, null, null);
+
         if (c != null) {
-            if (c.moveToNext()) {
-                try {
-                    // we have found an organization.  set the organization name and exit loop
-                    String organ = c.getString(1);
-                    if (TextUtils.isEmpty(organ)) {
-                        organ = c.getString(0);
-                    }
-                    if (!TextUtils.isEmpty(organ)) {
-                        mOrganization.setText(organ);
-                        mOrganization.setVisibility(View.VISIBLE);
-                        mOrganization.invalidate();
-                    } else {
-                        mOrganization.setVisibility(View.GONE);
-                    }
-                } catch (Exception e) {}
-            } else {
-                mOrganization.setVisibility(View.GONE);
+            for (boolean valid = c.moveToFirst(); valid; valid = c.moveToNext()) {
+                final String mimeType = c.getString(0);
+                if (TextUtils.equals(mimeType, CommonDataKinds.Organization.CONTENT_ITEM_TYPE)) {
+                    organization = c.getString(1);
+                } else {
+                    /* nickname */
+                    nickName = c.getString(2);
+                }
             }
             c.close();
+        }
+
+        if (DBG) log("Found organization " + organization + ", nickname " + nickName);
+        if (!TextUtils.isEmpty(organization)) {
+            mOrganization.setText(organization);
+            mOrganization.setVisibility(View.VISIBLE);
+        } else if (!TextUtils.isEmpty(nickName)) {
+            mOrganization.setText(nickName);
+            mOrganization.setVisibility(View.VISIBLE);
+        } else {
+            mOrganization.setVisibility(View.GONE);
         }
     }
 
