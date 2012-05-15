@@ -213,7 +213,7 @@
     <!-- CDM Call settings screen, setting option name -->
     <string name="labelCDMAMore">CDMA call settings</string>
     <!-- Mobile network settings screen, setting option name -->
-    <string name="apn_settings">Access Point Names</string>
+    <string name="apn_settings">Access point names</string>
     <!-- Label for the "Network settings" screen in the Settings UI -->
     <string name="settings_label">Network settings</string>
     <!-- Call settings screen, setting option name -->
@@ -393,7 +393,7 @@
     <!-- Available networks screen, setting summary text -->
     <string name="sum_select_automatically">Automatically select preferred network</string>
     <string name="register_automatically">Automatic registration...</string>
-    <string name="preferred_network_mode_title">Network Mode</string>
+    <string name="preferred_network_mode_title">Network mode</string>
     <string name="preferred_network_mode_summary">Change the network operating mode</string>
     <string name="preferred_network_mode_dialogtitle">Preferred network mode</string>
     <!-- Mobile network settings, summary for preferred network mode WCDMA preferred[CHAR LIMIT=100] -->
