@@ -464,7 +464,7 @@
     <string name="caller_manage_header" msgid="3231519674734638786">"Audioconferenza <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Torna a chiamata"</string>
     <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
-    <string name="fake_phone_activity_infoText_text">Numero di telefono in entrata</string>
+    <string name="fake_phone_activity_infoText_text">Numero chiamata in entrata</string>
     <string name="fake_phone_activity_placeCall_text">Chiamata in arrivo falsa</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continua senza SIM"</string>
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"Nessuna SIM trovata. Inserisci una SIM nel telefono."</string>
