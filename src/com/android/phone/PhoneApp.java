@@ -187,6 +187,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
     // Gets updated whenever there is a Configuration change
     private boolean mIsHardKeyboardOpen;
 
+    // True if the keyboard is fixed (not sliding). Defined in device overlay
+    private boolean mIsKeyboardAlwaysOpen;
+
     // True if we are beginning a call, but the phone state has not changed yet
     private boolean mBeginningCall;
 
@@ -530,6 +533,9 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
 
             // Read platform settings for TTY feature
             mTtyEnabled = getResources().getBoolean(R.bool.tty_enabled);
+
+            // Read platform setting regarding keyboard
+            mIsKeyboardAlwaysOpen = getResources().getBoolean(R.bool.config_device_has_fixed_keyboard);
 
             // Register for misc other intent broadcasts.
             IntentFilter intentFilter =
@@ -1202,12 +1208,12 @@ public class PhoneApp extends Application implements AccelerometerListener.Orien
         if (proximitySensorModeEnabled()) {
             synchronized (mProximityWakeLock) {
                 // turn proximity sensor off and turn screen on immediately if
-                // we are using a headset, the keyboard is open, or the device
-                // is being held in a horizontal position.
+                // we are using a headset, the keyboard is open (unless it's a
+                // fixed keyboard), or the device is being held in a horizontal position.
                 boolean screenOnImmediately = (isHeadsetPlugged()
                             || PhoneUtils.isSpeakerOn(this)
                             || ((mBtHandsfree != null) && mBtHandsfree.isAudioOn())
-                            || mIsHardKeyboardOpen);
+                            || (mIsHardKeyboardOpen  && !mIsKeyboardAlwaysOpen));
 
                 // We do not keep the screen off when the user is outside in-call screen and we are
                 // horizontal, but we do not force it on when we become horizontal until the
