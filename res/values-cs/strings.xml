@@ -57,6 +57,7 @@
     <string name="callFailed_unobtainable_number" msgid="7886274717456712105">"Neplatné číslo"</string>
     <string name="confCall" msgid="1904840547188336828">"Konferenční hovor"</string>
     <string name="call_lost" msgid="317670617901479594">"Hovor byl ztracen."</string>
+    <string name="callUnanswered_forwarded">Zmeškaný a přesměrovaný hovor</string>
     <string name="retry" msgid="8462986804300767852">"Zkusit znovu"</string>
     <string name="call_lost_title" msgid="6696949678847938515">"Hovor byl ztracen"</string>
     <string name="mmiStarted" msgid="6347869857061147003">"Kód MMI byl spuštěn"</string>
@@ -436,12 +437,28 @@
     <string name="card_title_in_progress" msgid="8603765629781648862">"Aktuální hovor"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Konferenční hovor"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Příchozí hovor"</string>
+    <string name="card_title_waiting_call">Čekající hovor</string>
     <string name="card_title_cdma_call_waiting" msgid="4532445524811272644">"Čekající hovor CDMA"</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"Hovor ukončen"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"Přidržený hovor"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Zavěšování"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Probíhá hovor"</string>
     <string name="card_title_my_phone_number" msgid="112428362494434191">"Moje číslo je <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="call_notif_unconditionalCF">Je aktivní nepodmíněné přesměrování hovorů</string>
+    <string name="call_notif_conditionalCF">Je aktivní podmíněné přesměrování hovorů</string>
+    <string name="call_notif_MOcall_forwarding">Odchozí hovor je přesměrován</string>
+    <string name="call_notif_calliswaiting">Protistrana je zaneprázdněna, hovor podržen</string>
+    <string name="call_notif_cugcall">Hovor v uzavřené skupině</string>
+    <string name="call_notif_outgoing_barred">Odchozí hovor odmítnut</string>
+    <string name="call_notif_incoming_barred">Příchozí hovory odmítnuty</string>
+    <string name="call_notif_clir_suppression_rejected">Potlačení vlastního čísla odmítnuto sítí</string>
+    <string name="call_notif_call_deflected">Hovor přesměrován protistranou</string>
+    <string name="call_notif_MTcall_forwarding">Příchozí hovor je přesměrován</string>
+    <string name="call_notif_multipartycall">Konferenční hovor</string>
+    <string name="call_notif_callonhold_released">Hovor ukončen protistranou</string>
+    <string name="call_notif_forwardcheckreceived">Hovor byl přesměrován</string>
+    <string name="call_notif_callconnectingect">Hovor bude přepojen</string>
+    <string name="call_notif_callconnectedect">Hovor byl přepojen</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Zmeškaný hovor"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Zmeškané hovory"</string>
     <string name="notification_missedCallsMsg" msgid="4575787816055205600">"Zmeškané hovory: <xliff:g id="NUM_MISSED_CALLS">%s</xliff:g>."</string>
@@ -470,6 +487,7 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Hovor nelze odmítnout."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Hovor není možné uvolnit."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Internetový hovor"</string>
+    <string name="incall_call_type_label_forwarded">Přesměrovaný hovor</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Tísňové volání"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Zapínání rádia\u2026"</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Nepokrytá oblast, opakování pokusu\u2026"</string>
@@ -626,7 +644,7 @@
     <string name="sip_accounts_summary" msgid="6812629993146552527">"Správa a stav účtů pro internetové hovory"</string>
     <string name="sip_receive_calls" msgid="5635685570889971559">"Přijímat příchozí hovory"</string>
     <string name="sip_receive_calls_summary" msgid="8403613238633679184">"Snižuje výdrž baterie"</string>
-    <string name="sip_call_options" msgid="7128315120104066133">"Konfigurace možností hovorů"</string>
+    <string name="sip_call_options" msgid="7128315120104066133">"Nastavení možností hovorů"</string>
     <string name="sip_call_options_title" msgid="27433718808839672">"Použít internetový hovor"</string>
     <string name="sip_call_options_wifi_only_title" msgid="145572394529090811">"Použít internetový hovor (pouze s připojením Wi-Fi)"</string>
 
@@ -729,6 +747,9 @@
     <string name="per_change_mobile_network_desc">Aplikace s tímto oprávněním může kdykoliv změnit mezi 2G data a 3G data. 3G je rychlejší, ale náročnější na využití baterie a také může stát více peněz.</string>
     <string name="phone_number_label">Mé telefonní čislo</string>
     <string name="phone_number_summary">Nastaví telefonní čislo tohoto zařízení</string>
+
+    <string name="show_ssn_label">Upozornění na události</string>
+    <string name="show_ssn_summary">Zobrazit upozornění pro různé události sítě vztahující se k hovoru</string>
 
     <string name="trackball_answer">Trackballem přijmout</string>
     <string name="trackball_answer_sum">Dotykem trackballu přijmete příchozí hovor.</string>
