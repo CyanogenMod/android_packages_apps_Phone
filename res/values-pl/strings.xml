@@ -723,6 +723,23 @@
 
     <string name="phone_number_label">Mój numer</string>
     <string name="phone_number_summary">Ustaw numer telefoniczny tego urządzenia</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Zaawansowane ustawienia</string>
+    <string name="vibrate_outgoing">Wibracje przy odbiorze</string>
+    <string name="vibrate_outgoing_sum">Wibracje przy odebraniu połączenia wychodzącego</string>
+    <string name="vibrate_45">Wibracje co każde 45 sekund</string>
+    <string name="vibrate_45_sum">Wibracje co 45 sekund by oznaczyć kolejne minuty połączenia wychodzącego</string>
+    <string name="vibrate_hangup">Wibracje przy rozłączeniu</string>
+    <string name="vibrate_hangup_sum">Wibracje gdy połączenie zostaje zakończone</string>
+    <string name="vibrate_call_waiting">Wibracje przy oczekującym połączeniu</string>
+    <string name="vibrate_call_waiting_sum">Wibracje przy oczekującym połączeniu w trakcie innego połączenia</string>
+    <!-- End Advanced Settings -->
+
+    <string name="national_roaming">Krajowy roaming</string>
+    <string name="national_roaming_enable">Podłącz do sieci w trybie krajowego roamingu</string>
+    <string name="national_roaming_disable">Podłącz do sieci w trybie krajowego roamingu</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Preferowany tryb sieci: LTE/WCDMA/GSM</string>
     <!-- **** CYANOGENMOD EDITS END **** -->
 
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Wibracje"</string>
