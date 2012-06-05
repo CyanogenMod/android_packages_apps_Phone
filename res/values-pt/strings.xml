@@ -746,4 +746,6 @@
     <string name="fake_phone_activity_infoText_text">Número de telefone</string>
     <string name="fake_phone_activity_placeCall_text">Chamada recebida falsa</string>
     <string name="absent_num">NÚMERO AUSENTE</string>
+    <string name="mwi_notification_title">Indicador de Mensagem de Espera</string>
+    <string name="mwi_notification_summary">Exibir indicador de mensagem de espera para notificações de correio de voz</string>
 </resources>
