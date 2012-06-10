@@ -191,7 +191,10 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"優先ネットワークモード: CDMAのみ"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"優先ネットワークモード: EvDoのみ"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"優先ネットワークモード: LTE/CDMA"</string>
+    <string name="preferred_network_mode_lte_gsm_summary">"優先ネットワークモード: LTE / WCDMA / GSM"</string>
+
   <string-array name="preferred_network_mode_choices">
+    <item>"LTE / WCDMA / GSM"</item>
     <item msgid="5886604709726177211">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"EV-DOのみ"</item>
     <item msgid="454610224530856274">"CDMA（EV-DO非準拠）"</item>
@@ -721,6 +724,10 @@
     <string name="national_roaming_enable">国内ローミング中にデータサービスに接続する</string>
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">国内ローミング中にデータサービスに接続する</string>
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">メッセージ待機中表示</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">ボイスメールの通知にメッセージ待機中のインジケータを表示する</string>
 
     <!-- Dialer UI Settings -->
     <string name="dialer_ui_settings_title">ダイヤルパッドの設定</string>
