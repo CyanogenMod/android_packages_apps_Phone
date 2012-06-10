@@ -59,7 +59,9 @@ public class PhoneToggler extends BroadcastReceiver  {
                 } else if (phoneType == Phone.PHONE_TYPE_CDMA) {
                     if (networkMode == Phone.NT_MODE_CDMA
                             || networkMode == Phone.NT_MODE_CDMA_NO_EVDO
-                            || networkMode == Phone.NT_MODE_EVDO_NO_CDMA) {
+                            || networkMode == Phone.NT_MODE_EVDO_NO_CDMA
+                            || networkMode == Phone.NT_MODE_LTE_CDMA_EVDO
+                            || networkMode == Phone.NT_MODE_LTE_CMDA_EVDO_GSM_WCDMA) {
                         networkModeOk = true;
                     }
                 }
@@ -136,6 +138,8 @@ public class PhoneToggler extends BroadcastReceiver  {
                         modemNetworkMode == Phone.NT_MODE_CDMA ||
                         modemNetworkMode == Phone.NT_MODE_CDMA_NO_EVDO ||
                         modemNetworkMode == Phone.NT_MODE_EVDO_NO_CDMA ||
+                        modemNetworkMode == Phone.NT_MODE_LTE_CDMA_EVDO ||
+                        modemNetworkMode == Phone.NT_MODE_LTE_CMDA_EVDO_GSM_WCDMA ||
                         //A modem might report world phone sometimes
                         //but it's not true. Double check here
                         (getPhone().getContext().getResources().getBoolean(R.bool.world_phone) == true &&
