@@ -243,8 +243,8 @@ public class PhoneUtils {
         if (DBG) log("answerCall()...");
 
         // If the ringer is currently ringing and/or vibrating, stop it
-        // right now (before actually answering the call.)
-        PhoneApp.getInstance().getRinger().stopRing();
+        // right now and prevent new rings (before actually answering the call.)
+        PhoneApp.getInstance().notifier.silenceRinger();
 
         boolean answered = false;
         PhoneApp app = PhoneApp.getInstance();
