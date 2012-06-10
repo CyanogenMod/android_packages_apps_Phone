@@ -195,6 +195,9 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Preferált hálózati mód: csak CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Preferált hálózati mód: csak EvDo"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Preferált hálózati mód: LTE/CDMA"</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">"Preferált hálózati mód: LTE / CDMA / EvDo"</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">"Preferált hálózati mód: LTE / CMDA / EvDo / GSM / WCDMA"</string>
+
   <string-array name="preferred_network_mode_choices">
     <item msgid="5886604709726177211">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"Csak EvDo"</item>
