@@ -100,6 +100,8 @@
     <string name="apn_settings" msgid="9043423184895642077">"Nomi punti di accesso"</string>
     <string name="settings_label" msgid="3876743539816984008">"Impostazioni di rete"</string>
     <string name="voicemail" msgid="8693759337917898954">"Segreteria"</string>
+    <string name="mwi_notification_title">Indicatore di attesa messaggio</string>
+    <string name="mwi_notification_summary">Visualizza un indicatore di attesa per la notifica di un messaggio vocale</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"ST:"</string>
     <string name="networks" msgid="8873030692174541976">"Operatori di rete"</string>
     <string name="call_settings" msgid="6112441768261754562">"Impostazioni chiamate"</string>
@@ -185,31 +187,37 @@
     <string name="preferred_network_mode_wcdma_perf_summary" msgid="8521677230113533809">"Modalità di rete preferita: WCDMA (preferita)"</string>
     <string name="preferred_network_mode_gsm_only_summary" msgid="3352445413437453511">"Modalità di rete preferita: solo GSM"</string>
     <string name="preferred_network_mode_wcdma_only_summary" msgid="2836897236221063413">"Modalità di rete preferita: solo WCDMA"</string>
-    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"Modalità di rete preferita: GSM/WCDMA"</string>
+    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"Modalità di rete preferita: GSM / WCDMA"</string>
     <string name="preferred_network_mode_cdma_summary" msgid="3175690187294334241">"Modalità di rete preferita: CDMA"</string>
-    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"Modalità di rete preferita: CDMA/EvDo"</string>
+    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"Modalità di rete preferita: CDMA / EvDo"</string>
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Modalità di rete preferita: solo CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Modalità di rete preferita: solo EvDo"</string>
-    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Modalità di rete preferita: LTE/CDMA"</string>
-    <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE/WCDMA/GSM</string>
+    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Modalità di rete preferita: LTE / CDMA"</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE / WCDMA / GSM</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Modalità di rete preferita: LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modalità di rete preferita: LTE / CMDA / EvDo / GSM / WCDMA</string>
   <string-array name="preferred_network_mode_choices">
-    <item>LTE/WCDMA/GSM</item>
-    <item>LTE/CDMA/EvDo</item>
-    <item msgid="5886604709726177211">"LTE/CDMA"</item>
+    <item>Solo LTE</item>
+    <item>LTE / CMDA / EvDo / GSM / WCDMA</item>
+    <item>LTE / WCDMA / GSM</item>
+    <item>LTE / CDMA / EvDo</item>
+    <item msgid="5886604709726177211">"LTE / CDMA"</item>
     <item msgid="3273348576277144124">"Solo EvDo"</item>
     <item msgid="454610224530856274">"CDMA senza EvDo"</item>
     <item msgid="8928247118825616081">"CDMA / EvDo automatico"</item>
-    <item msgid="8595462903294812666">"GSM/WCDMA automatico"</item>
+    <item msgid="8595462903294812666">"GSM / WCDMA automatico"</item>
     <item msgid="5189164180446264504">"Solo WCDMA"</item>
     <item msgid="5714714953966979187">"Solo GSM"</item>
-    <item msgid="4775796025725908913">"GSM/WCDMA preferito"</item>
+    <item msgid="4775796025725908913">"GSM / WCDMA preferito"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte">
-    <item msgid="7345284701413565429">"LTE/CDMA"</item>
+    <item>Solo LTE</item>
+    <item>LTE / CMDA / EvDo / GSM / WCDMA</item>
+    <item msgid="7345284701413565429">"LTE / CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte_gsm">
-    <item>LTE/GSM</item>
+    <item>LTE / GSM</item>
     <item>GSM</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Dati attivati"</string>
