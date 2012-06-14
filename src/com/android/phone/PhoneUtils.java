@@ -241,8 +241,8 @@ public class PhoneUtils {
         final PhoneApp app = PhoneApp.getInstance();
 
         // If the ringer is currently ringing and/or vibrating, stop it
-        // right now (before actually answering the call.)
-        app.getRinger().stopRing();
+        // right now and prevent new rings (before actually answering the call.)
+        app.notifier.silenceRinger();
 
         boolean answered = false;
         Phone phone = ringing.getPhone();
