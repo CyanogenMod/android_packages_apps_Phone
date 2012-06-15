@@ -192,9 +192,15 @@
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"優先ネットワークモード: EvDoのみ"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"優先ネットワークモード: LTE/CDMA"</string>
     <string name="preferred_network_mode_lte_gsm_summary">"優先ネットワークモード: LTE / WCDMA / GSM"</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">"優先ネットワークモード: LTE / CDMA / EvDo"</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">"優先ネットワークモード: LTE / CMDA / EvDo / GSM / WCDMA"</string>
 
   <string-array name="preferred_network_mode_choices">
+    <item>"LTEのみ"</item>
+    <item>"LTE / CMDA / EvDo / GSM / WCDMA"</item>
     <item>"LTE / WCDMA / GSM"</item>
+    <item>"LTE / CDMA / EvDo"</item>
     <item msgid="5886604709726177211">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"EV-DOのみ"</item>
     <item msgid="454610224530856274">"CDMA（EV-DO非準拠）"</item>
