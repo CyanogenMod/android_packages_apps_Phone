@@ -97,7 +97,7 @@
     <string name="meid" msgid="66004808679046045">"MEID"</string>
     <string name="labelGSMMore" msgid="5930842194056092106">"GSM-puheluasetukset"</string>
     <string name="labelCDMAMore" msgid="1630676740428229339">"CDMA-puheluasetukset"</string>
-    <string name="apn_settings" msgid="9043423184895642077">"Tukiasemien nimet"</string>
+    <string name="apn_settings" msgid="9043423184895642077">"Yhteyspisteiden nimet"</string>
     <string name="settings_label" msgid="3876743539816984008">"Verkkoasetukset"</string>
     <string name="voicemail" msgid="8693759337917898954">"Vastaaja"</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"Vast.:"</string>
@@ -205,11 +205,11 @@
     <item msgid="7345284701413565429">"LTE/CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
   </string-array>
-    <string name="data_enabled" msgid="5972538663568715366">"Tiedot käytössä"</string>
+    <string name="data_enabled" msgid="5972538663568715366">"Käytä mobiilidataa"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Ota mobiiliverkon tiedonsiirto käyttöön"</string>
-    <string name="roaming" msgid="8871412572928323707">"Verkkoyhteys roaming-tilassa"</string>
-    <string name="roaming_enable" msgid="7331106985174381987">"Yhdistä verkkoon roaming-tilassa"</string>
-    <string name="roaming_disable" msgid="1843417228755568110">"Yhdistä verkkoon roaming-tilassa"</string>
+    <string name="roaming" msgid="8871412572928323707">"Mobiilidata roaming-tilassa"</string>
+    <string name="roaming_enable" msgid="7331106985174381987">"Yhdistä dataverkkoon roaming-tilassa"</string>
+    <string name="roaming_disable" msgid="1843417228755568110">"Yhdistä dataverkkoon roaming-tilassa"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Menetit verkkoyhteyden, koska poistuit kotiverkkosi alueelta eikä roaming-tilaa ole otettu käyttöön."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Sallitaanko verkkoyhteys roaming-tilassa? Roaming-maksut saattavat kasvaa suuriksi!"</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTS-asetukset"</string>
@@ -724,4 +724,18 @@
     <item msgid="1595097872875714252">"Vain äänettömässä tilassa"</item>
     <item msgid="1458182414036878616">"Ei koskaan"</item>
   </string-array>
+    <string name="national_roaming">”Maan sisäinen roaming</string>
+    <string name="national_roaming_enable">Mobiilidata maan sisäisessä roaming-tilassa</string>
+    <string name="national_roaming_disable">Mobiilidata maan sisäisessä roaming-tilassa</string>
+    <string name="advanced_setting">Lisäasetukset</string>
+    <string name="vibrate_outgoing">Värinä vastattaessa</string>
+    <string name="vibrate_outgoing_sum">Värinä kun puheluun vastataan</string>
+    <string name="vibrate_45">Värinä joka 45 sekunti</string>
+    <string name="vibrate_45_sum">Värinä joka minuutti 45 sekunnin kohdalla</string>
+    <string name="vibrate_hangup">Värinä katkaistaessa</string>
+    <string name="vibrate_hangup_sum">Värinä puhelun päättyessä</string>
+    <string name="vibrate_call_waiting">Värinä koputtaessa</string>
+    <string name="vibrate_call_waiting_sum">Värinä toisen puhelun odottaessa</string>
+    <string name="dialer_ui_settings_title">Numerovalitsimen asetukset</string>
+    <string name="dialer_ui_settings_summary">Numerovalitsimen asetukset</string>
 </resources>
