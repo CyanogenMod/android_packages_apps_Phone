@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2007 The Android Open Source Project
+      Copyright (C) 2012 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <plurals name="phone_in_ecm_notification_time">
+        <item quantity="one" msgid="4866221796252472622">"Er is al <xliff:g id="COUNT">%s</xliff:g> minuut geen dataverbinding"</item>
+        <item quantity="other" msgid="3122217344579273583">"Er is al <xliff:g id="COUNT">%s</xliff:g> minuten geen dataverbinding"</item>
+    </plurals>
+    <plurals name="alert_dialog_exit_ecm">
+        <item quantity="one" msgid="2181569650640386253">"De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuut in de modus voor noodoproepen. In deze modus kunt u geen apps gebruiken waarvoor een dataverbinding nodig is. Wilt u de modus verlaten?"</item>
+        <item quantity="other" msgid="3231879566243957821">"De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuten in de modus voor noodoproepen. In deze modus kunt u geen apps gebruiken waarvoor een dataverbinding nodig is. Wilt u de modus verlaten?"</item>
+    </plurals>
+    <plurals name="alert_dialog_not_avaialble_in_ecm">
+        <item quantity="one" msgid="8939225905428421722">"De geselecteerde actie is niet beschikbaar in de modus voor noodoproepen. De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuut in deze modus. Wilt u de modus verlaten?"</item>
+        <item quantity="other" msgid="3489076611710869904">"De geselecteerde actie is niet beschikbaar in de modus voor noodoproepen. De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuten in deze modus. Wilt u de modus verlaten?"</item>
+    </plurals>
+</resources>

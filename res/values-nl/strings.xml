@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
+      Copyright (C) 2012 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,7 +14,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="contactsIconLabel" msgid="9129800048701196916">"Contacten"</string>
@@ -39,7 +39,7 @@
     <string name="callFailed_noSignal" msgid="1889803273616031933">"Geen kiestoon"</string>
     <string name="callFailed_limitExceeded" msgid="4958065157970101491">"ACM-limiet overschreden"</string>
     <string name="callFailed_powerOff" msgid="2766035859391549713">"Radio uit"</string>
-    <string name="callFailed_simError" msgid="5652345589458834655">"Geen SIM-kaart of fout met SIM-kaart"</string>
+    <string name="callFailed_simError" msgid="5652345589458834655">"Geen simkaart of fout met simkaart"</string>
     <string name="callFailed_outOfService" msgid="4825791466557236225">"Buiten servicegebied"</string>
     <string name="callFailed_fdn_only" msgid="2850204579765430641">"Uitgaande oproepen worden beperkt door FDN."</string>
     <string name="callFailed_cb_enabled" msgid="3057131228725500761">"Uitgaande oproepen zijn niet mogelijk als de functie voor oproepen blokkeren is ingeschakeld."</string>
@@ -62,7 +62,7 @@
     <string name="retry" msgid="8462986804300767852">"Opnieuw proberen"</string>
     <string name="call_lost_title" msgid="6696949678847938515">"Verbinding verbroken"</string>
     <string name="mmiStarted" msgid="6347869857061147003">"MMI-code gestart"</string>
-    <string name="ussdRunning" msgid="485588686340541690">"USSD-code uitvoeren..."</string>
+    <string name="ussdRunning" msgid="485588686340541690">"USSD-code uitvoeren\u2026"</string>
     <string name="mmiCancelled" msgid="2771923949751842276">"MMI-code geannuleerd"</string>
     <string name="cancel" msgid="5044513931633602634">"Annuleren"</string>
     <string name="menu_speaker" msgid="6069700688651964705">"Luidspreker"</string>
@@ -74,7 +74,7 @@
     <string name="menu_mergeCalls" msgid="6414754941392181303">"Samenvoegen"</string>
     <string name="menu_addCall" msgid="7829255032442131930">"Toevoegen"</string>
     <string name="menu_manageConference" msgid="3770984362002266733">"Telefonische vergadering beheren"</string>
-    <string name="menu_showDialpad" msgid="5198200217528406980">"Toetsenblok weergeven"</string>
+    <string name="menu_showDialpad" msgid="5198200217528406980">"Toetsenblok tonen"</string>
     <string name="menu_hideDialpad" msgid="2733813546746296771">"Toetsenblok verbergen"</string>
     <string name="menu_answerAndHold" msgid="8830891495953688905">"Hdg. opr. in wacht"\n"en opnemen"</string>
     <string name="menu_answerAndEnd" msgid="2071708281281611854">"Hdg. opr. beëindigen"\n"en opnemen"</string>
@@ -90,22 +90,22 @@
     <string name="pause_prompt_no" msgid="6686238803236884877">"Nee"</string>
     <string name="wild_prompt_str" msgid="1585989144582892543">"Het jokerteken vervangen door"</string>
     <string name="no_vm_number" msgid="4164780423805688336">"Voicemailnummer ontbreekt"</string>
-    <string name="no_vm_number_msg" msgid="1300729501030053828">"Er is geen voicemailnummer op de SIM-kaart opgeslagen."</string>
+    <string name="no_vm_number_msg" msgid="1300729501030053828">"Er is geen voicemailnummer op de simkaart opgeslagen."</string>
     <string name="add_vm_number_str" msgid="4676479471644687453">"Nummer toevoegen"</string>
-    <string name="dialer_emptyListWorking" msgid="6022498519770859790">"Laden..."</string>
-    <string name="enterPin" msgid="4753300834213388397">"Voer de PIN-code in om de SIM-kaart te ontgrendelen."</string>
-    <string name="pinUnlocked" msgid="3260617001055506794">"SIM-kaart ontgrendeld"</string>
-    <string name="enterNewPin" msgid="5311243769004752401">"Nieuwe SIM PIN-code"</string>
-    <string name="verifyNewPin" msgid="2593629913010458867">"Voer de nieuwe SIM PIN-code nogmaals in ter bevestiging"</string>
-    <string name="verifyFailed" msgid="3875778795754857903">"De SIM PIN-codes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
-    <string name="enterPuk" msgid="6144749655582862324">"Voer de PUK-code in om de SIM-kaart te ontgrendelen"</string>
-    <string name="badPuk" msgid="3213017898690275965">"Onjuiste PUK-code!"</string>
+    <string name="dialer_emptyListWorking" msgid="6022498519770859790">"Laden\u2026"</string>
+    <string name="enterPin" msgid="4753300834213388397">"Voer pincode in voor ontgrendeling simkaart"</string>
+    <string name="pinUnlocked" msgid="3260617001055506794">"Simkaart ontgrendeld"</string>
+    <string name="enterNewPin" msgid="5311243769004752401">"Nieuwe SIM pincode"</string>
+    <string name="verifyNewPin" msgid="2593629913010458867">"Voer de nieuwe SIM pincode nogmaals in ter bevestiging"</string>
+    <string name="verifyFailed" msgid="3875778795754857903">"De SIM pincodes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
+    <string name="enterPuk" msgid="6144749655582862324">"Voer de pukcode in om de simkaart te ontgrendelen"</string>
+    <string name="badPuk" msgid="3213017898690275965">"Onjuiste pukcode!"</string>
     <string name="buttonTxtContinue" msgid="863271214384739936">"Doorgaan"</string>
-    <string name="puk_unlocked" msgid="2284912838477558454">"Uw SIM-kaart is gedeblokkeerd. Uw telefoon wordt ontgrendeld..."</string>
-    <string name="label_ndp" msgid="780479633159517250">"PIN-code voor ontgrendelen SIM-netwerk"</string>
+    <string name="puk_unlocked" msgid="2284912838477558454">"Uw simkaart is gedeblokkeerd. Uw telefoon wordt ontgrendeld\u2026"</string>
+    <string name="label_ndp" msgid="780479633159517250">"Pincode voor ontgrendelen simnetwerk"</string>
     <string name="sim_ndp_unlock_text" msgid="683628237760543009">"Ontgrendelen"</string>
     <string name="sim_ndp_dismiss_text" msgid="1604823375752456947">"Negeren"</string>
-    <string name="requesting_unlock" msgid="6412629401033249351">"Verzoek om ontgrendelen netwerk..."</string>
+    <string name="requesting_unlock" msgid="6412629401033249351">"Verzoek om ontgrendelen netwerk\u2026"</string>
     <string name="unlock_failed" msgid="6490531697031504225">"Verzoek voor ontgrendelen netwerk mislukt."</string>
     <string name="unlock_success" msgid="6770085622238180152">"Het netwerk is ontgrendeld."</string>
     <string name="imei" msgid="8552502717594321281">"IMEI-nummer"</string>
@@ -124,8 +124,8 @@
     <string name="sum_cdma_call_settings" msgid="284753265979035549">"Aanvullende oproepinstellingen voor alleen CDMA"</string>
     <string name="labelNwService" msgid="4699970172021870983">"Instellingen voor netwerkservice"</string>
     <string name="labelCallerId" msgid="3888899447379069198">"Beller-id"</string>
-    <string name="sum_hide_caller_id" msgid="1071407020290873782">"Nummer verborgen bij uitgaande oproepen"</string>
-    <string name="sum_show_caller_id" msgid="6768534125447290401">"Nummer weergegeven bij uitgaande oproepen"</string>
+    <string name="sum_hide_caller_id" msgid="1071407020290873782">"Nummer verbergen bij uitgaande oproepen"</string>
+    <string name="sum_show_caller_id" msgid="6768534125447290401">"Nummer tonen bij uitgaande oproepen"</string>
     <string name="sum_default_caller_id" msgid="1954518825510901365">"Gebruik de standaard operatorinstellingen om mijn nummer bij uitgaande oproepen weer te geven"</string>
     <string name="labelCW" msgid="6120513814915920200">"Wisselgesprek"</string>
     <string name="sum_cw_enabled" msgid="8083061901633671397">"Inkomende oproepen melden als ik aan het bellen ben"</string>
@@ -155,22 +155,17 @@
     <string name="disable_cfnrc_forbidden" msgid="1093527570652781997">"Uw provider biedt geen ondersteuning voor het uitschakelen van oproepdoorschakelingen wanneer uw telefoon niet bereikbaar is."</string>
     <string name="updating_title" msgid="6146755386174019046">"Oproepinstellingen"</string>
     <string name="error_updating_title" msgid="7970259216988931777">"Fout met oproepinstellingen"</string>
-    <string name="reading_settings" msgid="1920291699287055284">"Instellingen lezen..."</string>
-    <string name="updating_settings" msgid="8171225533884883252">"Instellingen bijwerken..."</string>
-    <string name="reverting_settings" msgid="4752151682666912828">"Instellingen terugzetten..."</string>
+    <string name="reading_settings" msgid="1920291699287055284">"Instellingen lezen\u2026"</string>
+    <string name="updating_settings" msgid="8171225533884883252">"Instellingen bijwerken\u2026"</string>
+    <string name="reverting_settings" msgid="4752151682666912828">"Instellingen terugzetten\u2026"</string>
     <string name="response_error" msgid="6674110501330139405">"Onverwachte reactie van netwerk."</string>
-    <string name="exception_error" msgid="7027667130619518211">"Netwerk- of SIM-kaartfout."</string>
+    <string name="exception_error" msgid="7027667130619518211">"Netwerk- of simkaartfout."</string>
     <string name="fdn_only_error" msgid="7079583506377602000">"Bewerkingen zijn alleen toegestaan voor vaste nummers."</string>
     <string name="radio_off_error" msgid="6717116288405111269">"Schakel de radio in voordat u deze instellingen bekijkt."</string>
     <string name="close_dialog" msgid="2365884406356986917">"OK"</string>
     <string name="enable" msgid="1059008390636773574">"Inschakelen"</string>
     <string name="disable" msgid="7274240979164762320">"Uitschakelen"</string>
     <string name="change_num" msgid="239476305819844391">"Bijwerken"</string>
-  <string-array name="clir_display_values">
-    <item msgid="5560134294467334594">"Netwerkstandaard"</item>
-    <item msgid="7876195870037833661">"Nummer verbergen"</item>
-    <item msgid="1108394741608734023">"Nummer weergeven"</item>
-  </string-array>
     <string name="vm_save_number" msgid="4579969432544566719">"Voicemailnummer opslaan"</string>
     <string name="vm_changed" msgid="380744030726254139">"Voicemailnummer gewijzigd."</string>
     <string name="vm_change_failed" msgid="6912718596496220653">"Het wijzigen van het voicemailnummer is mislukt."\n"Neem contact op met uw provider als dit probleem zich blijft voordoen."</string>
@@ -181,32 +176,22 @@
     <string name="voicemail_default" msgid="5902099213882352338">"Mijn provider"</string>
     <string name="mobile_networks" msgid="5540397602919106177">"Instellingen mobiel netwerk"</string>
     <string name="label_available" msgid="1181658289009300430">"Beschikbare netwerken"</string>
-    <string name="load_networks_progress" msgid="5230707536168902952">"Zoeken..."</string>
+    <string name="load_networks_progress" msgid="5230707536168902952">"Zoeken\u2026"</string>
     <string name="empty_networks_list" msgid="4249426905018815316">"Geen netwerken gevonden."</string>
     <string name="search_networks" msgid="1601136049300882441">"Netwerken zoeken"</string>
     <string name="network_query_error" msgid="6828516148953325006">"Fout tijdens zoeken naar netwerken."</string>
-    <string name="register_on_network" msgid="9055203954040805084">"Registreren op <xliff:g id="NETWORK">%s</xliff:g>…"</string>
-    <string name="not_allowed" msgid="3540496123717833833">"Uw SIM-kaart staat geen verbinding met dit netwerk toe."</string>
+    <string name="register_on_network" msgid="9055203954040805084">"Registreren op <xliff:g id="NETWORK">%s</xliff:g>\u2026"</string>
+    <string name="not_allowed" msgid="3540496123717833833">"Uw simkaart staat geen verbinding met dit netwerk toe."</string>
     <string name="connect_later" msgid="500090982903469816">"Kan momenteel geen verbinding maken met dit netwerk. Probeer het later opnieuw."</string>
     <string name="registration_done" msgid="495135664535876612">"Geregistreerd op netwerk."</string>
     <string name="sum_carrier_select" msgid="6526225502314751575">"Een mobiele provider selecteren"</string>
     <string name="sum_search_networks" msgid="2921092249873272715">"Alle beschikbare netwerken zoeken"</string>
     <string name="select_automatically" msgid="8615980695510888796">"Automatisch selecteren"</string>
     <string name="sum_select_automatically" msgid="8460954604521755275">"Voorkeursnetwerk automatisch selecteren"</string>
-    <string name="register_automatically" msgid="6272031189219101172">"Automatische registratie..."</string>
+    <string name="register_automatically" msgid="6272031189219101172">"Automatische registratie\u2026"</string>
     <string name="preferred_network_mode_title" msgid="8873246565334559308">"Netwerkmodus"</string>
     <string name="preferred_network_mode_summary" msgid="1434820673166126609">"De netwerkgebruiksmodus wijzigen"</string>
     <string name="preferred_network_mode_dialogtitle" msgid="8176355237105593793">"Voorkeursnetwerkmodus"</string>
-  <string-array name="preferred_network_mode_choices">
-    <item msgid="2987674222882365152">"Globaal"</item>
-    <item msgid="3273348576277144124">"Alleen EvDo"</item>
-    <item msgid="454610224530856274">"CDMA zonder EvDo"</item>
-    <item msgid="8928247118825616081">"CDMA/EvDo automatisch"</item>
-    <item msgid="8595462903294812666">"GSM/WCDMA automatisch"</item>
-    <item msgid="5189164180446264504">"Alleen WCDMA"</item>
-    <item msgid="5714714953966979187">"Alleen GSM"</item>
-    <item msgid="4775796025725908913">"Voorkeur voor GSM/WCDMA"</item>
-  </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Gegevenstoegang aan"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Gegevenstoegang via mobiel netwerk inschakelen"</string>
     <string name="roaming" msgid="8871412572928323707">"Gegevensroaming"</string>
@@ -214,11 +199,6 @@
     <string name="roaming_disable" msgid="1843417228755568110">"Verbinding maken met gegevensservices tijdens roaming"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"De gegevensverbinding is verbroken, omdat u uw thuisnetwerk heeft verlaten terwijl gegevensroaming was uitgeschakeld."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Gegevensroaming toestaan? Er kunnen hoge roamingkosten in rekening worden gebracht."</string>
-	
-	<string name="mvno_roaming">"Nationale data roaming"</string>
-    <string name="mvno_roaming_summary">"Deze optie geeft toestemming om een andere netwerk provider te kiezen in je eigen land."</string>
-    <string name="mvno_roaming_warning">Data roaming inschakelen in het zelfde land als je provider? Sommige virtuele netwerk providers werken niet zonder deze instellingen. Schakel deze optie niet in als je provider geld vraagt voor roaming binnen je eigen land. De instellingen worden pas actief na het herstarten van het toestel of het aan en vervolgens weer uitzetten van de vliegtuigmodus."</string>
-    
 	<string name="gsm_umts_options" msgid="6538311689850981686">"GSM-/UMTS-opties"</string>
     <string name="cdma_options" msgid="4016822858172249884">"CDMA-opties"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Gegevensgebruik"</string>
@@ -238,7 +218,7 @@
     <string name="enable_disable_cell_bc_sms" msgid="4851147873691392255">"SMS Infodienstbericht"</string>
     <string name="cell_bc_sms_enable" msgid="6441688565738921084">"SMS Infodienstbericht ingeschakeld"</string>
     <string name="cell_bc_sms_disable" msgid="3398365088309408749">"Infodienstbericht uitgeschakeld"</string>
-    <string name="cb_sms_settings" msgid="651715019785107312">"Instellingen voor SMS infodienstberichten"</string>
+    <string name="cb_sms_settings" msgid="651715019785107312">"Instellingen voor SMS Infodienstberichten"</string>
     <string name="enable_disable_emergency_broadcast" msgid="2157014609041245335">"Bericht bij noodsituatie"</string>
     <string name="emergency_broadcast_enable" msgid="2645980025414010211">"Bericht bij noodsituatie ingeschakeld"</string>
     <string name="emergency_broadcast_disable" msgid="3665199821267569426">"Bericht bij noodsituatie uitgeschakeld"</string>
@@ -266,15 +246,6 @@
     <string name="international_disable" msgid="2850648591041088931">"Buitenlands nieuws uitgeschakeld"</string>
     <string name="list_language_title" msgid="2841683501919760043">"Taal"</string>
     <string name="list_language_summary" msgid="8109546531071241601">"De taal voor het nieuws selecteren"</string>
-  <string-array name="list_language_entries">
-    <item msgid="6137851079727305485">"Engels"</item>
-    <item msgid="1151988412809572526">"Frans"</item>
-    <item msgid="577840534704312665">"Spaans"</item>
-    <item msgid="8385712091143148180">"Japans"</item>
-    <item msgid="1858401628368130638">"Koreaans"</item>
-    <item msgid="1933212028684529632">"Chinees"</item>
-    <item msgid="1908428006803639064">"Hebreeuws"</item>
-  </string-array>
     <string name="list_language_dtitle" msgid="5442908726538951934">"Talen"</string>
     <string name="enable_disable_local_weather" msgid="986967454867219114">"Lokaal weerbericht"</string>
     <string name="local_weather_enable" msgid="6199315114382448922">"Lokaal weerbericht ingeschakeld"</string>
@@ -315,44 +286,20 @@
     <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"GSM-/UMTS-netwerkvoorkeuren"</string>
     <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Nog niet geïmplementeerd."</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"GSM-/UMTS-netwerkvoorkeuren"</string>
-  <string-array name="gsm_umts_network_preferences_choices">
-    <item msgid="935612021902787683">"GSM/WCDMA (automatische modus)"</item>
-    <item msgid="8912042051809329533">"Alleen WCDMA"</item>
-    <item msgid="8776934131146642662">"Alleen GSM"</item>
-    <item msgid="4684679567848300935">"GSM/WCDA (voorkeur voor WCDMA)"</item>
-  </string-array>
     <string name="prefer_2g" msgid="8442550937280449639">"Alleen 2G-netwerken"</string>
     <string name="prefer_2g_summary" msgid="1976491403210690759">"Energiespaarstand"</string>
     <string name="cdma_system_select_title" msgid="5757657769327732833">"Systeem selecteren"</string>
     <string name="cdma_system_select_summary" msgid="2528661990595284707">"De CDMA-roamingmodus wijzigen"</string>
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Systeem selecteren"</string>
-  <string-array name="cdma_system_select_choices">
-    <item msgid="176474317493999285">"Alleen thuis"</item>
-    <item msgid="1205664026446156265">"Automatisch"</item>
-  </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"CDMA-roamingmodus"</string>
     <string name="cdma_roaming_mode_summary" msgid="8604713111805562261">"De CDMA-roamingmodus wijzigen"</string>
     <string name="cdma_roaming_mode_dialogtitle" msgid="1802896889172094947">"CDMA-roamingmodus"</string>
-  <string-array name="cdma_roaming_mode_choices">
-    <item msgid="6024072766548865002">"Alleen thuisnetwerken"</item>
-    <item msgid="8174642753290624634">"Partnernetwerken"</item>
-    <item msgid="2241951431403168661">"Elk netwerk"</item>
-  </string-array>
     <string name="cdma_network_preferences_title" msgid="41193174429510391">"CDMA-netwerkvoorkeuren"</string>
     <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Nog niet geïmplementeerd."</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"CDMA-netwerkvoorkeuren"</string>
-  <string-array name="cdma_network_preferences_choices">
-    <item msgid="3711054371631487248">"CDMA/EvDo"</item>
-    <item msgid="6143696847467859795">"Alleen CDMA"</item>
-    <item msgid="2683555124647197574">"Alleen EvDo"</item>
-  </string-array>
     <string name="cdma_subscription_title" msgid="445607520753045412">"CDMA-abonnement"</string>
     <string name="cdma_subscription_summary" msgid="2530890766115781140">"Schakelen tussen RUIM/SIM en NV"</string>
     <string name="cdma_subscription_dialogtitle" msgid="2699527950523333110">"abonnement"</string>
-  <string-array name="cdma_subscription_choices">
-    <item msgid="2258014151300708431">"RUIM/SIM"</item>
-    <item msgid="5127722015571873880">"NV"</item>
-  </string-array>
     <string name="fdn" msgid="7878832555095183202">"Vaste nummers"</string>
     <string name="manage_fdn_list" msgid="8777755791892122369">"FDN-lijst"</string>
     <string name="fdn_activation" msgid="2156479741307463576">"FDN-activering"</string>
@@ -360,11 +307,11 @@
     <string name="fdn_disabled" msgid="4700049736675368279">"Vaste nummers zijn uitgeschakeld"</string>
     <string name="enable_fdn" msgid="3740191529180493851">"FDN inschakelen"</string>
     <string name="disable_fdn" msgid="7944020890722540616">"FDN uitschakelen"</string>
-    <string name="change_pin2" msgid="2153563695382176676">"PIN2-code wijzigen"</string>
+    <string name="change_pin2" msgid="2153563695382176676">"Pin2-code wijzigen"</string>
     <string name="enable_fdn_ok" msgid="7215588870329688132">"FDN uitschakelen"</string>
     <string name="disable_fdn_ok" msgid="5727046928930740173">"FDN inschakelen"</string>
     <string name="sum_fdn" msgid="1959399454900272878">"Vaste nummers beheren"</string>
-    <string name="sum_fdn_change_pin" msgid="6666549734792827932">"PIN-code voor FDN-toegang wijzigen"</string>
+    <string name="sum_fdn_change_pin" msgid="6666549734792827932">"Pincode voor FDN-toegang wijzigen"</string>
     <string name="sum_fdn_manage_list" msgid="8431088265332628316">"Lijst met telefoonnummers beheren"</string>
     <string name="voice_privacy" msgid="7803023024169078619">"Spraakprivacy"</string>
     <string name="voice_privacy_summary" msgid="3159383389833516214">"Geavanceerde privacymodus inschakelen"</string>
@@ -377,62 +324,62 @@
     <string name="menu_add" msgid="1882023737425114762">"Contact toevoegen"</string>
     <string name="menu_edit" msgid="7143003705504672374">"Contact bewerken"</string>
     <string name="menu_delete" msgid="3977150783449642851">"Contact verwijderen"</string>
-    <string name="get_pin2" msgid="1198225482542827652">"PIN2-code invoeren"</string>
+    <string name="get_pin2" msgid="1198225482542827652">"Pin2-code invoeren"</string>
     <string name="name" msgid="7329028332786872378">"Naam"</string>
     <string name="number" msgid="7905950798349903858">"Nummer"</string>
     <string name="save" msgid="4094274636321939086">"Opslaan"</string>
     <string name="add_fdn_contact" msgid="2481915899633353976">"Vast nummer toevoegen"</string>
-    <string name="adding_fdn_contact" msgid="7627379633721940991">"Vast nummer toevoegen..."</string>
+    <string name="adding_fdn_contact" msgid="7627379633721940991">"Vast nummer toevoegen\u2026"</string>
     <string name="fdn_contact_added" msgid="7458335758501736665">"Vast nummer toegevoegd."</string>
     <string name="edit_fdn_contact" msgid="7976936035587081480">"Vast nummer bewerken"</string>
-    <string name="updating_fdn_contact" msgid="8370929876849803600">"Vast nummer bijwerken..."</string>
+    <string name="updating_fdn_contact" msgid="8370929876849803600">"Vast nummer bijwerken\u2026"</string>
     <string name="fdn_contact_updated" msgid="5497828782609005017">"Vast nummer bijgewerkt."</string>
     <string name="delete_fdn_contact" msgid="6668958073074151717">"Vast nummer verwijderen"</string>
-    <string name="deleting_fdn_contact" msgid="5669163206349319969">"Vast nummer verwijderen..."</string>
+    <string name="deleting_fdn_contact" msgid="5669163206349319969">"Vast nummer verwijderen\u2026"</string>
     <string name="fdn_contact_deleted" msgid="7154162327112259569">"Vast nummer verwijderd."</string>
-    <string name="pin2_invalid" msgid="7176360264228076810">"FDN niet bijgewerkt: u heeft een onjuiste PIN-code ingevoerd."</string>
+    <string name="pin2_invalid" msgid="7176360264228076810">"FDN niet bijgewerkt: u heeft een onjuiste pincode ingevoerd."</string>
     <string name="fdn_invalid_number" msgid="9193130794297997290">"FDN niet bijgewerkt: nummer mag niet langer zijn dan 20 cijfers."</string>
-    <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Lezen vanaf SIM-kaart..."</string>
-    <string name="simContacts_empty" msgid="5270660846489561932">"Geen contacten op uw SIM-kaart."</string>
+    <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Lezen vanaf simkaart\u2026"</string>
+    <string name="simContacts_empty" msgid="5270660846489561932">"Geen contacten op uw simkaart."</string>
     <string name="simContacts_title" msgid="1861472842524839921">"Contacten selecteren om te importeren"</string>
-    <string name="enable_pin" msgid="5422767284133234860">"SIM PIN-code in-/uitschakelen"</string>
-    <string name="change_pin" msgid="9174186126330785343">"SIM PIN-code wijzigen"</string>
-    <string name="enter_pin_text" msgid="8532615714751931951">"SIM PIN-code:"</string>
-    <string name="oldPinLabel" msgid="5287773661246368314">"Oude PIN-code"</string>
-    <string name="newPinLabel" msgid="207488227285336897">"Nieuwe PIN-code"</string>
-    <string name="confirmPinLabel" msgid="257597715098070206">"Nieuwe PIN-code bevestigen"</string>
-    <string name="badPin" msgid="4154316827946559447">"De oude PIN-code die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
-    <string name="mismatchPin" msgid="5974597541268042785">"De PIN-codes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
-    <string name="invalidPin" msgid="5981171102258684792">"Voer een PIN-code van 4 tot 8 cijfers in."</string>
-    <string name="disable_sim_pin" msgid="3992926931620188855">"SIM PIN-code uitschakelen"</string>
-    <string name="enable_sim_pin" msgid="5803702443844458831">"SIM PIN-code inschakelen"</string>
-    <string name="enable_in_progress" msgid="3695303775100109650">"Een ogenblik geduld..."</string>
-    <string name="enable_pin_ok" msgid="8077439615296694284">"SIM PIN-code ingeschakeld"</string>
-    <string name="disable_pin_ok" msgid="8552428316206928913">"SIM PIN-code uitgeschakeld"</string>
-    <string name="pin_failed" msgid="6597695909685242127">"De PIN-code die u heeft ingevoerd, is onjuist"</string>
-    <string name="pin_changed" msgid="9000716792724195093">"SIM PIN-code gewijzigd"</string>
-    <string name="puk_requested" msgid="3898394204193202803">"Wachtwoord onjuist, SIM-kaart is vergrendeld! PUK2-code vereist."</string>
-    <string name="enter_pin2_text" msgid="8339444124477720345">"PIN2"</string>
-    <string name="oldPin2Label" msgid="8559146795026261502">"Oude PIN2-code"</string>
-    <string name="newPin2Label" msgid="4573956902204349054">"Nieuwe PIN2-code"</string>
-    <string name="confirmPin2Label" msgid="8100319484454787708">"Nieuwe PIN2-code bevestigen"</string>
-    <string name="badPuk2" msgid="4072035207011308856">"De PUK2-code die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
-    <string name="badPin2" msgid="515218795152422178">"De oude PIN2-code die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
-    <string name="mismatchPin2" msgid="4177060915600342718">"De PIN2-codes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
-    <string name="invalidPin2" msgid="8237110107480395938">"Voer een PIN2-code van 4 tot 8 cijfers in."</string>
-    <string name="invalidPuk2" msgid="1290977391033057871">"Voer een PUK2-code van 8 cijfers in."</string>
-    <string name="pin2_changed" msgid="2670422162555916562">"PIN2-code gewijzigd"</string>
-    <string name="label_puk2_code" msgid="302845876240219560">"PUK2-code invoeren"</string>
-    <string name="fdn_enable_puk2_requested" msgid="2608836967081385948">"Wachtwoord onjuist, wijzig PIN2-code en probeer het opnieuw!"</string>
-    <string name="puk2_requested" msgid="5863580927788820813">"Wachtwoord onjuist, SIM-kaart is vergrendeld! PUK2-code vereist."</string>
+    <string name="enable_pin" msgid="5422767284133234860">"SIM pincode in-/uitschakelen"</string>
+    <string name="change_pin" msgid="9174186126330785343">"SIM pincode wijzigen"</string>
+    <string name="enter_pin_text" msgid="8532615714751931951">"SIM pincode:"</string>
+    <string name="oldPinLabel" msgid="5287773661246368314">"Oude pincode"</string>
+    <string name="newPinLabel" msgid="207488227285336897">"Nieuwe pincode"</string>
+    <string name="confirmPinLabel" msgid="257597715098070206">"Nieuwe pincode bevestigen"</string>
+    <string name="badPin" msgid="4154316827946559447">"De oude pincode die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
+    <string name="mismatchPin" msgid="5974597541268042785">"De pincodes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
+    <string name="invalidPin" msgid="5981171102258684792">"Voer een pincode van 4 tot 8 cijfers in."</string>
+    <string name="disable_sim_pin" msgid="3992926931620188855">"SIM pincode uitschakelen"</string>
+    <string name="enable_sim_pin" msgid="5803702443844458831">"SIM pincode inschakelen"</string>
+    <string name="enable_in_progress" msgid="3695303775100109650">"Een ogenblik geduld\u2026"</string>
+    <string name="enable_pin_ok" msgid="8077439615296694284">"SIM pincode ingeschakeld"</string>
+    <string name="disable_pin_ok" msgid="8552428316206928913">"SIM pincode uitgeschakeld"</string>
+    <string name="pin_failed" msgid="6597695909685242127">"De pincode die u heeft ingevoerd, is onjuist"</string>
+    <string name="pin_changed" msgid="9000716792724195093">"SIM pincode gewijzigd"</string>
+    <string name="puk_requested" msgid="3898394204193202803">"Wachtwoord onjuist, simkaart is vergrendeld! Puk2-code vereist."</string>
+    <string name="enter_pin2_text" msgid="8339444124477720345">"Pin2"</string>
+    <string name="oldPin2Label" msgid="8559146795026261502">"Oude pin2-code"</string>
+    <string name="newPin2Label" msgid="4573956902204349054">"Nieuwe pin2-code"</string>
+    <string name="confirmPin2Label" msgid="8100319484454787708">"Nieuwe pin2-code bevestigen"</string>
+    <string name="badPuk2" msgid="4072035207011308856">"De puk2-code die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
+    <string name="badPin2" msgid="515218795152422178">"De oude pin2-code die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
+    <string name="mismatchPin2" msgid="4177060915600342718">"De pin2-codes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
+    <string name="invalidPin2" msgid="8237110107480395938">"Voer een pin2-code van 4 tot 8 cijfers in."</string>
+    <string name="invalidPuk2" msgid="1290977391033057871">"Voer een puk2-code van 8 cijfers in."</string>
+    <string name="pin2_changed" msgid="2670422162555916562">"Pin2-code gewijzigd"</string>
+    <string name="label_puk2_code" msgid="302845876240219560">"Puk2-code invoeren"</string>
+    <string name="fdn_enable_puk2_requested" msgid="2608836967081385948">"Wachtwoord onjuist, wijzig pin2-code en probeer het opnieuw!"</string>
+    <string name="puk2_requested" msgid="5863580927788820813">"Wachtwoord onjuist, simkaart is vergrendeld! Puk2-code vereist."</string>
     <string name="doneButton" msgid="2859593360997984240">"Gereed"</string>
     <string name="caller_manage_header" msgid="3231519674734638786">"Telefonische vergadering <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Terug naar oproep"</string>
-    <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Doorgaan zonder SIM-kaart"</string>
-    <string name="sim_missing_msg_text" msgid="6803619600564142188">"Geen SIM-kaart gevonden. Plaats een SIM-kaart in de telefoon."</string>
+    <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Doorgaan zonder simkaart"</string>
+    <string name="sim_missing_msg_text" msgid="6803619600564142188">"Geen simkaart gevonden. Plaats een simkaart in de telefoon."</string>
     <string name="sim_unlock_dismiss_text" msgid="8292343981739813597">"Negeren"</string>
     <string name="sim_unlock_unlock_text" msgid="6328406783399256930">"Ontgrendelen"</string>
-    <string name="sim_unlock_status_text" msgid="1919609683384607179">"PIN-code verifiëren..."</string>
+    <string name="sim_unlock_status_text" msgid="1919609683384607179">"Pincode verifiëren\u2026"</string>
     <string name="voicemail_settings_number_label" msgid="8524164258691887790">"Voicemailnummer"</string>
     <string name="card_title_dialing" msgid="5769417478498348054">"Kiezen"</string>
     <string name="card_title_redialing" msgid="4831412164303596395">"Opnieuw proberen"</string>
@@ -479,8 +426,8 @@
     <string name="incall_error_out_of_service" msgid="8587993036435080418">"Mobiel netwerk niet beschikbaar."</string>
     <string name="incall_error_no_phone_number_supplied" msgid="4197432103471807739">"Oproep niet verzonden, geen geldig nummer ingevoerd."</string>
     <string name="incall_error_call_failed" msgid="4313552620858880999">"Oproep niet verzonden."</string>
-    <string name="incall_status_dialed_mmi" msgid="3672498861336189563">"MMI-reeks starten..."</string>
-    <string name="incall_status_dialed_fc" msgid="1632879988662225263">"Functiecodereeks starten…"</string>
+    <string name="incall_status_dialed_mmi" msgid="3672498861336189563">"MMI-reeks starten\u2026"</string>
+    <string name="incall_status_dialed_fc" msgid="1632879988662225263">"Functiecodereeks starten\u2026"</string>
     <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Niet-ondersteunde service."</string>
     <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Kan niet overschakelen tussen oproepen."</string>
     <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Kan oproep niet scheiden."</string>
@@ -491,8 +438,8 @@
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Internetoproep"</string>
     <string name="incall_call_type_label_forwarded">Doorgeschakelde oproep</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Noodoproep"</string>
-    <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Radio aanzetten..."</string>
-    <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Buiten servicegebied, nieuwe poging..."</string>
+    <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Radio aanzetten\u2026"</string>
+    <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Buiten servicegebied, nieuwe poging\u2026"</string>
     <string name="dial_emergency_error" msgid="8362624131726575194">"Oproep niet verzonden, <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> is geen alarmnummer!"</string>
     <string name="dial_emergency_empty_error" msgid="5048645338094088229">"Oproep niet verzonden, kies een alarmnummer!"</string>
     <string name="dialerKeyboardHintText" msgid="9192914825413747792">"Toetsen gebruiken om te bellen"</string>
@@ -516,23 +463,13 @@
     <string name="onscreenManageConferenceText" msgid="6952581578445378981">"Beheren"</string>
     <string name="importSimEntry" msgid="6614358325359736031">"Importeren"</string>
     <string name="importAllSimEntries" msgid="1503181169636198673">"Alles importeren"</string>
-    <string name="importingSimContacts" msgid="7374056215462575769">"SIM-contacten importeren"</string>
+    <string name="importingSimContacts" msgid="7374056215462575769">"Simcontacten importeren"</string>
     <string name="importToFDNfromContacts" msgid="2130620207013368580">"Importeren uit contacten"</string>
     <string name="hac_mode_title" msgid="8740268574688743289">"Gehoorapparaten"</string>
     <string name="hac_mode_summary" msgid="6833851160514929341">"Compatibiliteit voor gehoorapparaat inschakelen"</string>
-  <string-array name="tty_mode_entries">
-    <item msgid="512950011423868021">"TTY uit"</item>
-    <item msgid="3971695875449640648">"TTY vol"</item>
-    <item msgid="1937509904407445684">"TTY HCO"</item>
-    <item msgid="5644925873488772224">"TTY VCO"</item>
-  </string-array>
     <string name="eri_text_label" msgid="4326942349915331461">"ERI-tekst"</string>
     <string name="dtmf_tones_title" msgid="3866923093113274152">"DTMF-tonen"</string>
     <string name="dtmf_tones_summary" msgid="3351820372864020331">"De lengte van DTMF-tonen instellen"</string>
-  <string-array name="dtmf_tone_entries">
-    <item msgid="899650777817315681">"Normaal"</item>
-    <item msgid="2883365539347850535">"Lang"</item>
-  </string-array>
     <string name="network_message" msgid="5673682885938122239">"Netwerkbericht"</string>
     <string name="ota_title_activate" msgid="8616918561356194398">"Uw telefoon activeren"</string>
     <string name="ota_touch_activate" msgid="6553212803262586244">"U moet een speciale oproep uitvoeren om uw telefoonservice te activeren. "\n\n"Nadat u op \'Activeren\' heeft gedrukt, luistert u naar de instructies om uw telefoon te activeren."</string>
@@ -560,18 +497,6 @@
     <string name="phone_entered_ecm_text" msgid="6266424252578731203">"Modus voor noodoproepen ingeschakeld"</string>
     <string name="phone_in_ecm_notification_title" msgid="3226896828951687085">"Modus voor noodoproepen"</string>
     <string name="phone_in_ecm_call_notification_text" msgid="4611608947314729773">"Gegevensverbinding uitgeschakeld"</string>
-  <plurals name="phone_in_ecm_notification_time">
-    <item quantity="one" msgid="4866221796252472622">"Er is al <xliff:g id="COUNT">%s</xliff:g> minuut geen dataverbinding"</item>
-    <item quantity="other" msgid="3122217344579273583">"Er is al <xliff:g id="COUNT">%s</xliff:g> minuten geen dataverbinding"</item>
-  </plurals>
-  <plurals name="alert_dialog_exit_ecm">
-    <item quantity="one" msgid="2181569650640386253">"De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuut in de modus voor noodoproepen. In deze modus kunt u geen apps gebruiken waarvoor een dataverbinding nodig is. Wilt u de modus verlaten?"</item>
-    <item quantity="other" msgid="3231879566243957821">"De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuten in de modus voor noodoproepen. In deze modus kunt u geen apps gebruiken waarvoor een dataverbinding nodig is. Wilt u de modus verlaten?"</item>
-  </plurals>
-  <plurals name="alert_dialog_not_avaialble_in_ecm">
-    <item quantity="one" msgid="8939225905428421722">"De geselecteerde actie is niet beschikbaar in de modus voor noodoproepen. De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuut in deze modus. Wilt u de modus verlaten?"</item>
-    <item quantity="other" msgid="3489076611710869904">"De geselecteerde actie is niet beschikbaar in de modus voor noodoproepen. De telefoon staat <xliff:g id="COUNT">%s</xliff:g> minuten in deze modus. Wilt u de modus verlaten?"</item>
-  </plurals>
     <string name="alert_dialog_in_ecm_call" msgid="2334477874583086142">"De geselecteerde actie is niet beschikbaar tijdens noodoproepen"</string>
     <string name="progress_dialog_exiting_ecm" msgid="8751952246695857820">"Modus voor noodoproepen verlaten"</string>
     <string name="alert_dialog_yes" msgid="6674268047820703974">"Ja"</string>
@@ -620,8 +545,8 @@
     <string name="add_sip_account" msgid="5904858426290097611">"Account toevoegen"</string>
     <string name="remove_sip_account" msgid="7645900420385682570">"Account verwijderen"</string>
     <string name="sip_account_list" msgid="5480058210652194306">"SIP-accounts"</string>
-    <string name="saving_account" msgid="7468818916695729968">"Het account opslaan..."</string>
-    <string name="removing_account" msgid="5569334415898924904">"Het account verwijderen..."</string>
+    <string name="saving_account" msgid="7468818916695729968">"Het account opslaan\u2026"</string>
+    <string name="removing_account" msgid="5569334415898924904">"Het account verwijderen\u2026"</string>
     <string name="sip_menu_save" msgid="5842531129356014943">"Opslaan"</string>
     <string name="sip_menu_discard" msgid="524075892158789701">"Annuleren"</string>
     <string name="alert_dialog_close" msgid="7759635137627626235">"Het profiel sluiten"</string>
@@ -632,9 +557,9 @@
     <string name="primary_account_summary" msgid="7339564526372623187">"Gebruikt voor uitgaande oproepen"</string>
     <string name="advanced_settings_title" msgid="8846648727128452293">"Geavanceerde instellingen"</string>
     <string name="primary_account_summary_with" msgid="1633960536212343187">"Primair account. <xliff:g id="REGISTRATION_STATUS">%s</xliff:g>"</string>
-    <string name="registration_status_checking_status" msgid="3381868307694056727">"Status controleren..."</string>
-    <string name="registration_status_registering" msgid="7115694971025999516">"Registreren..."</string>
-    <string name="registration_status_still_trying" msgid="1471733478935862864">"Nog steeds bezig..."</string>
+    <string name="registration_status_checking_status" msgid="3381868307694056727">"Status controleren\u2026"</string>
+    <string name="registration_status_registering" msgid="7115694971025999516">"Registreren\u2026"</string>
+    <string name="registration_status_still_trying" msgid="1471733478935862864">"Nog steeds bezig\u2026"</string>
     <string name="registration_status_not_receiving" msgid="5011399017106466965">"Oproepen worden niet ontvangen"</string>
     <string name="registration_status_no_data" msgid="8279587001454092132">"Accountregistratie gestopt omdat er geen internetverbinding is"</string>
     <string name="registration_status_no_wifi_data" msgid="6698550648571450078">"Accountregistratie gestopt omdat er geen Wi-Fi-verbinding is"</string>
@@ -676,81 +601,80 @@
     <string name="no_voip" msgid="8901474054537199865">"Bellen via internet niet ondersteund"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Beantwoorden"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Weigeren"</string>
-    <string name="notification_ongoing_calling_format">Belt (<xliff:g id="duration">%s</xliff:g>)</string>
 
-    <string name="advanced_setting">Geavanceerde instellingen V.30.1</string>
-    <string name="vibrate_outgoing">Trillen bij vibreren</string>
-    <string name="vibrate_outgoing_sum">Trillen wanneer oproep aangenomen wordt.</string>
-    <string name="vibrate_45">Tril elke 45 seconden</string>
-    <string name="vibrate_45_sum">Tril elke 45 seconden bij uitgaande oproepen.</string>
+    <!-- CYANOGENMOD EDITS -->
+    <string name="mvno_roaming">Nationale gegevensroaming</string>
+    <string name="mvno_roaming_summary">Hiermee kunt u een andere netwerkprovider kiezen in uw eigen land.</string>
+    <string name="mvno_roaming_warning">Gegevensroaming inschakelen in hetzelfde land als uw provider? Voor sommige virtuele netwerkproviders is dit vereist. Schakel dit niet in als uw provider geld vraagt voor roaming in uw eigen land. Een herstart of het in- en uitschakelen van vliegtuigmodus is vereist.</string>
+    <string name="notification_ongoing_calling_format">Belt <xliff:g id="duration">%s</xliff:g>)</string>
+    <string name="advanced_setting">Geavanceerd</string>
+    <string name="vibrate_outgoing">Trillen bij aannemen</string>
+    <string name="vibrate_outgoing_sum">Trillen als oproep wordt aangenomen</string>
+    <string name="vibrate_45">Elke 45 sec. trillen</string>
+    <string name="vibrate_45_sum">Elke 45 sec. trillen bij uitgaande gesprekken</string>
     <string name="vibrate_hangup">Trillen bij ophangen</string>
-    <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een oproep.</string>
-    <string name="screen_awake">Beeldscherm aanhouden</string>
-    <string name="screen_awake_sum">Beeldscherm blijft langer dan normaal aan tijdens een gesprek.</string>
-    <string name="always_proximity">Gebruik proximity altijd</string>
-    <string name="always_proximity_sum">Inschakelen om de proximity sensor het scherm te laten blokkeren, ook wanneer het toestel horizontaal ligt.</string>
-    <string name="led_notify_call">LED notificaties</string>
-    <string name="led_notify_call_sum">LED licht op bij wanneer er een gemist gesprek is.</string>
-    <string name="led_show_organ">Organisatie weergeven</string>
-    <string name="led_show_organ_sum">Organisatie wordt weergegeven op het scherm tijdens een gesprek</string>
-    <string name="vibrate_call_waiting">Trillen wachten gesprek</string>
-    <string name="vibrate_call_waiting_sum">Trillen bij wachten op een gesprek.</string>
-    <string name="return_home">Altijd terug naar gesprekslijst</string>
-    <string name="return_home_sum">Na het ophangen altijd de gesprekkenlijst laten zien.</string>
+    <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een gesprek</string>
+    <string name="screen_awake">Scherm altijd aan</string>
+    <string name="screen_awake_sum">Scherm aan houden tijdens gesprek</string>
+    <string name="always_proximity">Autom. scherm uit</string>
+    <string name="always_proximity_sum">Sensor gebruiken om scherm te laten blokkeren, ook in landschapsmodus</string>
+    <string name="led_notify_call">LED-meldingen</string>
+    <string name="led_notify_call_sum">LED op laten lichten bij gemiste oproepen</string>
+    <string name="led_show_organ">Organisatie tonen</string>
+    <string name="led_show_organ_sum">Organisatie op scherm tonen tijdens een gesprek</string>
+    <string name="vibrate_call_waiting">Trillen bij wachtgesprek</string>
+    <string name="vibrate_call_waiting_sum">Trillen bij gesprek in de wacht</string>
+    <string name="return_home">Altijd terug naar oproepenlijst</string>
+    <string name="return_home_sum">Na ophangen oproepenlijst tonen</string>
     <string name="menu_addBlackList">Toevoegen aan zwarte lijst</string>
     <string name="black_list">Zwarte lijst</string>
-    <string name="black_list_sum">Inkomend gesprek uit zwarte lijst wordt opgehangen.</string>
+    <string name="black_list_sum">Inkomende oproep uit zwarte lijst wordt opgehangen</string>
     <string name="add_black">Nummer toevoegen</string>
     <string name="remove_black">%s van lijst verwijderen</string>
-    <string name="turn_silence">Stilte</string>
-    <string name="turn_silence_sum">Terugschakelen naar stilte modus</string>
+    <string name="turn_silence">Stil</string>
+    <string name="turn_silence_sum">Terug naar stille modus</string>
     <string name="left_hand">Linkshandig</string>
-    <string name="left_hand_sum">Toestel als linkshandige gebruiken (herstart vereist).</string>
+    <string name="left_hand_sum">Toestel als linkshandige gebruiken (herstart vereist)</string>
     <string name="set_force_touch">Aanraak UI in gesprek</string>
     <string name="set_force_touch_sum">Aanraak UI in gesprek zonder gebruik te maken van proximity sensor.</string>
-    <string name="rotate_incall">Sensorrotatie activeren</string>
-    <string name="rotate_incall_sum">Toestaan om schermweergave tijdens oproep te roteren bij draaien toestel.</string>
-    <string name="bg_incall">Inkomende oproep op achtergrond</string>
-    <string name="bg_incall_sum">Laat inkomende oproep op achtergrond als het scherm aan is, toon enkel notificatie en laat beltoon horen.</string>
-
-    <string name="per_change_mobile_network">Verander netwerk (2G/3G)</string>
-    <string name="per_change_mobile_network_desc">Applicatie met deze toegang kan op elk moment wisselen tussen 2G en 3G. 3G is sneller, verbruikt meer stroom en kan duurder zijn.</string>
-
+    <string name="rotate_incall">Autom. scherm draaien</string>
+    <string name="rotate_incall_sum">Tijdens gesprek scherm draaien m.b.v. sensors</string>
+    <string name="bg_incall">Minder nadruk op oproep</string>
+    <string name="bg_incall_sum">Alleen melding tonen en beltoon afspelen als scherm aan is</string>
+    <string name="per_change_mobile_network">Netwerk veranderen (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Hiermee kan een applicatie altijd wisselen tussen 2G en 3G. 3G is sneller, maar verbruikt meer stroom en kan duurder zijn.</string>
     <string name="phone_number_label">Mijn nummer</string>
-    <string name="phone_number_summary">Het telefoonnummer voor dit apparaat instellen</string>
-
-    <string name="show_ssn_label">Gebeurtenis notificaties</string>
-    <string name="show_ssn_summary">Toon een notificatie voor verschillende netwerkgebeurtenissen bij gesprekken (bv. bij doorschakelen)</string>
-
-    <!-- TrackBall Answer and Hangup -->
-    <string name="trackball_answer">Trackball opnemen</string>
-    <string name="trackball_answer_sum">Druk op de trackball om het gesprek op te nemen.</string>
-    <string-array name="trackballLabels">
-        <item>Uitgeschakeld</item>
-       <item>Één keer drukken</item>
-       <item>Dubbel drukken</item>
-    </string-array>
-    <string name="trackball_hangup">Trackball ophangen</string>
-    <string name="trackball_hangup_sum">Druk op de trackball om het gesprek te beëndigen.</string>
-    <string-array name="trackballHangupLabels">
-       <item>Uitgeschakeld</item>
-       <item>Één keer drukken</item>
-       <item>Dubbel drukken</item>
-    </string-array>
-    <!-- End TrackBall Answer and Hangup  -->
-
-    <string name="voicemail_notification_title">Voicemail notificaties</string>
-    <string name="voicemail_notification_summary">Notificaties voor nieuwe voicemails activeren.</string>
-
-    <string name="hide_hold_button">Verberg wacht-knop</string>
-    <string name="hide_hold_button_sum">Verberg de knop die het actieve gesprek in de wacht zet.</string>
-
-    <!-- Phone goggles -->
-    <string name="toast_phone_goggles">Je bent op dit moment niet gemachtigd om te bellen, probeer het later opnieuw.</string>
+    <string name="phone_number_summary">Telefoonnummer voor dit apparaat instellen</string>
+    <string name="show_ssn_label">Gebeurtenissen melden</string>
+    <string name="show_ssn_summary">Melding tonen voor netwerkgebeurtenissen m.b.t. afhandeling van gesprekken</string>
+    <string name="trackball_answer">Met trackball opnemen</string>
+    <string name="trackball_answer_sum">Op de trackball drukken om gesprek te beginnen</string>
+    <string name="trackball_hangup">Met trackball ophangen</string>
+    <string name="trackball_hangup_sum">Op de trackball drukken om gesprek te beëindigen</string>
+    <string name="voicemail_notification_title">Voicemailmeldingen</string>
+    <string name="voicemail_notification_summary">Meldingen voor nieuwe voicemailberichten</string>
+    <string name="hide_hold_button">Wachtknop verbergen</string>
+    <string name="hide_hold_button_sum">Zelf wachtgesprekken beginnen uitschakelen</string>
+    <string name="toast_phone_goggles">U mag op dit moment niet bellen. Probeer het later nog eens.</string>
     <string name="dialog_phone_goggles_title">Oproep geblokkeerd</string>
     <string name="dialog_phone_goggles_title_unlocked">Oproep toegestaan</string>
-    <string name="dialog_phone_goggles_content">Een gesprek starten is op dit moment mogelijk niet verstandig, weet je zeker dat je door wilt gaan?</string>
-    <string name="dialog_phone_goggles_unauthorized">Een gesprek starten is op dit moment mogelijk niet verstandig.</string>
+    <string name="dialog_phone_goggles_content">Op dit moment een gesprek starten is misschien niet verstandig. Weet u zeker dat u door wilt gaan?</string>
+    <string name="dialog_phone_goggles_unauthorized">Een gesprek starten is op dit moment misschien niet verstandig.</string>
     <string name="dialog_phone_goggles_ok">Oproep</string>
     <string name="dialog_phone_goggles_cancel">Annuleren</string>
+    <string name="rotate_to_answer">Naar rechts draaien om op te nemen</string>
+    <string name="rotate_to_decline">Naar links draaien om af te wijzen</string>
+    <string name="black_regex_title">Jokertekens gebruiken</string>
+    <string name="black_regex_summary">Gebruik \'.\' als jokerteken en \'*\' voor herhaling. Bijv.: \'123.*\' blokkeert nummers die starten met 123 en \'.*123.*\' blokkeert nummers die 123 bevatten</string>
+    <string name="sip_system_decide_entry">Automatisch</string>
+    <string name="sip_always_send_keepalive_entry">Altijd verzenden</string>
+    <string name="keepalive_interval_title">Interval keepalive</string>
+    <string name="keepalive_interval_summary">Interval SIP-keepalive in sec.</string>
+    <string name="user_agent_title">SIP-useragent</string>
+    <string name="voice_quality_preferences_title">Stemkwaliteit</string>
+    <string name="voice_quality_summary">Stemprofiel instellen ter verbetering van het gehoorde</string>
+    <string name="voice_quality_entry_normal">Normaal</string>
+    <string name="voice_quality_entry_clear">Duidelijk</string>
+    <string name="voice_quality_entry_crisp">Scherp</string>
+    <string name="voice_quality_entry_bright">Helder</string>
 </resources>
