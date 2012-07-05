@@ -1677,4 +1677,10 @@
     <string name="vibrate_call_waiting">Vibrate call waiting</string>
     <string name="vibrate_call_waiting_sum">Vibrate on call waiting</string>
     <!-- End Advanced Settings -->
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Noise suppression</string>
+    <string name="noise_suppression_summary">Enable noise suppression for calls</string>
+    <!-- End Noise suppression -->
+
 </resources>
