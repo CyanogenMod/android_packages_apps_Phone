@@ -736,14 +736,20 @@
     <string name="voicemail_notification_vibarte_when_dialog_title" msgid="5739583146522136440">"Rezgés"</string>
 
     <!-- 20120417 -->
-    <string name="phone_number_label">Saját telefonszámom</string>
-    <string name="phone_number_summary">Állítsd be a készülékhez tartozó telefonszámot</string>
+    <string name="phone_number_label">Saját telefonszám</string>
+    <string name="phone_number_summary">Készülékhez tartozó telefonszám beállítása</string>
     <!-- 20120420 -->
     <string name="preferred_network_mode_lte_gsm_summary">Preferált hálózati mód: LTE / WCDMA / GSM</string>
     <string name="absent_num">HIÁNYZÓ SZÁM</string>
     <string name="fake_phone_activity_infoText_text">Bejövő álhívás száma</string>
     <string name="fake_phone_activity_phoneNumber_text">(650) 555-1234</string>
     <string name="fake_phone_activity_placeCall_text">Bejövő álhívás</string>
+
+    <!-- 20120706 -->
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Zajcsökkentés</string>
+    <string name="noise_suppression_summary">Zajcsökkentés engedélyezése telefonhívások esetén</string>
+    <!-- End Noise suppression -->
 
   <string-array name="voicemail_notification_vibrate_when_entries">
     <item msgid="468237575962916558">"Mindig"</item>
