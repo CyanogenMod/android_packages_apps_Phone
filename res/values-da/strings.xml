@@ -726,4 +726,27 @@
     <item msgid="1595097872875714252">"Kun ved lydløs"</item>
     <item msgid="1458182414036878616">"Aldrig"</item>
   </string-array>
+
+  <!-- CM9 Phone additions Danish translation by Jacob Madsen, u2jacob@gmail.com -->
+  <!-- The default value value for voicemail notification. -->
+  <string name="voicemail_notification_vibrate_when_default" translatable="false">never</string>
+
+  <!-- Actual values used in our code for voicemail notifications. DO NOT TRANSLATE -->
+  <string-array name="voicemail_notification_vibrate_when_values" translatable="false">
+    <item>always</item>
+    <item>silent</item>
+    <item>never</item>
+  </string-array>
+  <!-- Advanced Settings -->
+  <string name="advanced_setting">Avancerede indstillinger</string>
+  <string name="vibrate_outgoing">Vibrér ved besvar</string>
+  <string name="vibrate_outgoing_sum">Vibrér når et udgående opkald er besvaret</string>
+  <string name="vibrate_45">Vibrér hver 45 sekunder</string>
+  <string name="vibrate_45_sum">Vibrerer ved 45-sekundersmærket af hvert minut under udgående opkald</string>
+  <string name="vibrate_hangup">Vibrér når der lægges på</string>
+  <string name="vibrate_hangup_sum">Vibrér når et opkald er afsluttet</string>
+  <string name="vibrate_call_waiting">Vibrér ventende opkald</string>
+  <string name="vibrate_call_waiting_sum">Vibrér ved ventende opkald</string>
+  <!-- End Advanced Settings -->  
+
 </resources>
