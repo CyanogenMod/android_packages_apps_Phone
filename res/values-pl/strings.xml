@@ -717,6 +717,7 @@
     <string name="perm_change_mobile_network_desc">Aplikacja ma możliwość przełącania się między siecią 2G i 3G. 3G jest szybsze, ale zużywa szybciej baterię.</string>
 
     <!-- **** CYANOGENMOD EDITS START **** -->
+
     <!-- Dialer UI Settings -->
     <string name="dialer_ui_settings_title">Wybieranie numeru</string>
     <string name="dialer_ui_settings_summary">Ustawienia wybierania numeru</string>
@@ -736,10 +737,22 @@
     <string name="vibrate_call_waiting_sum">Wibracje przy oczekującym połączeniu w trakcie innego połączenia</string>
     <!-- End Advanced Settings -->
 
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Redukcja szumów</string>
+    <string name="noise_suppression_summary">Włącz redukcję szumów dla połączeń głosowych</string>
+    <!-- End Noise suppression -->
+
     <string name="national_roaming">Krajowy roaming</string>
     <string name="national_roaming_enable">Podłącz do sieci w trybie krajowego roamingu</string>
     <string name="national_roaming_disable">Podłącz do sieci w trybie krajowego roamingu</string>
+
+    <string name="mwi_notification_title">Wskaźnik oczekującej wiadomości</string>
+    <string name="mwi_notification_summary">Pokaż wskaźnik oczekującej wiadomości na poczcie głosowej</string>
+
     <string name="preferred_network_mode_lte_gsm_summary">Preferowany tryb sieci: LTE/WCDMA/GSM</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Preferowany tryb sieci: LTE/CDMA/EvDo</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Preferowany tryb sieci: LTE/CMDA/EvDo/GSM/WCDMA</string>
+
     <!-- **** CYANOGENMOD EDITS END **** -->
 
     <string name="voicemail_notification_vibrate_when_title" msgid="8361970092063604886">"Wibracje"</string>
