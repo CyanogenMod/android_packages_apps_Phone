@@ -100,6 +100,10 @@
     <string name="apn_settings" msgid="9043423184895642077">"接入点名称 (APN)"</string>
     <string name="settings_label" msgid="3876743539816984008">"网络设置"</string>
     <string name="voicemail" msgid="8693759337917898954">"语音信箱"</string>
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">信息等待指示器</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">显示等待语音信箱通知的指示器</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"语音信箱："</string>
     <string name="networks" msgid="8873030692174541976">"网络运营商"</string>
     <string name="call_settings" msgid="6112441768261754562">"通话设置"</string>
@@ -185,24 +189,37 @@
     <string name="preferred_network_mode_wcdma_perf_summary" msgid="8521677230113533809">"首选网络模式：首选 WCDMA"</string>
     <string name="preferred_network_mode_gsm_only_summary" msgid="3352445413437453511">"首选网络模式：仅限 GSM"</string>
     <string name="preferred_network_mode_wcdma_only_summary" msgid="2836897236221063413">"首选网络模式：仅限 WCDMA"</string>
-    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"首选网络模式：GSM/WCDMA"</string>
+    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"首选网络模式：GSM / WCDMA"</string>
     <string name="preferred_network_mode_cdma_summary" msgid="3175690187294334241">"首选网络模式：CDMA"</string>
-    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"首选网络模式：CDMA/EvDo"</string>
+    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"首选网络模式：CDMA / EvDo"</string>
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"首选网络模式：仅限 CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"首选网络模式：仅限 EvDo"</string>
-    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"首选网络模式：LTE/CDMA"</string>
+    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"首选网络模式：LTE / CDMA"</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / GSM[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_summary">首选网络模式：LTE / WCDMA / GSM</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">首选网络模式：LTE / CDMA / EvDo</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">首选网络模式：LTE / CMDA / EvDo / GSM / WCDMA</string>
+
   <string-array name="preferred_network_mode_choices">
-    <item msgid="5886604709726177211">"LTE/CDMA"</item>
+    <item>仅 LTE</item>
+    <item>LTE / CMDA / EvDo / GSM / WCDMA</item>
+    <item>LTE / WCDMA / GSM</item>
+    <item>LTE / CDMA / EvDo</item>
+    <item msgid="5886604709726177211">"LTE / CDMA"</item>
     <item msgid="3273348576277144124">"仅 EvDo"</item>
     <item msgid="454610224530856274">"CDMA，无 EvDo 功能"</item>
-    <item msgid="8928247118825616081">"CDMA/EvDo 自动选择"</item>
-    <item msgid="8595462903294812666">"GSM/WCDMA 自动选择"</item>
+    <item msgid="8928247118825616081">"CDMA / EvDo 自动选择"</item>
+    <item msgid="8595462903294812666">"GSM / WCDMA 自动选择"</item>
     <item msgid="5189164180446264504">"仅 WCDMA"</item>
     <item msgid="5714714953966979187">"仅 GSM"</item>
-    <item msgid="4775796025725908913">"首选 GSM/WCDMA"</item>
+    <item msgid="4775796025725908913">"首选 GSM / WCDMA"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte">
-    <item msgid="7345284701413565429">"LTE/CDMA"</item>
+    <item>仅 LTE</item>
+    <item>LTE / CMDA / EvDo / GSM / WCDMA</item>
+    <item msgid="7345284701413565429">"LTE / CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"已启用数据流量"</string>
@@ -210,6 +227,12 @@
     <string name="roaming" msgid="8871412572928323707">"数据漫游"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"漫游时连接到数据服务"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"漫游时连接到数据服务"</string>
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">国家性数据漫游</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">在原国家内漫游时连接到数据服务</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">在原国家内漫游时连接到数据服务</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"数据连接已断，因为您已离开本地网络并已关闭数据漫游。"</string>
     <string name="roaming_warning" msgid="7820963598559553967">"是否允许数据漫游？这可能产生大量漫游费！"</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTS 选项"</string>
@@ -735,6 +758,12 @@
     <string name="vibrate_hangup_sum">通话结束时震动.</string>
     <string name="vibrate_call_waiting">呼叫等待震动</string>
     <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">噪音镇压</string>
+    <string name="noise_suppression_summary">呼叫声启用噪音镇压</string>
+    <!-- End Noise suppression -->
+
     <string name="perm_change_mobile_network">2G／3G移动网络切换</string>
     <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。使用3G网络存取资料的速度会比较快，但是也会相应消耗比较多的电量并消耗您更多金钱。</string>
 </resources>
