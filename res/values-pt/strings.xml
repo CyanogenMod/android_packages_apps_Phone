@@ -623,4 +623,9 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Toque"</string>
     <string name="perm_change_mobile_network">Alternar rede de dados (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Aplicação com está permissão pode a qualquer momento, alterar entre dados 2G and 3G. 3G é mais rápido, consome mais bateria, e também pode gastar mais seu dinheiro.</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Modo de rede preferencial: LTE / WCDMA / GSM</string>
+    <string name="dialer_ui_settings_title">Teclado</string>
+    <string name="dialer_ui_settings_summary">Configurações do teclado</string>
+    <string name="noise_suppression_title">Supressão de ruído</string>
+    <string name="noise_suppression_summary">Ativar supressão de ruído em ligações</string>
 </resources>
