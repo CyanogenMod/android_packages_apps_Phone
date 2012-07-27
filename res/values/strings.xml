@@ -1490,4 +1490,10 @@
     <string name="preference_category_ringtone">Ringtone</string>
     <string name="perm_change_mobile_network">Change network (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Application with this permission can, at any time, change between 2G data and 3G data. 3G is faster, consumes more battery, and can also cost you more money.</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Noise suppression</string>
+    <string name="noise_suppression_summary">Enable noise suppression for calls</string>
+    <!-- End Noise suppression -->
+
 </resources>
