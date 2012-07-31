@@ -95,9 +95,9 @@
     <string name="dialer_emptyListWorking" msgid="6022498519770859790">"Laden\u2026"</string>
     <string name="enterPin" msgid="4753300834213388397">"Voer pincode in voor ontgrendeling simkaart"</string>
     <string name="pinUnlocked" msgid="3260617001055506794">"Simkaart ontgrendeld"</string>
-    <string name="enterNewPin" msgid="5311243769004752401">"Nieuwe SIM pincode"</string>
-    <string name="verifyNewPin" msgid="2593629913010458867">"Voer de nieuwe SIM pincode nogmaals in ter bevestiging"</string>
-    <string name="verifyFailed" msgid="3875778795754857903">"De SIM pincodes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
+    <string name="enterNewPin" msgid="5311243769004752401">"Nieuwe SIM-pincode"</string>
+    <string name="verifyNewPin" msgid="2593629913010458867">"Voer de nieuwe SIM-pincode nogmaals in ter bevestiging"</string>
+    <string name="verifyFailed" msgid="3875778795754857903">"De SIM-pincodes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
     <string name="enterPuk" msgid="6144749655582862324">"Voer de pukcode in om de simkaart te ontgrendelen"</string>
     <string name="badPuk" msgid="3213017898690275965">"Onjuiste pukcode!"</string>
     <string name="buttonTxtContinue" msgid="863271214384739936">"Doorgaan"</string>
@@ -342,22 +342,22 @@
     <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Lezen vanaf simkaart\u2026"</string>
     <string name="simContacts_empty" msgid="5270660846489561932">"Geen contacten op uw simkaart."</string>
     <string name="simContacts_title" msgid="1861472842524839921">"Contacten selecteren om te importeren"</string>
-    <string name="enable_pin" msgid="5422767284133234860">"SIM pincode in-/uitschakelen"</string>
-    <string name="change_pin" msgid="9174186126330785343">"SIM pincode wijzigen"</string>
-    <string name="enter_pin_text" msgid="8532615714751931951">"SIM pincode:"</string>
+    <string name="enable_pin" msgid="5422767284133234860">"SIM-pincode in-/uitschakelen"</string>
+    <string name="change_pin" msgid="9174186126330785343">"SIM-pincode wijzigen"</string>
+    <string name="enter_pin_text" msgid="8532615714751931951">"SIM-pincode:"</string>
     <string name="oldPinLabel" msgid="5287773661246368314">"Oude pincode"</string>
     <string name="newPinLabel" msgid="207488227285336897">"Nieuwe pincode"</string>
     <string name="confirmPinLabel" msgid="257597715098070206">"Nieuwe pincode bevestigen"</string>
     <string name="badPin" msgid="4154316827946559447">"De oude pincode die u heeft ingevoerd, is onjuist. Probeer het opnieuw."</string>
     <string name="mismatchPin" msgid="5974597541268042785">"De pincodes die u heeft ingevoerd, komen niet overeen. Probeer het opnieuw."</string>
     <string name="invalidPin" msgid="5981171102258684792">"Voer een pincode van 4 tot 8 cijfers in."</string>
-    <string name="disable_sim_pin" msgid="3992926931620188855">"SIM pincode uitschakelen"</string>
-    <string name="enable_sim_pin" msgid="5803702443844458831">"SIM pincode inschakelen"</string>
+    <string name="disable_sim_pin" msgid="3992926931620188855">"SIM-pincode uitschakelen"</string>
+    <string name="enable_sim_pin" msgid="5803702443844458831">"SIM-pincode inschakelen"</string>
     <string name="enable_in_progress" msgid="3695303775100109650">"Een ogenblik geduld\u2026"</string>
-    <string name="enable_pin_ok" msgid="8077439615296694284">"SIM pincode ingeschakeld"</string>
-    <string name="disable_pin_ok" msgid="8552428316206928913">"SIM pincode uitgeschakeld"</string>
+    <string name="enable_pin_ok" msgid="8077439615296694284">"SIM-pincode ingeschakeld"</string>
+    <string name="disable_pin_ok" msgid="8552428316206928913">"SIM-pincode uitgeschakeld"</string>
     <string name="pin_failed" msgid="6597695909685242127">"De pincode die u heeft ingevoerd, is onjuist"</string>
-    <string name="pin_changed" msgid="9000716792724195093">"SIM pincode gewijzigd"</string>
+    <string name="pin_changed" msgid="9000716792724195093">"SIM-pincode gewijzigd"</string>
     <string name="puk_requested" msgid="3898394204193202803">"Wachtwoord onjuist, simkaart is vergrendeld! Puk2-code vereist."</string>
     <string name="enter_pin2_text" msgid="8339444124477720345">"Pin2"</string>
     <string name="oldPin2Label" msgid="8559146795026261502">"Oude pin2-code"</string>
@@ -421,7 +421,7 @@
     <string name="notification_voicemail_no_vm_number" msgid="760963466895609716">"Voicemailnummer onbekend"</string>
     <string name="notification_network_selection_title" msgid="4224455487793492772">"Geen service"</string>
     <string name="notification_network_selection_text" msgid="2607085729661923269">"Geselecteerd netwerk (<xliff:g id="OPERATOR_NAME">%s</xliff:g>) niet beschikbaar"</string>
-    <string name="incall_error_power_off" msgid="6550191216405193368">"Als u wilt bellen, moet u eerst de Vliegmodus uitschakelen."</string>
+    <string name="incall_error_power_off" msgid="6550191216405193368">"Als u wilt bellen, moet u eerst de vliegtuigmodus uitschakelen."</string>
     <string name="incall_error_emergency_only" msgid="4678640422710818317">"Niet geregistreerd op netwerk."</string>
     <string name="incall_error_out_of_service" msgid="8587993036435080418">"Mobiel netwerk niet beschikbaar."</string>
     <string name="incall_error_no_phone_number_supplied" msgid="4197432103471807739">"Oproep niet verzonden, geen geldig nummer ingevoerd."</string>
@@ -605,40 +605,40 @@
     <!-- CYANOGENMOD EDITS -->
     <string name="mvno_roaming">Nationale gegevensroaming</string>
     <string name="mvno_roaming_summary">Hiermee kunt u een andere netwerkprovider kiezen in uw eigen land.</string>
-    <string name="mvno_roaming_warning">Gegevensroaming inschakelen in hetzelfde land als uw provider? Voor sommige virtuele netwerkproviders is dit vereist. Schakel dit niet in als uw provider geld vraagt voor roaming in uw eigen land. Een herstart of het in- en uitschakelen van vliegtuigmodus is vereist.</string>
+    <string name="mvno_roaming_warning">Gegevensroaming inschakelen in hetzelfde land als uw provider? Voor sommige virtuele netwerkproviders is dit vereist. Schakel dit niet in als uw provider kosten berekent voor roaming in uw eigen land. Een herstart of het in- en uitschakelen van vliegtuigmodus is vereist.</string>
     <string name="notification_ongoing_calling_format">Belt <xliff:g id="duration">%s</xliff:g>)</string>
     <string name="advanced_setting">Geavanceerd</string>
     <string name="vibrate_outgoing">Trillen bij aannemen</string>
     <string name="vibrate_outgoing_sum">Trillen als oproep wordt aangenomen</string>
+    <string name="vibrate_hangup">Trillen bij ophangen</string>
+    <string name="vibrate_hangup_sum">Trillen als oproep wordt beëindigd</string>
     <string name="vibrate_45">Elke 45 sec. trillen</string>
     <string name="vibrate_45_sum">Elke 45 sec. trillen bij uitgaande gesprekken</string>
-    <string name="vibrate_hangup">Trillen bij ophangen</string>
-    <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een gesprek</string>
     <string name="screen_awake">Scherm altijd aan</string>
     <string name="screen_awake_sum">Scherm aan houden tijdens gesprek</string>
-    <string name="always_proximity">Autom. scherm uit</string>
+    <string name="always_proximity">Scherm autom. uit</string>
     <string name="always_proximity_sum">Sensor gebruiken om scherm te laten blokkeren, ook in landschapsmodus</string>
     <string name="led_notify_call">LED-meldingen</string>
     <string name="led_notify_call_sum">LED op laten lichten bij gemiste oproepen</string>
     <string name="led_show_organ">Organisatie tonen</string>
-    <string name="led_show_organ_sum">Organisatie op scherm tonen tijdens een gesprek</string>
+    <string name="led_show_organ_sum">Organisatie op scherm tonen tijdens gesprek</string>
     <string name="vibrate_call_waiting">Trillen bij wachtgesprek</string>
     <string name="vibrate_call_waiting_sum">Trillen bij gesprek in de wacht</string>
     <string name="return_home">Altijd terug naar oproepenlijst</string>
     <string name="return_home_sum">Na ophangen oproepenlijst tonen</string>
     <string name="menu_addBlackList">Toevoegen aan zwarte lijst</string>
     <string name="black_list">Zwarte lijst</string>
-    <string name="black_list_sum">Inkomende oproep uit zwarte lijst wordt opgehangen</string>
+    <string name="black_list_sum">Inkomende oproep uit zwarte lijst wordt automatisch beëindigd</string>
     <string name="add_black">Nummer toevoegen</string>
     <string name="remove_black">%s van lijst verwijderen</string>
     <string name="turn_silence">Stil</string>
     <string name="turn_silence_sum">Terug naar stille modus</string>
     <string name="left_hand">Linkshandig</string>
     <string name="left_hand_sum">Toestel als linkshandige gebruiken (herstart vereist)</string>
-    <string name="set_force_touch">Aanraak UI in gesprek</string>
-    <string name="set_force_touch_sum">Aanraak UI in gesprek zonder gebruik te maken van proximity sensor.</string>
+    <string name="set_force_touch">Tijdens gesprek aanraken</string>
+    <string name="set_force_touch_sum">Aanraakbediening tijdens gesprek forceren zonder nabijheidssensor</string>
     <string name="rotate_incall">Autom. scherm draaien</string>
-    <string name="rotate_incall_sum">Tijdens gesprek scherm draaien m.b.v. sensors</string>
+    <string name="rotate_incall_sum">Tijdens gesprek scherm draaien m.b.v. sensor</string>
     <string name="bg_incall">Minder nadruk op oproep</string>
     <string name="bg_incall_sum">Alleen melding tonen en beltoon afspelen als scherm aan is</string>
     <string name="per_change_mobile_network">Netwerk veranderen (2G/3G)</string>
@@ -665,7 +665,7 @@
     <string name="rotate_to_answer">Naar rechts draaien om op te nemen</string>
     <string name="rotate_to_decline">Naar links draaien om af te wijzen</string>
     <string name="black_regex_title">Jokertekens gebruiken</string>
-    <string name="black_regex_summary">Gebruik \'.\' als jokerteken en \'*\' voor herhaling. Bijv.: \'123.*\' blokkeert nummers die starten met 123 en \'.*123.*\' blokkeert nummers die 123 bevatten</string>
+    <string name="black_regex_summary">\'.\' als jokerteken en \'*\' voor herhaling. Bijv.: \'123.*\' blokkeert nummers die starten met 123 en \'.*123.*\' blokkeert nummers met 123</string>
     <string name="sip_system_decide_entry">Automatisch</string>
     <string name="sip_always_send_keepalive_entry">Altijd verzenden</string>
     <string name="keepalive_interval_title">Interval keepalive</string>

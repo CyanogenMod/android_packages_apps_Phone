@@ -41,7 +41,7 @@
         <item msgid="1908428006803639064">"Hebreeuws"</item>
     </string-array>
     <string-array name="gsm_umts_network_preferences_choices">
-        <item msgid="935612021902787683">"GSM/WCDMA (automatische modus)"</item>
+        <item msgid="935612021902787683">"GSM/WCDMA (automatisch)"</item>
         <item msgid="8912042051809329533">"Alleen WCDMA"</item>
         <item msgid="8776934131146642662">"Alleen GSM"</item>
         <item msgid="4684679567848300935">"GSM/WCDA (voorkeur voor WCDMA)"</item>
