@@ -77,6 +77,8 @@
     <string name="apn_settings" msgid="9043423184895642077">"Hozzáférési pontok nevei"</string>
     <string name="settings_label" msgid="3876743539816984008">"Hálózati beállítások"</string>
     <string name="voicemail" msgid="8693759337917898954">"Hangposta"</string>
+    <string name="mwi_notification_title">Várakozó üzenet</string>
+    <string name="mwi_notification_summary">Várakozó hangposta üzenet megjelenítése</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"HP:"</string>
     <string name="networks" msgid="8873030692174541976">"Mobilszolgáltatók"</string>
     <string name="call_settings" msgid="6112441768261754562">"Hívásbeállítások"</string>
@@ -635,4 +637,7 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Csengőhang"</string>
     <string name="perm_change_mobile_network">Hálózat módosítása (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Az ilyen engedéllyel rendelkező alkalmazás, bármikor válthat 2G és 3G közt. A 3G gyorsabb, jobban meríti az akkumulátort, és több pénzbe is kerülhet a nagyobb adatforgalom miatt.</string>
+    <string name="noise_suppression_title">Zajcsökkentés</string>
+    <string name="noise_suppression_summary">Zajcsökkentés engedélyezése telefonhívások esetén</string>
+
 </resources>
