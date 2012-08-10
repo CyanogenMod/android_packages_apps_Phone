@@ -253,7 +253,7 @@
     <!-- Additional call settings screen, setting summary text when call waiting check box is clear -->
     <string name="sum_cw_disabled">Oznamuje prichádzajúce hovory aj pri prebiehajúcom hovore</string>
     <!-- Call forwarding settings screen, section heading -->
-    <string name="call_forwarding_settings">Nastavenia presmerovania hovorov<</string>
+    <string name="call_forwarding_settings">Nastavenia presmerovania hovorov</string>
     <!-- Call settings screen, setting option name -->
     <string name="labelCF">Presmerovanie hovorov</string>
 
