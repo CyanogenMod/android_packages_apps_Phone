@@ -571,17 +571,18 @@ public class MobileNetworkSettings extends PreferenceActivity
                         R.string.preferred_network_mode_gsm_wcdma_summary);
                 break;
             case Phone.NT_MODE_CDMA:
-                switch (mPhone.getLteOnCdmaMode()) {
+                // Show the same label whether a CDMA or CDMA/LTE phone.
+                /*switch (mPhone.getLteOnCdmaMode()) {
                     case Phone.LTE_ON_CDMA_TRUE:
                         mButtonPreferredNetworkMode.setSummary(
                             R.string.preferred_network_mode_cdma_summary);
                     break;
                     case Phone.LTE_ON_CDMA_FALSE:
-                    default:
+                    default:*/
                         mButtonPreferredNetworkMode.setSummary(
                             R.string.preferred_network_mode_cdma_evdo_summary);
-                        break;
-                }
+                        /*break;
+                }*/
                 break;
             case Phone.NT_MODE_CDMA_NO_EVDO:
                 mButtonPreferredNetworkMode.setSummary(
