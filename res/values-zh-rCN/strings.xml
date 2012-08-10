@@ -761,7 +761,7 @@
 
     <!-- Noise suppression -->
     <string name="noise_suppression_title">噪音镇压</string>
-    <string name="noise_suppression_summary">呼叫声启用噪音镇压</string>
+    <string name="noise_suppression_summary">呼叫时启用噪音镇压</string>
     <!-- End Noise suppression -->
 
     <string name="perm_change_mobile_network">2G／3G移动网络切换</string>
