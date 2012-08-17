@@ -169,6 +169,10 @@
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"優先ネットワークモード: EvDoのみ"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"優先ネットワークモード: LTE/CDMA"</string>
   <string-array name="preferred_network_mode_choices">
+    <item>LTEのみ</item>
+    <item>LTE/CMDA/EvDo/GSM/WCDMA</item>
+    <item>LTE/WCDMA/GSM</item>
+    <item>LTE/CDMA/EvDo</item>
     <item msgid="5543794538185064048">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"EV-DOのみ"</item>
     <item msgid="454610224530856274">"CDMA（EV-DO非準拠）"</item>
@@ -623,4 +627,27 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"着信音"</string>
     <string name="perm_change_mobile_network">ネットワークを変更(2G/3G)</string>
     <string name="perm_change_mobile_network_desc">この権限を許可されたアプリケーションは、いつでも2G/3Gデータの切り替えが可能です。3Gは高速ですが、バッテリ消費が増加します。また、キャリアの課金も増加することがあります。</string>
+
+    <!-- CM Extra entries -->
+    <!-- Mobile network settings, summary for preferred network mode LTE / GSM[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_summary">優先ネットワーク: LTE / WCDMA / GSM</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo[CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">優先ネットワーク: LTE / CDMA / EvDo</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMACHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">優先ネットワーク: LTE / CMDA / EvDo / GSM/WCDMA</string>
+
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">メッセージ待機中表示</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">ボイスメールの通知にメッセージ待機中のインジケータを表示する</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">ダイヤルパッドの設定</string>
+    <string name="dialer_ui_settings_summary">ダイヤルパッドの設定</string>
+
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">ノイズ抑制</string>
+    <string name="noise_suppression_summary">通話中のノイズを抑制する</string>
+    <!-- End Noise suppression -->
 </resources>
