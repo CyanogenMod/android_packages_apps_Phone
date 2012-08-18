@@ -77,6 +77,8 @@
     <string name="apn_settings" msgid="9043423184895642077">"Nomi punti di accesso"</string>
     <string name="settings_label" msgid="3876743539816984008">"Impostazioni di rete"</string>
     <string name="voicemail" msgid="8693759337917898954">"Segreteria"</string>
+    <string name="mwi_notification_title">Indicatore di messaggio in attesa</string>
+    <string name="mwi_notification_summary">Visualizza un indicatore di notifica per un messaggio vocale in attesa</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"ST:"</string>
     <string name="networks" msgid="8873030692174541976">"Operatori di rete"</string>
     <string name="call_settings" msgid="6112441768261754562">"Impostazioni chiamate"</string>
