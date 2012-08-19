@@ -628,4 +628,10 @@
     <string name="dialer_ui_settings_summary">Configurações do teclado</string>
     <string name="noise_suppression_title">Supressão de ruído</string>
     <string name="noise_suppression_summary">Ativar supressão de ruído em ligações</string>
+    <string name="mwi_notification_title">Indicador de Mensagem em Espera</string>
+    <string name="mwi_notification_summary">Exibir mensagem para indicador de notificações de mensagens de voz</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Modo de rede preferencial: LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modo de rede preferencial: LTE / CDMA / EvDo / GSM / WCDMA</string>
+    <string name="phone_number_label">Meu número de telefone</string>
+    <string name="phone_number_summary">Definir o número de telefone para este dispositivo</string>
 </resources>
