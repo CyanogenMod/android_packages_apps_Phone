@@ -634,4 +634,7 @@
     <!-- Noise suppression -->
     <string name="noise_suppression_title">Шумоподавление</string>
     <string name="noise_suppression_summary">Включить шумоподавление в телефонных разговорах</string>
+
+    <string name="phone_number_label">Мой номер телефона</string>
+    <string name="phone_number_summary">Установка номера телефона для этого устройства</string>
 </resources>
