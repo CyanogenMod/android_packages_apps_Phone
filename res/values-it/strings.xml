@@ -638,4 +638,7 @@
     <string name="perm_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
     <string name="noise_suppression_title">Attenuazione rumore</string>
     <string name="noise_suppression_summary">Riduce il rumore di sottofondo presente nelle chiamate</string>
+    <string name="phone_number_label">Il mio numero di telefono</string>
+    <string name="phone_number_summary">Imposta il numero di telefono per questo dispositivo</string>
 </resources>
+
