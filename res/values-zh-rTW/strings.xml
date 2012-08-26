@@ -627,4 +627,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"鈴聲"</string>
     <string name="perm_change_mobile_network">切換行動網路（2G／3G）</string>
     <string name="perm_change_mobile_network_desc">被授予此權限的應用程式能夠於任何時候在 2G 及 3G 行動網路之間進行切換。使用 3G 行動網路取存資料的速度會比較快，但相對的會消耗較多的電池電量，亦會令您花費較多的金錢。</string>
+    <string name="advanced_setting">進階設定</string>
+    <string name="vibrate_outgoing">接聽震動</string>
+    <string name="vibrate_outgoing_sum">當對方接聽時震動</string>
+    <string name="vibrate_45">45秒震動</string>
+    <string name="vibrate_45_sum">撥出通話後到45秒時震動</string>
+    <string name="vibrate_hangup">掛斷震動</string>
+    <string name="vibrate_hangup_sum">通話結束時震動</string>
+    <string name="vibrate_call_waiting">來電待接震動</string>
+    <string name="vibrate_call_waiting_sum">當有來電待接時震動通知</string>
 </resources>

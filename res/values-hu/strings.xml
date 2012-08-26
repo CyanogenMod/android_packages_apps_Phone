@@ -641,5 +641,13 @@
     <string name="noise_suppression_summary">Zajcsökkentés engedélyezése telefonhívások esetén</string>
     <string name="phone_number_label">Saját telefonszám</string>
     <string name="phone_number_summary">Készülékhez tartozó telefonszám beállítása</string>
-
+    <string name="advanced_setting">Speciális beállítások</string>
+    <string name="vibrate_outgoing">Rezgés válaszkor</string>
+    <string name="vibrate_outgoing_sum">Rezgéssel jelzi a telefonhívás létrejöttét</string>
+    <string name="vibrate_45">45 mp-ként rezeg</string>
+    <string name="vibrate_45_sum">Minden 45. másodpercben rezeg a kimenő hívások során</string>
+    <string name="vibrate_hangup">Bontáskor rezeg</string>
+    <string name="vibrate_hangup_sum">Rezgéssel jelzi a hívás befejeztét</string>
+    <string name="vibrate_call_waiting">Hívásvárakoztatáskor rezeg</string>
+    <string name="vibrate_call_waiting_sum">Hívásvárakoztatáskor rezeg a telefon</string>
 </resources>

@@ -627,4 +627,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Klingelton"</string>
     <string name="perm_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechseln. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein</string>
+    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="vibrate_outgoing">Vibriere bei Annahme</string>
+    <string name="vibrate_outgoing_sum">Vibriere, wenn Anruf angenommen wurde</string>
+    <string name="vibrate_45">Vibriere alle 45 Sekunden</string>
+    <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe</string>
+    <string name="vibrate_hangup">Vibriere bei Auflegen</string>
+    <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
+    <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
+    <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
 </resources>

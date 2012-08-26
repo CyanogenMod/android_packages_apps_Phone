@@ -650,4 +650,15 @@
     <string name="noise_suppression_title">ノイズ抑制</string>
     <string name="noise_suppression_summary">通話中のノイズを抑制する</string>
     <!-- End Noise suppression -->
+
+    <!-- Advanced Phone Settings -->
+    <string name="advanced_setting">追加設定</string>
+    <string name="vibrate_outgoing">応答時に振動</string>
+    <string name="vibrate_outgoing_sum">相手が呼び出しに応答した時にバイブレーションする</string>
+    <string name="vibrate_45">45秒間隔で振動</string>
+    <string name="vibrate_45_sum">こちらから発信した通話では45秒間隔でバイブレーションする</string>
+    <string name="vibrate_hangup">切断時に振動</string>
+    <string name="vibrate_hangup_sum">通話を終了した時にバイブレーションする</string>
+    <string name="vibrate_call_waiting">呼出中に振動</string>
+    <string name="vibrate_call_waiting_sum">呼び出し中にバイブレーションする</string>
 </resources>

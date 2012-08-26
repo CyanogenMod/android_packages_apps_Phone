@@ -623,4 +623,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Zil sesi"</string>
     <string name="perm_change_mobile_network">Şebeke değiştir (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Bu ayar istediğiniz zaman 2G ve 3G arasında geçiş yapmanızı sağlar. 3G daha hızlıdır ama daha fazla pil tüketir ve ek olarak daha fazla ücret ödemenize sebep olabilir.</string>
+    <string name="advanced_setting">Gelişmiş Ayarlar</string>
+    <string name="vibrate_outgoing">Cevap verince titret</string>
+    <string name="vibrate_outgoing_sum">Bir çağrıya cevap verildiğinde titret</string>
+    <string name="vibrate_45">Her 45 saniyede titret</string>
+    <string name="vibrate_45_sum">Giden çağrı sırasında her 45 saniyede titret</string>
+    <string name="vibrate_hangup">Çağrı sonlanırsa titret</string>
+    <string name="vibrate_hangup_sum">Çağrı sonlandığında titret</string>
+    <string name="vibrate_call_waiting">Çağrı bekletilirse titret</string>
+    <string name="vibrate_call_waiting_sum">Çağrı bekletildiğinde titret</string>
 </resources>

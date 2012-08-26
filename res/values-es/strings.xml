@@ -627,4 +627,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Tono"</string>
     <string name="perm_change_mobile_network">Cambiar red (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Las aplicaciones con este permiso, pueden en cualquier momento, cambiar entre datos 2G y 3G. 3G es rápido, consume mas batería, y puede costarte mas dinero.</string>
+    <string name="advanced_setting">Configuración Avanzada</string>
+    <string name="vibrate_outgoing">Vibra al Contestar</string>
+    <string name="vibrate_outgoing_sum">Vibra cuando contestan una llamada</string>
+    <string name="vibrate_45">Vibrar cada 45 Segundos</string>
+    <string name="vibrate_45_sum">Vibra durante el segundo 45 de cada minuto de una llamada saliente</string>
+    <string name="vibrate_hangup">Vibrar al Colgar</string>
+    <string name="vibrate_hangup_sum">Vibra cuando ha finalizado una llamada</string>
+    <string name="vibrate_call_waiting">Vibrar en Llamada en Espera</string>
+    <string name="vibrate_call_waiting_sum">Vibra al tener una Llamada en Espera</string>
 </resources>

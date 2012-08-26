@@ -1502,4 +1502,16 @@
 
     <string name="phone_number_label">My phone number</string>
     <string name="phone_number_summary">Set the phone number for this device</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Advanced Settings</string>
+    <string name="vibrate_outgoing">Vibrate on answer</string>
+    <string name="vibrate_outgoing_sum">Vibrate when an outgoing call is answered</string>
+    <string name="vibrate_45">Vibrate every 45 seconds</string>
+    <string name="vibrate_45_sum">Vibrates at the 45 second mark of every minute during outgoing calls</string>
+    <string name="vibrate_hangup">Vibrate on hangup</string>
+    <string name="vibrate_hangup_sum">Vibrate when a call has ended</string>
+    <string name="vibrate_call_waiting">Vibrate call waiting</string>
+    <string name="vibrate_call_waiting_sum">Vibrate on call waiting</string>
+    <!-- End Advanced Settings -->
 </resources>

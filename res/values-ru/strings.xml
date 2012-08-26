@@ -637,4 +637,15 @@
 
     <string name="phone_number_label">Мой номер телефона</string>
     <string name="phone_number_summary">Установка номера телефона для этого устройства</string>
+
+    <!-- Advanced Phone Settings -->
+    <string name="advanced_setting">Дополнительные настройки</string>
+    <string name="vibrate_outgoing">Вибрировать при ответе</string>
+    <string name="vibrate_outgoing_sum">Вибрировать когда на звонок отвечают</string>
+    <string name="vibrate_45">Вибрировать каждые 45с</string>
+    <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течении исходящего звонка</string>
+    <string name="vibrate_hangup">Вибрировать при отбое</string>
+    <string name="vibrate_hangup_sum">Вибрировать когда разговор окончен</string>
+    <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
+    <string name="vibrate_call_waiting_sum">Вибрировать при ожидании на линии</string>
 </resources>

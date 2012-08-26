@@ -629,4 +629,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Ringsignal"</string>
     <string name="perm_change_mobile_network">Byt nätverk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
+    <string name="advanced_setting">Avancerade inställningar</string>
+    <string name="vibrate_outgoing">Vibrera vid svar</string>
+    <string name="vibrate_outgoing_sum">Vibrera när du svarar på ett samtal</string>
+    <string name="vibrate_45">Vibrera var 45:e sekund</string>
+    <string name="vibrate_45_sum">Vibrera var 45:e sekund under utgående samtal</string>
+    <string name="vibrate_hangup">Vibrera vid avslut</string>
+    <string name="vibrate_hangup_sum">Vibrera när ett samtal har avslutats</string>
+    <string name="vibrate_call_waiting">Vibrera vid samtal väntar</string>
+    <string name="vibrate_call_waiting_sum">Vibrera när samtal väntar</string>
 </resources>

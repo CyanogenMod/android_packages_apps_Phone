@@ -623,4 +623,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Sonnerie"</string>
     <string name="perm_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus rapide, consomme plus de batterie, et peut également vous coûter plus</string>
+    <string name="advanced_setting">Paramètres avancés</string>
+    <string name="vibrate_outgoing">Vibrer sur réponse</string>
+    <string name="vibrate_outgoing_sum">Vibration quand la communication est établie</string>
+    <string name="vibrate_45">Vibrer régulièrement</string>
+    <string name="vibrate_45_sum">Vibration toutes les 45 secondes pendant un appel sortant</string>
+    <string name="vibrate_hangup">Vibrer en fin d\'appel</string>
+    <string name="vibrate_hangup_sum">Vibration lorsque l\' appel est terminé</string>
+    <string name="vibrate_call_waiting">Vibrer sur double appel</string>
+    <string name="vibrate_call_waiting_sum">Vibrer lorsqu\'un appel est en attente</string>
 </resources>
