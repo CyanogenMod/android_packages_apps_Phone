@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+     Copyright (C) 2012 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="clir_display_values">
+        <item msgid="5560134294467334594">"Netwerkstandaard"</item>
+        <item msgid="7876195870037833661">"Nummer verbergen"</item>
+        <item msgid="1108394741608734023">"Nummer tonen"</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices">
+        <item msgid="5543794538185064048">"LTE/CDMA"</item>
+        <item msgid="3273348576277144124">"Alleen EvDo"</item>
+        <item msgid="454610224530856274">"CDMA zonder EvDo"</item>
+        <item msgid="648505122852496166">"CDMA/EvDo (automatisch)"</item>
+        <item msgid="7148247646407324800">"GSM/WCDMA (automatisch)"</item>
+        <item msgid="5189164180446264504">"Alleen WCDMA"</item>
+        <item msgid="5714714953966979187">"Alleen GSM"</item>
+        <item msgid="8508331239546115206">"Voorkeur voor GSM/WCDMA"</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices_lte">
+        <item msgid="7002474529872452266">"LTE/CDMA"</item>
+        <item msgid="5541716989029928208">"CDMA"</item>
+    </string-array>
+    <string-array name="list_language_entries">
+        <item msgid="6137851079727305485">"Engels"</item>
+        <item msgid="1151988412809572526">"Frans"</item>
+        <item msgid="577840534704312665">"Spaans"</item>
+        <item msgid="8385712091143148180">"Japans"</item>
+        <item msgid="1858401628368130638">"Koreaans"</item>
+        <item msgid="1933212028684529632">"Chinees"</item>
+        <item msgid="1908428006803639064">"Hebreeuws"</item>
+    </string-array>
+    <string-array name="cdma_system_select_choices">
+        <item msgid="176474317493999285">"Alleen thuis"</item>
+        <item msgid="1205664026446156265">"Automatisch"</item>
+    </string-array>
+    <string-array name="tty_mode_entries">
+        <item msgid="512950011423868021">"TTY uit"</item>
+        <item msgid="3971695875449640648">"TTY vol"</item>
+        <item msgid="1937509904407445684">"TTY HCO"</item>
+        <item msgid="5644925873488772224">"TTY VCO"</item>
+    </string-array>
+    <string-array name="dtmf_tone_entries">
+        <item msgid="899650777817315681">"Normaal"</item>
+        <item msgid="2883365539347850535">"Lang"</item>
+    </string-array>
+    <string-array name="voicemail_notification_vibrate_when_entries">
+        <item msgid="468237575962916558">"Altijd"</item>
+        <item msgid="1595097872875714252">"Alleen indien stil"</item>
+        <item msgid="1458182414036878616">"Nooit"</item>
+    </string-array>
+
+    <!-- CYANOGENMOD EDITS -->
+
+    <!-- Mobile network settings, network mode choices for a device supporting GSM and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte_gsm">
+        <item>LTE/GSM</item>
+        <item>GSM</item>
+    </string-array>
+</resources>
