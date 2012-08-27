@@ -623,4 +623,15 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"벨소리"</string>
     <string name="perm_change_mobile_network">네트워크 바꾸기 (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">이 권한을 가진 어플리케이션은 아무 때나 2G 데이터와 3G 데이터를 선택할 수 있습니다. 3G는 더 빠르지만 배터리를 더 많이 소모하며 요금이 더 많이 나올 수 있습니다.</string>
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">"다이얼패드 설정"</string>
+    <string name="dialer_ui_settings_summary">"다이얼패드의 설정을 변경"</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">"잡음 제거"</string>
+    <string name="noise_suppression_summary">"통화 중 잡음을 제거"</string>
+    <!-- End Noise suppression -->
+
+    <string name="phone_number_label">"내 전화번호"</string>
+    <string name="phone_number_summary">"기기의 전화번호를 설정"</string>
 </resources>
