@@ -198,6 +198,9 @@
     <string name="roaming" msgid="8871412572928323707">"Roaming dati"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Connessione a servizi di dati in caso di roaming"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Connessione a servizi di dati in roaming"</string>
+    <string name="national_roaming">Connessione nazionale a dati in roaming</string>
+    <string name="national_roaming_enable">Attiva i servizi dati durante il roaming nazionale</string>
+    <string name="national_roaming_disable">Attiva i servizi dati durante il roaming nazionale</string>
     <string name="roaming_reenable_message" msgid="8913735676127858115">"Connettività dati persa: hai lasciato la rete del tuo operatore con il roaming dati disattivato."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Consentire il roaming dati? I costi potrebbero essere elevati."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Opzioni GSM/UMTS"</string>
