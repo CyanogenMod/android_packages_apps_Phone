@@ -196,6 +196,12 @@
     <string name="roaming" msgid="8871412572928323707">"Adatbarangolás"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Csatlakozás adatszolgáltatásokhoz barangolás során"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Csatlakozás adatszolgáltatásokhoz barangolás során"</string>
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Nemzeti adatbarangolás</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Csatlakozzon adatszolgáltatásokhoz nemzeti barangolás során</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Ne csatlakozzon adatszolgáltatásokhoz nemzeti barangolássorán</string>
     <string name="roaming_reenable_message" msgid="8913735676127858115">"Megszakadt az adatkapcsolat, mert elhagyta az otthoni hálózatot, és az adatbarangolás nincs bekapcsolva."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Engedélyezi az adatbarangolást? Lehet, hogy jelentős összeget számítanak fel érte!"</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTS beállítások"</string>
