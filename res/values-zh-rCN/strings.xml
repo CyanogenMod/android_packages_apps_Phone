@@ -77,6 +77,10 @@
     <string name="apn_settings" msgid="9043423184895642077">"接入点名称 (APN)"</string>
     <string name="settings_label" msgid="3876743539816984008">"网络设置"</string>
     <string name="voicemail" msgid="8693759337917898954">"语音信箱"</string>
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">信息等待指示器</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">显示等待语音信箱通知的指示器</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"语音信箱："</string>
     <string name="networks" msgid="8873030692174541976">"网络运营商"</string>
     <string name="call_settings" msgid="6112441768261754562">"通话设置"</string>
@@ -162,31 +166,54 @@
     <string name="preferred_network_mode_wcdma_perf_summary" msgid="8521677230113533809">"首选网络模式：首选 WCDMA"</string>
     <string name="preferred_network_mode_gsm_only_summary" msgid="3352445413437453511">"首选网络模式：仅限 GSM"</string>
     <string name="preferred_network_mode_wcdma_only_summary" msgid="2836897236221063413">"首选网络模式：仅限 WCDMA"</string>
-    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"首选网络模式：GSM/WCDMA"</string>
+    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"首选网络模式：GSM / WCDMA"</string>
     <string name="preferred_network_mode_cdma_summary" msgid="3175690187294334241">"首选网络模式：CDMA"</string>
-    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"首选网络模式：CDMA/EvDo"</string>
+    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"首选网络模式：CDMA / EvDo"</string>
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"首选网络模式：仅限 CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"首选网络模式：仅限 EvDo"</string>
-    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"首选网络模式：LTE/CDMA"</string>
-  <string-array name="preferred_network_mode_choices">
-    <item msgid="5543794538185064048">"LTE/CDMA"</item>
-    <item msgid="3273348576277144124">"仅 EvDo"</item>
-    <item msgid="454610224530856274">"CDMA，无 EvDo 功能"</item>
-    <item msgid="648505122852496166">"CDMA/EvDo 自动选择"</item>
-    <item msgid="7148247646407324800">"GSM/WCDMA 自动选择"</item>
-    <item msgid="5189164180446264504">"仅 WCDMA"</item>
-    <item msgid="5714714953966979187">"仅 GSM"</item>
-    <item msgid="8508331239546115206">"首选 GSM/WCDMA"</item>
-  </string-array>
-  <string-array name="preferred_network_mode_choices_lte">
-    <item msgid="7002474529872452266">"LTE/CDMA"</item>
-    <item msgid="5541716989029928208">"CDMA"</item>
-  </string-array>
+    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"首选网络模式：LTE / CDMA"</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_summary">首选网络模式：LTE / GSM/WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">首选网络模式：LTE / CDMA / EvDo</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">首选网络模式：LTE / CMDA / EvDo / GSM / WCDMA</string>
+
+    <string-array name="preferred_network_mode_choices">
+        <item>全球</item>
+        <item msgid="3273348576277144124">"仅 EvDo"</item>
+        <item msgid="454610224530856274">"CDMA，无 EvDo 功能"</item>
+        <item msgid="648505122852496166">"CDMA/EvDo 自动选择"</item>
+        <item msgid="7148247646407324800">"GSM/WCDMA 自动选择"</item>
+        <item msgid="5189164180446264504">"仅 WCDMA"</item>
+        <item msgid="5714714953966979187">"仅 GSM"</item>
+        <item msgid="8508331239546115206">"首选 GSM/WCDMA"</item>
+    </string-array>
+    <string-array name="preferred_network_mode_choices_lte">
+        <item>仅 LTE</item>
+        <item>LTE/CDMA/EvDo/GSM/WCDMA</item>
+        <item>LTE/CDMA/EvDo</item>
+        <item msgid="7002474529872452266">"LTE/CDMA"</item>
+        <item msgid="5541716989029928208">"CDMA/EvDo 自动选择"</item>
+    </string-array>
+    <!-- Mobile network settings, network mode choices for a device supporting GSM and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte_gsm">
+        <item>LTE/GSM/WCDMA</item>
+        <item>首选 GSM/WCDMA</item>
+    </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"已启用数据流量"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"允许通过移动网络存取数据"</string>
     <string name="roaming" msgid="8871412572928323707">"移动数据网络漫游"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"漫游时连接到移动数据网络服务"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"漫游时连接到移动数据网络服务"</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">国家性数据网络漫游</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">在原国家境内漫游时将连接到数据网络服务</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">在原国家境内漫游时将不连接到数据网络服务</string>
+
     <string name="roaming_reenable_message" msgid="8913735676127858115">"移动数据网络连接已断开，因为您已离开本地网络并关闭了移动数据网络漫游功能。"</string>
     <string name="roaming_warning" msgid="7820963598559553967">"是否要允许移动数据网络漫游？这可能产生大量漫游费！"</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"GSM/UMTS 选项"</string>
@@ -503,6 +530,11 @@
     <string name="voicemail_settings" msgid="72448049107749316">"设置"</string>
     <string name="voicemail_number_not_set" msgid="6724904736891087856">"&lt;未设置&gt;"</string>
     <string name="other_settings" msgid="3672912580359716394">"其他通话设置"</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">拨号键盘设置</string>
+    <string name="dialer_ui_settings_summary">更改拨号键盘的设置</string>
+
     <string name="calling_via_template" msgid="4839419581866928142">"通过<xliff:g id="PROVIDER_NAME">%s</xliff:g>进行通话"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"联系人照片"</string>
     <string name="goPrivate" msgid="865837794424530980">"私聊"</string>
@@ -621,15 +653,24 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"响铃时振动"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"拨号键盘触摸音效"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"铃声"</string>
-    <string name="perm_change_mobile_network">2G／3G移动网络切换</string>
-    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。使用3G网络存取资料的速度会比较快，但是也会相应消耗比较多的电量并消耗您更多金钱。</string>
+    <string name="perm_change_mobile_network">2G／3G 移动网络切换</string>
+    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。3G 网络的速度会更快快，但也会消耗更多的电量并且可能消耗您更多的金钱。</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">噪音镇压</string>
+    <string name="noise_suppression_summary">呼叫时启用噪音镇压</string>
+    <!-- End Noise suppression -->
+
+    <string name="phone_number_label">我的电话号码</string>
+    <string name="phone_number_summary">设置此设备的电话号码</string>
+
     <string name="advanced_setting">高级设置</string>
     <string name="vibrate_outgoing">接听震动</string>
-    <string name="vibrate_outgoing_sum">当对方接听时震动.</string>
+    <string name="vibrate_outgoing_sum">当对方接听时震动</string>
     <string name="vibrate_45">45秒震动</string>
-    <string name="vibrate_45_sum">呼出通话时到45秒时震动.</string>
+    <string name="vibrate_45_sum">呼出通话到达每分钟的45秒时震动</string>
     <string name="vibrate_hangup">挂断震动</string>
-    <string name="vibrate_hangup_sum">通话结束时震动.</string>
+    <string name="vibrate_hangup_sum">通话结束时震动</string>
     <string name="vibrate_call_waiting">呼叫等待震动</string>
-    <string name="vibrate_call_waiting_sum">当呼叫等待时震动通知.</string>
+    <string name="vibrate_call_waiting_sum">当呼叫等待时震动</string>
 </resources>
