@@ -621,4 +621,33 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Vibrează când sună"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Tonuri la ating. tastaturii pt. apelare"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Ton de apel"</string>
+	<string name="mwi_notification_title">"Indicator Mesaj în Aşteptare"</string>
+  <string name="mwi_notification_summary">"Afişaţi notificările indicatorului în aşteptare pentru mesageria vocală"</string>
+  <string name="preferred_network_mode_lte_gsm_summary">"Mod reţea preferat: LTE / GSM/WCDMA"</string>
+  <string name="preferred_network_mode_lte_cdma_evdo_summary">"Mod reţea preferat: LTE / CDMA / EvDo"</string>
+  <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">"Mod reţea preferat: LTE / CMDA / EvDo / GSM/WCDMA"</string>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>"LTE/GSM/WCDMA"</item>
+    <item>"GSM/WCDMA preferat"</item>
+  </string-array>
+  <string name="national_roaming">"Roaming de date naţional"</string>
+  <string name="national_roaming_enable">"Conectaţi-vă la serviciile de date în roaming naţional"</string>
+  <string name="national_roaming_disable">"Nu vă conectaţi la serviciile de date în roaming naţional"</string>
+  <string name="dialer_ui_settings_title">"Setări tast. numerică"</string>
+  <string name="dialer_ui_settings_summary">"Setări pentru tastatura numerică"</string>
+  <string name="perm_change_mobile_network">"Modificaţi reţeaua (2G/3G)"</string>
+  <string name="perm_change_mobile_network_desc">"Aplicația cu această permisiune poate, în orice moment, schimba între datele 2G şi 3G. 3G este mai rapid, consumă mai multă baterie și vă poate costa de asemenea, mai mulți bani."</string>
+  <string name="noise_suppression_title">"Suprimare zgomot"</string>
+  <string name="noise_suppression_summary">"Activaţi suprimare zgomot pentru apeluri"</string>
+  <string name="phone_number_label">"Nr. meu de telefon"</string>
+  <string name="phone_number_summary">"Setați numărul de telefon pentru acest dispozitiv"</string>
+  <string name="advanced_setting">"Setări Avansate"</string>
+  <string name="vibrate_outgoing">"Vibrare la răspuns"</string>
+  <string name="vibrate_outgoing_sum">"Vibrare atunci când un apel efectuat se răspunde"</string>
+  <string name="vibrate_45">"Vibrare fiecare 45 de secunde"</string>
+  <string name="vibrate_45_sum">"Vibrare la a 45-a secundă din fiecare minut în timpul apelurilor de ieşire"</string>
+  <string name="vibrate_hangup">"Vibrare la sfârşitul apelului"</string>
+  <string name="vibrate_hangup_sum">"Vibrare la sfârşitul unui apel"</string>
+  <string name="vibrate_call_waiting">"Vibrare apel în aşteptare"</string>
+  <string name="vibrate_call_waiting_sum">"Vibrare în timpul apelului în aşteptare"</string>
 </resources>
