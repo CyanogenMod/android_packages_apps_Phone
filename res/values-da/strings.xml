@@ -640,13 +640,30 @@
     <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum</string>
     <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A af cyklus gået\nNæste periode starter om <xliff:g id="used">%2$d</xliff:g> dage (<xliff:g id="used">%3$s</xliff:g>)</string>
 
-    <string name="dialer_ui_settings_title">Nummerblok-indstillinger</string>
-    <string name="dialer_ui_settings_summary">Indstillinger for nummerblokken</string>
+    <string name="dialer_ui_settings_title">Opkaldsprogram-indstillinger</string>
+    <string name="dialer_ui_settings_summary">Indstillinger for opkaldsprogram</string>
 
     <string name="perm_change_mobile_network">Skift netværk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Apps med denne tilladelse kan, til alle tider, skifte mellem 2G-data og 3G-data. 3G er hurtigere, bruger mere batteri, og kan også koste dig flere penge.</string>
 
     <string name="noise_suppression_title">Undertrykkelse af støj</string>
     <string name="noise_suppression_summary">Slå undertrykkelse af støj for opkald til</string>
+
+    <string name="national_roaming">National data-roaming</string>
+    <string name="national_roaming_enable">Tilslut til datatjenester, når der roames nationalt</string>
+    <string name="national_roaming_disable">Tilslut til datatjenester, når der roames nationalt</string>
+
+    <string name="phone_number_label">Mit telefonnummer</string>
+    <string name="phone_number_summary">Angiv telefonnummeret for denne enhed</string>
+
+    <string name="advanced_setting">Avancerede indstillinger</string>
+    <string name="vibrate_outgoing">Vibrér ved opkald</string>
+    <string name="vibrate_outgoing_sum">Vibrér, når et udgående opkald besvares</string>
+    <string name="vibrate_45">Vibrér hver 45 sekunder</string>
+    <string name="vibrate_45_sum">Vibrér ved 45-sekundersmærket i hvert minut under udgående opkald</string>
+    <string name="vibrate_hangup">Vibrér ved endt opkald</string>
+    <string name="vibrate_hangup_sum">Vibrér når et opkald er afsluttet</string>
+    <string name="vibrate_call_waiting">Vibrér ventende opkald</string>
+    <string name="vibrate_call_waiting_sum">Vibrér ved ventende opkald</string>
     <!-- CM10 additions end -->
 </resources>
