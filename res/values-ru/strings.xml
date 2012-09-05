@@ -699,6 +699,8 @@
     <string name="left_hand_sum">Используйте телефон левой рукой, необходима перезагрузка.</string>
     <string name="phone_number_label">Мой номер телефона</string>
     <string name="phone_number_summary">Установите номер телефона для этого устройства</string>
+    <string name="show_ssn_label">Уведомление о событии</string>
+    <string name="show_ssn_summary">Показывать уведомления различных событий, связанных с сетью обработки вызовов</string>
 
     <!-- TrackBall Answer - Added by Nushio -->
     <string name="trackball_answer">Ответ по трекболу</string>
