@@ -58,6 +58,7 @@
     <string name="callFailed_unobtainable_number">"Neplatné číslo"</string>
     <string name="confCall">"Konferenčný hovor"</string>
     <string name="call_lost">"Hovor bol prerušený."</string>
+    <string name="callUnanswered_forwarded">Zmeškaný a presmerovaný hovor</string>
     <string name="retry">"Skúsiť znova"</string>
     <string name="call_lost_title">"Hovor bol prerušený"</string>
     <string name="mmiStarted">"Kód MMI bol spustený"</string>
@@ -326,6 +327,7 @@
     <string name="cdma_system_select_dialogtitle">"Výber systému"</string>
   <string-array name="cdma_system_select_choices">
     <item>"Iba plocha"</item>
+    <item>Partnerské siete</item>
     <item>"Automaticky"</item>
   </string-array>
     <string name="cdma_roaming_mode_title">"Režim CDMA roamingu"</string>
@@ -437,12 +439,28 @@
     <string name="card_title_in_progress">"Aktuálny hovor"</string>
     <string name="card_title_conf_call">"Konferenčný hovor"</string>
     <string name="card_title_incoming_call">"Prichádzajúci hovor"</string>
-    <string name="card_title_cdma_call_waiting">"Čakajúci hovor CDMA"</string>
+    <string name="card_title_waiting_call">Čakajúci hovor</string>
+    <string name="card_title_cdma_call_waiting">Čakajúci hovor CDMA</string>
     <string name="card_title_call_ended">"Hovor bol ukončený"</string>
     <string name="card_title_on_hold">"Podržaný hovor"</string>
     <string name="card_title_hanging_up">"Ukončovanie hovoru"</string>
     <string name="card_title_in_call">"Prebieha hovor"</string>
     <string name="card_title_my_phone_number">"Moje číslo je <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="call_notif_unconditionalCF">Je aktívne nepodmienené presmerovanie hovorov</string>
+    <string name="call_notif_conditionalCF">Je aktívne podmienené presmerovanie hovorov</string>
+    <string name="call_notif_MOcall_forwarding">Odchádzajúci hovor je presmerovaný</string>
+    <string name="call_notif_calliswaiting">Volaný účastník je zaneprázdnený, hovor podržaný</string>
+    <string name="call_notif_cugcall">Hovor v uzavretej skupine</string>
+    <string name="call_notif_outgoing_barred">Odchádzajúce hovory boli odmietnuté</string>
+    <string name="call_notif_incoming_barred">Prichádzajúce hovory boli odmietnuté volaným účastníkom </string>
+    <string name="call_notif_clir_suppression_rejected">Potlačenie vlastného čísla odmietnuté sieťou</string>
+    <string name="call_notif_call_deflected">Hovor bol presmerovaný volaným účastníkom</string>
+    <string name="call_notif_MTcall_forwarding">Prichádzajúci hovor je presmerovaný</string>
+    <string name="call_notif_multipartycall">Konferenčný hovor</string>
+    <string name="call_notif_callonhold_released">Hovor bol ukončený volaným účastníkom</string>
+    <string name="call_notif_forwardcheckreceived">Hovor bol presmerovaný</string>
+    <string name="call_notif_callconnectingect">Hovor bude prepojený</string>
+    <string name="call_notif_callconnectedect">Hovor bol prepojený</string>
     <string name="notification_missedCallTitle">"Zmeškaný hovor"</string>
     <string name="notification_missedCallsTitle">"Zmeškané hovory"</string>
     <string name="notification_missedCallsMsg">"Zmeškané hovory: <xliff:g id="NUM_MISSED_CALLS">%s</xliff:g>."</string>
@@ -471,6 +489,7 @@
     <string name="incall_error_supp_service_reject">"Hovor nie je možné odmietnuť."</string>
     <string name="incall_error_supp_service_hangup">"Hovor nie je možné uvoľniť."</string>
     <string name="incall_call_type_label_sip">"Internetový hovor"</string>
+    <string name="incall_call_type_label_forwarded">Presmerovaný hovor</string>
     <string name="emergency_enable_radio_dialog_title">"Tiesňové volanie"</string>
     <string name="emergency_enable_radio_dialog_message">"Prebieha zapínanie rádia..."</string>
     <string name="emergency_enable_radio_dialog_retry">"Nepokrytá oblasť, opakovanie pokusu..."</string>
@@ -511,7 +530,7 @@
     <string name="dtmf_tones_title">"Tóny DTMF"</string>
     <string name="dtmf_tones_summary">"Nastaviť dĺžku tónov DTMF"</string>
   <string-array name="dtmf_tone_entries">
-    <item>"Normálna"</item>
+    <item>"Normálne"</item>
     <item>"Dlhé"</item>
   </string-array>
     <string name="network_message">"Správa siete"</string>
@@ -708,6 +727,10 @@
     <string name="per_change_mobile_network_desc">Aplikácia s týmito povoleniami môže kedykoľvek zmeniť sieť medzi 2G a 3G. 3G je rýchlejšie, viac využíva batériu, a taktiež Vás môže stáť viac peňazí.</string>
     <string name="phone_number_label">Moje telefónne číslo</string>
     <string name="phone_number_summary">Nastaviť telefónne číslo pre toto zariadenie</string>
+
+    <string name="show_ssn_label">Upozornenie na udalosti</string>
+    <string name="show_ssn_summary">Zobraziť upozornenia na rôzne udalosti siete vzťahujúce sa k hovoru</string>
+
     <string name="trackball_answer">Odpoveď cez Trackballu</string>
     <string name="trackball_answer_sum">Stlačte Trackball pre prijatie prichádzajúceho hovoru.</string>
     <string-array name="trackballLabels">
@@ -731,4 +754,12 @@
     <string name="dialog_phone_goggles_unauthorized">Uskutočnenie hovoru nemusí byť teraz rozumné.</string>
     <string name="dialog_phone_goggles_ok">Volať</string>
     <string name="dialog_phone_goggles_cancel">Zrušiť</string>
+
+    <string name="voice_quality_preferences_title">Kvalita hovoru</string>
+    <string name="voice_quality_summary">Nastaví profil hlasu pre lepšiu zrozumiteľnosť</string>
+    <string name="voice_quality_entry_normal">Normálny</string>
+    <string name="voice_quality_entry_clear">Čistý</string>
+    <string name="voice_quality_entry_crisp">Ostrý</string>
+    <string name="voice_quality_entry_bright">Jasný</string>
+
 </resources>
