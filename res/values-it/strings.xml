@@ -170,15 +170,11 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Modalità di rete preferita: solo CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Modalità di rete preferita: solo EvDo"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Modalità di rete preferita: LTE / CDMA"</string>
-    <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE / WCDMA / GSM</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE / GSM / WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_summary">Modalità di rete preferita: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modalità di rete preferita: LTE / CMDA / EvDo / GSM / WCDMA</string>
   <string-array name="preferred_network_mode_choices">
-    <item>Solo LTE</item>
-    <item>LTE / CMDA / EvDo / GSM / WCDMA</item>
-    <item>LTE / WCDMA / GSM</item>
-    <item>LTE / CDMA / EvDo</item>
-    <item msgid="5543794538185064048">"LTE/CDMA"</item>
+    <item>Globale</item>
     <item msgid="3273348576277144124">"Solo EvDo"</item>
     <item msgid="454610224530856274">"CDMA senza EvDo"</item>
     <item msgid="648505122852496166">"CDMA / EvDo automatico"</item>
@@ -190,17 +186,22 @@
   <string-array name="preferred_network_mode_choices_lte">
     <item>Solo LTE</item>
     <item>LTE / CMDA / EvDo / GSM / WCDMA</item>
+    <item>LTE / CDMA / EvDo</item>
     <item msgid="7002474529872452266">"LTE / CDMA"</item>
     <item msgid="5541716989029928208">"CDMA / EvDo automatico"</item>
+  </string-array>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>LTE / GSM / WCDMA</item>
+    <item>GSM / WCDMA preferito</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Dati attivati"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Attiva l\'accesso ai dati sulla rete cellulare"</string>
     <string name="roaming" msgid="8871412572928323707">"Roaming dati"</string>
-    <string name="roaming_enable" msgid="7331106985174381987">"Connessione a servizi di dati in caso di roaming"</string>
-    <string name="roaming_disable" msgid="1843417228755568110">"Connessione a servizi di dati in roaming"</string>
-    <string name="national_roaming">Connessione nazionale a dati in roaming</string>
-    <string name="national_roaming_enable">Attiva i servizi dati durante il roaming nazionale</string>
-    <string name="national_roaming_disable">Attiva i servizi dati durante il roaming nazionale</string>
+    <string name="roaming_enable" msgid="7331106985174381987">"Connetti a servizi di dati se in roaming"</string>
+    <string name="roaming_disable" msgid="1843417228755568110">"Non connettere a servizi di dati se in roaming"</string>
+    <string name="national_roaming">Roaming dati nazionale</string>
+    <string name="national_roaming_enable">Connetti a servizi di dati se in roaming nazionale</string>
+    <string name="national_roaming_disable">Non connettere a servizi di dati se in roaming nazionale</string>
     <string name="roaming_reenable_message" msgid="8913735676127858115">"Connettività dati persa: hai lasciato la rete del tuo operatore con il roaming dati disattivato."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Consentire il roaming dati? I costi potrebbero essere elevati."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Opzioni GSM/UMTS"</string>
