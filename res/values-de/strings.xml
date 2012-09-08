@@ -507,6 +507,11 @@
     <string name="voicemail_settings" msgid="72448049107749316">"Einrichtung"</string>
     <string name="voicemail_number_not_set" msgid="6724904736891087856">"&lt;Nicht festgelegt&gt;"</string>
     <string name="other_settings" msgid="3672912580359716394">"Sonstige Anrufeinstellungen"</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Wähltasten</string>
+    <string name="dialer_ui_settings_summary">Einstellungen für die Wähltasten</string>
+
     <string name="calling_via_template" msgid="4839419581866928142">"Anruf über <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"Kontaktbild"</string>
     <string name="goPrivate" msgid="865837794424530980">"privat sprechen"</string>
@@ -636,4 +641,12 @@
     <string name="vibrate_hangup_sum">Vibriere, wenn Anruf beendet wurde</string>
     <string name="vibrate_call_waiting">Vibriere bei Anklopfen</string>
     <string name="vibrate_call_waiting_sum">Vibriere bei Anklopfen</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Nebengeräusch-Unterdrückung</string>
+    <string name="noise_suppression_summary">Nebengeräusch-Unterdrückung aktivieren</string>
+
+    <!-- Set Phone Number Settings -->
+    <string name="phone_number_label">Meine Nummer</string>
+    <string name="phone_number_summary">Die Telefonnummer für dieses Gerät einstellen</string>
 </resources>
