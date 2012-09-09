@@ -735,7 +735,9 @@ if (callDurationMsec > 0) {
             // (rather than just posting a notification to the status bar).
             // Setting fullScreenIntent will cause the InCallScreen to be
             // launched immediately.
-            if (!mSettings.mBgIncall || !wasScreenOn) {
+            if (!mSettings.mBgIncall || !wasScreenOn ||
+                    PhoneApp.mDockState == Intent.EXTRA_DOCK_STATE_DESK ||
+                    PhoneApp.mDockState == Intent.EXTRA_DOCK_STATE_CAR) {
                 if (DBG) log("- Setting fullScreenIntent: " + inCallPendingIntent);
                 notification.fullScreenIntent = inCallPendingIntent;
             } else {
