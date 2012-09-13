@@ -642,6 +642,8 @@
     <string name="phone_number_label">Meu número de telefone</string>
     <string name="phone_number_summary">Definir o número de telefone para este dispositivo</string>
     <string name="advanced_setting">Configuração avançada</string>
+    <string name="keep_proximity_sensor_on">Manter sensor de proximidade ligado</string>
+    <string name="keep_proximity_sensor_on_sum">Não desligar o sensor de proximidade durante ligações utilizando um headset.</string>
     <string name="vibrate_outgoing">Vibrar ao atender</string>
     <string name="vibrate_hangup">Vibrar ao desligar</string>
     <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>

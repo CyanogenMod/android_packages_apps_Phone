@@ -42,6 +42,11 @@
         android:title="@string/advanced_setting">
 
         <CheckBoxPreference
+            android:key="keep_proximity_sensor_on"
+            android:title="@string/keep_proximity_sensor_on"
+            android:persistent="true"
+            android:summary="@string/keep_proximity_sensor_on_sum"/>
+        <CheckBoxPreference
             android:key="button_vibrate_outgoing"
             android:title="@string/vibrate_outgoing"
             android:persistent="true" />
