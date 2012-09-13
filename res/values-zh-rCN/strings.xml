@@ -654,7 +654,7 @@
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"拨号键盘触摸音效"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"铃声"</string>
     <string name="perm_change_mobile_network">2G／3G 移动网络切换</string>
-    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。3G 网络的速度会更快快，但也会消耗更多的电量并且可能消耗您更多的金钱。</string>
+    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。3G 网络的速度会更快，但也会消耗更多的电量并且可能消耗您更多的金钱。</string>
 
     <!-- Noise suppression -->
     <string name="noise_suppression_title">噪音镇压</string>
@@ -664,13 +664,11 @@
     <string name="phone_number_label">我的电话号码</string>
     <string name="phone_number_summary">设置此设备的电话号码</string>
 
+    <!-- Advanced Settings -->
     <string name="advanced_setting">高级设置</string>
-    <string name="vibrate_outgoing">接听震动</string>
-    <string name="vibrate_outgoing_sum">当对方接听时震动</string>
+    <string name="vibrate_outgoing">对方接听时震动</string>
+    <string name="vibrate_call_waiting">呼叫等待时震动</string>
+    <string name="vibrate_hangup">通话结束时震动</string>
     <string name="vibrate_45">45秒震动</string>
     <string name="vibrate_45_sum">呼出通话到达每分钟的45秒时震动</string>
-    <string name="vibrate_hangup">挂断震动</string>
-    <string name="vibrate_hangup_sum">通话结束时震动</string>
-    <string name="vibrate_call_waiting">呼叫等待震动</string>
-    <string name="vibrate_call_waiting_sum">当呼叫等待时震动</string>
 </resources>
