@@ -627,7 +627,7 @@
     <string name="vibrate_outgoing">Vibrer sur réponse</string>
     <string name="vibrate_outgoing_sum">Vibration quand la communication est établie</string>
     <string name="vibrate_45">Vibrer régulièrement</string>
-    <string name="vibrate_45_sum">Vibration toutes les 45 secondes pendant un appel sortant</string>
+    <string name="vibrate_45_sum">Vibration à la 45ème seconde de chaque minute quand la communication est établie</string>
     <string name="vibrate_hangup">Vibrer en fin d\'appel</string>
     <string name="vibrate_hangup_sum">Vibration lorsque l\' appel est terminé</string>
     <string name="vibrate_call_waiting">Vibrer sur double appel</string>
