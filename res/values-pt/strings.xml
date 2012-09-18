@@ -643,13 +643,10 @@
     <string name="phone_number_summary">Definir o número de telefone para este dispositivo</string>
     <string name="advanced_setting">Configuração avançada</string>
     <string name="vibrate_outgoing">Vibrar ao atender</string>
-    <string name="vibrate_outgoing_sum">Vibra quando a chamada efetuada é atendida</string>
+    <string name="vibrate_hangup">Vibrar ao desligar</string>
+    <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>
     <string name="vibrate_45">Vibrar a cada 45 segundos</string>
     <string name="vibrate_45_sum">Vibrar aos 45 segundos de cada minuto durante chamada efetuada</string>
-    <string name="vibrate_hangup">Vibrar ao desligar</string>
-    <string name="vibrate_hangup_sum">Vibra quando a chamada é desligada</string>
-    <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>
-    <string name="vibrate_call_waiting_sum">Vibra quando existem chamadas em espera</string>
     <string name="national_roaming">Roaming de dados nacional</string>
     <string name="national_roaming_enable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
     <string name="national_roaming_disable">Não conectar aos serviços de dados quando estiver em roaming nacional</string>
