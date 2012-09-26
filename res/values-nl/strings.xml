@@ -573,11 +573,8 @@
     <string name="noise_suppression_summary">Ruisonderdrukking inschakelen tijdens gesprekken</string>
     <string name="advanced_setting">Geavanceerd</string>
     <string name="vibrate_outgoing">Trillen bij aannemen</string>
-    <string name="vibrate_outgoing_sum">Trillen indien oproep wordt aangenomen</string>
     <string name="vibrate_45">Elke 45 seconden trillen</string>
     <string name="vibrate_45_sum">Elke 45 seconden trillen bij uitgaande gesprekken</string>
     <string name="vibrate_hangup">Trillen bij ophangen</string>
-    <string name="vibrate_hangup_sum">Trillen bij het beëindigen van een gesprek</string>
     <string name="vibrate_call_waiting">Trillen bij wachten</string>
-    <string name="vibrate_call_waiting_sum">Trillen indien in een wachtgesprek</string>
 </resources>

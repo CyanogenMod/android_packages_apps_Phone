@@ -658,12 +658,9 @@
 
     <string name="advanced_setting">Avancerede indstillinger</string>
     <string name="vibrate_outgoing">Vibrér ved opkald</string>
-    <string name="vibrate_outgoing_sum">Vibrér, når et udgående opkald besvares</string>
     <string name="vibrate_45">Vibrér hver 45 sekunder</string>
     <string name="vibrate_45_sum">Vibrér ved 45-sekundersmærket i hvert minut under udgående opkald</string>
     <string name="vibrate_hangup">Vibrér ved endt opkald</string>
-    <string name="vibrate_hangup_sum">Vibrér når et opkald er afsluttet</string>
     <string name="vibrate_call_waiting">Vibrér ventende opkald</string>
-    <string name="vibrate_call_waiting_sum">Vibrér ved ventende opkald</string>
     <!-- CM10 additions end -->
 </resources>

@@ -643,11 +643,8 @@
   <string name="phone_number_summary">"Setați numărul de telefon pentru acest dispozitiv"</string>
   <string name="advanced_setting">"Setări Avansate"</string>
   <string name="vibrate_outgoing">"Vibrare la răspuns"</string>
-  <string name="vibrate_outgoing_sum">"Vibrare atunci când un apel efectuat se răspunde"</string>
   <string name="vibrate_45">"Vibrare fiecare 45 de secunde"</string>
   <string name="vibrate_45_sum">"Vibrare la a 45-a secundă din fiecare minut în timpul apelurilor de ieşire"</string>
   <string name="vibrate_hangup">"Vibrare la sfârşitul apelului"</string>
-  <string name="vibrate_hangup_sum">"Vibrare la sfârşitul unui apel"</string>
   <string name="vibrate_call_waiting">"Vibrare apel în aşteptare"</string>
-  <string name="vibrate_call_waiting_sum">"Vibrare în timpul apelului în aşteptare"</string>
 </resources>
