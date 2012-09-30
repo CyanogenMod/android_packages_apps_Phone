@@ -247,8 +247,8 @@ public class PhoneUtils {
         final PhoneApp app = PhoneApp.getInstance();
 
         // If the ringer is currently ringing and/or vibrating, stop it
-        // right now (before actually answering the call.)
-        app.getRinger().stopRing();
+        // right now and prevent new rings (before actually answering the call)
+        PhoneApp.getInstance().notifier.silenceRinger();
 
         final Phone phone = ringing.getPhone();
         final boolean phoneIsCdma = (phone.getPhoneType() == Phone.PHONE_TYPE_CDMA);
