@@ -187,6 +187,7 @@
     <string name="roaming" msgid="8871412572928323707">"Интернет-роуминг"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Подключаться к службам передачи данных в роуминге"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Подключаться к службам передачи данных в роуминге"</string>
+    <string name="national_roaming">Национальный роуминг</string>
     <string name="national_roaming_enable">Подключаться к службам передачи данных в национальном роуминге</string>
     <string name="national_roaming_disable">Не подключаться к службам передачи данных в национальном роуминге</string>
     <string name="roaming_reenable_message" msgid="8913735676127858115">"Передача данных прекращена, потому что телефон находится за пределами домашней сети, а интернет-роуминг выключен."</string>
