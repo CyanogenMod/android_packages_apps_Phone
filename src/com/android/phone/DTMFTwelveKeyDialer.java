@@ -462,11 +462,20 @@ public class DTMFTwelveKeyDialer implements
      */
     /* package */ void clearInCallScreenReference() {
         if (DBG) log("clearInCallScreenReference()...");
+        closeDialer(false);
         mInCallScreen = null;
         mDialerKeyListener = null;
         if (mDialerDrawer != null) {
             mDialerDrawer.setOnDrawerOpenListener(null);
             mDialerDrawer.setOnDrawerCloseListener(null);
+        }
+        if (mDialpadDigits != null) {
+            mDialpadDigits.setKeyListener(null);
+            mDialpadDigits = null;
+        }
+        if (mDialerView != null) {
+            mDialerView.setDialer(null);
+            mDialerView = null;
         }
         if (mCM.getFgPhone().getPhoneType() == Phone.PHONE_TYPE_CDMA) {
             mHandler.removeMessages(DTMF_SEND_CNF);
@@ -475,7 +484,6 @@ public class DTMFTwelveKeyDialer implements
                 mDTMFQueue.clear();
             }
         }
-        closeDialer(false);
     }
 
     /**
