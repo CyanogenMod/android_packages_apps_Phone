@@ -662,5 +662,8 @@
     <string name="vibrate_45_sum">Vibrér ved 45-sekundersmærket i hvert minut under udgående opkald</string>
     <string name="vibrate_hangup">Vibrér ved endt opkald</string>
     <string name="vibrate_call_waiting">Vibrér ventende opkald</string>
+
+    <string name="keep_proximity_sensor_on">Hold nærhedsføler tændt</string>
+    <string name="keep_proximity_sensor_on_sum">Sluk ikke for nærhedsføleren under opkald ved brug af headset</string>
     <!-- CM10 additions end -->
 </resources>
