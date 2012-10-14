@@ -643,6 +643,10 @@
 
     <!-- Advanced Phone Settings -->
     <string name="advanced_setting">Дополнительные настройки</string>
+    <string name="keep_proximity_sensor_on">Не выключать датчик приближения</string>
+    <string name="keep_proximity_sensor_on_sum">Не выключать датчик приближения во время разговора с использованием гарнитуры</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Блокировка по окончании разговора</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Заблокировать экран после окончания разговора</string>
     <string name="vibrate_outgoing">Вибрировать при ответе</string>
     <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
     <string name="vibrate_hangup">Вибрировать при отбое</string>
