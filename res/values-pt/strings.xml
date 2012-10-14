@@ -644,6 +644,8 @@
     <string name="advanced_setting">Configuração avançada</string>
     <string name="keep_proximity_sensor_on">Manter sensor de proximidade ligado</string>
     <string name="keep_proximity_sensor_on_sum">Não desligar o sensor de proximidade durante ligações utilizando um headset.</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Bloquear ao terminar chamada</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Bloqueia automaticamente quando uma chamada termina e a tela está desligada</string>
     <string name="vibrate_outgoing">Vibrar ao atender</string>
     <string name="vibrate_hangup">Vibrar ao desligar</string>
     <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>

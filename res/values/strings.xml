@@ -1507,6 +1507,8 @@
     <string name="advanced_setting">Advanced Settings</string>
     <string name="keep_proximity_sensor_on">Keep proximity sensor on</string>
     <string name="keep_proximity_sensor_on_sum">Do not turn off the proximity sensor during calls using a headset</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Lock when call ends</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Lock automatically when a call ends and the screen is off</string>
     <string name="vibrate_outgoing">Vibrate on answer</string>
     <string name="vibrate_call_waiting">Vibrate on call waiting</string>
     <string name="vibrate_hangup">Vibrate on hang up</string>

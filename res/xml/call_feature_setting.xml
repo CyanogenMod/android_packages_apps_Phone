@@ -47,6 +47,11 @@
             android:persistent="true"
             android:summary="@string/keep_proximity_sensor_on_sum"/>
         <CheckBoxPreference
+            android:key="lockscreen_if_call_ends_with_screenoff"
+            android:title="@string/lockscreen_if_call_ends_with_screenoff"
+            android:persistent="false"
+            android:summary="@string/lockscreen_if_call_ends_with_screenoff_sum"/>
+        <CheckBoxPreference
             android:key="button_vibrate_outgoing"
             android:title="@string/vibrate_outgoing"
             android:persistent="true" />
