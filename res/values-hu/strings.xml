@@ -650,6 +650,8 @@
     <string name="advanced_setting">Speciális beállítások</string>
     <string name="keep_proximity_sensor_on">Ébren tartás</string>
     <string name="keep_proximity_sensor_on_sum">Hívás közben (ha van csatlakoztatva fejhallgató) nem kapcsol ki a képernyő</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Képernyő zárolása a hívás befejeztével</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Képernyő automatikus lezárása a hívás befejeztével</string>
     <string name="vibrate_outgoing">Rezgés válaszkor</string>
     <string name="vibrate_45">45 mp-ként rezeg</string>
     <string name="vibrate_45_sum">Minden 45. másodpercben rezeg a kimenő hívások során</string>
