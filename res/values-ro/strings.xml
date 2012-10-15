@@ -644,6 +644,8 @@
   <string name="advanced_setting">"Setări Avansate"</string>
   <string name="keep_proximity_sensor_on">"Păstraţi sensorul de apropiere activat"</string>
   <string name="keep_proximity_sensor_on_sum">"Nu dezactivaţi senzorul de apropiere în timpul apelurilor utilizând un set de căști"</string>
+  <string name="lockscreen_if_call_ends_with_screenoff">"Blocare la sfârşitul apelului"</string>
+  <string name="lockscreen_if_call_ends_with_screenoff_sum">"Blocare automată când un apel i-a sfârşit şi ecranul este deconectat"</string>
   <string name="vibrate_outgoing">"Vibrare la răspuns"</string>
   <string name="vibrate_45">"Vibrare fiecare 45 de secunde"</string>
   <string name="vibrate_45_sum">"Vibrare la fiecare a 45-a secundă a unui minut în timpul apelului de ieşire"</string>
