@@ -647,6 +647,8 @@
     <string name="advanced_setting">Impostazioni avanzate</string>
     <string name="keep_proximity_sensor_on">Sensore di prossimità</string>
     <string name="keep_proximity_sensor_on_sum">Non disattivare il sensore di prossimità durante una chiamata con le cuffie</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Blocca a fine chiamata</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Blocca automaticamente il dispositivo quando una chiamata finisce</string>
     <string name="vibrate_outgoing">Vibra alla risposta</string>
     <string name="vibrate_call_waiting">Vibra quando in attesa</string>
     <string name="vibrate_hangup">Vibra al termine</string>
