@@ -303,7 +303,7 @@
     <item msgid="176474317493999285">"Только домашняя"</item>
     <item msgid="1205664026446156265">"Автоматически"</item>
   </string-array>
-    <string name="cdma_subscription_title" msgid="1162564010076763284">"CDMA subscription"</string>
+    <string name="cdma_subscription_title" msgid="1162564010076763284">"Подписка CDMA"</string>
     <string name="cdma_subscription_summary" msgid="2530890766115781140">"Переключение между RUIM/SIM и NV"</string>
     <string name="cdma_subscription_dialogtitle" msgid="2699527950523333110">"подписка"</string>
   <string-array name="cdma_subscription_choices">
@@ -651,5 +651,5 @@
     <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
     <string name="vibrate_hangup">Вибрировать при отбое</string>
     <string name="vibrate_45">Вибрировать каждые 45с</string>
-    <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течении исходящего звонка</string>
+    <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течение исходящего звонка</string>
 </resources>
