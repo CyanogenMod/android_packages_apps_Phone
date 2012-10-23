@@ -649,6 +649,10 @@
     <string name="phone_number_label">Mi número de teléfono</string>
     <string name="phone_number_summary">Establecer el número de teléfono para este terminal</string>
     <string name="advanced_setting">Configuración Avanzada</string>
+    <string name="keep_proximity_sensor_on">Sensor de proximidad encendido</string>
+    <string name="keep_proximity_sensor_on_sum">No apagar el sensor de proximidad si se utilizan auriculares durante una llamada</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Bloquear al colgar</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Bloquear de forma automática si al finalizar una llamada la pantalla está apagada</string>
     <string name="vibrate_outgoing">Vibrar al contestar</string>
     <string name="vibrate_call_waiting">Vibrar en llamada en espera</string>
     <string name="vibrate_hangup">Vibrar al colgar</string>
