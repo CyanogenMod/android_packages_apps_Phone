@@ -549,6 +549,13 @@
     <string name="perm_change_mobile_network">Van netwerk veranderen (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Hiermee kunnen apps op elk moment wisselen tussen 2G en 3G. 3G is sneller, maar verbruikt meer stroom en kan duurder zijn.</string>
 
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Nationale gegevensroaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Verbinding maken met gegevensdiensten bij nationaal roamen</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Verbinding verbreken met gegevensdiensten bij nationaal roamen</string>
+
     <string name="phone_number_label">Mijn telefoonnummer</string>
     <string name="phone_number_summary">Telefoonnummer van dit apparaat instellen</string>
 
@@ -571,7 +578,13 @@
     <!-- Noise suppression -->
     <string name="noise_suppression_title">Ruisonderdrukking</string>
     <string name="noise_suppression_summary">Ruisonderdrukking inschakelen tijdens gesprekken</string>
+
+    <!-- Advanced Settings -->
     <string name="advanced_setting">Geavanceerd</string>
+    <string name="keep_proximity_sensor_on">Nabijheidssensor actief houden</string>
+    <string name="keep_proximity_sensor_on_sum">Nabijheidssensor niet uitschakelen tijdens bellen met een headset</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Vergrendelen na einde gesprek</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Automatisch vergrendelen als het gesprek beëindigd en het scherm uit is</string>
     <string name="vibrate_outgoing">Trillen bij aannemen</string>
     <string name="vibrate_45">Elke 45 seconden trillen</string>
     <string name="vibrate_45_sum">Elke 45 seconden trillen bij uitgaande gesprekken</string>
