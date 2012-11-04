@@ -285,18 +285,6 @@
     <string name="enable_disable_multi_category" msgid="626771003122899280">"كۆپ كاتېگورىيە"</string>
     <string name="multi_category_enable" msgid="1179299804641721768">"كۆپ كاتېگورىيە قوزغىتىلدى"</string>
     <string name="multi_category_disable" msgid="880104702904139505">"كۆپ كاتېگورىيە چەكلەندى"</string>
-  <string-array name="gsm_umts_network_preferences_choices">
-    <item msgid="935612021902787683">"GSM/WCDMA (ئاپتوماتىك ھالەت)"</item>
-    <item msgid="8912042051809329533">"WCDMA لا"</item>
-    <item msgid="8776934131146642662">"GSM لا"</item>
-    <item msgid="4684679567848300935">"GSM/WCDA (ئالدىن بەلگىلەنگەن WCDMA)"</item>
-  </string-array>
-  <string-array name="gsm_umts_network_preferences_values">
-    <item msgid="117293148930527265">"0"</item>
-    <item msgid="2264578612775462302">"1"</item>
-    <item msgid="1268081943590316978">"2"</item>
-    <item msgid="4469871047641902607">"3"</item>
-  </string-array>
     <string name="prefer_2g" msgid="8442550937280449639">"2G تورىنىلا ئىشلىتىش"</string>
     <string name="prefer_2g_summary" msgid="1976491403210690759">"توك تېجەش"</string>
     <string name="cdma_system_select_title" msgid="5757657769327732833">"سىستېما تاللاش"</string>
@@ -305,26 +293,6 @@
   <string-array name="cdma_system_select_choices">
     <item msgid="176474317493999285">"يەرلىك تورلا"</item>
     <item msgid="1205664026446156265">"ئاپتوماتىك"</item>
-  </string-array>
-  <string-array name="cdma_roaming_mode_choices">
-    <item msgid="6024072766548865002">"يەرلىك تورلا"</item>
-    <item msgid="8174642753290624634">"تەۋەلىكىدىكى تورلار"</item>
-    <item msgid="2241951431403168661">"خالىغان تور"</item>
-  </string-array>
-  <string-array name="cdma_roaming_mode_values">
-    <item msgid="2549203161367380954">"0"</item>
-    <item msgid="6007798728227141997">"1"</item>
-    <item msgid="4039511109802141047">"2"</item>
-  </string-array>
-  <string-array name="cdma_network_preferences_choices">
-    <item msgid="3711054371631487248">"CDMA/EvDo"</item>
-    <item msgid="6143696847467859795">"CDMA لا"</item>
-    <item msgid="2683555124647197574">"EvDo لا"</item>
-  </string-array>
-  <string-array name="cdma_network_preferences_values">
-    <item msgid="5584048199290030331">"0"</item>
-    <item msgid="5741268642513143762">"1"</item>
-    <item msgid="419525200910932450">"2"</item>
   </string-array>
     <string name="cdma_subscription_title" msgid="445607520753045412">"CDMA مۇشتەرى"</string>
     <string name="cdma_subscription_summary" msgid="2530890766115781140">"RUIM/SIM ۋە NV ئارىسىدا ئالماشتۇر"</string>
