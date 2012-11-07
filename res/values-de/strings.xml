@@ -635,7 +635,13 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Klingelton"</string>
     <string name="perm_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechseln. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein</string>
+
+    <!-- Advanced Settings -->
     <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="keep_proximity_sensor_on">Näherungssensor eingeschaltet lassen</string>
+    <string name="keep_proximity_sensor_on_sum">Den Näherungssensor während eines Anrufs mit Headset nicht ausschalten</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Sperren nach Anruf</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Automatsich sperren, wenn ein Anruf beendet wurde und der Bildschirm ausgeschaltet ist</string>
     <string name="vibrate_outgoing">Vibriere bei Annahme</string>
     <string name="vibrate_45">Vibriere alle 45 Sekunden</string>
     <string name="vibrate_45_sum">Vibriere alle 45 Sekunden während ausgehender Anrufe</string>
