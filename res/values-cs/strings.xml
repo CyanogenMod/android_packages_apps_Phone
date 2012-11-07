@@ -77,6 +77,8 @@
     <string name="apn_settings" msgid="9043423184895642077">"Názvy přístupových bodů (APN)"</string>
     <string name="settings_label" msgid="3876743539816984008">"Nastavení sítě"</string>
     <string name="voicemail" msgid="8693759337917898954">"Hlasová schránka"</string>
+    <string name="mwi_notification_title">Upozornění příchozí zprávy</string>
+    <string name="mwi_notification_summary">Pro zobrazení zprávy počkejte na zvukové upozornění hlasové schránky</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"HS:"</string>
     <string name="networks" msgid="8873030692174541976">"Síťoví operátoři"</string>
     <string name="call_settings" msgid="6112441768261754562">"Nastavení hovorů"</string>
@@ -168,6 +170,9 @@
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Upřednostňovaný režim sítě: pouze CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Upřednostňovaný režim sítě: pouze EvDo"</string>
     <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"Upřednostňovaný režim sítě: LTE / CDMA"</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Upřednostňované sítě: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Upřednostňované sítě: LTE/CDMA/EvDo</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Upřednostňované sítě: LTE/CMDA/EvDo / GSM/WCDMA</string>
   <string-array name="preferred_network_mode_choices">
     <item msgid="5543794538185064048">"LTE/CDMA"</item>
     <item msgid="3273348576277144124">"Pouze EvDo"</item>
@@ -179,14 +184,24 @@
     <item msgid="8508331239546115206">"GSM/WCDMA – upřednostňováno"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte">
-    <item msgid="7002474529872452266">"LTE/CDMA"</item>
-    <item msgid="5541716989029928208">"CDMA"</item>
+    <item>Pouze LTE</item>
+    <item>LTE/CMDA/EvDo/GSM/WCDMA</item>
+    <item>LTE/CDMA/EvDo</item>
+    <item>LTE/CDMA</item>
+    <item>CDMA/EvDo automaticky</item>
+  </string-array>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+      <item>LTE/GSM/WCDMA</item>
+      <item>Upřednostňovat GSM/WCDMA</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Dat. přenosy aktivovány"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Aktivovat datový přístup prostřednictvím mobilní sítě"</string>
     <string name="roaming" msgid="8871412572928323707">"Datový roaming"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Používat datové služby při roamingu"</string>
     <string name="roaming_disable" msgid="1843417228755568110">"Používat datové služby při roamingu"</string>
+    <string name="national_roaming">Vnitrostátní datový roaming</string>
+    <string name="national_roaming_enable">Používat datové služby při vnitrostátním roamingu</string>
+    <string name="national_roaming_disable">Nepoužívat datové služby při vnitrostátním roamingu</string>
     <string name="roaming_reenable_message" msgid="8913735676127858115">"Datové připojení bylo přerušeno, protože jste opustili domovskou síť a máte vypnutý datový roaming."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Opravdu chcete povolit datový roaming? Vystavujete se nebezpečí vysokých poplatků."</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Možnosti GSM/UMTS"</string>
@@ -503,6 +518,8 @@
     <string name="voicemail_settings" msgid="72448049107749316">"Konfigurace"</string>
     <string name="voicemail_number_not_set" msgid="6724904736891087856">"&lt;Nenastaveno&gt;"</string>
     <string name="other_settings" msgid="3672912580359716394">"Další nastavení hovorů"</string>
+    <string name="dialer_ui_settings_title">Nastavení číselníku</string>
+    <string name="dialer_ui_settings_summary">Nastavení číselníku</string>
     <string name="calling_via_template" msgid="4839419581866928142">"Volání prostřednictvím poskytovatele <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"fotografie kontaktu"</string>
     <string name="goPrivate" msgid="865837794424530980">"přepnout na soukromé"</string>
@@ -623,18 +640,6 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Vyzvánění"</string>
     <string name="perm_change_mobile_network">Změnit typ sítě (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Aplikace s tímto oprávněním může kdykoliv změnit mezi 2G data a 3G data. 3G je rychlejší, ale náročnější na využití baterie a také může stát více peněz.</string>
-
-    <!-- Update for JB -->
-    <string name="mwi_notification_title">Upozornění příchozí zprávy</string>
-    <string name="mwi_notification_summary">Pro zobrazení zprávy počkejte na zvukové upozornění hlasové schránky</string>
-    <string name="preferred_network_mode_lte_gsm_summary">Upřednostňované sítě: LTE / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Upřednostňované sítě: LTE/CDMA/EvDo</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Upřednostňované sítě: LTE/CMDA/EvDo / GSM/WCDMA</string>
-    <string name="national_roaming">Vnitrostátní datový roaming</string>
-    <string name="national_roaming_enable">Používat datové služby při vnitrostátním roamingu</string>
-    <string name="national_roaming_disable">Nepoužívat datové služby při vnitrostátním roamingu</string>
-    <string name="dialer_ui_settings_title">Nastavení číselníku</string>
-    <string name="dialer_ui_settings_summary">Nastavení číselníku</string>
     <string name="noise_suppression_title">Potlačení šumu</string>
     <string name="noise_suppression_summary">Povolit potlačení šumu při volání</string>
     <string name="phone_number_label">Moje telefonní číslo</string>
@@ -642,13 +647,11 @@
     <string name="advanced_setting">Pokročilé nastavení</string>
     <string name="keep_proximity_sensor_on">Nevypínat senzor přiblížení</string>
     <string name="keep_proximity_sensor_on_sum">Nevypínat senzor přiblížení během volání pomocí headsetu</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Uzamknout po skončení hovoru</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Automaticky uzamknout pokud skončí hovor a obrazovka je vypnutá</string>
     <string name="vibrate_outgoing">Vibrace při odpovědi</string>
     <string name="vibrate_call_waiting">Vibrace při dalším hovoru</string>
     <string name="vibrate_hangup">Vibrace po zavěšení</string>
     <string name="vibrate_45">Vibrovat každých 45 sekund</string>
     <string name="vibrate_45_sum">Při odchozím hovoru vibrovat každých 45 sekund.</string>
-    <string-array name="preferred_network_mode_choices_lte_gsm">
-      <item>LTE/GSM/WCDMA</item>
-      <item>Upřednostňovat GSM/WCDMA</item>
-    </string-array>
 </resources>
