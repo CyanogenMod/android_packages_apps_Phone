@@ -596,6 +596,9 @@ public class BluetoothSMSAccess {
         bo.write(4);    // flags
 
         byte[] destData = PhoneNumberUtils.networkPortionToCalledPartyBCD(smsInfo.OriginAddress);
+        if( destData == null )
+            return new AtCommandResult(AtCommandResult.ERROR);
+
         int destLength = ((destData.length - 1) * 2
                 - ((destData[destData.length - 1] & 0xf0) == 0xf0 ? 1 : 0));
 
