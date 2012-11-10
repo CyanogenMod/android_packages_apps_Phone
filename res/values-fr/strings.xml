@@ -503,6 +503,9 @@
     <string name="voicemail_settings" msgid="72448049107749316">"Configuration"</string>
     <string name="voicemail_number_not_set" msgid="6724904736891087856">"&lt;Non défini&gt;"</string>
     <string name="other_settings" msgid="3672912580359716394">"Autres paramètres d\'appel"</string>
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Paramètres du clavier</string>
+    <string name="dialer_ui_settings_summary">Paramètres pour le clavier</string>
     <string name="calling_via_template" msgid="4839419581866928142">"Appel via <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"photo du contact"</string>
     <string name="goPrivate" msgid="865837794424530980">"mode privé"</string>
@@ -623,7 +626,17 @@
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Sonnerie"</string>
     <string name="perm_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus rapide, consomme plus de batterie, et peut également vous coûter plus</string>
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Suppression du bruit</string>
+    <string name="noise_suppression_summary">Activer la suppression du bruit ambiant pour les appels</string>
+    <!-- End Noise suppression -->
+    <string name="phone_number_label">Mon numéro de téléphone</string>
+    <string name="phone_number_summary">Définir le numéro de téléphone de cet appareil</string>
     <string name="advanced_setting">Paramètres avancés</string>
+    <string name="keep_proximity_sensor_on">Gardez le capteur de proximité activé</string>
+    <string name="keep_proximity_sensor_on_sum">Ne pas désactiver le capteur de proximité au cours d\'un appel si des écouteurs sont connectés</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Verrouiller lorsque l\'appel se termine</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Verrouiller automatiquement l'\écran en fin d\'appel lorsque l'\écran est éteint</string>
     <string name="vibrate_outgoing">Vibrer sur réponse</string>
     <string name="vibrate_45">Vibrer régulièrement</string>
     <string name="vibrate_45_sum">Vibration à la 45ème seconde de chaque minute quand la communication est établie</string>
