@@ -186,7 +186,7 @@
     <string name="data_enable_summary" msgid="5022018967714633874">"Ενεργοποίηση της πρόσβασης δεδομένων μέσω του δικτύου κινητής τηλεφωνίας"</string>
     <string name="roaming" msgid="8871412572928323707">"Περιαγωγή δεδομένων"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή"</string>
-    <string name="roaming_disable" msgid="1843417228755568110">"Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή"</string>
+    <string name="roaming_disable" msgid="1843417228755568110">"Να μη γίνεται σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή"</string>
     <string name="roaming_reenable_message" msgid="8913735676127858115">"Χάσατε τη σύνδεση δεδομένων επειδή φύγατε από το οικείο δίκτυο έχοντας την περιαγωγή δεδομένων απενεργοποιημένη."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Να επιτρέπεται η περιαγωγή δεδομένων; Ενδέχεται να επιβαρυνθείτε με σημαντικά έξοδα περιαγωγής!"</string>
     <string name="gsm_umts_options" msgid="6538311689850981686">"Επιλογές GSM/UMTS"</string>
@@ -621,4 +621,37 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Δόνηση κατά το κουδούνισμα"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Ήχοι αφής πληκτρολογίου κλήσης"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Ήχος κλήσης"</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Εθνική περιαγωγή δεδομένων</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Να μη γίνεται σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Πληκτρολόγιο κλήσης</string>
+    <string name="dialer_ui_settings_summary">Ρυθμίσεις για το πληκτρολόγιο κλήσης</string>
+
+    <string name="phone_number_label">Ο αριθμός μου</string>
+    <string name="phone_number_summary">Ορίστε τον αριθμό τηλεφώνου για αυτή τη συσκευή</string>
+
+    <string name="perm_change_mobile_network">Επιλογή δικτύου (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Όποια εφαρμογή έχει αυτή την άδεια μπορεί να αλλάζει μεταξύ 2G και 3G δεδομένων. Το 3G είναι γρηγορότερο, καταναλώνει περισσότερο μπαταρία και μπορεί επίσης να σας κοστίσει περισσότερα χρήματα.</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Καταστολή θορύβου</string>
+    <string name="noise_suppression_summary">Ενεργοποίηση της καταστολής θορύβου κατά τη διάρκεια κλήσεων</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Για προχωρημένους</string>
+    <string name="keep_proximity_sensor_on">Ενεργός αισθητήρας απόστασης</string>
+    <string name="keep_proximity_sensor_on_sum">Να μην απενεργοποιείται ο αισθητήρας απόστασης κατά τη διάρκεια κλήσεων με τη χρήση ακουστικών</string>
+    <string name="lockscreen_if_call_ends_with_screenoff">Κλείδωμα κατά το τέλος της κλήσης</string>
+    <string name="lockscreen_if_call_ends_with_screenoff_sum">Αυτόματο κλείδωμα και σβήσιμο της οθόνης στο τέλος της κλήσης</string>
+    <string name="vibrate_outgoing">Δόνηση στην απάντηση</string>
+    <string name="vibrate_call_waiting">Δόνηση στην αναμονή</string>
+    <string name="vibrate_hangup">Δόνηση στο κλείσιμο</string>
+    <string name="vibrate_45">Δόνηση κάθε 45 δευτερόλεπτα</string>
+    <string name="vibrate_45_sum">Δόνηση κάθε 45 δευτερόλεπτα κατά τη διάρκεια εξερχόμενων κλήσεων</string>
 </resources>
