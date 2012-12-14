@@ -644,13 +644,37 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Beim Klingeln vibrieren"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Wähltastentöne"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Klingelton"</string>
+
+    <!-- **** CYANOGENMOD EDITS START **** -->
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Wähltasten</string>
+    <string name="dialer_ui_settings_summary">Einstellungen für die Wähltasten</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="vibrate_outgoing">Bei Annahme vibrieren</string>
+    <string name="vibrate_call_waiting">Beim Anklopfen vibrieren</string>
+    <string name="vibrate_hangup">Beim Auflegen vibrieren</string>
+    <string name="vibrate_45">Jede Minute vibrieren</string>
+    <string name="vibrate_45_sum">Während ausgehender Anrufe 15 Sekunden vor dem Ende jeder vollen Minute vibrieren</string>
+
     <!-- Noise suppression -->
     <string name="noise_suppression_title">Lärmunterdrückung</string>
-    <string name="noise_suppression_summary">Aktiviere Lärmunterdrückung für Anrufe</string>
-    <!-- End Noise suppression -->
-    <string name="perm_change_mobile_network">Mobilfunkstandard wechseln (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechseln. 3G ist schneller, verbraucht mehr Batterieladung und kann teurer sein</string>
+    <string name="noise_suppression_summary">Lärmunterdrückung für Anrufe aktivieren</string>
 
+    <!-- Show ssn label -->
     <string name="show_ssn_label">Ereignis-Benachrichtigung</string>
-    <string name="show_ssn_summary">Benachrichtigungen für verschiedene Anrufereignisse, z.B. zu Weiterleitungsstatus, anzeigen</string>
+    <string name="show_ssn_summary">Benachrichtigungen für verschiedene Anrufereignisse anzeigen</string>
+
+    <!-- Change mobile network -->
+    <string name="perm_change_mobile_network">Netzmodus wechseln (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechseln</string>
+
+    <!-- National data roaming -->
+    <string name="national_roaming">Nationales Daten-Roaming</string>
+    <string name="national_roaming_enable">Bei nationalem Roaming mit Datendienst verbinden</string>
+    <string name="national_roaming_disable">Bei nationalem Roaming mit Datendienst verbinden</string>
+
+    <!-- **** CYANOGENMOD EDITS END **** -->
 </resources>
