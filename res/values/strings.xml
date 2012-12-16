@@ -1495,6 +1495,8 @@
     <string name="noise_suppression_summary">Enable noise suppression for calls</string>
     <!-- End Noise suppression -->
 
+    <!-- CYANOGENMOD ADDITIONS START -->
+
     <!-- Advanced Settings -->
     <string name="advanced_setting">Advanced Settings</string>
     <string name="vibrate_outgoing">Vibrate on answer</string>
@@ -1502,4 +1504,14 @@
     <string name="vibrate_hangup">Vibrate on hang up</string>
     <string name="vibrate_45">Vibrate every 45 seconds</string>
     <string name="vibrate_45_sum">Vibrates at the 45 second mark of every minute during outgoing calls</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">National data roaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Connect to data services when nationally roaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Connect to data services when nationally roaming</string>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
+
 </resources>
