@@ -145,6 +145,7 @@ public class CallNotifier extends Handler
     private static final int EVENT_OTA_PROVISION_CHANGE = 25;
     private static final int CDMA_CALL_WAITING_REJECT = 26;
     private static final int UPDATE_IN_CALL_NOTIFICATION = 27;
+    private static final int VIBRATE_45_SEC = 28;
 
     // Emergency call related defines:
     private static final int EMERGENCY_TONE_OFF = 0;
@@ -179,8 +180,9 @@ public class CallNotifier extends Handler
     // Call waiting tone player
     private InCallTonePlayer mCallWaitingTonePlayer;
 
-    // Cached AudioManager
+    // Cached system services
     private AudioManager mAudioManager;
+    private Vibrator mVibrator;
 
     /**
      * Initialize the singleton CallNotifier instance.
@@ -205,6 +207,7 @@ public class CallNotifier extends Handler
         mCallLog = callLog;
 
         mAudioManager = (AudioManager) mApplication.getSystemService(Context.AUDIO_SERVICE);
+        mVibrator = (Vibrator) mApplication.getSystemService(Context.VIBRATOR_SERVICE);
 
         registerForNotifications();
 
@@ -361,6 +364,11 @@ public class CallNotifier extends Handler
                 mApplication.notificationMgr.updateInCallNotification();
                 break;
 
+            case VIBRATE_45_SEC:
+                vibrate(70, 0, 0);
+                sendEmptyMessageDelayed(VIBRATE_45_SEC, 60000);
+                break;
+
             default:
                 // super.handleMessage(msg);
         }
@@ -450,7 +458,7 @@ public class CallNotifier extends Handler
             startIncomingCallQuery(c);
         } else {
             if (PhoneUtils.PhoneSettings.vibCallWaiting(mApplication)) {
-                mApplication.vibrate(200,300,500);
+                vibrate(200, 300, 500);
             }
             if (VDBG) log("- starting call waiting tone...");
             if (mCallWaitingTonePlayer == null) {
@@ -785,12 +793,12 @@ public class CallNotifier extends Handler
                 if (VDBG) Log.v(LOG_TAG, "duration is " + callDurationMsec);
                 boolean vibOut = PhoneUtils.PhoneSettings.vibOutgoing(mApplication);
                 if (vibOut && callDurationMsec < 200) {
-                    mApplication.vibrate(100,0,0);
+                    vibrate(100, 0, 0);
                 }
                 boolean vib45 = PhoneUtils.PhoneSettings.vibOn45Secs(mApplication);
                 if (vib45) {
                     callDurationMsec = callDurationMsec % 60000;
-                    mApplication.start45SecondVibration(callDurationMsec);
+                    start45SecondVibration(callDurationMsec);
                 }
             }
 
@@ -1054,9 +1062,9 @@ public class CallNotifier extends Handler
         if (c != null) {
             boolean vibHangup = PhoneUtils.PhoneSettings.vibHangup(mApplication);
             if (vibHangup && c.getDurationMillis() > 0) {
-                mApplication.vibrate(50, 100, 50);
+                vibrate(50, 100, 50);
             }
-            mApplication.stopVibrationThread();
+            removeMessages(VIBRATE_45_SEC);
         }
 
         // Stop the ringer if it was ringing (for an incoming call that
@@ -1289,6 +1297,30 @@ public class CallNotifier extends Handler
                 }
             }
         }
+    }
+
+    private void start45SecondVibration(long callDurationMsec) {
+        if (VDBG) Log.v(LOG_TAG, "vibrate start @" + callDurationMsec);
+
+        removeMessages(VIBRATE_45_SEC);
+
+        long timer;
+        if (callDurationMsec > 45000) {
+            // Schedule the alarm at the next minute + 45 secs
+            timer = 45000 + 60000 - callDurationMsec;
+        } else {
+            // Schedule the alarm at the first 45 second mark
+            timer = 45000 - callDurationMsec;
+        }
+
+        sendEmptyMessageDelayed(VIBRATE_45_SEC, timer);
+    }
+
+    public void vibrate(int v1, int p1, int v2) {
+        long[] pattern = new long[] {
+            0, v1, p1, v2
+        };
+        mVibrator.vibrate(pattern, -1);
     }
 
     /**
