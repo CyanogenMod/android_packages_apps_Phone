@@ -44,6 +44,8 @@
     <string name="callFailed_dsac_restricted_emergency" msgid="4353654268813314466">"急救或报警电话受访问控制限制。"</string>
     <string name="callFailed_dsac_restricted_normal" msgid="2680774510252408620">"正常通话受访问控制限制。"</string>
     <string name="callFailed_unobtainable_number" msgid="4736290912891155067">"号码无效"</string>
+    <!-- In-call screen: status label for an incoming call that is not answered and forwarded  -->
+    <string name="callUnanswered_forwarded">呼叫未接通并被转接</string>
     <string name="confCall" msgid="1904840547188336828">"电话会议"</string>
     <string name="call_lost" msgid="317670617901479594">"通话已中断。"</string>
     <string name="ok" msgid="3811371167865772377">"确定"</string>
@@ -77,6 +79,10 @@
     <string name="apn_settings" msgid="9043423184895642077">"接入点名称 (APN)"</string>
     <string name="settings_label" msgid="3876743539816984008">"网络设置"</string>
     <string name="voicemail" msgid="8693759337917898954">"语音信箱"</string>
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">信息等待指示器</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">显示等待语音信箱通知的指示器</string>
     <string name="voicemail_abbreviated" msgid="2215592488517217448">"语音信箱："</string>
     <string name="networks" msgid="8873030692174541976">"网络运营商"</string>
     <string name="call_settings" msgid="6112441768261754562">"通话设置"</string>
@@ -162,14 +168,21 @@
     <string name="preferred_network_mode_wcdma_perf_summary" msgid="8521677230113533809">"首选网络模式：首选 WCDMA"</string>
     <string name="preferred_network_mode_gsm_only_summary" msgid="3352445413437453511">"首选网络模式：仅限 GSM"</string>
     <string name="preferred_network_mode_wcdma_only_summary" msgid="2836897236221063413">"首选网络模式：仅限 WCDMA"</string>
-    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"首选网络模式：GSM/WCDMA"</string>
+    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"首选网络模式：GSM / WCDMA"</string>
     <string name="preferred_network_mode_cdma_summary" msgid="3175690187294334241">"首选网络模式：CDMA"</string>
-    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"首选网络模式：CDMA/EvDo"</string>
+    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"首选网络模式：CDMA / EvDo"</string>
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"首选网络模式：仅限 CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"首选网络模式：仅限 EvDo"</string>
-    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"首选网络模式：LTE/CDMA"</string>
+    <string name="preferred_network_mode_lte_cdma_summary" msgid="3722647806454528426">"首选网络模式：LTE / CDMA"</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_summary">首选网络模式：LTE / GSM/WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">首选网络模式：LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_wcdma_summary">首选网络模式：LTE / WCDMA</string>
+
   <string-array name="preferred_network_mode_choices">
-    <item msgid="5543794538185064048">"LTE/CDMA"</item>
+    <item msgid="5543794538185064048">"全球"</item>
     <item msgid="3273348576277144124">"仅 EvDo"</item>
     <item msgid="454610224530856274">"CDMA，无 EvDo 功能"</item>
     <item msgid="648505122852496166">"CDMA/EvDo 自动选择"</item>
@@ -179,9 +192,18 @@
     <item msgid="8508331239546115206">"首选 GSM/WCDMA"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte">
+    <!--<item>仅 LTE</item>-->
+        <item>LTE/CMDA/EvDo/GSM/WCDMA</item>
+        <item>LTE/CDMA/EvDo</item>
     <item msgid="7002474529872452266">"LTE/CDMA"</item>
-    <item msgid="5541716989029928208">"CDMA"</item>
+    <item msgid="5541716989029928208">"CDMA/EvDo 自动选择"</item>
   </string-array>
+    <!-- Mobile network settings, network mode choices for a device supporting GSM and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte_gsm">
+        <item>LTE/WCDMA</item>
+        <item>LTE/GSM/WCDMA</item>
+        <item>首选 GSM/WCDMA</item>
+    </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"启用数据网络"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"允许通过移动网络存取数据"</string>
     <string name="roaming" msgid="8871412572928323707">"移动数据网络漫游"</string>
@@ -390,6 +412,8 @@
     <string name="card_title_redialing" msgid="4831412164303596395">"正在重拨"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"电话会议"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"来电"</string>
+    <!-- In-call screen: status label for a call that is held remotely  -->
+    <string name="card_title_waiting_call">等待通话</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"通话结束"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"保持"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"正在挂断"</string>
@@ -426,6 +450,8 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"无法拒绝呼叫。"</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"无法挂断。"</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"互联网电话"</string>
+    <!-- In-call screen: "call type" indication for a forwarded call [CHAR LIMIT=30] -->
+    <string name="incall_call_type_label_forwarded">转接电话</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"紧急呼救"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"正在打开天线..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"不在服务区，正在重试..."</string>
@@ -622,6 +648,70 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"响铃时振动"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"拨号键盘触摸音效"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"铃声"</string>
-    <string name="perm_change_mobile_network">2G／3G移动网络切换</string>
-    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以在任何时候在2G/3G移动网络之间切换。使用3G网络存取资料的速度会比较快，但是也会相应消耗比较多的电量并消耗您更多金钱。</string>
+
+    <!-- CYANOGENMOD ADDITIONS START -->
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">噪音镇压</string>
+    <string name="noise_suppression_summary">呼叫时启用噪音镇压</string>
+    <!-- End Noise suppression -->
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">对方接听时震动</string>
+    <string name="vibrate_call_waiting">呼叫等待时震动</string>
+    <string name="vibrate_hangup">通话结束时震动</string>
+    <string name="vibrate_45">45 秒震动</string>
+    <string name="vibrate_45_sum">呼出通话到达每分钟的 45 秒时震动</string>
+    <string name="show_ssn_label">事件提醒</string>
+    <string name="show_ssn_summary">为通话处理相关的各种网络事件显示一个通知</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">拨号键盘设置</string>
+    <string name="dialer_ui_settings_summary">更改拨号键盘的设置</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">国内移动数据漫游</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">在国内漫游时连接到数据服务</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">在国内漫游时连接到数据服务</string>
+
+    <!-- Permission for notification-bar network toggle -->
+    <string name="perm_change_mobile_network">切换移动网络 (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以随时在 2G/3G 移动数据网络之间切换. 3G 网络的速度会更快, 但也会消耗更多的电量并且可能花费更多的钱.</string>
+
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">启用无条件的来电转接</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">启用有条件的来电转接</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">呼出电话已被转接</string>
+    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
+    <string name="call_notif_calliswaiting">对方线路忙, 通话等待中</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">在封闭用户组内通话</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">呼出电话被禁止</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">来电被对方禁止</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">自我号码抑制被网络拒绝</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">呼叫被对方转接</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">来电是被转接的</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">多方电话</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">呼叫被对方释放</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">呼叫被转接</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">呼叫正在通过显式呼叫转移进行连接</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">呼叫已通过显式呼叫转移连接</string>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
