@@ -632,8 +632,8 @@
       <item>LTE/GSM/WCDMA</item>
       <item>GSM/WCDMA de preferência</item>
   </string-array>
-    <string name="dialer_ui_settings_title">Teclado</string>
-    <string name="dialer_ui_settings_summary">Configurações do teclado</string>
+    <string name="dialer_ui_settings_title">Configurações do teclado</string>
+    <string name="dialer_ui_settings_summary">Configurações para o teclado de discagem</string>
     <string name="noise_suppression_title">Supressão de ruído</string>
     <string name="noise_suppression_summary">Ativar supressão de ruído em ligações</string>
     <string name="advanced_setting">Configuração avançada</string>
@@ -645,4 +645,26 @@
     <string name="national_roaming">Roaming de dados nacional</string>
     <string name="national_roaming_enable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
     <string name="national_roaming_disable">Não conectar aos serviços de dados quando estiver em roaming nacional</string>
+    <string name="callUnanswered_forwarded">Ligação não atendida e Encaminhada</string>
+    <string name="mwi_notification_title">Indicador de Mensagem em Espera</string>
+    <string name="mwi_notification_summary">Exibir notificações de indicador de mensagem em espera</string>
+    <string name="card_title_waiting_call">Esperando chamada</string>
+    <string name="call_notif_unconditionalCF">Encaminhamento de chamada incondicional está ativado</string>
+    <string name="call_notif_conditionalCF">Encaminhamento de chamada condicional está ativado</string>
+    <string name="call_notif_MOcall_forwarding">Chamada efetuada é encaminhada</string>
+    <string name="call_notif_calliswaiting">Receptor está ocupado, chamada está em espera</string>
+    <string name="call_notif_cugcall">Chamada em grupo fechado de usuários</string>
+    <string name="call_notif_outgoing_barred">Chamadas enviadas barradas</string>
+    <string name="call_notif_incoming_barred">Chamadas recebidas barradas remotamente</string>
+    <string name="call_notif_clir_suppression_rejected">Ocultação de número foi rejeitado pela rede</string>
+    <string name="call_notif_call_deflected">Chamada foi encaminhada remotamente</string>
+    <string name="call_notif_MTcall_forwarding">Chamada recebida foi encaminhada</string>
+    <string name="call_notif_multipartycall">Chamada em grupo</string>
+    <string name="call_notif_callonhold_released">Chamada foi liberada remotamente</string>
+    <string name="call_notif_forwardcheckreceived">Chamada foi encaminhada</string>
+    <string name="call_notif_callconnectingect">Chamada conectando por transferência de ligação explícita</string>
+    <string name="call_notif_callconnectedect">Chamada conectada por transferência de ligação explícita</string>
+    <string name="incall_call_type_label_forwarded">Chamada encaminhada</string>
+    <string name="show_ssn_label">Notificação de evento</string>
+    <string name="show_ssn_summary">Exibir uma notificação para vários eventos de rede relacionados ao precessamento de chamadas</string>
 </resources>
