@@ -639,4 +639,24 @@
     <string name="perm_change_mobile_network">"Modificaţi reţeaua (2G/3G)"</string>
     <string name="perm_change_mobile_network_desc">"Aplicația cu această permisiune poate, în orice moment, schimba între datele 2G şi 3G. 3G este mai rapid, consumă mai multă baterie și vă poate costa de asemenea, mai mulți bani."</string>
 
+    <string name="callUnanswered_forwarded">"Apel nepreluat şi redirecţionat"</string>
+    <string name="card_title_waiting_call">"Apel în aşteptare"</string>
+    <string name="call_notif_unconditionalCF">"Redirecţionare apeluri necondiţionată activă"</string>
+    <string name="call_notif_conditionalCF">"Redirecţionare apeluri condiţionată activă"</string>
+    <string name="call_notif_MOcall_forwarding">"Apelul de ieşire este redirecţionat"</string>
+    <string name="call_notif_calliswaiting">"În aşteptare"</string>
+    <string name="call_notif_cugcall">"Apel în grup închis de utilizatori"</string>
+    <string name="call_notif_outgoing_barred">"Apelurile de ieşire blocate"</string>
+    <string name="call_notif_incoming_barred">"Apelurile de intrare blocate"</string>
+    <string name="call_notif_clir_suppression_rejected">"Suprimarea propriului număr respinsă de reţea"</string>
+    <string name="call_notif_call_deflected">"Apel deviat"</string>
+    <string name="call_notif_MTcall_forwarding">"Apelul de intrare este redirecţionat"</string>
+    <string name="call_notif_multipartycall">"Teleconferinţă"</string>
+    <string name="call_notif_callonhold_released">"Apel lansat de la distanţă"</string>
+    <string name="call_notif_forwardcheckreceived">"Apelul a fost redirecţionat"</string>
+    <string name="call_notif_callconnectingect">"Conectare prin transfer apel explicit"</string>
+    <string name="call_notif_callconnectedect">"Apel conectat prin transfer apel explicit"</string>
+    <string name="incall_call_type_label_forwarded">"Apel redirecţionat"</string>
+    <string name="show_ssn_label">"Notificare eveniment"</string>
+    <string name="show_ssn_summary">"Arătaţi o notificare pentru diverse evenimente de reţea legate de manipularea cu apelurile"</string>
 </resources>
