@@ -631,6 +631,10 @@
 
     <!-- CYANOGENMOD ADDITIONS START -->
 
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Настройки кнопок</string>
+    <string name="dialer_ui_settings_summary">Настройки номеронабирателя</string>
+
     <!-- Advanced Phone Settings -->
     <string name="advanced_setting">Дополнительные настройки</string>
     <string name="vibrate_outgoing">Вибрировать при ответе</string>
@@ -638,6 +642,8 @@
     <string name="vibrate_hangup">Вибрировать при отбое</string>
     <string name="vibrate_45">Вибрировать каждые 45 сек</string>
     <string name="vibrate_45_sum">Вибрировать каждые 45 секунд в течение исходящего звонка</string>
+    <string name="show_ssn_label">Уведомления о событиях</string>
+    <string name="show_ssn_summary">Показывать уведомления различных событий, связанных с сетью обработки вызовов</string>
 
     <string name="national_roaming">Национальный роуминг</string>
     <string name="national_roaming_enable">Подключаться к службам передачи данных в национальном роуминге</string>
