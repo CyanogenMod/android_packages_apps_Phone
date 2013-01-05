@@ -656,6 +656,8 @@
     <string name="vibrate_hangup">Vibrér ved endt opkald</string>
     <string name="vibrate_45">Vibrér hver 45 sekunder</string>
     <string name="vibrate_45_sum">Vibrér ved 45-sekundersmærket i hvert minut under udgående opkald</string>
+    <string name="show_ssn_label">Hændelsesnotifikation</string>
+    <string name="show_ssn_summary">Vis en notifikation til forskellige netværkshændelser ifbm. opkaldshåndtering</string>
 
     <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">National data-roaming</string>
