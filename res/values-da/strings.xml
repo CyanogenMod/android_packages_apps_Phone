@@ -666,5 +666,62 @@
     <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">Tilslut til datatjenester, når der roames nationalt</string>
 
+    <!-- In-call screen: status label for an incoming call that is not answered and forwarded  -->
+    <string name="callUnanswered_forwarded">Opkald ubesvaret og viderestillet</string>
+
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">Indikator for ventende besked</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">Vis notifikationer for indikator for ventende beskeder på voicemail</string>
+
+    <!-- Mobile network settings, network mode choices for a device supporting GSM and LTE [CHAR LIMIT=25] -->
+    <string-array name="preferred_network_mode_choices_lte_gsm">
+        <item>LTE/WCDMA</item>
+        <item>LTE/GSM/WCDMA</item>
+        <item>GSM/WCDMA foretrukket</item>
+    </string-array>
+
+    <!-- In-call screen: status label for a call that is held remotely  -->
+    <string name="card_title_waiting_call">Ventende opkald</string>
+
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">Ubetinget viderestilling af opkald aktiv</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">Betinget viderestilling af opkald aktiv</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">Udgående opkald er viderestillet</string>
+    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
+    <string name="call_notif_calliswaiting">Modtager er optaget, opkald venter</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">Opkald i lukket brugergruppe</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">Udgående opkald spærret</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">Indgående opkald spærret af modtager</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">Undertrykkelse af eget nummer afvist af netværk</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">Opkald viderestillet af modtager</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">Indgående opkald er viderestillet</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">Opkald til flere modtagere</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">Opkald frigivet af modtager</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">Opkald blev viderestillet</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">Opkald tilslutter via eksplicit omstilling</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">Opkald tilsluttet via eksplicit omstilling</string>
+
+    <!-- In-call screen: "call type" indication for a forwarded call [CHAR LIMIT=30] -->
+    <string name="incall_call_type_label_forwarded">Viderestillet opkald</string>
+
+    <!-- Permission for notification-bar network toggle -->
+    <string name="perm_change_mobile_network">Skift netværk (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Apps med denne tilladelse kan, til alle tider, skifte mellem 2G-data og 3G-data. 3G er hurtigere, bruger mere batteri, og kan også koste dig flere penge.</string>
+
 
 </resources>
