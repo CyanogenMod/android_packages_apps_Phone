@@ -57,11 +57,12 @@
     <string name="callFailed_cdma_notEmergency" msgid="2347377816822720761">"Μόνο κλήσεις έκτακτης ανάγκης."</string>
     <string name="callFailed_unobtainable_number" msgid="7886274717456712105">"Μη έγκυρος αριθμός"</string>
     <string name="confCall" msgid="1904840547188336828">"Κλήση συνδιάσκεψης"</string>
-    <string name="call_lost" msgid="317670617901479594">"Αναπάντητη κλήση."</string>
+    <string name="call_lost" msgid="317670617901479594">"Αναπάντητη κλήση"</string>
+    <string name="callUnanswered_forwarded">Αναπάντητη κλήση, προωθήθηκε</string>
     <string name="retry" msgid="8462986804300767852">"Νέα προσπάθεια"</string>
     <string name="call_lost_title" msgid="6696949678847938515">"Αναπάντητη κλήση"</string>
     <string name="mmiStarted" msgid="6347869857061147003">"Έναρξη κώδικα MMI"</string>
-    <string name="ussdRunning" msgid="485588686340541690">"Ο κώδικας USSD εκτελείται..."</string>
+    <string name="ussdRunning" msgid="485588686340541690">"Ο κώδικας USSD εκτελείται\u2026"</string>
     <string name="mmiCancelled" msgid="2771923949751842276">"Ο κώδικας MMI ακυρώθηκε"</string>
     <string name="cancel" msgid="5044513931633602634">"Ακύρωση"</string>
     <string name="menu_speaker" msgid="6069700688651964705">"Ηχείο"</string>
@@ -91,7 +92,7 @@
     <string name="no_vm_number" msgid="4164780423805688336">"Λείπει ο αριθμός αυτόματου τηλεφωνητή"</string>
     <string name="no_vm_number_msg" msgid="1300729501030053828">"Δεν έχει αποθηκευτεί αριθμός για τον αυτόματο τηλεφωνητή στην κάρτα SIM."</string>
     <string name="add_vm_number_str" msgid="4676479471644687453">"Προσθήκη αριθμού"</string>
-    <string name="dialer_emptyListWorking" msgid="6022498519770859790">"Φόρτωση..."</string>
+    <string name="dialer_emptyListWorking" msgid="6022498519770859790">"Φόρτωση\u2026"</string>
     <string name="enterPin" msgid="4753300834213388397">"Πληκτρολογήστε τον κώδικα PIN για να ξεκλειδώσετε την κάρτα SIM."</string>
     <string name="pinUnlocked" msgid="3260617001055506794">"Η κάρτα SIM ξεκλειδώθηκε"</string>
     <string name="enterNewPin" msgid="5311243769004752401">"Νέος κώδικας αριθμού PIN της κάρτας SIM"</string>
@@ -100,11 +101,11 @@
     <string name="enterPuk" msgid="6144749655582862324">"Πληκτρολογήστε τον κώδικα PUK για να ξεκλειδώσετε την κάρτα SIM"</string>
     <string name="badPuk" msgid="3213017898690275965">"Λανθασμένος κώδικας PUK!"</string>
     <string name="buttonTxtContinue" msgid="863271214384739936">"Συνέχεια"</string>
-    <string name="puk_unlocked" msgid="2284912838477558454">"Καταργήθηκε ο αποκλεισμός της κάρτας SIM. Το τηλέφωνό σας ξεκλειδώνεται..."</string>
+    <string name="puk_unlocked" msgid="2284912838477558454">"Καταργήθηκε ο αποκλεισμός της κάρτας SIM. Το τηλέφωνό σας ξεκλειδώνεται\u2026"</string>
     <string name="label_ndp" msgid="780479633159517250">"Αριθμός PIN ξεκλειδώματος δικτύου κάρτας SIM"</string>
     <string name="sim_ndp_unlock_text" msgid="683628237760543009">"Ξεκλείδωμα"</string>
     <string name="sim_ndp_dismiss_text" msgid="1604823375752456947">"Παράβλεψη"</string>
-    <string name="requesting_unlock" msgid="6412629401033249351">"Αίτηση ξεκλειδώματος δικτύου..."</string>
+    <string name="requesting_unlock" msgid="6412629401033249351">"Αίτηση ξεκλειδώματος δικτύου\u2026"</string>
     <string name="unlock_failed" msgid="6490531697031504225">"Ανεπιτυχές αίτημα ξεκλειδώματος δικτύου."</string>
     <string name="unlock_success" msgid="6770085622238180152">"Το ξεκλείδωμα δικτύου ήταν επιτυχές."</string>
     <string name="imei" msgid="8552502717594321281">"Αριθμός ΙΜΕΙ"</string>
@@ -126,7 +127,7 @@
     <string name="sum_hide_caller_id" msgid="1071407020290873782">"Απόκρυψη αριθμού στις εξερχόμενες κλήσεις"</string>
     <string name="sum_show_caller_id" msgid="6768534125447290401">"Αριθμός που προβάλλεται στις εξερχόμενες κλήσεις"</string>
     <string name="sum_default_caller_id" msgid="1954518825510901365">"Χρήση των προεπιλεγμένων ρυθμίσεων της εταιρείας για την προβολή του αριθμού μου στις εξερχόμενες κλήσεις"</string>
-    <string name="labelCW" msgid="6120513814915920200">"Αναμ. κλήσ."</string>
+    <string name="labelCW">Αναμονή κλήσης</string>
     <string name="sum_cw_enabled" msgid="8083061901633671397">"Κατά τη διάρκεια μιας κλήσης, να ειδοποιούμαι για τις εισερχόμενες κλήσεις"</string>
     <string name="sum_cw_disabled" msgid="3648693907300104575">"Κατά τη διάρκεια μιας κλήσης, να ειδοποιούμαι για τις εισερχόμενες κλήσεις"</string>
     <string name="call_forwarding_settings" msgid="3378927671091537173">"Ρυθμίσεις προώθησης κλήσης"</string>
@@ -154,9 +155,9 @@
     <string name="disable_cfnrc_forbidden" msgid="1093527570652781997">"Ο φορέας σας δεν υποστηρίζει την απενεργοποίηση της προώθησης κλήσεων όταν το τηλέφωνό σας δεν έχει σήμα."</string>
     <string name="updating_title" msgid="6146755386174019046">"Ρυθμίσεις κλήσης"</string>
     <string name="error_updating_title" msgid="7970259216988931777">"Σφάλμα ρυθμίσεων κλήσης"</string>
-    <string name="reading_settings" msgid="1920291699287055284">"Ανάγνωση ρυθμίσεων…"</string>
-    <string name="updating_settings" msgid="8171225533884883252">"Ενημέρωση ρυθμίσεων..."</string>
-    <string name="reverting_settings" msgid="4752151682666912828">"Επαναφορά ρυθμίσεων…"</string>
+    <string name="reading_settings" msgid="1920291699287055284">"Ανάγνωση ρυθμίσεων\u2026"</string>
+    <string name="updating_settings" msgid="8171225533884883252">"Ενημέρωση ρυθμίσεων\u2026"</string>
+    <string name="reverting_settings" msgid="4752151682666912828">"Επαναφορά ρυθμίσεων\u2026"</string>
     <string name="response_error" msgid="6674110501330139405">"Μη αναμενόμενη απάντηση από το δίκτυο."</string>
     <string name="exception_error" msgid="7027667130619518211">"Σφάλμα δικτύου ή κάρτας SIM."</string>
     <string name="fdn_only_error" msgid="7079583506377602000">"Οι λειτουργίες επιτρέπονται μόνο για καθορισμένους αριθμούς κλήσης."</string>
@@ -180,7 +181,7 @@
     <string name="voicemail_default" msgid="5902099213882352338">"Η εταιρεία μου"</string>
     <string name="mobile_networks" msgid="5540397602919106177">"Ρυθμίσεις δικτύου κινητής τηλεφωνίας"</string>
     <string name="label_available" msgid="1181658289009300430">"Διαθέσιμα δίκτυα"</string>
-    <string name="load_networks_progress" msgid="5230707536168902952">"Αναζήτηση..."</string>
+    <string name="load_networks_progress" msgid="5230707536168902952">"Αναζήτηση\u2026"</string>
     <string name="empty_networks_list" msgid="4249426905018815316">"Δεν βρέθηκαν δίκτυα."</string>
     <string name="search_networks" msgid="1601136049300882441">"Αναζήτηση δικτύων"</string>
     <string name="network_query_error" msgid="6828516148953325006">"Προέκυψε σφάλμα κατά την αναζήτηση δικτύων."</string>
@@ -192,27 +193,32 @@
     <string name="sum_search_networks" msgid="2921092249873272715">"Αναζήτηση διαθέσιμων δικτύων"</string>
     <string name="select_automatically" msgid="8615980695510888796">"Αυτόματη επιλογή"</string>
     <string name="sum_select_automatically" msgid="8460954604521755275">"Αυτόματη επιλογή προτιμώμενου δικτύου"</string>
-    <string name="register_automatically" msgid="6272031189219101172">"Αυτόματη εγγραφή..."</string>
+    <string name="register_automatically" msgid="6272031189219101172">"Αυτόματη εγγραφή\u2026"</string>
     <string name="preferred_network_mode_title" msgid="8873246565334559308">"Λειτουργία δικτύου"</string>
     <string name="preferred_network_mode_summary" msgid="1434820673166126609">"Αλλαγή κατάστασης λειτουργίας δικτύου"</string>
     <string name="preferred_network_mode_dialogtitle" msgid="8176355237105593793">"Προτιμώμενη λειτουργία δικτύου"</string>
   <string-array name="preferred_network_mode_choices">
     <item msgid="2987674222882365152">"Παγκόσμιο"</item>
     <item msgid="3273348576277144124">"Μόνο EvDo"</item>
-    <item msgid="454610224530856274">"CDMA w/o EvDo"</item>
-    <item msgid="8928247118825616081">"Αυτόματο CDMA / EvDo"</item>
-    <item msgid="8595462903294812666">"Αυτόματο GSM / WCDMA"</item>
+    <item msgid="454610224530856274">"CDMA χωρίς EvDo"</item>
+    <item msgid="8928247118825616081">"Αυτόματο CDMA/EvDo"</item>
+    <item msgid="8595462903294812666">"Αυτόματο GSM/WCDMA"</item>
     <item msgid="5189164180446264504">"Μόνο WCDMA"</item>
     <item msgid="5714714953966979187">"Μόνο GSM"</item>
-    <item msgid="4775796025725908913">"Προτιμώνται GSM / WCDMA"</item>
+    <item msgid="4775796025725908913">"Προτιμώνται GSM/WCDMA"</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Ενεργοποίηση δεδομένων"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Ενεργοποίηση της πρόσβασης δεδομένων μέσω του δικτύου κινητής τηλεφωνίας"</string>
     <string name="roaming" msgid="8871412572928323707">"Περιαγωγή δεδομένων"</string>
     <string name="roaming_enable" msgid="7331106985174381987">"Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή"</string>
-    <string name="roaming_disable" msgid="1843417228755568110">"Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή"</string>
+    <string name="roaming_disable" msgid="1843417228755568110">"Να μη γίνεται σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή"</string>
     <string name="roaming_reenable_message" msgid="6973894869473170666">"Χάσατε τη σύνδεση δεδομένων επειδή φύγατε από το οικείο δίκτυο έχοντας την περιαγωγή δεδομένων απενεργοποιημένη."</string>
     <string name="roaming_warning" msgid="7820963598559553967">"Να επιτρέπεται η περιαγωγή δεδομένων; Ενδέχεται να επιβαρυνθείτε με σημαντικά έξοδα περιαγωγής!"</string>
+
+    <string name="mvno_roaming">Εθνική περιαγωγή δεδομένων</string>
+    <string name="mvno_roaming_summary">Αυτή η λειτουργία σας επιτρέπει να χρησιμοποιείτε ένα διαφορετικό πάροχο δικτύου στη χώρα σας.</string>
+    <string name="mvno_roaming_warning">Ενεργοποίηση περιαγωγής δεδομένων εντός της ίδιας χώρας του παρόχου δικτύου σας; Ορισμένοι εικονικοί πάροχοι απαιτούν αυτή τη ρύθμιση για πρόσβαση στα δεδομένα. ΜΗΝ ενεργοποιήσετε αυτή την επιλογή, εάν ο πάροχος σας χρεώνει την περιαγωγή μέσα στην ίδια χώρα! Αυτή η ρύθμιση δεν θα ισχύσει μέχρι να επανεκκινήσετε το τηλέφωνό σας ή να μεταβείτε σε Λειτουργία πτήσης και πίσω.</string>
+
     <string name="gsm_umts_options" msgid="6538311689850981686">"Επιλογές GSM/UMTS"</string>
     <string name="cdma_options" msgid="4016822858172249884">"Επιλογές CDMA"</string>
     <string name="throttle_data_usage" msgid="3715677828160555808">"Χρήση δεδομένων"</string>
@@ -306,8 +312,8 @@
     <string name="enable_disable_multi_category" msgid="626771003122899280">"Πολλές κατηγορίες"</string>
     <string name="multi_category_enable" msgid="1179299804641721768">"Ενεργοποιήθηκε η προβολή πολλών κατηγοριών"</string>
     <string name="multi_category_disable" msgid="880104702904139505">"Απενεργοποιήθηκε η προβολή πολλών κατηγοριών"</string>
-    <string name="gsm_umts_network_preferences_title" msgid="4834419333547382436">"Προτιμήσεις δικτύου GSM/UMTS"</string>
-    <string name="gsm_umts_network_preferneces_summary" msgid="1905018644156819521">"Δεν εφαρμόστηκε ακόμη!"</string>
+    <string name="gsm_umts_network_preferences_title">Προτιμήσεις δικτύου</string>
+    <string name="gsm_umts_network_preferneces_summary">Αλλάξτε τον τρόπο λειτουργίας του δικτύου</string>
     <string name="gsm_umts_network_preferences_dialogtitle" msgid="6356332580813229898">"Προτιμήσεις δικτύου GSM/UMTS"</string>
   <string-array name="gsm_umts_network_preferences_choices">
     <item msgid="935612021902787683">"GSM/WCDMA (αυτόματη λειτουργία)"</item>
@@ -318,22 +324,23 @@
     <string name="prefer_2g" msgid="8442550937280449639">"Χρήση μόνο δικτύων 2G"</string>
     <string name="prefer_2g_summary" msgid="1976491403210690759">"Εξοικονόμηση μπαταρίας"</string>
     <string name="cdma_system_select_title" msgid="5757657769327732833">"Επιλογή συστήματος"</string>
-    <string name="cdma_system_select_summary" msgid="2528661990595284707">"Αλλαγή της λειτουργίας περιαγωγής cdma"</string>
+    <string name="cdma_system_select_summary" msgid="2528661990595284707">"Αλλαγή της λειτουργίας περιαγωγής CDMA"</string>
     <string name="cdma_system_select_dialogtitle" msgid="6083355415165359075">"Επιλογή συστήματος"</string>
   <string-array name="cdma_system_select_choices">
     <item msgid="176474317493999285">"Μόνο αρχική σελίδα"</item>
+    <item>Συνεργαζόμενα δίκτυα</item>
     <item msgid="1205664026446156265">"Αυτόματο"</item>
   </string-array>
     <string name="cdma_roaming_mode_title" msgid="6366737033053855198">"Λειτουργία περιαγωγής CDMA"</string>
-    <string name="cdma_roaming_mode_summary" msgid="8604713111805562261">"Αλλαγή της λειτουργίας περιαγωγής cdma"</string>
+    <string name="cdma_roaming_mode_summary" msgid="8604713111805562261">"Αλλαγή της λειτουργίας περιαγωγής CDMA"</string>
     <string name="cdma_roaming_mode_dialogtitle" msgid="1802896889172094947">"Λειτουργία περιαγωγής CDMA"</string>
   <string-array name="cdma_roaming_mode_choices">
     <item msgid="6024072766548865002">"Μόνο οικιακά δίκτυα"</item>
     <item msgid="8174642753290624634">"Συνεργαζόμενα δίκτυα"</item>
     <item msgid="2241951431403168661">"Οποιοδήποτε δίκτυο"</item>
   </string-array>
-    <string name="cdma_network_preferences_title" msgid="41193174429510391">"Προτιμήσεις δικτύου CDMA"</string>
-    <string name="cdma_network_preferneces_summary" msgid="3524451924935793338">"Δεν εφαρμόστηκε ακόμη!"</string>
+    <string name="cdma_network_preferences_title">Προτιμήσεις δικτύου</string>
+    <string name="cdma_network_preferneces_summary">Αλλάξτε τον τρόπο λειτουργίας του δικτύου</string>
     <string name="cdma_network_preferences_dialogtitle" msgid="4548860809290455653">"Προτιμήσεις δικτύου CDMA"</string>
   <string-array name="cdma_network_preferences_choices">
     <item msgid="3711054371631487248">"CDMA/EvDo"</item>
@@ -376,17 +383,17 @@
     <string name="number" msgid="7905950798349903858">"Αριθμός"</string>
     <string name="save" msgid="4094274636321939086">"Αποθ/ση"</string>
     <string name="add_fdn_contact" msgid="2481915899633353976">"Προσθήκη καθορισμένου αριθμού κλήσης"</string>
-    <string name="adding_fdn_contact" msgid="7627379633721940991">"Προσθήκη καθορισμένου αριθμού κλήσης…"</string>
+    <string name="adding_fdn_contact" msgid="7627379633721940991">"Προσθήκη καθορισμένου αριθμού κλήσης\u2026"</string>
     <string name="fdn_contact_added" msgid="7458335758501736665">"Ο καθορισμένος αριθμός κλήσης προστέθηκε."</string>
     <string name="edit_fdn_contact" msgid="7976936035587081480">"Επεξεργασία καθορισμένου αριθμού κλήσης"</string>
-    <string name="updating_fdn_contact" msgid="8370929876849803600">"Ενημέρωση καθορισμένου αριθμού κλήσης…"</string>
+    <string name="updating_fdn_contact" msgid="8370929876849803600">"Ενημέρωση καθορισμένου αριθμού κλήσης\u2026"</string>
     <string name="fdn_contact_updated" msgid="5497828782609005017">"Ο καθορισμένος αριθμός κλήσης ενημερώθηκε."</string>
     <string name="delete_fdn_contact" msgid="6668958073074151717">"Διαγραφή καθορισμένου αριθμού κλήσης"</string>
-    <string name="deleting_fdn_contact" msgid="5669163206349319969">"Διαγραφή καθορισμένου αριθμού κλήσης…"</string>
+    <string name="deleting_fdn_contact" msgid="5669163206349319969">"Διαγραφή καθορισμένου αριθμού κλήσης\u2026"</string>
     <string name="fdn_contact_deleted" msgid="7154162327112259569">"Ο καθορισμένος αριθμός κλήσης διαγράφηκε."</string>
     <string name="pin2_invalid" msgid="7176360264228076810">"Το FDN δεν ενημερώθηκε: εισαγάγατε εσφαλμένο PIN."</string>
     <string name="fdn_invalid_number" msgid="9193130794297997290">"Το FDN δεν ενημερώθηκε: ο αριθμός δεν μπορεί να περιέχει περισσότερα από 20 ψηφία."</string>
-    <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Ανάγνωση από κάρτα SIM…"</string>
+    <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Ανάγνωση από κάρτα SIM\u2026"</string>
     <string name="simContacts_empty" msgid="5270660846489561932">"Δεν υπάρχουν επαφές στην κάρτα SIM."</string>
     <string name="simContacts_title" msgid="1861472842524839921">"Επιλέξτε επαφές για εισαγωγή"</string>
     <string name="enable_pin" msgid="5422767284133234860">"Ενεργοποίηση/απενεργοποίηση αριθμού PIN της κάρτας SIM"</string>
@@ -400,7 +407,7 @@
     <string name="invalidPin" msgid="5981171102258684792">"Πληκτρολογήστε έναν αριθμό PIN που να αποτελείται από 4 έως 8 αριθμούς."</string>
     <string name="disable_sim_pin" msgid="3992926931620188855">"Απενεργοποίηση αριθμού PIN της κάρτας SIM"</string>
     <string name="enable_sim_pin" msgid="5803702443844458831">"Ενεργοποίηση αριθμού PIN της κάρτας SIM"</string>
-    <string name="enable_in_progress" msgid="3695303775100109650">"Περιμένετε..."</string>
+    <string name="enable_in_progress" msgid="3695303775100109650">"Περιμένετε\u2026"</string>
     <string name="enable_pin_ok" msgid="8077439615296694284">"Ο αριθμός PIN της κάρτας SIM ενεργοποιήθηκε"</string>
     <string name="disable_pin_ok" msgid="8552428316206928913">"Ο αριθμός PIN της κάρτας SIM απενεργοποιήθηκε"</string>
     <string name="pin_failed" msgid="6597695909685242127">"Ο αριθμός PIN που πληκτρολογήσατε είναι λανθασμένος"</string>
@@ -426,19 +433,35 @@
     <string name="sim_missing_msg_text" msgid="6803619600564142188">"Δεν βρέθηκε κάρτα SIM. Εισάγετε μια κάρτα SIM στο τηλέφωνο."</string>
     <string name="sim_unlock_dismiss_text" msgid="8292343981739813597">"Παράβλεψη"</string>
     <string name="sim_unlock_unlock_text" msgid="6328406783399256930">"Ξεκλείδωμα"</string>
-    <string name="sim_unlock_status_text" msgid="1919609683384607179">"Έλεγχος ταυτότητας αριθμού PIN…"</string>
+    <string name="sim_unlock_status_text" msgid="1919609683384607179">"Έλεγχος ταυτότητας αριθμού PIN\u2026"</string>
     <string name="voicemail_settings_number_label" msgid="8524164258691887790">"Αριθμός αυτόματου τηλεφωνητή"</string>
     <string name="card_title_dialing" msgid="5769417478498348054">"Κλήση"</string>
     <string name="card_title_redialing" msgid="4831412164303596395">"Νέα προσπάθεια"</string>
     <string name="card_title_in_progress" msgid="8603765629781648862">"Τρέχουσα κλήση"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Κλήση συνδιάσκεψης"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Εισερχόμενη κλήση"</string>
-    <string name="card_title_cdma_call_waiting" msgid="4532445524811272644">"Αναμονή κλήσης Cdma"</string>
+    <string name="card_title_waiting_call">Κλήση σε αναμονή</string>
+    <string name="card_title_cdma_call_waiting" msgid="4532445524811272644">"Αναμονή κλήσης CDMA"</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"Η κλήση τερματίστηκε"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"Σε αναμονή"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Κλείσιμο γραμμής"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Σε κλήση"</string>
     <string name="card_title_my_phone_number" msgid="112428362494434191">"Ο αριθμός μου είναι <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="call_notif_unconditionalCF">Προώθηση κλήσεων άνευ όρων ενεργή</string>
+    <string name="call_notif_conditionalCF">Προώθηση κλήσεων υπό όρους ενεργή</string>
+    <string name="call_notif_MOcall_forwarding">Η εξερχόμενη κλήση προωθείται</string>
+    <string name="call_notif_calliswaiting">Απομακρυσμένος χρήστης απασχολημένος, κλήση σε αναμονή</string>
+    <string name="call_notif_cugcall">Κλήση σε κλειστή ομάδα χρηστών</string>
+    <string name="call_notif_outgoing_barred">Φραγή εξερχόμενων κλήσεων</string>
+    <string name="call_notif_incoming_barred">Φραγή εισερχόμενων κλήσεων από τον απομακρυσμένο χρήστη</string>
+    <string name="call_notif_clir_suppression_rejected">Η απόκρυψη αριθμού απορρίφθηκε από το δίκτυο</string>
+    <string name="call_notif_call_deflected">Η κλήση προωθήθηκε από τον απομακρυσμένο χρήστη</string>
+    <string name="call_notif_MTcall_forwarding">Η εισερχόμενη κλήση προωθείται</string>
+    <string name="call_notif_multipartycall">Συνδιάλεξη πολλαπλών χρηστών</string>
+    <string name="call_notif_callonhold_released">Η κλήση απελευθερώθηκε απομακρυσμένα</string>
+    <string name="call_notif_forwardcheckreceived">Η κλήση προωθήθηκε</string>
+    <string name="call_notif_callconnectingect">Η κλήση συνδέεται με μεταφορά κλήσης</string>
+    <string name="call_notif_callconnectedect">Η κλήση συνδέθηκε με μεταφορά κλήσης</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Αναπάντητη κλήση"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Αναπάντητες κλήσεις"</string>
     <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="NUM_MISSED_CALLS">%s</xliff:g> αναπάντητες κλήσεις"</string>
@@ -457,8 +480,8 @@
     <string name="incall_error_out_of_service" msgid="8587993036435080418">"Το δίκτυο κινητής τηλεφωνίας δεν είναι διαθέσιμο."</string>
     <string name="incall_error_no_phone_number_supplied" msgid="4197432103471807739">"Η κλήση δεν πραγματοποιήθηκε, δεν έγινε εισαγωγή έγκυρου αριθμού."</string>
     <string name="incall_error_call_failed" msgid="4313552620858880999">"H κλήση δεν πραγματοποιήθηκε."</string>
-    <string name="incall_status_dialed_mmi" msgid="3672498861336189563">"Έναρξη ακολουθίας MMI..."</string>
-    <string name="incall_status_dialed_fc" msgid="1632879988662225263">"Έναρξη αλληλουχίας κωδικού λειτουργίας..."</string>
+    <string name="incall_status_dialed_mmi" msgid="3672498861336189563">"Έναρξη ακολουθίας MMI\u2026"</string>
+    <string name="incall_status_dialed_fc" msgid="1632879988662225263">"Έναρξη αλληλουχίας κωδικού λειτουργίας\u2026"</string>
     <string name="incall_error_supp_service_unknown" msgid="2991054870745666038">"Μη υποστηριζόμενη υπηρεσία."</string>
     <string name="incall_error_supp_service_switch" msgid="3503552565745872241">"Αδύνατη η εναλλαγή κλήσεων."</string>
     <string name="incall_error_supp_service_separate" msgid="914362338192301746">"Δεν ήταν δυνατός ο διαχωρισμός της κλήσης."</string>
@@ -467,8 +490,9 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Δεν ήταν δυνατή η απόρριψη της κλήσης."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Αδύνατη η επαναφορά κλήσης (κλήσεων)."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Κλήση Διαδικτύου"</string>
+    <string name="incall_call_type_label_forwarded">Προωθημένη κλήση</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Κλήσεις επείγουσας ανάγκης"</string>
-    <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Ενεργοποίηση πομπού..."</string>
+    <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Ενεργοποίηση πομπού\u2026"</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Εκτός περιοχής κάλυψης, επανάληψη κλήσης..."</string>
     <string name="dial_emergency_error" msgid="8362624131726575194">"Η κλήση δεν πραγματοποιήθηκε, το <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> δεν είναι αριθμός επείγουσας ανάγκης!"</string>
     <string name="dial_emergency_empty_error" msgid="5048645338094088229">"Η κλήση δεν πραγματοποιήθηκε, καλέστε έναν αριθμό επείγουσας ανάγκης!"</string>
@@ -562,16 +586,58 @@
     <string name="dial_button_label" msgid="5551611636419190229">"Κλήση"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Κλήση μέσω ^1"\n<b>"^2"</b></string>
     <string name="slide_to_answer" msgid="255903188611244476">"Μεταφορά δεξιά για απάντηση"</string>
+    <string name="rotate_to_answer">Περιστροφή δεξιά για απάντηση</string>
     <string name="slide_to_silence" msgid="2224982696981131553">"Μεταφορά αριστερά για σίγαση ειδοποίησης ήχου"</string>
     <string name="slide_to_decline" msgid="7342094219435077069">"Μεταφορά αριστερά για απόρριψη"</string>
+    <string name="rotate_to_decline">Περιστροφή αριστερά για απόρριψη</string>
     <string name="slide_to_answer_and_hold" msgid="9212596323067601245">"Μεταφορά δεξιά για απάντηση και"\n"θέση ενεργής κλήσης σε αναμονή"</string>
     <string name="slide_to_answer_and_end_active" msgid="6473719408670133380">"Μεταφορά δεξιά για απάντηση και"\n"τερματισμό ενεργής κλήσης"</string>
     <string name="slide_to_answer_and_end_onhold" msgid="638748048960663506">"Μεταφορά δεξιά για απάντηση και"\n"τερματισμό κλήσης σε αναμονή"</string>
     <string name="slide_to_answer_hint" msgid="4901042355463593903">"Απάντηση"</string>
     <string name="slide_to_decline_hint" msgid="4484576372463030324">"Απόρριψη"</string>
     <string name="contactPhoto" msgid="4713193418046639466">"φωτογραφία επαφής"</string>
+    <!-- added by cytown@gmail.com -->
+    <string name="notification_ongoing_calling_format">Κλήση (<xliff:g id="duration">%s</xliff:g>)</string>
+    <string name="advanced_setting">Για προχωρημένους</string>
+    <string name="vibrate_outgoing">Δόνηση στην απάντηση</string>
+    <string name="vibrate_outgoing_sum">Δόνηση κατά την απάντηση μιας κλήσης</string>
+    <string name="vibrate_45">Δόνηση κάθε 45 δευτερόλεπτα</string>
+    <string name="vibrate_45_sum">Δόνηση κάθε 45 δευτερόλεπτα κατά τη διάρκεια εξερχόμενων κλήσεων</string>
+    <string name="vibrate_hangup">Δόνηση στο κλείσιμο</string>
+    <string name="vibrate_hangup_sum">Δόνηση κατά τον τερματισμό μιας κλήσης</string>
+    <string name="screen_awake">Διατήρηση ενεργής οθόνης</string>
+    <string name="screen_awake_sum">Η οθόνη θα μένει ενεργοποιημένη για περισσότερο χρόνο κατά τη διάρκεια μιας κλήσης</string>
+    <string name="always_proximity">Χρήση αισθητήρα απόστασης</string>
+    <string name="always_proximity_sum">Χρήση του αισθητήτα απόστασης για κλείδωμα της οθόνης ακόμα και όταν το τηλέφωνο είναι οριζόντια</string>
+    <string name="led_notify_call">Ειδοποίηση LED</string>
+    <string name="led_notify_call_sum">Το LED θα αναβοσβήνει όταν έχετε αναπάντητη κλήση</string>
+    <string name="led_show_organ">Εμφάνιση ψευδωνύμου/οργανισμού</string>
+    <string name="led_show_organ_sum">Εμφάνιση ψευδωνύμου / οργανισμού στην οθόνη κατά τη διάρκεια της κλήσης</string>
+    <string name="vibrate_call_waiting">Δόνηση στην αναμονή</string>
+    <string name="vibrate_call_waiting_sum">Δόνηση όταν μια κλήση είναι σε αναμονή</string>
+    <string name="return_home">Επιστροφή στο αρχ. κλήσεων</string>
+    <string name="return_home_sum">Πάντα επιστροφή στο αρχείο κλήσεων μετά το τέλος μιας κλήσης</string>
+    <string name="menu_addBlackList">Προσθήκη στη μαύρη λίστα</string>
+    <string name="black_list">Μαύρη λίστα</string>
+    <string name="black_list_sum">Οι εισερχόμενες κλήσεις που είναι στη μαύρη λίστα θα απορρίπτονται</string>
+    <string name="add_black">Προσθήκη αριθμού</string>
+    <string name="black_regex_title">Χρήση μπαλαντέρ</string>
+    <string name="black_regex_summary">Χρήση . ως μπαλαντέρ και * για επανάληψη. Π.χ. το 123.* μπλοκάρει αριθμούς που ξεκινούν από 123 και το .*123.* μπλοκάρει αριθμούς που περιέχουν το 123</string>
+    <string name="remove_black">Αφαίρεση %s από τη λίστα</string>
+    <string name="turn_silence">Σίγαση με αναποδογύρισμα</string>
+    <string name="turn_silence_sum">Αναποδογύρισμα του τηλεφώνου για σίγαση του ήχου κλήσης</string>
+    <string name="left_hand">Λειτουργία για αριστερόχειρες</string>
+    <string name="left_hand_sum">Χρήση του αριστερού χεριού για το κράτημα του τηλεφώνου (απαιτεί επανεκκίνηση)</string>
+    <string name="set_force_touch">Διεπαφή κλήσης</string>
+    <string name="set_force_touch_sum">Εμφάνιση περιβάλλοντος αφής κλήσης σε συσκευή χωρίς αισθητήρα απόστασης</string>
+    <string name="rotate_incall">Ενεργοποίηση περιστροφής</string>
+    <string name="rotate_incall_sum">Περιστροφή της οθόνης με τον αισθητήρα περιστροφής κατά τη διάρκεια της κλήσης</string>
+    <string name="bg_incall">Εισερχ. κλήση στο παρασκήνιο</string>
+    <string name="bg_incall_sum">Κρατήστε την εισερχόμενη κλήση στο παρασκήνιο όταν η οθόνη είναι ενεργή, εμφάνιση μόνο της ειδοποίησης και αναπαραγωγή μόνο του ήχου κλήσης</string>
     <string name="goPrivate" msgid="865837794424530980">"ιδιωτική χρήση"</string>
     <string name="selectContact" msgid="781975788478987237">"επιλογή επαφής"</string>
+    <string name="voicemail_notification_title">Ειδοποιήσεις τηλεφωνητή</string>
+    <string name="voicemail_notification_summary">Ενεργοποίηση ειδοποιήσεων για νεά μηνύματα τηλεφωνητή</string>
     <string name="sip_settings" msgid="6699045718560859691">"Ρυθμίσεις κλήσεων Διαδικτύου"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"Λογαριασμοί κλήσεων μέσω Διαδικτύου (SIP)"</string>
     <string name="sip_accounts_title" msgid="1212889069281054570">"Λογαριασμοί"</string>
@@ -599,8 +665,8 @@
     <string name="add_sip_account" msgid="5904858426290097611">"Προσθήκη λογαριασμού"</string>
     <string name="remove_sip_account" msgid="7645900420385682570">"Κατάργηση λογαριασμού"</string>
     <string name="sip_account_list" msgid="5480058210652194306">"Λογαριασμοί SIP"</string>
-    <string name="saving_account" msgid="7468818916695729968">"Αποθήκευση του λογαριασμού..."</string>
-    <string name="removing_account" msgid="5569334415898924904">"Κατάργηση του λογαριασμού..."</string>
+    <string name="saving_account" msgid="7468818916695729968">"Αποθήκευση του λογαριασμού\u2026"</string>
+    <string name="removing_account" msgid="5569334415898924904">"Κατάργηση του λογαριασμού\u2026"</string>
     <string name="sip_menu_save" msgid="5842531129356014943">"Αποθήκευση"</string>
     <string name="sip_menu_discard" msgid="524075892158789701">"Απόρριψη"</string>
     <string name="alert_dialog_close" msgid="7759635137627626235">"Κλείσιμο του προφίλ"</string>
@@ -611,9 +677,9 @@
     <string name="primary_account_summary" msgid="7339564526372623187">"Χρησιμοποιείται για εξερχόμενες κλήσεις"</string>
     <string name="advanced_settings_title" msgid="8846648727128452293">"Σύνθετες ρυθμίσεις"</string>
     <string name="primary_account_summary_with" msgid="1633960536212343187">"Βασικός λογαριασμός. <xliff:g id="REGISTRATION_STATUS">%s</xliff:g>"</string>
-    <string name="registration_status_checking_status" msgid="3381868307694056727">"Έλεγχος κατάστασης..."</string>
-    <string name="registration_status_registering" msgid="7115694971025999516">"Γίνεται εγγραφή..."</string>
-    <string name="registration_status_still_trying" msgid="1471733478935862864">"Η προσπάθεια συνεχίζεται..."</string>
+    <string name="registration_status_checking_status" msgid="3381868307694056727">"Έλεγχος κατάστασης\u2026"</string>
+    <string name="registration_status_registering" msgid="7115694971025999516">"Γίνεται εγγραφή\u2026"</string>
+    <string name="registration_status_still_trying" msgid="1471733478935862864">"Η προσπάθεια συνεχίζεται\u2026"</string>
     <string name="registration_status_not_receiving" msgid="5011399017106466965">"Δεν γίνεται αποδοχή κλήσεων"</string>
     <string name="registration_status_no_data" msgid="8279587001454092132">"Η εγγραφή λογαριασμού διεκόπη επειδή δεν υπάρχει σύνδεση στο Διαδίκτυο"</string>
     <string name="registration_status_no_wifi_data" msgid="6698550648571450078">"Ο λογαριασμός εγγραφής διεκόπη επειδή δεν υπάρχει σύνδεση Wi-Fi"</string>
@@ -634,6 +700,11 @@
     <string name="transport_title" msgid="8253139511847746640">"Τύπος μεταφοράς"</string>
     <string name="send_keepalive_title" msgid="7533342573918645113">"Αποστολή μηνυμάτων \"keep-alive\""</string>
     <string name="send_keepalive_summary" msgid="9038969409950960640">"Αποστολή μηνυμάτων \"keep-alive\" στο διακομιστή SIP"</string>
+    <string name="sip_system_decide_entry">Αυτόματο</string>
+    <string name="sip_always_send_keepalive_entry">Πάντα αποστολή</string>
+    <string name="keepalive_interval_title">Διάστημα keep-alive</string>
+    <string name="keepalive_interval_summary">Χρονικό διάστημα keep-alive του SIP σε δευτερόλεπτα</string>
+    <string name="user_agent_title">User agent του SIP</string>
     <string name="auto_registration_title" msgid="3586777375420122154">"Αυτόματη εγγραφή"</string>
     <string name="auto_registration_summary" msgid="2522794041206619280">"Αυτόματη εγγραφή του προφίλ"</string>
     <string name="set_primary_title" msgid="5351892327447571451">"Ορισμός ως κυρίως λογαριασμού"</string>
@@ -653,4 +724,53 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Για να πραγματοποιήσετε μια κλήση μέσω Διαδικτύου, ελέγξτε πρώτα τη σύνδεσή σας στο Διαδίκτυο"</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Για κλήσεις μέσω Διαδικτύου πρέπει να είστε συνδεδεμένοι σε δίκτυο Wi-Fi (χρησιμοποιήστε το στοιχείο Ασύρματο δίκτυο και Ρυθμίσεις δικτύου)"</string>
     <string name="no_voip" msgid="8901474054537199865">"Η κλ. μέσω Διαδικτύου δεν υποστηρίζεται"</string>
+
+    <string name="per_change_mobile_network">Επιλογή δικτύου (2G/3G)</string>
+    <string name="per_change_mobile_network_desc">Όποια εφαρμογή έχει αυτή την άδεια μπορεί να αλλάζει μεταξύ 2G και 3G δεδομένων. Το 3G είναι γρηγορότερο, καταναλώνει περισσότερο μπαταρία και μπορεί επίσης να σας κοστίσει περισσότερα χρήματα.</string>
+
+    <string name="phone_number_label">Ο αριθμός μου</string>
+    <string name="phone_number_summary">Ορίστε τον αριθμό τηλεφώνου για αυτή τη συσκευή</string>
+
+    <string name="show_ssn_label">Ειδοποίηση γεγονότων</string>
+    <string name="show_ssn_summary">Εμφάνιση ειδοποιήσεων για διάφορα γεγονότα του δικτύου σχετικά με τον χειρισμό των κλήσεων</string>
+
+    <!-- TrackBall Answer - Added by Nushio -->
+    <string name="trackball_answer">Απάντηση με trackball</string>
+    <string name="trackball_answer_sum">Απάντηση της εισερχόμενης κλήσης πατώντας το trackball</string>
+    <string-array name="trackballLabels">
+        <item>Ανενεργό</item>
+        <item>Πάτημα για απάντηση</item>
+        <item>Διπλό χτύπημα για απάντηση</item>
+    </string-array>
+
+    <!-- TrackBall Hangup - Added by Nushio -->
+    <string name="trackball_hangup">Τερματισμός με trackball</string>
+    <string name="trackball_hangup_sum">Τερματισμός της τρέχουσας κλήσης πατώντας το trackball</string>
+    <string-array name="trackballHangupLabels">
+        <item>Ανενεργό</item>
+        <item>Πάτημα για τερματισμό</item>
+        <item>Διπλό χτύπημα για τερματισμό</item>
+    </string-array>
+
+    <!-- Hide Hold button - Added by leinardi -->
+    <string name="hide_hold_button">Απόκρυψη πλήκτρου αναμονής</string>
+    <string name="hide_hold_button_sum">Απόκρυψη του κουμπιού που βάζει την τρέχουσα κλήση σε αναμονή</string>
+
+    <!-- Phone goggles -->
+    <string name="toast_phone_goggles">Δεν επιτρέπονται οι τηλεφωνικές κλήσεις αυτή τη στιγμή. Παρακαλώ δοκιμάστε ξανά αργότερα.</string>
+    <string name="dialog_phone_goggles_title">Η κλήση μπλοκαρίστηκε</string>
+    <string name="dialog_phone_goggles_title_unlocked">Η κλήση επιτράπηκε</string>
+    <string name="dialog_phone_goggles_content">Η δημιουργία μιας κλήσης ίσως δεν είναι καλή ιδέα αυτή τη στιγμή. Είστε βέβαιοι ότι θέλετε να συνεχίσετε;</string>
+    <string name="dialog_phone_goggles_unauthorized">Η δημιουργία μιας κλήσης ίσως δεν είναι καλή ιδέα αυτή τη στιγμή.</string>
+    <string name="dialog_phone_goggles_ok">Κλήση</string>
+    <string name="dialog_phone_goggles_cancel">Ακύρωση</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Ποιότητα φωνής</string>
+    <string name="voice_quality_summary">Ορίστε ένα προφίλ φωνής για βελτιστοποίηση της ποιότητας ακρόασης</string>
+    <!-- Do not remove those, they're used from overlays -->
+    <string name="voice_quality_entry_normal">Κανονική</string>
+    <string name="voice_quality_entry_clear">Καθαρή</string>
+    <string name="voice_quality_entry_crisp">Ζωηρή</string>
+    <string name="voice_quality_entry_bright">Ζωντανή</string>
 </resources>
