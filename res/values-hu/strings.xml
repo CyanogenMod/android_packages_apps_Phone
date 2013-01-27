@@ -190,6 +190,11 @@
     <item msgid="7002474529872452266">"LTE/CDMA"</item>
     <item msgid="5541716989029928208">"CDMA"</item>
   </string-array>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>LTE/WCDMA</item>
+    <item>LTE/GSM/WCDMA</item>
+    <item>GSM/WCDMA a preferált</item>
+  </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Adatok engedélyezése"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Adathozzáférés engedélyezése mobilhálózatokon"</string>
     <string name="roaming" msgid="8871412572928323707">"Adatbarangolás"</string>
