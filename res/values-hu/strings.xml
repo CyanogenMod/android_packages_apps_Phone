@@ -702,4 +702,31 @@
 
     <string name="perm_change_mobile_network">Hálózat módosítása (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Az ilyen engedéllyel rendelkező alkalmazás, bármikor válthat 2G és 3G közt. A 3G gyorsabb, jobban meríti az akkumulátort, és több pénzbe is kerülhet a nagyobb adatforgalom miatt.</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Telefon megfordítása</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Telefon megfordítása\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">A telefon megfordítására <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>Ne történjen semmi</item>
+        <item>Némítsa a hívást</item>
+        <item>Utasítsa el a hívást</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>nem történik semmi</item>
+        <item>elnémítja a hívást</item>
+        <item>elutasítja a hívást</item>
+    </string-array>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
+
 </resources>
