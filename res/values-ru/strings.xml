@@ -651,5 +651,31 @@
 
     <string name="perm_change_mobile_network">Изменение сети (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Приложение, имеющее данное разрешение, может в любое время переключать режимы связи между 2G и 3G. Режим 3G имеет более высокую скорость и большее потребление энергии.</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот телефона</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Выбор действия\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Перевернув телефон экраном вниз <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>Ничего не делать</item>
+        <item>Выключить звонок</item>
+        <item>Сбросить звонок</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>ничего не делать</item>
+        <item>выключить звонок</item>
+        <item>сбросить звонок</item>
+    </string-array>
+
     <!-- CYANOGENMOD ADDITIONS END -->
+
 </resources>
