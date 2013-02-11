@@ -667,4 +667,17 @@
     <string name="incall_call_type_label_forwarded">Chamada encaminhada</string>
     <string name="show_ssn_label">Notificação de evento</string>
     <string name="show_ssn_summary">Exibir uma notificação para vários eventos de rede relacionados ao precessamento de chamadas</string>
+    <string name="flip_action_title">Ação de virar</string>
+    <string name="flip_action_dialog_title">Virar o dispositivo para\u2026</string>
+    <string name="flip_action_summary">Virar o telefone para baixo irá <xliff:g id="action" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string-array name="flip_action_setting_entries">
+        <item>Fazer nada</item>
+        <item>Silenciar o tocador</item>
+        <item>Dispensar a chamada</item>
+    </string-array>
+    <string-array name="flip_action_summary_entries">
+        <item>fazer nada</item>
+        <item>silenciar o tocador</item>
+        <item>dispensar a chamada</item>
+    </string-array>
 </resources>
