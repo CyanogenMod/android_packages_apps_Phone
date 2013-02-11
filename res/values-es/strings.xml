@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--  Copyright (C) 2007 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
+-->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
@@ -627,7 +627,7 @@
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Sonar al marcar número"</string>
     <string name="preference_category_ringtone" msgid="9007490591910078324">"Tono"</string>
 
-    <!-- CYANOGENMOD EDITS START -->
+    <!-- CYANOGENMOD ADDITIONS START -->
 
     <string name="preferred_network_mode_lte_cdma_evdo_summary">Modo de red preferido: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Modo de red preferido: LTE / WCDMA/GSM</string>
@@ -673,6 +673,21 @@
     <string name="incall_call_type_label_forwarded">Llamada desviada</string>
     <string name="show_ssn_label">Notificación de eventos</string>
     <string name="show_ssn_summary">Mostrar la notificación de eventos de red relacionados con la gestión de llamadas</string>
+    <string name="mwi_notification_title">Notificación buzón de voz</string>
+    <string name="mwi_notification_summary">Mostrar una notificación para los mensajes en espera del buzón de voz</string>
+    <string name="flip_action_title">Acción al voltear</string>
+    <string name="flip_action_dialog_title">Al voltear\u2026</string>
+    <string name="flip_action_summary">Al voltear el terminal, <xliff:g id="action">%s</xliff:g></string>
+    <string-array name="flip_action_setting_entries">
+        <item>No hacer nada</item>
+        <item>Silenciar la llamada</item>
+        <item>Rechazar la llamada</item>
+    </string-array>
+    <string-array name="flip_action_summary_entries">
+        <item>no hacer nada</item>
+        <item>silenciar la llamada</item>
+        <item>rechazar la llamada</item>
+    </string-array>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
