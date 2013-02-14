@@ -573,6 +573,8 @@
     <string name="rotate_incall_sum">Разрешить вращение экрана входящего звонка при изменении ориентации.</string>
     <string name="bg_incall">Входящий вызов в фоне</string>
     <string name="bg_incall_sum">Держит интерфейс входящего звонка в фоне, когда экран включен. Показывается только уведомление и проигрывается мелодия.</string>
+    <string name="rejected_as_missed">Отклоненные вызовы как пропущенные</string>
+    <string name="rejected_as_missed_sum">Помечать в журнале отклоненные вызовы как пропущенные</string>
     <string name="contactPhoto" msgid="4713193418046639466">"фотография контакта"</string>
     <string name="goPrivate" msgid="865837794424530980">"приватная конференция"</string>
     <string name="selectContact" msgid="781975788478987237">"выбрать контакт"</string>

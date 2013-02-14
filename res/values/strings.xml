@@ -1296,6 +1296,8 @@
     <string name="rotate_incall_sum">Allow incall screen to rotate with orientation change.</string>
     <string name="bg_incall">Incoming call in background</string>
     <string name="bg_incall_sum">Keep incoming call UI in background when screen is on, show notification and play ringtone only.</string>
+    <string name="rejected_as_missed">Reject calls as missed</string>
+    <string name="rejected_as_missed_sum">Mark rejected calls as \'missed\' rather than \'incoming\' in the call log</string>
 
     <!-- Use this as a default to describe the contact photo; currently for screen readers through accessibility. -->
     <string name="contactPhoto">contact photo</string>

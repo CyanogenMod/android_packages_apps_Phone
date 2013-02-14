@@ -721,6 +721,8 @@
     <string name="rotate_incall_sum">Permettre à l\'écran de pivoter en fonction du capteur d\'orientation pendant une conversation</string>
     <string name="bg_incall">Appels en arrière plan</string>
     <string name="bg_incall_sum">Ne pas afficher la fenêtre d\'appel lorsque l\'écran est allumé. Affiche uniquement une notification et déclenche la sonnerie</string>
+    <string name="rejected_as_missed">Appels refusés comme manqués</string>
+    <string name="rejected_as_missed_sum">Affiche les appels rejetés comme \'manqués\' plutôt que \'entrants\' dans le log des appels</string>
 
     <!-- Toasts for various transient network events -->
     <!-- Toast text for Unconditional Call Forwarding enabled  -->

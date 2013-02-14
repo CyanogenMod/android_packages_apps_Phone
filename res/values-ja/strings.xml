@@ -739,6 +739,8 @@
     <string name="bg_incall_sum">スクリーンONのとき着信UIをバックグラウンドで維持し、通知と着信を再生するのみにする</string>
     <string name="hide_hold_button">保留ボタンを隠す</string>  
     <string name="hide_hold_button_sum">現在の通話を保留にするボタンを隠す</string>
+    <string name="rejected_as_missed">拒否着信を不在着信にする</string>
+    <string name="rejected_as_missed_sum">通話履歴の拒否着信を \'着信\' ではなく \'不在着信\' にする</string>
 
     <!-- Phone Goggles -->
     <string name="toast_phone_goggles">今の時間に発信することは許可されていません。あとで再度お試しください。</string>

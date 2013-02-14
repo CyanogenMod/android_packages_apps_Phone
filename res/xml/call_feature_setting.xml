@@ -159,6 +159,13 @@
         android:persistent="false"
         android:summary="@string/hide_hold_button_sum"/>
     <!-- end Hide Hold button -->
+    <!-- Mark rejected calls as missed -->
+    <CheckBoxPreference
+        android:key="button_rejected_as_missed"
+        android:title="@string/rejected_as_missed"
+        android:persistent="false"
+        android:summary="@string/rejected_as_missed_sum"/>
+    <!-- end Mark rejected calls as missed -->
   <PreferenceScreen
         android:key="button_black_list"
         android:title="@string/black_list"

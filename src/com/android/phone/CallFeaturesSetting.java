@@ -490,6 +490,11 @@ public class CallFeaturesSetting extends PreferenceActivity
     private CheckBoxPreference mButtonHideHoldButton;
     static boolean mHideHoldButton;
 
+    //Mark rejected calls as missed
+    private static final String BUTTON_REJECTED_AS_MISSED = "button_rejected_as_missed";
+    private CheckBoxPreference mButtonRejectedAsMissed;
+    static boolean mRejectedAsMissed;
+
     private boolean mForeground;
 
     @Override
@@ -1741,6 +1746,8 @@ public class CallFeaturesSetting extends PreferenceActivity
             ((PreferenceCategory) prefSet.findPreference(CATEGORY_ADVANCED))
                     .removePreference(mButtonHideHoldButton);
         }
+        mButtonRejectedAsMissed = (CheckBoxPreference) prefSet.findPreference(BUTTON_REJECTED_AS_MISSED);
+        mButtonRejectedAsMissed.setChecked(mRejectedAsMissed);
     }
 
     private void createSipCallSettings() {
@@ -2159,6 +2166,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         mTrackAnswer = pref.getString(BUTTON_TRACKBALL_ANSWER, "-1");
         mTrackHangup = pref.getString(BUTTON_TRACKBALL_HANGUP, "-1");
         mHideHoldButton = pref.getBoolean(BUTTON_HIDE_HOLD_BUTTON, false);
+        mRejectedAsMissed = pref.getBoolean(BUTTON_REJECTED_AS_MISSED, false);
         mBlackRegex = pref.getBoolean(BUTTON_BLACK_REGEX, false);
         if (TextUtils.isEmpty(context.getResources().getString(R.string.voice_quality_param))) {
             mVoiceQuality = null;
@@ -2323,6 +2331,7 @@ public class CallFeaturesSetting extends PreferenceActivity
         outState.putString(BUTTON_TRACKBALL_ANSWER, mTrackballAnswer.getValue());
         outState.putString(BUTTON_TRACKBALL_HANGUP, mTrackballHangup.getValue());
         outState.putBoolean(BUTTON_HIDE_HOLD_BUTTON, mButtonHideHoldButton.isChecked());
+        outState.putBoolean(BUTTON_REJECTED_AS_MISSED, mButtonRejectedAsMissed.isChecked());
         if (mButtonVoiceQuality != null) {
             outState.putString(BUTTON_VOICE_QUALITY_KEY, mButtonVoiceQuality.getValue());
         }
