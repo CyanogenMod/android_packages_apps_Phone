@@ -44,7 +44,6 @@
     <string name="callFailed_dsac_restricted_emergency" msgid="4353654268813314466">"Noodoproepen worden beperkt door toegangsbeheer."</string>
     <string name="callFailed_dsac_restricted_normal" msgid="2680774510252408620">"Normale oproepen worden beperkt door toegangsbeheer."</string>
     <string name="callFailed_unobtainable_number" msgid="4736290912891155067">"Ongeldig getal"</string>
-    <string name="callUnanswered_forwarded">Gesprek onbeantwoord en doorgeschakeld</string>
     <string name="confCall" msgid="1904840547188336828">"Telefonische vergadering"</string>
     <string name="call_lost" msgid="317670617901479594">"De verbinding is verbroken."</string>
     <string name="ok" msgid="3811371167865772377">"OK"</string>
@@ -391,27 +390,12 @@
     <string name="card_title_redialing" msgid="4831412164303596395">"Opnieuw proberen"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Telefonische vergadering"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Inkomende oproep"</string>
-    <string name="card_title_waiting_call">Oproep in wacht</string>
     <string name="card_title_call_ended" msgid="5544730338889702298">"Oproep beëindigd"</string>
     <string name="card_title_on_hold" msgid="821463117892339942">"In de wacht"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Ophangen"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Actieve oproep"</string>
     <string name="card_title_my_phone_number" msgid="112428362494434191">"Mijn nummer is <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
     <string name="notification_dialing" msgid="2107666444937350731">"Kiezen"</string>
-    <string name="call_notif_unconditionalCF">Permanent doorschakelen actief</string>
-    <string name="call_notif_conditionalCF">Voorwaardelijk doorschakelen actief</string>
-    <string name="call_notif_MOcall_forwarding">Oproep wordt doorgeschakeld</string>
-    <string name="call_notif_cugcall">Oproep binnen besloten gebruikersgroep</string>
-    <string name="call_notif_outgoing_barred">Uitgaande oproepen geblokkeerd</string>
-    <string name="call_notif_incoming_barred">Inkomende oproepen geblokkeerd</string>
-    <string name="call_notif_clir_suppression_rejected">Niet tonen eigen telefoonnummer afgewezen</string>
-    <string name="call_notif_call_deflected">Oproep door ontvanger doorgeschakeld</string>
-    <string name="call_notif_MTcall_forwarding">Inkomende oproep doorgeschakeld</string>
-    <string name="call_notif_multipartycall">Teleconferentie</string>
-    <string name="call_notif_callonhold_released">Oproep door ontvanger vrijgegeven</string>
-    <string name="call_notif_forwardcheckreceived">Oproep werd doorgeschakeld</string>
-    <string name="call_notif_callconnectingect">Oproep verbinden via centrale</string>
-    <string name="call_notif_callconnectedect">Oproep verbonden via centrale</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Gemiste oproep"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Gemiste oproepen"</string>
     <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="NUM_MISSED_CALLS">%s</xliff:g> gemiste oproepen"</string>
@@ -442,7 +426,6 @@
     <string name="incall_error_supp_service_reject" msgid="7055164130563826216">"Kan oproep niet weigeren."</string>
     <string name="incall_error_supp_service_hangup" msgid="7417583238334762737">"Kan oproepen niet vrijgeven."</string>
     <string name="incall_call_type_label_sip" msgid="2310958283037924371">"Internetoproep"</string>
-    <string name="incall_call_type_label_forwarded">Doorgeschakelde oproep</string>
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Noodoproep"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Radio aanzetten..."</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Buiten servicegebied, nieuwe poging..."</string>
@@ -640,34 +623,4 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Trillen bij bellen"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"DTMF-tonen kiestoetsen"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Beltoon en trillen"</string>
-
-    <!-- CYANOGENMOD EDITS -->
-    <string name="perm_change_mobile_network">Veranderen van netwerk (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">Hiermee kan de app op elk moment wisselen tussen 2G en 3G. 3G is sneller, maar verbruikt meer stroom en kan duurder zijn.</string>
-    <string name="show_ssn_label">Gebeurtenissen melden</string>
-    <string name="show_ssn_summary">Verschillende netwerkgebeurtenissen melden bij gesprekken (bijv. bij doorschakelen)</string>
-    <string name="mwi_notification_title">Voicemailmeldingen</string>
-    <string name="mwi_notification_summary">Meldingen tonen voor nieuwe voicemailberichten</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Voorkeursnetwerkstand: LTE, CDMA, EvDo</string>
-    <string name="preferred_network_mode_lte_gsm_summary">Voorkeursnetwerkstand: LTE, GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Voorkeursnetwerkstand: LTE, CMDA, EvDo, GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Voorkeursnetwerkstand: LTE, WCDMA</string>
-    <string-array name="preferred_network_mode_choices_lte_gsm">
-        <item>LTE/WCDMA</item>
-        <item>LTE/GSM/WCDMA</item>
-        <item>GSM/voorkeur voor WCDMA</item>
-    </string-array>
-    <string name="dialer_ui_settings_title">Toetsenblokinstellingen</string>
-    <string name="dialer_ui_settings_summary">Instellingen voor het numerieke toetsenblok</string>
-    <string name="noise_suppression_title">Ruisonderdrukking</string>
-    <string name="noise_suppression_summary">Ruisonderdrukking inschakelen tijdens gesprekken</string>
-    <string name="advanced_setting">Geavanceerd</string>
-    <string name="vibrate_outgoing">Trillen bij aannemen</string>
-    <string name="vibrate_call_waiting">Trillen bij wachten</string>
-    <string name="vibrate_hangup">Trillen bij ophangen</string>
-    <string name="vibrate_45">Elke 45 seconden trillen</string>
-    <string name="vibrate_45_sum">Elke 45<SUP>e</SUP> seconde van een minuut trillen bij uitgaande gesprekken</string>
-    <string name="national_roaming">Nationale gegevensroaming</string>
-    <string name="national_roaming_enable">Verbinding maken met gegevensservices bij nationale roaming</string>
-    <string name="national_roaming_disable">Geen verbinding maken met gegevensservices bij nationale roaming</string>
 </resources>
