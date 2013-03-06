@@ -1561,6 +1561,8 @@
     <string name="vibrate_45_sum">Vibrates at the 45 second mark of every minute during outgoing calls</string>
     <string name="show_ssn_label">Event notification</string>
     <string name="show_ssn_summary">Show a notification for various network events related to call handling</string>
+    <string name="calllog_after_call">Show log</string>
+    <string name="calllog_after_call_summary">Show the call log after ending a call</string>
 
     <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">National data roaming</string>
