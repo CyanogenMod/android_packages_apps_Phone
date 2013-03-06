@@ -776,7 +776,11 @@ public class CallCard extends LinearLayout
 
             case DIALING:
             case ALERTING:
-                callStateLabel = context.getString(R.string.card_title_dialing);
+                if (mApplication.notifier.isCallWaiting(call)) {
+                    callStateLabel = context.getString(R.string.card_title_dialing_waiting);
+                } else {
+                    callStateLabel = context.getString(R.string.card_title_dialing);
+                }
                 break;
 
             case INCOMING:
@@ -822,7 +826,7 @@ public class CallCard extends LinearLayout
                 callStateLabel = context.getString(R.string.card_title_redialing);
             }
         } else if (phoneType == PhoneConstants.PHONE_TYPE_GSM) {
-            if (mApplication.notifier.isCallHeldRemotely(call)) {
+            if (state == Call.State.ACTIVE && mApplication.notifier.isCallWaiting(call)) {
                 callStateLabel = context.getString(R.string.card_title_waiting_call);
             }
         }

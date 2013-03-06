@@ -713,8 +713,6 @@
     <string name="call_notif_conditionalCF">启用有条件的来电转接</string>
     <!-- Toast text for a forwarded MO call  -->
     <string name="call_notif_MOcall_forwarding">呼出电话已被转接</string>
-    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
-    <string name="call_notif_calliswaiting">对方线路忙, 通话等待中</string>
     <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
     <string name="call_notif_cugcall">在封闭用户组内通话</string>
     <!-- In-call screen: status label when MO calls are barred -->

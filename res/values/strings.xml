@@ -800,6 +800,8 @@
     <string name="card_title_dialing">Dialing</string>
     <!-- In-call screen: status label for a re-dialing call -->
     <string name="card_title_redialing">Retrying</string>
+    <!-- In-call screen: status label for a call in the "dialing" state that's waiting for the busy remote side -->
+    <string name="card_title_dialing_waiting">Dialing (waiting\u2026)</string>
 
     <!-- In-call screen: status label for a conference call -->
     <string name="card_title_conf_call">Conference call</string>
@@ -826,8 +828,6 @@
     <string name="call_notif_conditionalCF">Conditional call forwarding active</string>
     <!-- Toast text for a forwarded MO call  -->
     <string name="call_notif_MOcall_forwarding">Outgoing call is forwarded</string>
-    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
-    <string name="call_notif_calliswaiting">Remote party is busy, call is waiting</string>
     <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
     <string name="call_notif_cugcall">Call in closed user group</string>
     <!-- In-call screen: status label when MO calls are barred -->

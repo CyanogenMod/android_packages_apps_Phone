@@ -412,7 +412,6 @@
     <string name="call_notif_unconditionalCF">Προώθηση κλήσεων άνευ όρων ενεργή</string>
     <string name="call_notif_conditionalCF">Προώθηση κλήσεων υπό όρους ενεργή</string>
     <string name="call_notif_MOcall_forwarding">Η εξερχόμενη κλήση προωθείται</string>
-    <string name="call_notif_calliswaiting">Απομακρυσμένος χρήστης απασχολημένος, κλήση σε αναμονή</string>
     <string name="call_notif_cugcall">Κλήση σε κλειστή ομάδα χρηστών</string>
     <string name="call_notif_outgoing_barred">Φραγή εξερχόμενων κλήσεων</string>
     <string name="call_notif_incoming_barred">Φραγή εισερχόμενων κλήσεων από τον απομακρυσμένο χρήστη</string>

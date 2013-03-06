@@ -645,8 +645,6 @@
     <string name="call_notif_conditionalCF">Renvoi d\'appel  sous condition actif</string>
     <!-- Toast text for a forwarded MO call  -->
     <string name="call_notif_MOcall_forwarding">Appel sortant envoyé</string>
-    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
-    <string name="call_notif_calliswaiting">Le groupe distant est occupé, l\'appel est en attente</string>
     <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
     <string name="call_notif_cugcall">Appel dans un groupe d\'utilisateurs fermé</string>
     <!-- In-call screen: status label when MO calls are barred -->
