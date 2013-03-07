@@ -682,6 +682,30 @@
     <string name="perm_change_mobile_network">切换移动网络 (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以随时在 2G/3G 移动数据网络之间切换. 3G 网络的速度会更快, 但也会消耗更多的电量并且可能花费更多的钱.</string>
 
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">翻转行为</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">翻转设备将\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>不产生任何作用</item>
+        <item>停止响铃</item>
+        <item>拒绝来电</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>不产生任何作用</item>
+        <item>停止响铃</item>
+        <item>拒绝来电</item>
+    </string-array>
+
     <!-- Toasts for various transient network events -->
     <!-- Toast text for Unconditional Call Forwarding enabled  -->
     <string name="call_notif_unconditionalCF">启用无条件的来电转接</string>
