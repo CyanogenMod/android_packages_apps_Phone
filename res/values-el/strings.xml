@@ -681,4 +681,27 @@
     <string name="perm_change_mobile_network">Επιλογή δικτύου (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Όποια εφαρμογή έχει αυτή την άδεια μπορεί να αλλάζει μεταξύ 2G και 3G δεδομένων. Το 3G είναι γρηγορότερο, καταναλώνει περισσότερο μπαταρία και μπορεί επίσης να σας κοστίσει περισσότερα χρήματα.</string>
 
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Ενέργεια αναποδογυρίσματος συσκευής</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Το αναποδογύρισμα της συσκευής <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>Να μη γίνει καμία ενέργεια</item>
+        <item>Σίγαση ήχου κλήσης</item>
+        <item>Απόρριψη κλήσης</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>δεν θα εκτελεί καμία ενέργεια</item>
+        <item>θα απενεργοποιεί τον ήχο κλήσης</item>
+        <item>θα απορρίπτει την κλήση</item>
+    </string-array>
 </resources>
