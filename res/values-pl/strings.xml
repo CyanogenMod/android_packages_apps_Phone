@@ -624,5 +624,51 @@
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Dźwięki wybierania numeru"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Dzwonek i wibracje"</string>
     <string name="perm_change_mobile_network">Zmień sieć (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">Aplikacja ma możliwość przełącania się między siecią 2G i 3G. 3G jest szybsze, ale zużywa szybciej baterię.</string>
+
+    <!-- CYANOGENMOD ADDITIONS START -->
+
+    <string name="perm_change_mobile_network_desc">Aplikacja ma możliwość przełączania się między siecią 2G i 3G. 3G jest szybsze, ale zużywa szybciej baterię.</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Ustawienia zaawansowane</string>
+    <string name="vibrate_outgoing">Wibruj przy odbieraniu</string>
+    <string name="vibrate_call_waiting">Wibruj przy oczekującym połączeniu</string>
+    <string name="vibrate_hangup">Wibruj przy rozłączaniu</string>
+    <string name="vibrate_45">Wibruj co 45 sekund</string>
+    <string name="vibrate_45_sum">Wibracje w 45 sekundzie każdej minuty podczas trwającego połączenia</string>
+    <string name="show_ssn_label">Powiadamiaj o zdarzeniach</string>
+    <string name="show_ssn_summary">Pokazuj powiadomienia o zdarzeniach w sieci związanych z obsługą połączeń</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">Dane w roamingu krajowym</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Połącz z usługami przesyłu danych podczas roamingu krajowego</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Nie łącz z usługami przesyłu danych podczas roamingu krajowego</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Akcja po odwróceniu telefonu</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Po odwróceniu telefon\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Telefon po odwróceniu ekranem do dołu <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>Nic nie robi</item>
+        <item>Wycisza dzwonek</item>
+        <item>Odrzuca połączenie</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>nic nie robi</item>
+        <item>wycisza dzwonek</item>
+        <item>odrzuca połączenie</item>
+    </string-array>
+
+    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
