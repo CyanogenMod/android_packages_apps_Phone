@@ -670,5 +670,13 @@
         <item>odrzuca połączenie</item>
     </string-array>
 
+    <string name="dialer_ui_settings_title">Ustawienia dialera</string>
+    <string name="dialer_ui_settings_summary">Ekran z ustawieniami dialera</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Redukcja szumów</string>
+    <string name="noise_suppression_summary">Włącz redukcję szumów dla połączeń</string>
+    <!-- End Noise suppression -->
+
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
