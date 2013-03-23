@@ -401,7 +401,6 @@
     <string name="call_notif_unconditionalCF">Permanent doorschakelen actief</string>
     <string name="call_notif_conditionalCF">Voorwaardelijk doorschakelen actief</string>
     <string name="call_notif_MOcall_forwarding">Oproep wordt doorgeschakeld</string>
-    <string name="call_notif_calliswaiting">Oproep in wacht</string>
     <string name="call_notif_cugcall">Oproep binnen besloten gebruikersgroep</string>
     <string name="call_notif_outgoing_barred">Uitgaande oproepen geblokkeerd</string>
     <string name="call_notif_incoming_barred">Inkomende oproepen geblokkeerd</string>

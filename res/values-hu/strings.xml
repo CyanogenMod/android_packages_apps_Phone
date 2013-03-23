@@ -417,8 +417,6 @@
     <string name="call_notif_conditionalCF">Feltételes hívásátirányítás aktív</string>
     <!-- Toast text for a forwarded MO call  -->
     <string name="call_notif_MOcall_forwarding">Kimenő hívás átirányítva</string>
-    <!-- In-call screen: status label when Call waiting is enabled on remote party  -->
-    <string name="call_notif_calliswaiting">Hívott fél foglalt, várakozik a hívás</string>
     <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
     <string name="call_notif_cugcall">Hívás befejeződött a hívócsoport miatt</string>
     <!-- In-call screen: status label when MO calls are barred -->

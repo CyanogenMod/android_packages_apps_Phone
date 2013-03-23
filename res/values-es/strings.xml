@@ -659,7 +659,6 @@
     <string name="call_notif_unconditionalCF">Desvío incondicional de llamada activo</string>
     <string name="call_notif_conditionalCF">Desvío condicional de llamada activo</string>
     <string name="call_notif_MOcall_forwarding">Reenvío de llamada saliente</string>
-    <string name="call_notif_calliswaiting">Llamada en espera</string>
     <string name="call_notif_cugcall">Llamada de grupo cerrado</string>
     <string name="call_notif_outgoing_barred">Excluídas llamadas salientes</string>
     <string name="call_notif_incoming_barred">Excluídas llamadas entrantes</string>

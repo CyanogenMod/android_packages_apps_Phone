@@ -49,7 +49,6 @@
     <string name="call_notif_unconditionalCF">Dauerhafte Anrufweiterleitung ist aktiviert</string>
     <string name="call_notif_conditionalCF">Bedingte Anrufweiterleitung ist aktiviert</string>
     <string name="call_notif_MOcall_forwarding">Anruf wird weitergeleitet</string>
-    <string name="call_notif_calliswaiting">Gegenseite ist besetzt, Anruf wartet</string>
     <string name="call_notif_cugcall">Anruf in geschlossener Benutzergruppe</string>
     <string name="call_notif_outgoing_barred">Ausgehende Anrufe sind gesperrt</string>
     <string name="call_notif_incoming_barred">Eingehende Anrufe sind bei der Gegenseite gesperrt</string>
@@ -408,6 +407,7 @@
     <string name="caller_manage_header" msgid="3231519674734638786">"Telefonkonferenz <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
     <string name="voicemail_settings_number_label" msgid="8524164258691887790">"Mailboxnummer"</string>
     <string name="card_title_dialing" msgid="5769417478498348054">"Rufaufbau"</string>
+    <string name="card_title_dialing_waiting">Rufaufbau (klopft an\u2026)</string>
     <string name="card_title_redialing" msgid="4831412164303596395">"Wird wiederholt"</string>
     <string name="card_title_conf_call" msgid="1162980346189744501">"Telefonkonferenz"</string>
     <string name="card_title_incoming_call" msgid="7364539451234646909">"Eingehender Anruf"</string>
