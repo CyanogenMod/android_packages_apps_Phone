@@ -630,6 +630,7 @@
     <string name="preferred_network_mode_lte_wcdma_summary">Modo de rede preferencial: LTE / WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modo de rede preferencial: LTE / CDMA / EvDo / GSM / WCDMA</string>
   <string-array name="preferred_network_mode_choices_lte_gsm">
+      <item>LTE/WCDMA</item>
       <item>LTE/GSM/WCDMA</item>
       <item>GSM/WCDMA de preferência</item>
   </string-array>
