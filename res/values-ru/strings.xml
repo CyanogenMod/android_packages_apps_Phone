@@ -678,6 +678,11 @@
         <item>сбросить звонок</item>
     </string-array>
 
+    <string name="card_title_dialing_waiting">Набор номера (ожидание\u2026)</string>
+
+    <string name="calllog_after_call">Показать журнал</string>
+    <string name="calllog_after_call_summary">Показывать журнал вызовов после окончания разговора</string>
+
     <!-- CYANOGENMOD ADDITIONS END -->
 
 </resources>
