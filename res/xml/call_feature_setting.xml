@@ -65,6 +65,12 @@
             android:title="@string/vibrate_45"
             android:persistent="true"
             android:summary="@string/vibrate_45_sum" />
+        <CheckBoxPreference
+            android:key="button_calllog_after_call"
+            android:title="@string/calllog_after_call"
+            android:summary="@string/calllog_after_call_summary"
+            android:persistent="true"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
   <PreferenceCategory
