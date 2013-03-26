@@ -674,6 +674,8 @@
     <string name="incall_call_type_label_forwarded">Llamada desviada</string>
     <string name="show_ssn_label">Notificación de eventos</string>
     <string name="show_ssn_summary">Mostrar la notificación de eventos de red relacionados con la gestión de llamadas</string>
+    <string name="calllog_after_call">Mostrar registro</string>
+    <string name="calllog_after_call_summary">Mostrar el registro de la llamada al colgar</string>
     <string name="mwi_notification_title">Notificación buzón de voz</string>
     <string name="mwi_notification_summary">Mostrar una notificación para los mensajes en espera del buzón de voz</string>
     <string name="flip_action_title">Acción al voltear</string>
