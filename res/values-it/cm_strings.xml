@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="callUnanswered_forwarded">Chiamata non risposta e inoltrata</string>
+    <string name="mwi_notification_title">Indicatore di messaggio in attesa</string>
+    <string name="mwi_notification_summary">Mostra le notifiche per i messaggi in attesa in segreteria</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Modalità di rete preferita: LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modalità di rete preferita: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">Modalità di rete preferita: LTE / WCDMA</string>
+  <string-array name="preferred_network_mode_choices_lte_gsm">
+    <item>LTE/WCDMA</item>
+    <item>LTE/GSM/WCDMA</item>
+    <item>GSM/WCDMA preferito</item>
+  </string-array>
+    <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo per periodo\nIl prossimo periodo inizia tra <xliff:g id="used">%4$d</xliff:g> giorni (<xliff:g id="used">%5$s</xliff:g>)</string>
+    <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo per periodo</string>
+    <string name="card_title_dialing_waiting">Chiamata in corso (in attesa\u2026)</string>
+    <string name="card_title_waiting_call">Chiamata in attesa</string>
+    <string name="call_notif_unconditionalCF">Deviazione incondizionata attiva</string>
+    <string name="call_notif_conditionalCF">Deviazione condizionata attiva</string>
+    <string name="call_notif_MOcall_forwarding">Chiamata in uscita deviata</string>
+    <string name="call_notif_cugcall">Chiamata in gruppo chiuso di utenti (CUG)</string>
+    <string name="call_notif_outgoing_barred">Blocco chiamate in uscita</string>
+    <string name="call_notif_incoming_barred">Blocco chiamate in ingresso al destinatario</string>
+    <string name="call_notif_clir_suppression_rejected">Soppressione ID chiamante per proprio numero rifiutata dalla rete</string>
+    <string name="call_notif_call_deflected">Chiamata inoltrata dal destinatario</string>
+    <string name="call_notif_MTcall_forwarding">Chiamata in ingresso inoltrata</string>
+    <string name="call_notif_multipartycall">Chiamata multipla</string>
+    <string name="call_notif_callonhold_released">Chiamata abbandonata dal destinatario</string>
+    <string name="call_notif_forwardcheckreceived">La chiamata è stata inoltrata</string>
+    <string name="call_notif_callconnectingect">Chiamata in connessione con trasferimento di chiamata</string>
+    <string name="call_notif_callconnectedect">Chiamata connessa con trasferimento di chiamata</string>
+    <string name="incall_call_type_label_forwarded">Chiamata inoltrata</string>
+    <string name="dialer_ui_settings_title">Impostazioni tastierino</string>
+    <string name="dialer_ui_settings_summary">Impostazioni per il tastierino numerico</string>
+    <string name="noise_suppression_title">Riduzione rumore</string>
+    <string name="noise_suppression_summary">Abilita la riduzione rumore nelle chiamate</string>
+    <string name="advanced_setting">Impostazioni avanzate</string>
+    <string name="vibrate_outgoing">Vibra alla risposta</string>
+    <string name="vibrate_call_waiting">Vibra su messa in attesa</string>
+    <string name="vibrate_hangup">Vibra al termine chiamata</string>
+    <string name="vibrate_45">Vibrate ogni 45 secondi</string>
+    <string name="vibrate_45_sum">Vibra al marcatore del 45esimo secondo di ogni minuto durante le chiamate in uscita</string>
+    <string name="show_ssn_label">Notifiche eventi</string>
+    <string name="show_ssn_summary">Mostra una notifica per vari eventi di rete relativi alla gestione delle chiamate</string>
+    <string name="calllog_after_call">Registro chiamate</string>
+    <string name="calllog_after_call_summary">Mostra il registro al termine di una chiamata</string>
+    <string name="national_roaming">Roaming su rete nazionale</string>
+    <string name="national_roaming_enable">Connetti ai servizi dati se è attivo il roaming su rete nazionale</string>
+    <string name="national_roaming_disable">Connetti ai servizi dati se è attivo il roaming su rete nazionale</string>
+    <string name="perm_change_mobile_network">Cambia rete (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
+    <string name="flip_action_title">Azione capovolgimento</string>
+    <string name="flip_action_dialog_title">Capovolgi dispositivo per\u2026</string>
+    <string name="flip_action_summary">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
+  <string-array name="flip_action_setting_entries">
+    <item>Non fare nulla</item>
+    <item>Disattivare la suoneria</item>
+    <item>Terminare la chiamata</item>
+  </string-array>
+  <string-array name="flip_action_summary_entries">
+    <item>non farà nulla</item>
+    <item>farà disattivare la suoneria</item>
+    <item>farà terminare la chiamata</item>
+  </string-array>
+</resources>
