@@ -681,4 +681,7 @@
         <item>silenciar o tocador</item>
         <item>dispensar a chamada</item>
     </string-array>
+    <string name="card_title_dialing_waiting">Discando (esperando\u2026)</string>
+    <string name="calllog_after_call">Mostrar registro</string>
+    <string name="calllog_after_call_summary">Mostrar o registro de chamadas após encerrar a chamada</string>
 </resources>
