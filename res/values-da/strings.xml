@@ -659,6 +659,8 @@
     <string name="vibrate_45_sum">Vibrér ved 45-sekundersmærket i hvert minut under udgående opkald</string>
     <string name="show_ssn_label">Hændelsesnotifikation</string>
     <string name="show_ssn_summary">Vis en notifikation til forskellige netværkshændelser ifbm. opkaldshåndtering</string>
+    <string name="calllog_after_call">Vis log</string>
+    <string name="calllog_after_call_summary">Vis opkaldsloggen, når opkaldet afsluttes</string>
 
     <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">National data-roaming</string>
@@ -722,5 +724,31 @@
     <string name="perm_change_mobile_network">Skift netværk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Apps med denne tilladelse kan, til alle tider, skifte mellem 2G-data og 3G-data. 3G er hurtigere, bruger mere batteri, og kan også koste dig flere penge.</string>
 
+    <!-- In-call screen: status label for a call in the "dialing" state that's waiting for the busy remote side -->
+    <string name="card_title_dialing_waiting">Ringer op (venter\u2026)</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Vendehandling</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Vend enheden for at\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>Gøre ingenting</item>
+        <item>Slukke ringetone</item>
+        <item>Afvis opkald</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>gøre ingenting</item>
+        <item>slukke ringetonen</item>
+        <item>afvise opkaldet</item>
+    </string-array>
 
 </resources>
