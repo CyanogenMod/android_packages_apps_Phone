@@ -37,6 +37,7 @@ import android.content.IntentFilter;
 import android.content.ServiceConnection;
 import android.content.res.Configuration;
 import android.media.AudioManager;
+import android.media.AudioSystem;
 import android.net.Uri;
 import android.os.AsyncResult;
 import android.os.Binder;
@@ -1222,6 +1223,12 @@ public class PhoneGlobals extends ContextWrapper
      */
     /* package */ void updatePhoneState(PhoneConstants.State state) {
         if (state != mLastPhoneState) {
+
+            String voiceQualParam = PhoneUtils.PhoneSettings.getVoiceQualityParameter(this);
+            if (voiceQualParam != null) {
+                AudioSystem.setParameters(voiceQualParam);
+            }
+
             mLastPhoneState = state;
             updateProximitySensorMode(state);
 

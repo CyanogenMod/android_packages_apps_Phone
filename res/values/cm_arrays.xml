@@ -48,4 +48,15 @@
         <item>mute the ringer</item>
         <item>dismiss the call</item>
     </string-array>
+
+    <!-- Summary texts for Voice Quality. -->
+    <string-array translatable="false" name="voice_quality_entries">
+        <!-- Overlay appropriately, using string constants as above. E.g.:
+        <item>@string/voice_quality_normal</item>
+        <item>@string/voice_quality_clear</item>  -->
+    </string-array>
+    <!-- Voice Quality values passed to AudioSystem. DO NOT TRANSLATE. -->
+    <string-array translatable="false" name="voice_quality_values">
+        <!-- Overlay appropriately -->
+    </string-array>
 </resources>
