@@ -52,25 +52,38 @@
             android:key="button_vibrate_outgoing"
             android:title="@string/vibrate_outgoing"
             android:persistent="true" />
+
         <CheckBoxPreference
             android:key="button_vibrate_call_waiting"
             android:title="@string/vibrate_call_waiting"
             android:persistent="true" />
+
         <CheckBoxPreference
             android:key="button_vibrate_hangup"
             android:title="@string/vibrate_hangup"
             android:persistent="true" />
+
         <CheckBoxPreference
             android:key="button_vibrate_45"
             android:title="@string/vibrate_45"
             android:persistent="true"
             android:summary="@string/vibrate_45_sum" />
+
         <CheckBoxPreference
             android:key="button_calllog_after_call"
             android:title="@string/calllog_after_call"
             android:summary="@string/calllog_after_call_summary"
             android:persistent="true"
             android:defaultValue="false" />
+
+        <PreferenceScreen
+            android:key="button_blacklist"
+            android:title="@string/blacklist_title"
+            android:persistent="false">
+            <intent android:action="android.intent.action.MAIN"
+                android:targetPackage="com.android.phone"
+                android:targetClass="com.android.phone.BlacklistSetting" />
+        </PreferenceScreen>
     </PreferenceCategory>
 
   <PreferenceCategory
