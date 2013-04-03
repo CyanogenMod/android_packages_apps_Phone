@@ -1330,7 +1330,6 @@ public class NotificationMgr implements CallerInfoAsyncQuery.OnQueryCompleteList
             if (vibrate) {
                 notification.defaults |= Notification.DEFAULT_VIBRATE;
             }
-            notification.flags |= Notification.FLAG_NO_CLEAR;
             configureLedNotification(mContext, VOICEMAIL_NOTIFICATION, notification);
             mNotificationManager.notify(VOICEMAIL_NOTIFICATION, notification);
         } else {
