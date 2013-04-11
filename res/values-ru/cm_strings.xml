@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Шумоподавление</string>
+    <string name="noise_suppression_summary">Включить шумоподавление в телефонных разговорах</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Настройки кнопок</string>
+    <string name="dialer_ui_settings_summary">Настройки номеронабирателя</string>
+
+    <!-- Advanced Phone Settings -->
+    <string name="advanced_setting">Дополнительные настройки</string>
+    <string name="vibrate_outgoing">Вибрировать при ответе</string>
+    <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
+    <string name="vibrate_hangup">Вибрировать при отбое</string>
+    <string name="vibrate_45">Вибрировать каждую минуту</string>
+    <string name="vibrate_45_sum">Вибрировать на 45-секундной отметке каждой минуты исходящего звонка</string>
+    <string name="rejected_as_missed">Отклонённые вызовы как пропущенные</string>
+    <string name="rejected_as_missed_sum">Помечать в журнале отклонённые вызовы как пропущенные</string>
+    <string name="show_ssn_label">Уведомления о событиях</string>
+    <string name="show_ssn_summary">Показывать уведомления различных событий, связанных с сетью обработки вызовов</string>
+
+    <string name="national_roaming">Национальный роуминг</string>
+    <string name="national_roaming_enable">Подключаться к службам передачи данных в национальном роуминге</string>
+    <string name="national_roaming_disable">Не подключаться к службам передачи данных в национальном роуминге</string>
+
+    <string name="perm_change_mobile_network">Изменение сети (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Приложение, имеющее данное разрешение, может в любое время переключать режимы связи между 2G и 3G. Режим 3G имеет более высокую скорость и большее потребление энергии.</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Переворот телефона</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Выбор действия\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">Перевернув телефон экраном вниз <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action. -->
+    <string-array name="flip_action_setting_entries">
+        <item>Ничего не делать</item>
+        <item>Выключить звонок</item>
+        <item>Сбросить звонок</item>
+    </string-array>
+
+    <!-- Summary texts for flip action. Must be ordered by numerical
+         value (do nothing = 0, mute = 1, dismiss = 2) -->
+    <string-array name="flip_action_summary_entries">
+        <item>ничего не делать</item>
+        <item>выключить звонок</item>
+        <item>сбросить звонок</item>
+    </string-array>
+
+    <string name="card_title_dialing_waiting">Набор номера (ожидание\u2026)</string>
+
+    <string name="calllog_after_call">Показать журнал</string>
+    <string name="calllog_after_call_summary">Показывать журнал вызовов после окончания разговора</string>
+
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">Чёрный список</string>
+    <string name="enable_blacklist_title">Включить чёрный список</string>
+    <string name="blacklist_summary_disabled">Выключен</string>
+    <string name="blacklist_summary">Входящие звонки от абонентов из чёрного списка будут отклоняться</string>
+    <string name="blacklist_notify">Показывать уведомления</string>
+    <string name="blacklist_private_numbers_title">Неизвестные номера</string>
+    <string name="blacklist_private_numbers_summary">Блокировать входящие номера от неизвестных номеров</string>
+    <string name="blacklist_regex_title">Маски</string>
+    <string name="blacklist_regex_summary">Используйте . как маску и * для повторения. Например: 123.* блокирует номера, начинающиеся с 123 и .*123.* номера, содержащие 123</string>
+
+    <!-- Blacklist management -->
+    <string name="add_blacklist_number">Добавить номер телефона</string>
+    <string name="add_to_blacklist">Добавить в чёрный список</string>
+    <string name="add_to_blacklist_message">Будущие вызовы от %s будут отклонены</string>
+    <string name="remove_blacklist_number_title">Удалить номер</string>
+    <string name="remove_blacklist_number">Вы действительно хотите удалить %s из чёрного списка?</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">Вызов от %s отклонён</string>
+    <string name="unblock_number">Разблокировать</string>
+
+    <!-- Text for the onscreen "Blacklist" button -->
+    <string name="onscreenBlacklistText">Чёрный список</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Качество звука</string>
+    <string name="voice_quality_summary">Используется профиль: <xliff:g id="value">%s</xliff:g></string>
+    <!-- Do not remove those, they're used from overlays. -->
+    <string name="voice_quality_entry_normal">Стандартный</string>
+    <string name="voice_quality_entry_clear">Чистый</string>
+    <string name="voice_quality_entry_crisp">Чёткий</string>
+    <string name="voice_quality_entry_bright">Ясный</string>
+
+</resources>
