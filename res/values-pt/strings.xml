@@ -684,4 +684,19 @@
     <string name="card_title_dialing_waiting">Discando (esperando\u2026)</string>
     <string name="calllog_after_call">Mostrar registro</string>
     <string name="calllog_after_call_summary">Mostrar o registro de chamadas após encerrar a chamada</string>
+    <string name="blacklist_title">Lista negra</string>
+    <string name="enable_blacklist_title">Ativar lista negra</string>
+    <string name="blacklist_summary_disabled">Desativado</string>
+    <string name="blacklist_summary">Ligações recebidas dos números de telefone na lista negra serão bloqueadas</string>
+    <string name="blacklist_notify">Mostrar notificação</string>
+    <string name="blacklist_regex_title">Usar wildcards</string>
+    <string name="blacklist_regex_summary">Use . como um wildcard e * para repetição. Ex. 123.* bloqueia números começando com 123 e .*123.* bloqueia números contendo 123</string>
+    <string name="add_blacklist_number">Adicionar número de telefone</string>
+    <string name="add_to_blacklist">Adicionar à lista negra</string>
+    <string name="add_to_blacklist_message">Futuras ligações de %s serão bloqueadas</string>
+    <string name="remove_blacklist_number_title">Remover número</string>
+    <string name="remove_blacklist_number">Você deseja remover %s da lista negra?</string>
+    <string name="blacklist_notification">Uma ligação por %s foi bloqueada</string>
+    <string name="unblock_number">Desbloquear</string>
+    <string name="onscreenBlacklistText">Lista negra</string>
 </resources>
