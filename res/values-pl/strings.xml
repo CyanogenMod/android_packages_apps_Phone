@@ -629,7 +629,6 @@
 
     <string name="perm_change_mobile_network_desc">Aplikacja ma możliwość przełączania się między siecią 2G i 3G. 3G jest szybsze, ale zużywa szybciej baterię.</string>
 
-    <!-- Advanced Settings -->
     <string name="advanced_setting">Ustawienia zaawansowane</string>
     <string name="vibrate_outgoing">Wibruj przy odbieraniu</string>
     <string name="vibrate_call_waiting">Wibruj przy oczekującym połączeniu</string>
@@ -639,31 +638,22 @@
     <string name="show_ssn_label">Powiadamiaj o zdarzeniach</string>
     <string name="show_ssn_summary">Pokazuj powiadomienia o zdarzeniach w sieci związanych z obsługą połączeń</string>
 
-    <!-- Mobile network settings screen, setting check box name -->
     <string name="national_roaming">Dane w roamingu krajowym</string>
-    <!-- Mobile network settings screen, setting summary text when check box is selected -->
     <string name="national_roaming_enable">Połącz z usługami przesyłu danych podczas roamingu krajowego</string>
-    <!-- Mobile network settings screen, setting summary text when check box is clear -->
     <string name="national_roaming_disable">Nie łącz z usługami przesyłu danych podczas roamingu krajowego</string>
 
-    <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Akcja po odwróceniu telefonu</string>
 
-    <!-- Dialog title of the flip action setting. -->
     <string name="flip_action_dialog_title">Po odwróceniu telefon\u2026</string>
 
-    <!-- Setting summary for the flip action setting. -->
     <string name="flip_action_summary">Telefon po odwróceniu ekranem do dołu <xliff:g id="action">%s</xliff:g></string>
 
-    <!-- Entries listed in the setting for the flip action. -->
     <string-array name="flip_action_setting_entries">
         <item>Nic nie robi</item>
         <item>Wycisza dzwonek</item>
         <item>Odrzuca połączenie</item>
     </string-array>
 
-    <!-- Summary texts for flip action. Must be ordered by numerical
-         value (do nothing = 0, mute = 1, dismiss = 2) -->
     <string-array name="flip_action_summary_entries">
         <item>nic nie robi</item>
         <item>wycisza dzwonek</item>
@@ -676,10 +666,27 @@
     <string name="dialer_ui_settings_title">Ustawienia dialera</string>
     <string name="dialer_ui_settings_summary">Ekran z ustawieniami dialera</string>
 
-    <!-- Noise suppression -->
     <string name="noise_suppression_title">Redukcja szumów</string>
     <string name="noise_suppression_summary">Włącz redukcję szumów dla połączeń</string>
-    <!-- End Noise suppression -->
+
+    <string name="blacklist_title">Czarna lista</string>
+    <string name="enable_blacklist_title">Aktywuj czarną listę</string>
+    <string name="blacklist_summary_disabled">Wyłączona</string>
+    <string name="blacklist_summary">Połączenia przychodzące od numerów umieszczonych na czarnej liście będą blokowane</string>
+    <string name="blacklist_notify">Pokaż powiadomienie</string>
+    <string name="blacklist_regex_title">Użyj wzorców</string>
+    <string name="blacklist_regex_summary">Użyj . jako wzorca oraz * dla zmiennych. Np. 123.* blokuje numery zaczynające się na 123, a .*123.* blokuje numery zawierające 123</string>
+
+    <string name="add_blacklist_number">Dodaj numer telefonu</string>
+    <string name="add_to_blacklist">Dodaj do czarnej listy</string>
+    <string name="add_to_blacklist_message">Połączenia przychodzące od %s będą blokowane</string>
+    <string name="remove_blacklist_number_title">Usuń numer</string>
+    <string name="remove_blacklist_number">Czy na pewno chcesz usunąć %s z czarnej listy?</string>
+
+    <string name="blacklist_notification">Zablokowano połączenie od %s</string>
+    <string name="unblock_number">Odblokuj</string>
+
+    <string name="onscreenBlacklistText">Czarna lista</string>
 
     <!-- CYANOGENMOD ADDITIONS END -->
 </resources>
