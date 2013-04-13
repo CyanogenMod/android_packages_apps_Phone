@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="perm_change_mobile_network_desc">Aplikacja ma możliwość przełączania się między siecią 2G i 3G. 3G jest szybsze, ale zużywa szybciej baterię.</string>
+
+    <string name="advanced_setting">Ustawienia zaawansowane</string>
+    <string name="vibrate_outgoing">Wibruj przy odbieraniu</string>
+    <string name="vibrate_call_waiting">Wibruj przy oczekującym połączeniu</string>
+    <string name="vibrate_hangup">Wibruj przy rozłączaniu</string>
+    <string name="vibrate_45">Wibruj co 45 sekund</string>
+    <string name="vibrate_45_sum">Wibracje w 45 sekundzie każdej minuty podczas trwającego połączenia</string>
+    <string name="show_ssn_label">Powiadamiaj o zdarzeniach</string>
+    <string name="show_ssn_summary">Pokazuj powiadomienia o zdarzeniach w sieci związanych z obsługą połączeń</string>
+
+    <string name="national_roaming">Dane w roamingu krajowym</string>
+    <string name="national_roaming_enable">Połącz z usługami przesyłu danych podczas roamingu krajowego</string>
+    <string name="national_roaming_disable">Nie łącz z usługami przesyłu danych podczas roamingu krajowego</string>
+
+    <string name="flip_action_title">Akcja po odwróceniu telefonu</string>
+
+    <string name="flip_action_dialog_title">Po odwróceniu telefon\u2026</string>
+
+    <string name="flip_action_summary">Telefon po odwróceniu ekranem do dołu <xliff:g id="action">%s</xliff:g></string>
+
+    <string name="card_title_dialing_waiting">Łączenie (oczekiwanie\u2026)</string>
+    <string name="calllog_after_call">Pokaż raport</string>
+    <string name="calllog_after_call_summary">Pokaż raport po zakończeniu połączenia</string>
+
+    <string name="dialer_ui_settings_title">Ustawienia dialera</string>
+    <string name="dialer_ui_settings_summary">Ekran z ustawieniami dialera</string>
+
+    <string name="noise_suppression_title">Redukcja szumów</string>
+    <string name="noise_suppression_summary">Włącz redukcję szumów dla połączeń</string>
+
+    <string name="blacklist_title">Czarna lista</string>
+    <string name="enable_blacklist_title">Aktywuj czarną listę</string>
+    <string name="blacklist_summary_disabled">Wyłączona</string>
+    <string name="blacklist_summary">Połączenia przychodzące od numerów umieszczonych na czarnej liście będą blokowane</string>
+    <string name="blacklist_notify">Pokaż powiadomienie</string>
+    <string name="blacklist_regex_title">Użyj wzorców</string>
+    <string name="blacklist_regex_summary">Użyj . jako wzorca oraz * dla zmiennych. Np. 123.* blokuje numery zaczynające się na 123, a .*123.* blokuje numery zawierające 123</string>
+
+    <string name="add_blacklist_number">Dodaj numer telefonu</string>
+    <string name="add_to_blacklist">Dodaj do czarnej listy</string>
+    <string name="add_to_blacklist_message">Połączenia przychodzące od %s będą blokowane</string>
+    <string name="remove_blacklist_number_title">Usuń numer</string>
+    <string name="remove_blacklist_number">Czy na pewno chcesz usunąć %s z czarnej listy?</string>
+
+    <string name="blacklist_notification">Zablokowano połączenie od %s</string>
+    <string name="unblock_number">Odblokuj</string>
+
+    <string name="onscreenBlacklistText">Czarna lista</string>
+
+    <string name="rejected_as_missed">Odrzucone połączenia jako nieodebrane</string>
+    <string name="rejected_as_missed_sum">Oznaczaj w rejestrze odrzucone połączenia jako \'nieodebrane\' zamiast \'przychodzące\'</string>
+
+    <string name="blacklist_private_numbers">Blokuj prywatne numery</string>
+    <string name="blacklist_notification_private_number">Zablokowano połączenie przychodzące od prywatnego numeru</string>
+
+    <string name="voice_quality_preferences_title">Jakość głosu</string>
+    <string name="voice_quality_summary">Użyj profilu: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normalny</string>
+    <string name="voice_quality_entry_clear">Czysty</string>
+    <string name="voice_quality_entry_crisp">Wyraźny</string>
+    <string name="voice_quality_entry_bright">Żywy</string>
+</resources>
