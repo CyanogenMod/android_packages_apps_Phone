@@ -84,6 +84,13 @@
                 android:targetPackage="com.android.phone"
                 android:targetClass="com.android.phone.BlacklistSetting" />
         </PreferenceScreen>
+
+        <CheckBoxPreference
+            android:key="button_rejected_as_missed"
+            android:title="@string/rejected_as_missed"
+            android:persistent="true"
+            android:summary="@string/rejected_as_missed_sum" />
+
     </PreferenceCategory>
 
   <PreferenceCategory

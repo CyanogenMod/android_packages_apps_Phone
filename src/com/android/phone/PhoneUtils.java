@@ -423,6 +423,9 @@ public class PhoneUtils {
         static boolean isBlacklistRegexEnabled(Context context) {
             return getPrefs(context).getBoolean("button_blacklist_regex", false);
         }
+        static boolean markRejectedCallsAsMissed(Context context) {
+            return getPrefs(context).getBoolean("button_rejected_as_missed", false);
+        }
         private static SharedPreferences getPrefs(Context context) {
             return PreferenceManager.getDefaultSharedPreferences(context);
         }
