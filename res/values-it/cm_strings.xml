@@ -55,8 +55,10 @@
     <string name="vibrate_outgoing">Vibra alla risposta</string>
     <string name="vibrate_call_waiting">Vibra su messa in attesa</string>
     <string name="vibrate_hangup">Vibra al termine chiamata</string>
-    <string name="vibrate_45">Vibrate ogni 45 secondi</string>
-    <string name="vibrate_45_sum">Vibra al marcatore del 45esimo secondo di ogni minuto durante le chiamate in uscita</string>
+    <string name="vibrate_45">Vibra ogni 45 secondi</string>
+    <string name="vibrate_45_sum">Vibra al 45esimo secondo di ogni minuto durante le chiamate in uscita</string>
+    <string name="rejected_as_missed">Chiamate rifiutate come perse</string>
+    <string name="rejected_as_missed_sum">Marca le chiamate rifiutate come \'perse\' invece di \'ricevute\' nel registro chiamate</string>
     <string name="show_ssn_label">Notifiche eventi</string>
     <string name="show_ssn_summary">Mostra una notifica per vari eventi di rete relativi alla gestione delle chiamate</string>
     <string name="calllog_after_call">Registro chiamate</string>
@@ -79,4 +81,19 @@
     <item>farà disattivare la suoneria</item>
     <item>farà terminare la chiamata</item>
   </string-array>
+    <string name="blacklist_title">Blacklist</string>
+    <string name="enable_blacklist_title">Attiva blacklist</string>
+    <string name="blacklist_summary_disabled">Disattivata</string>
+    <string name="blacklist_summary">Le chiamate in entrata provenienti da numeri di telefono presenti nella blacklist verranno bloccate</string>
+    <string name="blacklist_notify">Mostra notifica</string>
+    <string name="blacklist_regex_title">Usa caratteri speciali</string>
+    <string name="blacklist_regex_summary">Usa . come carattere jolly e * per la ripetizione. Ad esempio 123.* blocca i numeri che iniziano con 123 e .*123.* blocca i numeri che contengono 123</string>
+    <string name="add_blacklist_number">Aggiungi numero di telefono</string>
+    <string name="add_to_blacklist">Inserisci nella blacklist</string>
+    <string name="add_to_blacklist_message">Le prossime chiamate provenienti dal s% saranno bloccate</string>
+    <string name="remove_blacklist_number_title">Rimuovi numero</string>
+    <string name="remove_blacklist_number">Vuoi rimuovere %s dalla blacklist?</string>
+    <string name="blacklist_notification">Bloccata una chiamata dal %s</string>
+    <string name="unblock_number">Sblocca</string>
+    <string name="onscreenBlacklistText">Blacklist</string>
 </resources>
