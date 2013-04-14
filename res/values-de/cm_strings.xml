@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="callUnanswered_forwarded">Anruf wurde nicht beantwortet und weitergeleitet</string>
+    <string name="call_notif_unconditionalCF">Dauerhafte Anrufweiterleitung ist aktiviert</string>
+    <string name="call_notif_conditionalCF">Bedingte Anrufweiterleitung ist aktiviert</string>
+    <string name="call_notif_MOcall_forwarding">Anruf wird weitergeleitet</string>
+    <string name="call_notif_cugcall">Anruf in geschlossener Benutzergruppe</string>
+    <string name="call_notif_outgoing_barred">Ausgehende Anrufe sind gesperrt</string>
+    <string name="call_notif_incoming_barred">Eingehende Anrufe sind bei der Gegenseite gesperrt</string>
+    <string name="call_notif_clir_suppression_rejected">Unterdrückung der ausgehenden Rufnummer wurde abgewiesen</string>
+    <string name="call_notif_call_deflected">Anruf wird von der Gegenseite weitergeleitet</string>
+    <string name="call_notif_MTcall_forwarding">Eingehender Anruf wird weitergeleitet</string>
+    <string name="call_notif_multipartycall">Telefonkonferenz</string>
+    <string name="call_notif_callonhold_released">Gehaltener Anruf wurde beendet</string>
+    <string name="call_notif_forwardcheckreceived">Anruf wurde weitergeleitet</string>
+    <string name="call_notif_callconnectingect">Anruf wird in Vermittlungsstelle verbunden</string>
+    <string name="call_notif_callconnectedect">Anruf wurde in Vermittlungsstelle verbunden</string>
+    <string name="card_title_dialing_waiting">Rufaufbau (klopft an\u2026)</string>
+    <string name="card_title_waiting_call">Wartender Anruf</string>
+    <string name="incall_call_type_label_forwarded">Weitergeleiteter Anruf</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Wähltasten</string>
+    <string name="dialer_ui_settings_summary">Einstellungen für die Wähltasten</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Erweiterte Einstellungen</string>
+    <string name="vibrate_outgoing">Bei Annahme vibrieren</string>
+    <string name="vibrate_call_waiting">Beim Anklopfen vibrieren</string>
+    <string name="vibrate_hangup">Beim Auflegen vibrieren</string>
+    <string name="vibrate_45">Jede Minute vibrieren</string>
+    <string name="vibrate_45_sum">Während ausgehender Anrufe 15 Sekunden vor dem Ende jeder vollen Minute vibrieren</string>
+    <string name="calllog_after_call">Anrufliste anzeigen</string>
+    <string name="calllog_after_call_summary">Anrufliste anzeigen, nachdem ein Anruf beendet wurde</string>
+    <string name="rejected_as_missed">Abgewiesene Anrufe als entgangen</string>
+    <string name="rejected_as_missed_sum">Abgewiesene Anrufe in der Anrufliste als \"Entgangen\" anstatt \"Eingegangen\" anzeigen</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Lärmunterdrückung</string>
+    <string name="noise_suppression_summary">Lärmunterdrückung für Anrufe aktivieren</string>
+
+    <!-- Show ssn label -->
+    <string name="show_ssn_label">Ereignis-Benachrichtigung</string>
+    <string name="show_ssn_summary">Benachrichtigungen für verschiedene Anrufereignisse anzeigen</string>
+
+    <!-- Change mobile network -->
+    <string name="perm_change_mobile_network">Netzmodus wechseln (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Anwendungen mit dieser Berechtigung können jederzeit zwischen 2G- und 3G-Netz wechseln</string>
+
+    <!-- National data roaming -->
+    <string name="national_roaming">Nationales Daten-Roaming</string>
+    <string name="national_roaming_enable">Bei nationalem Roaming mit Datendienst verbinden</string>
+    <string name="national_roaming_disable">Bei nationalem Roaming mit Datendienst verbinden</string>
+
+    <!-- Flip action settings -->
+    <string name="flip_action_title">Aktion beim Umdrehen</string>
+    <string name="flip_action_dialog_title">Beim Umdrehen\u2026</string>
+    <string name="flip_action_summary">Beim Umdrehen des Gerätes <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Entries listed in the setting for the flip action -->
+    <string-array name="flip_action_setting_entries">
+        <item>Keine Aktion</item>
+        <item>Stummschalten</item>
+        <item>Anruf abweisen</item>
+    </string-array>
+
+    <!-- Summary texts for flip action -->
+    <string-array name="flip_action_summary_entries">
+        <item>keine Aktion ausführen</item>
+        <item>den Klingelton stummschalten</item>
+        <item>den Anruf abweisen</item>
+    </string-array>
+
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">Sperrliste</string>
+    <string name="enable_blacklist_title">Sperrliste aktivieren</string>
+    <string name="blacklist_summary_disabled">Deaktiviert</string>
+    <string name="blacklist_summary">Eingehende Anrufe von Nummern, die sich in der Sperrliste befinden, werden abgewiesen</string>
+    <string name="blacklist_notify">Benachrichtigungen anzeigen</string>
+    <string name="blacklist_private_numbers_title">Unterdrückte Nummern</string>
+    <string name="blacklist_private_numbers_summary">Eingehende Anrufe mit unterdrückter Nummer abweisen</string>
+    <string name="blacklist_regex_title">Platzhalter verwenden</string>
+    <string name="blacklist_regex_summary">Einen Punkt als Platzhalter und ein Stern für Wiederholungen verwenden.\nBeispielsweise würde 123.* alle Nummern, die mit 123 beginnen, und .*123.* alle Nummern, die 123 enthalten, abweisen.</string>
+
+    <!-- Blacklist management -->
+    <string name="add_blacklist_number">Nummer hinzufügen</string>
+    <string name="add_to_blacklist">Zur Sperrliste hinzufügen</string>
+    <string name="add_to_blacklist_message">Zukünftige Anrufe von %s werden abgewiesen</string>
+    <string name="remove_blacklist_number_title">Nummer entfernen</string>
+    <string name="remove_blacklist_number">%s von der Sperrliste entfernen?</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">Ein Anruf von %s wurde abgewiesen</string>
+    <string name="blacklist_notification_private_number">Ein Anruf mit unterdrückter Nummer wurde abgewiesen</string>
+    <string name="unblock_number">Sperre aufheben</string>
+
+    <!-- Text for the onscreen "Blacklist" button -->
+    <string name="onscreenBlacklistText">Sperrliste</string>
+
+</resources>
