@@ -29,7 +29,7 @@
     <string name="vibrate_outgoing">Vibrar ao atender</string>
     <string name="vibrate_call_waiting">Vibrar c/ chamada em espera</string>
     <string name="vibrate_hangup">Vibrar ao desligar</string>
-    <string name="vibrate_45">Vibrar a cada 45 segundos</string>
+    <string name="vibrate_45">Vibrar a cada minuto</string>
     <string name="vibrate_45_sum">Vibrar aos 45 segundos de cada minuto durante chamada efetuada</string>
     <string name="national_roaming">Roaming de dados nacional</string>
     <string name="national_roaming_enable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
@@ -76,8 +76,15 @@
     <string name="blacklist_notification">Uma ligação por %s foi bloqueada</string>
     <string name="unblock_number">Desbloquear</string>
     <string name="onscreenBlacklistText">Lista negra</string>
-    <string name="rejected_as_missed">Chamadas rejeitadas como peridas</string>
+    <string name="rejected_as_missed">Chamadas rejeitadas como perdidas</string>
     <string name="rejected_as_missed_sum">Marcar chamadas rejeitadas como \'perdidas\', invés de \'recebidas\', no registro de chamadas</string>
-    <string name="blacklist_private_numbers">Bloquear números privados</string>
+    <string name="blacklist_private_numbers_title">Números privados</string>
+    <string name="blacklist_private_numbers_summary">Bloquear ligações recebidas de números privados</string>
     <string name="blacklist_notification_private_number">Foi bloqueada uma chamada de um número privado</string>
+    <string name="voice_quality_preferences_title">Qualidade da voz</string>
+    <string name="voice_quality_summary">Usando perfil: <xliff:g id="value" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Clara</string>
+    <string name="voice_quality_entry_crisp">Nítida</string>
+    <string name="voice_quality_entry_bright">Realçada</string>
 </resources>
