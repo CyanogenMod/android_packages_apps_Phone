@@ -85,7 +85,7 @@
     <string name="vibrate_outgoing">Vibrate on answer</string>
     <string name="vibrate_call_waiting">Vibrate on call waiting</string>
     <string name="vibrate_hangup">Vibrate on hang up</string>
-    <string name="vibrate_45">Vibrate every 45 seconds</string>
+    <string name="vibrate_45">Vibrate every minute</string>
     <string name="vibrate_45_sum">Vibrates at the 45 second mark of every minute during outgoing calls</string>
     <string name="rejected_as_missed">Rejected calls as missed</string>
     <string name="rejected_as_missed_sum">Mark rejected calls as \'missed\' rather than \'incoming\' in the call log</string>
