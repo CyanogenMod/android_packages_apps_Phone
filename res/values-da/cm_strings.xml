@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- In-call screen: status label for an incoming call that is not answered and forwarded  -->
+    <string name="callUnanswered_forwarded">Opkald ubesvaret og viderestillet</string>
+
+    <!-- Call settings screen, message wait indicator name -->
+    <string name="mwi_notification_title">Indikator for ventende besked</string>
+    <!-- Call settings screen, message wait indicator summary -->
+    <string name="mwi_notification_summary">Vis notifikationer for indikator for ventende beskeder på voicemail</string>
+
+    <!-- Mobile network settings, summary for preferred network mode LTE / CDMA / EvDo [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Foretrukken netværkstilstand: LTE / CDMA / EvDo</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_gsm_summary">Foretrukken netværkstilstand: LTE / GSM/WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / CMDA / EvDo / GSM/WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Foretrukken netværkstilstand: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <!-- Mobile network settings, summary for preferred network mode LTE / WCDMA [CHAR LIMIT=100] -->
+    <string name="preferred_network_mode_lte_wcdma_summary">Foretrukken netværkstilstand: LTE / WCDMA</string>
+
+    <!-- In-call screen: status label for a call in the "dialing" state that's waiting for the busy remote side -->
+    <string name="card_title_dialing_waiting">Ringer op (venter\u2026)</string>
+
+    <!-- In-call screen: status label for a call that is held remotely  -->
+    <string name="card_title_waiting_call">Ventende opkald</string>
+
+    <!-- Toasts for various transient network events -->
+    <!-- Toast text for Unconditional Call Forwarding enabled  -->
+    <string name="call_notif_unconditionalCF">Ubetinget viderestilling af opkald aktiv</string>
+    <!-- Toast text for Conditional Call Forwarding enabled  -->
+    <string name="call_notif_conditionalCF">Betinget viderestilling af opkald aktiv</string>
+    <!-- Toast text for a forwarded MO call  -->
+    <string name="call_notif_MOcall_forwarding">Udgående opkald er viderestillet</string>
+    <!-- Toast text for MO call, when the caller & callee both belng to a CUG group -->
+    <string name="call_notif_cugcall">Opkald i lukket brugergruppe</string>
+    <!-- In-call screen: status label when MO calls are barred -->
+    <string name="call_notif_outgoing_barred">Udgående opkald spærret</string>
+    <!-- Toast text for MO calls, when incoming calls are barred at remote party -->
+    <string name="call_notif_incoming_barred">Indgående opkald spærret af modtager</string>
+    <!-- Toast text for MO calls when CLIR Suppression is rejected -->
+    <string name="call_notif_clir_suppression_rejected">Undertrykkelse af eget nummer afvist af netværk</string>
+    <!-- In-call screen: status label when MO call gets deflected to another party -->
+    <string name="call_notif_call_deflected">Opkald viderestillet af modtager</string>
+    <!-- Toast text for incoming call being forwarded to other remote party  -->
+    <string name="call_notif_MTcall_forwarding">Indgående opkald er viderestillet</string>
+    <!-- Toast text for incoming call which is part of MultiParty Call -->
+    <string name="call_notif_multipartycall">Opkald til flere modtagere</string>
+    <!-- Toast text for incoming call which is answered,put on hold & then released -->
+    <string name="call_notif_callonhold_released">Opkald frigivet af modtager</string>
+    <!-- Toast text for incoming call forward check received -->
+    <string name="call_notif_forwardcheckreceived">Opkald blev viderestillet</string>
+    <!-- Toast text for incoming call connecting through ECT -->
+    <string name="call_notif_callconnectingect">Opkald tilslutter via eksplicit omstilling</string>
+    <!-- Toast text for incoming call connected through ECT -->
+    <string name="call_notif_callconnectedect">Opkald tilsluttet via eksplicit omstilling</string>
+
+    <!-- In-call screen: "call type" indication for a forwarded call [CHAR LIMIT=30] -->
+    <string name="incall_call_type_label_forwarded">Viderestillet opkald</string>
+
+    <!-- Dialer UI Settings -->
+    <string name="dialer_ui_settings_title">Opkaldsprogram-indstillinger</string>
+    <string name="dialer_ui_settings_summary">Indstillinger for opkaldsprogram</string>
+
+    <!-- Noise suppression -->
+    <string name="noise_suppression_title">Undertrykkelse af støj</string>
+    <string name="noise_suppression_summary">Slå undertrykkelse af støj for opkald til</string>
+
+    <!-- Advanced Settings -->
+    <string name="advanced_setting">Avancerede indstillinger</string>
+    <string name="vibrate_outgoing">Vibrér ved opkald</string>
+    <string name="vibrate_call_waiting">Vibrér ventende opkald</string>
+    <string name="vibrate_hangup">Vibrér ved endt opkald</string>
+    <string name="vibrate_45">Vibrér hver 45 sekunder</string>
+    <string name="vibrate_45_sum">Vibrér ved 45-sekundersmærket i hvert minut under udgående opkald</string>
+    <string name="rejected_as_missed">Afviste opkald som ubesvarede</string>
+    <string name="rejected_as_missed_sum">Markér afviste opkald som \'ubesvaret\' i stedet for \'indgående\' i opkaldsloggen</string>
+    <string name="show_ssn_label">Hændelsesnotifikation</string>
+    <string name="show_ssn_summary">Vis en notifikation til forskellige netværkshændelser ifbm. opkaldshåndtering</string>
+    <string name="calllog_after_call">Vis log</string>
+    <string name="calllog_after_call_summary">Vis opkaldsloggen, når opkaldet afsluttes</string>
+
+    <!-- Mobile network settings screen, setting check box name -->
+    <string name="national_roaming">National data-roaming</string>
+    <!-- Mobile network settings screen, setting summary text when check box is selected -->
+    <string name="national_roaming_enable">Tilslut til datatjenester, når der roames nationalt</string>
+    <!-- Mobile network settings screen, setting summary text when check box is clear -->
+    <string name="national_roaming_disable">Tilslut til datatjenester, når der roames nationalt</string>
+
+    <!-- Permission for notification-bar network toggle -->
+    <string name="perm_change_mobile_network">Skift netværk (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Apps med denne tilladelse kan, til alle tider, skifte mellem 2G-data og 3G-data. 3G er hurtigere, bruger mere batteri, og kan også koste dig flere penge.</string>
+
+    <!-- Setting title for the flip action setting. -->
+    <string name="flip_action_title">Vendehandling</string>
+
+    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_dialog_title">Vend enheden for at\u2026</string>
+
+    <!-- Setting summary for the flip action setting. -->
+    <string name="flip_action_summary">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
+
+    <!-- Blacklist preferences -->
+    <string name="blacklist_title">Sortliste</string>
+    <string name="enable_blacklist_title">Slå sortliste til</string>
+    <string name="blacklist_summary_disabled">Slået fra</string>
+    <string name="blacklist_summary">Indgående opkald fra sortlistede telefonnumre vil blive blokeret</string>
+    <string name="blacklist_notify">Vis notifikationer</string>
+    <string name="blacklist_private_numbers">Blokér private numre</string>
+    <string name="blacklist_regex_title">Brug wildcards</string>
+    <string name="blacklist_regex_summary">Brug . som et wildcard og * for gentagelse. Fx 123.* blokerer numre, som starter med 123, og .*123.* blokerer numre, som indeholder 123</string>
+
+    <!-- Blacklist management -->
+    <string name="add_blacklist_number">Tilføj telefonnummer</string>
+    <string name="add_to_blacklist">Tilføj til sortliste</string>
+    <string name="add_to_blacklist_message">Fremtidige opkald fra %s vil blive blokeret</string>
+    <string name="remove_blacklist_number_title">Fjern nummer</string>
+    <string name="remove_blacklist_number">Vil du fjerne %s fra sortlisten?</string>
+
+    <!-- Blacklist notifications -->
+    <string name="blacklist_notification">Blokerede et opkald fra %s</string>
+    <string name="blacklist_notification_private_number">Blokerede et opkald fra et privat nummer</string>
+    <string name="unblock_number">Fjern blokering</string>
+
+    <!-- Text for the onscreen "Blacklist" button -->
+    <string name="onscreenBlacklistText">Sortliste</string>
+
+</resources>
