@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2012-2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="callUnanswered_forwarded">Appel sans réponse et transmis</string>
+    <string name="mwi_notification_title">Indicateur de message en attente</string>
+    <string name="mwi_notification_summary">Afficher une notification lorsqu\'un message est en attente dans la messagerie vocale</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Préférer le reseau : LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Préférer le reseau : LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Préférer le reseau : LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">Préférer le reseau : LTE / WCDMA</string>
+    <string name="card_title_dialing_waiting">Numérotation en cours\u2026</string>
+    <string name="card_title_waiting_call">Appel en attente</string>
+    <string name="call_notif_unconditionalCF">Renvoi d\'appel sans condition actif</string>
+    <string name="call_notif_conditionalCF">Renvoi d\'appel sous condition actif</string>
+    <string name="call_notif_MOcall_forwarding">Appel sortant envoyé</string>
+    <string name="call_notif_cugcall">Appel dans un groupe d\'utilisateurs fermé</string>
+    <string name="call_notif_outgoing_barred">Appels sortants interdits</string>
+    <string name="call_notif_incoming_barred">Appels entrants interdits dans un groupe</string>
+    <string name="call_notif_clir_suppression_rejected">Suppression de son propre numéro rejetée par le réseau</string>
+    <string name="call_notif_call_deflected">Appel transmis par le groupe à distance</string>
+    <string name="call_notif_MTcall_forwarding">Appel entrant transféré</string>
+    <string name="call_notif_multipartycall">Appel multi-groupe</string>
+    <string name="call_notif_callonhold_released">Appel publié à distance</string>
+    <string name="call_notif_forwardcheckreceived">L\'appel a été transmis</string>
+    <string name="call_notif_callconnectingect">Connecter l\'appel au travers d\'un transfert d\'appel</string>
+    <string name="call_notif_callconnectedect">L\'appel est connecté au travers d\'un transfert d\'appel</string>
+    <string name="incall_call_type_label_forwarded">Appel renvoyé</string>
+    <string name="dialer_ui_settings_title">Paramètres du clavier</string>
+    <string name="dialer_ui_settings_summary">Définir les paramètres du clavier</string>
+    <string name="noise_suppression_title">Suppression du bruit</string>
+    <string name="noise_suppression_summary">Activer la suppression du bruit pour les appels</string>
+    <string name="advanced_setting">Paramètres avancés</string>
+    <string name="vibrate_outgoing">Vibrer au décrochement</string>
+    <string name="vibrate_call_waiting">Vibrer pendant l\'attente</string>
+    <string name="vibrate_hangup">Vibrer au raccrochement</string>
+    <string name="vibrate_45">Vibrer à la 45ème seconde</string>
+    <string name="vibrate_45_sum">Vibrer à la 45ème seconde toutes les minutes pendant un appel sortant</string>
+    <string name="rejected_as_missed">Appels rejetés comme manqués</string>
+    <string name="rejected_as_missed_sum">Marquer les appels rejetés comme \'manqué\' plutôt que \'entrant\' dans l\'historique des appels</string>
+    <string name="show_ssn_label">Notification des événements</string>
+    <string name="show_ssn_summary">Afficher une notification pour les divers événements du réseau liés au traitement des appels</string>
+    <string name="calllog_after_call">Afficher l\'historique</string>
+    <string name="calllog_after_call_summary">Afficher l\'historique à la fin d\'un appel</string>
+    <string name="national_roaming">Données d\'itinérance en nationale</string>
+    <string name="national_roaming_enable">Se connecter au service de données pendant l\'itinérance nationale</string>
+    <string name="national_roaming_disable">Ne pas se connecter au service de données pendant l\'itinérance nationale</string>
+    <string name="perm_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus rapide, consomme plus de batterie, et peut également vous coûter plus</string>
+    <string name="flip_action_title">Action au retournement</string>
+    <string name="flip_action_dialog_title">Retourner le téléphone\u2026</string>
+    <string name="flip_action_summary">Retourner le téléphone <xliff:g id="action">%s</xliff:g></string>
+    <string name="blacklist_title">Liste noire</string>
+    <string name="enable_blacklist_title">Activer la liste noire</string>
+    <string name="blacklist_summary_disabled">Désactivé</string>
+    <string name="blacklist_summary">Les appels entrants des numéros de la liste noire seront bloqués</string>
+    <string name="blacklist_notify">Afficher une notification</string>
+    <string name="blacklist_private_numbers">Bloquer les numéros masqués</string>
+    <string name="blacklist_regex_title">Utiliser des caractères génériques</string>
+    <string name="blacklist_regex_summary">Utiliser un point comme caractère générique et une astérisque pour le répétition. Exemple, 123.* si le numéro de téléphone commence par 123 et .*123.* si le numéro de téléphone contient 123</string>
+    <string name="add_blacklist_number">Ajouter le numéro à la liste noire</string>
+    <string name="add_to_blacklist">Ajouter à la liste noire</string>
+    <string name="add_to_blacklist_message">Les prochains appels de %s seront bloqués</string>
+    <string name="remove_blacklist_number_title">Supprimer un numéro</string>
+    <string name="remove_blacklist_number">Voulez-vous supprimer le numéro %s de la liste noire\u00A0?</string>
+    <string name="blacklist_notification">Appel bloqué de %s</string>
+    <string name="blacklist_notification_private_number">Un appel masqué a été bloqué</string>
+    <string name="unblock_number">Débloqué</string>
+    <string name="onscreenBlacklistText">Liste noire</string>
+    <string name="voice_quality_preferences_title">Qualité audio</string>
+    <string name="voice_quality_summary">Utiliser le profile : <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Net</string>
+    <string name="voice_quality_entry_crisp">Clair</string>
+    <string name="voice_quality_entry_bright">Brillant</string>
+</resources>
