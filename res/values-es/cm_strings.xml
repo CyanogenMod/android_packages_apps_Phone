@@ -15,6 +15,9 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="throttle_status_subtext">Máx de <xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) del período <xliff:g id="used">%3$s</xliff:g>\nPróx período en <xliff:g id="used">%4$d</xliff:g> días (<xliff:g id="used">%5$s</xliff:g>)</string>
+    <string name="throttle_data_usage_subtext">Máx de <xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) del período <xliff:g id="used">%3$s</xliff:g></string>
+
     <string name="callUnanswered_forwarded">Llamada perdida reenviada</string>
     <string name="mwi_notification_title">Notificación buzón de voz</string>
     <string name="mwi_notification_summary">Mostrar una notificación para los mensajes en espera del buzón de voz</string>
@@ -47,7 +50,7 @@
     <string name="vibrate_outgoing">Vibrar al contestar</string>
     <string name="vibrate_call_waiting">Vibrar en llamada en espera</string>
     <string name="vibrate_hangup">Vibrar al colgar</string>
-    <string name="vibrate_45">Vibrar cada 45 segundos</string>
+    <string name="vibrate_45">Vibrar cada minuto</string>
     <string name="vibrate_45_sum">Vibrar en el segundo 45 de cada minuto de una llamada saliente</string>
     <string name="rejected_as_missed">Rechazar como perdidas</string>
     <string name="rejected_as_missed_sum">Marcar las llamadas rechazadas como \u00ABperdidas\u00BB en vez de \u00ABentrantes\u00BB en el registro de llamadas</string>
@@ -68,6 +71,8 @@
     <string name="blacklist_summary_disabled">Desactivada</string>
     <string name="blacklist_summary">Las llamadas entrantes de los números de la lista negra serán bloqueadas</string>
     <string name="blacklist_notify">Mostrar notificación</string>
+    <string name="blacklist_private_numbers_title">Números privados</string>
+    <string name="blacklist_private_numbers_summary">Bloquear llamadas entrantes de números privados</string>
     <string name="blacklist_regex_title">Permitir comodines</string>
     <string name="blacklist_regex_summary">Usar \u00AB.\u00BB como comodín y \u00AB*\u00BB para repetición. Por ejemplo \u00AB123.*\u00BB bloqueará números que comiencen por 123 y \u00AB.*123.*\u00BB bloqueará números que contengan 123</string>
     <string name="add_blacklist_number">Añadir número de teléfono</string>
