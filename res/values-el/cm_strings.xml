@@ -15,10 +15,13 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="callUnanswered_forwarded">Αναπάντητη κλήση, προωθήθηκε</string>
+    <string name="mwi_notification_title">Ένδειξη αναμονής μηνύματος</string>
+    <string name="mwi_notification_summary">Εμφάνιση ειδοποίησης μηνύματος τηλεφωνητή</string>
     <string name="preferred_network_mode_lte_cdma_evdo_summary">Προτιμώμενη λειτουργία δικτύου: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Προτιμώμενη λειτουργία δικτύου: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Προτιμώμενη λειτουργία δικτύου: LTE / CMDA / EvDo / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_wcdma_summary">Προτιμώμενη λειτουργία δικτύου: LTE / WCDMA</string>
+    <string name="card_title_dialing_waiting">Κλήση (αναμονή\u2026)</string>
     <string name="card_title_waiting_call">Κλήση σε αναμονή</string>
     <string name="call_notif_unconditionalCF">Προώθηση κλήσεων άνευ όρων ενεργή</string>
     <string name="call_notif_conditionalCF">Προώθηση κλήσεων υπό όρους ενεργή</string>
@@ -43,26 +46,44 @@
     <string name="vibrate_outgoing">Δόνηση στην απάντηση</string>
     <string name="vibrate_call_waiting">Δόνηση στην αναμονή</string>
     <string name="vibrate_hangup">Δόνηση στο κλείσιμο</string>
-    <string name="vibrate_45">Δόνηση κάθε 45 δευτερόλεπτα</string>
-    <string name="vibrate_45_sum">Δόνηση κάθε 45 δευτερόλεπτα κατά τη διάρκεια εξερχόμενων κλήσεων</string>
+    <string name="vibrate_45">Δόνηση κάθε 1 λεπτό</string>
+    <string name="vibrate_45_sum">Δόνηση στο 45ο δευτερόλεπτο κάθε λεπτού κατά τη διάρκεια εξερχόμενων κλήσεων</string>
+    <string name="rejected_as_missed">Απόρριψη κλήσεων ως αναπάντητες</string>
+    <string name="rejected_as_missed_sum">Επισημάνετε τις απορριφθείσες κλήσεις ως \'αναπάντητες\' αντί για \'εισερχόμενες\' στο αρχείο κλήσεων</string>
     <string name="show_ssn_label">Ειδοποιήσεις συμβάντων</string>
     <string name="show_ssn_summary">Εμφάνιση ειδοποίησης για διάφορα συμβάντα του δικτύου που σχετίζονται με το χειρισμό των κλήσεων</string>
+    <string name="calllog_after_call">Εμφάνιση αρχείου</string>
+    <string name="calllog_after_call_summary">Εμφάνιση του αρχείου κλήσεων μετά το τέλος μιας κλήσης</string>
     <string name="national_roaming">Εθνική περιαγωγή δεδομένων</string>
     <string name="national_roaming_enable">Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
-    <string name="national_roaming_disable">Να μη γίνεται σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
+    <string name="national_roaming_disable">Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
     <string name="perm_change_mobile_network">Επιλογή δικτύου (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Όποια εφαρμογή έχει αυτή την άδεια μπορεί να αλλάζει μεταξύ 2G και 3G δεδομένων. Το 3G είναι γρηγορότερο, καταναλώνει περισσότερο μπαταρία και μπορεί επίσης να σας κοστίσει περισσότερα χρήματα.</string>
     <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>
     <string name="flip_action_dialog_title">Ενέργεια αναποδογυρίσματος συσκευής</string>
     <string name="flip_action_summary">Το αναποδογύρισμα της συσκευής <xliff:g id="action">%s</xliff:g></string>
-    <string-array name="flip_action_setting_entries">
-        <item>Να μη γίνει καμία ενέργεια</item>
-        <item>Σίγαση ήχου κλήσης</item>
-        <item>Απόρριψη κλήσης</item>
-    </string-array>
-    <string-array name="flip_action_summary_entries">
-        <item>δεν θα εκτελεί καμία ενέργεια</item>
-        <item>θα απενεργοποιεί τον ήχο κλήσης</item>
-        <item>θα απορρίπτει την κλήση</item>
-    </string-array>
+    <string name="blacklist_title">Μαύρη λίστα</string>
+    <string name="enable_blacklist_title">Ενεργοποίηση μαύρης λίστας</string>
+    <string name="blacklist_summary_disabled">Απενεργοποιημένη</string>
+    <string name="blacklist_summary">Εισερχόμενες κλήσεις από αριθμούς που είναι στη μαύρη λίστα θα απορρίπτονται</string>
+    <string name="blacklist_notify">Εμφάνιση ειδοποίησης</string>
+    <string name="blacklist_private_numbers_title">Απόρρητοι αριθμοί</string>
+    <string name="blacklist_private_numbers_summary">Φραγή εισερχομένων κλήσεων από απόρρητους αριθμούς</string>
+    <string name="blacklist_regex_title">Χρήση μπαλαντέρ</string>
+    <string name="blacklist_regex_summary">Χρήση . ως μπαλαντέρ και * για επανάληψη. Π.χ. το 123.* μπλοκάρει αριθμούς που ξεκινούν από 123 και το .*123.* μπλοκάρει αριθμούς που περιέχουν το 123</string>
+    <string name="add_blacklist_number">Προσθήκη αριθμού</string>
+    <string name="add_to_blacklist">Προσθήκη στη μαύρη λίστα</string>
+    <string name="add_to_blacklist_message">Μελλοντικές κλήσεις από το %s θα απορρίπτονται</string>
+    <string name="remove_blacklist_number_title">Αφαίρεση αριθμού</string>
+    <string name="remove_blacklist_number">Θέλετε να αφαιρέσετε το %s από τη μαύρη λίστα;</string>
+    <string name="blacklist_notification">Απορρίφθηκε κλήση από το %s</string>
+    <string name="blacklist_notification_private_number">Απορρίφθηκε κλήση από απόρρητο αριθμό</string>
+    <string name="unblock_number">Ακύρωση φραγής</string>
+    <string name="onscreenBlacklistText">Μαύρη λίστα</string>
+    <string name="voice_quality_preferences_title">Ποιότητα ήχου</string>
+    <string name="voice_quality_summary">Χρησιμοποιείται το προφίλ: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Κανονικός</string>
+    <string name="voice_quality_entry_clear">Καθαρός</string>
+    <string name="voice_quality_entry_crisp">Ζωηρός</string>
+    <string name="voice_quality_entry_bright">Έντονος</string>
 </resources>

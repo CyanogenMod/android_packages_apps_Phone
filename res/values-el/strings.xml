@@ -179,16 +179,10 @@
     <item msgid="8508331239546115206">"Προτιμώνται GSM/WCDMA"</item>
   </string-array>
   <string-array name="preferred_network_mode_choices_lte">
-<!--<item>LTE only</item>-->
     <item>LTE/CMDA/EvDo/GSM/WCDMA</item>
     <item>LTE/CDMA/EvDo</item>
     <item msgid="7002474529872452266">"LTE/CDMA"</item>
     <item>Αυτόματο CDMA/EvDo</item>
-  </string-array>
-  <string-array name="preferred_network_mode_choices_lte_gsm">
-    <item>LTE/WCDMA</item>
-    <item>LTE/GSM/WCDMA</item>
-    <item>GSM/προτιμώμενο WCDMA</item>
   </string-array>
     <string name="data_enabled" msgid="5972538663568715366">"Ενεργοποίηση δεδομένων"</string>
     <string name="data_enable_summary" msgid="5022018967714633874">"Ενεργοποίηση της πρόσβασης δεδομένων μέσω του δικτύου κινητής τηλεφωνίας"</string>
