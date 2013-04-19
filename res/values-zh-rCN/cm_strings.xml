@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="callUnanswered_forwarded">呼叫未接通并被转接</string>
+    <string name="mwi_notification_title">信息等待指示器</string>
+    <string name="mwi_notification_summary">显示等待语音信箱通知的指示器</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">首选网络模式：LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_gsm_summary">首选网络模式：LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">首选网络模式：LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">首选网络模式：LTE / WCDMA</string>
+    <string name="card_title_dialing_waiting">正在拨号 (等待中\u2026)</string>
+    <string name="card_title_waiting_call">等待通话</string>
+    <string name="call_notif_unconditionalCF">启用无条件的来电转接</string>
+    <string name="call_notif_conditionalCF">启用有条件的来电转接</string>
+    <string name="call_notif_MOcall_forwarding">呼出电话已被转接</string>
+    <string name="call_notif_cugcall">在封闭用户组内通话</string>
+    <string name="call_notif_outgoing_barred">呼出电话被禁止</string>
+    <string name="call_notif_incoming_barred">来电被对方禁止</string>
+    <string name="call_notif_clir_suppression_rejected">自我号码抑制被网络拒绝</string>
+    <string name="call_notif_call_deflected">呼叫被对方转接</string>
+    <string name="call_notif_MTcall_forwarding">来电是被转接的</string>
+    <string name="call_notif_multipartycall">多方电话</string>
+    <string name="call_notif_callonhold_released">呼叫被对方释放</string>
+    <string name="call_notif_forwardcheckreceived">呼叫被转接</string>
+    <string name="call_notif_callconnectingect">呼叫正在通过显式呼叫转移进行连接</string>
+    <string name="call_notif_callconnectedect">呼叫已通过显式呼叫转移连接</string>
+    <string name="incall_call_type_label_forwarded">转接通话</string>
+    <string name="dialer_ui_settings_title">拨号键盘设置</string>
+    <string name="dialer_ui_settings_summary">更改拨号键盘的设置</string>
+    <string name="noise_suppression_title">噪音镇压</string>
+    <string name="noise_suppression_summary">呼叫时启用噪音镇压</string>
+    <string name="advanced_setting">高级设置</string>
+    <string name="vibrate_outgoing">对方接听时震动</string>
+    <string name="vibrate_call_waiting">呼叫等待时震动</string>
+    <string name="vibrate_hangup">通话结束时震动</string>
+    <string name="vibrate_45">每分钟震动</string>
+    <string name="vibrate_45_sum">呼出通话到达每分钟的 45 秒时震动</string>
+    <string name="rejected_as_missed">将拒绝来电标记为未接</string>
+    <string name="rejected_as_missed_sum">在通话记录内把拒绝的来电标记为 \'未接\' 而不是 \'来电\'</string>
+    <string name="show_ssn_label">事件提醒</string>
+    <string name="show_ssn_summary">为通话处理相关的各种网络事件显示一个通知</string>
+    <string name="calllog_after_call">显示通话记录</string>
+    <string name="calllog_after_call_summary">通话结束时显示通话记录</string>
+    <string name="national_roaming">国内移动数据漫游</string>
+    <string name="national_roaming_enable">在国内漫游时连接到数据服务</string>
+    <string name="national_roaming_disable">在国内漫游时连接到数据服务</string>
+    <string name="perm_change_mobile_network">切换移动网络 (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以随时在 2G/3G 移动数据网络之间切换. 3G 网络的速度会更快, 但也会消耗更多的电量并且可能花费更多的金钱.</string>
+    <string name="flip_action_title">翻转行为</string>
+    <string name="flip_action_dialog_title">翻转设备将\u2026</string>
+    <string name="flip_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
+    <string name="blacklist_title">黑名单</string>
+    <string name="enable_blacklist_title">启用黑名单</string>
+    <string name="blacklist_summary_disabled">已禁用</string>
+    <string name="blacklist_summary">阻止黑名单中的电话号码的来电</string>
+    <string name="blacklist_notify">显示通知</string>
+    <string name="blacklist_private_numbers_title">阻止私人号码</string>
+    <string name="blacklist_private_numbers_summary">阻止私人号码的来电</string>
+    <string name="blacklist_regex_title">使用通配符</string>
+    <string name="blacklist_regex_summary">使用 . 作为通配符和 * 作为重复字符, 例如: 123.* 将会阻止所有 123 为前缀的号码; .*123.* 将会阻止所有包含 123 的号码</string>
+    <string name="add_blacklist_number">添加电话号码</string>
+    <string name="add_to_blacklist">添加到黑名单</string>
+    <string name="add_to_blacklist_message">未来来自 %s 的电话将被阻止</string>
+    <string name="remove_blacklist_number_title">移除电话号码</string>
+    <string name="remove_blacklist_number">您确定要从黑名单移除 %s 吗?</string>
+    <string name="blacklist_notification">阻止了 %s 的来电</string>
+    <string name="blacklist_notification_private_number">阻止了私人号码的来电</string>
+    <string name="unblock_number">解除阻止</string>
+    <string name="onscreenBlacklistText">黑名单</string>
+    <string name="voice_quality_preferences_title">通话质量</string>
+    <string name="voice_quality_summary">正在使用的配置: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">正常</string>
+    <string name="voice_quality_entry_clear">清晰</string>
+    <string name="voice_quality_entry_crisp">清脆</string>
+    <string name="voice_quality_entry_bright">明亮</string>
+</resources>
