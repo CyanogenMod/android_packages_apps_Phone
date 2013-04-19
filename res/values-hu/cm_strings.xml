@@ -68,7 +68,8 @@
     <string name="blacklist_summary_disabled">Letiltva</string>
     <string name="blacklist_summary">Bejövő hívások blokkolása, melyek szerepelnek a tiltólistán</string>
     <string name="blacklist_notify">Értesítés megjelenítése</string>
-    <string name="blacklist_private_numbers">Szám nélküli hívások blokkolása</string>
+    <string name="blacklist_private_numbers_title">Rejtett számok</string>
+    <string name="blacklist_private_numbers_summary">Szám nélküli hívások blokkolása</string>
     <string name="blacklist_regex_title">Helyetesítő karakterek használata</string>
     <string name="blacklist_regex_summary">Használja a "."-ot egy szám, a "*"-ot pedig több szám helyettesítésére. Példa: a 123.* blokkolja a 123-mal kezdődő számokat, a .*123.* pedig a 123-at tartalmazó számokat</string>
     <string name="add_blacklist_number">Szám hozzáadása</string>
