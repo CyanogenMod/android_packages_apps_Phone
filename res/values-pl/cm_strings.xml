@@ -69,7 +69,6 @@
     <string name="rejected_as_missed">Odrzucone połączenia jako nieodebrane</string>
     <string name="rejected_as_missed_sum">Oznaczaj w rejestrze odrzucone połączenia jako \'nieodebrane\' zamiast \'przychodzące\'</string>
 
-    <string name="blacklist_private_numbers">Blokuj prywatne numery</string>
     <string name="blacklist_notification_private_number">Zablokowano połączenie przychodzące od prywatnego numeru</string>
 
     <string name="voice_quality_preferences_title">Jakość głosu</string>

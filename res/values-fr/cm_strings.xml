@@ -68,7 +68,6 @@
     <string name="blacklist_summary_disabled">Désactivé</string>
     <string name="blacklist_summary">Les appels entrants des numéros de la liste noire seront bloqués</string>
     <string name="blacklist_notify">Afficher une notification</string>
-    <string name="blacklist_private_numbers">Bloquer les numéros masqués</string>
     <string name="blacklist_regex_title">Utiliser des caractères génériques</string>
     <string name="blacklist_regex_summary">Utiliser un point comme caractère générique et une astérisque pour le répétition. Exemple, 123.* si le numéro de téléphone commence par 123 et .*123.* si le numéro de téléphone contient 123</string>
     <string name="add_blacklist_number">Ajouter le numéro à la liste noire</string>

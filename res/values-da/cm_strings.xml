@@ -120,7 +120,6 @@
     <string name="blacklist_summary_disabled">Slået fra</string>
     <string name="blacklist_summary">Indgående opkald fra sortlistede telefonnumre vil blive blokeret</string>
     <string name="blacklist_notify">Vis notifikationer</string>
-    <string name="blacklist_private_numbers">Blokér private numre</string>
     <string name="blacklist_regex_title">Brug wildcards</string>
     <string name="blacklist_regex_summary">Brug . som et wildcard og * for gentagelse. Fx 123.* blokerer numre, som starter med 123, og .*123.* blokerer numre, som indeholder 123</string>
 
