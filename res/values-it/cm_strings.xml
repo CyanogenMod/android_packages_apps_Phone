@@ -55,7 +55,7 @@
     <string name="vibrate_outgoing">Vibra alla risposta</string>
     <string name="vibrate_call_waiting">Vibra su messa in attesa</string>
     <string name="vibrate_hangup">Vibra al termine chiamata</string>
-    <string name="vibrate_45">Vibra ogni 45 secondi</string>
+    <string name="vibrate_45">Vibra ogni minuto</string>
     <string name="vibrate_45_sum">Vibra al 45esimo secondo di ogni minuto durante le chiamate in uscita</string>
     <string name="rejected_as_missed">Chiamate rifiutate come perse</string>
     <string name="rejected_as_missed_sum">Marca le chiamate rifiutate come \'perse\' invece di \'ricevute\' nel registro chiamate</string>
@@ -86,6 +86,8 @@
     <string name="blacklist_summary_disabled">Disattivata</string>
     <string name="blacklist_summary">Le chiamate in entrata provenienti da numeri di telefono presenti nella blacklist verranno bloccate</string>
     <string name="blacklist_notify">Mostra notifica</string>
+    <string name="blacklist_private_numbers_title">Numeri privati</string>
+    <string name="blacklist_private_numbers_summary">Blocca le chiamate in entrata da numeri privati</string>
     <string name="blacklist_regex_title">Usa caratteri speciali</string>
     <string name="blacklist_regex_summary">Usa . come carattere jolly e * per la ripetizione. Ad esempio 123.* blocca i numeri che iniziano con 123 e .*123.* blocca i numeri che contengono 123</string>
     <string name="add_blacklist_number">Aggiungi numero di telefono</string>
@@ -94,6 +96,13 @@
     <string name="remove_blacklist_number_title">Rimuovi numero</string>
     <string name="remove_blacklist_number">Vuoi rimuovere %s dalla blacklist?</string>
     <string name="blacklist_notification">Bloccata una chiamata dal %s</string>
+    <string name="blacklist_notification_private_number">Bloccata una chiamata da un numero privato</string>
     <string name="unblock_number">Sblocca</string>
     <string name="onscreenBlacklistText">Blacklist</string>
+    <string name="voice_quality_preferences_title">Qualità della voce</string>
+    <string name="voice_quality_summary">Profilo in uso: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normale</string>
+    <string name="voice_quality_entry_clear">Chiara</string>
+    <string name="voice_quality_entry_crisp">Ben definita</string>
+    <string name="voice_quality_entry_bright">Brillante</string>
 </resources>
