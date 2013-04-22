@@ -49,7 +49,7 @@
     <string name="vibrate_45_sum">Während ausgehender Anrufe 15 Sekunden vor dem Ende jeder vollen Minute vibrieren</string>
     <string name="calllog_after_call">Anrufliste anzeigen</string>
     <string name="calllog_after_call_summary">Anrufliste anzeigen, nachdem ein Anruf beendet wurde</string>
-    <string name="rejected_as_missed">Abgewiesene Anrufe als entgangen</string>
+    <string name="rejected_as_missed">Abgewiesen als entgangen</string>
     <string name="rejected_as_missed_sum">Abgewiesene Anrufe in der Anrufliste als \"Entgangen\" anstatt \"Eingegangen\" anzeigen</string>
 
     <!-- Noise suppression -->
