@@ -91,6 +91,8 @@
 
     <!-- Blacklist notifications -->
     <string name="blacklist_notification">Вызов от %s отклонён</string>
+    <string name="blacklist_notification_private_number">Вызов от неизвестного номера отклонён</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> звонка (ов) было отклонено</string>
     <string name="unblock_number">Разблокировать</string>
 
     <!-- Text for the onscreen "Blacklist" button -->
