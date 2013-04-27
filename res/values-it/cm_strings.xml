@@ -97,6 +97,7 @@
     <string name="remove_blacklist_number">Vuoi rimuovere %s dalla blacklist?</string>
     <string name="blacklist_notification">Bloccata una chiamata dal %s</string>
     <string name="blacklist_notification_private_number">Bloccata una chiamata da un numero privato</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> chiamate sono state bloccate</string>
     <string name="unblock_number">Sblocca</string>
     <string name="onscreenBlacklistText">Blacklist</string>
     <string name="voice_quality_preferences_title">Qualità della voce</string>
