@@ -50,7 +50,7 @@
     <string name="vibrate_outgoing">Trillen bij aannemen</string>
     <string name="vibrate_call_waiting">Trillen bij wachten</string>
     <string name="vibrate_hangup">Trillen bij ophangen</string>
-    <string name="vibrate_45">Elke 45 seconden trillen</string>
+    <string name="vibrate_45">Elke minuut trillen</string>
     <string name="vibrate_45_sum">Elke 45<SUP>e</SUP> seconde van een minuut trillen bij uitgaande gesprekken</string>
     <string name="national_roaming">Nationale gegevensroaming</string>
     <string name="national_roaming_enable">Verbinding maken met gegevensservices bij nationale roaming</string>
@@ -61,4 +61,30 @@
     <string name="card_title_dialing_waiting">Kiezen (wachten\u2026)</string>
     <string name="calllog_after_call">Logboek tonen</string>
     <string name="calllog_after_call_summary">Logboek tonen na het beëindigen van een gesprek</string>
+    <string name="rejected_as_missed">Afgewezen oproepen als gemiste</string>
+    <string name="rejected_as_missed_sum">Afgewezen oproepen markeren als \'gemist\' i.p.v. \'inkomend\' in logboek</string>
+    <string name="blacklist_title">Zwarte lijst</string>
+    <string name="enable_blacklist_title">Inschakelen</string>
+    <string name="blacklist_summary_disabled">Uitgeschakeld</string>
+    <string name="blacklist_summary">Inkomende oproepen van telefoonnummers op de zwarte lijst worden geblokkeerd</string>
+    <string name="blacklist_notify">Melding weergeven</string>
+    <string name="blacklist_private_numbers_title">Afgeschermde nummers</string>
+    <string name="blacklist_private_numbers_summary">Oproepen blokkeren van afgeschermde nummers</string>
+    <string name="blacklist_regex_title">Jokertekens gebruiken</string>
+    <string name="blacklist_regex_summary">Gebruik . als jokerteken en * voor herhaling. Bijv.: 123.* blokkeert nummers die beginnen met 123 en .*123.* blokkeert nummers die 123 bevatten</string>
+    <string name="add_blacklist_number">Telefoonnummer toevoegen</string>
+    <string name="add_to_blacklist">Toevoegen aan zwarte lijst</string>
+    <string name="add_to_blacklist_message">Oproepen van %s worden geblokkeerd</string>
+    <string name="remove_blacklist_number_title">Telefoonnummer verwijderen</string>
+    <string name="remove_blacklist_number">%s verwijderen van zwarte lijst?</string>
+    <string name="blacklist_notification">Oproep geblokkeerd van %s</string>
+    <string name="blacklist_notification_private_number">Oproep geblokkeerd van afgeschermd nummer</string>
+    <string name="unblock_number">Deblokkeren</string>
+    <string name="onscreenBlacklistText">Zwarte lijst</string>
+    <string name="voice_quality_preferences_title">Geluidskwaliteit</string>
+    <string name="voice_quality_summary">Gebruikt profiel: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normaal</string>
+    <string name="voice_quality_entry_clear">Helder</string>
+    <string name="voice_quality_entry_crisp">Helderder</string>
+    <string name="voice_quality_entry_bright">Helderst</string>
 </resources>
