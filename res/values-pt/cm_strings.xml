@@ -87,4 +87,10 @@
     <string name="voice_quality_entry_clear">Clara</string>
     <string name="voice_quality_entry_crisp">Nítida</string>
     <string name="voice_quality_entry_bright">Realçada</string>
+    <string name="blacklist_unknown_numbers_title">Números desconhecidos</string>
+    <string name="blacklist_unknown_numbers_summary">Bloquear chamadas recebidas de números que não estão na sua lista de contato</string>
+    <string name="blacklist_notification_list_private">Privado</string>
+    <string name="blacklist_notification_unknown_number">Número desconhecido %s foi bloqueado</string>
+    <string name="blacklist_notification_multiple">
+        <xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> chamadas foram bloqueadas</string>
 </resources>
