@@ -22,7 +22,7 @@
     <string name="vibrate_outgoing">Wibruj przy odbieraniu</string>
     <string name="vibrate_call_waiting">Wibruj przy oczekującym połączeniu</string>
     <string name="vibrate_hangup">Wibruj przy rozłączaniu</string>
-    <string name="vibrate_45">Wibruj co 45 sekund</string>
+    <string name="vibrate_45">Wibruj co minutę</string>
     <string name="vibrate_45_sum">Wibracje w 45 sekundzie każdej minuty podczas trwającego połączenia</string>
     <string name="show_ssn_label">Powiadamiaj o zdarzeniach</string>
     <string name="show_ssn_summary">Pokazuj powiadomienia o zdarzeniach w sieci związanych z obsługą połączeń</string>
@@ -69,7 +69,10 @@
     <string name="rejected_as_missed">Odrzucone połączenia jako nieodebrane</string>
     <string name="rejected_as_missed_sum">Oznaczaj w rejestrze odrzucone połączenia jako \'nieodebrane\' zamiast \'przychodzące\'</string>
 
-    <string name="blacklist_notification_private_number">Zablokowano połączenie przychodzące od prywatnego numeru</string>
+    <string name="blacklist_private_numbers_title">Numery Prywatne</string>
+    <string name="blacklist_private_numbers_summary">Blokuj połączenia przychodzące od numerów prywatnych</string>
+    <string name="blacklist_notification_private_number">Zablokowano połączenie przychodzące od numeru prywatnego</string>
+    <string name="blacklist_notification_multiple">Zablokowane połączenia: <xliff:g id="count">%d</xliff:g></string>
 
     <string name="voice_quality_preferences_title">Jakość głosu</string>
     <string name="voice_quality_summary">Użyj profilu: <xliff:g id="value">%s</xliff:g></string>
@@ -77,4 +80,22 @@
     <string name="voice_quality_entry_clear">Czysty</string>
     <string name="voice_quality_entry_crisp">Wyraźny</string>
     <string name="voice_quality_entry_bright">Żywy</string>
+
+    <string name="call_notif_unconditionalCF">Bezwarunkowe przekazywanie połączeń jest aktywne</string>
+    <string name="call_notif_conditionalCF">Warunkowe przekazywanie połączeń jest aktywne</string>
+    <string name="call_notif_MOcall_forwarding">Połączenie wychodzące jest przekazywane</string>
+    <string name="call_notif_cugcall">Połączenie w zamkniętej grupie użytkownika</string>
+    <string name="call_notif_outgoing_barred">Połączenie wychodzące zostało zablokowane</string>
+    <string name="call_notif_incoming_barred">Połączenie przychodzące zostało zablokowane po stronie zdalnej</string>
+    <string name="call_notif_clir_suppression_rejected">Ukrywanie własnego numeru zabronione przez operatora</string>
+    <string name="call_notif_call_deflected">Połączenie przekazane po stronie zdalnej</string>
+    <string name="call_notif_MTcall_forwarding">Połączenie przychodzące jest przekazywane</string>
+    <string name="call_notif_multipartycall">Rozmowa konferencyjna</string>
+    <string name="call_notif_callonhold_released">Połączenie wznowione zdalnie</string>
+    <string name="call_notif_forwardcheckreceived">Połączenie zostało przekazane</string>
+    <string name="call_notif_callconnectingect">Łączenie rozmowy przekazanej z innego numeru</string>
+    <string name="call_notif_callconnectedect">Połączono rozmowę przekazaną z innego numeru</string>
+
+    <string name="incall_call_type_label_forwarded">Połączenie przekazane</string>
+    <string name="card_title_waiting_call">Połączenie oczekujące</string>
 </resources>
