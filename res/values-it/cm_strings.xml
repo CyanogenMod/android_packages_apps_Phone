@@ -88,6 +88,8 @@
     <string name="blacklist_notify">Mostra notifica</string>
     <string name="blacklist_private_numbers_title">Numeri privati</string>
     <string name="blacklist_private_numbers_summary">Blocca le chiamate in entrata da numeri privati</string>
+    <string name="blacklist_unknown_numbers_title">Numeri sconosciuti</string>
+    <string name="blacklist_unknown_numbers_summary">Blocca le chiamate in entrata dai numeri non presenti in rubrica</string>
     <string name="blacklist_regex_title">Usa caratteri speciali</string>
     <string name="blacklist_regex_summary">Usa . come carattere jolly e * per la ripetizione. Ad esempio 123.* blocca i numeri che iniziano con 123 e .*123.* blocca i numeri che contengono 123</string>
     <string name="add_blacklist_number">Aggiungi numero di telefono</string>
@@ -97,6 +99,8 @@
     <string name="remove_blacklist_number">Vuoi rimuovere %s dalla blacklist?</string>
     <string name="blacklist_notification">Bloccata una chiamata dal %s</string>
     <string name="blacklist_notification_private_number">Bloccata una chiamata da un numero privato</string>
+    <string name="blacklist_notification_list_private">Privato</string>
+    <string name="blacklist_notification_unknown_number">Numero sconosciuto: %s</string>
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> chiamate sono state bloccate</string>
     <string name="unblock_number">Sblocca</string>
     <string name="onscreenBlacklistText">Blacklist</string>
