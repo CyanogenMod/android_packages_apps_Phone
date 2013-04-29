@@ -15,6 +15,7 @@
 -->
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="enter_input">El mensaje USSD debe tener entre <xliff:g id="min_len" >%d</xliff:g> y <xliff:g id="max_len" >%d</xliff:g> caracteres. Por favor, inténtalo de nuevo.</string>
     <string name="throttle_status_subtext">Máx de <xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) del período <xliff:g id="used">%3$s</xliff:g>\nPróx período en <xliff:g id="used">%4$d</xliff:g> días (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext">Máx de <xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) del período <xliff:g id="used">%3$s</xliff:g></string>
 
@@ -73,6 +74,8 @@
     <string name="blacklist_notify">Mostrar notificación</string>
     <string name="blacklist_private_numbers_title">Números privados</string>
     <string name="blacklist_private_numbers_summary">Bloquear llamadas entrantes de números privados</string>
+    <string name="blacklist_unknown_numbers_title">Números desconocidos</string>
+    <string name="blacklist_unknown_numbers_summary">Bloquear llamadas entrantes de números que no estén en la lista de contactos</string>
     <string name="blacklist_regex_title">Permitir comodines</string>
     <string name="blacklist_regex_summary">Usar \u00AB.\u00BB como comodín y \u00AB*\u00BB para repetición. Por ejemplo \u00AB123.*\u00BB bloqueará números que comiencen por 123 y \u00AB.*123.*\u00BB bloqueará números que contengan 123</string>
     <string name="add_blacklist_number">Añadir número de teléfono</string>
@@ -82,6 +85,8 @@
     <string name="remove_blacklist_number">¿Quitar %s de la lista negra?</string>
     <string name="blacklist_notification">Llamada de %s, bloqueada</string>
     <string name="blacklist_notification_private_number">Llamada de número privado, bloqueada</string>
+    <string name="blacklist_notification_list_private">Privado</string>
+    <string name="blacklist_notification_unknown_number">Número desconocido %s, bloqueado</string>
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> llamadas fueron bloqueadas</string>
     <string name="unblock_number">Desbloquear</string>
     <string name="onscreenBlacklistText">Lista negra</string>
