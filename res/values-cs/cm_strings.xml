@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="callUnanswered_forwarded">Hovor přesměrován</string>
+
+    <string name="mwi_notification_title">Upozornění hlasové zprávy</string>
+    <string name="mwi_notification_summary">Zobrazit upozornění při přijetí hlasové zprávy</string>
+
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Upřednostňovaná síť: LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Upřednostňovaná síť: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Upřednostňovaná síť: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">Upřednostňovaná síť: LTE / WCDMA</string>
+
+    <string name="card_title_dialing_waiting">Vytáčení (čekání\u2026)</string>
+
+    <string name="card_title_waiting_call">Čekající hovor</string>
+
+    <string name="call_notif_unconditionalCF">Nepodmíněné přesměrování hovorů aktivní</string>
+    <string name="call_notif_conditionalCF">Podmíněné přesměrování hovorů aktivní</string>
+    <string name="call_notif_MOcall_forwarding">Příchozí hovory jsou přesměrovány</string>
+    <string name="call_notif_cugcall">Hovor v uzavřené skupině</string>
+    <string name="call_notif_outgoing_barred">Odchozí hovory zamítnuty</string>
+    <string name="call_notif_incoming_barred">Příchozí hovory zamítnuty druhou stranou</string>
+    <string name="call_notif_clir_suppression_rejected">Skrytí vlastního čísla odmítnuto sítí</string>
+    <string name="call_notif_call_deflected">Hovor přesměrován druhou stranou</string>
+    <string name="call_notif_MTcall_forwarding">Příchozí hovor přesměrován</string>
+    <string name="call_notif_multipartycall">Konferenční hovor</string>
+    <string name="call_notif_callonhold_released">Hovor ukončen druhou stranou</string>
+    <string name="call_notif_forwardcheckreceived">Hovor byl přesměrován</string>
+    <string name="call_notif_callconnectingect">Hovor bude spojen na přímo (ECT)</string>
+    <string name="call_notif_callconnectedect">Hovor je spojen na přímo (ECT)</string>
+
+    <string name="incall_call_type_label_forwarded">Přesměrovaný hovor</string>
+
+    <string name="dialer_ui_settings_title">Nastavení číselníku</string>
+    <string name="dialer_ui_settings_summary">Nastavení číselníku</string>
+
+    <string name="noise_suppression_title">Potlačení šumu</string>
+    <string name="noise_suppression_summary">Povolit potlačování šumu při hovorech</string>
+
+    <string name="advanced_setting">Rozšířené nastavení</string>
+    <string name="vibrate_outgoing">Vibrovat při odpovědi</string>
+    <string name="vibrate_call_waiting">Vibrovat při dalším hovoru</string>
+    <string name="vibrate_hangup">Vibrovat po zavěšení</string>
+    <string name="vibrate_45">Vibrovat každou minutu</string>
+    <string name="vibrate_45_sum">Vibrovat při 45. sekundě každé minuty při odchozím volání</string>
+    <string name="rejected_as_missed">Odmítnuté hovory jako zameškané</string>
+    <string name="rejected_as_missed_sum">Označí odmítnuté hovory jako \'zameškané\' místo \'příchozí\' v záznamu hovorů</string>
+    <string name="show_ssn_label">Upozornění na událost</string>
+    <string name="show_ssn_summary">Zobrazit upozornění na různé události sítě, které souvisejí s hovory</string>
+    <string name="calllog_after_call">Zobrazit záznam</string>
+    <string name="calllog_after_call_summary">Zobrazit záznam hovorů po ukončení hovoru</string>
+
+    <string name="national_roaming">Vnitrostátní datový roaming</string>
+    <string name="national_roaming_enable">Používat datové služby při vnitrostátním roamingu</string>
+    <string name="national_roaming_disable">Nepoužívat datové služby při vnitrostátním roamingu</string>
+
+    <string name="perm_change_mobile_network">změnit typ sítě (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Umožní měnit typ datového připojení.</string>
+
+    <string name="flip_action_title">Akce při otočení</string>
+    <string name="flip_action_dialog_title">Otočením zařízení provést\u2026</string>
+    <string name="flip_action_summary">Otočením zařízení displejem dolů se <xliff:g id="action">%s</xliff:g></string>
+
+    <string name="blacklist_title">Černá listina</string>
+    <string name="enable_blacklist_title">Povolit černou listinu</string>
+    <string name="blacklist_summary_disabled">Zakázána</string>
+    <string name="blacklist_summary">Příchozí hovory z čísel, která jsou na černé listině, jsou automaticky blokována</string>
+    <string name="blacklist_notify">Zobrazit upozornění</string>
+    <string name="blacklist_private_numbers_title">Skrytá čísla</string>
+    <string name="blacklist_private_numbers_summary">Blokovat příchozí hovory ze skrytých čísel</string>
+    <string name="blacklist_unknown_numbers_title">Neznámá čísla</string>
+    <string name="blacklist_unknown_numbers_summary">Blokovat příchozí hovory z čísel, která nejsou v seznamu kontaktů</string>
+    <string name="blacklist_regex_title">Použít zástupné znaky</string>
+    <string name="blacklist_regex_summary">V černé listině použít \'.\' jako zástup za jakýkoliv znak a \'*\' pro opakování. Například \'123.*\' zablokuje všechna čísla začínající \'123\' a \'.*123.*\' blokuje všechna čísla, která obsahují \'123\'.</string>
+
+    <string name="add_blacklist_number">Přidat telefonní číslo</string>
+    <string name="add_to_blacklist">Přidat na černou listinu</string>
+    <string name="add_to_blacklist_message">Příchozí volání z čísla %s budou blokována</string>
+    <string name="remove_blacklist_number_title">Odebrat číslo</string>
+    <string name="remove_blacklist_number">Opravdu odebrat číslo %s z černé listiny?</string>
+
+    <string name="blacklist_notification">Blokovaný hovor z %s</string>
+    <string name="blacklist_notification_private_number">Blokovaný hovor ze skrytého čísla</string>
+    <string name="blacklist_notification_list_private">Skryté</string>
+    <string name="blacklist_notification_unknown_number">Blokované neznámé číslo %s</string>
+    <string name="blacklist_notification_multiple">Blokovaných hovorů: <xliff:g id="count">%d</xliff:g></string>
+    <string name="unblock_number">Odblokovat</string>
+
+    <string name="onscreenBlacklistText">Černá listina</string>
+
+    <string name="voice_quality_preferences_title">Vylepšení hlasu při hovoru</string>
+    <string name="voice_quality_summary">Použít profil: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normální</string>
+    <string name="voice_quality_entry_clear">Čistý</string>
+    <string name="voice_quality_entry_crisp">Ostrý</string>
+    <string name="voice_quality_entry_bright">Jasný</string>
+</resources>
