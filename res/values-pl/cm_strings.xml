@@ -74,6 +74,11 @@
     <string name="blacklist_notification_private_number">Zablokowano połączenie przychodzące od numeru prywatnego</string>
     <string name="blacklist_notification_multiple">Zablokowane połączenia: <xliff:g id="count">%d</xliff:g></string>
 
+    <string name="blacklist_unknown_numbers_title">Numery nieznane</string>
+    <string name="blacklist_unknown_numbers_summary">Blokuj połączenia przychodzące od numerów spoza listy kontaktów</string>
+    <string name="blacklist_notification_list_private">Prywatne</string>
+    <string name="blacklist_notification_unknown_number">Zablokowano połączenie przychodzące od numeru nieznanego %s</string>
+
     <string name="voice_quality_preferences_title">Jakość głosu</string>
     <string name="voice_quality_summary">Użyj profilu: <xliff:g id="value">%s</xliff:g></string>
     <string name="voice_quality_entry_normal">Normalny</string>
