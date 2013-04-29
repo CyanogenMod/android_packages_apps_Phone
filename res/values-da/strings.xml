@@ -629,9 +629,4 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Vibrer ved opringning"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Tastaturtoner"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Ringetone og vibration"</string>
-
-    <!-- CYANOGENMOD ADDITIONS -->
-    <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum\nNæste periode starter om <xliff:g id="used">%4$d</xliff:g> dage (<xliff:g id="used">%5$s</xliff:g>)</string>
-    <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum</string>
-    <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A af cyklus gået\nNæste periode starter om <xliff:g id="used">%2$d</xliff:g> dage (<xliff:g id="used">%3$s</xliff:g>)</string>
 </resources>
