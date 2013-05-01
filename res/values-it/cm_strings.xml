@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-     Copyright (C) 2013 The CyanogenMod Project
+<!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,8 +12,7 @@
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      See the License for the specific language governing permissions and
      limitations under the License.
- -->
-
+-->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="callUnanswered_forwarded">Chiamata non risposta e inoltrata</string>
     <string name="mwi_notification_title">Indicatore di messaggio in attesa</string>
@@ -23,11 +21,6 @@
     <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modalità di rete preferita: LTE / CMDA / EvDo / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_wcdma_summary">Modalità di rete preferita: LTE / WCDMA</string>
-  <string-array name="preferred_network_mode_choices_lte_gsm">
-    <item>LTE/WCDMA</item>
-    <item>LTE/GSM/WCDMA</item>
-    <item>GSM/WCDMA preferito</item>
-  </string-array>
     <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo per periodo\nIl prossimo periodo inizia tra <xliff:g id="used">%4$d</xliff:g> giorni (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo per periodo</string>
     <string name="card_title_dialing_waiting">Chiamata in corso (in attesa\u2026)</string>
@@ -71,16 +64,6 @@
     <string name="flip_action_title">Azione capovolgimento</string>
     <string name="flip_action_dialog_title">Capovolgi dispositivo per\u2026</string>
     <string name="flip_action_summary">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
-  <string-array name="flip_action_setting_entries">
-    <item>Non fare nulla</item>
-    <item>Disattivare la suoneria</item>
-    <item>Terminare la chiamata</item>
-  </string-array>
-  <string-array name="flip_action_summary_entries">
-    <item>non farà nulla</item>
-    <item>farà disattivare la suoneria</item>
-    <item>farà terminare la chiamata</item>
-  </string-array>
     <string name="blacklist_title">Blacklist</string>
     <string name="enable_blacklist_title">Attiva blacklist</string>
     <string name="blacklist_summary_disabled">Disattivata</string>

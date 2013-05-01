@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,20 +13,17 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="preferred_network_mode_choices_lte_gsm">
         <item>LTE/WCDMA</item>
         <item>LTE/GSM/WCDMA</item>
         <item>GSM/WCDMA preferred</item>
     </string-array>
-
     <string-array name="flip_action_setting_entries">
         <item>Nic nie robi</item>
         <item>Wycisza dzwonek</item>
         <item>Odrzuca połączenie</item>
     </string-array>
-
     <string-array name="flip_action_summary_entries">
         <item>nic nie robi</item>
         <item>wycisza dzwonek</item>

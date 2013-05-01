@@ -623,40 +623,4 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Vibrează când sună"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Tonuri la ating. tastaturii pt. apelare"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Ton de sonerie și vibrare"</string>
-
-    <string name="noise_suppression_title">"Suprimare zgomot"</string>
-    <string name="noise_suppression_summary">"Activaţi suprimare zgomot pentru apeluri"</string>
-    <string name="advanced_setting">"Setări Avansate"</string>
-    <string name="vibrate_outgoing">"Vibrare la răspuns"</string>
-    <string name="vibrate_call_waiting">"Vibrare apel în aşteptare"</string>
-    <string name="vibrate_hangup">"Vibrare la sfârşitul apelului"</string>
-    <string name="vibrate_45">"Vibrare fiecare 45 de secunde"</string>
-    <string name="vibrate_45_sum">"Vibrare la fiecare a 45-a secundă a unui minut în timpul apelului de ieşire"</string>
-    <string name="national_roaming">"Roaming de date naţional"</string>
-    <string name="national_roaming_enable">"Serviciile de date în roaming naţional activate"</string>
-    <string name="national_roaming_disable">"Serviciile de date în roaming naţional dezactivate"</string>
-    <string name="dialer_ui_settings_title">"Setări tast. numerică"</string>
-    <string name="dialer_ui_settings_summary">"Setări pentru tastatura numerică"</string>
-    <string name="perm_change_mobile_network">"Modificaţi reţeaua (2G/3G)"</string>
-    <string name="perm_change_mobile_network_desc">"Aplicația cu această permisiune poate, în orice moment, schimba între datele 2G şi 3G. 3G este mai rapid, consumă mai multă baterie și vă poate costa de asemenea, mai mulți bani."</string>
-
-    <string name="callUnanswered_forwarded">"Apel nepreluat şi redirecţionat"</string>
-    <string name="card_title_waiting_call">"Apel în aşteptare"</string>
-    <string name="call_notif_unconditionalCF">"Redirecţionare apeluri necondiţionată activă"</string>
-    <string name="call_notif_conditionalCF">"Redirecţionare apeluri condiţionată activă"</string>
-    <string name="call_notif_MOcall_forwarding">"Apelul de ieşire este redirecţionat"</string>
-    <string name="call_notif_cugcall">"Apel în grup închis de utilizatori"</string>
-    <string name="call_notif_outgoing_barred">"Apelurile de ieşire blocate"</string>
-    <string name="call_notif_incoming_barred">"Apelurile de intrare blocate"</string>
-    <string name="call_notif_clir_suppression_rejected">"Suprimarea propriului număr respinsă de reţea"</string>
-    <string name="call_notif_call_deflected">"Apel deviat"</string>
-    <string name="call_notif_MTcall_forwarding">"Apelul de intrare este redirecţionat"</string>
-    <string name="call_notif_multipartycall">"Teleconferinţă"</string>
-    <string name="call_notif_callonhold_released">"Apel lansat de la distanţă"</string>
-    <string name="call_notif_forwardcheckreceived">"Apelul a fost redirecţionat"</string>
-    <string name="call_notif_callconnectingect">"Conectare prin transfer apel explicit"</string>
-    <string name="call_notif_callconnectedect">"Apel conectat prin transfer apel explicit"</string>
-    <string name="incall_call_type_label_forwarded">"Apel redirecţionat"</string>
-    <string name="show_ssn_label">"Notificare eveniment"</string>
-    <string name="show_ssn_summary">"Arătaţi o notificare pentru diverse evenimente de reţea legate de manipularea cu apelurile"</string>
 </resources>

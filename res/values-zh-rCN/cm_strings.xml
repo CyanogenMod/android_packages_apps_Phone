@@ -13,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="callUnanswered_forwarded">呼叫未接通并被转接</string>
     <string name="mwi_notification_title">信息等待指示器</string>
