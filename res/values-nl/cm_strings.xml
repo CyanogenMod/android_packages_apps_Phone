@@ -70,6 +70,8 @@
     <string name="blacklist_notify">Melding weergeven</string>
     <string name="blacklist_private_numbers_title">Afgeschermde nummers</string>
     <string name="blacklist_private_numbers_summary">Oproepen blokkeren van afgeschermde nummers</string>
+    <string name="blacklist_unknown_numbers_title">Onbekende nummers</string>
+    <string name="blacklist_unknown_numbers_summary">Oproepen blokkeren van nummers die niet in de contactlijst staan</string>
     <string name="blacklist_regex_title">Jokertekens gebruiken</string>
     <string name="blacklist_regex_summary">Gebruik . als jokerteken en * voor herhaling. Bijv.: 123.* blokkeert nummers die beginnen met 123 en .*123.* blokkeert nummers die 123 bevatten</string>
     <string name="add_blacklist_number">Telefoonnummer toevoegen</string>
@@ -79,6 +81,9 @@
     <string name="remove_blacklist_number">%s verwijderen van zwarte lijst?</string>
     <string name="blacklist_notification">Oproep geblokkeerd van %s</string>
     <string name="blacklist_notification_private_number">Oproep geblokkeerd van afgeschermd nummer</string>
+    <string name="blacklist_notification_list_private">Afgeschermd</string>
+    <string name="blacklist_notification_unknown_number">Oproep geblokkeerd van onbekend nummer %s</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> oproepen geblokkeerd</string>
     <string name="unblock_number">Deblokkeren</string>
     <string name="onscreenBlacklistText">Zwarte lijst</string>
     <string name="voice_quality_preferences_title">Geluidskwaliteit</string>
@@ -87,4 +92,5 @@
     <string name="voice_quality_entry_clear">Helder</string>
     <string name="voice_quality_entry_crisp">Helderder</string>
     <string name="voice_quality_entry_bright">Helderst</string>
+    <string name="enter_input">USSD-bericht moet tussen de <xliff:g id="min_len" >%d</xliff:g> en <xliff:g id="max_len" >%d</xliff:g> tekens zijn. Probeer het opnieuw.</string>
 </resources>
