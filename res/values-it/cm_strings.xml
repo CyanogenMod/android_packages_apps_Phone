@@ -70,7 +70,7 @@
     <string name="blacklist_summary">Le chiamate in entrata provenienti da numeri di telefono presenti nella blacklist verranno bloccate</string>
     <string name="blacklist_notify">Mostra notifica</string>
     <string name="blacklist_private_numbers_title">Numeri privati</string>
-    <string name="blacklist_private_numbers_summary">Blocca le chiamate in entrata da numeri privati</string>
+    <string name="blacklist_private_numbers_summary">Blocca le chiamate in entrata dai numeri privati</string>
     <string name="blacklist_unknown_numbers_title">Numeri sconosciuti</string>
     <string name="blacklist_unknown_numbers_summary">Blocca le chiamate in entrata dai numeri non presenti in rubrica</string>
     <string name="blacklist_regex_title">Usa caratteri speciali</string>
@@ -93,4 +93,5 @@
     <string name="voice_quality_entry_clear">Chiara</string>
     <string name="voice_quality_entry_crisp">Ben definita</string>
     <string name="voice_quality_entry_bright">Brillante</string>
+    <string name="enter_input">Il messaggio USSD deve essere compreso tra <xliff:g id="min_len" >%d</xliff:g> e <xliff:g id="max_len" >%d</xliff:g> caratteri. Per favore riprova.</string>
 </resources>
