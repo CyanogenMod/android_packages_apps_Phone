@@ -629,34 +629,4 @@
     <string name="vibrate_on_ring_title" msgid="9197564612065258960">"Mobilen vibrerar när det ringer"</string>
     <string name="dtmf_tone_enable_title" msgid="827601042915852989">"Knappljud"</string>
     <string name="preference_category_ringtone" msgid="5197960752529332721">"Ringsignal och vibrera"</string>
-
-    <!-- Noise suppression -->
-    <string name="noise_suppression_title">Brusreducering</string>
-    <string name="noise_suppression_summary">Aktivera brusreducering för samtal</string>
-    <!-- End Noise suppression -->
-
-    <!-- CYANOGENMOD ADDITIONS START -->
-
-    <!-- Advanced Settings -->
-    <string name="advanced_setting">Avancerade Inställningar</string>
-    <string name="vibrate_outgoing">Vibrera vid svar</string>
-    <string name="vibrate_call_waiting">Vibrera vid samtal väntar</string>
-    <string name="vibrate_hangup">Vibrera vid samtalsslut</string>
-    <string name="vibrate_45">Vibrera var 45e sekund</string>
-    <string name="vibrate_45_sum">Vibrerar vid sekund 45 varje minut vid utgående samtal</string>
-    <string name="show_ssn_label">Händelsenotifiering</string>
-    <string name="show_ssn_summary">Visa en notifiering för olika samtals- och nätverksrelaterade händelser</string>
-
-    <!-- Mobile network settings screen, setting check box name -->
-    <string name="national_roaming">Nationell data-roaming</string>
-    <!-- Mobile network settings screen, setting summary text when check box is selected -->
-    <string name="national_roaming_enable">Anslut till datatjänster vid nationell roaming</string>
-    <!-- Mobile network settings screen, setting summary text when check box is clear -->
-    <string name="national_roaming_disable">Anslut till datatjänster vid nationell roaming</string>
-
-    <!-- Permission for notification-bar network toggle -->
-    <string name="perm_change_mobile_network">Byt nätverk (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
-
-    <!-- CYANOGENMOD ADDITIONS END -->
 </resources>

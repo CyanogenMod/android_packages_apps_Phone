@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="callUnanswered_forwarded">השיחה לא נענתה והועברה</string>
+    <string name="mwi_notification_title">חיווי הודעה ממתינה</string>
+    <string name="mwi_notification_summary">הצג את חיווי ההודעה הממתינה עבור הודעות קוליות</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">מצב רשת מועדף: LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_gsm_summary">מצב רשת מועדף: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">מצב רשת מועדף: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">מצב רשת מועדף: LTE / WCDMA</string>
+    <string name="card_title_waiting_call">שיחה ממתינה</string>
+    <string name="call_notif_unconditionalCF">העברת שיחות ללא תנאי פעילה</string>
+    <string name="call_notif_conditionalCF">העברת שיחות פעילה בתנאים מסויימים</string>
+    <string name="call_notif_MOcall_forwarding">השיחה היוצאת מופנית</string>
+    <string name="call_notif_cugcall">שיחה בקבוצת משתמשים סגורה</string>
+    <string name="call_notif_outgoing_barred">שיחות יוצאות חסומות</string>
+    <string name="call_notif_incoming_barred">שיחות נכנסות חסומות בצד המרוחק</string>
+    <string name="call_notif_clir_suppression_rejected">דיכוי המספר נדחה על ידי הרשת</string>
+    <string name="call_notif_call_deflected">השיחה מופנית בצד המרוחק</string>
+    <string name="call_notif_MTcall_forwarding">השיחה הנכנסת מופנית</string>
+    <string name="call_notif_multipartycall">שיחה מרובת משתתפים</string>
+    <string name="call_notif_callonhold_released">השיחה שוחררה מרחוק</string>
+    <string name="call_notif_forwardcheckreceived">השיחה הופנתה</string>
+    <string name="call_notif_callconnectingect">מתחבר לשיחה דרך העברת שיחות מפורשת</string>
+    <string name="call_notif_callconnectedect">מחובר לשיחה דרך העברת שיחות מפורשת</string>
+    <string name="incall_call_type_label_forwarded">שיחה מופנית</string>
+    <string name="dialer_ui_settings_title">הגדרות חייגן</string>
+    <string name="dialer_ui_settings_summary">הגדרות של לוח החיוג</string>
+    <string name="noise_suppression_title">סינון רעשים</string>
+    <string name="noise_suppression_summary">אפשר הפחתת רעשי רקע עבור שיחות</string>
+    <string name="advanced_setting">הגדרות מתקדמות</string>
+    <string name="vibrate_outgoing">רטוט במענה</string>
+    <string name="vibrate_call_waiting">רטוט בשיחה ממתינה</string>
+    <string name="vibrate_hangup">רטוט בניתוק</string>
+    <string name="vibrate_45">רטוט כל 45 שניות</string>
+    <string name="vibrate_45_sum">אם מסומן, המכשיר ירטוט אחרי 45 שניות של כל דקת שיחה יוצאת</string>
+    <string name="show_ssn_label">התראת אירוע</string>
+    <string name="show_ssn_summary">הצג התראה עבור אירועי רשת שונים הקשורים לניהול שיחות</string>
+    <string name="national_roaming">נדידת נתונים מקומית</string>
+    <string name="national_roaming_enable">התחבר לשירותי נתונים בעת נדידה בארץ</string>
+    <string name="national_roaming_disable">התחבר לשירותי נתונים בעת נדידה בארץ</string>
+    <string name="perm_change_mobile_network">שינוי רשת (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">יישום עם הרשאה זו יכול, בכל זמן, לעבור בין רשת 2G לרשת 3G. רשת 3G מהירה יותר, צורכת יותר סוללה, ועלולה להיות יקרה יותר.</string>
+</resources>

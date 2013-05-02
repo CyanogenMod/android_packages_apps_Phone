@@ -14,19 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="preferred_network_mode_choices_lte_gsm">
-        <item>LTE/WCDMA</item>
-        <item>LTE/GSM/WCDMA</item>
-        <item>首选 GSM/WCDMA</item>
-    </string-array>
-    <string-array name="flip_action_setting_entries">
-        <item>不产生任何作用</item>
-        <item>停止响铃</item>
-        <item>拒绝来电</item>
-    </string-array>
-    <string-array name="flip_action_summary_entries">
-        <item>不产生任何作用</item>
-        <item>停止响铃</item>
-        <item>拒绝来电</item>
-    </string-array>
+    <string name="perm_change_mobile_network">Zmeniť sieť (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Aplikácia s týmito povoleniami môže kedykoľvek zmeniť sieť medzi 2G a 3G. 3G je rýchlejšie, viac využíva batériu, a taktiež Vás môže stáť viac peňazí.</string>
 </resources>

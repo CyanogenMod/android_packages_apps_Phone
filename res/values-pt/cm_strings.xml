@@ -13,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="perm_change_mobile_network">Alternar rede de dados (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Aplicação com está permissão pode a qualquer momento, alterar entre dados 2G and 3G. 3G é mais rápido, consome mais bateria, e também pode gastar mais seu dinheiro.</string>
@@ -91,6 +90,5 @@
     <string name="blacklist_unknown_numbers_summary">Bloquear chamadas recebidas de números que não estão na sua lista de contato</string>
     <string name="blacklist_notification_list_private">Privado</string>
     <string name="blacklist_notification_unknown_number">Número desconhecido %s foi bloqueado</string>
-    <string name="blacklist_notification_multiple">
-        <xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> chamadas foram bloqueadas</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> chamadas foram bloqueadas</string>
 </resources>

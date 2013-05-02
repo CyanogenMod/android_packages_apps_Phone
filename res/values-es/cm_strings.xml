@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,12 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="enter_input">El mensaje USSD debe tener entre <xliff:g id="min_len" >%d</xliff:g> y <xliff:g id="max_len" >%d</xliff:g> caracteres. Por favor, inténtalo de nuevo.</string>
     <string name="throttle_status_subtext">Máx de <xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) del período <xliff:g id="used">%3$s</xliff:g>\nPróx período en <xliff:g id="used">%4$d</xliff:g> días (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext">Máx de <xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) del período <xliff:g id="used">%3$s</xliff:g></string>
-
     <string name="callUnanswered_forwarded">Llamada perdida reenviada</string>
     <string name="mwi_notification_title">Notificación buzón de voz</string>
     <string name="mwi_notification_summary">Mostrar una notificación para los mensajes en espera del buzón de voz</string>

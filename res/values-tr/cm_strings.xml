@@ -14,19 +14,6 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string-array name="preferred_network_mode_choices_lte_gsm">
-        <item>LTE/WCDMA</item>
-        <item>LTE/GSM/WCDMA</item>
-        <item>首选 GSM/WCDMA</item>
-    </string-array>
-    <string-array name="flip_action_setting_entries">
-        <item>不产生任何作用</item>
-        <item>停止响铃</item>
-        <item>拒绝来电</item>
-    </string-array>
-    <string-array name="flip_action_summary_entries">
-        <item>不产生任何作用</item>
-        <item>停止响铃</item>
-        <item>拒绝来电</item>
-    </string-array>
+    <string name="perm_change_mobile_network">Şebeke değiştir (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Bu ayar istediğiniz zaman 2G ve 3G arasında geçiş yapmanızı sağlar. 3G daha hızlıdır ama daha fazla pil tüketir ve ek olarak daha fazla ücret ödemenize sebep olabilir.</string>
 </resources>

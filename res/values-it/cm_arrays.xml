@@ -17,16 +17,16 @@
     <string-array name="preferred_network_mode_choices_lte_gsm">
         <item>LTE/WCDMA</item>
         <item>LTE/GSM/WCDMA</item>
-        <item>首选 GSM/WCDMA</item>
+        <item>GSM/WCDMA preferito</item>
     </string-array>
     <string-array name="flip_action_setting_entries">
-        <item>不产生任何作用</item>
-        <item>停止响铃</item>
-        <item>拒绝来电</item>
+        <item>Non fare nulla</item>
+        <item>Disattivare la suoneria</item>
+        <item>Terminare la chiamata</item>
     </string-array>
     <string-array name="flip_action_summary_entries">
-        <item>不产生任何作用</item>
-        <item>停止响铃</item>
-        <item>拒绝来电</item>
+        <item>non farà nulla</item>
+        <item>farà disattivare la suoneria</item>
+        <item>farà terminare la chiamata</item>
     </string-array>
 </resources>
