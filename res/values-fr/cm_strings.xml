@@ -57,7 +57,7 @@
     <string name="calllog_after_call_summary">Afficher l\'historique à la fin d\'un appel</string>
     <string name="national_roaming">Données d\'itinérance en nationale</string>
     <string name="national_roaming_enable">Se connecter au service de données pendant l\'itinérance nationale</string>
-    <string name="national_roaming_disable">Ne pas se connecter au service de données pendant l\'itinérance nationale</string>
+    <string name="national_roaming_disable">Se connecter au service de données pendant l\'itinérance nationale</string>
     <string name="perm_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus rapide, consomme plus de batterie, et peut également vous coûter plus</string>
     <string name="flip_action_title">Action au retournement</string>

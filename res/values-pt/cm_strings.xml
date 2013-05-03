@@ -32,7 +32,7 @@
     <string name="vibrate_45_sum">Vibrar aos 45 segundos de cada minuto durante chamada efetuada</string>
     <string name="national_roaming">Roaming de dados nacional</string>
     <string name="national_roaming_enable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
-    <string name="national_roaming_disable">Não conectar aos serviços de dados quando estiver em roaming nacional</string>
+    <string name="national_roaming_disable">Conectar aos serviços de dados quando estiver em roaming nacional</string>
     <string name="callUnanswered_forwarded">Ligação não atendida e Encaminhada</string>
     <string name="mwi_notification_title">Indicador de Mensagem em Espera</string>
     <string name="mwi_notification_summary">Exibir notificações de indicador de mensagem em espera</string>

@@ -37,7 +37,7 @@
 
     <string name="national_roaming">Национальный роуминг</string>
     <string name="national_roaming_enable">Подключаться к службам передачи данных в национальном роуминге</string>
-    <string name="national_roaming_disable">Не подключаться к службам передачи данных в национальном роуминге</string>
+    <string name="national_roaming_disable">Подключаться к службам передачи данных в национальном роуминге</string>
 
     <string name="perm_change_mobile_network">Изменение сети (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Приложение, имеющее данное разрешение, может в любое время переключать режимы связи между 2G и 3G. Режим 3G имеет более высокую скорость и большее потребление энергии.</string>
