@@ -13,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="callUnanswered_forwarded">Appel sans réponse et transmis</string>
     <string name="mwi_notification_title">Indicateur de message en attente</string>
@@ -70,6 +69,8 @@
     <string name="blacklist_notify">Afficher une notification</string>
     <string name="blacklist_private_numbers_title">Numéro masqué</string>
     <string name="blacklist_private_numbers_summary">Bloquer les appels provenant d\'un numéro masqué</string>
+    <string name="blacklist_unknown_numbers_title">Numéros inconnus</string>
+    <string name="blacklist_unknown_numbers_summary">Bloquer les appels entrants de numéros non répertoriés dans la liste des contacts</string>
     <string name="blacklist_regex_title">Utiliser des caractères génériques</string>
     <string name="blacklist_regex_summary">Utiliser un point comme caractère générique et une astérisque pour le répétition. Exemple, 123.* si le numéro de téléphone commence par 123 et .*123.* si le numéro de téléphone contient 123</string>
     <string name="add_blacklist_number">Ajouter le numéro à la liste noire</string>
@@ -79,6 +80,9 @@
     <string name="remove_blacklist_number">Voulez-vous supprimer le numéro %s de la liste noire\u00A0?</string>
     <string name="blacklist_notification">Appel bloqué de %s</string>
     <string name="blacklist_notification_private_number">Un appel masqué a été bloqué</string>
+    <string name="blacklist_notification_list_private">Privé</string>
+    <string name="blacklist_notification_unknown_number">%s numéros inconnus bloqués</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> appels ont été bloqués</string>
     <string name="unblock_number">Débloqué</string>
     <string name="onscreenBlacklistText">Liste noire</string>
     <string name="voice_quality_preferences_title">Qualité audio</string>
@@ -87,4 +91,5 @@
     <string name="voice_quality_entry_clear">Net</string>
     <string name="voice_quality_entry_crisp">Clair</string>
     <string name="voice_quality_entry_bright">Brillant</string>
+    <string name="enter_input">Les messages de type USSD doivent être compris entre <xliff:g id="min_len" >%d</xliff:g> et <xliff:g id="max_len" >%d</xliff:g> caractères. Réessayer.</string>
 </resources>
