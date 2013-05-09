@@ -116,4 +116,6 @@
     <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum\nNæste periode starter om <xliff:g id="used">%4$d</xliff:g> dage (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum</string>
     <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A af cyklus gået\nNæste periode starter om <xliff:g id="used">%2$d</xliff:g> dage (<xliff:g id="used">%3$s</xliff:g>)</string>
+
+    <string name="enter_input">USSD-besked skal være mellem <xliff:g id="min_len" >%d</xliff:g> og <xliff:g id="max_len" >%d</xliff:g> tegn. Prøv igen.</string>
 </resources>
