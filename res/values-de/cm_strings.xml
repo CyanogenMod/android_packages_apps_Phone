@@ -17,6 +17,11 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Bevorzugter Netzwerkmodus: LTE / CDMA / EvDo</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Bevorzugter Netzwerkmodus: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Bevorzugter Netzwerkmodus: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">Bevorzugter Netzwerkmodus: LTE / WCDMA</string>
+
     <string name="callUnanswered_forwarded">Anruf wurde nicht beantwortet und weitergeleitet</string>
     <string name="call_notif_unconditionalCF">Dauerhafte Anrufweiterleitung ist aktiviert</string>
     <string name="call_notif_conditionalCF">Bedingte Anrufweiterleitung ist aktiviert</string>
@@ -96,6 +101,8 @@
     <string name="blacklist_notify">Benachrichtigungen anzeigen</string>
     <string name="blacklist_private_numbers_title">Unterdrückte Nummern</string>
     <string name="blacklist_private_numbers_summary">Eingehende Anrufe mit unterdrückter Nummer abweisen</string>
+    <string name="blacklist_unknown_numbers_title">Unbekannte Nummern</string>
+    <string name="blacklist_unknown_numbers_summary">Eingehende Anrufe von Anrufern, die nicht in der Kontaktliste enthalten sind, abweisen</string>
     <string name="blacklist_regex_title">Platzhalter verwenden</string>
     <string name="blacklist_regex_summary">Einen Punkt als Platzhalter und ein Stern für Wiederholungen verwenden.\nBeispielsweise würde 123.* alle Nummern, die mit 123 beginnen, und .*123.* alle Nummern, die 123 enthalten, abweisen.</string>
 
@@ -109,9 +116,21 @@
     <!-- Blacklist notifications -->
     <string name="blacklist_notification">Ein Anruf von %s wurde abgewiesen</string>
     <string name="blacklist_notification_private_number">Ein Anruf mit unterdrückter Nummer wurde abgewiesen</string>
+    <string name="blacklist_notification_unknown_number">Ein Anruf von %s wurde abgewiesen</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> abgewiesene Anrufe</string>
+    <string name="blacklist_notification_list_private">Unterdrückte Nummer</string>
     <string name="unblock_number">Sperre aufheben</string>
 
     <!-- Text for the onscreen "Blacklist" button -->
     <string name="onscreenBlacklistText">Sperrliste</string>
+
+    <!-- Voice quality filter -->
+    <string name="voice_quality_preferences_title">Sprachqualität</string>
+    <string name="voice_quality_summary">Verwendetes Profil: <xliff:g id="value">%s</xliff:g></string>
+    <!-- Do not remove those, they're used from overlays. -->
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Klar</string>
+    <string name="voice_quality_entry_crisp">Sehr klar</string>
+    <string name="voice_quality_entry_bright">Hell</string>
 
 </resources>
