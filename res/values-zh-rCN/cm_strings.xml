@@ -67,8 +67,10 @@
     <string name="blacklist_summary_disabled">已禁用</string>
     <string name="blacklist_summary">阻止黑名单中的电话号码的来电</string>
     <string name="blacklist_notify">显示通知</string>
-    <string name="blacklist_private_numbers_title">阻止私人号码</string>
+    <string name="blacklist_private_numbers_title">私人号码</string>
     <string name="blacklist_private_numbers_summary">阻止私人号码的来电</string>
+    <string name="blacklist_unknown_numbers_title">未知号码</string>
+    <string name="blacklist_unknown_numbers_summary">阻止不在联系人列表上的号码的来电</string>
     <string name="blacklist_regex_title">使用通配符</string>
     <string name="blacklist_regex_summary">使用 . 作为通配符和 * 作为重复字符, 例如: 123.* 将会阻止所有 123 为前缀的号码; .*123.* 将会阻止所有包含 123 的号码</string>
     <string name="add_blacklist_number">添加电话号码</string>
@@ -78,6 +80,9 @@
     <string name="remove_blacklist_number">您确定要从黑名单移除 %s 吗?</string>
     <string name="blacklist_notification">阻止了 %s 的来电</string>
     <string name="blacklist_notification_private_number">阻止了私人号码的来电</string>
+    <string name="blacklist_notification_list_private">私人号码</string>
+    <string name="blacklist_notification_unknown_number">阻止了未知号码 %s</string>
+    <string name="blacklist_notification_multiple">阻止了 <xliff:g id="count">%d</xliff:g> 个来电</string>
     <string name="unblock_number">解除阻止</string>
     <string name="onscreenBlacklistText">黑名单</string>
     <string name="voice_quality_preferences_title">通话质量</string>
@@ -86,4 +91,5 @@
     <string name="voice_quality_entry_clear">清晰</string>
     <string name="voice_quality_entry_crisp">清脆</string>
     <string name="voice_quality_entry_bright">明亮</string>
+    <string name="enter_input">USSD 信息必须要在 <xliff:g id="min_len" >%d</xliff:g> 与 <xliff:g id="max_len" >%d</xliff:g> 字符之间. 请重新尝试.</string>
 </resources>
