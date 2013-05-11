@@ -69,6 +69,8 @@
     <string name="blacklist_notify">Εμφάνιση ειδοποίησης</string>
     <string name="blacklist_private_numbers_title">Απόρρητοι αριθμοί</string>
     <string name="blacklist_private_numbers_summary">Φραγή εισερχομένων κλήσεων από απόρρητους αριθμούς</string>
+    <string name="blacklist_unknown_numbers_title">Άγνωστοι αριθμοί</string>
+    <string name="blacklist_unknown_numbers_summary">Φραγή εισερχόμενων κλήσεων από αριθμούς που δεν είναι στην λίστα επαφών σας</string>
     <string name="blacklist_regex_title">Χρήση μπαλαντέρ</string>
     <string name="blacklist_regex_summary">Χρήση . ως μπαλαντέρ και * για επανάληψη. Π.χ. το 123.* μπλοκάρει αριθμούς που ξεκινούν από 123 και το .*123.* μπλοκάρει αριθμούς που περιέχουν το 123</string>
     <string name="add_blacklist_number">Προσθήκη αριθμού</string>
@@ -78,6 +80,9 @@
     <string name="remove_blacklist_number">Θέλετε να αφαιρέσετε το %s από τη μαύρη λίστα;</string>
     <string name="blacklist_notification">Απορρίφθηκε κλήση από το %s</string>
     <string name="blacklist_notification_private_number">Απορρίφθηκε κλήση από απόρρητο αριθμό</string>
+    <string name="blacklist_notification_list_private">Απόρρητο</string>
+    <string name="blacklist_notification_unknown_number">Απορρίφθηκε άγνωστος αριθμός %s</string>
+    <string name="blacklist_notification_multiple">Απορρίφθηκαν <xliff:g id="count">%d</xliff:g> κλήσεις</string>
     <string name="unblock_number">Ακύρωση φραγής</string>
     <string name="onscreenBlacklistText">Μαύρη λίστα</string>
     <string name="voice_quality_preferences_title">Ποιότητα ήχου</string>
@@ -86,4 +91,5 @@
     <string name="voice_quality_entry_clear">Καθαρός</string>
     <string name="voice_quality_entry_crisp">Ζωηρός</string>
     <string name="voice_quality_entry_bright">Έντονος</string>
+    <string name="enter_input">Το μήνυμα USSD πρέπει να είναι μεταξύ <xliff:g id="min_len" >%d</xliff:g> και <xliff:g id="max_len" >%d</xliff:g> χαρακτήρων. Παρακαλώ προσπαθήστε ξανά.</string>
 </resources>
