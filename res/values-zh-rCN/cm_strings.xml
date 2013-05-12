@@ -40,8 +40,8 @@
     <string name="incall_call_type_label_forwarded">转接通话</string>
     <string name="dialer_ui_settings_title">拨号键盘设置</string>
     <string name="dialer_ui_settings_summary">更改拨号键盘的设置</string>
-    <string name="noise_suppression_title">噪音镇压</string>
-    <string name="noise_suppression_summary">呼叫时启用噪音镇压</string>
+    <string name="noise_suppression_title">噪声抑制</string>
+    <string name="noise_suppression_summary">呼叫时启用噪声抑制</string>
     <string name="advanced_setting">高级设置</string>
     <string name="vibrate_outgoing">对方接听时震动</string>
     <string name="vibrate_call_waiting">呼叫等待时震动</string>
