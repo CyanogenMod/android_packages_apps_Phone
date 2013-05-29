@@ -28,6 +28,6 @@
         android:state_enabled="true"
         android:state_active="true"
         android:state_focused="false"
-        android:drawable="@*android:drawable/ic_lockscreen_handle_pressed" />
+        android:drawable="@drawable/ic_lockscreen_handle_pressed" />
 
 </selector>
