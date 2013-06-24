@@ -25,8 +25,7 @@
     <string name="calllog_after_call">Wys verslag</string>
     <string name="calllog_after_call_summary">Wys die oproep verslag nadat die oproep beëindig is</string>
     <string name="national_roaming">Nasionale dataswerwing</string>
-    <string name="national_roaming_enable">Koppel aan data dienste wanneer nasionaal swerf</string>
-    <string name="national_roaming_disable">Koppel aan data dienste wanneer nasionaal swerf</string>
+    <string name="national_roaming_summary">Koppel aan data dienste wanneer nasionaal swerf</string>
     <string name="perm_change_mobile_network">Verander netwerk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">\'n program met hierdie toestemming kan, te enige tyd, tussen 2G en 3G data verander. 3G is vinniger maar gebruik meer battery en kan duurder wees.</string>
     <string name="dialer_ui_settings_title">Sleutelbord</string>

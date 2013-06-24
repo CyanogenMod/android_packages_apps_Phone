@@ -50,8 +50,7 @@
     <string name="show_ssn_label">התראת אירוע</string>
     <string name="show_ssn_summary">הצג התראה עבור אירועי רשת שונים הקשורים לניהול שיחות</string>
     <string name="national_roaming">נדידת נתונים מקומית</string>
-    <string name="national_roaming_enable">התחבר לשירותי נתונים בעת נדידה בארץ</string>
-    <string name="national_roaming_disable">התחבר לשירותי נתונים בעת נדידה בארץ</string>
+    <string name="national_roaming_summary">התחבר לשירותי נתונים בעת נדידה בארץ</string>
     <string name="perm_change_mobile_network">שינוי רשת (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">יישום עם הרשאה זו יכול, בכל זמן, לעבור בין רשת 2G לרשת 3G. רשת 3G מהירה יותר, צורכת יותר סוללה, ועלולה להיות יקרה יותר.</string>
 </resources>

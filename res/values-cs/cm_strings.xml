@@ -67,8 +67,7 @@
     <string name="calllog_after_call_summary">Zobrazit záznam hovorů po ukončení hovoru</string>
 
     <string name="national_roaming">Vnitrostátní datový roaming</string>
-    <string name="national_roaming_enable">Používat datové služby při vnitrostátním roamingu</string>
-    <string name="national_roaming_disable">Nepoužívat datové služby při vnitrostátním roamingu</string>
+    <string name="national_roaming_summary">Používat datové služby při vnitrostátním roamingu</string>
 
     <string name="perm_change_mobile_network">změnit typ sítě (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Umožní měnit typ datového připojení.</string>

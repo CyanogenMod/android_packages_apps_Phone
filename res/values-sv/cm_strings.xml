@@ -25,8 +25,7 @@
     <string name="show_ssn_label">Händelsenotifiering</string>
     <string name="show_ssn_summary">Visa en notifiering för olika samtals- och nätverksrelaterade händelser</string>
     <string name="national_roaming">Nationell data-roaming</string>
-    <string name="national_roaming_enable">Anslut till datatjänster vid nationell roaming</string>
-    <string name="national_roaming_disable">Anslut till datatjänster vid nationell roaming</string>
+    <string name="national_roaming_summary">Anslut till datatjänster vid nationell roaming</string>
     <string name="perm_change_mobile_network">Byt nätverk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
 </resources>
