@@ -55,8 +55,7 @@
     <string name="calllog_after_call">Εμφάνιση αρχείου</string>
     <string name="calllog_after_call_summary">Εμφάνιση του αρχείου κλήσεων μετά το τέλος μιας κλήσης</string>
     <string name="national_roaming">Εθνική περιαγωγή δεδομένων</string>
-    <string name="national_roaming_enable">Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
-    <string name="national_roaming_disable">Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
+    <string name="national_roaming_summary">Σύνδεση στις υπηρεσίες δεδομένων κατά την περιαγωγή σε εθνικό δίκτυο</string>
     <string name="perm_change_mobile_network">Επιλογή δικτύου (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Όποια εφαρμογή έχει αυτή την άδεια μπορεί να αλλάζει μεταξύ 2G και 3G δεδομένων. Το 3G είναι γρηγορότερο, καταναλώνει περισσότερο μπαταρία και μπορεί επίσης να σας κοστίσει περισσότερα χρήματα.</string>
     <string name="flip_action_title">Ενέργεια αναποδογυρίσματος</string>

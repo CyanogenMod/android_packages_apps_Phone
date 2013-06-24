@@ -57,8 +57,7 @@
     <string name="calllog_after_call">Registro chiamate</string>
     <string name="calllog_after_call_summary">Mostra il registro al termine di una chiamata</string>
     <string name="national_roaming">Roaming su rete nazionale</string>
-    <string name="national_roaming_enable">Connetti ai servizi dati se è attivo il roaming su rete nazionale</string>
-    <string name="national_roaming_disable">Connetti ai servizi dati se è attivo il roaming su rete nazionale</string>
+    <string name="national_roaming_summary">Connetti ai servizi dati se è attivo il roaming su rete nazionale</string>
     <string name="perm_change_mobile_network">Cambia rete (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
     <string name="flip_action_title">Azione capovolgimento</string>

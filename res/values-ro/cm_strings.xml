@@ -23,8 +23,7 @@
     <string name="vibrate_45">"Vibrare fiecare 45 de secunde"</string>
     <string name="vibrate_45_sum">"Vibrare la fiecare a 45-a secundă a unui minut în timpul apelului de ieşire"</string>
     <string name="national_roaming">"Roaming de date naţional"</string>
-    <string name="national_roaming_enable">"Serviciile de date în roaming naţional activate"</string>
-    <string name="national_roaming_disable">"Serviciile de date în roaming naţional activate"</string>
+    <string name="national_roaming_summary">"Serviciile de date în roaming naţional activate"</string>
     <string name="dialer_ui_settings_title">"Setări tast. numerică"</string>
     <string name="dialer_ui_settings_summary">"Setări pentru tastatura numerică"</string>
     <string name="perm_change_mobile_network">"Modificaţi reţeaua (2G/3G)"</string>

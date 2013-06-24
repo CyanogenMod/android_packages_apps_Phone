@@ -67,8 +67,7 @@
     <string name="calllog_after_call_summary">Vis opkaldsloggen, når opkaldet afsluttes</string>
 
     <string name="national_roaming">National data-roaming</string>
-    <string name="national_roaming_enable">Tilslut til datatjenester, når der roames nationalt</string>
-    <string name="national_roaming_disable">Tilslut til datatjenester, når der roames nationalt</string>
+    <string name="national_roaming_summary">Tilslut til datatjenester, når der roames nationalt</string>
 
     <string name="perm_change_mobile_network">Skift netværk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Apps med denne tilladelse kan, til alle tider, skifte mellem 2G-data og 3G-data. 3G er hurtigere, bruger mere batteri, og kan også koste dig flere penge.</string>

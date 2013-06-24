@@ -55,8 +55,7 @@
     <string name="calllog_after_call">显示通话记录</string>
     <string name="calllog_after_call_summary">通话结束时显示通话记录</string>
     <string name="national_roaming">国内移动数据漫游</string>
-    <string name="national_roaming_enable">在国内漫游时连接到数据服务</string>
-    <string name="national_roaming_disable">在国内漫游时连接到数据服务</string>
+    <string name="national_roaming_summary">在国内漫游时连接到数据服务</string>
     <string name="perm_change_mobile_network">切换移动网络 (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">获得该权限的应用程序可以随时在 2G/3G 移动数据网络之间切换. 3G 网络的速度会更快, 但也会消耗更多的电量并且可能花费更多的金钱.</string>
     <string name="flip_action_title">翻转行为</string>

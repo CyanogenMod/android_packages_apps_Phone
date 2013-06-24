@@ -58,8 +58,7 @@
     <string name="calllog_after_call">Mostrar registro</string>
     <string name="calllog_after_call_summary">Mostrar el registro de la llamada al colgar</string>
     <string name="national_roaming">Itinerancia de datos nacional</string>
-    <string name="national_roaming_enable">Establecer conexión con servicios de datos en itinerancia nacional</string>
-    <string name="national_roaming_disable">Establecer conexión con servicios de datos en itinerancia nacional</string>
+    <string name="national_roaming_summary">Establecer conexión con servicios de datos en itinerancia nacional</string>
     <string name="perm_change_mobile_network">Cambiar red (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Las aplicaciones con este permiso pueden, en cualquier momento, cambiar entre datos 2G y 3G. Es más rápido 3G, pero consume más batería y puede costar más dinero.</string>
     <string name="flip_action_title">Acción al voltear</string>
