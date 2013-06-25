@@ -427,10 +427,10 @@ public class PhoneUtils {
 
         /* blacklist handling */
         static boolean isBlacklistEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_enable_blacklist", false);
+            return getPrefs(context).getBoolean("button_enable_blacklist", true);
         }
         static boolean isBlacklistNotifyEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_nofify", false);
+            return getPrefs(context).getBoolean("button_nofify", true);
         }
         static boolean isBlacklistPrivateNumberEnabled(Context context) {
             return getPrefs(context).getBoolean("button_blacklist_private_numbers", false);
