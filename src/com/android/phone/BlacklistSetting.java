@@ -29,6 +29,7 @@ import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.Preference.OnPreferenceClickListener;
 import android.provider.ContactsContract.CommonDataKinds;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -43,6 +44,7 @@ public class BlacklistSetting extends PreferenceActivity implements
     private static final String LOG_TAG = PhoneGlobals.LOG_TAG;
     private static final boolean DBG = false;
 
+    private static final String BUTTON_ENABLE_BLACKLIST     = "button_enable_blacklist";
     private static final String BUTTON_ADD_BLACKLIST_NUMBER = "button_add_blacklist_number";
     private static final String BUTTON_BLACKLIST_PRIVATE    = "button_blacklist_private_numbers";
     private static final String BUTTON_BLACKLIST_UNKNOWN    = "button_blacklist_unknown_numbers";
@@ -54,6 +56,7 @@ public class BlacklistSetting extends PreferenceActivity implements
 
     private static final int ADD_BLACKLIST_ID = 3;
 
+    private CheckBoxPreference mBlacklistEnabled;
     private EditPhoneNumberPreference mButtonAddBlacklistNumber;
     private PreferenceCategory mCatBlacklist;
     private CheckBoxPreference mBlacklistPrivate;
@@ -68,6 +71,8 @@ public class BlacklistSetting extends PreferenceActivity implements
 
         //get UI object references
         PreferenceScreen prefSet = getPreferenceScreen();
+        mBlacklistEnabled = (CheckBoxPreference) prefSet.findPreference(BUTTON_ENABLE_BLACKLIST);
+        mBlacklistEnabled.setOnPreferenceChangeListener(this);
         mButtonAddBlacklistNumber = (EditPhoneNumberPreference) prefSet.findPreference(BUTTON_ADD_BLACKLIST_NUMBER);
         mButtonAddBlacklistNumber.setParentActivity(this, ADD_BLACKLIST_ID, this);
         mButtonAddBlacklistNumber.setDialogOnClosedListener(this);
@@ -89,6 +94,8 @@ public class BlacklistSetting extends PreferenceActivity implements
     protected void onResume() {
         super.onResume();
         PhoneGlobals.getInstance().notificationMgr.cancelBlacklistedCallNotification();
+        mBlacklistEnabled.setChecked(Settings.System.getInt(getContentResolver(),
+                    Settings.System.PHONE_BLACKLIST_ENABLED, 1) != 0);
         updateBlacklist();
     }
 
@@ -114,7 +121,11 @@ public class BlacklistSetting extends PreferenceActivity implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-        if (preference == mBlacklistPrivate) {
+        if (preference == mBlacklistEnabled) {
+            boolean checked = (Boolean) objValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PHONE_BLACKLIST_ENABLED, checked ? 1 : 0);
+        } else if (preference == mBlacklistPrivate) {
             boolean checked = (Boolean) objValue;
             if (!checked) {
                 mBlacklistUnknown.setChecked(false);
