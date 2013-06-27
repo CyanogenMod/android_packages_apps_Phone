@@ -136,22 +136,22 @@
     <string name="labelCFU" msgid="8147177368148660600">"Toujours transférer"</string>
     <string name="messageCFU" msgid="3560082430662923687">"Toujours utiliser ce numéro"</string>
     <string name="sum_cfu_enabled_indicator" msgid="4014187342724130197">"Transfert de tous les appels"</string>
-    <string name="sum_cfu_enabled" msgid="2450052502198827927">"Transfert de tous les appels vers <xliff:g id="PHONENUMBER">{0}</xliff:g>"</string>
+    <string name="sum_cfu_enabled" msgid="2450052502198827927">"Transfert de tous les appels vers <xliff:g id="phonenumber">{0}</xliff:g>"</string>
     <string name="sum_cfu_enabled_no_number" msgid="6591985777096823616">"Numéro indisponible"</string>
     <string name="sum_cfu_disabled" msgid="3698472522160364904">"Désactivé"</string>
     <string name="labelCFB" msgid="218938523102207587">"Transf. si ligne occupée"</string>
     <string name="messageCFB" msgid="3711089705936187129">"Numéro de renvoi lorsque la ligne est occupée"</string>
-    <string name="sum_cfb_enabled" msgid="5984198104833116690">"Transfert vers <xliff:g id="PHONENUMBER">{0}</xliff:g>"</string>
+    <string name="sum_cfb_enabled" msgid="5984198104833116690">"Transfert vers <xliff:g id="phonenumber">{0}</xliff:g>"</string>
     <string name="sum_cfb_disabled" msgid="227440009979537651">"Désactivé"</string>
     <string name="disable_cfb_forbidden" msgid="4524424437001441832">"Votre opérateur ne permet pas la désactivation du transfert d\'appel lorsque votre téléphone est indisponible."</string>
     <string name="labelCFNRy" msgid="3646316323834351390">"Transf. si sans réponse"</string>
     <string name="messageCFNRy" msgid="672317899884380374">"Numéro de renvoi lorsque vous ne répondez pas"</string>
-    <string name="sum_cfnry_enabled" msgid="6955775691317662910">"Transfert vers <xliff:g id="PHONENUMBER">{0}</xliff:g>"</string>
+    <string name="sum_cfnry_enabled" msgid="6955775691317662910">"Transfert vers <xliff:g id="phonenumber">{0}</xliff:g>"</string>
     <string name="sum_cfnry_disabled" msgid="8422350929957344729">"Désactivé"</string>
     <string name="disable_cfnry_forbidden" msgid="7041605706777677935">"Votre opérateur ne permet pas la désactivation du transfert d\'appel lorsque votre téléphone ne répond pas."</string>
     <string name="labelCFNRc" msgid="47183615370850000">"Transf. si injoignable"</string>
     <string name="messageCFNRc" msgid="6380695421020295119">"Numéro de renvoi si injoignable"</string>
-    <string name="sum_cfnrc_enabled" msgid="7010898346095497421">"Transfert vers <xliff:g id="PHONENUMBER">{0}</xliff:g>"</string>
+    <string name="sum_cfnrc_enabled" msgid="7010898346095497421">"Transfert vers <xliff:g id="phonenumber">{0}</xliff:g>"</string>
     <string name="sum_cfnrc_disabled" msgid="7222141261321276464">"Désactivé"</string>
     <string name="disable_cfnrc_forbidden" msgid="1093527570652781997">"Votre opérateur ne permet pas la désactivation du transfert d\'appel lorsque votre téléphone n\'est pas joignable."</string>
     <string name="updating_title" msgid="6146755386174019046">"Paramètres d\'appel"</string>
@@ -186,7 +186,7 @@
     <string name="empty_networks_list" msgid="4249426905018815316">"Aucun réseau trouvé."</string>
     <string name="search_networks" msgid="1601136049300882441">"Rechercher les réseaux"</string>
     <string name="network_query_error" msgid="6828516148953325006">"Une erreur s\'est produite lors de la recherche de réseaux."</string>
-    <string name="register_on_network" msgid="9055203954040805084">"Enregistrement sur <xliff:g id="NETWORK">%s</xliff:g>\u2026"</string>
+    <string name="register_on_network" msgid="9055203954040805084">"Enregistrement sur <xliff:g id="network">%s</xliff:g>\u2026"</string>
     <string name="not_allowed" msgid="3540496123717833833">"Votre carte SIM ne vous autorise pas à vous connecter à ce réseau."</string>
     <string name="connect_later" msgid="500090982903469816">"Impossible de se connecter à ce réseau pour le moment. Veuillez réessayer ultérieurement."</string>
     <string name="registration_done" msgid="495135664535876612">"Enregistré sur le réseau."</string>
@@ -228,11 +228,11 @@
     <string name="throttle_time_frame" msgid="1915198770363734685">"Période d\'utilisation des données"</string>
     <string name="throttle_rate" msgid="4710388992676803508">"Règles relatives au taux de transfert des données"</string>
     <string name="throttle_help" msgid="243651091785169900">"En savoir plus"</string>
-    <string name="throttle_status_subtext" msgid="1657318943142085170">"<xliff:g id="USED_0">%1$s</xliff:g> sur <xliff:g id="USED_2">%3$s</xliff:g>\u00A0-\u00A0(<xliff:g id="USED_1">%2$d</xliff:g> ٪) du maximum par période"\n"La prochaine période démarre dans <xliff:g id="USED_3">%4$d</xliff:g> jours (<xliff:g id="USED_4">%5$s</xliff:g>)."</string>
-    <string name="throttle_data_usage_subtext" msgid="6029276011123694701">"<xliff:g id="USED_0">%1$s</xliff:g> sur <xliff:g id="USED_2">%3$s</xliff:g>\u00A0-\u00A0(<xliff:g id="USED_1">%2$d</xliff:g> ٪) du maximum par période"</string>
-    <string name="throttle_data_rate_reduced_subtext" msgid="7492763592720107737">"<xliff:g id="USED_0">%1$s</xliff:g> maximum dépassé"\n"Taux de transfert des données réduit à <xliff:g id="USED_1">%2$d</xliff:g> Ko/s"</string>
-    <string name="throttle_time_frame_subtext" msgid="7732763021560399960">"<xliff:g id="USED_0">%1$d</xliff:g> ٪ du cycle écoulé"\n"La prochaine période démarre dans <xliff:g id="USED_1">%2$d</xliff:g> jours (<xliff:g id="USED_2">%3$s</xliff:g>)."</string>
-    <string name="throttle_rate_subtext" msgid="2149102656120726855">"Taux de transfert des données réduit à <xliff:g id="USED">%1$d</xliff:g> Ko/s si le plafond d\'utilisation est dépassé"</string>
+    <string name="throttle_status_subtext" msgid="1657318943142085170">"<xliff:g id="used_0">%1$s</xliff:g> sur <xliff:g id="used_2">%3$s</xliff:g>\u00A0-\u00A0(<xliff:g id="used_1">%2$d</xliff:g> ٪) du maximum par période"\n"La prochaine période démarre dans <xliff:g id="used_3">%4$d</xliff:g> jours (<xliff:g id="used_4">%5$s</xliff:g>)."</string>
+    <string name="throttle_data_usage_subtext" msgid="6029276011123694701">"<xliff:g id="used_0">%1$s</xliff:g> sur <xliff:g id="used_2">%3$s</xliff:g>\u00A0-\u00A0(<xliff:g id="used_1">%2$d</xliff:g> ٪) du maximum par période"</string>
+    <string name="throttle_data_rate_reduced_subtext" msgid="7492763592720107737">"<xliff:g id="used_0">%1$s</xliff:g> maximum dépassé"\n"Taux de transfert des données réduit à <xliff:g id="used_1">%2$d</xliff:g> Ko/s"</string>
+    <string name="throttle_time_frame_subtext" msgid="7732763021560399960">"<xliff:g id="used_0">%1$d</xliff:g> ٪ du cycle écoulé"\n"La prochaine période démarre dans <xliff:g id="used_1">%2$d</xliff:g> jours (<xliff:g id="used_2">%3$s</xliff:g>)."</string>
+    <string name="throttle_rate_subtext" msgid="2149102656120726855">"Taux de transfert des données réduit à <xliff:g id="used">%1$d</xliff:g> Ko/s si le plafond d\'utilisation est dépassé"</string>
     <string name="throttle_help_subtext" msgid="5217706521499010816">"Plus d\'informations sur les règles de votre opérateur mobile concernant l\'utilisation des données sur son réseau"</string>
     <string name="cdma_cell_broadcast_sms" msgid="7898475142527341808">"Diffusion cellulaire par SMS"</string>
     <string name="cell_broadcast_sms" msgid="5584192824053625842">"Diffusion cellulaire par SMS"</string>
@@ -438,7 +438,7 @@
     <string name="fdn_enable_puk2_requested" msgid="2608836967081385948">"Le mot de passe est incorrect. Veuillez modifier le code PIN2, puis réessayer."</string>
     <string name="puk2_requested" msgid="5863580927788820813">"Mot de passe incorrect. Carte SIM verrouillée. Clé PUK2 requise."</string>
     <string name="doneButton" msgid="2859593360997984240">"OK"</string>
-    <string name="caller_manage_header" msgid="3231519674734638786">"Conférence téléphonique à <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"
+    <string name="caller_manage_header" msgid="3231519674734638786">"Conférence téléphonique à <xliff:g id="conf_call_time">%s</xliff:g>"
     </string>
     <string name="caller_manage_manage_done_text" msgid="8093934725536733856">"Retour à l\'appel"</string>
     <string name="sim_missing_continueView_text" msgid="4199689081742026077">"Continuer sans carte SIM"</string>
@@ -457,21 +457,21 @@
     <string name="card_title_on_hold" msgid="821463117892339942">"En attente"</string>
     <string name="card_title_hanging_up" msgid="3999101620995182450">"Fin d\'appel"</string>
     <string name="card_title_in_call" msgid="6346543933068225205">"Appel en cours"</string>
-    <string name="card_title_my_phone_number" msgid="112428362494434191">"Mon numéro est le <xliff:g id="MY_PHONE_NUMBER">%s</xliff:g>"</string>
+    <string name="card_title_my_phone_number" msgid="112428362494434191">"Mon numéro est le <xliff:g id="my_phone_number">%s</xliff:g>"</string>
     <string name="card_title_waiting_call">Appel mis en attente</string>
     <string name="notification_missedCallTitle" msgid="7554385905572364535">"Appel manqué"</string>
     <string name="notification_missedCallsTitle" msgid="1361677948941502522">"Appels manqués"</string>
-    <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="NUM_MISSED_CALLS">%s</xliff:g> appels manqués"</string>
-    <string name="notification_missedCallTicker" msgid="504686252427747209">"Appel manqué de <xliff:g id="MISSED_CALL_FROM">%s</xliff:g>"</string>
-    <string name="notification_ongoing_call_format" msgid="227216462548540316">"Appel en cours (<xliff:g id="DURATION">%s</xliff:g>)"</string>
+    <string name="notification_missedCallsMsg" msgid="4575787816055205600">"<xliff:g id="num_missed_calls">%s</xliff:g> appels manqués"</string>
+    <string name="notification_missedCallTicker" msgid="504686252427747209">"Appel manqué de <xliff:g id="missed_call_from">%s</xliff:g>"</string>
+    <string name="notification_ongoing_call_format" msgid="227216462548540316">"Appel en cours (<xliff:g id="duration">%s</xliff:g>)"</string>
     <string name="notification_on_hold" msgid="3480694969511790465">"En attente"</string>
     <string name="notification_incoming_call" msgid="2820429205043529642">"Appel entrant"</string>
     <string name="notification_voicemail_title" msgid="8933468752045550523">"Nouveau message vocal"</string>
-    <string name="notification_voicemail_title_count" msgid="4366360747660929916">"Nouveaux messages vocaux (<xliff:g id="COUNT">%d</xliff:g>)"</string>
-    <string name="notification_voicemail_text_format" msgid="4447323569453981685">"Composer le <xliff:g id="VOICEMAIL_NUMBER">%s</xliff:g>"</string>
+    <string name="notification_voicemail_title_count" msgid="4366360747660929916">"Nouveaux messages vocaux (<xliff:g id="count">%d</xliff:g>)"</string>
+    <string name="notification_voicemail_text_format" msgid="4447323569453981685">"Composer le <xliff:g id="voicemail_number">%s</xliff:g>"</string>
     <string name="notification_voicemail_no_vm_number" msgid="760963466895609716">"Numéro de messagerie vocale inconnu"</string>
     <string name="notification_network_selection_title" msgid="4224455487793492772">"Aucun service"</string>
-    <string name="notification_network_selection_text" msgid="2607085729661923269">"Réseau sélectionné (<xliff:g id="OPERATOR_NAME">%s</xliff:g>) non disponible"</string>
+    <string name="notification_network_selection_text" msgid="2607085729661923269">"Réseau sélectionné (<xliff:g id="operator_name">%s</xliff:g>) non disponible"</string>
     <string name="incall_error_power_off" msgid="6550191216405193368">"Veuillez d\'abord désactiver le mode Avion, afin d\'effectuer un appel."</string>
     <string name="incall_error_emergency_only" msgid="4678640422710818317">"Non enregistré sur le réseau."</string>
     <string name="incall_error_out_of_service" msgid="8587993036435080418">"Réseau mobile non disponible"</string>
@@ -491,7 +491,7 @@
     <string name="emergency_enable_radio_dialog_title" msgid="4627849966634578257">"Appel d\'urgence"</string>
     <string name="emergency_enable_radio_dialog_message" msgid="207613549344420291">"Activation du signal radio\u2026"</string>
     <string name="emergency_enable_radio_dialog_retry" msgid="3724423402363063736">"Hors zone de couverture. Nouvelle tentative\u2026"</string>
-    <string name="dial_emergency_error" msgid="8362624131726575194">"L\'appel n\'a pas été effectué. <xliff:g id="NON_EMERGENCY_NUMBER">%s</xliff:g> n\'est pas un numéro d\'urgence\u00A0!"</string>
+    <string name="dial_emergency_error" msgid="8362624131726575194">"L\'appel n\'a pas été effectué. <xliff:g id="non_emergency_number">%s</xliff:g> n\'est pas un numéro d\'urgence\u00A0!"</string>
     <string name="dial_emergency_empty_error" msgid="5048645338094088229">"L\'appel n\'a pas été effectué. Veuillez composer un numéro d\'urgence\u00A0!"</string>
     <string name="dialerKeyboardHintText" msgid="9192914825413747792">"Utilisez le clavier pour composer un numéro."</string>
     <string name="dtmfDialpadHintText" msgid="2153335217920679451">"Touches sonores"</string>
@@ -564,18 +564,18 @@
     <string name="phone_in_ecm_call_notification_text" msgid="4611608947314729773">"Connexion des données désactivée"</string>
 
     <plurals name="phone_in_ecm_notification_time">
-        <item quantity="one" msgid="4866221796252472622">"Aucune connexion de données pendant <xliff:g id="COUNT">%s</xliff:g> minute"</item>
-        <item quantity="other" msgid="3122217344579273583">"Aucune connexion de données pendant <xliff:g id="COUNT">%s</xliff:g> minutes"</item>
+        <item quantity="one" msgid="4866221796252472622">"Aucune connexion de données pendant <xliff:g id="count">%s</xliff:g> minute"</item>
+        <item quantity="other" msgid="3122217344579273583">"Aucune connexion de données pendant <xliff:g id="count">%s</xliff:g> minutes"</item>
     </plurals>
 
     <plurals name="alert_dialog_exit_ecm">
-        <item quantity="one" msgid="2181569650640386253">"Le mode de rappel d\'urgence sera actif sur le téléphone pendant <xliff:g id="COUNT">%s</xliff:g> minute. Tant que ce mode est actif, vous ne pouvez utiliser aucune des applications nécessitant une connexion Internet. Voulez-vous quitter maintenant\u00A0?"</item>
-        <item quantity="other" msgid="3231879566243957821">"Le mode de rappel d\'urgence sera actif sur le téléphone pendant <xliff:g id="COUNT">%s</xliff:g> minutes. Tant que ce mode est actif, vous ne pouvez utiliser aucune des applications nécessitant une connexion Internet. Voulez-vous quitter maintenant\u00A0?"</item>
+        <item quantity="one" msgid="2181569650640386253">"Le mode de rappel d\'urgence sera actif sur le téléphone pendant <xliff:g id="count">%s</xliff:g> minute. Tant que ce mode est actif, vous ne pouvez utiliser aucune des applications nécessitant une connexion Internet. Voulez-vous quitter maintenant\u00A0?"</item>
+        <item quantity="other" msgid="3231879566243957821">"Le mode de rappel d\'urgence sera actif sur le téléphone pendant <xliff:g id="count">%s</xliff:g> minutes. Tant que ce mode est actif, vous ne pouvez utiliser aucune des applications nécessitant une connexion Internet. Voulez-vous quitter maintenant\u00A0?"</item>
     </plurals>
 
     <plurals name="alert_dialog_not_avaialble_in_ecm">
-        <item quantity="one" msgid="8939225905428421722">"L\'action sélectionnée n\'est pas disponible en mode de rappel d\'urgence. Ce mode sera actif sur le téléphone pendant <xliff:g id="COUNT">%s</xliff:g> minute. Voulez-vous quitter maintenant\u00A0?"</item>
-        <item quantity="other" msgid="3489076611710869904">"L\'action sélectionnée n\'est pas disponible en mode de rappel d\'urgence. Ce mode sera actif sur le téléphone pendant <xliff:g id="COUNT">%s</xliff:g> minutes. Voulez-vous quitter maintenant\u00A0?"</item>
+        <item quantity="one" msgid="8939225905428421722">"L\'action sélectionnée n\'est pas disponible en mode de rappel d\'urgence. Ce mode sera actif sur le téléphone pendant <xliff:g id="count">%s</xliff:g> minute. Voulez-vous quitter maintenant\u00A0?"</item>
+        <item quantity="other" msgid="3489076611710869904">"L\'action sélectionnée n\'est pas disponible en mode de rappel d\'urgence. Ce mode sera actif sur le téléphone pendant <xliff:g id="count">%s</xliff:g> minutes. Voulez-vous quitter maintenant\u00A0?"</item>
     </plurals>
 
     <string name="alert_dialog_in_ecm_call" msgid="2334477874583086142">"L\'action sélectionnée n\'est pas disponible pendant un appel d\'urgence."</string>
@@ -586,7 +586,7 @@
     <string name="voicemail_settings" msgid="2288633492587133022">"Messagerie vocale"</string>
     <string name="voicemail_number_not_set" msgid="1604580506447265808">"&lt;non défini&gt;"</string>
     <string name="voicemail_provider" msgid="6299679757491942924">"Service de messagerie"</string>
-    <string name="voicemail_settings_for" msgid="9018656268027893088">"Paramètres pour <xliff:g id="PROVIDER_NAME">%s</xliff:g>"</string>
+    <string name="voicemail_settings_for" msgid="9018656268027893088">"Paramètres pour <xliff:g id="provider_name">%s</xliff:g>"</string>
     <string name="other_settings" msgid="3672912580359716394">"Autres paramètres d\'appel"</string>
     <string name="dial_button_label" msgid="5551611636419190229">"Composer"</string>
     <string name="calling_via_template" msgid="7374498518104190489">"Appel via ^1"\n<b>"^2"</b></string>
@@ -641,7 +641,7 @@
     <string name="primary_account_title" msgid="5694267218020951531">"Faire de ce compte le compte principal"</string>
     <string name="primary_account_summary" msgid="7339564526372623187">"Utilisé pour les appels sortants"</string>
     <string name="advanced_settings_title" msgid="8846648727128452293">"Paramètres avancés"</string>
-    <string name="primary_account_summary_with" msgid="1633960536212343187">"Compte principal. <xliff:g id="REGISTRATION_STATUS">%s</xliff:g>"</string>
+    <string name="primary_account_summary_with" msgid="1633960536212343187">"Compte principal. <xliff:g id="registration_status">%s</xliff:g>"</string>
     <string name="registration_status_checking_status" msgid="3381868307694056727">"Vérification de l\'état\u2026"</string>
     <string name="registration_status_registering" msgid="7115694971025999516">"Enregistrement\u2026"</string>
     <string name="registration_status_still_trying" msgid="1471733478935862864">"Tentative en cours\u2026"</string>
@@ -650,10 +650,10 @@
     <string name="registration_status_no_wifi_data" msgid="6698550648571450078">"L\'enregistrement du compte a été interrompu car il n\'y a pas de connexion Wi-Fi."</string>
     <string name="registration_status_not_running" msgid="272678962440371182">"L\'enregistrement du compte a échoué."</string>
     <string name="registration_status_done" msgid="6434927607037752239">"Réception d\'appels"</string>
-    <string name="registration_status_failed_try_later" msgid="3045686593819835879">"Échec de l\'enregistrement du compte\u00A0: (<xliff:g id="REGISTRATION_ERROR_MESSAGE">%s</xliff:g>). Une nouvelle tentative sera effectuée ultérieurement."</string>
+    <string name="registration_status_failed_try_later" msgid="3045686593819835879">"Échec de l\'enregistrement du compte\u00A0: (<xliff:g id="registration_error_message">%s</xliff:g>). Une nouvelle tentative sera effectuée ultérieurement."</string>
     <string name="registration_status_invalid_credentials" msgid="1830368411591265203">"Échec de l\'enregistrement du compte\u00A0: nom d\'utilisateur ou mot de passe incorrect"</string>
     <string name="registration_status_server_unreachable" msgid="8173553259218123653">"L\'enregistrement du compte a échoué. Veuillez vérifier le nom du serveur."</string>
-    <string name="third_party_account_summary" msgid="1069915789382987226">"Ce compte est actuellement utilisé par l\'application <xliff:g id="ACCOUNT_OWNER">%s</xliff:g>."</string>
+    <string name="third_party_account_summary" msgid="1069915789382987226">"Ce compte est actuellement utilisé par l\'application <xliff:g id="account_owner">%s</xliff:g>."</string>
     <string name="sip_edit_title" msgid="489288416435014385">"Infos du compte SIP"</string>
     <string name="sip_edit_new_title" msgid="3659149255856520385">"Détails du compte SIP"</string>
     <string name="domain_address_title" msgid="9071787581316160480">"Serveur"</string>
@@ -685,6 +685,7 @@
     <string name="no_internet_available" msgid="1100564991026313234">"Pour effectuer un appel Internet, vérifiez tout d\'abord la connexion Internet."</string>
     <string name="no_wifi_available" msgid="3389743006886634541">"Les appels Internet nécessitent une connexion Wi-Fi pouvant être activée dans les paramètres \"Sans fil et réseaux\".""</string>
     <string name="no_voip" msgid="8901474054537199865">"Appels Internet non pris en charge"</string>
+    <string name="notification_ongoing_calling_format">Appel (<xliff:g id="duration">%s</xliff:g>)</string>
     <string name="advanced_setting">Paramètres avancés V.30.1</string>
     <string name="vibrate_outgoing">Vibrer sur réponse</string>
     <string name="vibrate_outgoing_sum">Vibration quand la communication est établie</string>
@@ -757,7 +758,7 @@
     <string name="call_notif_callconnectedect">Appel ECT établi</string>
 
     <string name="per_change_mobile_network">Changer la technologie réseau (2G/3G)</string>
-    <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus</string>
+    <string name="per_change_mobile_network_desc">Les applications possédant cette permission peuvent à chaque instant changer entre les technologies 2G et 3G. La 3G est plus radide, consomme plus de batterie, et peut également vous coûter plus cher.</string>
     <string name="phone_number_label">Mon numéro de téléphone</string>
     <string name="phone_number_summary">Régler le numéro d\'appel de ce téléphone</string>
 
@@ -789,7 +790,7 @@
     <string name="toast_phone_goggles">Vous n\'êtes pas autorisé à effectuer des appels pour le moment. Veuillez réitérer votre demande ultérieurement</string>
     <string name="dialog_phone_goggles_title">Appel bloqué</string>
     <string name="dialog_phone_goggles_title_unlocked">Appel autorisé</string>
-    <string name="dialog_phone_goggles_content">Effectuer un appel n\'est pas recommandé en ce moment. Etes vous sûr de vouloir continuer\u00A0?</string>
+    <string name="dialog_phone_goggles_content">Effectuer un appel n\'est pas recommandé en ce moment. Êtes-vous sûr de vouloir continuer\u00A0?</string>
     <string name="dialog_phone_goggles_unauthorized">Effectuer un appel n\'est pas recommandé en ce moment</string>
     <string name="dialog_phone_goggles_ok">Appeler</string>
     <string name="dialog_phone_goggles_cancel">Annuler</string>
