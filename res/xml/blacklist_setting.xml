@@ -22,10 +22,10 @@
     <CheckBoxPreference
         android:key="button_enable_blacklist"
         android:title="@string/enable_blacklist_title"
-        android:defaultValue="true" />
+        android:persistent="false" />
 
     <CheckBoxPreference
-        android:key="button_nofify"
+        android:key="button_notify"
         android:title="@string/blacklist_notify"
         android:defaultValue="true"
         android:dependency="button_enable_blacklist" />
