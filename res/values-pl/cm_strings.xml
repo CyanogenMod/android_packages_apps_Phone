@@ -37,12 +37,8 @@
     <string name="noise_suppression_title">Redukcja szumów</string>
     <string name="noise_suppression_summary">Włącz redukcję szumów dla połączeń</string>
     <string name="blacklist_title">Czarna lista</string>
-    <string name="enable_blacklist_title">Aktywuj czarną listę</string>
     <string name="blacklist_summary_disabled">Wyłączona</string>
     <string name="blacklist_summary">Połączenia przychodzące od numerów umieszczonych na czarnej liście będą blokowane</string>
-    <string name="blacklist_notify">Pokaż powiadomienie</string>
-    <string name="blacklist_regex_title">Użyj wzorców</string>
-    <string name="blacklist_regex_summary">Użyj . jako wzorca oraz * dla zmiennych. Np. 123.* blokuje numery zaczynające się na 123, a .*123.* blokuje numery zawierające 123</string>
     <string name="add_blacklist_number">Dodaj numer telefonu</string>
     <string name="add_to_blacklist">Dodaj do czarnej listy</string>
     <string name="add_to_blacklist_message">Połączenia przychodzące od %s będą blokowane</string>
@@ -53,12 +49,8 @@
     <string name="onscreenBlacklistText">Czarna lista</string>
     <string name="rejected_as_missed">Odrzucone połączenia jako nieodebrane</string>
     <string name="rejected_as_missed_sum">Oznaczaj w rejestrze odrzucone połączenia jako \'nieodebrane\' zamiast \'przychodzące\'</string>
-    <string name="blacklist_private_numbers_title">Numery Prywatne</string>
-    <string name="blacklist_private_numbers_summary">Blokuj połączenia przychodzące od numerów prywatnych</string>
     <string name="blacklist_notification_private_number">Zablokowano połączenie przychodzące od numeru prywatnego</string>
     <string name="blacklist_notification_multiple">Zablokowane połączenia: <xliff:g id="count">%d</xliff:g></string>
-    <string name="blacklist_unknown_numbers_title">Numery nieznane</string>
-    <string name="blacklist_unknown_numbers_summary">Blokuj połączenia przychodzące od numerów spoza listy kontaktów</string>
     <string name="blacklist_notification_list_private">Prywatne</string>
     <string name="blacklist_notification_unknown_number">Zablokowano połączenie przychodzące od numeru nieznanego %s</string>
     <string name="voice_quality_preferences_title">Jakość głosu</string>

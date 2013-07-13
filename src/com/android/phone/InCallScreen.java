@@ -75,6 +75,7 @@ import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneConstants;
 import com.android.internal.telephony.TelephonyCapabilities;
 import com.android.internal.telephony.gsm.SuppServiceNotification;
+import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.phone.Constants.CallStatusCode;
 import com.android.phone.InCallUiState.InCallScreenMode;
 import com.android.phone.OtaUtils.CdmaOtaScreenState;
@@ -2854,7 +2855,8 @@ public class InCallScreen extends Activity
                 .setMessage(message)
                 .setPositiveButton(R.string.alert_dialog_yes, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        PhoneGlobals.getInstance().blackList.add(number);
+                        BlacklistUtils.addOrUpdate(getApplicationContext(), number,
+                                BlacklistUtils.BLOCK_CALLS, BlacklistUtils.BLOCK_CALLS);
                         internalHangup();
                     }
                 })

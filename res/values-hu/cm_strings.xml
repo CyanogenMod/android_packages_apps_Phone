@@ -60,16 +60,8 @@
     <string name="calllog_after_call_summary">Hívásnapló megjelenítése a hívás után</string>
     <string name="card_title_dialing_waiting">Tárcsázás (várakozás\u2026)</string>
     <string name="blacklist_title">Tiltólista</string>
-    <string name="enable_blacklist_title">Tiltólista engedélyezése</string>
     <string name="blacklist_summary_disabled">Letiltva</string>
     <string name="blacklist_summary">Bejövő hívások blokkolása, melyek szerepelnek a tiltólistán</string>
-    <string name="blacklist_notify">Értesítés megjelenítése</string>
-    <string name="blacklist_private_numbers_title">Rejtett számok</string>
-    <string name="blacklist_private_numbers_summary">Rejtett számmal érkező hívások blokkolása</string>
-    <string name="blacklist_unknown_numbers_title">Ismeretlen számok</string>
-    <string name="blacklist_unknown_numbers_summary">Bejövő hívások blokkolása, melyek nem szerepelnek a kontaktok közt</string>
-    <string name="blacklist_regex_title">Helyetesítő karakterek használata</string>
-    <string name="blacklist_regex_summary">Használja a "."-ot egy szám, a "*"-ot pedig több szám helyettesítésére. Példa: a 123.* blokkolja a 123-mal kezdődő számokat, a .*123.* pedig a 123-at tartalmazó számokat</string>
     <string name="add_blacklist_number">Szám hozzáadása</string>
     <string name="add_to_blacklist">Hozzáadás a tiltólistához</string>
     <string name="add_to_blacklist_message">%s számról érkező hívások blokkolva lesznek</string>

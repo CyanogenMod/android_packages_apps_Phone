@@ -49,6 +49,7 @@ import com.android.internal.telephony.CallManager;
 import com.android.internal.telephony.Connection;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneConstants;
+import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.internal.widget.multiwaveview.GlowPadView;
 import com.android.internal.widget.multiwaveview.GlowPadView.OnTriggerListener;
 import com.android.phone.InCallUiState.InCallScreenMode;
@@ -553,7 +554,7 @@ public class InCallTouchUi extends FrameLayout
 
         // "Add to black list"
         if (mAddBlacklistButton != null) {
-            boolean visible = PhoneUtils.PhoneSettings.isBlacklistEnabled(getContext()) &&
+            boolean visible = BlacklistUtils.isBlacklistEnabled(getContext()) &&
                     inCallControlState.canBlacklistCall;
             mAddBlacklistButton.setVisibility(visible ? View.VISIBLE : View.GONE);
             mBlacklistSpacer.setVisibility(visible ? View.VISIBLE : View.GONE);

@@ -60,16 +60,8 @@
     <string name="flip_action_dialog_title">Retourner le téléphone\u2026</string>
     <string name="flip_action_summary">Retourner le téléphone <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Liste noire</string>
-    <string name="enable_blacklist_title">Activer la liste noire</string>
     <string name="blacklist_summary_disabled">Désactivé</string>
     <string name="blacklist_summary">Les appels entrants des numéros de la liste noire seront bloqués</string>
-    <string name="blacklist_notify">Afficher une notification</string>
-    <string name="blacklist_private_numbers_title">Numéro masqué</string>
-    <string name="blacklist_private_numbers_summary">Bloquer les appels provenant d\'un numéro masqué</string>
-    <string name="blacklist_unknown_numbers_title">Numéros inconnus</string>
-    <string name="blacklist_unknown_numbers_summary">Bloquer les appels entrants de numéros non répertoriés dans la liste des contacts</string>
-    <string name="blacklist_regex_title">Utiliser des caractères génériques</string>
-    <string name="blacklist_regex_summary">Utiliser un point comme caractère générique et une astérisque pour le répétition. Exemple, 123.* si le numéro de téléphone commence par 123 et .*123.* si le numéro de téléphone contient 123</string>
     <string name="add_blacklist_number">Ajouter le numéro à la liste noire</string>
     <string name="add_to_blacklist">Ajouter à la liste noire</string>
     <string name="add_to_blacklist_message">Les prochains appels de %s seront bloqués</string>

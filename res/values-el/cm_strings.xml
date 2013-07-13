@@ -60,16 +60,8 @@
     <string name="flip_action_dialog_title">Ενέργεια αναποδογυρίσματος συσκευής</string>
     <string name="flip_action_summary">Το αναποδογύρισμα της συσκευής <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Μαύρη λίστα</string>
-    <string name="enable_blacklist_title">Ενεργοποίηση μαύρης λίστας</string>
     <string name="blacklist_summary_disabled">Απενεργοποιημένη</string>
     <string name="blacklist_summary">Εισερχόμενες κλήσεις από αριθμούς που είναι στη μαύρη λίστα θα απορρίπτονται</string>
-    <string name="blacklist_notify">Εμφάνιση ειδοποίησης</string>
-    <string name="blacklist_private_numbers_title">Απόρρητοι αριθμοί</string>
-    <string name="blacklist_private_numbers_summary">Φραγή εισερχομένων κλήσεων από απόρρητους αριθμούς</string>
-    <string name="blacklist_unknown_numbers_title">Άγνωστοι αριθμοί</string>
-    <string name="blacklist_unknown_numbers_summary">Φραγή εισερχόμενων κλήσεων από αριθμούς που δεν είναι στην λίστα επαφών σας</string>
-    <string name="blacklist_regex_title">Χρήση μπαλαντέρ</string>
-    <string name="blacklist_regex_summary">Χρήση . ως μπαλαντέρ και * για επανάληψη. Π.χ. το 123.* μπλοκάρει αριθμούς που ξεκινούν από 123 και το .*123.* μπλοκάρει αριθμούς που περιέχουν το 123</string>
     <string name="add_blacklist_number">Προσθήκη αριθμού</string>
     <string name="add_to_blacklist">Προσθήκη στη μαύρη λίστα</string>
     <string name="add_to_blacklist_message">Μελλοντικές κλήσεις από το %s θα απορρίπτονται</string>

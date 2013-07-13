@@ -62,16 +62,8 @@
     <string name="flip_action_dialog_title">Capovolgi dispositivo per\u2026</string>
     <string name="flip_action_summary">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Blacklist</string>
-    <string name="enable_blacklist_title">Attiva blacklist</string>
     <string name="blacklist_summary_disabled">Disattivata</string>
     <string name="blacklist_summary">Le chiamate in entrata provenienti da numeri di telefono presenti nella blacklist verranno bloccate</string>
-    <string name="blacklist_notify">Mostra notifica</string>
-    <string name="blacklist_private_numbers_title">Numeri privati</string>
-    <string name="blacklist_private_numbers_summary">Blocca le chiamate in entrata dai numeri privati</string>
-    <string name="blacklist_unknown_numbers_title">Numeri sconosciuti</string>
-    <string name="blacklist_unknown_numbers_summary">Blocca le chiamate in entrata dai numeri non presenti in rubrica</string>
-    <string name="blacklist_regex_title">Usa caratteri speciali</string>
-    <string name="blacklist_regex_summary">Usa . come carattere jolly e * per la ripetizione. Ad esempio 123.* blocca i numeri che iniziano con 123 e .*123.* blocca i numeri che contengono 123</string>
     <string name="add_blacklist_number">Aggiungi numero di telefono</string>
     <string name="add_to_blacklist">Inserisci nella blacklist</string>
     <string name="add_to_blacklist_message">Le prossime chiamate provenienti dal s% saranno bloccate</string>

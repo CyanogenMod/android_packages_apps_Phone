@@ -57,16 +57,8 @@
 
     <!-- Blacklist preferences -->
     <string name="blacklist_title">Чёрный список</string>
-    <string name="enable_blacklist_title">Включить чёрный список</string>
     <string name="blacklist_summary_disabled">Выключен</string>
     <string name="blacklist_summary">Входящие звонки от абонентов из чёрного списка будут отклоняться</string>
-    <string name="blacklist_notify">Показывать уведомления</string>
-    <string name="blacklist_private_numbers_title">Скрытые номера</string>
-    <string name="blacklist_private_numbers_summary">Блокировать входящие вызовы от скрытых номеров</string>
-    <string name="blacklist_unknown_numbers_title">Неизвестные номера</string>
-    <string name="blacklist_unknown_numbers_summary">Блокировать входящие вызовы от номеров не из списка контактов</string>
-    <string name="blacklist_regex_title">Маски</string>
-    <string name="blacklist_regex_summary">Используйте . как маску и * для повторения. Например: 123.* блокирует номера, начинающиеся с 123 и .*123.* номера, содержащие 123</string>
 
     <!-- Blacklist management -->
     <string name="add_blacklist_number">Добавить номер телефона</string>

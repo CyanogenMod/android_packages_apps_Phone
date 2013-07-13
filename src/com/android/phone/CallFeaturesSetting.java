@@ -65,6 +65,7 @@ import com.android.internal.telephony.CommandsInterface;
 import com.android.internal.telephony.Phone;
 import com.android.internal.telephony.PhoneConstants;
 import com.android.internal.telephony.cdma.TtyIntent;
+import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.phone.sip.SipSharedPreferences;
 
 import java.util.Collection;
@@ -1921,7 +1922,7 @@ public class CallFeaturesSetting extends PreferenceActivity
 
     private void updateBlacklistSummary() {
         if (mButtonBlacklist != null) {
-            if (PhoneUtils.PhoneSettings.isBlacklistEnabled(this)) {
+            if (BlacklistUtils.isBlacklistEnabled(this)) {
                 mButtonBlacklist.setSummary(R.string.blacklist_summary);
             } else {
                 mButtonBlacklist.setSummary(R.string.blacklist_summary_disabled);

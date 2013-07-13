@@ -60,16 +60,8 @@
     <string name="flip_action_dialog_title">翻转设备将\u2026</string>
     <string name="flip_action_summary">翻转设备将<xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">黑名单</string>
-    <string name="enable_blacklist_title">启用黑名单</string>
     <string name="blacklist_summary_disabled">已禁用</string>
     <string name="blacklist_summary">阻止黑名单中的电话号码的来电</string>
-    <string name="blacklist_notify">显示通知</string>
-    <string name="blacklist_private_numbers_title">私人号码</string>
-    <string name="blacklist_private_numbers_summary">阻止私人号码的来电</string>
-    <string name="blacklist_unknown_numbers_title">未知号码</string>
-    <string name="blacklist_unknown_numbers_summary">阻止不在联系人列表上的号码的来电</string>
-    <string name="blacklist_regex_title">使用通配符</string>
-    <string name="blacklist_regex_summary">使用 . 作为通配符和 * 作为重复字符, 例如: 123.* 将会阻止所有 123 为前缀的号码; .*123.* 将会阻止所有包含 123 的号码</string>
     <string name="add_blacklist_number">添加电话号码</string>
     <string name="add_to_blacklist">添加到黑名单</string>
     <string name="add_to_blacklist_message">未来来自 %s 的电话将被阻止</string>

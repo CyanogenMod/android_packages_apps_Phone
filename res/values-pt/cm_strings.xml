@@ -58,12 +58,8 @@
     <string name="calllog_after_call">Mostrar registro</string>
     <string name="calllog_after_call_summary">Mostrar o registro de chamadas após encerrar a chamada</string>
     <string name="blacklist_title">Lista negra</string>
-    <string name="enable_blacklist_title">Ativar lista negra</string>
     <string name="blacklist_summary_disabled">Desativado</string>
     <string name="blacklist_summary">Ligações recebidas dos números de telefone na lista negra serão bloqueadas</string>
-    <string name="blacklist_notify">Mostrar notificação</string>
-    <string name="blacklist_regex_title">Usar wildcards</string>
-    <string name="blacklist_regex_summary">Use . como um wildcard e * para repetição. Ex. 123.* bloqueia números começando com 123 e .*123.* bloqueia números contendo 123</string>
     <string name="add_blacklist_number">Adicionar número de telefone</string>
     <string name="add_to_blacklist">Adicionar à lista negra</string>
     <string name="add_to_blacklist_message">Futuras ligações de %s serão bloqueadas</string>
@@ -74,8 +70,6 @@
     <string name="onscreenBlacklistText">Lista negra</string>
     <string name="rejected_as_missed">Chamadas rejeitadas como perdidas</string>
     <string name="rejected_as_missed_sum">Marcar chamadas rejeitadas como \'perdidas\', invés de \'recebidas\', no registro de chamadas</string>
-    <string name="blacklist_private_numbers_title">Números privados</string>
-    <string name="blacklist_private_numbers_summary">Bloquear ligações recebidas de números privados</string>
     <string name="blacklist_notification_private_number">Foi bloqueada uma chamada de um número privado</string>
     <string name="voice_quality_preferences_title">Qualidade da voz</string>
     <string name="voice_quality_summary">Usando perfil: <xliff:g id="value" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%s</xliff:g></string>
@@ -83,8 +77,6 @@
     <string name="voice_quality_entry_clear">Clara</string>
     <string name="voice_quality_entry_crisp">Nítida</string>
     <string name="voice_quality_entry_bright">Realçada</string>
-    <string name="blacklist_unknown_numbers_title">Números desconhecidos</string>
-    <string name="blacklist_unknown_numbers_summary">Bloquear chamadas recebidas de números que não estão na sua lista de contato</string>
     <string name="blacklist_notification_list_private">Privado</string>
     <string name="blacklist_notification_unknown_number">Número desconhecido %s foi bloqueado</string>
     <string name="blacklist_notification_multiple"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> chamadas foram bloqueadas</string>

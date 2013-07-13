@@ -425,24 +425,6 @@ public class PhoneUtils {
             return Integer.parseInt(s);
         }
 
-        /* blacklist handling */
-        static boolean isBlacklistEnabled(Context context) {
-            return Settings.System.getInt(context.getContentResolver(),
-                    Settings.System.PHONE_BLACKLIST_ENABLED, 1) != 0;
-        }
-        static boolean isBlacklistNotifyEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_notify", true);
-        }
-        static boolean isBlacklistPrivateNumberEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_blacklist_private_numbers", false);
-        }
-        static boolean isBlacklistUnknownNumberEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_blacklist_unknown_numbers", false);
-        }
-        static boolean isBlacklistRegexEnabled(Context context) {
-            return getPrefs(context).getBoolean("button_blacklist_regex", false);
-        }
-
         /* voice quality preferences */
         static String getVoiceQualityParameter(Context context) {
             String param = context.getResources().getString(R.string.voice_quality_param);

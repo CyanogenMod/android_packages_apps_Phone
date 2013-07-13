@@ -77,16 +77,8 @@
     <string name="flip_action_summary">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
 
     <string name="blacklist_title">Sortliste</string>
-    <string name="enable_blacklist_title">Slå sortliste til</string>
     <string name="blacklist_summary_disabled">Slået fra</string>
     <string name="blacklist_summary">Indgående opkald fra sortlistede telefonnumre vil blive blokeret</string>
-    <string name="blacklist_notify">Vis notifikationer</string>
-    <string name="blacklist_private_numbers_title">Private numre</string>
-    <string name="blacklist_private_numbers_summary">Blokér indgående opkald fra private numre</string>
-    <string name="blacklist_unknown_numbers_title">Ukendte numre</string>
-    <string name="blacklist_unknown_numbers_summary">Blokér indgående opkald fra numre, som ikke er i kontaktlisten</string>
-    <string name="blacklist_regex_title">Brug wildcards</string>
-    <string name="blacklist_regex_summary">Brug . som et wildcard og * for gentagelse. Fx 123.* blokerer numre, som starter med 123, og .*123.* blokerer numre, som indeholder 123</string>
 
     <string name="add_blacklist_number">Tilføj telefonnummer</string>
     <string name="add_to_blacklist">Tilføj til sortliste</string>

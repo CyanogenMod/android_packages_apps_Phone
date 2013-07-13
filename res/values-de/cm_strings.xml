@@ -63,16 +63,8 @@
     <string name="flip_action_dialog_title">Beim Umdrehen\u2026</string>
     <string name="flip_action_summary">Beim Umdrehen des Gerätes <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Sperrliste</string>
-    <string name="enable_blacklist_title">Sperrliste aktivieren</string>
     <string name="blacklist_summary_disabled">Deaktiviert</string>
     <string name="blacklist_summary">Eingehende Anrufe von Nummern, die sich in der Sperrliste befinden, werden abgewiesen</string>
-    <string name="blacklist_notify">Benachrichtigungen anzeigen</string>
-    <string name="blacklist_private_numbers_title">Unterdrückte Nummern</string>
-    <string name="blacklist_private_numbers_summary">Eingehende Anrufe mit unterdrückter Nummer abweisen</string>
-    <string name="blacklist_unknown_numbers_title">Unbekannte Nummern</string>
-    <string name="blacklist_unknown_numbers_summary">Eingehende Anrufe von Anrufern, die nicht in der Kontaktliste enthalten sind, abweisen</string>
-    <string name="blacklist_regex_title">Platzhalter verwenden</string>
-    <string name="blacklist_regex_summary">Einen Punkt als Platzhalter und ein Stern für Wiederholungen verwenden.\nBeispielsweise würde 123.* alle Nummern, die mit 123 beginnen, und .*123.* alle Nummern, die 123 enthalten, abweisen.</string>
     <string name="add_blacklist_number">Nummer hinzufügen</string>
     <string name="add_to_blacklist">Zur Sperrliste hinzufügen</string>
     <string name="add_to_blacklist_message">Zukünftige Anrufe von %s werden abgewiesen</string>
