@@ -93,4 +93,6 @@
     <string name="voice_quality_entry_clear">Clara</string>
     <string name="voice_quality_entry_crisp">Nítida</string>
     <string name="voice_quality_entry_bright">Fuerte</string>
+    <string name="phone_number_label">Mi número de teléfono</string>
+    <string name="phone_number_summary">Establecer el número de teléfono para este dispositivo</string>
 </resources>
