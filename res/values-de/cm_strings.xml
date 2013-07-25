@@ -17,10 +17,8 @@
     <string name="enter_input">Eine USSD-Nachricht muss zwischen <xliff:g id="min_len">%d</xliff:g> und <xliff:g id="max_len">%d</xliff:g> Zeichen lang sein. Bitte erneut versuchen.</string>
     <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) von <xliff:g id="used">%3$s</xliff:g> im Zeitraum\nDer nächste Zeitraum beginnt in <xliff:g id="used">%4$d</xliff:g> Tagen (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) von <xliff:g id="used">%3$s</xliff:g> im Zeitraum</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Bevorzugter Netzwerkmodus: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Bevorzugter Netzwerkmodus: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Bevorzugter Netzwerkmodus: LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Bevorzugter Netzwerkmodus: LTE / WCDMA</string>
     <string name="callUnanswered_forwarded">Anruf wurde nicht beantwortet und weitergeleitet</string>
     <string name="mwi_notification_title">Indikator anzeigen</string>
     <string name="mwi_notification_summary">Einen Indikator für wartende Anrufbenachrichtigungen anzeigen</string>

@@ -17,10 +17,8 @@
     <string name="callUnanswered_forwarded">השיחה לא נענתה והועברה</string>
     <string name="mwi_notification_title">חיווי הודעה ממתינה</string>
     <string name="mwi_notification_summary">הצג את חיווי ההודעה הממתינה עבור הודעות קוליות</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">מצב רשת מועדף: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">מצב רשת מועדף: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">מצב רשת מועדף: LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">מצב רשת מועדף: LTE / WCDMA</string>
     <string name="card_title_waiting_call">שיחה ממתינה</string>
     <string name="call_notif_unconditionalCF">העברת שיחות ללא תנאי פעילה</string>
     <string name="call_notif_conditionalCF">העברת שיחות פעילה בתנאים מסויימים</string>

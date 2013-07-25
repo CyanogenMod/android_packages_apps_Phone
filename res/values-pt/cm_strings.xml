@@ -16,9 +16,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="perm_change_mobile_network">Alternar rede de dados (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Aplicação com está permissão pode a qualquer momento, alterar entre dados 2G and 3G. 3G é mais rápido, consome mais bateria, e também pode gastar mais seu dinheiro.</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Modo de rede preferencial: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Modo de rede preferencial: LTE / GSM/ WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Modo de rede preferencial: LTE / WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modo de rede preferencial: LTE / CDMA / EvDo / GSM / WCDMA</string>
     <string name="dialer_ui_settings_title">Configurações do teclado</string>
     <string name="dialer_ui_settings_summary">Configurações para o teclado de discagem</string>

@@ -38,10 +38,8 @@
     <string name="show_ssn_summary">Verschillende netwerkgebeurtenissen melden bij gesprekken (bijv. bij doorschakelen)</string>
     <string name="mwi_notification_title">Voicemailmeldingen</string>
     <string name="mwi_notification_summary">Meldingen tonen voor nieuwe voicemailberichten</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Voorkeursnetwerkstand: LTE, CDMA, EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Voorkeursnetwerkstand: LTE, GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Voorkeursnetwerkstand: LTE, CMDA, EvDo, GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Voorkeursnetwerkstand: LTE, WCDMA</string>
     <string name="dialer_ui_settings_title">Toetsenblokinstellingen</string>
     <string name="dialer_ui_settings_summary">Instellingen voor het numerieke toetsenblok</string>
     <string name="noise_suppression_title">Ruisonderdrukking</string>

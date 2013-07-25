@@ -21,10 +21,8 @@
     <string name="mwi_notification_title">Indikator for ventende besked</string>
     <string name="mwi_notification_summary">Vis notifikationer for indikator for ventende beskeder på voicemail</string>
 
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Foretrukken netværkstilstand: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Foretrukken netværkstilstand: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Foretrukken netværkstilstand: LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Foretrukken netværkstilstand: LTE / WCDMA</string>
 
     <string name="card_title_dialing_waiting">Ringer op (venter\u2026)</string>
 

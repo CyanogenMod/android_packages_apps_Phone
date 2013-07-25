@@ -20,10 +20,8 @@
     <string name="callUnanswered_forwarded">Llamada perdida reenviada</string>
     <string name="mwi_notification_title">Notificación buzón de voz</string>
     <string name="mwi_notification_summary">Mostrar una notificación para los mensajes en espera del buzón de voz</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Modo de red preferido: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Modo de red preferido: LTE / WCDMA/GSM</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modo de red preferido: LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Modo de red preferido: LTE / WCDMA</string>
     <string name="card_title_dialing_waiting">Llamando (esperando\u2026)</string>
     <string name="card_title_waiting_call">Llamada en espera</string>
     <string name="call_notif_unconditionalCF">Desvío incondicional de llamada activo</string>

@@ -17,6 +17,7 @@
 package com.android.phone;
 
 import android.app.ActivityManager;
+import android.app.AppOpsManager;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -72,6 +73,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     PhoneGlobals mApp;
     Phone mPhone;
     CallManager mCM;
+    AppOpsManager mAppOps;
     MainThreadHandler mMainThreadHandler;
 
     /**
@@ -181,7 +183,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     /**
      * Posts the specified command to be executed on the main thread,
      * waits for the request to complete, and returns the result.
-     * @see sendRequestAsync
+     * @see #sendRequestAsync
      */
     private Object sendRequest(int command, Object argument) {
         if (Looper.myLooper() == mMainThreadHandler.getLooper()) {
@@ -209,7 +211,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
      * Asynchronous ("fire and forget") version of sendRequest():
      * Posts the specified command to be executed on the main thread, and
      * returns immediately.
-     * @see sendRequest
+     * @see #sendRequest
      */
     private void sendRequestAsync(int command) {
         mMainThreadHandler.sendEmptyMessage(command);
@@ -235,6 +237,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         mApp = app;
         mPhone = phone;
         mCM = PhoneGlobals.getInstance().mCM;
+        mAppOps = (AppOpsManager)app.getSystemService(Context.APP_OPS_SERVICE);
         mMainThreadHandler = new MainThreadHandler();
         publish();
     }
@@ -269,13 +272,18 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
         }
     }
 
-    public void call(String number) {
+    public void call(String callingPackage, String number) {
         if (DBG) log("call: " + number);
 
         // This is just a wrapper around the ACTION_CALL intent, but we still
         // need to do a permission check since we're calling startActivity()
         // from the context of the phone app.
         enforceCallPermission();
+
+        if (mAppOps.noteOp(AppOpsManager.OP_CALL_PHONE, Binder.getCallingUid(), callingPackage)
+                != AppOpsManager.MODE_ALLOWED) {
+            return;
+        }
 
         String url = createTelUrl(number);
         if (url == null) {
@@ -386,7 +394,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     /**
      * Make the actual telephony calls to implement answerRingingCall().
      * This should only be called from the main thread of the Phone app.
-     * @see answerRingingCall
+     * @see #answerRingingCall
      *
      * TODO: it would be nice to return true if we answered the call, or
      * false if there wasn't actually a ringing incoming call, or some
@@ -433,7 +441,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     /**
      * Internal implemenation of silenceRinger().
      * This should only be called from the main thread of the Phone app.
-     * @see silenceRinger
+     * @see #silenceRinger
      */
     private void silenceRingerInternal() {
         if ((mCM.getState() == PhoneConstants.State.RINGING)
@@ -567,7 +575,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     }
 
     public boolean isRadioOn() {
-        return mPhone.getServiceState().getState() != ServiceState.STATE_POWER_OFF;
+        return mPhone.getServiceState().getVoiceRegState() != ServiceState.STATE_POWER_OFF;
     }
 
     public void toggleRadioOnOff() {
@@ -576,9 +584,14 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     }
     public boolean setRadio(boolean turnOn) {
         enforceModifyPermission();
-        if ((mPhone.getServiceState().getState() != ServiceState.STATE_POWER_OFF) != turnOn) {
+        if ((mPhone.getServiceState().getVoiceRegState() != ServiceState.STATE_POWER_OFF) != turnOn) {
             toggleRadioOnOff();
         }
+        return true;
+    }
+    public boolean setRadioPower(boolean turnOn) {
+        enforceModifyPermission();
+        mPhone.setRadioPower(turnOn);
         return true;
     }
 
@@ -674,7 +687,7 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
 
     @Override
     @SuppressWarnings("unchecked")
-    public List<NeighboringCellInfo> getNeighboringCellInfo() {
+    public List<NeighboringCellInfo> getNeighboringCellInfo(String callingPackage) {
         try {
             mApp.enforceCallingOrSelfPermission(
                     android.Manifest.permission.ACCESS_FINE_LOCATION, null);
@@ -687,6 +700,10 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
                     android.Manifest.permission.ACCESS_COARSE_LOCATION, null);
         }
 
+        if (mAppOps.noteOp(AppOpsManager.OP_NEIGHBORING_CELLS, Binder.getCallingUid(),
+                callingPackage) != AppOpsManager.MODE_ALLOWED) {
+            return null;
+        }
         if (checkIfCallerIsSelfOrForegoundUser()) {
             if (DBG_LOC) log("getNeighboringCellInfo: is active user");
 
@@ -726,6 +743,10 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
             if (DBG_LOC) log("getAllCellInfo: suppress non-active user");
             return null;
         }
+    }
+
+    public void setCellInfoListRate(int rateInMillis) {
+        mPhone.setCellInfoListRate(rateInMillis);
     }
 
     //
@@ -852,10 +873,29 @@ public class PhoneInterfaceManager extends ITelephony.Stub {
     }
 
     /**
-     * Returns the network type
+     * Returns the data network type
+     *
+     * @Deprecated to be removed Q3 2013 use {@link #getDataNetworkType}.
      */
+    @Override
     public int getNetworkType() {
-        return mPhone.getServiceState().getNetworkType();
+        return mPhone.getServiceState().getDataNetworkType();
+    }
+
+    /**
+     * Returns the data network type
+     */
+    @Override
+    public int getDataNetworkType() {
+        return mPhone.getServiceState().getDataNetworkType();
+    }
+
+    /**
+     * Returns the data network type
+     */
+    @Override
+    public int getVoiceNetworkType() {
+        return mPhone.getServiceState().getVoiceNetworkType();
     }
 
     /**

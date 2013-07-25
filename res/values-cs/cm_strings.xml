@@ -21,10 +21,8 @@
     <string name="mwi_notification_title">Upozornění hlasové zprávy</string>
     <string name="mwi_notification_summary">Zobrazit upozornění při přijetí hlasové zprávy</string>
 
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Upřednostňovaná síť: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Upřednostňovaná síť: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Upřednostňovaná síť: LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Upřednostňovaná síť: LTE / WCDMA</string>
 
     <string name="card_title_dialing_waiting">Vytáčení (čekání\u2026)</string>
 

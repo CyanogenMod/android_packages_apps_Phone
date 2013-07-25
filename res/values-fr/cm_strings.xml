@@ -17,10 +17,8 @@
     <string name="callUnanswered_forwarded">Appel sans réponse et transmis</string>
     <string name="mwi_notification_title">Indicateur de message en attente</string>
     <string name="mwi_notification_summary">Afficher une notification lorsqu\'un message est en attente dans la messagerie vocale</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Préférer le reseau : LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Préférer le reseau : LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Préférer le reseau : LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Préférer le reseau : LTE / WCDMA</string>
     <string name="card_title_dialing_waiting">Numérotation en cours\u2026</string>
     <string name="card_title_waiting_call">Appel en attente</string>
     <string name="call_notif_unconditionalCF">Renvoi d\'appel sans condition actif</string>

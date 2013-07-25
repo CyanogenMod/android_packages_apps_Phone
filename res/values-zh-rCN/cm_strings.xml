@@ -17,10 +17,8 @@
     <string name="callUnanswered_forwarded">呼叫未接通并被转接</string>
     <string name="mwi_notification_title">信息等待指示器</string>
     <string name="mwi_notification_summary">显示等待语音信箱通知的指示器</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">首选网络模式：LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">首选网络模式：LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">首选网络模式：LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">首选网络模式：LTE / WCDMA</string>
     <string name="card_title_dialing_waiting">正在拨号 (等待中\u2026)</string>
     <string name="card_title_waiting_call">等待通话</string>
     <string name="call_notif_unconditionalCF">启用无条件的来电转接</string>

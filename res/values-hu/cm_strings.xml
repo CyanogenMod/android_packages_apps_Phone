@@ -17,10 +17,8 @@
     <string name="callUnanswered_forwarded">Nem fogadott és átirányított hívások</string>
     <string name="mwi_notification_title">Várakozó üzenet</string>
     <string name="mwi_notification_summary">Várakozó hangposta üzenet megjelenítése</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Preferált hálózati mód: LTE/CDMA/EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Preferált hálózati mód: LTE/GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Preferált hálózati mód: LTE/CMDA/EvDo/GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Preferált hálózati mód: LTE/WCDMA</string>
     <string name="card_title_waiting_call">Várakozó hívás</string>
     <string name="call_notif_unconditionalCF">Feltétel nélküli hívásátirányítás aktív</string>
     <string name="call_notif_conditionalCF">Feltételes hívásátirányítás aktív</string>

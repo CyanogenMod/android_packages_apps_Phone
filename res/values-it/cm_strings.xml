@@ -17,10 +17,8 @@
     <string name="callUnanswered_forwarded">Chiamata non risposta e inoltrata</string>
     <string name="mwi_notification_title">Indicatore di messaggio in attesa</string>
     <string name="mwi_notification_summary">Mostra le notifiche per i messaggi in attesa in segreteria</string>
-    <string name="preferred_network_mode_lte_cdma_evdo_summary">Modalità di rete preferita: LTE / CDMA / EvDo</string>
     <string name="preferred_network_mode_lte_gsm_summary">Modalità di rete preferita: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Modalità di rete preferita: LTE / CMDA / EvDo / GSM/WCDMA</string>
-    <string name="preferred_network_mode_lte_wcdma_summary">Modalità di rete preferita: LTE / WCDMA</string>
     <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo per periodo\nIl prossimo periodo inizia tra <xliff:g id="used">%4$d</xliff:g> giorni (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) di <xliff:g id="used">%3$s</xliff:g> massimo per periodo</string>
     <string name="card_title_dialing_waiting">Chiamata in corso (in attesa\u2026)</string>
