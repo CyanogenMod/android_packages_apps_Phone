@@ -16,8 +16,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="perm_change_mobile_network">Змінення режиму мережі (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Програма з цими правами може в будь-який момент змінити режим мережі. 3G швидше, але споживає більше енергії, а також може тарифікуватися дорожче.</string>
-    <string name="dialer_ui_settings_title">Налаштування кнопок</string>
-    <string name="dialer_ui_settings_summary">Налаштування номеронабирача</string>
     <string name="advanced_setting">Додаткові налаштування</string>
     <string name="vibrate_outgoing">Вібрувати при відповіді</string>
     <string name="vibrate_call_waiting">Вібрувати при очікуванні</string>

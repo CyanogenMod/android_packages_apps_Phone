@@ -39,8 +39,6 @@
     <string name="card_title_dialing_waiting">Rufaufbau (klopft an\u2026)</string>
     <string name="card_title_waiting_call">Wartender Anruf</string>
     <string name="incall_call_type_label_forwarded">Weitergeleiteter Anruf</string>
-    <string name="dialer_ui_settings_title">Wähltasten</string>
-    <string name="dialer_ui_settings_summary">Einstellungen für die Wähltasten</string>
     <string name="advanced_setting">Erweiterte Einstellungen</string>
     <string name="vibrate_outgoing">Bei Annahme vibrieren</string>
     <string name="vibrate_call_waiting">Beim Anklopfen vibrieren</string>

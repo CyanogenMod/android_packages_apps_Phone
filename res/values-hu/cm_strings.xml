@@ -35,8 +35,6 @@
     <string name="call_notif_callconnectingect">Közvetlen hívásátirányítással kapcsolódás</string>
     <string name="call_notif_callconnectedect">Hívás létrejött közvetlen hívásátirányítással</string>
     <string name="incall_call_type_label_forwarded">Átirányított hívás</string>
-    <string name="dialer_ui_settings_title">Tárcsázó beállítások</string>
-    <string name="dialer_ui_settings_summary">Tárcsázó beállításai</string>
     <string name="noise_suppression_title">Zajcsökkentés</string>
     <string name="noise_suppression_summary">Zajcsökkentés engedélyezése telefonhívások esetén</string>
     <string name="advanced_setting">Speciális beállítások</string>

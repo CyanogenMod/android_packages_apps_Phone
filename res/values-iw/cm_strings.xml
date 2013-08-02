@@ -35,8 +35,6 @@
     <string name="call_notif_callconnectingect">מתחבר לשיחה דרך העברת שיחות מפורשת</string>
     <string name="call_notif_callconnectedect">מחובר לשיחה דרך העברת שיחות מפורשת</string>
     <string name="incall_call_type_label_forwarded">שיחה מופנית</string>
-    <string name="dialer_ui_settings_title">הגדרות חייגן</string>
-    <string name="dialer_ui_settings_summary">הגדרות של לוח החיוג</string>
     <string name="noise_suppression_title">סינון רעשים</string>
     <string name="noise_suppression_summary">אפשר הפחתת רעשי רקע עבור שיחות</string>
     <string name="advanced_setting">הגדרות מתקדמות</string>

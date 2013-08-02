@@ -45,9 +45,6 @@
 
     <string name="incall_call_type_label_forwarded">Přesměrovaný hovor</string>
 
-    <string name="dialer_ui_settings_title">Nastavení číselníku</string>
-    <string name="dialer_ui_settings_summary">Nastavení číselníku</string>
-
     <string name="noise_suppression_title">Potlačení šumu</string>
     <string name="noise_suppression_summary">Povolit potlačování šumu při hovorech</string>
 

@@ -68,10 +68,6 @@
     <!-- In-call screen: "call type" indication for a forwarded call [CHAR LIMIT=30] -->
     <string name="incall_call_type_label_forwarded">Forwarded call</string>
 
-    <!-- Dialer UI Settings -->
-    <string name="dialer_ui_settings_title">Dialpad settings</string>
-    <string name="dialer_ui_settings_summary">Settings for the dialpad</string>
-
     <!-- Noise suppression -->
     <string name="noise_suppression_title">Noise suppression</string>
     <string name="noise_suppression_summary">Enable noise suppression for calls</string>

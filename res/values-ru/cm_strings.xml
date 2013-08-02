@@ -19,10 +19,6 @@
     <string name="noise_suppression_title">Шумоподавление</string>
     <string name="noise_suppression_summary">Включить шумоподавление в телефонных разговорах</string>
 
-    <!-- Dialer UI Settings -->
-    <string name="dialer_ui_settings_title">Настройки кнопок</string>
-    <string name="dialer_ui_settings_summary">Настройки номеронабирателя</string>
-
     <!-- Advanced Phone Settings -->
     <string name="advanced_setting">Дополнительные настройки</string>
     <string name="vibrate_outgoing">Вибрировать при ответе</string>

@@ -32,8 +32,6 @@
     <string name="card_title_dialing_waiting">Łączenie (oczekiwanie\u2026)</string>
     <string name="calllog_after_call">Pokaż raport</string>
     <string name="calllog_after_call_summary">Pokaż raport po zakończeniu połączenia</string>
-    <string name="dialer_ui_settings_title">Ustawienia dialera</string>
-    <string name="dialer_ui_settings_summary">Ekran z ustawieniami dialera</string>
     <string name="noise_suppression_title">Redukcja szumów</string>
     <string name="noise_suppression_summary">Włącz redukcję szumów dla połączeń</string>
     <string name="blacklist_title">Czarna lista</string>

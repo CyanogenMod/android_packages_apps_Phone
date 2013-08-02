@@ -36,8 +36,6 @@
     <string name="call_notif_callconnectingect">Η κλήση συνδέεται με μεταφορά κλήσης</string>
     <string name="call_notif_callconnectedect">Η κλήση συνδέθηκε με μεταφορά κλήσης</string>
     <string name="incall_call_type_label_forwarded">Προωθημένη κλήση</string>
-    <string name="dialer_ui_settings_title">Πληκτρολόγιο κλήσης</string>
-    <string name="dialer_ui_settings_summary">Ρυθμίσεις για το πληκτρολόγιο κλήσης</string>
     <string name="noise_suppression_title">Καταστολή θορύβου</string>
     <string name="noise_suppression_summary">Ενεργοποίηση της καταστολής θορύβου κατά τη διάρκεια κλήσεων</string>
     <string name="advanced_setting">Για προχωρημένους</string>

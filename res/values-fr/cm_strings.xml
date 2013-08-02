@@ -36,8 +36,6 @@
     <string name="call_notif_callconnectingect">Connecter l\'appel au travers d\'un transfert d\'appel</string>
     <string name="call_notif_callconnectedect">L\'appel est connecté au travers d\'un transfert d\'appel</string>
     <string name="incall_call_type_label_forwarded">Appel renvoyé</string>
-    <string name="dialer_ui_settings_title">Paramètres du clavier</string>
-    <string name="dialer_ui_settings_summary">Définir les paramètres du clavier</string>
     <string name="noise_suppression_title">Suppression du bruit</string>
     <string name="noise_suppression_summary">Activer la suppression du bruit pour les appels</string>
     <string name="advanced_setting">Paramètres avancés</string>

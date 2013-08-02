@@ -24,8 +24,6 @@
     <string name="vibrate_45_sum">"Vibrare la fiecare a 45-a secundă a unui minut în timpul apelului de ieşire"</string>
     <string name="national_roaming">"Roaming de date naţional"</string>
     <string name="national_roaming_summary">"Serviciile de date în roaming naţional activate"</string>
-    <string name="dialer_ui_settings_title">"Setări tast. numerică"</string>
-    <string name="dialer_ui_settings_summary">"Setări pentru tastatura numerică"</string>
     <string name="perm_change_mobile_network">"Modificaţi reţeaua (2G/3G)"</string>
     <string name="perm_change_mobile_network_desc">"Aplicația cu această permisiune poate, în orice moment, schimba între datele 2G şi 3G. 3G este mai rapid, consumă mai multă baterie și vă poate costa de asemenea, mai mulți bani."</string>
     <string name="callUnanswered_forwarded">"Apel nepreluat şi redirecţionat"</string>

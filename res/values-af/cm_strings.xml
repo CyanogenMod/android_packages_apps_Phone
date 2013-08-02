@@ -28,8 +28,6 @@
     <string name="national_roaming_summary">Koppel aan data dienste wanneer nasionaal swerf</string>
     <string name="perm_change_mobile_network">Verander netwerk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">\'n program met hierdie toestemming kan, te enige tyd, tussen 2G en 3G data verander. 3G is vinniger maar gebruik meer battery en kan duurder wees.</string>
-    <string name="dialer_ui_settings_title">Sleutelbord</string>
-    <string name="dialer_ui_settings_summary">Instellings vir die sleutelbord</string>
     <string name="flip_action_title">Omdraai aksie</string>
     <string name="flip_action_dialog_title">Draai toestel om\u2026</string>
     <string name="flip_action_summary">Die omdraai van die toestel <xliff:g id="action">%s</xliff:g></string>

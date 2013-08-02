@@ -45,9 +45,6 @@
 
     <string name="incall_call_type_label_forwarded">Viderestillet opkald</string>
 
-    <string name="dialer_ui_settings_title">Opkaldsprogram-indstillinger</string>
-    <string name="dialer_ui_settings_summary">Indstillinger for opkaldsprogram</string>
-
     <string name="noise_suppression_title">Undertrykkelse af støj</string>
     <string name="noise_suppression_summary">Slå undertrykkelse af støj for opkald til</string>
 

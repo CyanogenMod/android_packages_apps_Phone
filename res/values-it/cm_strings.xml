@@ -38,8 +38,6 @@
     <string name="call_notif_callconnectingect">Chiamata in connessione con trasferimento di chiamata</string>
     <string name="call_notif_callconnectedect">Chiamata connessa con trasferimento di chiamata</string>
     <string name="incall_call_type_label_forwarded">Chiamata inoltrata</string>
-    <string name="dialer_ui_settings_title">Impostazioni tastierino</string>
-    <string name="dialer_ui_settings_summary">Impostazioni per il tastierino numerico</string>
     <string name="noise_suppression_title">Riduzione rumore</string>
     <string name="noise_suppression_summary">Abilita la riduzione rumore nelle chiamate</string>
     <string name="advanced_setting">Impostazioni avanzate</string>

@@ -39,8 +39,6 @@
     <string name="call_notif_callconnectingect">Llamada conectándose por centralita</string>
     <string name="call_notif_callconnectedect">Llamada conectada por centralita</string>
     <string name="incall_call_type_label_forwarded">Llamada desviada</string>
-    <string name="dialer_ui_settings_title">Ajustes de marcación</string>
-    <string name="dialer_ui_settings_summary">Ajustes del teclado de marcación</string>
     <string name="noise_suppression_title">Supresor de ruido</string>
     <string name="noise_suppression_summary">Activar la supresión de ruido durante las llamadas</string>
     <string name="advanced_setting">Configuración avanzada</string>
