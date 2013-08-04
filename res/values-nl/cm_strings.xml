@@ -13,7 +13,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="callUnanswered_forwarded">Gesprek onbeantwoord en doorgeschakeld</string>
     <string name="card_title_waiting_call">Oproep in wacht</string>
@@ -80,4 +79,6 @@
     <string name="voice_quality_entry_crisp">Helderder</string>
     <string name="voice_quality_entry_bright">Helderst</string>
     <string name="enter_input">USSD-bericht moet tussen de <xliff:g id="min_len" >%d</xliff:g> en <xliff:g id="max_len" >%d</xliff:g> tekens zijn. Probeer het opnieuw.</string>
+    <string name="phone_number_label">Mijn telefoonnummer</string>
+    <string name="phone_number_summary">Telefoonnummer voor dit apparaat instellen</string>
 </resources>
