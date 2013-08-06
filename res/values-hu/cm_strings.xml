@@ -79,4 +79,6 @@
     <string name="voice_quality_entry_crisp">Kristálytiszta</string>
     <string name="voice_quality_entry_bright">Ragyogó</string>
     <string name="enter_input">Az USSD üzenet hossza minimum <xliff:g id="min_len" >%d</xliff:g> maximum <xliff:g id="max_len" >%d</xliff:g> karakter lehet. Kérjük próbálja újra.</string>
+    <string name="phone_number_label">Saját telefonszám</string>
+    <string name="phone_number_summary">Telefonszám beállítása az eszközhöz</string>
 </resources>
