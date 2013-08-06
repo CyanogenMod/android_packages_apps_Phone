@@ -81,4 +81,6 @@
     <string name="voice_quality_entry_clear">Klar</string>
     <string name="voice_quality_entry_crisp">Sehr klar</string>
     <string name="voice_quality_entry_bright">Hell</string>
+    <string name="phone_number_label">Eigene Rufnummer</string>
+    <string name="phone_number_summary">Auf der SIM-Karte gespeicherte eigene Rufnummer setzen</string>
 </resources>
