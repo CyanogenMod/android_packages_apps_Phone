@@ -79,4 +79,6 @@
     <string name="voice_quality_entry_crisp">Clair</string>
     <string name="voice_quality_entry_bright">Brillant</string>
     <string name="enter_input">Les messages de type USSD doivent être compris entre <xliff:g id="min_len" >%d</xliff:g> et <xliff:g id="max_len" >%d</xliff:g> caractères. Réessayer.</string>
+    <string name="phone_number_label">Mon numéro de téléphone</string>
+    <string name="phone_number_summary">Définir le numéro de téléphone de cet appareil</string>
 </resources>
