@@ -90,5 +90,7 @@
     <string name="voice_quality_entry_clear">Καθαρός</string>
     <string name="voice_quality_entry_crisp">Ζωηρός</string>
     <string name="voice_quality_entry_bright">Έντονος</string>
+    <string name="phone_number_label">Ο αριθμός μου</string>
+    <string name="phone_number_summary">Ορίστε τον αριθμό τηλεφώνου για αυτή τη συσκευή</string>
     <string name="enter_input">Το μήνυμα USSD πρέπει να είναι μεταξύ <xliff:g id="min_len" >%d</xliff:g> και <xliff:g id="max_len" >%d</xliff:g> χαρακτήρων. Παρακαλώ προσπαθήστε ξανά.</string>
 </resources>
