@@ -65,7 +65,7 @@
     <string name="add_to_blacklist_message">Μελλοντικές κλήσεις από το %s θα απορρίπτονται</string>
     <string name="remove_blacklist_number_title">Αφαίρεση αριθμού</string>
     <string name="remove_blacklist_number">Θέλετε να αφαιρέσετε το %s από τη μαύρη λίστα;</string>
-    <string name="blacklist_notification">Απορρίφθηκε κλήση από το %s</string>
+    <string name="blacklist_notification">Απορρίφθηκε κλήση από %s</string>
     <string name="blacklist_notification_private_number">Απορρίφθηκε κλήση από απόρρητο αριθμό</string>
     <string name="blacklist_notification_list_private">Απόρρητο</string>
     <string name="blacklist_notification_unknown_number">Απορρίφθηκε άγνωστος αριθμός %s</string>
@@ -78,5 +78,7 @@
     <string name="voice_quality_entry_clear">Καθαρός</string>
     <string name="voice_quality_entry_crisp">Ζωηρός</string>
     <string name="voice_quality_entry_bright">Έντονος</string>
+    <string name="phone_number_label">Ο αριθμός μου</string>
+    <string name="phone_number_summary">Ορίστε τον αριθμό τηλεφώνου για αυτή τη συσκευή</string>
     <string name="enter_input">Το μήνυμα USSD πρέπει να είναι μεταξύ <xliff:g id="min_len" >%d</xliff:g> και <xliff:g id="max_len" >%d</xliff:g> χαρακτήρων. Παρακαλώ προσπαθήστε ξανά.</string>
 </resources>
