@@ -78,4 +78,6 @@
     <string name="blacklist_notification_list_private">Privado</string>
     <string name="blacklist_notification_unknown_number">Número desconhecido %s foi bloqueado</string>
     <string name="blacklist_notification_multiple"><xliff:g id="count" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">%d</xliff:g> chamadas foram bloqueadas</string>
+    <string name="phone_number_label">Meu número de telefone</string>
+    <string name="phone_number_summary">Define o número de telefone deste dispositivo</string>
 </resources>
