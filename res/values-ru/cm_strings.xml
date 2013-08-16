@@ -15,11 +15,8 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Noise suppression -->
     <string name="noise_suppression_title">Шумоподавление</string>
     <string name="noise_suppression_summary">Включить шумоподавление в телефонных разговорах</string>
-
-    <!-- Advanced Phone Settings -->
     <string name="advanced_setting">Дополнительные настройки</string>
     <string name="vibrate_outgoing">Вибрировать при ответе</string>
     <string name="vibrate_call_waiting">Вибрировать при ожидании</string>
@@ -30,59 +27,52 @@
     <string name="rejected_as_missed_sum">Помечать в журнале отклонённые вызовы как пропущенные</string>
     <string name="show_ssn_label">Уведомления о событиях</string>
     <string name="show_ssn_summary">Показывать уведомления различных событий, связанных с сетью обработки вызовов</string>
-
     <string name="national_roaming">Национальный роуминг</string>
     <string name="national_roaming_summary">Подключаться к службам передачи данных в национальном роуминге</string>
-
     <string name="perm_change_mobile_network">Изменение сети (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Приложение, имеющее данное разрешение, может в любое время переключать режимы связи между 2G и 3G. Режим 3G имеет более высокую скорость и большее потребление энергии.</string>
-
-    <!-- Setting title for the flip action setting. -->
-    <string name="flip_action_title">Переворот телефона</string>
-
-    <!-- Dialog title of the flip action setting. -->
+    <string name="flip_action_title">Переворот устройства</string>
     <string name="flip_action_dialog_title">Выбор действия\u2026</string>
-
-    <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary">Перевернув телефон экраном вниз <xliff:g id="action">%s</xliff:g></string>
-
+    <string name="flip_action_summary">При перевороте устройства экраном вниз <xliff:g id="action">%s</xliff:g></string>
     <string name="card_title_dialing_waiting">Набор номера (ожидание\u2026)</string>
-
+    <string name="card_title_waiting_call">Ожидание вызова</string>
+    <string name="call_notif_unconditionalCF">Безусловная переадресация вызова включена</string>
+    <string name="call_notif_conditionalCF">Условная переадресация вызова включена</string>
+    <string name="call_notif_MOcall_forwarding">Переадресация исходящего вызова</string>
+    <string name="call_notif_cugcall">Вызов в закрытой абонентской группе</string>
+    <string name="call_notif_outgoing_barred">Запрет исходящих вызовов</string>
+    <string name="call_notif_incoming_barred">Входящие вызовы запрещены на удалённой стороне</string>
+    <string name="call_notif_clir_suppression_rejected">Скрытие номера заблокировано сетью</string>
+    <string name="call_notif_call_deflected">Вызов переадресован удалённой стороной</string>
+    <string name="call_notif_MTcall_forwarding">Входящий вызов будет переадресован</string>
+    <string name="call_notif_multipartycall">Конференц-связь</string>
+    <string name="call_notif_callonhold_released">Вызов снят с удержания</string>
+    <string name="call_notif_forwardcheckreceived">Вызов был переадресован</string>
+    <string name="call_notif_callconnectingect">Соединение через прямой вызов</string>
+    <string name="call_notif_callconnectedect">Подключено через прямой вызов</string>
     <string name="calllog_after_call">Показать журнал</string>
     <string name="calllog_after_call_summary">Показывать журнал вызовов после окончания разговора</string>
-
-    <!-- Blacklist preferences -->
     <string name="blacklist_title">Чёрный список</string>
     <string name="blacklist_summary_disabled">Выключен</string>
     <string name="blacklist_summary">Входящие звонки от абонентов из чёрного списка будут отклоняться</string>
-
-    <!-- Blacklist management -->
+    <string name="blacklist_notification">Вызов от %s отклонён</string>
+    <string name="blacklist_notification_private_number">Вызов от неизвестного номера отклонён</string>
+    <string name="blacklist_notification_list_private">Скрытый</string>
+    <string name="blacklist_notification_unknown_number">Заблокирован неизвестный номер %s</string>
+    <string name="blacklist_notification_multiple">Вызовов отклонено: <xliff:g id="count">%d</xliff:g></string>
+    <string name="unblock_number">Разблокировать</string>
     <string name="add_blacklist_number">Добавить номер телефона</string>
     <string name="add_to_blacklist">Добавить в чёрный список</string>
     <string name="add_to_blacklist_message">Будущие вызовы от %s будут отклонены</string>
     <string name="remove_blacklist_number_title">Удалить номер</string>
     <string name="remove_blacklist_number">Вы действительно хотите удалить %s из чёрного списка?</string>
-
-    <!-- Blacklist notifications -->
-    <string name="blacklist_notification">Вызов от %s отклонён</string>
-    <string name="blacklist_notification_private_number">Вызов от неизвестного номера отклонён</string>
-    <string name="blacklist_notification_list_private">Скрытый</string>
-    <string name="blacklist_notification_unknown_number">Заблокирован неизвестный номер %s</string>
-    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> звонка (ов) было отклонено</string>
-    <string name="unblock_number">Разблокировать</string>
-
-    <!-- Text for the onscreen "Blacklist" button -->
     <string name="onscreenBlacklistText">Чёрный список</string>
-
-    <!-- Voice quality filter -->
     <string name="voice_quality_preferences_title">Качество звука</string>
     <string name="voice_quality_summary">Используется профиль: <xliff:g id="value">%s</xliff:g></string>
-    <!-- Do not remove those, they're used from overlays. -->
     <string name="voice_quality_entry_normal">Стандартный</string>
     <string name="voice_quality_entry_clear">Чистый</string>
     <string name="voice_quality_entry_crisp">Чёткий</string>
     <string name="voice_quality_entry_bright">Ясный</string>
-
-    <string name="enter_input">USSD-запрос должен быть от <xliff:g id="min_len" >%d</xliff:g> до <xliff:g id="max_len" >%d</xliff:g> символов. Пожалуйста, попробуйте ещё раз.</string>
+    <string name="enter_input">USSD-запрос должен быть длиной от <xliff:g id="min_len" >%d</xliff:g> до <xliff:g id="max_len" >%d</xliff:g> символов. Пожалуйста, попробуйте ещё раз.</string>
 
 </resources>
