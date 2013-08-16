@@ -80,5 +80,7 @@
     <string name="voice_quality_entry_clear">Chiara</string>
     <string name="voice_quality_entry_crisp">Ben definita</string>
     <string name="voice_quality_entry_bright">Brillante</string>
+    <string name="phone_number_label">Numero di telefono</string>
+    <string name="phone_number_summary">Imposta il numero di telefono di questo dispositivo</string>
     <string name="enter_input">Il messaggio USSD deve essere compreso tra <xliff:g id="min_len" >%d</xliff:g> e <xliff:g id="max_len" >%d</xliff:g> caratteri. Per favore riprova.</string>
 </resources>
