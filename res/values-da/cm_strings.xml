@@ -13,21 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-
     <string name="callUnanswered_forwarded">Opkald ubesvaret og viderestillet</string>
-
     <string name="mwi_notification_title">Indikator for ventende besked</string>
     <string name="mwi_notification_summary">Vis notifikationer for indikator for ventende beskeder på voicemail</string>
-
     <string name="preferred_network_mode_lte_gsm_summary">Foretrukken netværkstilstand: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Foretrukken netværkstilstand: LTE / CMDA / EvDo / GSM/WCDMA</string>
-
     <string name="card_title_dialing_waiting">Ringer op (venter\u2026)</string>
-
     <string name="card_title_waiting_call">Ventende opkald</string>
-
     <string name="call_notif_unconditionalCF">Ubetinget viderestilling af opkald aktiv</string>
     <string name="call_notif_conditionalCF">Betinget viderestilling af opkald aktiv</string>
     <string name="call_notif_MOcall_forwarding">Udgående opkald er viderestillet</string>
@@ -42,12 +35,9 @@
     <string name="call_notif_forwardcheckreceived">Opkald blev viderestillet</string>
     <string name="call_notif_callconnectingect">Opkald tilslutter via eksplicit omstilling</string>
     <string name="call_notif_callconnectedect">Opkald tilsluttet via eksplicit omstilling</string>
-
     <string name="incall_call_type_label_forwarded">Viderestillet opkald</string>
-
     <string name="noise_suppression_title">Undertrykkelse af støj</string>
     <string name="noise_suppression_summary">Slå undertrykkelse af støj for opkald til</string>
-
     <string name="advanced_setting">Avancerede indstillinger</string>
     <string name="vibrate_outgoing">Vibrér ved opkald</string>
     <string name="vibrate_call_waiting">Vibrér ventende opkald</string>
@@ -60,48 +50,38 @@
     <string name="show_ssn_summary">Vis en notifikation til forskellige netværkshændelser ifbm. opkaldshåndtering</string>
     <string name="calllog_after_call">Vis log</string>
     <string name="calllog_after_call_summary">Vis opkaldsloggen, når opkaldet afsluttes</string>
-
     <string name="national_roaming">National data-roaming</string>
     <string name="national_roaming_summary">Tilslut til datatjenester, når der roames nationalt</string>
-
     <string name="perm_change_mobile_network">Skift netværk (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Apps med denne tilladelse kan, til alle tider, skifte mellem 2G-data og 3G-data. 3G er hurtigere, bruger mere batteri, og kan også koste dig flere penge.</string>
-
     <string name="flip_action_title">Vendehandling</string>
-
     <string name="flip_action_dialog_title">Vend enheden for at\u2026</string>
-
     <string name="flip_action_summary">At vende telefonen nedad vil <xliff:g id="action">%s</xliff:g></string>
-
     <string name="blacklist_title">Sortliste</string>
     <string name="blacklist_summary_disabled">Slået fra</string>
     <string name="blacklist_summary">Indgående opkald fra sortlistede telefonnumre vil blive blokeret</string>
-
     <string name="add_blacklist_number">Tilføj telefonnummer</string>
     <string name="add_to_blacklist">Tilføj til sortliste</string>
     <string name="add_to_blacklist_message">Fremtidige opkald fra %s vil blive blokeret</string>
     <string name="remove_blacklist_number_title">Fjern nummer</string>
     <string name="remove_blacklist_number">Vil du fjerne %s fra sortlisten?</string>
-
     <string name="blacklist_notification">Blokerede et opkald fra %s</string>
     <string name="blacklist_notification_private_number">Blokerede et opkald fra et privat nummer</string>
     <string name="blacklist_notification_list_private">Privat</string>
     <string name="blacklist_notification_unknown_number">Blokerede ukendt nummer %s</string>
     <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> opkald blev blokeret</string>
     <string name="unblock_number">Fjern blokering</string>
-
     <string name="onscreenBlacklistText">Sortliste</string>
-
     <string name="voice_quality_preferences_title">Stemmekvalitet</string>
     <string name="voice_quality_summary">Bruger profil: <xliff:g id="value">%s</xliff:g></string>
     <string name="voice_quality_entry_normal">Normal</string>
     <string name="voice_quality_entry_clear">Klar</string>
     <string name="voice_quality_entry_crisp">Sprød</string>
     <string name="voice_quality_entry_bright">Lys</string>
-
     <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum\nNæste periode starter om <xliff:g id="used">%4$d</xliff:g> dage (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_data_usage_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) af <xliff:g id="used">%3$s</xliff:g> periode-maksimum</string>
     <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A af cyklus gået\nNæste periode starter om <xliff:g id="used">%2$d</xliff:g> dage (<xliff:g id="used">%3$s</xliff:g>)</string>
-
     <string name="enter_input">USSD-besked skal være mellem <xliff:g id="min_len" >%d</xliff:g> og <xliff:g id="max_len" >%d</xliff:g> tegn. Prøv igen.</string>
+    <string name="phone_number_label">Mit telefonnummer</string>
+    <string name="phone_number_summary">Angiv telefonnummeret for denne enhed</string>
 </resources>
