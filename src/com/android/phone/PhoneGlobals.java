@@ -1197,6 +1197,9 @@ public class PhoneGlobals extends ContextWrapper
                     if (!mProximityWakeLock.isHeld()) {
                         if (DBG) Log.d(LOG_TAG, "updateProximitySensorMode: acquiring...");
                         mProximityWakeLock.acquire();
+
+                        // Write the phone apps status to proximity sysfs node
+                        PhoneUtils.writePhoneAppStatus(getApplicationContext(), true);
                     } else {
                         if (VDBG) Log.d(LOG_TAG, "updateProximitySensorMode: lock already held.");
                     }

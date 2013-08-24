@@ -64,6 +64,12 @@ import com.android.internal.telephony.TelephonyProperties;
 import com.android.internal.telephony.cdma.CdmaConnection;
 import com.android.internal.telephony.sip.SipPhone;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.SyncFailedException;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Hashtable;
@@ -543,13 +549,17 @@ public class PhoneUtils {
      */
     static boolean hangup(Call call) {
         try {
-            CallManager cm = PhoneGlobals.getInstance().mCM;
+            PhoneGlobals app = PhoneGlobals.getInstance();
+            CallManager cm = app.mCM;
 
             if (call.getState() == Call.State.ACTIVE && cm.hasActiveBgCall()) {
                 // handle foreground call hangup while there is background call
                 log("- hangup(Call): hangupForegroundResumeBackground...");
                 cm.hangupForegroundResumeBackground(cm.getFirstActiveBgCall());
             } else {
+                // write the phone apps status to proximity sysfs node
+                writePhoneAppStatus(app.getApplicationContext(), false);
+
                 log("- hangup(Call): regular hangup()...");
                 call.hangup();
             }
@@ -1954,12 +1964,13 @@ public class PhoneUtils {
     }
 
     static void turnOnNoiseSuppression(Context context, boolean flag) {
-        if (DBG) log("turnOnNoiseSuppression: " + flag);
         AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
 
         if (!context.getResources().getBoolean(R.bool.has_in_call_noise_suppression)) {
             return;
         }
+
+        if (DBG) log("turnOnNoiseSuppression: " + flag);
 
         int nsp = android.provider.Settings.System.getInt(context.getContentResolver(),
                                                               android.provider.Settings.System.NOISE_SUPPRESSION,
@@ -1986,6 +1997,28 @@ public class PhoneUtils {
         } else {
             if (DBG) log("turnOnNoiseSuppression: " + aPValues[0] + "=" + aPValues[2]);
             audioManager.setParameters(aPValues[0] + "=" + aPValues[2]);
+        }
+    }
+
+    static void writePhoneAppStatus(Context context, boolean flag) {
+        String statusFile = context.getResources().getString(R.string.phone_app_status_file);
+
+        if (statusFile.length() >= 1) {
+            log("writePhoneAppStatus: " + flag);
+
+            String[] statusValues = context.getResources().getStringArray(R.array.phone_app_status_values);
+
+            if (flag) {
+                if (statusValues[0].length() >= 1) {
+                    writeValue(statusFile, statusValues[0]);
+                }
+            } else {
+                if (statusValues[1].length() >= 1) {
+                    writeValue(statusFile, statusValues[1]);
+                }
+            }
+        } else {
+            return;
         }
     }
 
@@ -2802,5 +2835,39 @@ public class PhoneUtils {
     public static boolean isLandscape(Context context) {
         return context.getResources().getConfiguration().orientation
                 == Configuration.ORIENTATION_LANDSCAPE;
+    }
+
+    /**
+     * Write a string value to the specified file.
+     *
+     * @param filename The filename
+     * @param value The value
+     */
+    public static void writeValue(String filename, String value) {
+        FileOutputStream fos = null;
+        try {
+            fos = new FileOutputStream(new File(filename), false);
+            fos.write(value.getBytes());
+            fos.flush();
+        } catch (FileNotFoundException ex) {
+            Log.w(LOG_TAG, "file " + filename + " not found: " + ex);
+        } catch (SyncFailedException ex) {
+            Log.w(LOG_TAG, "file " + filename + " sync failed: " + ex);
+        } catch (IOException ex) {
+            Log.w(LOG_TAG, "IOException trying to sync " + filename + ": " + ex);
+        } catch (RuntimeException ex) {
+            Log.w(LOG_TAG, "exception while syncing file: ", ex);
+        } finally {
+            if (fos != null) {
+                try {
+                    Log.w(LOG_TAG, "file " + filename + ": " + value);
+                    fos.close();
+                } catch (IOException ex) {
+                    Log.w(LOG_TAG, "IOException while closing synced file: ", ex);
+                } catch (RuntimeException ex) {
+                    Log.w(LOG_TAG, "exception while closing file: ", ex);
+                }
+            }
+        }
     }
 }

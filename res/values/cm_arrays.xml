@@ -59,4 +59,14 @@
     <string-array translatable="false" name="voice_quality_values">
         <!-- Overlay appropriately -->
     </string-array>
+
+    <!-- The status the phone app writes to a proximity sysfs node on "answer call" and "hangup".
+         First item: value for "answer call"
+         Second item: value for "hangup"  -->
+    <string-array name="phone_app_status_values" translatable="false">
+        <!-- Example:
+        <item>"2"</item>
+        <item>"1"</item>  -->
+    </string-array>
+
 </resources>
