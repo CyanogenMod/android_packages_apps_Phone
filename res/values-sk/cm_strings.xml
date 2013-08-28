@@ -58,16 +58,8 @@
     <string name="flip_action_dialog_title">Otočením zariadenia vykonať\u2026</string>
     <string name="flip_action_summary">Otočením zariadenia displejom nadol sa <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Čierna listina</string>
-    <string name="enable_blacklist_title">Povoliť čiernu listinu</string>
     <string name="blacklist_summary_disabled">Zakázaná</string>
     <string name="blacklist_summary">Prichádzajúce hovory z čísel, ktoré sú na čiernej listine, sú automaticky blokované</string>
-    <string name="blacklist_notify">Zobraziť upozornenia</string>
-    <string name="blacklist_private_numbers_title">Skryté čísla</string>
-    <string name="blacklist_private_numbers_summary">Blokovať prichádzajúce hovory zo súkromných čísel</string>
-    <string name="blacklist_unknown_numbers_title">Neznáme čísla</string>
-    <string name="blacklist_unknown_numbers_summary">Blokovať prichádzajúce hovory z čísel, ktoré nie sú v zozname kontaktov</string>
-    <string name="blacklist_regex_title">Použiť zástupné znaky</string>
-    <string name="blacklist_regex_summary">V čiernej listine použiť \'.\' ako zástup za akýkoľvek znak a \'*\' pre opakovanie. Napríklad \'123.*\' zablokuje všetky čísla začínajúce na \'123\' a \'.*123.*\' blokuje všetky čísla, ktoré obsahujú \'123\' v čísle.</string>
     <string name="blacklist_notification">Blokovaný hovor z %s</string>
     <string name="blacklist_notification_private_number">Blokovaný hovor zo skrytého čísla</string>
     <string name="blacklist_notification_list_private">Skryté</string>
