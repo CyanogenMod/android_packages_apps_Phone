@@ -78,4 +78,6 @@
     <string name="callUnanswered_forwarded">Połączenie nieodebrane i przekazane</string>
     <string name="preferred_network_mode_lte_gsm_summary">Preferowany tryb sieci: LTE / GSM/WCDMA</string>
     <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Preferowany tryb sieci: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="phone_number_label">Mój numer telefonu</string>
+    <string name="phone_number_summary">Ustaw numer telefonu dla tego urządzenia</string>
 </resources>
