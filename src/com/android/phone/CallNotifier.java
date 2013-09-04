@@ -296,8 +296,8 @@ public class CallNotifier extends Handler
         switch (msg.what) {
             case PHONE_NEW_RINGING_CONNECTION:
                 log("RINGING... (new)");
-                onNewRingingConnection((AsyncResult) msg.obj);
                 mSilentRingerRequested = false;
+                onNewRingingConnection((AsyncResult) msg.obj);
                 break;
 
             case PHONE_INCOMING_RING:
@@ -485,6 +485,7 @@ public class CallNotifier extends Handler
             c.setUserData(BLACKLIST);
             try {
                 c.hangup();
+                silenceRinger();
                 mApplication.notificationMgr.notifyBlacklistedCall(number,
                         c.getCreateTime(), listType);
             } catch (CallStateException e) {
@@ -1125,9 +1126,17 @@ public class CallNotifier extends Handler
             Log.w(LOG_TAG, "onDisconnect: null connection");
         }
 
+        boolean disconnectedDueToBlacklist = false;
+
         if (c != null) {
             mForwardedCalls.remove(c);
             mWaitingCalls.remove(c);
+            disconnectedDueToBlacklist = BLACKLIST.equals(c.getUserData());
+
+            boolean vibHangup = PhoneUtils.PhoneSettings.vibHangup(mApplication);
+            if (!disconnectedDueToBlacklist && vibHangup && c.getDurationMillis() > 0) {
+                vibrate(50, 100, 50);
+            }
         }
 
         int autoretrySetting = 0;
@@ -1139,6 +1148,9 @@ public class CallNotifier extends Handler
         // Stop any signalInfo tone being played when a call gets ended
         stopSignalInfoTone();
 
+        // Stop 45-second vibration
+        removeMessages(VIBRATE_45_SEC);
+
         if ((c != null) && (c.getCall().getPhone().getPhoneType() == PhoneConstants.PHONE_TYPE_CDMA)) {
             // Resetting the CdmaPhoneCallState members
             mApplication.cdmaPhoneCallState.resetCdmaPhoneCallState();
@@ -1146,20 +1158,6 @@ public class CallNotifier extends Handler
             // Remove Call waiting timers
             removeMessages(CALLWAITING_CALLERINFO_DISPLAY_DONE);
             removeMessages(CALLWAITING_ADDCALL_DISABLE_TIMEOUT);
-        }
-
-        if (c != null) {
-            Object o = c.getUserData();
-            if (BLACKLIST.equals(o)) {
-                if (VDBG) Log.i(LOG_TAG, "in blacklist so skip calllog");
-                return;
-            }
-
-            boolean vibHangup = PhoneUtils.PhoneSettings.vibHangup(mApplication);
-            if (vibHangup && c.getDurationMillis() > 0) {
-                vibrate(50, 100, 50);
-            }
-            removeMessages(VIBRATE_45_SEC);
         }
 
         // Stop the ringer if it was ringing (for an incoming call that
@@ -1279,7 +1277,9 @@ public class CallNotifier extends Handler
         }
 
         if (c != null) {
-            mCallLogger.logCall(c);
+            if (!disconnectedDueToBlacklist) {
+                mCallLogger.logCall(c);
+            }
 
             final String number = c.getAddress();
             final Phone phone = c.getCall().getPhone();
@@ -1327,6 +1327,7 @@ public class CallNotifier extends Handler
             if (((mPreviousCdmaCallState == Call.State.DIALING)
                     || (mPreviousCdmaCallState == Call.State.ALERTING))
                     && (!isEmergencyNumber)
+                    && !disconnectedDueToBlacklist
                     && (cause != Connection.DisconnectCause.INCOMING_MISSED )
                     && (cause != Connection.DisconnectCause.NORMAL)
                     && (cause != Connection.DisconnectCause.LOCAL)
