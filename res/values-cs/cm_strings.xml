@@ -96,4 +96,7 @@
     <string name="voice_quality_entry_clear">Čistý</string>
     <string name="voice_quality_entry_crisp">Ostrý</string>
     <string name="voice_quality_entry_bright">Jasný</string>
+
+    <string name="phone_number_label">Moje telefonní číslo</string>
+    <string name="phone_number_summary">Nastavení telefonního čísla tohoto zařízení</string>
 </resources>
