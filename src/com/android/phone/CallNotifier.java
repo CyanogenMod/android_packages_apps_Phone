@@ -1344,7 +1344,7 @@ public class CallNotifier extends Handler
                         && phone.isOtaSpNumber(number);
 
                 // Don't log emergency numbers if the device doesn't allow it,
-                // and never log OTASP calls.
+                // and never log OTASP and blacklisted calls.
                 final boolean okToLogThisCall =
                         (!isEmergencyNumber || okToLogEmergencyNumber)
                         && !isOtaspNumber
@@ -2366,9 +2366,9 @@ public class CallNotifier extends Handler
         CallerInfo ci = null;
         Object o = conn.getUserData();
 
-        if ((o == null) || (o instanceof CallerInfo)) {
+        if (o instanceof CallerInfo) {
             ci = (CallerInfo) o;
-        } else {
+        } else if (o instanceof PhoneUtils.CallerInfoToken) {
             ci = ((PhoneUtils.CallerInfoToken) o).currentInfo;
         }
         return ci;
