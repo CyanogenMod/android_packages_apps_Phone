@@ -139,4 +139,8 @@
          impossible to dismiss on the Sprint network. -->
     <bool name="sprint_mwi_quirk">false</bool>
 
+    <!-- Send phone app status to proximity sensor
+         Writes the phone apps status on "answer call" and on "hangup" to the specified proximity sysfs node. -->
+    <string name="phone_app_status_file"></string>
+
 </resources>
