@@ -19,6 +19,7 @@
     <string-array translatable="false" name="transport_types">
         <item>UDP</item>
         <item>TCP</item>
+        <item>TLS</item>
     </string-array>
 
     <string-array translatable="true" name="sip_call_options_entries">
