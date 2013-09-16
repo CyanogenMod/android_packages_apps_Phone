@@ -74,5 +74,13 @@
     <string name="voice_quality_entry_crisp">Чёткий</string>
     <string name="voice_quality_entry_bright">Ясный</string>
     <string name="enter_input">USSD-запрос должен быть длиной от <xliff:g id="min_len" >%d</xliff:g> до <xliff:g id="max_len" >%d</xliff:g> символов. Пожалуйста, попробуйте ещё раз.</string>
+    <string name="callUnanswered_forwarded">Вызов пропущен и переадресован</string>
+    <string name="mwi_notification_title">Индикатор сообщений</string>
+    <string name="mwi_notification_summary">Показывать индикатор входящих сообщений голосовой почты</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Предпочтительный режим: LTE/GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Предпочтительный режим: LTE/CDMA/EvDo/GSM/WCDMA</string>
+    <string name="incall_call_type_label_forwarded">Переадресованный вызов</string>
+    <string name="phone_number_label">Мой номер телефона</string>
+    <string name="phone_number_summary">Установить номер телефона для данного устройства</string>
 
 </resources>
