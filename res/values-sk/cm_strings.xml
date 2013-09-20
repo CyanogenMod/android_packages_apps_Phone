@@ -80,4 +80,5 @@
     <string name="voice_quality_entry_bright">Jasný</string>
     <string name="phone_number_label">Moje telefónne číslo</string>
     <string name="phone_number_summary">Nastaviť telefónne číslo pre toto zariadenie</string>
+    <string name="enter_input">USSD správa musí obsahovať najmenej <xliff:g id="min_len" >%d</xliff:g> a najviac <xliff:g id="max_len" >%d</xliff:g> znakov. Prosím, skúste to znova.</string>
 </resources>
