@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -81,4 +82,6 @@
     <string name="enter_input">USSD boodskap moet tussen <xliff:g id="min_len" >%d</xliff:g> en <xliff:g id="max_len" >%d</xliff:g> karakters wees. Probeer asseblief weer.</string>
     <string name="throttle_status_subtext"><xliff:g id="used">%1$s</xliff:g> (<xliff:g id="used">%2$d</xliff:g>\u066A) van <xliff:g id="used">%3$s</xliff:g> maksimum tydperk\nVolgende tydperk begin in <xliff:g id="used">%4$d</xliff:g> dae (<xliff:g id="used">%5$s</xliff:g>)</string>
     <string name="throttle_time_frame_subtext"><xliff:g id="used">%1$d</xliff:g>\u066A van die siklus het verloop\nVolgende tydperk begin in <xliff:g id="used">%2$d</xliff:g> dae (<xliff:g id="used">%3$s</xliff:g>)</string>
+    <string name="phone_number_label">My telefoonnommer</string>
+    <string name="phone_number_summary">Verskaf \'n telefoon nommer vir hierdie toestel</string>
 </resources>
