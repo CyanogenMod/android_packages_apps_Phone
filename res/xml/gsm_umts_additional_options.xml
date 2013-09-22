@@ -25,6 +25,7 @@
     <com.android.phone.MSISDNEditPreference
         android:key="button_pn_key"
         android:title="@string/phone_number_label"
+        android:persistent="false"
         android:summary="@string/phone_number_summary"
         android:dialogTitle="@string/phone_number_label"
         android:dialogMessage="@string/phone_number_summary"

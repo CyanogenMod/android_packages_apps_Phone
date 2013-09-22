@@ -86,7 +86,16 @@ public class MSISDNEditPreference extends EditTextPreference {
 
             if (phoneNum == null && savedNum == null) {
                 Log.d(LOG_TAG, "No phone number set yet");
-            } else if (TextUtils.equals(phoneNum, savedNum)) {
+            } else if (phoneNum == null && savedNum != null) {
+                /* Remove saved number only if there is some saved and
+                there is no number set */
+                if (DBG) {
+                    Log.d(LOG_TAG, "Removing phone number");
+                }
+
+                editor.remove(PHONE_NUMBER);
+                editor.commit();
+            } else if (!TextUtils.equals(phoneNum, savedNum)) {
                 /* Save phone number only if there is some number set and
                    it is not equal to the already saved one */
                 if (DBG) {
@@ -95,15 +104,6 @@ public class MSISDNEditPreference extends EditTextPreference {
 
                 editor.putString(PHONE_NUMBER, phoneNum);
                 editor.commit();
-            } else if (phoneNum == null && savedNum != null) {
-                /* Remove saved number only if there is some saved and
-                there is no number set */
-                if (DBG) {
-                    Log.d(LOG_TAG, "Removing phone number");
-                }
-
-                    editor.remove(PHONE_NUMBER);
-                    editor.commit();
             } else if (DBG) {
                 Log.d(LOG_TAG, "No change");
             }
