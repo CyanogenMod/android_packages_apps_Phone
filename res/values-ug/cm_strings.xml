@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="callUnanswered_forwarded">جاۋابسىزنى چاقىر ھەمدە ئۇلاپ چاقىر</string>
+    <string name="mwi_notification_title">ئۇچۇر كۈتۈش كۆرسەتكۈچى</string>
+    <string name="mwi_notification_summary">ئۈنخەت ئۇقتۇرۇشىنىڭ ئۇچۇر كۈتۈش كۆرسەتكۈچىنى كۆرسىتىدۇ</string>
+    <string name="preferred_network_mode_lte_gsm_summary">ئالدىن بەلگىلەنگەن تور ھالىتى: LTE/GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">ئالدىن بەلگىلەنگەن تور ھالىتى: LTE/CMDA/EvDo/GSM/WCDMA</string>
+    <string name="card_title_dialing_waiting">نومۇر بۇراۋاتىدۇ (كۈتۈۋاتىدۇ\u2026)</string>
+    <string name="card_title_waiting_call">چاقىرىشنى كۈتۈۋاتىدۇ</string>
+    <string name="call_notif_unconditionalCF">شەرتسىز ئۇلاپ يەتكۈزۈش ئاكتىپ</string>
+    <string name="call_notif_conditionalCF">شەرلىك ئۇلاپ يەتكۈزۈش ئاكتىپ</string>
+    <string name="call_notif_MOcall_forwarding">چاقىرغان تېلېفون ئۇلاپ يەتكۈزۈلدى</string>
+     <string name="call_notif_cugcall">يېپىق گۇرۇپپىدا چاقىر</string>
+    <string name="call_notif_outgoing_barred">چىققان چاقىرىشلار چەكلەندى</string>
+     <string name="call_notif_incoming_barred">چاقىرىلىشنى قارشى تەرەپ چەكلىدى</string>
+     <string name="call_notif_clir_suppression_rejected">ئۆز نومۇرىنى چەكلەشنى تور رەت قىلدى</string>
+     <string name="call_notif_call_deflected">چاقىرىشنى قارشى تەرەپ ئۇلاپ يەتكۈزدى</string>
+    <string name="call_notif_MTcall_forwarding">چاقىرىلىش ئۇلاپ يەتكۈزۈلدى</string>
+    <string name="call_notif_multipartycall">كۆپ تەرەپ چاقىرىش</string>
+    <string name="call_notif_callonhold_released">چاقىرىشنى قارشى تەرەپ قويۇۋەتتى</string>
+    <string name="call_notif_forwardcheckreceived">چاقىرىش ئۇلاپ يەتكۈزۈلدى</string>
+     <string name="call_notif_callconnectingect">چاقىرىش ئاشكارە چاقىرىشنى ئۇلاپ يەتكۈزۈش ئارقىلىق باغلىنىۋاتىدۇ</string>
+    <string name="call_notif_callconnectedect">چاقىرىش ئاشكارە چاقىرىشنى ئۇلاپ يەتكۈزۈش ئارقىلىق باغلاندى</string>
+    <string name="incall_call_type_label_forwarded">ئۇلاپ يەتكۈزۈلگەن چاقىرىش</string>
+    <string name="noise_suppression_title">شاۋقۇننى تۆۋەنلىتىش</string>
+    <string name="noise_suppression_summary">چاقىرغاندا شاۋقۇننى تۆۋەنلىتىشنى قوزغىتىدۇ</string>
+    <string name="advanced_setting">ئالىي تەڭشەكلەر</string>
+    <string name="vibrate_outgoing">ئۇلانغاندا تىترەت</string>
+    <string name="vibrate_call_waiting">چاقىرىشنى كۈتۈۋاتقاندا تىترىتىدۇ</string>
+    <string name="vibrate_hangup">ئۈزگەندە تىترەت</string>
+    <string name="vibrate_45">ھەر مىنۇتتا تىترەت</string>
+    <string name="vibrate_45_sum">سىرتتىكى نومۇرنى چاقىرغاندا ھەر 45 سېكۇنتتا بىر تىترىتىدۇ</string>
+    <string name="rejected_as_missed">رەت قىلغان چاقىرىشقا سۆزلەشمىگەن بەلگىسى سالىدۇ</string>
+    <string name="rejected_as_missed_sum">سۆزلىشىش خاتىرىسىدە رەت قىلغان چاقىرىشقا «سۆزلەشمىگەن»، «چاقىرىلغان» بەلگىسى قويىدۇ</string>
+    <string name="show_ssn_label">ھادىسە ئۇقتۇرۇشى</string>
+    <string name="show_ssn_summary">چاقىرىشنى بىر تەرەپ قىلىشقا ئائىت ھەر خىل تور ھادىسىلىرى ئۈچۈن ئۇقتۇرۇشتىن بىرنى كۆرسىتىدۇ</string>
+    <string name="calllog_after_call">خاتىرىنى كۆرسەت</string>
+    <string name="calllog_after_call_summary">چاقىرىش تاماملانغاندا چاقىرىش خاتىرىسىنى كۆرسىتىدۇ</string>
+    <string name="national_roaming">دۆلەت ئىچى سانلىق مەلۇمات كەزمە</string>
+    <string name="national_roaming_summary">دۆلەت ئىچى كەزمە ھالەتتە سانلىق مەلۇمات مۇلازىمىتىگە باغلىنىدۇ</string>
+    <string name="perm_change_mobile_network">تور ئالماشتۇر (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">بۇ ھوقۇققا ئېرىشكەن ئەپ خالىغان ۋاقىتتا 2G/3G تور ئارىسىدا ئالماشتۇرالايدۇ.  3G تورىنىڭ سۈرئىتى تېز، توك سەرپىياتى نىسبەتەن كۆپ ھەمدە تېخىمۇ كۆپ پۇل سەرپ قىلىدۇ.</string>
+    <string name="flip_action_title">ئايلاندۇرۇش مەشغۇلاتى</string>
+    <string name="flip_action_dialog_title">ئۈسكۈنىنى ئايلاندۇرۇپ\u2026</string>
+    <string name="flip_action_summary">تېلېفون تۆۋەنگە ئايلاندۇرۇلسا <xliff:g id="action">%s</xliff:g></string>
+    <string name="blacklist_title">قارا تىزىم</string>
+    <string name="blacklist_summary_disabled">چەكلەنگەن</string>
+    <string name="blacklist_summary">قارا تىزىمغا كىرگۈزۈلگەن تېلېفون نومۇرىدىن چاقىرىش توسۇلىدۇ</string>
+    <string name="blacklist_notification">%s نىڭ چاقىرىشىنى توستى</string>
+    <string name="blacklist_notification_private_number">شەخسىي نومۇردىن چاقىرىشنى توستى</string>
+    <string name="blacklist_notification_list_private">شەخسىي</string>
+    <string name="blacklist_notification_unknown_number">يوچۇن نومۇر %s نى توستى</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> چاقىرىش توسۇلدى</string>
+    <string name="unblock_number">توسما</string>
+    <string name="add_blacklist_number">تېلېفون نومۇرى قوش</string>
+    <string name="add_to_blacklist">قارا تىزىمغا قوش</string>
+    <string name="add_to_blacklist_message">كەلگۈسىدە %s دىن چاقىرىشنى توسىدۇ</string>
+    <string name="remove_blacklist_number_title">نومۇرنى چىقىرىۋەت</string>
+    <string name="remove_blacklist_number">قارا تىزىمدىن %s نى چىقىرىۋېتەمسىز؟</string>
+    <string name="onscreenBlacklistText">قارا تىزىم</string>
+    <string name="voice_quality_preferences_title">ئاۋاز سۈپىتى</string>
+    <string name="voice_quality_summary">ئىشلىتىۋاتقان سەپلىمە ھۆججەت: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">ئادەتتىكى</string>
+    <string name="voice_quality_entry_clear">ئېنىق</string>
+    <string name="voice_quality_entry_crisp">ئوچۇق</string>
+    <string name="voice_quality_entry_bright">ياڭراق</string>
+    <string name="phone_number_label">تېلېفون نومۇرۇم</string>
+    <string name="phone_number_summary">بۇ ئۈسكۈنە ئۈچۈن تېلېفون نومۇر تەڭشىكى</string>
+</resources>
