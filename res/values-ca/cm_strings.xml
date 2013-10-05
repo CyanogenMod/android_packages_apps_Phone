@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="callUnanswered_forwarded">Trucada perduda i desviada</string>
+    <string name="mwi_notification_title">Indicador de la bústia de veu</string>
+    <string name="mwi_notification_summary">Mostra una notificació per als missatges en espera a la bústia de veu</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Mode de xarxa preferit: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Mode de xarxa preferit: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="card_title_dialing_waiting">Trucant (esperant\u2026)</string>
+    <string name="card_title_waiting_call">Trucada en espera</string>
+    <string name="call_notif_unconditionalCF">Desviament de trucada incondicional actiu</string>
+    <string name="call_notif_conditionalCF">Desviament de trucada amb condicions actiu</string>
+    <string name="call_notif_MOcall_forwarding">La trucada sortint ha sigut desviada</string>
+    <string name="call_notif_cugcall">Truca en un grup d\'usuaris tancat</string>
+    <string name="call_notif_outgoing_barred">Trucades sortints excloses</string>
+    <string name="call_notif_incoming_barred">Trucades entrants excloses al costat remot</string>
+    <string name="call_notif_clir_suppression_rejected">La supressió del número propi rebutjada per la xarxa</string>
+    <string name="call_notif_call_deflected">Trucada desviada pel costat remot</string>
+    <string name="call_notif_MTcall_forwarding">Trucada entrant desviada</string>
+    <string name="call_notif_multipartycall">Trucada Multi-usuari</string>
+    <string name="call_notif_callonhold_released">La trucada s\'ha alliberat remotament</string>
+    <string name="call_notif_forwardcheckreceived">La trucada s\'ha desviat</string>
+    <string name="call_notif_callconnectingect">Connectant trucada a través de centraleta</string>
+    <string name="call_notif_callconnectedect">Trucada connectada a través de centraleta</string>
+    <string name="incall_call_type_label_forwarded">Trucada desviada</string>
+    <string name="noise_suppression_title">Supressió de sorolls</string>
+    <string name="noise_suppression_summary">Activa la supressió de sorolls en les trucades</string>
+    <string name="advanced_setting">Ajustaments avançats</string>
+    <string name="vibrate_outgoing">Vibra en contestar</string>
+    <string name="vibrate_call_waiting">Vibra en la trucada en espera</string>
+    <string name="vibrate_hangup">Vibra al penjar</string>
+    <string name="vibrate_45">Vibra cada minut</string>
+    <string name="vibrate_45_sum">Vibra als 45 segons de cada minut durant les trucades sortints</string>
+    <string name="rejected_as_missed">Les trucades rebutjades són com perdudes</string>
+    <string name="rejected_as_missed_sum">Marca les trucades rebutjades com a \'perdudes\' enlloc de \'entrants\' en el registre de trucades</string>
+    <string name="show_ssn_label">Notificació d\'esdeveniments</string>
+    <string name="show_ssn_summary">Mostra una notificació pels diferents esdeveniments relacionats amb la gestió de trucades</string>
+    <string name="calllog_after_call">Mostra el registre</string>
+    <string name="calllog_after_call_summary">Mostra el registre de la trucada després de finalitzar-la</string>
+    <string name="national_roaming">Itinerància de dades nacional</string>
+    <string name="national_roaming_summary">Connecta\'t als serveis de dades quan s\'estigui fent itinerància nacional</string>
+    <string name="perm_change_mobile_network">Canvia la xarxa (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Les aplicacions amb aquest permís poden, en qualsevol moment, canviar entre les dades 2G i les dades 3G. El 3G és més ràpid, consumeix més bateria, i podria costar més diners.</string>
+    <string name="flip_action_title">Acció girar</string>
+    <string name="flip_action_dialog_title">Gira el dispositiu per\u2026</string>
+    <string name="flip_action_summary">Girant el mòvil farà que <xliff:g id="action">%s</xliff:g></string>
+    <string name="blacklist_title">Llista negra</string>
+    <string name="blacklist_summary_disabled">Desactiva</string>
+    <string name="blacklist_summary">Les trucades entrants dels números de telèfon de la llista negra seran bloquejades</string>
+    <string name="blacklist_notification">Trucada bloquejada de %s</string>
+    <string name="blacklist_notification_private_number">S\'ha bloquejat una trucada d\'un número privat</string>
+    <string name="blacklist_notification_list_private">Privat</string>
+    <string name="blacklist_notification_unknown_number">Número %s desconegut bloquejat</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> trucades han estat bloquejades</string>
+    <string name="unblock_number">Desbloqueja</string>
+    <string name="add_blacklist_number">Afegeix un número de telèfon</string>
+    <string name="add_to_blacklist">Afegeix a la llista negra</string>
+    <string name="add_to_blacklist_message">Les trucades futures de %s seran bloquejades</string>
+    <string name="remove_blacklist_number_title">Esborra el número</string>
+    <string name="remove_blacklist_number">Vols esborrar el %s de la llista negra?</string>
+    <string name="onscreenBlacklistText">Llista negra</string>
+    <string name="voice_quality_preferences_title">Qualitat de veu</string>
+    <string name="voice_quality_summary">Utilitzant el perfil: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Neta</string>
+    <string name="voice_quality_entry_crisp">Clara</string>
+    <string name="voice_quality_entry_bright">Brillant</string>
+    <string name="phone_number_label">El meu número de telèfon</string>
+    <string name="phone_number_summary">Estableix el número de telèfon d\'aquest dispositiu</string>
+    <string name="enter_input">El missatge USSD ha de tenir entre <xliff:g id="min_len" >%d</xliff:g> i <xliff:g id="max_len" >%d</xliff:g> caràcters. Intenta-ho un altre cop.</string>
+</resources>
