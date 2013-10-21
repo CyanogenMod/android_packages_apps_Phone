@@ -22,6 +22,9 @@
          prevent the IccDepersonalizationPanel from being shown,
          and effectively disable the "Sim perso unlock" feature. -->
     <bool name="ignore_sim_perso_locked_events">false</bool>
+    <!-- For compatibility with Google's configuration files, it
+         is used in exactly the same way as the above -->
+    <bool name="ignore_sim_network_locked_events">false</bool>
 
     <!-- Flag indicating whether the Phone app should provide
          a "Dismiss" button on the SIM network unlock screen.
