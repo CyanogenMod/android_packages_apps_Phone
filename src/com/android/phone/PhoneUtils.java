@@ -1,4 +1,7 @@
 /*
+ * Copyright (c) 2011-2013, The Linux Foundation. All rights reserved.
+ * Not a Contribution
+ *
  * Copyright (C) 2006 The Android Open Source Project
  * Blacklist - Copyright (C) 2013 The CyanogenMod Project
  *
@@ -40,7 +43,9 @@ import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.preference.PreferenceManager;
 import android.provider.Settings;
+import android.telephony.MSimTelephonyManager;
 import android.telephony.PhoneNumberUtils;
+import android.telephony.ServiceState;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -63,6 +68,8 @@ import com.android.internal.telephony.TelephonyCapabilities;
 import com.android.internal.telephony.TelephonyProperties;
 import com.android.internal.telephony.cdma.CdmaConnection;
 import com.android.internal.telephony.sip.SipPhone;
+import com.google.android.collect.Maps;
+import com.android.internal.util.Objects;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -75,11 +82,14 @@ import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * Misc utilities for the Phone app.
  */
 public class PhoneUtils {
+    private static final int IMS_MEDIA_INIT_SUCCESS = 0;
     private static final String LOG_TAG = "PhoneUtils";
     private static final boolean DBG = (PhoneGlobals.DBG_LEVEL >= 2);
 
@@ -182,6 +192,25 @@ public class PhoneUtils {
                         cn = cnlist.next();
                         if (!fgConnections.contains(cn) && !bgConnections.contains(cn)) {
                             if (DBG) log("connection '" + cn + "' not accounted for, removing.");
+                            for (Connection fgcn : fgConnections) {
+                                if(Objects.equal(cn.getAddress(), fgcn.getAddress())) {
+                                   Boolean bMute = sConnectionMuteTable.get(cn);
+                                   log("updating fg conn '"+fgcn +"' wth mute value: "+bMute+
+                                                                 " address: "+fgcn.getAddress());
+                                   sConnectionMuteTable.put(fgcn, bMute);
+                                   break;
+                                }
+                            }
+
+                            for (Connection bgcn : bgConnections) {
+                                if(Objects.equal(cn.getAddress(), bgcn.getAddress())) {
+                                   Boolean bMute = sConnectionMuteTable.get(cn);
+                                   log("updating bg conn '"+bgcn+"' wth mute value: "+bMute+
+                                                                 " address: "+bgcn.getAddress());
+                                   sConnectionMuteTable.put(bgcn, bMute);
+                                   break;
+                                }
+                            }
                             cnlist.remove();
                         }
                     }
@@ -230,7 +259,20 @@ public class PhoneUtils {
      * @see #answerAndEndActive(CallManager, Call)
      */
     /* package */ static boolean answerCall(Call ringingCall) {
-        log("answerCall(" + ringingCall + ")...");
+        return answerCall(ringingCall, Phone.CALL_TYPE_UNKNOWN);
+    }
+
+    /**
+     * Answer the currently-ringing call.
+     *
+     * @return true if we answered the call, or false if there wasn't
+     *         actually a ringing incoming call, or some other error occurred.
+     *
+     * @see #answerAndEndHolding(CallManager, Call)
+     * @see #answerAndEndActive(CallManager, Call)
+     */
+    /* package */ static boolean answerCall(Call ringingCall, int answerCallType) {
+        log("answerCall(" + ringingCall + ")..." + "calltype:" + answerCallType);
         final PhoneGlobals app = PhoneGlobals.getInstance();
         final CallNotifier notifier = app.notifier;
 
@@ -290,7 +332,7 @@ public class PhoneUtils {
                 final boolean isRealIncomingCall = isRealIncomingCall(ringingCall.getState());
 
                 //if (DBG) log("sPhone.acceptCall");
-                app.mCM.acceptCall(ringingCall);
+                app.mCM.acceptCall(ringingCall, answerCallType);
                 answered = true;
 
                 // Always reset to "unmuted" for a freshly-answered call
@@ -521,8 +563,9 @@ public class PhoneUtils {
     static boolean hangupRingingAndActive(Phone phone) {
         boolean hungUpRingingCall = false;
         boolean hungUpFgCall = false;
-        Call ringingCall = phone.getRingingCall();
-        Call fgCall = phone.getForegroundCall();
+        CallManager cm = PhoneGlobals.getInstance().mCM;
+        Call ringingCall = cm.getFirstActiveRingingCall();
+        Call fgCall = cm.getActiveFgCall();
 
         // Hang up any Ringing Call
         if (!ringingCall.isIdle()) {
@@ -628,13 +671,6 @@ public class PhoneUtils {
             return false;
         }
 
-        // since hangupActiveCall() also accepts the ringing call
-        // check if the ringing call was already answered or not
-        // only answer it when the call still is ringing
-        if (ringing.isRinging()) {
-            return answerCall(ringing);
-        }
-
         return true;
     }
 
@@ -696,6 +732,42 @@ public class PhoneUtils {
                     + ", GW: " + (gatewayUri != null ? "non-null" : "null")
                     + ", emergency? " + isEmergencyCall);
         }
+        return placeCall(context, phone, number, contactRef, isEmergencyCall, gatewayUri,
+                Phone.CALL_TYPE_VOICE, null);
+    }
+
+    /**
+     * Dial the number using the phone passed in.
+     *
+     * If the connection is establised, this method issues a sync call
+     * that may block to query the caller info.
+     * TODO: Change the logic to use the async query.
+     *
+     * @param context To perform the CallerInfo query.
+     * @param phone the Phone object.
+     * @param number to be dialed as requested by the user. This is
+     * NOT the phone number to connect to. It is used only to build the
+     * call card and to update the call log. See above for restrictions.
+     * @param contactRef that triggered the call. Typically a 'tel:'
+     * uri but can also be a 'content://contacts' one.
+     * @param isEmergencyCall indicates that whether or not this is an
+     * emergency call
+     * @param gatewayUri Is the address used to setup the connection, null
+     * if not using a gateway
+     * @param callType indicates that type of call, used mainly for IMS calls
+     * @param extras callDetails indicating if current call is VoLTE IMS call
+     *
+     * @return either CALL_STATUS_DIALED or CALL_STATUS_FAILED
+     */
+    public static int placeCall(Context context, Phone phone,
+            String number, Uri contactRef, boolean isEmergencyCall,
+            Uri gatewayUri, int callType, String[] extras) {
+        if (DBG) {
+            log("placeCall '" + number + "' GW:'" + gatewayUri + "'" + " CallType:" + callType);
+        }
+        // The phone on whilch dial request is initiated set it as active subscription
+        setActiveSubscription(phone.getSubscription());
+
         final PhoneGlobals app = PhoneGlobals.getInstance();
 
         boolean useGateway = false;
@@ -728,10 +800,31 @@ public class PhoneUtils {
 
         // Remember if the phone state was in IDLE state before this call.
         // After calling CallManager#dial(), getState() will return different state.
-        final boolean initiallyIdle = app.mCM.getState() == PhoneConstants.State.IDLE;
+        boolean initiallyIdle = false;
+        if (MSimTelephonyManager.getDefault().isMultiSimEnabled()) {
+            for (int i = 0; i < MSimTelephonyManager.getDefault().getPhoneCount(); i++) {
+                initiallyIdle = initiallyIdle || (app.mCM.getState(i) == PhoneConstants.State.IDLE);
+            }
+        } else {
+            initiallyIdle = app.mCM.getState() == PhoneConstants.State.IDLE;
+        }
 
+        // If VT/VS cal is initiated, perform dpl media init.
+        // If media init fails then make a voice call instead of VT
+        if (callType == Phone.CALL_TYPE_VT
+                || callType == Phone.CALL_TYPE_VT_TX
+                || callType == Phone.CALL_TYPE_VT_RX) {
+            int error = earlyMediaInit();
+            if (error != IMS_MEDIA_INIT_SUCCESS) {
+                //Dpl init failed so continue with VoLTE call
+                callType = Phone.CALL_TYPE_VOICE;
+                Log.e(LOG_TAG, "videocall init failed. Downgrading to VoLTE call");
+                Toast.makeText(app, R.string.vt_init_fail_str, Toast.LENGTH_SHORT)
+                        .show();
+            }
+        }
         try {
-            connection = app.mCM.dial(phone, numberToDial);
+            connection = app.mCM.dial(phone, numberToDial, callType, extras);
         } catch (CallStateException ex) {
             // CallStateException means a new outgoing call is not currently
             // possible: either no more call slots exist, or there's another
@@ -748,7 +841,8 @@ public class PhoneUtils {
 
         // On GSM phones, null is returned for MMI codes
         if (null == connection) {
-            if (phoneType == PhoneConstants.PHONE_TYPE_GSM && gatewayUri == null) {
+            if ((phoneType == PhoneConstants.PHONE_TYPE_GSM ||
+                 phoneType == PhoneConstants.PHONE_TYPE_IMS) && gatewayUri == null) {
                 if (DBG) log("dialed MMI code: " + number);
                 status = CALL_STATUS_DIALED_MMI;
             } else {
@@ -914,7 +1008,8 @@ public class PhoneUtils {
                 shouldMute = sConnectionMuteTable.get(
                         phone.getForegroundCall().getLatestConnection());
             } else if ((phoneType == PhoneConstants.PHONE_TYPE_GSM)
-                    || (phoneType == PhoneConstants.PHONE_TYPE_SIP)) {
+                    || (phoneType == PhoneConstants.PHONE_TYPE_SIP)
+                    || (phoneType == PhoneConstants.PHONE_TYPE_IMS)) {
                 shouldMute = sConnectionMuteTable.get(c);
             }
             if (shouldMute == null) {
@@ -1465,7 +1560,8 @@ public class PhoneUtils {
         if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
             conn = call.getLatestConnection();
         } else if ((phoneType == PhoneConstants.PHONE_TYPE_GSM)
-                || (phoneType == PhoneConstants.PHONE_TYPE_SIP)) {
+                || (phoneType == PhoneConstants.PHONE_TYPE_SIP)
+                || (phoneType == PhoneConstants.PHONE_TYPE_IMS)) {
             conn = call.getEarliestConnection();
         } else {
             throw new IllegalStateException("Unexpected phone type: " + phoneType);
@@ -1557,6 +1653,7 @@ public class PhoneUtils {
                     case PhoneConstants.PHONE_TYPE_GSM: log("  ==> PHONE_TYPE_GSM"); break;
                     case PhoneConstants.PHONE_TYPE_CDMA: log("  ==> PHONE_TYPE_CDMA"); break;
                     case PhoneConstants.PHONE_TYPE_SIP: log("  ==> PHONE_TYPE_SIP"); break;
+                    case PhoneConstants.PHONE_TYPE_IMS: log("  ==> PHONE_TYPE_IMS"); break;
                     default: log("  ==> Unknown phone type"); break;
                 }
             }
@@ -1842,10 +1939,7 @@ public class PhoneUtils {
                 return true;
             }
         } else {
-            List<Connection> connections = call.getConnections();
-            if (connections != null && connections.size() > 1) {
-                return true;
-            }
+            return call.isMultiparty();
         }
         return false;
 
@@ -2054,12 +2148,12 @@ public class PhoneUtils {
      */
     private static void setMuteInternal(Phone phone, boolean muted) {
         final PhoneGlobals app = PhoneGlobals.getInstance();
-        Context context = phone.getContext();
+        Context context = app;
         boolean routeToAudioManager =
             context.getResources().getBoolean(R.bool.send_mic_mute_to_AudioManager);
         if (routeToAudioManager) {
             AudioManager audioManager =
-                (AudioManager) phone.getContext().getSystemService(Context.AUDIO_SERVICE);
+                (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
             if (DBG) log("setMuteInternal: using setMicrophoneMute(" + muted + ")...");
             audioManager.setMicrophoneMute(muted);
         } else {
@@ -2085,6 +2179,20 @@ public class PhoneUtils {
         } else {
             return app.mCM.getMute();
         }
+    }
+
+    /**
+     * Do DPL initialization if the call is a VT call
+     */
+    /* package */static int earlyMediaInit() {
+        if (DBG) Log.d(LOG_TAG, "mediaInit()...");
+        Context context = PhoneGlobals.getInstance().getApplicationContext();
+        VideoCallManager mVideoCallManager = VideoCallManager.getInstance(context);
+        int error = mVideoCallManager.mediaInit();
+        if (error == VideoCallManager.MEDIA_INIT_SUCCESS) {
+            mVideoCallManager.setFarEndSurface();
+        }
+        return error;
     }
 
     /* package */ static void setAudioMode() {
@@ -2164,7 +2272,8 @@ public class PhoneUtils {
             if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
                 answerCall(phone.getRingingCall());
             } else if ((phoneType == PhoneConstants.PHONE_TYPE_GSM)
-                    || (phoneType == PhoneConstants.PHONE_TYPE_SIP)) {
+                    || (phoneType == PhoneConstants.PHONE_TYPE_SIP)
+                    || (phoneType == PhoneConstants.PHONE_TYPE_IMS)) {
                 if (hasActiveCall && hasHoldingCall) {
                     if (DBG) log("handleHeadsetHook: ringing (both lines in use) ==> answer!");
                     answerAndEndActive(app.mCM, phone.getRingingCall());
@@ -2256,7 +2365,7 @@ public class PhoneUtils {
      * state of the Phone.
      */
     /* package */ static boolean okToSwapCalls(CallManager cm) {
-        int phoneType = cm.getDefaultPhone().getPhoneType();
+        int phoneType = cm.getFgPhone().getPhoneType();
         if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
             // CDMA: "Swap" is enabled only when the phone reaches a *generic*.
             // state by either accepting a Call Waiting or by merging two calls
@@ -2264,7 +2373,8 @@ public class PhoneUtils {
             return (app.cdmaPhoneCallState.getCurrentCallState()
                     == CdmaPhoneCallState.PhoneCallState.CONF_CALL);
         } else if ((phoneType == PhoneConstants.PHONE_TYPE_GSM)
-                || (phoneType == PhoneConstants.PHONE_TYPE_SIP)) {
+                || (phoneType == PhoneConstants.PHONE_TYPE_SIP)
+                || (phoneType == PhoneConstants.PHONE_TYPE_IMS)) {
             // GSM: "Swap" is available if both lines are in use and there's no
             // incoming call.  (Actually we need to verify that the active
             // call really is in the ACTIVE state and the holding call really
@@ -2284,6 +2394,13 @@ public class PhoneUtils {
      */
     /* package */ static boolean okToMergeCalls(CallManager cm) {
         int phoneType = cm.getFgPhone().getPhoneType();
+        int bgPhoneType = cm.getBgPhone().getPhoneType();
+
+        if (phoneType != bgPhoneType) {
+            // Merging calls on different technologies is not supported
+            return false;
+        }
+
         if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
             // CDMA: "Merge" is enabled only when the user is in a 3Way call.
             PhoneGlobals app = PhoneGlobals.getInstance();
@@ -2306,42 +2423,70 @@ public class PhoneUtils {
      * state of the Phone.
      */
     /* package */ static boolean okToAddCall(CallManager cm) {
-        Phone phone = cm.getActiveFgCall().getPhone();
+        if (!isCallOnImsEnabled()) {
+            Phone phone = cm.getActiveFgCall().getPhone();
+
+            // "Add call" is never allowed in emergency callback mode (ECM).
+            if (isPhoneInEcm(phone)) {
+                return false;
+            }
+
+            int phoneType = phone.getPhoneType();
+            final Call.State fgCallState = cm.getActiveFgCall().getState();
+            if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
+               // CDMA: "Add call" button is only enabled when:
+               // - ForegroundCall is in ACTIVE state
+               // - After 30 seconds of user Ignoring/Missing a Call Waiting call.
+                PhoneGlobals app = PhoneGlobals.getInstance();
+                return ((fgCallState == Call.State.ACTIVE)
+                        && (app.cdmaPhoneCallState.getAddCallMenuStateAfterCallWaiting()));
+            } else if ((phoneType == PhoneConstants.PHONE_TYPE_GSM)
+                    || (phoneType == PhoneConstants.PHONE_TYPE_SIP)) {
+                // GSM: "Add call" is available only if ALL of the following are true:
+                // - There's no incoming ringing call
+                // - There's < 2 lines in use
+                // - The foreground call is ACTIVE or IDLE or DISCONNECTED.
+                //   (We mainly need to make sure it *isn't* DIALING or ALERTING.)
+                final boolean hasRingingCall = cm.hasActiveRingingCall();
+                final boolean hasActiveCall = cm.hasActiveFgCall();
+                final boolean hasHoldingCall = cm.hasActiveBgCall();
+                final boolean allLinesTaken = hasActiveCall && hasHoldingCall;
+
+                return !hasRingingCall
+                        && !allLinesTaken
+                        && ((fgCallState == Call.State.ACTIVE)
+                            || (fgCallState == Call.State.IDLE)
+                            || (fgCallState == Call.State.DISCONNECTED));
+            } else {
+                throw new IllegalStateException("Unexpected phone type: " + phoneType);
+            }
+        } else {
+            return okToAddCallForIms(cm);
+        }
+    }
+
+    /* package */ static boolean okToAddCallForIms(CallManager cm) {
+        Phone phone = cm.getPhoneInCall();
 
         // "Add call" is never allowed in emergency callback mode (ECM).
         if (isPhoneInEcm(phone)) {
             return false;
         }
 
-        int phoneType = phone.getPhoneType();
+        // For IMS scenarios, add call should be allowed in any of the below combination
+        // Gsm+Lte, Cdma+Lte, Lte+Lte
+        // Gsm+Gsm, Cdma+Cdma
         final Call.State fgCallState = cm.getActiveFgCall().getState();
-        if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
-           // CDMA: "Add call" button is only enabled when:
-           // - ForegroundCall is in ACTIVE state
-           // - After 30 seconds of user Ignoring/Missing a Call Waiting call.
-            PhoneGlobals app = PhoneGlobals.getInstance();
-            return ((fgCallState == Call.State.ACTIVE)
-                    && (app.cdmaPhoneCallState.getAddCallMenuStateAfterCallWaiting()));
-        } else if ((phoneType == PhoneConstants.PHONE_TYPE_GSM)
-                || (phoneType == PhoneConstants.PHONE_TYPE_SIP)) {
-            // GSM: "Add call" is available only if ALL of the following are true:
-            // - There's no incoming ringing call
-            // - There's < 2 lines in use
-            // - The foreground call is ACTIVE or IDLE or DISCONNECTED.
-            //   (We mainly need to make sure it *isn't* DIALING or ALERTING.)
-            final boolean hasRingingCall = cm.hasActiveRingingCall();
-            final boolean hasActiveCall = cm.hasActiveFgCall();
-            final boolean hasHoldingCall = cm.hasActiveBgCall();
-            final boolean allLinesTaken = hasActiveCall && hasHoldingCall;
+        final boolean hasRingingCall = cm.hasActiveRingingCall();
+        final boolean hasActiveCall = cm.hasActiveFgCall();
+        final boolean hasHoldingCall = cm.hasActiveBgCall();
+        final boolean allLinesTaken = hasActiveCall && hasHoldingCall;
 
-            return !hasRingingCall
-                    && !allLinesTaken
-                    && ((fgCallState == Call.State.ACTIVE)
-                        || (fgCallState == Call.State.IDLE)
-                        || (fgCallState == Call.State.DISCONNECTED));
-        } else {
-            throw new IllegalStateException("Unexpected phone type: " + phoneType);
-        }
+        return !hasRingingCall
+                && !allLinesTaken
+                && ((fgCallState == Call.State.ACTIVE)
+                    || (fgCallState == Call.State.IDLE)
+                    || (fgCallState == Call.State.DISCONNECTED));
     }
 
     /**
@@ -2467,6 +2612,28 @@ public class PhoneUtils {
                      src.getStringExtra(InCallScreen.EXTRA_GATEWAY_PROVIDER_PACKAGE));
         dst.putExtra(InCallScreen.EXTRA_GATEWAY_URI,
                      src.getStringExtra(InCallScreen.EXTRA_GATEWAY_URI));
+    }
+
+    /**
+     * Copy the IMS related extras if set to the destination intent
+     * @param src Intent which may contain the IMS's extras.
+     * @param dst Intent where a copy of the extras will be added if applicable.
+     */
+    static void copyImsExtras(Intent src, Intent dst) {
+        if (null == src || null == dst) {
+            Log.e(LOG_TAG, "intent is null");
+            return;
+        }
+
+        dst.putExtra(OutgoingCallBroadcaster.EXTRA_CALL_TYPE,
+                src.getIntExtra(OutgoingCallBroadcaster.EXTRA_CALL_TYPE,
+                        Phone.CALL_TYPE_VOICE));
+        dst.putExtra(OutgoingCallBroadcaster.EXTRA_CALL_DOMAIN,
+                src.getIntExtra(OutgoingCallBroadcaster.EXTRA_CALL_DOMAIN,
+                        Phone.CALL_DOMAIN_CS));
+        dst.putExtra(OutgoingCallBroadcaster.EXTRA_DIAL_CONFERENCE_URI,
+                src.getBooleanExtra(OutgoingCallBroadcaster.EXTRA_DIAL_CONFERENCE_URI,
+                        false));
     }
 
     /**
@@ -2609,19 +2776,28 @@ public class PhoneUtils {
      * @param number the phone number, or SIP address.
      */
     public static Phone pickPhoneBasedOnNumber(CallManager cm,
-            String scheme, String number, String primarySipUri) {
+            String scheme, String number, String primarySipUri, int subscription) {
         if (DBG) {
             log("pickPhoneBasedOnNumber: scheme " + scheme
                     + ", number " + toLogSafePhoneNumber(number)
                     + ", sipUri "
-                    + (primarySipUri != null ? Uri.parse(primarySipUri).toSafeString() : "null"));
+                    + (primarySipUri != null ? Uri.parse(primarySipUri).toSafeString() : "null")
+                    + ", subscription" + subscription);
         }
 
         if (primarySipUri != null) {
             Phone phone = getSipPhoneFromUri(cm, primarySipUri);
             if (phone != null) return phone;
         }
-        return cm.getDefaultPhone();
+
+        // If the scheme is "sip" and the primarySipUri is null that means
+        // this is an IMS call
+        if (Constants.SCHEME_SIP.equals(scheme)){
+            Phone phone = getImsPhone(cm);
+            if (phone != null) return phone;
+        }
+
+        return PhoneGlobals.getInstance().getPhone(subscription);
     }
 
     public static Phone getGsmPhone(CallManager cm) {
@@ -2648,12 +2824,25 @@ public class PhoneUtils {
         return null;
     }
 
+    public static Phone getImsPhone(CallManager cm) {
+        if (DBG) { log("Find IMS phone:"); }
+        for (Phone phone : cm.getAllPhones()) {
+            if (phone.getPhoneType() == PhoneConstants.PHONE_TYPE_IMS) {
+                log("found IMSPhone = " + phone + ", " + phone.getClass());
+                return phone;
+            }
+        }
+        if (DBG) log("IMS phone not present");
+        return null;
+    }
+
     /**
      * Returns true when the given call is in INCOMING state and there's no foreground phone call,
      * meaning the call is the first real incoming call the phone is having.
      */
     public static boolean isRealIncomingCall(Call.State state) {
-        return (state == Call.State.INCOMING && !PhoneGlobals.getInstance().mCM.hasActiveFgCall());
+        return (state == Call.State.INCOMING &&
+                !PhoneGlobals.getInstance().mCM.hasActiveFgCallAnyPhone());
     }
 
     private static boolean sVoipSupported = false;
@@ -2669,6 +2858,31 @@ public class PhoneUtils {
      */
     static boolean isVoipSupported() {
         return sVoipSupported;
+    }
+
+    /**
+     * On GSM devices, we never use short tones.
+     * On CDMA devices, it depends upon the settings.
+     */
+    public static boolean useShortDtmfTones(Phone phone, Context context) {
+        int phoneType = phone.getPhoneType();
+        if (phoneType == PhoneConstants.PHONE_TYPE_GSM
+                || phoneType == PhoneConstants.PHONE_TYPE_SIP
+                || phoneType == PhoneConstants.PHONE_TYPE_IMS) {
+            return false;
+        } else if (phoneType == PhoneConstants.PHONE_TYPE_CDMA) {
+            int toneType = android.provider.Settings.System.getInt(
+                    context.getContentResolver(),
+                    Settings.System.DTMF_TONE_TYPE_WHEN_DIALING,
+                    Constants.DTMF_TONE_TYPE_NORMAL);
+            if (toneType == Constants.DTMF_TONE_TYPE_NORMAL) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            throw new IllegalStateException("Unexpected phone type: " + phoneType);
+        }
     }
 
     public static String getPresentationString(Context context, int presentation) {
@@ -2687,6 +2901,72 @@ public class PhoneUtils {
         intent.setClassName("com.android.contacts",
                 "com.android.contacts.ViewNotificationService");
         context.startService(intent);
+    }
+
+     /* Return true if the scheme is SIP and the Domain is RIL_CALL_DOMAIN_PS
+     *
+     * @param scheme
+     * @param intent
+     * @return
+     */
+    public static boolean isImsCallIntent(String scheme, Intent intent) {
+        // If the scheme is not SIP then this can not be an IMS call
+        if (!Constants.SCHEME_SIP.equals(scheme)) {
+            return false;
+        }
+
+        // Check the call domain stashed away in the intent by the original sender
+        // of ACTION_CALL intent
+        int callDomain = intent.getIntExtra(OutgoingCallBroadcaster.EXTRA_CALL_DOMAIN,
+                Phone.CALL_DOMAIN_CS);
+        if (DBG) log("In isIMSCall, call domain:" + callDomain);
+        if (callDomain == Phone.CALL_DOMAIN_PS) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Return true if this is a video call
+     *
+     * @param call
+     * @return
+     */
+    public static boolean isImsVideoCall(Call call) {
+        if (DBG) log("In isImsVideoCall call=" + call);
+        Phone phone = call.getPhone();
+        if (phone.getPhoneType() == PhoneConstants.PHONE_TYPE_IMS) {
+            try {
+                int callType = phone.getCallType(call);
+                if (callType == Phone.CALL_TYPE_VT || callType == Phone.CALL_TYPE_VT_RX
+                        || callType == Phone.CALL_TYPE_VT_TX) {
+                    return true;
+                }
+            } catch (CallStateException ex) {
+                Log.e(LOG_TAG, "isIMSVideoCall: caught " + ex, ex);
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Return true if this is an active video call
+     *
+     * @param cm CallManager
+     * @return
+     */
+    public static boolean isImsVideoCallActive(Call call) {
+        if (call == null) return false;
+
+        // Check if there is an active call
+        if (call.getState() != Call.State.ACTIVE) {
+            if (DBG) log("Call is not active");
+            return false;
+        }
+
+        // Check if this is a video call
+        return isImsVideoCall(call);
     }
 
     //
@@ -2758,6 +3038,59 @@ public class PhoneUtils {
         // the Ringer manager is currently playing the ringtone.
         boolean ringing = app.getRinger().isRinging();
         Log.d(LOG_TAG, "  - Ringer state: " + ringing);
+    }
+
+    /**
+     * Returns true if Android supports VoLTE/VT calls on IMS
+     */
+    public static boolean isCallOnImsEnabled() {
+        return CallManager.isCallOnImsEnabled();
+    }
+
+    /**
+     * Returns true if Android supports Csvt calls
+     */
+    public static boolean isCallOnCsvtEnabled() {
+        return CallManager.isCallOnCsvtEnabled();
+    }
+
+    /**
+     * If the intent is not  already the IMS intent, conert the intent to the
+     * IMS intent
+     */
+    public static void convertCallToIMS( Intent intent, int callType) {
+        Uri uri = intent.getData();
+        String scheme = uri.getScheme();
+        String number = PhoneNumberUtils.getNumberFromIntent(intent, PhoneGlobals.getInstance());
+        String imsNumber = PhoneNumberUtils.stripSeparators(number);
+
+        log( "Intent for IMS conversion:" + intent + "extras" + intent.getExtras());
+
+        // If it is already an IMS intent then leave the call intent as is
+        if (isImsCallIntent(scheme, intent)) {
+            log("IMS Conversion not required ");
+        } else {
+
+            intent.setData(Uri.fromParts(Constants.SCHEME_SIP, imsNumber, null));
+            intent.putExtra(OutgoingCallBroadcaster.EXTRA_CALL_TYPE, callType);
+
+            /*
+             * If the EXTRA_ACTUAL_NUMBER_TO_DIAL extra is present, set the
+             * phone number there. (That extra takes precedence over the actual
+             * number included in the intent.)
+             *
+             * If it is dial conference uri use original number.
+             */
+            boolean isConferenceUri = intent.getBooleanExtra(
+                    OutgoingCallBroadcaster.EXTRA_DIAL_CONFERENCE_URI, false);
+            if (intent.hasExtra(OutgoingCallBroadcaster.EXTRA_ACTUAL_NUMBER_TO_DIAL) &&
+                    !isConferenceUri) {
+                intent.putExtra(OutgoingCallBroadcaster.EXTRA_ACTUAL_NUMBER_TO_DIAL,
+                        imsNumber);
+            }
+            log("IMS Converted intent: "+ intent + "extras" + intent.getExtras());
+        }
+        return;
     }
 
     private static void log(String msg) {
@@ -2869,5 +3202,139 @@ public class PhoneUtils {
                 }
             }
         }
+    }
+
+    public static String[] getExtrasFromMap(Map<String, String> newExtras) {
+        String []extras = null;
+
+        if (newExtras == null) {
+            return null;
+        }
+
+        // TODO: Merge new extras into extras. For now, just serialize and set them
+        extras = new String[newExtras.size()];
+
+        if (extras != null) {
+            int i = 0;
+            for (Entry<String, String> entry : newExtras.entrySet()) {
+                extras[i] = "" + entry.getKey() + "=" + entry.getValue();
+            }
+        }
+        return extras;
+    }
+
+    /**
+     * Set the given subscription as current active subscription i.e currently on
+     * which voice call is active(with state OFFHOOK/RINGING) and which needs to be
+     * visible to user.
+     *
+     * @param subscription the sub id which needs to be active one.
+     */
+    public static void setActiveSubscription(int subscription) {
+        CallManager cm = PhoneGlobals.getInstance().mCM;
+        int activeSub = getActiveSubscription();
+
+        if (activeSub != subscription) {
+            if ((cm.getState(subscription) == PhoneConstants.State.OFFHOOK) &&
+                    (cm.getState(activeSub) == PhoneConstants.State.OFFHOOK)) {
+                // If there is a change in active subscription while both the
+                // subscriptions are in active state, need to siwtch the
+                // playing of LCH/SCH tone to new LCH subscription.
+                final MSimCallNotifier notifier =
+                        (MSimCallNotifier)PhoneGlobals.getInstance().notifier;
+                notifier.manageMSimInCallTones(true);
+            }
+
+            cm.setActiveSubscription(subscription);
+        }
+    }
+
+    /**
+     * Returns the current active subscription id on which voice call is
+     * active and visible to user.
+     */
+    public static int getActiveSubscription() {
+        return PhoneGlobals.getInstance().mCM.getActiveSubscription();
+    }
+
+    /**
+     * This method checks whether any other subscription currently has active
+    *  voice call(with state OFFHOOK/RINGING) other than provided subscription,
+    *  if yes it returns true.
+     */
+    public static boolean isAnyOtherSubActive(int subscription) {
+        return (getOtherActiveSub(subscription) != -1) ? true : false;
+    }
+
+    /**
+     * This method checks whether any other subscription currently has active voice
+     * call(with state OFFHOOK/RINGING) other than provided subscription, if yes
+     * it makes that other subscription as active subscription i.e user visible subscription.
+     *
+     * @param subscription is the current active subscription.
+     */
+    public static void switchToOtherActiveSub(int subscription) {
+        int count = MSimTelephonyManager.getDefault().getPhoneCount();
+        CallManager cm = MSimPhoneGlobals.getInstance().mCM;
+
+        Log.d(LOG_TAG, "switchToOtherActiveSub: sub = " + subscription +  " count = "+ count);
+        for (int i = 0; i < count; i++) {
+            if ((i != subscription) && (cm.getState(i) != PhoneConstants.State.IDLE)) {
+                setActiveSubscription(i);
+                // Since active subscription got changed, call setAudioMode
+                // which informs LCH state to RIL and updates audio state of subs.
+                // This required to update the call audio states when switch sub
+                // triggered from UI.
+                cm.setAudioMode();
+                Log.d(LOG_TAG, "Switching to other active sub  = " + i );
+                break;
+            }
+        }
+    }
+
+    /**
+     * Check whether any other sub is in active state other than
+     * provided subscription, if yes return the other active sub.
+     * @return subscription which is active, if no other sub is in
+     * active state return -1.
+     */
+    public static int getOtherActiveSub(int subscription) {
+        int otherSub = -1;
+        int count = MSimTelephonyManager.getDefault().getPhoneCount();
+        CallManager cm = MSimPhoneGlobals.getInstance().mCM;
+
+        if (DBG) Log.d(LOG_TAG, "getOtherActiveSub: sub = " + subscription + " count = " + count);
+        for (int i = 0; i < count; i++) {
+            if ((i != subscription) && (cm.getState(i) != PhoneConstants.State.IDLE)) {
+                Log.d(LOG_TAG, "getOtherActiveSub: active sub  = " + i );
+                otherSub = i;
+                break;
+            }
+        }
+        return otherSub;
+    }
+
+    public static boolean isCsvtCallActive() {
+        boolean isActive = false;
+
+        try {
+            isActive =  PhoneGlobals.mCsvtService != null &&
+                      ! PhoneGlobals.mCsvtService.isIdle();
+        } catch(RemoteException e) {
+            Log.d(LOG_TAG, "Failed to retrieve Csvt call state. " + e);
+        }
+        return isActive;
+    }
+
+    public static boolean shouldShowAddParticipant() {
+        final PhoneGlobals app = PhoneGlobals.getInstance();
+        boolean value = false;
+        try {
+            value = ((isCallOnImsEnabled()) && (app.mImsService != null) &&
+                    (app.mImsService.isAddParticipantAllowed()));
+        } catch (RemoteException ex) {
+            Log.e(LOG_TAG, "Ims Service isAddParticipantAllowed exception", ex);
+        }
+        return value;
     }
 }
