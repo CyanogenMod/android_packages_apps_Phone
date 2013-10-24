@@ -17,6 +17,8 @@ LOCAL_SRC_FILES += \
 LOCAL_PACKAGE_NAME := Phone
 LOCAL_CERTIFICATE := platform
 
+LOCAL_REQUIRED_MODULES := libvt_jni libimscamera_jni
+
 LOCAL_PROGUARD_FLAG_FILES := proguard.flags
 
 include $(BUILD_PACKAGE)

@@ -21,7 +21,7 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_CFLAGS += -O0 -g
 
 LOCAL_MODULE := libimscamera_jni
-LOCAL_MODULE_TAGS := debug
+LOCAL_MODULE_TAGS := optional
 LOCAL_PROGUARD_ENABLED := disabled
 
 include $(BUILD_SHARED_LIBRARY)
