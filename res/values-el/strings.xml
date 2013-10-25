@@ -162,17 +162,17 @@
     <string name="preferred_network_mode_wcdma_perf_summary" msgid="8521677230113533809">"Προτιμώμενη λειτουργία δικτύου: προτιμώμενο WCDMA"</string>
     <string name="preferred_network_mode_gsm_only_summary" msgid="3352445413437453511">"Προτιμώμενη λειτουργία δικτύου: μόνο GSM"</string>
     <string name="preferred_network_mode_wcdma_only_summary" msgid="2836897236221063413">"Προτιμώμενη λειτουργία δικτύου: μόνο WCDMA"</string>
-    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"Προτιμώμενη λειτουργία δικτύου: GSM / WCDMA"</string>
+    <string name="preferred_network_mode_gsm_wcdma_summary" msgid="3161255745326408587">"Προτιμώμενη λειτουργία δικτύου: GSM/WCDMA"</string>
     <string name="preferred_network_mode_cdma_summary" msgid="3175690187294334241">"Προτιμώμενη λειτουργία δικτύου: CDMA"</string>
-    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"Προτιμώμενη λειτουργία δικτύου: CDMA / EvDo"</string>
+    <string name="preferred_network_mode_cdma_evdo_summary" msgid="8332063064712726618">"Προτιμώμενη λειτουργία δικτύου: CDMA/EvDo"</string>
     <string name="preferred_network_mode_cdma_only_summary" msgid="1309770926198634150">"Προτιμώμενη λειτουργία δικτύου: μόνο CDMA"</string>
     <string name="preferred_network_mode_evdo_only_summary" msgid="8472220691721269155">"Προτιμώμενη λειτουργία δικτύου: μόνο EvDo"</string>
     <string name="preferred_network_mode_cdma_evdo_gsm_wcdma_summary" msgid="4726682079415227330">"Προτιμώμενη λειτουργία δικτύου: CDMA/EvDo/GSM/WCDMA"</string>
     <string name="preferred_network_mode_lte_summary" msgid="574752287596469136">"Προτιμώμενη λειτουργία δικτύου: LTE"</string>
     <string name="preferred_network_mode_lte_gsm_wcdma_summary" msgid="8455358514068283935">"Προτιμώμενη λειτουργία δικτύου: GSM/WCDMA/LTE"</string>
     <string name="preferred_network_mode_lte_cdma_evdo_summary" msgid="228702246343742853">"Προτιμώμενη λειτουργία δικτύου: CDMA+LTE/EVDO"</string>
-    <string name="preferred_network_mode_global_summary" msgid="1633134285545730364">"Προτιμώμενη λειτουργία δικτύου: Παγκόσμια"</string>
-    <string name="preferred_network_mode_lte_wcdma_summary" msgid="9180775701594742750">"Προτιμώμενη λειτουργία δικτύου: LTE / WCDMA"</string>
+    <string name="preferred_network_mode_global_summary" msgid="1633134285545730364">"Προτιμώμενη λειτουργία δικτύου: Παγκόσμια (CDMA/EVDO/LTE/GSM/WCDMA)"</string>
+    <string name="preferred_network_mode_lte_wcdma_summary" msgid="9180775701594742750">"Προτιμώμενη λειτουργία δικτύου: LTE/WCDMA"</string>
   <string-array name="preferred_network_mode_choices">
     <item>TD-SCDMA/LTE/GSM/WCDMA/CDMA/EVDO</item>
     <item>TD-SCDMA/GSM/WCDMA/CDMA/EVDO</item>
@@ -183,8 +183,8 @@
     <item>TD-SCDMA/GSM</item>
     <item>TD-SCDMA/LTE</item>
     <item>TD-SCDMA/WCDMA</item>
-    <item>TD-SCDMA only</item>
-    <item msgid="7886739962255042385">"LTE / WCDMA"</item>
+    <item>Μόνο TD-SCDMA</item>
+    <item msgid="7886739962255042385">"LTE/WCDMA"</item>
     <item msgid="577652050447385699">"LTE"</item>
     <item msgid="6813597571293773656">"Παγκόσμια"</item>
     <item msgid="127064712132619032">"GSM/WCDMA/LTE"</item>
@@ -367,7 +367,7 @@
     <string name="pin2_or_fdn_invalid" msgid="6025144083384701197">"Δεν έγινε ενημέρωση του FDN. Το PIN2 ήταν λανθασμένο ή ο αριθμός του τηλεφώνου απορρίφθηκε."</string>
     <string name="simContacts_emptyLoading" msgid="2203331234764498011">"Ανάγνωση από κάρτα SIM…"</string>
     <string name="simContacts_empty" msgid="5270660846489561932">"Δεν υπάρχουν επαφές στην κάρτα SIM."</string>
-    <string name="simContacts_title" msgid="1861472842524839921">"Επιλέξτε επαφές για εισαγωγή"</string>
+    <string name="simContacts_title" msgid="1861472842524839921">"Διαχείριση επαφών κάρτας SIM"</string>
     <string name="simContacts_airplaneMode" msgid="1846161429087789936">"Για την εισαγωγή επαφών από την κάρτα SIM, απενεργοποιήστε πρώτα τη λειτουργία πτήσης."</string>
     <string name="enable_pin" msgid="5422767284133234860">"Ενεργοποίηση/απενεργοποίηση αριθμού PIN της κάρτας SIM"</string>
     <string name="change_pin" msgid="9174186126330785343">"Αλλαγή αριθμού PIN της κάρτας SIM"</string>
@@ -385,7 +385,7 @@
     <string name="disable_pin_ok" msgid="5596999379593924850">"Το PIN της κάρτας SIM απενεργοποιήθηκε."</string>
     <string name="pin_failed" msgid="2298841192582192277">"Ο αριθμός PIN που πληκτρολογήσατε ήταν λανθασμένος."</string>
     <string name="pin_changed" msgid="4365538014588501049">"Ο αριθμός PIN της κάρτας SIM άλλαξε επιτυχώς."</string>
-    <string name="puk_requested" msgid="3898394204193202803">"Λανθασμένος κωδικός πρόσβασης, η κάρτα SIM κλειδώθηκε! Ζητήθηκε κωδικός PUK2."</string>
+    <string name="puk_requested" msgid="3898394204193202803">"Λανθασμένος κωδικός πρόσβασης, η κάρτα SIM κλειδώθηκε! Ζητήθηκε κωδικός PUK."</string>
     <string name="enter_pin2_text" msgid="8339444124477720345">"Αριθμός PIN2"</string>
     <string name="oldPin2Label" msgid="8559146795026261502">"Παλιός αριθμός PIN2"</string>
     <string name="newPin2Label" msgid="4573956902204349054">"Νέος αριθμός PIN2"</string>
@@ -397,7 +397,7 @@
     <string name="invalidPuk2" msgid="1290977391033057871">"Πληκτρολογήστε έναν αριθμό PUK2 που αποτελείται από 8 αριθμούς."</string>
     <string name="pin2_changed" msgid="1639666438836544393">"Η αλλαγή του αριθμού PIN2 ήταν επιτυχημένη."</string>
     <string name="label_puk2_code" msgid="302845876240219560">"Πληκτρολογήστε τον κώδικα PUK2"</string>
-    <string name="fdn_enable_puk2_requested" msgid="4262894949634885773">"Ο κωδικός πρόσβασης είναι λανθασμένος. Αλλάξτε τον αριθμό PIN2 και δοκιμάστε ξανά!"</string>
+    <string name="fdn_enable_puk2_requested" msgid="4262894949634885773">"Ο κωδικός πρόσβασης είναι λανθασμένος. Αλλάξτε τον κωδικό PIN2 και δοκιμάστε ξανά!"</string>
     <string name="puk2_requested" msgid="8909278021238716877">"Λανθασμένος κωδικός πρόσβασης, η κάρτα SIM κλειδώθηκε. Ζητήθηκε κωδικός PUK2."</string>
     <string name="doneButton" msgid="2859593360997984240">"Τέλος"</string>
     <string name="caller_manage_header" msgid="3231519674734638786">"Κλήση συνδιάσκεψης <xliff:g id="CONF_CALL_TIME">%s</xliff:g>"</string>
@@ -526,7 +526,7 @@
     <string name="selectContact" msgid="781975788478987237">"επιλογή επαφής"</string>
     <string name="sip_settings" msgid="6699045718560859691">"Ρυθμίσεις κλήσεων Διαδικτύου"</string>
     <string name="sip_accounts" msgid="2097054001288457163">"Λογαριασμοί κλήσεων μέσω Διαδικτύου (SIP)"</string>
-    <string name="sip_accounts_title" msgid="1212889069281054570">"Λογαριασμοί"</string>
+    <string name="sip_accounts_title" msgid="1212889069281054570">"Λογαριασμοί SIP"</string>
     <string name="sip_receive_calls" msgid="5635685570889971559">"Λήψη εισερχόμενων κλήσεων"</string>
     <string name="sip_receive_calls_summary" msgid="8403613238633679184">"Μειώνει τη διάρκεια ζωής της μπαταρίας"</string>
     <string name="sip_call_options_title" msgid="27433718808839672">"Χρήση κλήσεων μέσω Διαδικτύου"</string>
