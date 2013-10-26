@@ -79,4 +79,6 @@
     <string name="voice_quality_entry_crisp">清脆</string>
     <string name="voice_quality_entry_bright">明亮</string>
     <string name="enter_input">USSD 信息必须要在 <xliff:g id="min_len" >%d</xliff:g> 与 <xliff:g id="max_len" >%d</xliff:g> 字符之间. 请重新尝试.</string>
+    <string name="phone_number_label">我的手机号码</string>
+    <string name="phone_number_summary">为这台设备设置手机号码</string>
 </resources>
