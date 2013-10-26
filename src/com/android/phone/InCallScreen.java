@@ -38,7 +38,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.pm.ActivityInfo;
-import com.android.internal.telephony.gsm.SuppServiceNotification;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
@@ -188,6 +187,7 @@ public class InCallScreen extends Activity
     private static final int PHONE_MODIFY_CALL_EVENT = 126;
     private static final int PHONE_AVP_UPGRADE_RETRY_FAILURE_NOTICE = 127;
     private static final int DISPLAY_MODE_CHANGED = 128;
+    private static final int SUPP_SERVICE_NOTIFY = 129;
 
     // When InCallScreenMode is UNDEFINED set the default action
     // to ACTION_UNDEFINED so if we are resumed the activity will
@@ -422,6 +422,10 @@ public class InCallScreen extends Activity
             switch (msg.what) {
                 case SUPP_SERVICE_FAILED:
                     onSuppServiceFailed((AsyncResult) msg.obj);
+                    break;
+
+                case SUPP_SERVICE_NOTIFY:
+                    onSuppServiceNotification((AsyncResult) msg.obj);
                     break;
 
                 case PHONE_STATE_CHANGED:
@@ -1323,6 +1327,7 @@ public class InCallScreen extends Activity
             mCM.registerForCallWaiting(mHandler, PHONE_CDMA_CALL_WAITING, null);
             mCM.registerForPostDialCharacter(mHandler, POST_ON_DIAL_CHARS, null);
             mCM.registerForSuppServiceFailed(mHandler, SUPP_SERVICE_FAILED, null);
+            mCM.registerForSuppServiceNotification(mHandler, SUPP_SERVICE_NOTIFY, null);
             mCM.registerForIncomingRing(mHandler, PHONE_INCOMING_RING, null);
             mCM.registerForNewRingingConnection(mHandler, PHONE_NEW_RINGING_CONNECTION, null);
 
@@ -1352,6 +1357,7 @@ public class InCallScreen extends Activity
         mCM.unregisterForCallWaiting(mHandler);
         mCM.unregisterForPostDialCharacter(mHandler);
         mCM.unregisterForSuppServiceFailed(mHandler);
+        mCM.unregisterForSuppServiceNotification(mHandler);
         mCM.unregisterForIncomingRing(mHandler);
         mCM.unregisterForNewRingingConnection(mHandler);
         // remove locally posted message
@@ -2012,38 +2018,17 @@ public class InCallScreen extends Activity
         // to the next.)
         mDialer.clearDigits();
 
-        SuppServiceNotification suppSvcNotification = CallNotifier.getSuppSvcNotification();
         // Under certain call disconnected states, we want to alert the user
         // with a dialog instead of going through the normal disconnect
         // routine.
         if (cause == Connection.DisconnectCause.INCOMING_MISSED) {
-           // If the network sends SVC Notification then this dialog will be displayed
-           // in case of B when the incoming call at B is not answered and gets forwarded
-           // to C
-            if (suppSvcNotification != null) {
-                if (suppSvcNotification.notificationType == 1 && suppSvcNotification.code
-                        == SuppServiceNotification.MT_CODE_ADDITIONAL_CALL_FORWARDED) {
-                    showGenericErrorDialog(R.string.callUnanswered_forwarded, false);
-                    CallNotifier.clearSuppSvcNotification();
-                    return;
-                }
+            if (mApp.inCallUiState.needToShowAdditionalCallForwardedDialog) {
+                showGenericErrorDialog(R.string.callUnanswered_forwarded, false);
+                mApp.inCallUiState.needToShowAdditionalCallForwardedDialog = false;
             }
         } else if (cause == Connection.DisconnectCause.CALL_BARRED) {
-            // When call is disconnected with this code then it can either be barring from
-            // MO side or MT side.
-            // In MT case, if network sends SVC Notification then this dialog will be
-            // displayed when A is calling B & incoming is barred on B.
-            if (suppSvcNotification != null) {
-                if (suppSvcNotification.notificationType == 0 && suppSvcNotification.code
-                        == SuppServiceNotification.MO_CODE_INCOMING_CALLS_BARRED) {
-                    showGenericErrorDialog(R.string.callFailed_incoming_cb_enabled, false);
-                    CallNotifier.clearSuppSvcNotification();
-                    return;
-                }
-            } else {
-                showGenericErrorDialog(R.string.callFailed_cb_enabled, false);
-                return;
-            }
+            showGenericErrorDialog(R.string.callFailed_cb_enabled, false);
+            return;
         } else if (cause == Connection.DisconnectCause.FDN_BLOCKED) {
             showGenericErrorDialog(R.string.callFailed_fdn_only, false);
             return;
