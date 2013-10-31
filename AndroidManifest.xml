@@ -525,9 +525,6 @@
             </intent-filter>
         </activity>
 
-        <activity-alias android:name="Settings"
-            android:targetActivity="MSimMobileNetworkSettings" />
-
        <!-- MSim Mobile Network Settings per subscription -->
        <activity android:name="MSimMobileNetworkSubSettings"
                 android:label="@string/settings_label"
