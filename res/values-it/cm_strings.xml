@@ -54,11 +54,13 @@
     <string name="calllog_after_call_summary">Mostra il registro al termine di una chiamata</string>
     <string name="national_roaming">Roaming su rete nazionale</string>
     <string name="national_roaming_summary">Connetti ai servizi dati se è attivo il roaming su rete nazionale</string>
-    <string name="perm_change_mobile_network">Cambia rete (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">Un\'applicazione con questo permesso può passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
+    <string name="perm_change_mobile_network">cambia rete (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Consente all\'applicazione di passare da 2G a 3G e viceversa in qualsiasi momento. Il 3G è più veloce, consuma più batteria e può anche farti spendere di più.</string>
     <string name="flip_action_title">Azione capovolgimento</string>
-    <string name="flip_action_dialog_title">Capovolgi dispositivo per\u2026</string>
-    <string name="flip_action_summary">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_dialog_title" product="tablet">Capovolgi tablet per\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Capovolgi telefono per\u2026</string>
+    <string name="flip_action_summary" product="tablet">Capovolgere il tablet verso il basso <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Capovolgere il telefono verso il basso <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Blacklist</string>
     <string name="blacklist_summary_disabled">Disattivata</string>
     <string name="blacklist_summary">Le chiamate in entrata provenienti da numeri di telefono presenti nella blacklist verranno bloccate</string>
@@ -81,6 +83,7 @@
     <string name="voice_quality_entry_crisp">Ben definita</string>
     <string name="voice_quality_entry_bright">Brillante</string>
     <string name="phone_number_label">Numero di telefono</string>
-    <string name="phone_number_summary">Imposta il numero di telefono di questo dispositivo</string>
+    <string name="phone_number_summary" product="tablet">Imposta il numero di telefono di questo tablet</string>
+    <string name="phone_number_summary" product="default">Imposta il numero di telefono di questo telefono</string>
     <string name="enter_input">Il messaggio USSD deve essere compreso tra <xliff:g id="min_len" >%d</xliff:g> e <xliff:g id="max_len" >%d</xliff:g> caratteri. Per favore riprova.</string>
 </resources>
