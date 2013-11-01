@@ -3372,6 +3372,7 @@ public class InCallScreen extends Activity
                 break;
             case R.id.addBlacklistButton:
                 confirmAddBlacklist();
+                break;
             case R.id.addParticipant:
                 onAddParticipant();
                 break;
