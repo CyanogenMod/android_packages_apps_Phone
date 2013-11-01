@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2013 The CyanogenMod Project
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,7 +14,6 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- In-call screen: status label for an incoming call that is not answered and forwarded  -->
@@ -92,17 +92,19 @@
     <string name="national_roaming_summary">Connect to data services when nationally roaming</string>
 
     <!-- Permission for notification-bar network toggle -->
-    <string name="perm_change_mobile_network">Change network (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">Application with this permission can, at any time, change between 2G data and 3G data. 3G is faster, consumes more battery, and can also cost you more money.</string>
+    <string name="perm_change_mobile_network">change network (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Allows the app to change between 2G and 3G data at any time. 3G is faster, but consumes more battery and can also cost you more money.</string>
 
     <!-- Setting title for the flip action setting. -->
     <string name="flip_action_title">Flip action</string>
 
     <!-- Dialog title of the flip action setting. -->
-    <string name="flip_action_dialog_title">Flip device to\u2026</string>
+    <string name="flip_action_dialog_title" product="tablet">Flip tablet to\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Flip phone to\u2026</string>
 
     <!-- Setting summary for the flip action setting. -->
-    <string name="flip_action_summary">Flipping the phone down will <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="tablet">Flipping the tablet down will <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Flipping the phone down will <xliff:g id="action">%s</xliff:g></string>
 
     <!-- Blacklist preferences -->
     <string name="blacklist_title">Blacklist</string>
@@ -137,6 +139,7 @@
     <string name="voice_quality_entry_bright">Bright</string>
 
     <string name="phone_number_label">My phone number</string>
-    <string name="phone_number_summary">Set the phone number for this device</string>
+    <string name="phone_number_summary" product="tablet">Set the phone number for this tablet</string>
+    <string name="phone_number_summary" product="default">Set the phone number for this phone</string>
     <string name="msisdn_alpha_tag" translatable="false">Voice Line 1</string>
 </resources>
