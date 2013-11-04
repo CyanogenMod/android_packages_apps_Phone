@@ -255,8 +255,10 @@
     <string name="perm_change_mobile_network">Cambiar red (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Las aplicaciones con este permiso pueden, en cualquier momento, cambiar entre datos 2G y 3G. Es más rápido 3G, pero consume más batería y puede costar más dinero.</string>
     <string name="flip_action_title">Acción al voltear</string>
-    <string name="flip_action_dialog_title">Al voltear\u2026</string>
-    <string name="flip_action_summary">Al voltear el terminal, <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_dialog_title" product="tablet">Al voltear el tablet\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Al voltear el teléfono\u2026</string>
+    <string name="flip_action_summary" product="tablet">Al voltear el tablet, <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Al voltear el teléfono, <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Lista negra</string>
     <string name="blacklist_summary_disabled">Deshabilitada</string>
     <string name="blacklist_summary">Las llamadas entrantes de los números en la lista negra serán bloqueadas</string>
@@ -279,5 +281,6 @@
     <string name="voice_quality_entry_crisp">Nítida</string>
     <string name="voice_quality_entry_bright">Fuerte</string>
     <string name="phone_number_label">Mi número de teléfono</string>
-    <string name="phone_number_summary">Establecer el número de teléfono para este dispositivo</string>
+    <string name="phone_number_summary" product="tablet">Establecer el número asociado a este tablet</string>
+    <string name="phone_number_summary" product="default">Establecer el número asociado a este teléfono</string>
 </resources>
