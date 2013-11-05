@@ -36,6 +36,10 @@
     <string name="call_notif_forwardcheckreceived">La trucada s\'ha desviat</string>
     <string name="call_notif_callconnectingect">Connectant trucada a través de centraleta</string>
     <string name="call_notif_callconnectedect">Trucada connectada a través de centraleta</string>
+    <string name="callFailed_dialToUssd">Petició DIAL modificada a petició USSD.</string>
+    <string name="callFailed_dialToSs">Petició DIAL modificada a petició SS.</string>
+    <string name="callFailed_dialToDial">Petició DIAL modificada a petició DIAL amb un número diferent.</string>
+    <string name="callFailed_incoming_cb_enabled">La conferència ha restringit totes les trucades entrants.</string>
     <string name="incall_call_type_label_forwarded">Trucada desviada</string>
     <string name="noise_suppression_title">Supressió de sorolls</string>
     <string name="noise_suppression_summary">Activa la supressió de sorolls en les trucades</string>
@@ -56,8 +60,24 @@
     <string name="perm_change_mobile_network">Canvia la xarxa (2G/3G)</string>
     <string name="perm_change_mobile_network_desc">Les aplicacions amb aquest permís poden, en qualsevol moment, canviar entre les dades 2G i les dades 3G. El 3G és més ràpid, consumeix més bateria, i podria costar més diners.</string>
     <string name="flip_action_title">Acció girar</string>
-    <string name="flip_action_dialog_title">Gira el dispositiu per\u2026</string>
-    <string name="flip_action_summary">Girant el mòvil farà que <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_dialog_title" product="tablet">Gira la tauleta per\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Gira el telèfon per\u2026</string>
+    <string name="flip_action_summary" product="tablet">Girant la tauleta farà que <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Girant el telèfon farà que <xliff:g id="action">%s</xliff:g></string>
+    <string name="modify_call_prompt_yes">Si</string>
+    <string name="modify_call_prompt_no">No</string>
+    <string name="modify_call_failure_str">La petició de modificació de trucada ha fallat\n</string>
+    <string name="modify_call_option_title">Quin tipus de trucada?</string>
+    <string name="modify_call_option_vt">VT</string>
+    <string name="modify_call_option_vt_tx">Transmissió de vídeo</string>
+    <string name="modify_call_option_vt_rx">Recepció de vídeo</string>
+    <string name="modify_call_option_voice">Només veu</string>
+    <string name="accept_modify_call_request_prompt">Acceptes la petició de modificació de trucada?</string>
+    <string name="upgrade_vt_prompt">T\'agradaria actualitzar la trucada a una videotrucada?</string>
+    <string name="upgrade_vt_tx_prompt">T\'agradaria actualitzar la trucada només a una trucada amb transmissió de vídeo?</string>
+    <string name="upgrade_vt_rx_prompt">T\'agradaria actualitzar la trucada només a una trucada amb recepció de vídeo?</string>
+    <string name="vt_init_fail_str">La inicialització de la VT ha fallat. Desactualitzant la trucada a VoLTE\n</string>
+
     <string name="blacklist_title">Llista negra</string>
     <string name="blacklist_summary_disabled">Desactiva</string>
     <string name="blacklist_summary">Les trucades entrants dels números de telèfon de la llista negra seran bloquejades</string>
@@ -80,6 +100,42 @@
     <string name="voice_quality_entry_crisp">Clara</string>
     <string name="voice_quality_entry_bright">Brillant</string>
     <string name="phone_number_label">El meu número de telèfon</string>
-    <string name="phone_number_summary">Estableix el número de telèfon d\'aquest dispositiu</string>
+    <string name="phone_number_summary" product="tablet">Estableix el número de telèfon per aquesta tauleta</string>
+    <string name="phone_number_summary" product="default">Estableix el número de telèfon per aquest telèfon</string>
     <string name="enter_input">El missatge USSD ha de tenir entre <xliff:g id="min_len" >%d</xliff:g> i <xliff:g id="max_len" >%d</xliff:g> caràcters. Intenta-ho un altre cop.</string>
+    <string name="label_nsdp">PIN de desbloqueig de la xarxa subset SIM</string>
+    <string name="label_cdp">PIN de desbloqueig del SIM corporatiu</string>
+    <string name="label_spdp">PIN de desbloqueig del SIM de l\'operador</string>
+    <string name="label_sdp">PIN de desbloqueig del SIM</string>
+    <string name="label_rn1dp">PIN de desbloqueig de la xarxa1 RUIM</string>
+    <string name="label_rn2dp">PIN de desbloqueig de la xarxa2 RUIM</string>
+    <string name="label_rhrpd">PIN de desbloqueig del RUIM hrpd</string>
+    <string name="label_rcdp">PIN de desbloqueig del RUIM corporatiu</string>
+    <string name="label_rspdp">PIN de desbloqueig del RUIM de l\'operador</string>
+    <string name="label_rdp">PIN de desbloqueig del RUIM</string>
+    <string name="label_puk">Introdueix el PUK</string>
+    <string name="requesting_nw_unlock">Demanant el desbloqueig de la xarxa SIM\u2026</string>
+    <string name="requesting_nw_subset_unlock">Demanant el desbloqueig de la xarxa subset SIM\u2026</string>
+    <string name="requesting_sp_unlock">Demanant el desbloqueig SIM de l\'operador\u2026</string>
+    <string name="requesting_corporate_unlock">Demanant el desbloqueig SIM corporatiu\u2026</string>
+    <string name="requesting_sim_unlock">Demanant el desbloqueig SIM\u2026</string>
+    <string name="requesting_rnw1_unlock">Demanant el desbloqueig de la xarxa1 RUIM\u2026</string>
+    <string name="requesting_rnw2_unlock">Demanant el desbloqueig de la xarxa2 RUIM\u2026</string>
+    <string name="requesting_rhrpd_unlock">Demanant el desbloqueig RUIM hrpd\u2026</string>
+    <string name="requesting_rsp_unlock">Demanant el desbloqueig RUIM de l\'operador\u2026</string>
+    <string name="requesting_rc_unlock">Demanant el desbloqueig RUIM corporatiu\u2026</string>
+    <string name="requesting_ruim_unlock">Demanant el desbloqueig RUIM\u2026</string>
+    <string name="requesting_puk_unlock">Demanant el desbloqueig PUK\u2026</string>
+    <string name="nw_unlock_failed">Petició de desbloqueig de la xarxa SIM sense èxit.</string>
+    <string name="nw_subset_unlock_failed">Petició de desbloqueig de la xarxa subset SIM sense èxit.</string>
+    <string name="sp_unlock_failed">Petició de desbloqueig del SIM de l\'operador sense èxit.</string>
+    <string name="corporate_unlock_failed">Petició de desbloqueig del SIM Corporatiu sense èxit.</string>
+    <string name="sim_unlock_failed">Petició de desbloqueig del SIM sense èxit.</string>
+    <string name="rnw1_unlock_failed">Petició de desbloqueig de la xarxa1 RUIM sense èxit.</string>
+    <string name="rnw2_unlock_failed">Petició de desbloqueig de la xarxa2 RUIM sense èxit.</string>
+    <string name="rhrpd_unlock_failed">Petició de desbloqueig RUIM Hrpd sense èxit.</string>
+    <string name="rsp_unlock_failed">Petició de desbloqueig RUIM de l\'operador sense èxit.</string>
+    <string name="rc_unlock_failed">Petició de desbloqueig RUIM Corporatiu sense èxit.</string>
+    <string name="ruim_unlock_failed">Petició de desbloqueig RUIM sense èxit.</string>
+    <string name="puk_unlock_failed">No s\'ha pogut desbloquejar el PUK.</string>
 </resources>
