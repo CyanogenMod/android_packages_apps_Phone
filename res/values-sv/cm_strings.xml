@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright (C) 2013 The CyanogenMod Project
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,18 +15,64 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="noise_suppression_title">Brusreducering</string>
-    <string name="noise_suppression_summary">Aktivera brusreducering för samtal</string>
-    <string name="advanced_setting">Avancerade Inställningar</string>
+    <string name="callUnanswered_forwarded">Samtalet obesvarat och vidarekopplat</string>
+    <string name="mwi_notification_title">Indikator för telefonsvarare</string>
+    <string name="mwi_notification_summary">Visa indikator för väntande meddelanden på telefonsvarare</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Föredraget nätverksläge: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Föredraget nätverksläge: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="card_title_dialing_waiting">Ringer upp (väntar\u2026)</string>
+    <string name="card_title_waiting_call">Samtal väntar</string>
+    <string name="call_notif_unconditionalCF">Alla samtal vidarekopplas</string>
+    <string name="call_notif_conditionalCF">Vissa samtal vidarekopplas</string>
+    <string name="call_notif_MOcall_forwarding">Utgående samtal vidarekopplat</string>
+    <string name="call_notif_MTcall_forwarding">Inkommande samtal vidarekopplade</string>
+    <string name="call_notif_forwardcheckreceived">Samtalet vidarekopplat</string>
+    <string name="incall_call_type_label_forwarded">Vidarekopplat samtal</string>
+    <string name="noise_suppression_title">Brusreduktion</string>
+    <string name="noise_suppression_summary">Aktivera brusreduktion under samtal</string>
+    <string name="advanced_setting">Avancerade inställningar</string>
     <string name="vibrate_outgoing">Vibrera vid svar</string>
-    <string name="vibrate_call_waiting">Vibrera vid samtal väntar</string>
+    <string name="vibrate_call_waiting">Vibrera vid väntande samtal</string>
     <string name="vibrate_hangup">Vibrera vid samtalsslut</string>
-    <string name="vibrate_45">Vibrera var 45e sekund</string>
-    <string name="vibrate_45_sum">Vibrerar vid sekund 45 varje minut vid utgående samtal</string>
-    <string name="show_ssn_label">Händelsenotifiering</string>
-    <string name="show_ssn_summary">Visa en notifiering för olika samtals- och nätverksrelaterade händelser</string>
-    <string name="national_roaming">Nationell data-roaming</string>
-    <string name="national_roaming_summary">Anslut till datatjänster vid nationell roaming</string>
-    <string name="perm_change_mobile_network">Byt nätverk (2G/3G)</string>
-    <string name="perm_change_mobile_network_desc">En applikation med denna tillåtelse kan, när som helst, byta mellan 2G data och 3G data. 3G är snabbare, förbrukar mer batteri och kan också kosta dig mer pengar.</string>
+    <string name="vibrate_45">Vibrera varje minut</string>
+    <string name="vibrate_45_sum">Vibrerar 45 sekunder in på varje minut under utgående samtal</string>
+    <string name="rejected_as_missed">Avvisade samtal som missade</string>
+    <string name="rejected_as_missed_sum">Visa avvisade samtal som missade istället för inkommande i samtalshistoriken</string>
+    <string name="show_ssn_label">Händelseavisering</string>
+    <string name="show_ssn_summary">Visa en avisering för olika nätverks- och samtalshändelser</string>
+    <string name="calllog_after_call">Visa samtalshistorik</string>
+    <string name="calllog_after_call_summary">Visa samtalshistoriken efter avslutat samtal</string>
+    <string name="national_roaming">Inrikes dataroaming</string>
+    <string name="national_roaming_summary">Anslut till datatjänster vid roaming inrikes</string>
+    <string name="perm_change_mobile_network">växla nätverk (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Tillåter appen att växla mellan 2G- och 3G-data. 3G är snabbare, men drar mer batteri och kan också kosta dig mera pengar.</string>
+    <string name="flip_action_title">Vändåtgärd</string>
+    <string name="flip_action_dialog_title" product="tablet">Vänd surfplattan för att\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Vänd telefonen för att\u2026</string>
+    <string name="flip_action_summary" product="tablet">Att vända surfplattan kommer att <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Att vända telefonen kommer att <xliff:g id="action">%s</xliff:g></string>
+    <string name="blacklist_title">Svartlista</string>
+    <string name="blacklist_summary_disabled">Inaktiverad</string>
+    <string name="blacklist_summary">Inkommande samtal från telefonnummer i svartlistan kommer att blockeras</string>
+    <string name="blacklist_notification">Blockerade ett samtal från %s</string>
+    <string name="blacklist_notification_private_number">Blockerade ett samtal från ett privat nummer</string>
+    <string name="blacklist_notification_list_private">Privat</string>
+    <string name="blacklist_notification_unknown_number">Blockerade okänt nummer %s</string>
+    <string name="blacklist_notification_multiple"><xliff:g id="count">%d</xliff:g> samtal blev blockerade</string>
+    <string name="unblock_number">Häv blockering</string>
+    <string name="add_blacklist_number">Lägg till telefonnummer</string>
+    <string name="add_to_blacklist">Lägg till i svartlistan</string>
+    <string name="add_to_blacklist_message">Kommande samtal från %s kommer att blockeras</string>
+    <string name="remove_blacklist_number_title">Ta bort nummer</string>
+    <string name="remove_blacklist_number">Vill du ta bort %s från svartlistan?</string>
+    <string name="onscreenBlacklistText">Svartlista</string>
+    <string name="voice_quality_preferences_title">Samtalskvalitet</string>
+    <string name="voice_quality_summary">Använder profil: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normal</string>
+    <string name="voice_quality_entry_clear">Klar</string>
+    <string name="voice_quality_entry_crisp">Skarp</string>
+    <string name="voice_quality_entry_bright">Ljus</string>
+    <string name="phone_number_label">Mitt telefonnummer</string>
+    <string name="phone_number_summary" product="tablet">Ställ in telefonnumret för denna surfplatta</string>
+    <string name="phone_number_summary" product="default">Ställ in telefonnumret för denna telefon</string>
 </resources>
