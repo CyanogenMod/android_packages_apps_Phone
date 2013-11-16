@@ -58,8 +58,10 @@
     <string name="national_roaming">Nationales Daten-Roaming</string>
     <string name="national_roaming_summary">Bei nationalem Roaming mit Datendienst verbinden</string>
     <string name="flip_action_title">Aktion beim Umdrehen</string>
-    <string name="flip_action_dialog_title">Beim Umdrehen\u2026</string>
-    <string name="flip_action_summary">Beim Umdrehen des Gerätes <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_dialog_title" product="tablet">Beim Umdrehen\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Beim Umdrehen\u2026</string>
+    <string name="flip_action_summary" product="tablet">Beim Umdrehen des Tablets <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Beim Umdrehen des Telefons <xliff:g id="action">%s</xliff:g></string>
     <string name="blacklist_title">Sperrliste</string>
     <string name="blacklist_summary_disabled">Deaktiviert</string>
     <string name="blacklist_summary">Eingehende Anrufe von Nummern, die sich in der Sperrliste befinden, werden abgewiesen</string>
@@ -82,5 +84,6 @@
     <string name="voice_quality_entry_crisp">Sehr klar</string>
     <string name="voice_quality_entry_bright">Hell</string>
     <string name="phone_number_label">Eigene Rufnummer</string>
-    <string name="phone_number_summary">Auf der SIM-Karte gespeicherte eigene Rufnummer setzen</string>
+    <string name="phone_number_summary" product="tablet">Auf der SIM-Karte gespeicherte eigene Rufnummer setzen</string>
+    <string name="phone_number_summary" product="default">Auf der SIM-Karte gespeicherte eigene Rufnummer setzen</string>
 </resources>
