@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright (C) 2013 The CyanogenMod Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="perm_change_mobile_network">Pakeisti tinklą (2G/3G)</string>
+    <string name="perm_change_mobile_network_desc">Leisti programai keisti tarp 2G ir 3G duomenų bet kuriuo metu. 3G yra greitesnis bet sunaudoja daugiau baterijos, taip pat tai jums gali kainuoti daugiau pinigų.</string>
+    <string name="advanced_setting">Papildomi nustatymai</string>
+    <string name="vibrate_outgoing">Vibruoti, kai atsiliepiama</string>
+    <string name="vibrate_call_waiting">Vibruoti, kai laukia skambutis</string>
+    <string name="vibrate_hangup">Vibruoti, kai baigiamas pokalbis</string>
+    <string name="vibrate_45">Vibruoti kiekvieną minutę</string>
+    <string name="vibrate_45_sum">Vibruoti ties 45 sekundę, kiekvieną išeinančio skambučio minutę</string>
+    <string name="show_ssn_label">Įvykių įspėjimas</string>
+    <string name="show_ssn_summary">Rodyti įspėjimą dėl įvairių tinklo įvykių susijusių su skambučių tvarkymu</string>
+    <string name="national_roaming">Nacionalinis duomenų siuntimas</string>
+    <string name="national_roaming_summary">Prisijungti prie duomenų perdavimo paslaugų, kai vyksta nacionalinis duomenų siuntimas</string>
+    <string name="flip_action_title">Apvertimo veiksmai</string>
+    <string name="flip_action_dialog_title" product="tablet">Apversti planšetę, kad\u2026</string>
+    <string name="flip_action_dialog_title" product="default">Apversti telefoną, kad\u2026</string>
+    <string name="flip_action_summary" product="tablet">Apverčiant planšetę <xliff:g id="action">%s</xliff:g></string>
+    <string name="flip_action_summary" product="default">Apverčiant telefoną <xliff:g id="action">%s</xliff:g></string>
+    <string name="card_title_dialing_waiting">Renkamas numeris (laukiama\u2026)</string>
+    <string name="calllog_after_call">Rodyti žurnalą</string>
+    <string name="calllog_after_call_summary">Rodyti skambučių žurnalą, kai baigiamas pokalbis</string>
+    <string name="noise_suppression_title">Triukšmo slopinimas</string>
+    <string name="noise_suppression_summary">Įjungti triukšmo slopinimą skambučiams</string>
+    <string name="blacklist_title">Juodasis sąrašas</string>
+    <string name="blacklist_summary_disabled">Išjungta</string>
+    <string name="blacklist_summary">Įeinantys skambučiai iš telefono numerių kurie yra juodajame sąraše bus blokuojami</string>
+    <string name="add_blacklist_number">Pridėti telefono numerį</string>
+    <string name="add_to_blacklist">Pridėti į juodajį sąrašą</string>
+    <string name="add_to_blacklist_message">Būsimi skambučiai iš %s bus blokuojami</string>
+    <string name="remove_blacklist_number_title">Pašalinti numerį</string>
+    <string name="remove_blacklist_number">Ar norite pašalinti %s iš juodojo sąrašo?</string>
+    <string name="blacklist_notification">Skambutis užblokuotas iš %s</string>
+    <string name="unblock_number">Atblokuoti</string>
+    <string name="onscreenBlacklistText">Juodasis sąrašas</string>
+    <string name="rejected_as_missed">Atmesti skambučius kaip praleistus</string>
+    <string name="rejected_as_missed_sum">Pažymėti atmestus skambučius kaip \'praleistus\' negu \'įeinančius\' į skambučių žurnalą</string>
+    <string name="blacklist_notification_private_number">Užblokuotas skambutis iš privataus numerio</string>
+    <string name="blacklist_notification_multiple">Skambučiai buvo užblokuoti: <xliff:g id="count">%d</xliff:g></string>
+    <string name="blacklist_notification_list_private">Privatus</string>
+    <string name="blacklist_notification_unknown_number">Užblokuotas skambutis iš nežinomo numerio %s</string>
+    <string name="voice_quality_preferences_title">Balso kokybė</string>
+    <string name="voice_quality_summary">Naudojant profilį: <xliff:g id="value">%s</xliff:g></string>
+    <string name="voice_quality_entry_normal">Normalus</string>
+    <string name="voice_quality_entry_clear">Švarus</string>
+    <string name="voice_quality_entry_crisp">Aiškus</string>
+    <string name="voice_quality_entry_bright">Šviesus</string>
+    <string name="call_notif_unconditionalCF">Besąlygiškas skambučių peradresavimas aktyvus</string>
+    <string name="call_notif_conditionalCF">Sąlygiškas skambučių peradresavimas aktyvus</string>
+    <string name="call_notif_MOcall_forwarding">Išeinantys skambučiai yra peradresuojami</string>
+    <string name="call_notif_cugcall">Skambinti į uždarą vartotojų grupę</string>
+    <string name="call_notif_outgoing_barred">Išeinantys skambučiai draudžiami</string>
+    <string name="call_notif_incoming_barred">Įeinantys skambučiai uždrausti tolimesnėse šalyse</string>
+    <string name="call_notif_clir_suppression_rejected">Mano numerio slėpimas buvo atmestas tinklo</string>
+    <string name="call_notif_call_deflected">Skambutis peradresuojamas nuotolinėje šalyje</string>
+    <string name="call_notif_MTcall_forwarding">Įeinantis skambutis peradresuojamas</string>
+    <string name="call_notif_multipartycall">Konferencinis skambutis</string>
+    <string name="call_notif_callonhold_released">Skambučio sulaikymas nutrauktas</string>
+    <string name="call_notif_forwardcheckreceived">Skambutis buvo peradresuotas</string>
+    <string name="call_notif_callconnectingect">Jungtis prie tiesioginio ryšio</string>
+    <string name="call_notif_callconnectedect">Prisijungta prie tiesioginio ryšio</string>
+    <string name="incall_call_type_label_forwarded">Peradresuotas skambutis</string>
+    <string name="card_title_waiting_call">Laukiantis skambutis</string>
+    <string name="mwi_notification_title">Pranešimų rodymas</string>
+    <string name="mwi_notification_summary">Rodyti gaunamus balso pašto pranešimus</string>
+    <string name="callUnanswered_forwarded">Skambutis peradresuotas, nes neatsakytas</string>
+    <string name="preferred_network_mode_lte_gsm_summary">Pagedaujamas tinklo režimas: LTE / GSM/WCDMA</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_gsm_wcdma_summary">Pageidaujamas tinklo režimas: LTE / CMDA / EvDo / GSM/WCDMA</string>
+    <string name="phone_number_label">Mano telefono numeris</string>
+    <string name="phone_number_summary" product="tablet">Planšetiniam kompiuteriui įvesti mobilųjį telefono numerį</string>
+    <string name="phone_number_summary" product="default">Telefonui įvesti mobilųjį telefono numerį</string>
+</resources>
