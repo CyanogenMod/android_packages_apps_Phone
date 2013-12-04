@@ -17,7 +17,7 @@
     <string-array name="preferred_network_mode_choices_lte_gsm">
         <item>LTE/WCDMA</item>
         <item>LTE/GSM/WCDMA</item>
-        <item>GSM/WCDMA pageidaujami</item>
+        <item>Pageidaujami GSM/WCDMA</item>
     </string-array>
     <string-array name="flip_action_setting_entries">
         <item>Nieko nedaryti</item>
@@ -25,8 +25,8 @@
         <item>Nutraukti skambutį</item>
     </string-array>
     <string-array name="flip_action_summary_entries">
-        <item>nieko nedaro</item>
-        <item>nutildo skambutį</item>
-        <item>nutraukia skambutį</item>
+        <item>nieko nedaryti</item>
+        <item>nutildyti skambut</item>
+        <item>nutraukti skambutį</item>
     </string-array>
 </resources>
